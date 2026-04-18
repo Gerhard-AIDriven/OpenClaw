@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gmail OAuth - Get Auth Code</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #333;
+      margin-top: 0;
+    }
+    .step {
+      margin: 20px 0;
+      padding: 15px;
+      background: #f9f9f9;
+      border-left: 4px solid #1f71b8;
+      border-radius: 4px;
+    }
+    .step h3 {
+      margin-top: 0;
+      color: #1f71b8;
+    }
+    button {
+      background: #1f71b8;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #1557a0;
+    }
+    .code-block {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 4px;
+      font-family: monospace;
+      word-break: break-all;
+      margin: 10px 0;
+    }
+    .success {
+      background: #d4edda;
+      border: 1px solid #c3e6cb;
+      color: #155724;
+      padding: 15px;
+      border-radius: 4px;
+      margin: 20px 0;
+      display: none;
+    }
+    .instructions {
+      background: #e7f3ff;
+      border: 1px solid #b3d9ff;
+      color: #004085;
+      padding: 15px;
+      border-radius: 4px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Gmail OAuth Token Generator</h1>
+  
+  <div class="instructions">
+    <strong>📋 Instructions:</strong> Click the button below to open Google's authorization page. You'll approve access, then copy the code that appears and paste it below.
+  </div>
+
+  <div class="step">
+    <h3>Step 1: Get Authorization Code</h3>
+    <p>Click the button to open Google's login page:</p>
+    <button onclick="openAuthURL()">🔐 Authorize with Google</button>
+  </div>
+
+  <div class="step">
+    <h3>Step 2: Copy the Code</h3>
+    <p>After you approve, Google will show you an authorization code. Copy it:</p>
+    <div id="code-display" style="display:none;">
+      <p><strong>Authorization Code:</strong></p>
+      <div class="code-block" id="auth-code-display"></div>
+      <button onclick="copyCode()">📋 Copy Code</button>
+    </div>
+  </div>
+
+  <div class="step">
+    <h3>Step 3: Paste the Code</h3>
+    <p>Paste the code here:</p>
+    <input type="text" id="auth-code-input" placeholder="Paste the authorization code here" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: monospace;">
+    <button onclick="generateToken()">✅ Generate Token</button>
+  </div>
+
+  <div id="success-message" class="success">
+    <strong>✅ Success!</strong> Token has been saved. You can now use Gmail API monitoring.
+  </div>
+
+</div>
+
+<script>
+const CLIENT_ID = '1021442239216-b84kiiudc59qvhccq81uvqu0tolrdudq.apps.googleusercontent.com';
+const REDIRECT_URI = 'http://localhost';
+const SCOPES = 'https://www.googleapis.com/auth/gmail.readonly';
+
+function openAuthURL() {
+  const authURL = `https://accounts.google.com/o/oauth2/v2/auth?` +
+    `client_id=${CLIENT_ID}&` +
+    `redirect_uri=${encodeURIComponent(REDIRECT_URI)}&` +
+    `response_type=code&` +
+    `scope=${encodeURIComponent(SCOPES)}&` +
+    `access_type=offline&` +
+    `prompt=consent`;
+  
+  window.open(authURL, '_blank');
+  alert('A new window opened. Approve access, then copy the authorization code and paste it below.');
+}
+
+function copyCode() {
+  const codeDisplay = document.getElementById('auth-code-display');
+  navigator.clipboard.writeText(codeDisplay.textContent).then(() => {
+    alert('Code copied to clipboard!');
+  });
+}
+
+function generateToken() {
+  const authCode = document.getElementById('auth-code-input').value.trim();
+  
+  if (!authCode) {
+    alert('Please paste the authorization code first.');
+    return;
+  }
+
+  // Call backend to exchange code for token
+  fetch('/api/gmail/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ code: authCode })
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      document.getElementById('success-message').style.display = 'block';
+      document.getElementById('auth-code-input').value = '';
+    } else {
+      alert('Error: ' + (data.error || 'Unknown error'));
+    }
+  })
+  .catch(err => {
+    alert('Error: ' + err.message);
+  });
+}
+
+// Check for redirect from Google
+window.addEventListener('load', () => {
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  if (code) {
+    document.getElementById('auth-code-display').textContent = code;
+    document.getElementById('code-display').style.display = 'block';
+  }
+});
+</script>
+
+</body>
+</html>

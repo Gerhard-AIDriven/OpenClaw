@@ -1,0 +1,1817 @@
+{
+  "timestamp": "2026-04-18T19:56:26.633Z",
+  "totalProducts": 200,
+  "dataSource": "SPAR Sigma System - Department 2 (Butchery) [CORRECTED FINAL]",
+  "period": "1 March 2022 - 1 April 2026",
+  "reportDate": "18 April 2026",
+  "fileName": "gws butchery new.xls",
+  "monthsDetected": 49,
+  "statusSummary": {
+    "ACTIVE": 0,
+    "RECENT": 117,
+    "STALE": 0,
+    "DEAD STOCK": 83
+  },
+  "products": [
+    {
+      "code": "11142",
+      "description": "PORK FILLET",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 11.913,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "11147",
+      "description": "W/SHIRE  PORK SAUSAGE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 76.15,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "12141",
+      "description": "BEEF SIRLOIN",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 49.728,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "12144",
+      "description": "BEEF STIRFRY",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 15.195,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "12150",
+      "description": "BEEF RUMP MATURED",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 32.936,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "12197",
+      "description": "SPAR S/ST S/RIBS",
+      "lastMonth": "01/01/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 1,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "12317",
+      "description": "T&T BACON STREAKY",
+      "lastMonth": "01/01/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 4,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "12325",
+      "description": "T&T PORK RIBS SMKD",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 9.624,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "12330",
+      "description": "T&T WORS BACON & CHEESE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 44,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "14922",
+      "description": "BRITOS BACON DICED",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 203,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "14923",
+      "description": "BRITOS PRIME CUT BACON",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 84,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "14926",
+      "description": "BRITOS BACK BACON",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 22,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "16182",
+      "description": "ROOIBERG B/WORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 116.058,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "32041",
+      "description": "1/4 LAMB",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 17.09,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "32043",
+      "description": "OPPIE-KOPPIE BOEREWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 17.608,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34154",
+      "description": "BEEF CHUCK A GRADE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 10.676,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34157",
+      "description": "BEEF FILLET",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 16.996,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34159",
+      "description": "BEEF ROAST",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 2.08,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34160",
+      "description": "BEEF LEAN MINCE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 154.165,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34169",
+      "description": "BEEF SHIN B/IN",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 17.152,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34172",
+      "description": "BULK BEEF SIRLOIN",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 115.669,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34184",
+      "description": "BEEF TEXAN STEAK",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 4.95,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34189",
+      "description": "GRABOUW BOEREWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 108.271,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34197",
+      "description": "BULK OPPIE-KOPPIE B/WORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 9.898,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34198",
+      "description": "BULK B/VALE SPAR BOEREWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 52.844,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34199",
+      "description": "BULK LEAN BEEF MINCE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 263.6,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34200",
+      "description": "BULK GRABOUW BOEREWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 86.477,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34202",
+      "description": "1/4 MUTTON",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 24.426,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34205",
+      "description": "BULK RUMP MATURED",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 37.298,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34207",
+      "description": "BULK STEWING BEEF",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 15.784,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34235",
+      "description": "GROUND BEEF",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 70.246,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34238",
+      "description": "LAMB NIERTJIES",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 4.968,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34239",
+      "description": "LAMB BEST END",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 43.966,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34240",
+      "description": "LAMB BRAAI RIB",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 5.626,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34241",
+      "description": "LAMB BRAAI CHOPS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 9.866,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34242",
+      "description": "LAM RIB & LOIN",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 28.668,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34245",
+      "description": "LAMB LEG CHOPS",
+      "lastMonth": "01/01/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 0.554,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34247",
+      "description": "LAMB NECK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 9.606,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34249",
+      "description": "LAMB RIBLETS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 8.22,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34250",
+      "description": "LAMB SHANK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 23.02,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34254",
+      "description": "MEATY  BONES",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 80.281,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34255",
+      "description": "MUTTON BEST END CHOPS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 25.144,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34256",
+      "description": "MUTTON BRAAI RIB",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 1.052,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34257",
+      "description": "MUTTON BRAAI CHOPS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 5.722,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34258",
+      "description": "MUTTON RIB & LOIN",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 27.32,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34261",
+      "description": "MUTTON LEG CHOP",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 27.058,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34264",
+      "description": "MUTTON NECK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 5.282,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34266",
+      "description": "MUTTON RIBLETS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 7.17,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34267",
+      "description": "MUTTON SHANK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 15.956,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34271",
+      "description": "PETS MINCE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 66.2,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34297",
+      "description": "SAAGSELS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 49.403,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34304",
+      "description": "SPICED BONES",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 54.065,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34383",
+      "description": "BBQ 6 GUN GRILL",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 44,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34385",
+      "description": "SIX GUN SPICE SHAKER",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 7,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "34949",
+      "description": "B/VALE SPAR BOEREWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 34.392,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "35003",
+      "description": "BRITOS BUDGET PATTIES",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 45,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "35005",
+      "description": "BRITOS BUDGET PATTIES",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 16,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "38927",
+      "description": "T&T BACON DICED",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 1,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "39216",
+      "description": "CHARGRILL BURGER",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 55.036,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "39397",
+      "description": "T&T GAMMON B/LESS MINI",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 6.352,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "39771",
+      "description": "PET'S DROEWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 18.232,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "39811",
+      "description": "LAMB LEG CHOPS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 30.292,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "43941",
+      "description": "GEVLEKTE  SNOEK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 39.6,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "44450",
+      "description": "BULK WILTSHIRE PORK SAUSAGE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 63.83,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "45416",
+      "description": "KASEGRILLER M/CLUB",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 34.036,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "45832",
+      "description": "CHEESE BURGER",
+      "lastMonth": "01/01/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 51.754,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "45848",
+      "description": "LAMB STEW",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 12.926,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "46386",
+      "description": "SIX GUN GRILL BURGER",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 29.502,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "47251",
+      "description": "BULK  KASEGRILLER M/CLUB",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 21.952,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "47669",
+      "description": "SUPER BRAAI WORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 16.883,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "47745",
+      "description": "BULK SUPER BRAAI WORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 28.059,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "48771",
+      "description": "PORK BELLY ROAST",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 17.344,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "50339",
+      "description": "LAMB  LIVER",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 5.222,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "51078",
+      "description": "BULK ROOIBERG B/WORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 76.358,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "52186",
+      "description": "BULK GROUND BEEF",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 88.844,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "52680",
+      "description": "SPAR ST  BAVETTE PLANKIE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 11.796,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "52933",
+      "description": "BW KUDU DROEWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 10.362,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "52936",
+      "description": "BW BEEF BITES PLAIN",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 0.978,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "52937",
+      "description": "BW BEEF BITES CHILLI",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 7.744,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "52938",
+      "description": "BW BEEF BITES CHUTNEY",
+      "lastMonth": "01/01/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 0.612,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "53487",
+      "description": "STEAK PACK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 122.316,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "53854",
+      "description": "BW KAROO BEEF  BILTONG",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 23.874,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "54428",
+      "description": "OOM FREDDIE SPRINKLE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 48,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "54562",
+      "description": "SPAR T&T P/BELLY RIB 1KG S&STK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 75,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "54629",
+      "description": "SPAR T&T P/BELLY RIB 1KG BBQ",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 51,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "54630",
+      "description": "SPAR T&T P/LOIN RIB 1KG BBQ",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 9,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "54631",
+      "description": "SPAR T&T P/LOIN RIB 1KG S&STKY",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 12,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "55100",
+      "description": "LAMB FQ PACK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 33.588,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "56247",
+      "description": "B/WORS ROLL BUTCH",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 33,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "56816",
+      "description": "MUTTON STEW",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 17.87,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "58339",
+      "description": "YOH FLAVA BBQ",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 221,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "58340",
+      "description": "YOH FLAVA CHICKEN",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 109,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "58817",
+      "description": "BEEF GOULASH",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 9.248,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "59020",
+      "description": "BW OUBAAS DROEWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 10,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "59021",
+      "description": "BW OUBAAS SALAMI STICKS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 16,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "60726",
+      "description": "BW WAGYU DROEWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 9.092,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "60886",
+      "description": "BB/NAMIB BOEREWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 76.834,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "60887",
+      "description": "BULK BB/NAMIB BOEREWORS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 72.038,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "61155",
+      "description": "DELICO SALAMI STICKS 2'S",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 254,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "62009",
+      "description": "BILTONG & KAASWORS",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 0.454,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "62010",
+      "description": "BULK BILTONG & KAASWORS",
+      "lastMonth": "01/01/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 31.754,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "62607",
+      "description": "RODEO BURGER PATTIES",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 8,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "62790",
+      "description": "BEEF RASHER",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 19.686,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63414",
+      "description": "BULK PORK SIRLION",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 3.134,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63470",
+      "description": "PORK SHOULDER BRAAI CHOPS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 404.801,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63471",
+      "description": "PORK RIB/LOIN CHOPS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 270.445,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63472",
+      "description": "SPAR T&T PORK STEAK TEXAN P/KG",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 82.109,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63474",
+      "description": "BULK PORK NECK STEAK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 136.846,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63482",
+      "description": "TENDERISE STEAK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 44.3,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63497",
+      "description": "PORK RASHERS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 41.968,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63498",
+      "description": "Y B PORK SIRLION",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 41.644,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63499",
+      "description": "BEEF SHORT RIB",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 7.272,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63523",
+      "description": "PORK HOCKS STEW",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 116.553,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63526",
+      "description": "BEEF OXTAIL",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 98.758,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "63735",
+      "description": "PIERE SE BOBAAS BOEREWORS P/KG",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 15.32,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "64053",
+      "description": "PAR COOKED MARINATED LOIN  RIBS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 27,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "99990201",
+      "description": "BUTCHERY 15%",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 20,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "11132",
+      "description": "YB PORK SHLDR B/IN",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 431.029,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "11136",
+      "description": "SPAR YB PORK LION WHOLE",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 197.8,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "11137",
+      "description": "BULK PORK NECK STEAK",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 65.782,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "11139",
+      "description": "PORK HOCKS STEW",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 191.233,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "11140",
+      "description": "SPAR YB BELLY B/IN",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 32.169,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12112",
+      "description": "SPAR T&T PICKLED TONGUE",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 22.768,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12113",
+      "description": "T&T SALT BEEF",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 24.142,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12118",
+      "description": "BEEF RASHERS",
+      "lastMonth": "01/06/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 13.312,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12130",
+      "description": "FLANK BEEF STEW CUBES",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 14.738,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12142",
+      "description": "SPAR YB BEEF SILVERSIDE",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 15.742,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12145",
+      "description": "T/T BEEF TEXAN STEAK",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 13.692,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12174",
+      "description": "SPAR STEAK CO SIRLOIN.",
+      "lastMonth": "01/09/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 9.36,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12650",
+      "description": "PORK SHANKS STEW",
+      "lastMonth": "01/06/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 85.381,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12659",
+      "description": "PORK TEXAN",
+      "lastMonth": "01/04/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 6.478,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12702",
+      "description": "DELI CO SKILPADJIES WHOLE",
+      "lastMonth": "01/10/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 0.654,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "12864",
+      "description": "BEEF OXTAIL",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 22.195,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "32044",
+      "description": "OUKRANS BOEREWORS",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 16.601,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "32045",
+      "description": "BABELAS MIX",
+      "lastMonth": "01/08/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 2.178,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "32049",
+      "description": "BEEF BILTONG",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 0.12,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34170",
+      "description": "BEEF SHORTRIB",
+      "lastMonth": "01/06/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 7.828,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34177",
+      "description": "BEEF POTJIE PACK",
+      "lastMonth": "01/11/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 30.002,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "34179",
+      "description": "SPAR YB BEEF TOPSIDE",
+      "lastMonth": "01/08/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 3.564,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "34182",
+      "description": "BEEF TENDERISED STEAK",
+      "lastMonth": "01/07/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 13.06,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "34191",
+      "description": "BEEF ROAST",
+      "lastMonth": "01/08/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 2.718,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "34196",
+      "description": "BULK OUKRANS BOEREWORS",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 24.77,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34201",
+      "description": "BULK KALAHARI BOEREWORS",
+      "lastMonth": "01/10/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 56.108,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34203",
+      "description": "BULK PORK BRAAI CHOPS",
+      "lastMonth": "01/12/23",
+      "lastMonthReadable": "January 2023",
+      "lastSalesQty": 137.425,
+      "status": "DEAD STOCK",
+      "monthsAgo": 39
+    },
+    {
+      "code": "34204",
+      "description": "BULK PORK LOIN CHOPS",
+      "lastMonth": "01/12/23",
+      "lastMonthReadable": "January 2023",
+      "lastSalesQty": 136.139,
+      "status": "DEAD STOCK",
+      "monthsAgo": 39
+    },
+    {
+      "code": "34206",
+      "description": "BULK SIRLOIN MATURED",
+      "lastMonth": "01/07/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 51.576,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "34208",
+      "description": "BULK TENDERISED STEAK",
+      "lastMonth": "01/07/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 36.25,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "34211",
+      "description": "FARMHOUSE WORS",
+      "lastMonth": "01/04/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 26.286,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34232",
+      "description": "SHOULDER GAMMON BONE IN",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 48.198,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34237",
+      "description": "KALAHARI BOEREWORS",
+      "lastMonth": "01/10/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 42.827,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34251",
+      "description": "LAMB STEW DELI-CO",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 4.402,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34268",
+      "description": "MUTTON STEW",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 4.862,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34269",
+      "description": "OOM SE PLAASWORS",
+      "lastMonth": "01/01/23",
+      "lastMonthReadable": "January 2023",
+      "lastSalesQty": 0.524,
+      "status": "DEAD STOCK",
+      "monthsAgo": 39
+    },
+    {
+      "code": "34272",
+      "description": "PORK BELLY SPARE RIB",
+      "lastMonth": "01/03/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 10.053,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34283",
+      "description": "BULK PORK BRAAI CHOPS",
+      "lastMonth": "01/04/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 648.826,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34285",
+      "description": "PORK RASHER",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 0.458,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34288",
+      "description": "PORK  KEBAB",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 4.676,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "34289",
+      "description": "PORK STEWING",
+      "lastMonth": "01/06/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 65.937,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "38928",
+      "description": "T&T PORK BELLY ROAST",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 8.676,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "39912",
+      "description": "WHOLE MUTTON",
+      "lastMonth": "01/05/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 9.08,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "40510",
+      "description": "1/2 MUTTON",
+      "lastMonth": "01/04/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 12.967,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "41008",
+      "description": "SKAAPSTERTJIES",
+      "lastMonth": "01/07/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 1.229,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "41260",
+      "description": "BULK PORK BRAAI CHOPS",
+      "lastMonth": "01/12/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 253.055,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "42417",
+      "description": "SPRINKLE WORCESTER SAUCE",
+      "lastMonth": "01/05/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 5,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "43008",
+      "description": "DELGADO OFF CUTS SNOEK 400G",
+      "lastMonth": "01/01/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 4,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "44221",
+      "description": "SPAR SLT OSTRICH BURGER",
+      "lastMonth": "01/10/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 12,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "44670",
+      "description": "BULK YSTERHOUT BRAAIWORS",
+      "lastMonth": "01/04/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 27.682,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "44671",
+      "description": "YSTERHOUT BRAAIWORS",
+      "lastMonth": "01/04/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 33.399,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "44898",
+      "description": "MUTTON BRAAI CHOP",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 0.98,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "44899",
+      "description": "LAMB BRAAI CHOP",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 1.698,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "45494",
+      "description": "1/2 LAMB",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 161.28,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "45495",
+      "description": "WHOLE LAMB",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 383.899,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "45713",
+      "description": "ELIM SALAMI STICKS",
+      "lastMonth": "01/04/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 0.964,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "46061",
+      "description": "BULK FARMHOUSE WORS",
+      "lastMonth": "01/05/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 0.662,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "46387",
+      "description": "SIX GUN GRILL BURGER 8'S",
+      "lastMonth": "01/06/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 5.584,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "46391",
+      "description": "BULK PORK PACK WITH STEW",
+      "lastMonth": "01/09/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 9.016,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "46490",
+      "description": "FLANK  BEEF STEW CUBES",
+      "lastMonth": "01/09/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 30.426,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "49111",
+      "description": "BULSS I-GRILL",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 3,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "49605",
+      "description": "SPAR T&T B/BUST CHS/ONION",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 7,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "51065",
+      "description": "RIBBON SNOEK",
+      "lastMonth": "01/12/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 2,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "51712",
+      "description": "SHEEP/LAMB TRIPE-TROT",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 5.426,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "52683",
+      "description": "SPAR T&T LAMB SKPDJIES FR P/KG",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 2.308,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "52941",
+      "description": "BW BABBELAS MIX BILTONG",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 1.174,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "54107",
+      "description": "DELI-CO PORK ESPETADA",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 3.218,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "54124",
+      "description": "BRAAI PACK",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 35,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "54125",
+      "description": "BULK BRAAI PACK",
+      "lastMonth": "01/12/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 12.486,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "55974",
+      "description": "B/PACK VAN LOVEREN",
+      "lastMonth": "01/12/23",
+      "lastMonthReadable": "January 2023",
+      "lastSalesQty": 75,
+      "status": "DEAD STOCK",
+      "monthsAgo": 39
+    },
+    {
+      "code": "56666",
+      "description": "FO SHO SUPER BBQ SPICE",
+      "lastMonth": "01/10/24",
+      "lastMonthReadable": "January 2024",
+      "lastSalesQty": 3,
+      "status": "DEAD STOCK",
+      "monthsAgo": 27
+    },
+    {
+      "code": "58405",
+      "description": "DELI-CO PORK RASHER",
+      "lastMonth": "01/05/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 6.76,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "59688",
+      "description": "NYAMA CHOMA BRAAIWORS",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 38.388,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "59689",
+      "description": "NYAMA CHOMA BRAAIWORS BULK",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 32.43,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "60147",
+      "description": "SEAS WORCESTER SAUCE",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 6,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "61010",
+      "description": "SHISANYAMA BBQ SPICE",
+      "lastMonth": "01/10/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 6,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "61369",
+      "description": "SPAR T&T PORK STEAK TEXAN P/KG",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 46.862,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "62040",
+      "description": "BW OUBAAS SALAMI SINGLE STICKS",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 1,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "62046",
+      "description": "KAROO BRAAI WORS",
+      "lastMonth": "01/06/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 34.162,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "62047",
+      "description": "BULK KAROO BRAAI WORS",
+      "lastMonth": "01/06/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 33.613,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "62213",
+      "description": "BACON BITS",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 27,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "62613",
+      "description": "DELICO DROEWORS 2'S",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 3,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    },
+    {
+      "code": "63222",
+      "description": "B/FLY  MINCE",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "January 2025",
+      "lastSalesQty": 13.34,
+      "status": "DEAD STOCK",
+      "monthsAgo": 15
+    }
+  ]
+}

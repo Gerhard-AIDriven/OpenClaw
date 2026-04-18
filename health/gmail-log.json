@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-18T11:38:23.211Z",
+  "count": 2,
+  "opportunities": [],
+  "emails": [
+    {
+      "id": "19da04f75fa77891",
+      "subject": "Data exports",
+      "from": "<manager@bonspar.co.za>",
+      "date": "Sat, 18 Apr 2026 13:18:00 +0200",
+      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19d9b9a434a9035a",
+      "subject": "Parent child report",
+      "from": "<manager@bonspar.co.za>",
+      "date": "Fri, 17 Apr 2026 15:21:41 +0200",
+      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    }
+  ]
+}

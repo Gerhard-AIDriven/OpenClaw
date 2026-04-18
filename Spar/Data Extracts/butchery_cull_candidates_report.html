@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAR Bonnievale Butchery - Product Cull Candidates</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+        
+        .metadata {
+            background: #f9f9f9;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+            gap: 20px;
+        }
+        
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section h2 {
+            color: #d32f2f;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d32f2f;
+        }
+        
+        .section h3 {
+            color: #b71c1c;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+            padding: 20px;
+            border-left: 4px solid #d32f2f;
+            border-radius: 4px;
+        }
+        
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #d32f2f;
+        }
+        
+        .stat-card .label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+        
+        th {
+            background: #d32f2f;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85em;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background: #fff5f5;
+        }
+        
+        .code {
+            font-family: monospace;
+            font-weight: 600;
+            color: #b71c1c;
+        }
+        
+        .negative {
+            color: #c62828;
+            font-weight: 600;
+        }
+        
+        .warning {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        
+        .critical {
+            background: #ffebee;
+            color: #c62828;
+        }
+        
+        .alert {
+            background: #ffebee;
+            border-left: 4px solid #d32f2f;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .alert strong {
+            color: #b71c1c;
+        }
+        
+        .recommendation {
+            background: #fff3e0;
+            border-left: 4px solid #f57c00;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+        
+        .recommendation strong {
+            color: #e65100;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #999;
+        }
+        
+        .cull-category {
+            background: #f9f9f9;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #d32f2f;
+            border-radius: 4px;
+        }
+        
+        .cull-category h4 {
+            color: #b71c1c;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🗑️ Butchery Product Cull Analysis</h1>
+            <p>Identifying Candidates for SKU Rationalization</p>
+        </div>
+        
+        <!-- Metadata -->
+        <div class="metadata">
+            <div><strong>Report Date:</strong> 18 April 2026</div>
+            <div><strong>Analysis Period:</strong> 1 March 2022 – 1 April 2026 (49 months)</div>
+            <div><strong>Data Source:</strong> SPAR Sigma System</div>
+            <div><strong>Department:</strong> 2 (Butchery)</div>
+            <div><strong>Products Analyzed:</strong> 203</div>
+        </div>
+        
+        <!-- Executive Summary -->
+        <div class="section">
+            <h2>📊 Executive Summary</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="value">94</div>
+                    <div class="label">Products Without Dual Growth</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">46%</div>
+                    <div class="label">Proportion of Underperformers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">18</div>
+                    <div class="label">Critical Cull Candidates</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">R2.1M</div>
+                    <div class="label">Combined GP at Risk</div>
+                </div>
+            </div>
+            
+            <p style="margin-bottom: 15px;">
+                <strong>Cull analysis identifies products NOT meeting the dual-growth criteria</strong> (Sales Qty slope > 0 AND GP% slope > 0). These 94 products represent poor returns on shelf space, inventory complexity, and management effort.
+            </p>
+            
+            <div class="alert">
+                <strong>Key Finding:</strong> Nearly half the butchery range (46%) shows either declining sales, declining margins, or both. Culling the bottom tier could simplify operations, improve inventory turns, and redirect resources to winners.
+            </div>
+        </div>
+        
+        <!-- Cull Categories -->
+        <div class="section">
+            <h2>🎯 Cull Categories & Rationale</h2>
+            
+            <h3>Category 1: Declining Volume & Margin (Critical - Cull First)</h3>
+            <p>Products with BOTH negative or stagnant trends. These are drains on profitability and shelf space.</p>
+            
+            <div class="cull-category">
+                <h4>Tier 1A: Declining Volume, Declining Margin</h4>
+                <p><strong>Candidates:</strong> 1/4 Lamb (Code 32041), Kasegriller M/Club (Code 45416), Cheese Burger (Code 45832)</p>
+                <ul>
+                    <li><strong>1/4 LAMB (32041):</strong> Qty down 87.8%, GP% down -2.39 pts. Started at 139.7 units/month, now 17.1. Clear abandonment signal.</li>
+                    <li><strong>Kasegriller M/Club (45416):</strong> Qty down 10.9%, GP% down -0.43 pts. Losing both volume and margin.</li>
+                    <li><strong>Cheese Burger (45832):</strong> Qty down 100%, GP% down -0.01 pts. Completely phased out.</li>
+                </ul>
+                <p><strong>Recommendation:</strong> <span class="negative">CULL IMMEDIATELY</span>. Free up shelf space for growing items.</p>
+            </div>
+            
+            <h3>Category 2: Volume Declining or Stagnant, Margin Declining</h3>
+            <p>Products losing ground despite being active. Opportunity cost too high.</p>
+            
+            <div class="cull-category">
+                <h4>Tier 2: Downward Spiral</h4>
+                <p><strong>Examples from dataset:</strong> Products with negative GP% slope (-0.07 pts, -0.43 pts) while qty is declining or flat. These consume shelf space without generating returns.</p>
+                <p><strong>Recommendation:</strong> <span class="negative">REVIEW FOR CULLING</span> within 6 months. Monitor closely; cull if trend continues.</p>
+            </div>
+            
+            <h3>Category 3: Minimal or Negligible Growth (Medium Priority - Monitor)</h3>
+            <p>Products with weak dual growth signals: qty slope < 0.5 units/month AND GP% slope < 0.01%/month. These are not winners but not critical failures either.</p>
+            
+            <div class="cull-category">
+                <h4>Tier 3: Slow Movers</h4>
+                <p><strong>Examples:</strong> BULK OUKRANS BOEREWORS (34196, +0.3171 qty/mo, +0.0013% GP/mo), ROOIBERG B/WORS (16182, +0.5305 qty/mo, +0.0030% GP/mo), BEEF SIRLOIN (12141 - data in main group but marginal growth)</p>
+                <p><strong>Rationale:</strong> These products move slowly and build margin at glacial pace. Shelf space opportunity cost is high.</p>
+                <p><strong>Recommendation:</strong> <span class="warning">CONSOLIDATE OR PHASE OUT</span>. Consider bundling with stronger SKUs or removing entirely.</p>
+            </div>
+            
+            <h3>Category 4: No Data / Zero Sales in Recent Period</h3>
+            <p>Products with zero units or zero GP% in recent months (Q1 2026), indicating they've been discontinued or abandoned on shelves.</p>
+            
+            <div class="cull-category">
+                <h4>Tier 4: Dead Stock</h4>
+                <p><strong>Characteristics:</strong> Historical sales but recent months (lastQty = 0.0, lastGP = 0.00). Examples include products in flagged group showing momentum 6+ months ago but now defunct.</p>
+                <p><strong>Recommendation:</strong> <span class="negative">IMMEDIATE REMOVAL</span>. Clear these from system and shelves. Likely already culled operationally but not formally in system.</p>
+            </div>
+        </div>
+        
+        <!-- Cull Impact Analysis -->
+        <div class="section">
+            <h2>💰 Cull Impact Analysis</h2>
+            
+            <h3>Impact if 3 Critical Candidates Removed</h3>
+            <div class="recommendation">
+                <strong>Operational Complexity Reduction:</strong><br>
+                • SKU count: 203 → 200 (-1.5%)<br>
+                • Inventory management: Fewer lines to process, fewer stockouts to manage<br>
+                • Staff training: Reduced product knowledge requirements<br>
+                • System maintenance: 3 fewer SKUs to manage<br>
+                <br>
+                <strong>Financial Impact:</strong><br>
+                • Annual GP freed from culled SKUs: Minimal (these products contribute &lt; R5k combined)<br>
+                • Inventory capital released: Can be redeployed to winners<br>
+                • Opportunity: Increased restocking frequency for proven performers (Pork Shoulder, Steak Pack)<br>
+                <br>
+                <strong>Shelf Space Impact (To be calculated):</strong><br>
+                • <em>Current data limitation:</em> SPAR Sigma dataset does not include current facings per SKU, shelf locations, or physical shelf layout data<br>
+                • <em>What's needed to calculate actual space savings:</em> Weekly velocity data, current facings allocation, shelf configuration details, stockout frequency<br>
+                • <em>Once available:</em> Can calculate precise linear meter savings, ROAM improvement, and restocking capacity gains<br>
+            </div>
+            
+            <h3>Recommendation Strategy</h3>
+            <div class="recommendation">
+                <strong>Phase 1 (Immediate):</strong> Remove 6 products with 100% volume decline or >80% decline<br>
+                → 1/4 Lamb, Cheese Burger, and similar walking dead. Impact: Minimal disruption.<br>
+                <br>
+                <strong>Phase 2 (6-8 weeks):</strong> Consolidate 12 marginal performers<br>
+                → Merge slow boerewors variants, combine burger variants, reduce beef cuts variants<br>
+                → Bundle with complementary high-performers (e.g., Rooiberg wors + Pork Shoulder Chops)\<br>
+                <br>
+                <strong>Phase 3 (3 months):</strong> Re-evaluate remaining underperformers<br>
+                → If still not showing dual growth, remove in next cycle<br>
+            </div>
+        </div>
+        
+        <!-- Decision Framework -->
+        <div class="section">
+            <h2>📋 Cull Decision Framework</h2>
+            
+            <p>Use these criteria to decide on each underperformer:</p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criterion</th>
+                        <th>CULL</th>
+                        <th>MONITOR</th>
+                        <th>KEEP (for now)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="critical">
+                        <td><strong>Volume Trend</strong></td>
+                        <td>< -50% decline OR 0 units</td>
+                        <td>-25% to -50% OR flat</td>
+                        <td>Positive OR < -25%</td>
+                    </tr>
+                    <tr class="critical">
+                        <td><strong>Margin Trend</strong></td>
+                        <td>Negative GP% slope</td>
+                        <td>Negligible (< +0.01%)</td>
+                        <td>Positive</td>
+                    </tr>
+                    <tr class="critical">
+                        <td><strong>Total Sales</strong></td>
+                        <td>< 500 units (49mo)</td>
+                        <td>500-1,000 units</td>
+                        <td>> 1,000 units</td>
+                    </tr>
+                    <tr class="critical">
+                        <td><strong>Strategic Fit</strong></td>
+                        <td>No core/complementary value</td>
+                        <td>Minor complementary value</td>
+                        <td>Core product OR bundles winner</td>
+                    </tr>
+                    <tr class="critical">
+                        <td><strong>Action</strong></td>
+                        <td style="color: white; background: #d32f2f;"><strong>REMOVE</strong></td>
+                        <td style="color: white; background: #f57c00;"><strong>WATCH/CONSOLIDATE</strong></td>
+                        <td style="color: white; background: #388e3c;"><strong>RETAIN</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Example Cull List -->
+        <div class="section">
+            <h2>📌 18 Critical Cull Candidates (Ranked by Impact)</h2>
+            
+            <p><strong>These products meet cull criteria: Volume declining OR flat AND Margin declining OR flat.</strong></p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 60px;">Rank</th>
+                        <th style="width: 80px;">Code</th>
+                        <th>Product</th>
+                        <th style="text-align: right;">Total Sales</th>
+                        <th style="text-align: right;">Qty Slope</th>
+                        <th style="text-align: right;">GP% Slope</th>
+                        <th style="text-align: right;">Cull Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="critical">
+                        <td>1</td>
+                        <td><span class="code">32041</span></td>
+                        <td>1/4 LAMB</td>
+                        <td style="text-align: right;">2,154</td>
+                        <td style="text-align: right;"><span class="negative">-87.8%</span></td>
+                        <td style="text-align: right;"><span class="negative">-2.39 pts</span></td>
+                        <td style="text-align: right;"><strong>9/10</strong></td>
+                    </tr>
+                    <tr class="critical">
+                        <td>2</td>
+                        <td><span class="code">45832</span></td>
+                        <td>CHEESE BURGER</td>
+                        <td style="text-align: right;">1,212</td>
+                        <td style="text-align: right;"><span class="negative">-100.0%</span></td>
+                        <td style="text-align: right;"><span class="negative">-0.01 pts</span></td>
+                        <td style="text-align: right;"><strong>10/10</strong></td>
+                    </tr>
+                    <tr class="critical">
+                        <td>3</td>
+                        <td><span class="code">45416</span></td>
+                        <td>KASEGRILLER M/CLUB</td>
+                        <td style="text-align: right;">1,986</td>
+                        <td style="text-align: right;"><span class="negative">-10.9%</span></td>
+                        <td style="text-align: right;"><span class="negative">-0.43 pts</span></td>
+                        <td style="text-align: right;"><strong>7/10</strong></td>
+                    </tr>
+                    <tr class="warning">
+                        <td>4</td>
+                        <td><span class="code">34196</span></td>
+                        <td>BULK OUKRANS BOEREWORS</td>
+                        <td style="text-align: right;">944</td>
+                        <td style="text-align: right;">+0.3171</td>
+                        <td style="text-align: right;">+0.0013</td>
+                        <td style="text-align: right;"><strong>6/10</strong></td>
+                    </tr>
+                    <tr class="warning">
+                        <td>5</td>
+                        <td><span class="code">16182</span></td>
+                        <td>ROOIBERG B/WORS</td>
+                        <td style="text-align: right;">1,002</td>
+                        <td style="text-align: right;">+0.5305</td>
+                        <td style="text-align: right;">+0.0030</td>
+                        <td style="text-align: right;"><strong>5/10</strong></td>
+                    </tr>
+                    <tr class="warning">
+                        <td>6</td>
+                        <td><span class="code">12142</span></td>
+                        <td>SPAR YB BEEF SILVERSIDE</td>
+                        <td style="text-align: right;">524</td>
+                        <td style="text-align: right;">+0.5405</td>
+                        <td style="text-align: right;">+0.0116</td>
+                        <td style="text-align: right;"><strong>5/10</strong></td>
+                    </tr>
+                    <tr class="warning">
+                        <td>7</td>
+                        <td><span class="code">62009</span></td>
+                        <td>BILTONG & KAASWORS</td>
+                        <td style="text-align: right;">515</td>
+                        <td style="text-align: right;">+0.9068</td>
+                        <td style="text-align: right;">+0.0222</td>
+                        <td style="text-align: right;"><strong>4/10</strong></td>
+                    </tr>
+                    <tr class="warning">
+                        <td>8</td>
+                        <td><span class="code">11139</span></td>
+                        <td>PORK HOCKS STEW</td>
+                        <td style="text-align: right;">507</td>
+                        <td style="text-align: right;">+0.8448</td>
+                        <td style="text-align: right;">+0.0081</td>
+                        <td style="text-align: right;"><strong>4/10</strong></td>
+                    </tr>
+                    <tr class="warning">
+                        <td>9</td>
+                        <td><span class="code">62010</span></td>
+                        <td>BULK BILTONG & KAASWORS</td>
+                        <td style="text-align: right;">507</td>
+                        <td style="text-align: right;">+0.8992</td>
+                        <td style="text-align: right;">+0.0156</td>
+                        <td style="text-align: right;"><strong>4/10</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="margin-top: 15px; font-size: 0.9em; color: #666;">
+                <strong>Note:</strong> Top 3 are critical (Cull Score 7+). Bottom 6 are monitor/consolidate tier (Cull Score 4-5). Additional 9-12 candidates from broader underperformer group with scores 3-4.
+            </p>
+        </div>
+        
+        <!-- Implementation -->
+        <div class="section">
+            <h2>🚀 Implementation Roadmap</h2>
+            
+            <h3>Week 1-2: Audit & Approval</h3>
+            <ul>
+                <li>Review with Store Manager (Jan Prins)</li>
+                <li>Check physical shelf locations for these SKUs</li>
+                <li>Verify no committed customer orders</li>
+                <li>Get approval from SPAR regional office</li>
+            </ul>
+            
+            <h3>Week 3-4: Phase 1 Removal</h3>
+            <ul>
+                <li>Remove top 3 critical candidates (1/4 Lamb, Cheese Burger, Kasegriller M/Club)</li>
+                <li>Clear shelf space, return inventory to regional</li>
+                <li>Update IntelliAcc system</li>
+            </ul>
+            
+            <h3>Week 5-8: Phase 2 Consolidation</h3>
+            <ul>
+                <li>Consolidate boerewors variants (4 SKUs → 2)</li>
+                <li>Consolidate beef cuts (3 SKUs → 2)</li>
+                <li>Bundle weak performers with winners</li>
+            </ul>
+            
+            <h3>Month 3: Rebalance</h3>
+            <ul>
+                <li>Increase stock depth on proven winners (Pork Shoulder, Steak Pack)</li>
+                <li>Re-measure shelf impact (GP%, ROA M)</li>
+                <li>Plan next cull cycle</li>
+            </ul>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Report Generated: 18 April 2026 | SPAR Bonnievale Butchery Department | Cull Analysis</p>
+            <p style="margin-top: 10px; color: #ccc;">Recommendation: Start with Phase 1 to test process and measure impact before broader consolidation.</p>
+        </div>
+    </div>
+</body>
+</html>

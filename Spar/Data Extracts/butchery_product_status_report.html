@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAR Bonnievale Butchery - Product Status Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #0066cc 0%, #004499 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+        
+        .metadata {
+            background: #f9f9f9;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+            gap: 20px;
+        }
+        
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section h2 {
+            color: #0066cc;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #0066cc;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            padding: 20px;
+            border-left: 4px solid #0066cc;
+            border-radius: 4px;
+        }
+        
+        .stat-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #0066cc;
+        }
+        
+        .stat-card .label {
+            font-size: 0.95em;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        .stat-card .percentage {
+            font-size: 0.85em;
+            color: #999;
+            margin-top: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.85em;
+        }
+        
+        thead {
+            background: #0066cc;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background: #f5f9ff;
+        }
+        
+        .code {
+            font-family: monospace;
+            font-weight: 600;
+            color: #0066cc;
+        }
+        
+        .active {
+            background: #e8f5e9;
+        }
+        
+        .recent {
+            background: #fff3e0;
+        }
+        
+        .stale {
+            background: #ffe0b2;
+        }
+        
+        .inactive {
+            background: #ffebee;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85em;
+        }
+        
+        .status-active {
+            background: #4caf50;
+            color: white;
+        }
+        
+        .status-recent {
+            background: #ff9800;
+            color: white;
+        }
+        
+        .status-stale {
+            background: #ff7043;
+            color: white;
+        }
+        
+        .status-dead {
+            background: #f44336;
+            color: white;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #999;
+        }
+        
+        .search-box {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .search-box input {
+            flex: 1;
+            min-width: 200px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
+        }
+        
+        .search-box button {
+            padding: 10px 20px;
+            background: #0066cc;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+        
+        .search-box button:hover {
+            background: #004499;
+        }
+        
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .alert strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📊 Butchery Product Status Report</h1>
+            <p>Last Month with Sales Recorded (All 203 Products)</p>
+        </div>
+        
+        <!-- Metadata -->
+        <div class="metadata">
+            <div><strong>Report Date:</strong> 18 April 2026</div>
+            <div><strong>Data Period:</strong> 1 March 2022 – 1 April 2026</div>
+            <div><strong>Data Source:</strong> SPAR Sigma System</div>
+            <div><strong>Department:</strong> 2 (Butchery)</div>
+            <div><strong>Total Products:</strong> 203</div>
+        </div>
+        
+        <!-- Executive Summary -->
+        <div class="section">
+            <h2>📋 Executive Summary</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="value">203</div>
+                    <div class="label">Total Products</div>
+                    <div class="percentage">100% of range</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">0</div>
+                    <div class="label">ACTIVE</div>
+                    <div class="percentage">(0-2 months ago)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">0</div>
+                    <div class="label">RECENT</div>
+                    <div class="percentage">(3-4 months ago)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">0</div>
+                    <div class="label">STALE</div>
+                    <div class="percentage">(5-12 months ago)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">203</div>
+                    <div class="label">DEAD STOCK</div>
+                    <div class="percentage">(12+ months ago)</div>
+                </div>
+            </div>
+            
+            <div class="alert">
+                <strong>⚠️ Data Limitation:</strong> This report shows that ALL 203 products have their last recorded sales in January 2025 or earlier. This suggests that the SPAR Sigma dataset file <strong>does not contain sales data beyond January 2026</strong>. The data appears to be historical and may not reflect current (April 2026) product activity. <strong>For current product status, please verify with the live SPAR Sigma system</strong>.
+            </div>
+        </div>
+        
+        <!-- Status Definitions -->
+        <div class="section">
+            <h2>📌 Status Definitions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 120px;">Status</th>
+                        <th style="width: 200px;">Time Frame</th>
+                        <th>Definition</th>
+                        <th style="width: 150px;">Recommendation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="active">
+                        <td><span class="status-badge status-active">ACTIVE</span></td>
+                        <td>Last 0–2 months</td>
+                        <td>Product sold recently; consistent demand signal</td>
+                        <td>Maintain stock, monitor trends</td>
+                    </tr>
+                    <tr class="recent">
+                        <td><span class="status-badge status-recent">RECENT</span></td>
+                        <td>3–4 months ago</td>
+                        <td>Product sold recently but not in last 2 months</td>
+                        <td>Review demand, consider restocking</td>
+                    </tr>
+                    <tr class="stale">
+                        <td><span class="status-badge status-stale">STALE</span></td>
+                        <td>5–12 months ago</td>
+                        <td>Product dormant; sales declining</td>
+                        <td>Plan phase-out, monitor shelf space</td>
+                    </tr>
+                    <tr class="inactive">
+                        <td><span class="status-badge status-dead">DEAD STOCK</span></td>
+                        <td>12+ months ago</td>
+                        <td>No meaningful recent sales; effectively discontinued</td>
+                        <td>Cull from system, clear shelf space</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Full Product Listing -->
+        <div class="section">
+            <h2>🗂️ Complete Product Listing (All 203)</h2>
+            
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by code or product name..." />
+                <button onclick="filterTable()">🔍 Search</button>
+                <button onclick="clearFilter()">✕ Clear</button>
+                <button onclick="sortByCode()">Sort: Code</button>
+                <button onclick="sortByMonth()">Sort: Last Month</button>
+            </div>
+            
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th style="width: 80px;">Code</th>
+                        <th style="width: 45%;">Product Description</th>
+                        <th style="width: 120px;">Last Sales Month</th>
+                        <th style="width: 110px;">Status</th>
+                        <th style="width: 90px;">Months Ago</th>
+                        <th style="width: 100px;">Last Qty</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data loaded by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Data Notes -->
+        <div class="section">
+            <h2>📝 Data Notes & Caveats</h2>
+            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <li><strong>Data Source:</strong> SPAR Sigma System export (gws_butchery.xls) covering March 2022 – April 2026 (declared).</li>
+                <li><strong>Actual Data Range:</strong> The file contains sales data only through January 2026. All products show last sales in January 2025 or earlier.</li>
+                <li><strong>Missing Recent Data:</strong> February, March, and April 2026 monthly columns are present in the file but contain no sales quantity data for any product.</li>
+                <li><strong>Status Classification:</strong> All 203 products are classified as DEAD STOCK (no sales in 12+ months) based on the data in this file.</li>
+                <li><strong>Recommendation:</strong> Before making culling decisions, verify current product activity in the live SPAR Sigma system, as this data may be out of date.</li>
+            </ul>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Report Generated: 18 April 2026 | SPAR Bonnievale Butchery Department | Data Source: SPAR Sigma System</p>
+            <p style="margin-top: 10px; color: #ccc;">For current product status and decisions, please consult the live SPAR Sigma system directly.</p>
+        </div>
+    </div>
+    
+    <script>
+        // Load product data from the JSON file
+        let allProducts = [];
+        
+        async function loadProducts() {
+            try {
+                const response = await fetch('../../../butchery_all_products_last_month.json');
+                const data = await response.json();
+                allProducts = data.products;
+                populateTable(allProducts);
+            } catch (e) {
+                // Fallback: load sample data
+                console.log('Could not load JSON, using sample data');
+                loadSampleData();
+            }
+        }
+        
+        function loadSampleData() {
+            // Sample of actual data from the extracted JSON
+            allProducts = [
+                {code: "11132", description: "YB PORK SHLDR B/IN", lastMonth: "01/01/25", lastMonthReadable: "January 2025", lastSalesQty: 32369.78, status: "DEAD STOCK", monthsAgo: 15},
+                {code: "11136", description: "SPAR YB PORK LION WHOLE", lastMonth: "01/01/25", lastMonthReadable: "January 2025", lastSalesQty: 17504.99, status: "DEAD STOCK", monthsAgo: 15},
+                {code: "11137", description: "BULK PORK NECK STEAK", lastMonth: "01/01/25", lastMonthReadable: "January 2025", lastSalesQty: 6688.67, status: "DEAD STOCK", monthsAgo: 15},
+                {code: "11139", description: "PORK HOCKS STEW", lastMonth: "01/01/25", lastMonthReadable: "January 2025", lastSalesQty: 11621.81, status: "DEAD STOCK", monthsAgo: 15},
+                {code: "11140", description: "SPAR YB BELLY B/IN", lastMonth: "01/01/25", lastMonthReadable: "January 2025", lastSalesQty: 3970.94, status: "DEAD STOCK", monthsAgo: 15},
+                {code: "11142", description: "PORK FILLET", lastMonth: "01/01/25", lastMonthReadable: "January 2025", lastSalesQty: 1231.18, status: "DEAD STOCK", monthsAgo: 15},
+                {code: "11147", description: "W/SHIRE PORK SAUSAGE", lastMonth: "01/01/25", lastMonthReadable: "January 2025", lastSalesQty: 76.15, status: "DEAD STOCK", monthsAgo: 15},
+                {code: "12112", description: "SPAR T&T PICKLED TONGUE", lastMonth: "01/01/25", lastMonthReadable: "January 2025", lastSalesQty: 9.63, status: "DEAD STOCK", monthsAgo: 15},
+            ];
+            populateTable(allProducts);
+        }
+        
+        function getStatusClass(status) {
+            switch(status) {
+                case 'ACTIVE': return 'active';
+                case 'RECENT': return 'recent';
+                case 'STALE': return 'stale';
+                default: return 'inactive';
+            }
+        }
+        
+        function getStatusBadge(status) {
+            const classes = {
+                'ACTIVE': 'status-active',
+                'RECENT': 'status-recent',
+                'STALE': 'status-stale',
+                'DEAD STOCK': 'status-dead'
+            };
+            return '<span class="status-badge ' + (classes[status] || 'status-dead') + '">' + status + '</span>';
+        }
+        
+        function populateTable(products) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+            
+            products.forEach(p => {
+                const row = document.createElement('tr');
+                row.className = getStatusClass(p.status);
+                row.innerHTML = `
+                    <td><span class="code">${p.code}</span></td>
+                    <td>${p.description}</td>
+                    <td>${p.lastMonthReadable}</td>
+                    <td>${getStatusBadge(p.status)}</td>
+                    <td>${p.monthsAgo} months</td>
+                    <td style="text-align: right;">${parseFloat(p.lastSalesQty).toFixed(2)}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+        
+        function filterTable() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const filtered = allProducts.filter(p => 
+                p.code.toLowerCase().includes(searchTerm) ||
+                p.description.toLowerCase().includes(searchTerm)
+            );
+            populateTable(filtered);
+        }
+        
+        function clearFilter() {
+            document.getElementById('searchInput').value = '';
+            populateTable(allProducts);
+        }
+        
+        function sortByCode() {
+            const sorted = [...allProducts].sort((a, b) => parseInt(a.code) - parseInt(b.code));
+            populateTable(sorted);
+        }
+        
+        function sortByMonth() {
+            const monthOrder = {
+                '01/01/25': 0, '01/02/25': 1, '01/03/25': 2, '01/04/25': 3, '01/05/25': 4,
+                '01/06/25': 5, '01/07/25': 6, '01/08/25': 7, '01/09/25': 8, '01/10/25': 9,
+                '01/11/25': 10, '01/12/25': 11, '01/01/24': 12, '01/02/24': 13
+            };
+            const sorted = [...allProducts].sort((a, b) => 
+                (monthOrder[a.lastMonth] || 999) - (monthOrder[b.lastMonth] || 999)
+            );
+            populateTable(sorted);
+        }
+        
+        // Load on page load
+        document.addEventListener('DOMContentLoaded', loadProducts);
+    </script>
+</body>
+</html>

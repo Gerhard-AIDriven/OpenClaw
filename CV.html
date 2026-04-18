@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerhard Stimie - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Verdana', sans-serif;
+            color: #2D2D2D;
+            background-color: #FFFFFF;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            background: linear-gradient(135deg, #007A4D 0%, #FFB81C 100%);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .header-logo {
+            width: 120px;
+            height: 120px;
+            background-color: #FFFFFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 48px;
+            font-weight: bold;
+            color: #007A4D;
+        }
+        
+        .header-content h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .header-content p {
+            font-size: 16px;
+            margin-bottom: 12px;
+            opacity: 0.95;
+        }
+        
+        .tagline {
+            font-size: 14px;
+            font-style: italic;
+            color: #FFB81C;
+            font-weight: 600;
+        }
+        
+        /* Summary Section */
+        .summary {
+            background-color: #f5f5f5;
+            border-left: 5px solid #007A4D;
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+        
+        /* Section Headings */
+        .section-title {
+            color: #007A4D;
+            font-size: 22px;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #FFB81C;
+        }
+        
+        /* Experience Item */
+        .experience-item {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .experience-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .job-title {
+            color: #007A4D;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .company-date {
+            font-size: 14px;
+            color: #FFB81C;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .job-description {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        
+        .job-bullets {
+            margin-left: 20px;
+            font-size: 14px;
+            color: #2D2D2D;
+        }
+        
+        .job-bullets li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+        
+        .metric {
+            color: #007A4D;
+            font-weight: 600;
+        }
+        
+        /* Two Column Layout for Skills/Education */
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .column-item h3 {
+            color: #007A4D;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #FFB81C;
+        }
+        
+        .column-item ul {
+            margin-left: 20px;
+            font-size: 14px;
+        }
+        
+        .column-item li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #2D2D2D;
+        }
+        
+        .skill-category {
+            margin-bottom: 20px;
+        }
+        
+        .skill-category strong {
+            color: #007A4D;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .skill-tag {
+            background-color: #007A4D;
+            color: #FFFFFF;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .skill-tag.secondary {
+            background-color: #FFB81C;
+            color: #2D2D2D;
+        }
+        
+        /* Education & Certifications */
+        .education-item {
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        .degree {
+            color: #007A4D;
+            font-weight: 700;
+        }
+        
+        .school {
+            color: #666;
+            font-style: italic;
+        }
+        
+        /* Footer */
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #FFB81C;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="header-logo">GS</div>
+            <div class="header-content">
+                <h1>Gerhard Stimie</h1>
+                <p>AI-Driven Business Transformation Consultant</p>
+                <p>Systems Integration | Process Optimization | AI Implementation</p>
+                <p class="tagline">Practical AI for real businesses</p>
+            </div>
+        </div>
+        
+        <!-- Professional Summary -->
+        <div class="summary">
+            <p>Seasoned systems integration and business transformation consultant with <strong>40+ years' experience</strong> designing and delivering enterprise-scale solutions. Specialist in deploying <strong>AI-augmented automation</strong> to optimize workflows and streamline business processes for SMEs and large organizations across multiple sectors. Proven track record bridging technical implementation with strategic business outcomes across international markets (PNG, Afghanistan, Nigeria, Turkey, Europe).</p>
+        </div>
+        
+        <!-- Core Competencies -->
+        <h2 class="section-title">Core Competencies</h2>
+        <div class="skill-category">
+            <strong>AI & Automation</strong>
+            <div class="skill-tags">
+                <span class="skill-tag">AI Strategy & Implementation</span>
+                <span class="skill-tag">Process Automation</span>
+                <span class="skill-tag">Workflow Optimization</span>
+                <span class="skill-tag">Generative AI Applications</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <strong>Systems & Integration</strong>
+            <div class="skill-tags">
+                <span class="skill-tag secondary">SAP HCM & SuccessFactors</span>
+                <span class="skill-tag secondary">SIGTAS Tax Systems</span>
+                <span class="skill-tag secondary">Oracle Financials</span>
+                <span class="skill-tag secondary">System Architecture</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <strong>Project & Change Management</strong>
+            <div class="skill-tags">
+                <span class="skill-tag">PMP (Certified)</span>
+                <span class="skill-tag">PMBOK & Agile/SCRUM</span>
+                <span class="skill-tag">Change Management</span>
+                <span class="skill-tag">Stakeholder Alignment</span>
+            </div>
+        </div>
+        <div class="skill-category">
+            <strong>Business Analysis & Design</strong>
+            <div class="skill-tags">
+                <span class="skill-tag secondary">Process Engineering</span>
+                <span class="skill-tag secondary">Business Intelligence</span>
+                <span class="skill-tag secondary">Data Warehouse Design</span>
+                <span class="skill-tag secondary">Requirements Analysis</span>
+            </div>
+        </div>
+        
+        <!-- Recent AI & Transformation Projects -->
+        <h2 class="section-title">Recent AI & Transformation Projects</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Systems Integrator – AI & Business Operations</div>
+            <div class="company-date">SPINX Property Maintenance, South Africa | November 2025 – Present</div>
+            <div class="job-description">Modernizing operational support systems and integrating AI-driven workflow optimization</div>
+            <ul class="job-bullets">
+                <li>Configuration and integration of <span class="metric">Servcraft</span> (job management), <span class="metric">Respond.io</span> (customer communications), and <span class="metric">Zoho suite</span> (collaboration) into unified platform</li>
+                <li>Designing AI-augmented process workflows to reduce manual handoffs and improve customer response times</li>
+                <li>Overseeing call centre operations and implementing automation to enhance service delivery</li>
+                <li>Opportunity analysis: <span class="metric">AI-driven inventory optimization</span> for retail partners (SPAR IntelliAcc integration)</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-title">Project Manager (Associate) – Enterprise Systems</div>
+            <div class="company-date">EPI-USE Africa, South Africa | November 2022 – October 2025</div>
+            <div class="job-description">Led high-value SAP and SuccessFactors implementations for mining, food & beverage, and electronics sectors</div>
+            <ul class="job-bullets">
+                <li><strong>Thungela Mining:</strong> SAP PMGM and ONB implementation (March 2024 – Present). <span class="metric">Project Manager</span> responsible for planning, resource management, and client coordination</li>
+                <li><strong>Illovo Sugar:</strong> SuccessFactors integration (Oct 2023 – Mar 2024). Hybrid waterfall/agile methodology; coordinated cross-functional teams and managed budget/invoicing</li>
+                <li><strong>Ricoh Turkey:</strong> SuccessFactors roll-out (Sep – Dec 2023). Waterfall approach; ensured on-time delivery and client satisfaction across geographies</li>
+                <li><strong>Glencore Mining:</strong> SAGE to SuccessFactors cutover (Aug – Oct 2023). <span class="metric">Assistant Project Manager</span>; supported transition planning and resource scheduling</li>
+            </ul>
+        </div>
+        
+        <!-- Signature Project: Tax Systems & Process Optimization -->
+        <h2 class="section-title">Signature Project: Tax Systems & Process Automation</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Project Management & Delivery Stream Leader</div>
+            <div class="company-date">Internal Revenue Division, Afghanistan | May 2009 – February 2014</div>
+            <div class="job-description">Modernized all aspects of tax administration; deployed SIGTAS system with AI-assisted process redesign</div>
+            <ul class="job-bullets">
+                <li><strong>Process Re-engineering:</strong> Analyzed As-Is workflows, identified bottlenecks, designed To-Be processes; deployed SCRUM/Agile for rapid iteration and stakeholder feedback</li>
+                <li><strong>System Implementation:</strong> Configured SIGTAS for local context; managed testing and production deployment across 3 phases</li>
+                <li><strong>Change Management:</strong> Trained 500+ revenue staff; embedded system adoption into day-to-day processes; tracked adoption via JIRA and KPIs</li>
+                <li><strong>Impact:</strong> <span class="metric">Reduced processing backlogs by 60%</span>; improved tax collection accuracy and compliance; enabled real-time reporting for policy decisions</li>
+            </ul>
+        </div>
+        
+        <!-- International Experience -->
+        <h2 class="section-title">International Consulting Experience</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Business Analyst & Process Engineer – Multi-Country Engagements</div>
+            <div class="company-date">International Monetary Fund, Various African Countries | December 2012 – May 2014</div>
+            <div class="job-description">Tax modernization and revenue administration consulting across Nigeria, Eritrea, and multiple African jurisdictions</div>
+            <ul class="job-bullets">
+                <li><strong>Nigeria (FIRS):</strong> Led tax collection process re-engineering; modeled As-Is processes, identified 8+ improvement opportunities, designed To-Be workflows addressing inefficiencies. Built proof-of-concept technical solution and evaluated vendor proposals for integrated tax system. <span class="metric">Reduced collection cycle by 40%</span>.</li>
+                <li><strong>Nigeria (Tender Management):</strong> Coordinated and controlled bid evaluation for $5M+ Integrated Tax System procurement. Assessed solution architectures and technical suitability; provided recommendations to tender panel.</li>
+                <li><strong>Eritrea:</strong> Designed comprehensive IT strategy; evaluated As-Is systems, architected To-Be infrastructure, identified technology gaps and mitigation strategies.</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-title">Project Manager – International Development</div>
+            <div class="company-date">Internal Revenue Commission, Papua New Guinea | 2015 – 2020</div>
+            <div class="job-description">Led SIGTAS implementation and tax process modernization; managed $2M+ budget and cross-functional delivery teams</div>
+            <ul class="job-bullets">
+                <li>Project planning using PMBOK standards; managed scope, budget, schedule, and risk across 18-month delivery</li>
+                <li><strong>Process Innovation:</strong> Re-engineered Tax Payments process; eliminated processing backlogs; improved accuracy and auditability</li>
+                <li><strong>Data Automation:</strong> Designed interim Tax Reconciliation system that automated reconciliation of 5 corporate bank accounts. <span class="metric">Achieved 90% automation</span>; reduced manual effort by 85% and errors by 95%</li>
+                <li><strong>Business Intelligence:</strong> Designed automated reporting and analysis solution for tax data; enabled management decision-support and risk identification</li>
+            </ul>
+        </div>
+        
+        <!-- Early Career: BI & Enterprise Systems -->
+        <h2 class="section-title">Early Career: Business Intelligence & Enterprise Systems (1999–2011)</h2>
+        
+        <div class="experience-item">
+            <div class="job-title">Business Intelligence Director</div>
+            <div class="company-date">Petros Business Solutions, South Africa | May 2003 – November 2011</div>
+            <div class="job-description">Architected and led delivery of enterprise BI and performance management platforms</div>
+            <ul class="job-bullets">
+                <li>Designed IT-enabled Balanced Scorecard platform integrating individual, divisional, and organizational KPIs</li>
+                <li>Managed $500K+ software development projects; led presales consulting for major accounts</li>
+                <li>Strategic consulting: Delivered quarterly performance reports for Transnet Group Strategy Management (annual value $200K+)</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-title">BI & Knowledge Management Practice Manager</div>
+            <div class="company-date">Logical SA / 3Fifteen, South Africa | February 2001 – March 2002</div>
+            <div class="job-description">Established BI and KM practice from scratch; drove go-to-market strategy and vendor partnerships</div>
+            <ul class="job-bullets">
+                <li>Recruited and managed consulting team; drove sales and marketing for BI products and services</li>
+                <li>Managed strategic partnerships with Microsoft SA and ProClarity Corporation</li>
+                <li>Integrated BI and knowledge management through ProClarity and SharePoint Portal Services</li>
+            </ul>
+        </div>
+        
+        <div class="experience-item">
+            <div class="job-title">BI Division Manager</div>
+            <div class="company-date">PQ Africa, South Africa | January 1999 – January 2001</div>
+            <div class="job-description">General management of BI consulting team; led client engagements and product delivery</div>
+            <ul class="job-bullets">
+                <li>Managed team of 6 consultants and business development manager</li>
+                <li>Delivered BI strategy and implementation projects for <span class="metric">Sasol, ABSA, Standard Bank, FNB</span></li>
+                <li>Applied data mining techniques to card fraud detection project; <span class="metric">identified $2M+ in anomalies</span></li>
+                <li>Facilitated executive workshops on BI strategy and decision-making</li>
+            </ul>
+        </div>
+        
+        <!-- Foundational Experience -->
+        <h2 class="section-title">Foundational Systems & Consulting Experience (1980–1999)</h2>
+        <ul class="job-bullets">
+            <li><strong>Oracle Corporation SA (3.2 years):</strong> Principal Consultant, Oracle Financials implementations</li>
+            <li><strong>Spoornet (4.5 years):</strong> Business Analysis of Executive Information Systems; system design and implementation</li>
+            <li><strong>Denel Informatics (1.5 years):</strong> Systems strategy and SAP readiness assessment</li>
+            <li><strong>JCI Gold (1 year):</strong> Data warehouse design and business analytics for production optimization</li>
+            <li><strong>SA Breweries (1 year):</strong> Operations Research: linear programming, capacity planning, logistics optimization</li>
+            <li><strong>Iscor Ltd (6 years):</strong> In-house project management system design; resource scheduling and reporting; trained 200+ users on PM methodologies</li>
+        </ul>
+        
+        <!-- Education & Certifications -->
+        <h2 class="section-title">Education & Professional Certifications</h2>
+        <div class="two-column">
+            <div class="column-item">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <div class="degree">Master's in Business Leadership</div>
+                    <div class="school">UNISA, 1993</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">BSc (Hons) Mathematical Statistics & Operations Research</div>
+                    <div class="school">University of Pretoria, 1982</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">BSc Mathematical Science</div>
+                    <div class="school">RAU, 1980</div>
+                </div>
+            </div>
+            <div class="column-item">
+                <h3>Certifications & Training</h3>
+                <div class="education-item">
+                    <div class="degree">Project Management Professional (PMP)</div>
+                    <div class="school">Project Management Institute, 2003</div>
+                </div>
+                <div class="education-item">
+                    <div class="degree">Data Science Specialization</div>
+                    <div class="school">Johns Hopkins University (Coursera), 2018</div>
+                </div>
+                <div class="education-item">
+                    <div class="school"><em>Courses: R Programming, Data Processing, Exploratory Data Analysis</em></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>© 2026 Gerhard Stimie | AI Driven Consulting | gerhard@aidriven.biz | Practical AI for real businesses</p>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI DRIVEN | Coming Soon</title>
+  <meta name="description" content="AI Driven — Practical AI For Real Businesses. Coming soon to New Zealand." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #000000;
+      --orange: #f7931e;
+      --orange-light: #fbb040;
+      --purple: #8b2fc9;
+      --purple-light: #a855f7;
+      --white: #ffffff;
+      --muted: #888899;
+      --card: #111111;
+      --border: rgba(247,147,30,0.2);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Subtle background glow */
+    body::before {
+      content: '';
+      position: fixed;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(139,47,201,0.12) 0%, transparent 65%);
+      top: 30%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+    body::after {
+      content: '';
+      position: fixed;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(247,147,30,0.08) 0%, transparent 65%);
+      top: 60%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+    }
+
+    .logo-wrap {
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .logo-wrap img {
+      width: 220px;
+      max-width: 60vw;
+      height: auto;
+    }
+
+    /* Fallback if image not found */
+    .logo-fallback {
+      display: none;
+    }
+    .logo-wrap img:not([src]),
+    .logo-wrap img[src=""] {
+      display: none;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(247,147,30,0.1);
+      border: 1px solid rgba(247,147,30,0.35);
+      color: var(--orange);
+      padding: 0.4rem 1.1rem;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.8rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      max-width: 580px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--orange), var(--orange-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 440px;
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .divider {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--purple), var(--orange));
+      border-radius: 2px;
+      margin: 0 auto 2.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      width: 100%;
+      max-width: 380px;
+      margin-bottom: 3rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+      padding: 0.95rem 1.3rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: border-color 0.2s, transform 0.15s, background 0.2s;
+    }
+    .contact-link:hover {
+      border-color: var(--orange);
+      background: rgba(247,147,30,0.06);
+      transform: translateY(-2px);
+    }
+    .contact-link-icon { font-size: 1.2rem; }
+    .contact-link-text { text-align: left; }
+    .contact-link-label {
+      font-size: 0.7rem;
+      color: var(--orange);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.1rem;
+    }
+
+    .footer-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      opacity: 0.5;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGO — save your logo image as logo.png in the same folder -->
+  <div class="logo-wrap">
+    <img src="logo.png" alt="AI Driven Logo" onerror="this.style.display='none'; document.querySelector('.logo-fallback').style.display='block'" />
+    <div class="logo-fallback">
+      <div style="font-family:'Rajdhani',sans-serif;font-size:2.5rem;font-weight:700;letter-spacing:4px;color:#fff;margin-bottom:0.3rem;">AI DRIVEN</div>
+      <div style="font-size:0.85rem;color:#f7931e;letter-spacing:2px;font-style:italic;">Practical AI For Real Businesses</div>
+    </div>
+  </div>
+
+  <div class="badge">🚧 Under Construction</div>
+
+  <h1>Something <span>powerful</span><br/>is coming soon</h1>
+
+  <div class="divider"></div>
+
+  <p class="tagline">We're putting the finishing touches on our new home. In the meantime, reach out — we'd love to talk about how AI can transform your business.</p>
+
+  <div class="contact-links">
+    <a href="mailto:hello@aidriven.biz" class="contact-link">
+      <span class="contact-link-icon">📧</span>
+      <span class="contact-link-text">
+        <span class="contact-link-label">Email Us</span>
+        hello@aidriven.biz
+      </span>
+    </a>
+    <a href="https://wa.me/27824445825" class="contact-link" target="_blank">
+      <span class="contact-link-icon">💬</span>
+      <span class="contact-link-text">
+        <span class="contact-link-label">WhatsApp</span>
+        Chat with us directly
+      </span>
+    </a>
+  </div>
+
+  <div class="footer-note">© 2026 AI Driven · Practical AI For Real Businesses · New Zealand</div>
+
+</body>
+</html>

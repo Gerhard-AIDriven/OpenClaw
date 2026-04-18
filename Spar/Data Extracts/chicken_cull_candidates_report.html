@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAR Chicken - Cull Candidates Analysis</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, sans-serif; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 2.2em; margin-bottom: 8px; }
+        .metadata { background: #f9f9f9; padding: 15px 30px; display: flex; justify-content: space-between; flex-wrap: wrap; border-bottom: 1px solid #eee; font-size: 0.9em; gap: 20px; }
+        .section { padding: 30px; border-bottom: 1px solid #eee; }
+        .section h2 { color: #d32f2f; font-size: 1.6em; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #d32f2f; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .stat-card { background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%); padding: 20px; border-left: 4px solid #d32f2f; border-radius: 4px; }
+        .stat-card .value { font-size: 2.5em; font-weight: bold; color: #d32f2f; }
+        .stat-card .label { font-size: 0.95em; color: #666; margin-top: 8px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85em; }
+        thead { background: #d32f2f; color: white; }
+        th { padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #fff5f5; }
+        .code { font-family: monospace; font-weight: 600; color: #d32f2f; }
+        .tier1-row { background: #ffebee; }
+        .tier2-row { background: #fff3e0; }
+        .tier3-row { background: #f1f8f4; }
+        .footer { background: #f5f5f5; padding: 15px 30px; text-align: center; font-size: 0.85em; color: #999; }
+        .alert { background: #ffebee; border-left: 4px solid #d32f2f; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .alert strong { color: #b71c1c; }
+        .recommendation { background: #fff3e0; border-left: 4px solid #f57c00; padding: 15px; margin: 12px 0; border-radius: 4px; }
+        ul, ol { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🗑️ Chicken Department - Bad Performers (Cull Candidates)</h1>
+            <p>Products with Declining Trends in Sales Volume OR Profitability</p>
+        </div>
+        
+        <div class="metadata">
+            <div><strong>Report Date:</strong> 18 April 2026</div>
+            <div><strong>Analysis Period:</strong> 1 March 2022 – 1 April 2026 (49 months)</div>
+            <div><strong>Data Source:</strong> SPAR Sigma System</div>
+            <div><strong>Department:</strong> Chicken</div>
+            <div><strong>Bad Performers Found:</strong> 40</div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 Executive Summary</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="value">40</div>
+                    <div class="label">Bad Performers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">9</div>
+                    <div class="label">Tier 1 (Critical)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">8</div>
+                    <div class="label">Tier 2 (Review)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">10</div>
+                    <div class="label">Tier 3 (Monitor)</div>
+                </div>
+            </div>
+            
+            <div class="alert">
+                <strong>⚠️ Finding:</strong> 40 chicken products show declining trends in sales volume and/or profitability. These are candidates for culling, consolidation, or close monitoring.
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔴 Tier 1: CRITICAL (Cull Immediately)</h2>
+            <p style="margin-bottom: 15px;">Products with severe declines in both volume and/or margin. Recommend immediate removal.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 70px;">Code</th>
+                        <th style="width: 40%;">Product Description</th>
+                        <th style="width: 90px; text-align: right;">Total Units</th>
+                        <th style="width: 110px; text-align: right;">Qty Slope</th>
+                        <th style="width: 110px; text-align: right;">GP% Slope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tier1-row"><td><span class="code">11328</span></td><td>C/FAIR FRSH BRAAI 5 PIECE</td><td style="text-align: right;">855</td><td style="text-align: right;"><strong>-1.3443</strong></td><td style="text-align: right;"><strong>-0.2426</strong></td></tr><tr class="tier1-row"><td><span class="code">11331</span></td><td>SPAR SLT DRUMS/THIGHS</td><td style="text-align: right;">5802</td><td style="text-align: right;"><strong>-1.3474</strong></td><td style="text-align: right;"><strong>-0.2181</strong></td></tr><tr class="tier1-row"><td><span class="code">11333</span></td><td>BREAST FILLET</td><td style="text-align: right;">3591</td><td style="text-align: right;"><strong>-0.7564</strong></td><td style="text-align: right;"><strong>0.0597</strong></td></tr><tr class="tier1-row"><td><span class="code">11335</span></td><td>SPAR SLT CHKN THIGHS 4'S</td><td style="text-align: right;">1342</td><td style="text-align: right;"><strong>-1.4366</strong></td><td style="text-align: right;"><strong>-0.5409</strong></td></tr><tr class="tier1-row"><td><span class="code">11346</span></td><td>SPAR SLT BREAST B/IN 3'S</td><td style="text-align: right;">6311</td><td style="text-align: right;"><strong>-1.6028</strong></td><td style="text-align: right;"><strong>-0.0148</strong></td></tr><tr class="tier1-row"><td><span class="code">11348</span></td><td>SPAR SLT CHKN DBL STAR PK</td><td style="text-align: right;">5749</td><td style="text-align: right;"><strong>-5.2564</strong></td><td style="text-align: right;"><strong>-0.4125</strong></td></tr><tr class="tier1-row"><td><span class="code">34224</span></td><td>CHICKEN FILLET KEBAB</td><td style="text-align: right;">108</td><td style="text-align: right;"><strong>-0.1175</strong></td><td style="text-align: right;"><strong>-0.8848</strong></td></tr><tr class="tier1-row"><td><span class="code">34303</span></td><td>SPATCHCOCK CHICKEN</td><td style="text-align: right;">1633</td><td style="text-align: right;"><strong>-1.4941</strong></td><td style="text-align: right;"><strong>-0.6073</strong></td></tr><tr class="tier1-row"><td><span class="code">46445</span></td><td>CRUMBED CHICK SCHNITZEL</td><td style="text-align: right;">428</td><td style="text-align: right;"><strong>-0.5980</strong></td><td style="text-align: right;"><strong>-0.9113</strong></td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>🟡 Tier 2: REVIEW (Consolidate/Phase Out within 6-8 weeks)</h2>
+            <p style="margin-bottom: 15px;">Products with moderate declines. Monitor for 6 weeks; if no improvement, cull.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 70px;">Code</th>
+                        <th style="width: 40%;">Product Description</th>
+                        <th style="width: 90px; text-align: right;">Total Units</th>
+                        <th style="width: 110px; text-align: right;">Qty Slope</th>
+                        <th style="width: 110px; text-align: right;">GP% Slope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tier2-row"><td><span class="code">11318</span></td><td>C/FAIR FRSH DRUM&THIGH</td><td style="text-align: right;">1156</td><td style="text-align: right;">-0.4573</td><td style="text-align: right;">-0.1499</td></tr><tr class="tier2-row"><td><span class="code">11324</span></td><td>C/FAIR FRSH PARTY PACK</td><td style="text-align: right;">1396</td><td style="text-align: right;">0.7411</td><td style="text-align: right;">-0.0051</td></tr><tr class="tier2-row"><td><span class="code">11330</span></td><td>SPAR SLT CHKN WINGS 8'S</td><td style="text-align: right;">2119</td><td style="text-align: right;">-0.3492</td><td style="text-align: right;">-0.1096</td></tr><tr class="tier2-row"><td><span class="code">11332</span></td><td>SPAR SLT CHKN BRAAIPK 8</td><td style="text-align: right;">4551</td><td style="text-align: right;">0.6880</td><td style="text-align: right;">-0.1023</td></tr><tr class="tier2-row"><td><span class="code">11344</span></td><td>SPAR SLT CHKN BRAAIPK 5</td><td style="text-align: right;">2195</td><td style="text-align: right;">-0.3291</td><td style="text-align: right;">-0.1495</td></tr><tr class="tier2-row"><td><span class="code">11347</span></td><td>SPAR FSH CHKN BRAAIPK 16PC</td><td style="text-align: right;">15240</td><td style="text-align: right;">2.4707</td><td style="text-align: right;">-0.0034</td></tr><tr class="tier2-row"><td><span class="code">11354</span></td><td>T&T SKEWERED WINGS BBQ</td><td style="text-align: right;">1296</td><td style="text-align: right;">-0.3912</td><td style="text-align: right;">-0.2113</td></tr><tr class="tier2-row"><td><span class="code">11356</span></td><td>T&T BUFFALO WINGS BBQ</td><td style="text-align: right;">3747</td><td style="text-align: right;">1.6096</td><td style="text-align: right;">-0.1415</td></tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <div class="section">
+            <h2>⚠️ Tier 3: MONITOR (Low-volume underperformers)</h2>
+            <p style="margin-bottom: 15px;">Products with minimal sales and declining trends. Opportunity cost of shelf space too high.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 70px;">Code</th>
+                        <th style="width: 40%;">Product Description</th>
+                        <th style="width: 90px; text-align: right;">Total Units</th>
+                        <th style="width: 110px; text-align: right;">Qty Slope</th>
+                        <th style="width: 110px; text-align: right;">GP% Slope</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="tier3-row"><td><span class="code">11325</span></td><td>C/FAIR FRSH BRSTS FIL 4'S</td><td style="text-align: right;">132</td><td style="text-align: right;">-0.2620</td><td style="text-align: right;">-0.0417</td></tr><tr class="tier3-row"><td><span class="code">11353</span></td><td>T&T SKEWER WINGS PERI</td><td style="text-align: right;">206</td><td style="text-align: right;">-0.2977</td><td style="text-align: right;">-0.2099</td></tr><tr class="tier3-row"><td><span class="code">11379</span></td><td>CHICKEN LEG QUARTER FROZ</td><td style="text-align: right;">0</td><td style="text-align: right;">0.0000</td><td style="text-align: right;">0.0000</td></tr><tr class="tier3-row"><td><span class="code">12618</span></td><td>MATADOR CHIC THIGH KEBABS</td><td style="text-align: right;">0</td><td style="text-align: right;">0.0000</td><td style="text-align: right;">0.0000</td></tr><tr class="tier3-row"><td><span class="code">12840</span></td><td>CHICKENS WHOLE BIRD</td><td style="text-align: right;">151</td><td style="text-align: right;">-0.1496</td><td style="text-align: right;">-0.2490</td></tr><tr class="tier3-row"><td><span class="code">14750</span></td><td>RAINBOW BRAAIPACK 5PCE</td><td style="text-align: right;">139</td><td style="text-align: right;">-0.1788</td><td style="text-align: right;">-0.0111</td></tr><tr class="tier3-row"><td><span class="code">34293</span></td><td>CHICKEN FILLETS 8 PC</td><td style="text-align: right;">6</td><td style="text-align: right;">-0.0092</td><td style="text-align: right;">-0.0982</td></tr><tr class="tier3-row"><td><span class="code">38901</span></td><td>S/CHUNKY LEMON & HERB 1KG</td><td style="text-align: right;">0</td><td style="text-align: right;">0.0000</td><td style="text-align: right;">0.0000</td></tr><tr class="tier3-row"><td><span class="code">38902</span></td><td>S/CHUNKY BBQ IRR 1KG</td><td style="text-align: right;">0</td><td style="text-align: right;">0.0000</td><td style="text-align: right;">0.0000</td></tr><tr class="tier3-row"><td><span class="code">41686</span></td><td>T&T CHKN ESPETADA P/PERI</td><td style="text-align: right;">61</td><td style="text-align: right;">-0.0169</td><td style="text-align: right;">-0.1096</td></tr>
+                </tbody>
+            </table>
+            
+        </div>
+        
+        <div class="footer">
+            <p>Report Generated: 18 April 2026 | SPAR Chicken Department | Bad Performers Analysis (Scenario 2)</p>
+        </div>
+    </div>
+</body>
+</html>
