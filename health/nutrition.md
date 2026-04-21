@@ -154,6 +154,8 @@
 
 **Estimated totals:** ~505 cal | ~57.2g carbs | ~26.6g protein | ~21.7g fat
 
+**After dinner walk:** Done (10,230 steps total today) ✅
+
 ### Daily Totals (estimated)
 - **Calories:** ~1,691 / 1,750 (~97%)
 - **Carbs:** ~218.2 / 219g (~100%)
