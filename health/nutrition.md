@@ -138,6 +138,8 @@
 
 **Estimated totals:** ~646 cal | ~72.8g carbs | ~68.8g protein | ~8.5g fat
 
+**Post-lunch walk:** Done (15 min) ✅
+
 ### Daily Totals (so far)
 - **Calories:** ~1,186 / 1,750 (~68%)
 - **Carbs:** ~161 / 219g (~74%)
