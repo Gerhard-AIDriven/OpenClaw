@@ -16,6 +16,11 @@
 - If Gerhard reports balance is $2 or below → alert him to top up immediately
 - Update the "Last known balance" above when Gerhard reports it
 
+### OpenAI Balance Reminder (once per day, morning)
+- Remind Gerhard to check his OpenAI balance daily (console.openai.com → Billing)
+- Last known balance: $4.18 (2026-04-21)
+- Update the "Last known balance" above when Gerhard reports it
+
 ### Tomorrow (2026-04-09) — One-time reminders
 - 9am: Send medical reports to Maryanne ✅ (cron job set)
 - 1pm: ABSA bank appointment at 2pm (check during heartbeat)
