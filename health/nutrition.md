@@ -127,9 +127,17 @@
 
 **Post-meal walk:** Done (15 min, 1708 steps) ✅
 
+### Lunch (plan)
+- 200g brown rice
+- 150g chicken breast
+- 1 tomato
+- 50g red onion
+
+**Estimated totals:** ~500 cal | ~56.7g carbs | ~53.2g protein | ~6.7g fat
+
 ### Daily Totals (so far)
-- **Calories:** ~540 / 1,750 (~31%)
-- **Carbs:** ~88 / 219g (~40%)
-- **Protein:** ~16 / 110g (~15%)
-- **Fat:** ~14 / 49g (~29%)
+- **Calories:** ~1,040 / 1,750 (~59%)
+- **Carbs:** ~145 / 219g (~66%)
+- **Protein:** ~69 / 110g (~63%)
+- **Fat:** ~21 / 49g (~43%)
 
