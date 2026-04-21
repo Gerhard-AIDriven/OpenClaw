@@ -146,3 +146,14 @@
 - **Protein:** ~85 / 110g (~77%)
 - **Fat:** ~23 / 49g (~47%)
 
+### Dinner
+- 2 boiled eggs
+
+**Estimated totals:** ~156 cal | ~1.2g carbs | ~12.6g protein | ~10.6g fat
+
+### Daily Totals (estimated)
+- **Calories:** ~1,656 / 1,750 (~95%)
+- **Carbs:** ~219 / 219g (~100%)
+- **Protein:** ~112 / 110g (~102%)
+- **Fat:** ~40 / 49g (~82%)
+
