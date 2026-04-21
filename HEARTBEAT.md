@@ -12,7 +12,7 @@
 
 ### Anthropic Balance Reminder (once per day, morning)
 - Remind Gerhard to check his Anthropic balance at console.anthropic.com → Billing
-- Last known balance: $37.31 (2026-04-10)
+- Last known balance: $26.98 (2026-04-21)
 - If Gerhard reports balance is $2 or below → alert him to top up immediately
 - Update the "Last known balance" above when Gerhard reports it
 

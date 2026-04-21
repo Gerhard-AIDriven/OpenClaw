@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-04-18T11:38:23.211Z",
+  "timestamp": "2026-04-21T05:03:50.754Z",
   "count": 2,
   "opportunities": [],
   "emails": [
     {
-      "id": "19da04f75fa77891",
-      "subject": "Data exports",
-      "from": "<manager@bonspar.co.za>",
-      "date": "Sat, 18 Apr 2026 13:18:00 +0200",
-      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature",
+      "id": "19daba4409d3045a",
+      "subject": "Gerhard, you added a new card to use with Google Pay",
+      "from": "Google Pay <googlepay-noreply@google.com>",
+      "date": "Mon, 20 Apr 2026 09:06:01 -0700",
+      "snippet": "Discover how to quickly and safely pay online.‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ",
       "classification": {
         "isOpportunity": false,
         "isHighPriority": false,
@@ -16,11 +16,11 @@
       }
     },
     {
-      "id": "19d9b9a434a9035a",
-      "subject": "Parent child report",
-      "from": "<manager@bonspar.co.za>",
-      "date": "Fri, 17 Apr 2026 15:21:41 +0200",
-      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature",
+      "id": "19dab9b82b97fc30",
+      "subject": "Your API usage limits have increased",
+      "from": "noreply@tm.openai.com",
+      "date": "Mon, 20 Apr 2026 15:56:27 +0000 (UTC)",
+      "snippet": "Review your new rate limits in your account settings. Hi AI Driven, We&#39;re happy to share that we&#39;ve automatically moved your organization to Usage Tier 1 based on your usage history on our",
       "classification": {
         "isOpportunity": false,
         "isHighPriority": false,
