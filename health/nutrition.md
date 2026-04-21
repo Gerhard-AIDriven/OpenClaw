@@ -127,3 +127,9 @@
 
 **Post-meal walk:** Planned
 
+### Daily Totals (so far)
+- **Calories:** ~540 / 1,750 (~31%)
+- **Carbs:** ~88 / 219g (~40%)
+- **Protein:** ~16 / 110g (~15%)
+- **Fat:** ~14 / 49g (~29%)
+
