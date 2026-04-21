@@ -33,7 +33,7 @@
 ### Dinner (ACTUAL — ran out of gas for cooker)
 - 2 slices bread
 - 49g honey
-- Granola snack bar
+- Granola snack bar-04-20
 - 1 medium apple
 
 **Totals:** 572 cal | 113.5g carbs | 11.6g protein | 10.3g fat (33% | 52% | 11% | 21%)
@@ -56,3 +56,74 @@
 2. Scale back breakfast protein (reduce bacon/cheese/eggs to free up fat budget)
 3. Reduce chicken to 200g at lunch (saves 20g protein)
 4. Use 3-4 post-meal walks to reinforce carb-driven glucose control
+
+### 2026-04-20 (Monday)
+
+### Breakfast
+- 157g double cream Greek yogurt
+- 80g Alpen no sugar added muesli
+- 1tbs honey
+- 25ml low fat milk
+- 1 medium banana
+
+**Totals:** 450-480 cal | 55-60g carbs | 15-18g protein | 18-20g fat
+
+**Post-meal walk:** 30 min ✅
+
+### Lunch
+- 2 slices Albany low GI seeded bread
+- Mustard
+- 2 boiled eggs (sliced)
+- 1 banana
+- 40g honey
+- 1 granola snack bar
+
+**Totals:** 520-550 cal | 65-70g carbs | 18-20g protein | 20-22g fat
+
+**Post-meal walk:** Planned
+
+### Dinner
+- 250g beef goulash
+- 1 tbsp canola oil
+- 30g red onion
+- 1 tomato
+- 1 green pepper
+- 25g double cream Greek yogurt
+- Garlic salt + 1 tbsp Rajah medium curry
+- 1.25 cups cooked brown rice
+
+**Totals:** 750-800 cal | 90-95g carbs | 60-65g protein | 25-28g fat
+
+**Post-meal walk:** Planned
+
+### Daily Totals (Projected)
+- **Calories:** 1,720-1,780 / 1,750 (98-102%) ✅
+- **Carbs:** 210-220 / 219g (96-100%) ✅ **ON TARGET**
+- **Protein:** 93-103 / 110g (85-94%) ✅
+- **Fat:** 63-70 / 49g (129-143%) ⚠️ Slightly over (oil for cooking)
+
+### Notes
+- **Formula proven:** 220g carbs + 3x post-meal walks = glucose stability (confirmed April 15 & 18)
+- Breakfast carbs from muesli + banana + honey — solid start
+- Lunch adds bread + fruit for additional carbs and energy
+- Dinner beef goulash provides high protein (60-65g) + brown rice for sustained carbs
+- Critical: **Complete all 3 post-meal walks** to reinforce carb-driven glucose control
+
+### 2026-04-21 (Tuesday)
+
+### Breakfast
+- 150g double cream Greek yogurt
+- 60g honey & almond muesli
+- 1 medium banana
+- 1 tbsp honey
+
+**Estimated totals:** ~540 cal | ~88g carbs | ~16g protein | ~14g fat
+
+**Yogurt used:** 150g = ~9g carbs, ~7.7g protein, ~6g fat (from 100g label)
+
+**Muesli used:** 60g = ~34.8g carbs, ~7.0g protein, ~7.7g fat
+
+**Assumed:** medium banana ~27g carbs, 1 tbsp honey ~17g carbs
+
+**Post-meal walk:** Planned
+
