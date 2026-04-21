@@ -125,7 +125,7 @@
 
 **Assumed:** medium banana ~27g carbs, 1 tbsp honey ~17g carbs
 
-**Post-meal walk:** Planned
+**Post-meal walk:** Done (15 min, 1708 steps) ✅
 
 ### Daily Totals (so far)
 - **Calories:** ~540 / 1,750 (~31%)
