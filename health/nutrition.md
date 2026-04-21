@@ -146,14 +146,17 @@
 - **Protein:** ~85 / 110g (~77%)
 - **Fat:** ~23 / 49g (~47%)
 
-### Dinner
+### Dinner (actual)
+- 2 slices Albany low GI seeded bread
+- 50g Lancewood full cream chunky cottage cheese
+- 1 banana
 - 2 boiled eggs
 
-**Estimated totals:** ~156 cal | ~1.2g carbs | ~12.6g protein | ~10.6g fat
+**Estimated totals:** ~505 cal | ~57.2g carbs | ~26.6g protein | ~21.7g fat
 
 ### Daily Totals (estimated)
-- **Calories:** ~1,656 / 1,750 (~95%)
-- **Carbs:** ~219 / 219g (~100%)
-- **Protein:** ~112 / 110g (~102%)
-- **Fat:** ~40 / 49g (~82%)
+- **Calories:** ~1,691 / 1,750 (~97%)
+- **Carbs:** ~218.2 / 219g (~100%)
+- **Protein:** ~111.6 / 110g (~101%)
+- **Fat:** ~44.7 / 49g (~91%)
 
