@@ -18,7 +18,7 @@
 
 ### OpenAI Balance Reminder (once per day, morning)
 - Remind Gerhard to check his OpenAI balance daily (console.openai.com → Billing)
-- Last known balance: $2.15 (2026-04-27)
+- Last known balance: $12.07 (2026-04-27)
 - Update the "Last known balance" above when Gerhard reports it
 
 ### Tomorrow (2026-04-09) — One-time reminders
