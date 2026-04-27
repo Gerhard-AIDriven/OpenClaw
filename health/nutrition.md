@@ -2,7 +2,7 @@
 
 Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
-**Target Daily:** 1750 cal | Carbs 219g | Protein 110g | Fat 49g
+**Target Daily (trial from 2026-04-27):** 1600 cal | Carbs 200g | Protein 101g | Fat 45g
 
 ---
 
@@ -39,10 +39,10 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | 18:49 | 2 slices Albany low-GI wholewheat bread + cottage cheese (34g, Spar low-fat plain) + banana (1 medium) + coffee (25ml low-fat milk) | 337 | 57.2 | 15.7 | 6.3 | Dinner (actual) |
 
 ### Daily Totals
-- **Calories:** 1552 / 1750
-- **Carbs:** 185.2 / 219g
-- **Protein:** 119.3 / 110g
-- **Fat:** 36.5 / 49g
+- **Calories:** 1552 / 1600
+- **Carbs:** 185.2 / 200g
+- **Protein:** 119.3 / 101g
+- **Fat:** 36.5 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.9 (morning reading)
@@ -59,10 +59,10 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | 04:30 | 60g Jungle oats (cooked in water) + Greek yogurt (100g) + banana (1 medium) | 424 | 67.2 | 14.9 | 10.0 | Breakfast (plan) |
 
 ### Daily Totals
-- **Calories:** 424 / 1750
-- **Carbs:** 67.2 / 219g
-- **Protein:** 14.9 / 110g
-- **Fat:** 10.0 / 49g
+- **Calories:** 424 / 1600
+- **Carbs:** 67.2 / 200g
+- **Protein:** 14.9 / 101g
+- **Fat:** 10.0 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** —
@@ -82,10 +82,10 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |      |      |          |           |             |         |       |
 
 ### Daily Totals
-- **Calories:** — / 1750
-- **Carbs:** — / 219g
-- **Protein:** — / 110g
-- **Fat:** — / 49g
+- **Calories:** — / 1600
+- **Carbs:** — / 200g
+- **Protein:** — / 101g
+- **Fat:** — / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** —
