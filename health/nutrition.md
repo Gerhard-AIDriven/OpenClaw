@@ -35,12 +35,14 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 05:04 | Greek yogurt (159g) + Spar honey & almond muesli (50g) + banana (1 medium) | 449 | 65.5 | 16.3 | 14.8 | Breakfast | 
+| 13:50 | Chicken (250g) + brown rice (100g cooked) + tomato (35g) + red onion (55g) + Spar tomato sauce (20g, from “20mg”) + cider vinegar (1 tsp) + apple (75g) + greek yogurt (100g) + honey (1 tsp) + KOO beetroot slices in brine (100g) | 766 | 62.5 | 87.3 | 15.4 | Lunch | 
+| 18:49 | 2 slices Albany low-GI wholewheat bread + cottage cheese (34g, Spar low-fat plain) + banana (1 medium) + coffee (25ml low-fat milk) | 337 | 57.2 | 15.7 | 6.3 | Dinner (actual) |
 
 ### Daily Totals
-- **Calories:** 449 / 1750
-- **Carbs:** 65.5 / 219g
-- **Protein:** 16.3 / 110g
-- **Fat:** 14.8 / 49g
+- **Calories:** 1552 / 1750
+- **Carbs:** 185.2 / 219g
+- **Protein:** 119.3 / 110g
+- **Fat:** 36.5 / 49g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.9 (morning reading)
