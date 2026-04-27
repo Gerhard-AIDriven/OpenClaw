@@ -21,7 +21,8 @@
 ## Tech Setup
 - OpenClaw on Windows, Telegram connected
 - Zalo channel removed (April 2026)
-- **Anthropic API balance:** $37.31 (2026-04-10)
+- **Anthropic API balance:** $24.85 (2026-04-27)
+- **OpenAI API balance:** $2.15 (2026-04-27)
 - **Email:** gerhard@aidriven.biz now on Google Workspace Gmail (migrated from Zoho)
 - **Gmail API:** ✅ OAuth setup complete (project: AIdriven-openclaw)
   - Credentials file: `C:\Users\gstim\.openclaw\workspace\gmail\credentials.json`
@@ -78,3 +79,49 @@
 - Connect Gmail API to OpenClaw for email management
 - Update LinkedIn profile (Gerhard still needs to supply details)
 - Build out aidriven.biz website
+
+## Promoted From Short-Term Memory (2026-04-20)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-13.md:258:258 -->
+- - Candidate: Possible Lasting Truths: No strong candidate truths surfaced. [score=0.845 recalls=0 avg=0.620 source=memory/2026-04-13.md:78-78]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-15.md:358:360 -->
+- - Candidate: Possible Lasting Truths: Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.58 evidence=memory/2026-04-09.md:364-364]; Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.58 evidence=memory/2026-04-10.md:228-228]; Possible Lasting - confidence: 0.62 - evidence: memory/2026-04-15.md:458-460 [score=0.822 recalls=0 avg=0.620 source=memory/2026-04-15.md:13-15]
+
+## Promoted From Short-Term Memory (2026-04-21)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-16.md:368:370 -->
+- - Candidate: Possible Lasting Truths: Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.58 evidence=memory/2026-04-09.md:364-364]; Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.58 evidence=memory/2026-04-10.md:228-228]; Possible Lasting - confidence: 0.62 - evidence: memory/2026-04-15.md:358-360 [score=0.844 recalls=0 avg=0.620 source=memory/2026-04-16.md:13-15]
+
+## Promoted From Short-Term Memory (2026-04-22)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-17.md:373:375 -->
+- - Candidate: Possible Lasting Truths: Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.58 evidence=memory/2026-04-09.md:278-278]; Possible Lasting Truths: No strong candidate truths surfaced. [confidence=0.58 evidence=memory/2026-04-10.md:228-228]; Possible Lasting - confidence: 0.62 - evidence: memory/2026-04-17.md:438-440 [score=0.844 recalls=0 avg=0.620 source=memory/2026-04-17.md:13-15]
+
+## Promoted From Short-Term Memory (2026-04-24)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-18.md:368:368 -->
+- **Dataset:** Department 2 (Butchery), March 2022 – April 2026 (49 months), 203 SKUs [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-18.md:368-368]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-18.md:370:370 -->
+- **Key Analysis Tasks:** [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-18.md:370-370]
+
+## Promoted From Short-Term Memory (2026-04-24)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-18.md:376:376 -->
+- **Top Performers (Uptrend in Qty + GP%):** [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-18.md:376-376]
+
+## Promoted From Short-Term Memory (2026-04-26)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:13:13 -->
+- **Message:** OpenAI has automatically moved the AI Driven organization to Usage Tier 1 based on usage history. [score=0.859 recalls=0 avg=0.620 source=memory/2026-04-22.md:13-13]
+
+## Promoted From Short-Term Memory (2026-04-27)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:53:53 -->
+- **Total Unread:** 1 (same OpenAI deprecation notice from 20:57 UTC) [score=0.874 recalls=0 avg=0.620 source=memory/2026-04-22.md:53-53]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:15:15 -->
+- **Status:** ✅ No urgent/important emails. This is routine notification about API tier upgrade. [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:15-15]
+
+## Promoted From Short-Term Memory (2026-04-27)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:19:19 -->
+- **No change.** Still 1 unread email (same OpenAI notification from 07:04 check). [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:19-19]
