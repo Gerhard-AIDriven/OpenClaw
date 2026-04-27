@@ -69,6 +69,24 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ---
 
+## 2026-04-27 (Monday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| 07:44 | 15 | 1730 | After breakfast walk |
+
+### Daily Totals
+- **Total walks:** 1 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 1730 / 10000 (goal)
+- **Total walking time:** 15 minutes
+
+### Notes
+- **Workday:** Early shift this week (walking mostly in-store)
+
+---
+
 ## Template for New Days
 
 ```markdown
