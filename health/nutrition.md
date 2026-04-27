@@ -50,6 +50,26 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ---
 
+## 2026-04-28 (Tuesday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:30 | 60g Jungle oats (cooked in water) + Greek yogurt (100g) + banana (1 medium) | 424 | 67.2 | 14.9 | 10.0 | Breakfast (plan) |
+
+### Daily Totals
+- **Calories:** 424 / 1750
+- **Carbs:** 67.2 / 219g
+- **Protein:** 14.9 / 110g
+- **Fat:** 10.0 / 49g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** —
+- **General notes:** —
+
+---
+
 ## Template for New Days
 
 ```markdown
