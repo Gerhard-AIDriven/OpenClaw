@@ -1,164 +1,71 @@
-# Nutrition Tracking
+# Nutrition Tracking — 2026
 
-## Daily Targets
-- **Calories:** 1,750
-- **Carbs:** 219g (diabetes prevention, low-GI focus)
-- **Protein:** 110g (higher to stabilize blood sugar)
-- **Fat:** 49g (higher but controlled)
+Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
-**Goal:** Reduce insulin resistance and manage blood sugar levels.
+**Target Daily:** 1750 cal | Carbs 219g | Protein 110g | Fat 49g
 
 ---
 
-## 2026-04-18 (Saturday)
+## 2026-04-26 (Sunday)
 
-### Breakfast
-- 2 rashers bacon
-- 2 eggs fried in pan (minimal residual fat)
-- 3 slices Spar cheddar cheese (50g)
-- 2 slices Albany low GI seed bread
-- 1 tbsp Melrose high protein cheese spread
+### Meals
 
-**Totals:** 655 cal | 28g carbs | 43g protein | 41.5g fat (37% | 13% | 39% | 85%)
-
-### Lunch
-- 275g skinless chicken breast
-- 75g red onion
-- 1 tsp olive oil
-- 170g broccoli
-- 100g Greek yogurt (plain, 0% fat)
-
-**Totals:** 512 cal | 20.8g carbs | 81.5g protein | 9.6g fat (29% | 9% | 74% | 20%)
-
-### Dinner (ACTUAL — ran out of gas for cooker)
-- 2 slices bread
-- 49g honey
-- Granola snack bar-04-20
-- 1 medium apple
-
-**Totals:** 572 cal | 113.5g carbs | 11.6g protein | 10.3g fat (33% | 52% | 11% | 21%)
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 08:32 | Greek yogurt (150g) + Spar muesli (60g) + blackberries (50g) + banana (1 medium) + coffee (20ml low-fat milk, sweetener) | 440 | 81 | 16.2 | 9.5 | Breakfast (actual) |
+| 18:00 | 2 slices low-GI wholewheat toast + chunky cottage cheese (30g) + banana (1 medium) + greek yogurt (100g) | 394 | 61.6 | 20.5 | 10.1 | Light dinner (actual) |
+| 16:30+ | Ostrich fillet (160g) + 2 boiled eggs + sweet potato (200g, air-fried) + butter (1 tbs) + Coleman's Worcestershire sauce (1 tsp) | 617 | 39.1 | 53.6 | 26.0 | Main meal after 4pm (actual) |
 
 ### Daily Totals
-- **Calories:** 1,739/1,750 (99%) ✅
-- **Carbs:** 162.3/219g (74%) ❌ SHORT by 56.7g
-- **Protein:** 136.1/110g (124%) ❌ Over by 26.1g
-- **Fat:** 61.4/49g (125%) ❌ Over by 12.4g
+- **Calories:** 1451 / 1750
+- **Carbs:** 181.7 / 219g
+- **Protein:** 90.3 / 110g
+- **Fat:** 45.6 / 49g ✅
 
-### Notes
-- **CRITICAL PATTERN:** Carbs fell short by 57g (down from 220g goal). Historical data shows low carbs = high glucose spike next morning
-- Breakfast + lunch were heavy protein (84.5g combined), causing protein overage
-- Dinner carbs were adequate (113.5g) but too high in fat due to honey + granola bar combo
-- Emergency dinner (no cooker gas) forced quick choices — bread + honey + bar are higher fat alternatives
-- **Tomorrow's glucose likely to spike** due to carb deficit and high protein/fat ratio
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.5 (morning reading)
+- **General notes:** Pre-breakfast walk initiated today (15 min, 1744 steps @ 05:44)
 
-### Tomorrow's Critical Adjustments
-1. **MUST hit 219g carbs minimum** — historical data (April 15, 18) proves this drops glucose by 0.3-0.4
-2. Scale back breakfast protein (reduce bacon/cheese/eggs to free up fat budget)
-3. Reduce chicken to 200g at lunch (saves 20g protein)
-4. Use 3-4 post-meal walks to reinforce carb-driven glucose control
+---
 
-### 2026-04-20 (Monday)
+## 2026-04-27 (Monday)
 
-### Breakfast
-- 157g double cream Greek yogurt
-- 80g Alpen no sugar added muesli
-- 1tbs honey
-- 25ml low fat milk
-- 1 medium banana
+### Meals
 
-**Totals:** 450-480 cal | 55-60g carbs | 15-18g protein | 18-20g fat
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:04 | Greek yogurt (159g) + Spar honey & almond muesli (50g) + banana (1 medium) | 449 | 65.5 | 16.3 | 14.8 | Breakfast | 
 
-**Post-meal walk:** 30 min ✅
+### Daily Totals
+- **Calories:** 449 / 1750
+- **Carbs:** 65.5 / 219g
+- **Protein:** 16.3 / 110g
+- **Fat:** 14.8 / 49g
 
-### Lunch
-- 2 slices Albany low GI seeded bread
-- Mustard
-- 2 boiled eggs (sliced)
-- 1 banana
-- 40g honey
-- 1 granola snack bar
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.9 (morning reading)
+- **General notes:** —
 
-**Totals:** 520-550 cal | 65-70g carbs | 18-20g protein | 20-22g fat
+---
 
-**Post-meal walk:** Planned
+## Template for New Days
 
-### Dinner
-- 250g beef goulash
-- 1 tbsp canola oil
-- 30g red onion
-- 1 tomato
-- 1 green pepper
-- 25g double cream Greek yogurt
-- Garlic salt + 1 tbsp Rajah medium curry
-- 1.25 cups cooked brown rice
+```markdown
+## YYYY-MM-DD (Day)
 
-**Totals:** 750-800 cal | 90-95g carbs | 60-65g protein | 25-28g fat
+### Meals
 
-**Post-meal walk:** Planned
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+|      |      |          |           |             |         |       |
 
-### Daily Totals (Projected)
-- **Calories:** 1,720-1,780 / 1,750 (98-102%) ✅
-- **Carbs:** 210-220 / 219g (96-100%) ✅ **ON TARGET**
-- **Protein:** 93-103 / 110g (85-94%) ✅
-- **Fat:** 63-70 / 49g (129-143%) ⚠️ Slightly over (oil for cooking)
+### Daily Totals
+- **Calories:** — / 1750
+- **Carbs:** — / 219g
+- **Protein:** — / 110g
+- **Fat:** — / 49g
 
-### Notes
-- **Formula proven:** 220g carbs + 3x post-meal walks = glucose stability (confirmed April 15 & 18)
-- Breakfast carbs from muesli + banana + honey — solid start
-- Lunch adds bread + fruit for additional carbs and energy
-- Dinner beef goulash provides high protein (60-65g) + brown rice for sustained carbs
-- Critical: **Complete all 3 post-meal walks** to reinforce carb-driven glucose control
-
-### 2026-04-21 (Tuesday)
-
-### Breakfast
-- 150g double cream Greek yogurt
-- 60g honey & almond muesli
-- 1 medium banana
-- 1 tbsp honey
-
-**Estimated totals:** ~540 cal | ~88g carbs | ~16g protein | ~14g fat
-
-**Yogurt used:** 150g = ~9g carbs, ~7.7g protein, ~6g fat (from 100g label)
-
-**Muesli used:** 60g = ~34.8g carbs, ~7.0g protein, ~7.7g fat
-
-**Assumed:** medium banana ~27g carbs, 1 tbsp honey ~17g carbs
-
-**Post-meal walk:** Done (15 min, 1708 steps) ✅
-
-### Lunch (actual)
-- 200g chicken breast (no oil)
-- 1 cup cooked brown rice
-- 50g red onion
-- 35g green pepper
-- 65g red tomato
-- 1 tsp crushed garlic
-- 1 tbsp honey
-
-**Estimated totals:** ~646 cal | ~72.8g carbs | ~68.8g protein | ~8.5g fat
-
-**Post-lunch walk:** Done (15 min) ✅
-
-### Daily Totals (so far)
-- **Calories:** ~1,186 / 1,750 (~68%)
-- **Carbs:** ~161 / 219g (~74%)
-- **Protein:** ~85 / 110g (~77%)
-- **Fat:** ~23 / 49g (~47%)
-
-### Dinner (actual)
-- 2 slices Albany low GI seeded bread
-- 50g Lancewood full cream chunky cottage cheese
-- 1 banana
-- 2 boiled eggs
-
-**Estimated totals:** ~505 cal | ~57.2g carbs | ~26.6g protein | ~21.7g fat
-
-**After dinner walk:** Done (10,230 steps total today) ✅
-
-### Daily Totals (estimated)
-- **Calories:** ~1,691 / 1,750 (~97%)
-- **Carbs:** ~218.2 / 219g (~100%)
-- **Protein:** ~111.6 / 110g (~101%)
-- **Fat:** ~44.7 / 49g (~91%)
-
+### Blood Sugar & Health
+- **Fasting blood sugar:** —
+- **General notes:** —
+```

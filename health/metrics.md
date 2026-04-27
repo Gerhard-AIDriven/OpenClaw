@@ -23,6 +23,9 @@
 |2026-04-22|121/80|110.8|7.0 (fasting)|✅✅ Sugar continues downward! 7.0 (-0.2 from 7.2). Weight up 0.9kg (expected after good carb day). BP excellent (sys -1, dia -3). **Sustained low glucose despite weight uptick — water/glycogen storage.**|
 |2026-04-23|121/84|111.3|7.2 (fasting)|⚠️ Sugar ticked up +0.2 (7.0→7.2). Weight up 0.5kg. BP: sys stable, dia +4. Pattern emerging: hitting carb target not enough alone — need consistent walking too. Yesterday had 2 walks but no morning walk pattern yet.
 |2026-04-24|125/81|111.5|6.5 (fasting)|✅ Morning reading improved (7.2 → 6.5). |
+|2026-04-25|118/80|111.3|6.5 (fasting)|✅✅ Excellent! BP dropped significantly (125/81 → 118/80). Sugar stable at 6.5. Weight down 0.2kg. **3 walks + 18.5k steps + nutrition targets = sustained control.**|
+|2026-04-26|117/78|111.1|6.5 (fasting)|✅✅✅ **SUSTAINED!** BP continues improving (118/80 → 117/78). Sugar locked at 6.5 for 3 consecutive days. Weight down 0.2kg. **Formula proven: consistent 3 walks + nutrition targets + 21k steps = stable glucose + improving BP.**|
+|2026-04-27|122/80|111.6|6.9 (fasting)|⚠️ Sugar up slightly (6.5→6.9). BP steady (122/80). Weight +0.5kg likely normal variation (water/glycogen). Keep the pre-breakfast + post-meal walk routine and aim carbs within target.**|
 
 ---
 
