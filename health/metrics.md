@@ -26,6 +26,7 @@
 |2026-04-25|118/80|111.3|6.5 (fasting)|✅✅ Excellent! BP dropped significantly (125/81 → 118/80). Sugar stable at 6.5. Weight down 0.2kg. **3 walks + 18.5k steps + nutrition targets = sustained control.**|
 |2026-04-26|117/78|111.1|6.5 (fasting)|✅✅✅ **SUSTAINED!** BP continues improving (118/80 → 117/78). Sugar locked at 6.5 for 3 consecutive days. Weight down 0.2kg. **Formula proven: consistent 3 walks + nutrition targets + 21k steps = stable glucose + improving BP.**|
 |2026-04-27|122/80|111.6|6.9 (fasting)|⚠️ Sugar up slightly (6.5→6.9). BP steady (122/80). Weight +0.5kg likely normal variation (water/glycogen). Keep the pre-breakfast + post-meal walk routine and aim carbs within target.**|
+|2026-04-28|128/84|111.2|5.9 (fasting)|✅ Big improvement! Sugar down to 5.9. BP slightly higher but acceptable. Weight down 0.4kg. Likely response to consistent carbs + walking + early shift movement.**|
 
 ---
 
