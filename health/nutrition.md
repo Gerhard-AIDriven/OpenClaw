@@ -59,12 +59,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | 04:30 | 60g Jungle oats (cooked in water) + Greek yogurt (100g) + banana (1 medium) | 424 | 67.2 | 14.9 | 10.0 | Breakfast (plan) |
 | 13:00 | Chicken breast (85g) + low-GI wholewheat bread (2 slices) + red onion (30g) + tomato (50g) + Nandos lemon & herb sauce (1 tsp) + butter (2 tsp) | 403 | 33.7 | 35.3 | 14.5 | Lunch (actual) |
 | 17:23 | Banana (1 medium) | 105 | 27 | 1.3 | 0.3 | Snack |
+| 18:49 | Chicken breast (105g) + tomato (86g) + red onion (15.4g) + Wrap (77g) + green pepper (36.6g) + Tzatziki (2 tbsp, estimated) | 497 | 52.2 | 44.8 | 11.0 | Dinner |
 
 ### Daily Totals
-- **Calories:** 932 / 1600
-- **Carbs:** 128.0 / 200g
-- **Protein:** 51.5 / 101g
-- **Fat:** 24.8 / 45g
+- **Calories:** 1429 / 1600
+- **Carbs:** 180.2 / 200g
+- **Protein:** 96.3 / 101g
+- **Fat:** 35.8 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** —
