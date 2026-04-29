@@ -73,6 +73,26 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ---
 
+## 2026-04-29 (Wednesday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:12 | 2 slices low-GI wholewheat bread + 2 eggs + cottage cheese (50g) + honey (1 tsp) + coffee (25ml low-fat milk, sweetener) | 423 | 37.2 | 29.4 | 17.6 | Breakfast |
+
+### Daily Totals
+- **Calories:** 423 / 1600
+- **Carbs:** 37.2 / 200g
+- **Protein:** 29.4 / 101g
+- **Fat:** 17.6 / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.0 (morning reading)
+- **General notes:** —
+
+---
+
 ## Template for New Days
 
 ```markdown
