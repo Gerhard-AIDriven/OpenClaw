@@ -80,12 +80,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 04:12 | 2 slices low-GI wholewheat bread + 2 eggs + cottage cheese (50g) + honey (1 tsp) + coffee (25ml low-fat milk, sweetener) | 423 | 37.2 | 29.4 | 17.6 | Breakfast |
+| 11:34 | 2 slices low-GI wholewheat bread + ostrich biltong (38g) + 2 boiled eggs + Nola light mayo (1 tbs) + tomato sauce (1 tbs) + banana (1 medium) | 558 | 57.6 | 37.4 | 21.3 | Lunch |
 
 ### Daily Totals
-- **Calories:** 423 / 1600
-- **Carbs:** 37.2 / 200g
-- **Protein:** 29.4 / 101g
-- **Fat:** 17.6 / 45g
+- **Calories:** 981 / 1600
+- **Carbs:** 94.8 / 200g
+- **Protein:** 66.8 / 101g
+- **Fat:** 38.9 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.0 (morning reading)
