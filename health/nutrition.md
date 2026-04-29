@@ -81,16 +81,17 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 04:12 | 2 slices low-GI wholewheat bread + 2 eggs + cottage cheese (50g) + honey (1 tsp) + coffee (25ml low-fat milk, sweetener) | 423 | 37.2 | 29.4 | 17.6 | Breakfast |
 | 11:34 | 2 slices low-GI wholewheat bread + ostrich biltong (38g) + 2 boiled eggs + Nola light mayo (1 tbs) + tomato sauce (1 tbs) + banana (1 medium) | 558 | 57.6 | 37.4 | 21.3 | Lunch |
+| 19:13 | SPAR tomato soup (42.5g powder + 400ml water) + sweet potato (100g cooked) + tuna in brine (96g drained) + 2 slices low-GI wholewheat bread | 411 | 78 | 34.1 | 4.4 | Dinner |
 
 ### Daily Totals
-- **Calories:** 981 / 1600
-- **Carbs:** 94.8 / 200g
-- **Protein:** 66.8 / 101g
-- **Fat:** 38.9 / 45g
+- **Calories:** 1392 / 1600 ✅
+- **Carbs:** 172.8 / 200g ✅
+- **Protein:** 100.9 / 101g ✅
+- **Fat:** 43.3 / 45g ✅
 
 ### Blood Sugar & Health
-- **Fasting blood sugar:** 6.0 (morning reading)
-- **General notes:** —
+- **Fasting blood sugar:** 6.0 (morning reading) ✅
+- **General notes:** Strong day — hit all macro targets. 4 walks completed + 6,873 steps.
 
 ---
 
