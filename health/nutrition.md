@@ -102,12 +102,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 04:51 | Greek yogurt (150g) + Spar muesli (50g) + low-fat milk (25ml) + honey (1 tsp) + banana (1 medium) | 472 | 71.8 | 16.5 | 14.3 | Breakfast |
+| 11:43 | Chicken breast (160g) + 2 eggs + beetroot (80g) + breadcrumbs (50g) + coffee (25ml low-fat milk) | 695 | 50.1 | 73 | 18.5 | Lunch |
 
 ### Daily Totals
-- **Calories:** 472 / 1600
-- **Carbs:** 71.8 / 200g
-- **Protein:** 16.5 / 101g
-- **Fat:** 14.3 / 45g
+- **Calories:** 1167 / 1600
+- **Carbs:** 121.9 / 200g
+- **Protein:** 89.5 / 101g
+- **Fat:** 32.8 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.2 (morning reading)
