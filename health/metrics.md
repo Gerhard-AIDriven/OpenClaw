@@ -28,6 +28,7 @@
 |2026-04-27|122/80|111.6|6.9 (fasting)|⚠️ Sugar up slightly (6.5→6.9). BP steady (122/80). Weight +0.5kg likely normal variation (water/glycogen). Keep the pre-breakfast + post-meal walk routine and aim carbs within target.**|
 |2026-04-28|128/84|111.2|5.9 (fasting)|✅ Big improvement! Sugar down to 5.9. BP slightly higher but acceptable. Weight down 0.4kg. Likely response to consistent carbs + walking + early shift movement.**|
 |2026-04-29|129/84|111.0|6.0 (fasting)|✅ Good control. Sugar up slightly (5.9→6.0). BP stable (129/84). Weight stable. Keep your pre/post-meal walks and stay within carb targets.**|
+|2026-04-30|127/84|110.8|6.2 (fasting)|✅ Good control. Sugar +0.2 (6.0→6.2), still in target range. BP improved (129/84 → 127/84, sys down 2). Weight down 0.2kg. **Pattern strong: hitting macro targets + 4 walks/day + 10k+ steps = stable glucose + improving BP.**|
 
 ---
 

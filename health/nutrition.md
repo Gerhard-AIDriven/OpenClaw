@@ -95,6 +95,26 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ---
 
+## 2026-04-30 (Thursday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:51 | Greek yogurt (150g) + Spar muesli (50g) + low-fat milk (25ml) + honey (1 tsp) + banana (1 medium) | 472 | 71.8 | 16.5 | 14.3 | Breakfast |
+
+### Daily Totals
+- **Calories:** 472 / 1600
+- **Carbs:** 71.8 / 200g
+- **Protein:** 16.5 / 101g
+- **Fat:** 14.3 / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.2 (morning reading)
+- **General notes:** Skipped pre-breakfast walk today
+
+---
+
 ## Template for New Days
 
 ```markdown
