@@ -103,16 +103,17 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 04:51 | Greek yogurt (150g) + Spar muesli (50g) + low-fat milk (25ml) + honey (1 tsp) + banana (1 medium) | 472 | 71.8 | 16.5 | 14.3 | Breakfast |
 | 11:43 | Chicken breast (160g) + 2 eggs + beetroot (80g) + breadcrumbs (50g) + coffee (25ml low-fat milk) | 695 | 50.1 | 73 | 18.5 | Lunch |
+| 20:45 | SPAR tomato soup (42.5g + 400ml) + 1 slice low-GI wholewheat bread + banana (1 medium) | 324 | 71 | 7.8 | 2.6 | Dinner + snack |
 
 ### Daily Totals
-- **Calories:** 1167 / 1600
-- **Carbs:** 121.9 / 200g
-- **Protein:** 89.5 / 101g
-- **Fat:** 32.8 / 45g
+- **Calories:** 1491 / 1600 ✅
+- **Carbs:** 192.9 / 200g ✅
+- **Protein:** 97.3 / 101g ✅
+- **Fat:** 35.4 / 45g ✅
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.2 (morning reading)
-- **General notes:** Skipped pre-breakfast walk today
+- **General notes:** Skipped pre-breakfast walk. Strong day — hit all macro targets + 4 walks (after skipping morning walk) + 15,747 steps.
 
 ---
 
