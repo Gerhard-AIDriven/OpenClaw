@@ -124,13 +124,14 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 04:57 | 2 slices wholewheat bread + 2 eggs + cottage cheese (50g) + tomato sauce (25g) | 375 | 31.4 | 27.5 | 15.9 | Breakfast |
+| 14:00 | Spar kitchen vegetable soup (300ml, estimated; veg incl. leeks/carrot/beans/celery/parsley) + 1 slice wholewheat bread | 170 | 28.0 | 7.0 | 2.5 | Lunch (estimated) |
 | 19:25 | Spar lean mince (125g raw) + 1/2 cup cooked brown rice + yellow sweet potato (50g) + 1 tbsp Spar extra virgin olive oil + Bisto brown thickening sauce (1 tbsp powder) + banana (1 medium) | 646 | 67.5 | 33.5 | 27.3 | Dinner (estimated) |
 
 ### Daily Totals
-- **Calories:** 1021 / 1600
-- **Carbs:** 98.9 / 200g
-- **Protein:** 61.0 / 101g
-- **Fat:** 43.2 / 45g
+- **Calories:** 1191 / 1600
+- **Carbs:** 126.9 / 200g
+- **Protein:** 68.0 / 101g
+- **Fat:** 45.7 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.2 (morning reading)
