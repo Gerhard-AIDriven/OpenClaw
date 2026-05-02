@@ -146,12 +146,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 09:54 | Spar lean bacon (56g) + 2 eggs scrambled (no oil) + 1 slice toasted low-GI wholewheat bread + 1 tsp butter + coffee (25ml low-fat milk) | 337 | 16.1 | 28.3 | 16.8 | Breakfast |
+| 11:55 | Banana (1 medium) | 105 | 27.0 | 1.3 | 0.3 | Snack |
 
 ### Daily Totals
-- **Calories:** 337 / 1600
-- **Carbs:** 16.1 / 200g
-- **Protein:** 28.3 / 101g
-- **Fat:** 16.8 / 45g
+- **Calories:** 442 / 1600
+- **Carbs:** 43.1 / 200g
+- **Protein:** 29.6 / 101g
+- **Fat:** 17.1 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.0 (morning reading)
