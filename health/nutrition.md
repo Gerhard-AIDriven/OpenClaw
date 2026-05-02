@@ -148,16 +148,18 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | 09:54 | Spar lean bacon (56g) + 2 eggs scrambled (no oil) + 1 slice toasted low-GI wholewheat bread + 1 tsp butter + coffee (25ml low-fat milk) | 337 | 16.1 | 28.3 | 16.8 | Breakfast |
 | 11:55 | Banana (1 medium) | 105 | 27.0 | 1.3 | 0.3 | Snack |
 | 14:15 | Saldanha sardines (120g) + tomato (70g) + onion (40g) + 2 slices wholewheat bread + 1 tbs tomato sauce + 1 tsp butter | 382 | 35.7 | 32.7 | 13.4 | Lunch |
+| 18:30 | Beef patty (100g mince + 25g onion + 50g tomato + 50g potato + 50g breadcrumbs, fried in Spray and Cook) + 1 slice wholewheat toast + tomato + onion + 1 tbs sauce | 566 | 48.75 | 30.5 | 14.8 | Dinner |
+| 18:45 | Banana (1 medium, after dinner) | 105 | 27.0 | 1.3 | 0.3 | Dessert |
 
 ### Daily Totals
-- **Calories:** 824 / 1600
-- **Carbs:** 78.8 / 200g
-- **Protein:** 62.3 / 101g
-- **Fat:** 30.5 / 45g
+- **Calories:** 1495 / 1600 ✅
+- **Carbs:** 154.55 / 200g ✅
+- **Protein:** 94.1 / 101g (6.9g short)
+- **Fat:** 45.6 / 45g ✅
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.0 (morning reading)
-- **General notes:** —
+- **General notes:** Strong nutrition day — nearly hit all macros (protein 94/101, fat 45.6/45). 3 walks + 8,804 steps so far.
 
 ---
 
