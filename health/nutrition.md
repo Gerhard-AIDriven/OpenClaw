@@ -147,12 +147,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 09:54 | Spar lean bacon (56g) + 2 eggs scrambled (no oil) + 1 slice toasted low-GI wholewheat bread + 1 tsp butter + coffee (25ml low-fat milk) | 337 | 16.1 | 28.3 | 16.8 | Breakfast |
 | 11:55 | Banana (1 medium) | 105 | 27.0 | 1.3 | 0.3 | Snack |
+| 14:15 | Saldanha sardines (120g) + tomato (70g) + onion (40g) + 2 slices wholewheat bread + 1 tbs tomato sauce + 1 tsp butter | 382 | 35.7 | 32.7 | 13.4 | Lunch |
 
 ### Daily Totals
-- **Calories:** 442 / 1600
-- **Carbs:** 43.1 / 200g
-- **Protein:** 29.6 / 101g
-- **Fat:** 17.1 / 45g
+- **Calories:** 824 / 1600
+- **Carbs:** 78.8 / 200g
+- **Protein:** 62.3 / 101g
+- **Fat:** 30.5 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.0 (morning reading)
