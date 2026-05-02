@@ -1,4 +1,4 @@
-# Activity Tracking — 2026
+# Activity Tracking - 2026
 
 Daily log of walks, steps, and movement for insulin resistance management.
 
@@ -153,7 +153,7 @@ Daily log of walks, steps, and movement for insulin resistance management.
 - **Total walking time:** 67 minutes
 
 ### Notes
-- Skipped pre-breakfast walk 
+- Skipped pre-breakfast walk
 
 ---
 
@@ -181,19 +181,24 @@ Daily log of walks, steps, and movement for insulin resistance management.
 ## Template for New Days
 
 ```markdown
-## YYYY-MM-DD (Day)
+## 2026-05-02 (Saturday)
 
 ### Walks
 
 | Time | Duration (min) | Steps | Notes |
 |------|----------------|-------|-------|
+| 10:24 | 30 | 3633 | After breakfast walk |
 |      |    |    |              |
 
 ### Daily Totals
-- **Total walks:** — / 3 (target)
-- **Total steps:** — / 10000 (goal)
-- **Total walking time:** — minutes
+- **Total walks:** 1 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 3633 / 10000 (goal)
+- **Total walking time:** 30 minutes
 
 ### Notes
 — 
+
+---
+
+## YYYY-MM-DD (Day)
 ```
