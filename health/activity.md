@@ -207,11 +207,12 @@ Daily log of walks, steps, and movement for insulin resistance management.
 | Time | Duration (min) | Steps | Notes |
 |------|----------------|-------|-------|
 | 08:47 | 31 | 3508 | After breakfast walk |
+| 13:15 | 15 | 1645 | After lunch walk |
 
 ### Daily Totals
-- **Total walks:** 1 / 4 (target: 4 with pre-breakfast)
-- **Total steps:** 3508 / 10000 (goal)
-- **Total walking time:** 31 minutes
+- **Total walks:** 2 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 5153 / 10000 (goal)
+- **Total walking time:** 46 minutes
 
 ### Notes
 — 

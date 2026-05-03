@@ -170,16 +170,17 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 08:09 | Greek yogurt (150g) + 1 banana + 10g xylitol + 1 tsp vanilla essence + Spar Original Granola (60g) | 554 | 80.2 | 16.4 | 19.8 | Breakfast |
+| 13:00 | Pork spare ribs (500g uncooked) + creamed spinach (0.75 cup) | 1550 | 3.0 | 128.5 | 112.0 | Lunch (restaurant) |
 
 ### Daily Totals
-- **Calories:** 554 / 1600
-- **Carbs:** 80.2 / 200g
-- **Protein:** 16.4 / 101g
-- **Fat:** 19.8 / 45g
+- **Calories:** 2104 / 1600 ⚠️
+- **Carbs:** 83.2 / 200g ✅
+- **Protein:** 144.9 / 101g ✅
+- **Fat:** 131.8 / 45g ⚠️
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.2 (morning reading)
-- **General notes:** —
+- **General notes:** Restaurant lunch (pork ribs) — high fat/calorie day. Skipping dinner to manage overall intake. Will monitor glucose response tomorrow.
 
 ---
 
