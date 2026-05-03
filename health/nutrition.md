@@ -163,6 +163,26 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ---
 
+## 2026-05-03 (Sunday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 08:09 | Greek yogurt (150g) + 1 banana + 10g xylitol + 1 tsp vanilla essence + Spar Original Granola (60g) | 554 | 80.2 | 16.4 | 19.8 | Breakfast |
+
+### Daily Totals
+- **Calories:** 554 / 1600
+- **Carbs:** 80.2 / 200g
+- **Protein:** 16.4 / 101g
+- **Fat:** 19.8 / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.2 (morning reading)
+- **General notes:** —
+
+---
+
 ## Template for New Days
 
 ```markdown

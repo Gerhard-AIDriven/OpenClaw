@@ -178,9 +178,6 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ---
 
-## Template for New Days
-
-```markdown
 ## 2026-05-02 (Saturday)
 
 ### Walks
@@ -203,5 +200,40 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ---
 
+## 2026-05-03 (Sunday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+|      |    |    |              |
+
+### Daily Totals
+- **Total walks:** — / 4 (target: 4 with pre-breakfast)
+- **Total steps:** — / 10000 (goal)
+- **Total walking time:** — minutes
+
+### Notes
+— 
+
+---
+
+## Template for New Days
+
+```markdown
 ## YYYY-MM-DD (Day)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+|      |    |    |              |
+
+### Daily Totals
+- **Total walks:** — / 4 (target: 4 with pre-breakfast)
+- **Total steps:** — / 10000 (goal)
+- **Total walking time:** — minutes
+
+### Notes
+— 
 ```
