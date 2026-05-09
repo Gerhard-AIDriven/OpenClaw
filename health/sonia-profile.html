@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonia's Health Profile & Macro Plan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        section {
+            margin-bottom: 45px;
+        }
+        
+        section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        section h3 {
+            color: #764ba2;
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .metric-card {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        
+        .metric-card strong {
+            color: #764ba2;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .metric-card .value {
+            font-size: 1.5em;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        table thead {
+            background: #667eea;
+            color: white;
+        }
+        
+        table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .calculation-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .calculation-box code {
+            color: #333;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        .success {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        .warning {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        .info {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .meal-box {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        
+        .meal-box h4 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .timeline-item {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .timeline-item strong {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #dee2e6;
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        .print-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #764ba2;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .print-button {
+                display: none;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            .content {
+                padding: 20px;
+            }
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">🖨️ Print / Save as PDF</button>
+    
+    <div class="container">
+        <header>
+            <h1>🏥 Sonia's Health Profile</h1>
+            <p>Calorie & Macro Plan for Sustainable Weight Loss</p>
+        </header>
+        
+        <div class="content">
+            <!-- BASELINE METRICS -->
+            <section>
+                <h2>📊 Baseline Metrics</h2>
+                
+                <h3>Personal Data</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <strong>Age</strong>
+                        <div class="value">64</div>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Current Weight</strong>
+                        <div class="value">96.2 kg</div>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Height</strong>
+                        <div class="value">1.62 m</div>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Goal Weight</strong>
+                        <div class="value">86.2 kg</div>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Target Loss Rate</strong>
+                        <div class="value">0.5 kg/week</div>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Timeline</strong>
+                        <div class="value">20 weeks</div>
+                    </div>
+                </div>
+                
+                <h3>Activity Level</h3>
+                <ul>
+                    <li><strong>Average daily steps:</strong> 6,500</li>
+                    <li><strong>Exercise routine:</strong> Minimal formal regime</li>
+                    <li><strong>Classification:</strong> Lightly Active (1.375x multiplier)</li>
+                </ul>
+                
+                <h3>Medical Context</h3>
+                <ul>
+                    <li><strong>Medication:</strong> Retlira 30 (Tirzepatide generic, Mounjaro)</li>
+                    <li><strong>Current dosage:</strong> 1.5 mg/week (increased from 1 mg/week in April)</li>
+                    <li><strong>Progress:</strong> 12 kg lost; weight plateau at 96.2 kg for 2 weeks</li>
+                    <li><strong>Duration:</strong> ~3 months on medication (Feb → May)</li>
+                </ul>
+            </section>
+            
+            <!-- BODY COMPOSITION -->
+            <section>
+                <h2>📏 Body Composition Analysis</h2>
+                
+                <h3>BMI & Classification</h3>
+                <div class="metric-card">
+                    <strong>BMI:</strong> 96.2 / (1.62)² = <span class="highlight">36.6</span> (Obese Class I)
+                    <p style="margin-top: 10px;"><strong>Interpretation:</strong> GLP-1/GIP agonist (Tirzepatide) is appropriate for weight management</p>
+                </div>
+                
+                <h3>Resting Metabolic Rate (Mifflin-St Jeor)</h3>
+                <div class="calculation-box">
+RMR = (10 × 96.2) + (6.25 × 162) - (5 × 64) + (-161 for female)
+RMR = 962 + 1,012.5 - 320 - 161
+<strong>RMR = 1,493.5 kcal/day</strong>
+                </div>
+                
+                <h3>Total Daily Energy Expenditure (TDEE)</h3>
+                <div class="calculation-box">
+TDEE = RMR × 1.375 (lightly active with 6,500 steps)
+TDEE = 1,493.5 × 1.375
+<strong>TDEE ≈ 2,053 kcal/day (maintenance)</strong>
+                </div>
+                
+                <h3>Caloric Deficit for 0.5 kg/week Loss</h3>
+                <div class="calculation-box">
+Target: 0.5 kg/week = 3,500 kcal/week = 500 kcal/day deficit
+Recommended intake: 2,053 - 500 = 1,553 kcal/day
+<strong>Safe range: 1,500–1,600 kcal/day</strong>
+                </div>
+            </section>
+            
+            <!-- WHY THE PLATEAU -->
+            <section>
+                <h2>⚠️ Why the Plateau? (2 weeks @ 96.2 kg)</h2>
+                
+                <h3>Likely Causes</h3>
+                <ul>
+                    <li><strong>Metabolic adaptation</strong> — body has adjusted to the deficit after 12 kg loss</li>
+                    <li><strong>Tirzepatide efficacy curve</strong> — GLP-1/GIP agonists show diminishing appetite suppression over time; tolerance develops</li>
+                    <li><strong>Insufficient deficit</strong> — current eating patterns may have drifted closer to maintenance (unintentional)</li>
+                    <li><strong>Water retention</strong> — common with medication changes; can mask fat loss for 1–2 weeks</li>
+                    <li><strong>Calorie creep</strong> — portion sizes or snacking may have gradually increased as hunger returns</li>
+                </ul>
+                
+                <div class="info">
+                    <strong>✓ Solution:</strong> Reset with structured macro targets + modest activity increase
+                </div>
+            </section>
+            
+            <!-- MACRO PROFILE -->
+            <section>
+                <h2>🎯 Recommended Macro Profile</h2>
+                
+                <h3>Daily Targets (1,550 kcal)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Macro</th>
+                            <th>Target</th>
+                            <th>Grams</th>
+                            <th>% of Calories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Protein</strong></td>
+                            <td>High (priority #1)</td>
+                            <td><strong>120–130g</strong></td>
+                            <td>31%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Carbs</strong></td>
+                            <td>Moderate (quality focus)</td>
+                            <td><strong>145–160g</strong></td>
+                            <td>38%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fat</strong></td>
+                            <td>Moderate (satiating)</td>
+                            <td><strong>45–55g</strong></td>
+                            <td>26%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Rationale</h3>
+                
+                <div class="meal-box">
+                    <h4>💪 High Protein (120–130g)</h4>
+                    <ul>
+                        <li>Preserves muscle during weight loss (critical at 64yo)</li>
+                        <li>Highest satiety per calorie (thermic effect ~25%)</li>
+                        <li>GLP-1 agonists already reduce hunger; protein helps with adherence</li>
+                        <li>~1.25–1.35 g/kg body weight (appropriate for deficit + age)</li>
+                    </ul>
+                </div>
+                
+                <div class="meal-box">
+                    <h4>🌾 Moderate Carbs (145–160g)</h4>
+                    <ul>
+                        <li>Sufficient for activity (6,500 steps) without energy crashes</li>
+                        <li>Prioritize <strong>low-GI</strong> sources: oats, brown rice, sweet potato, legumes</li>
+                        <li>Timing: front-load carbs at breakfast/lunch; lighter at dinner</li>
+                        <li>Reason: Tirzepatide enhances GLP-1 signaling → improved glucose tolerance</li>
+                    </ul>
+                </div>
+                
+                <div class="meal-box">
+                    <h4>🥑 Moderate Fat (45–55g)</h4>
+                    <ul>
+                        <li>Still satiating, but controlled to stay within calorie budget</li>
+                        <li>Avoid excess (the plateau may have involved high-fat creep)</li>
+                        <li>Focus on quality: olive oil, nuts, fatty fish, avocado</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- MEAL STRUCTURE -->
+            <section>
+                <h2>🍽️ Daily Meal Structure (Sample 1,550 kcal)</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Meal</th>
+                            <th>Calories</th>
+                            <th>Protein</th>
+                            <th>Carbs</th>
+                            <th>Fat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Breakfast</strong></td>
+                            <td>360 cal</td>
+                            <td>18g</td>
+                            <td>22g</td>
+                            <td>24g</td>
+                        </tr>
+                        <tr style="background: #f8f9fa;">
+                            <td colspan="5">
+                                <ul style="margin: 10px 0; padding-left: 20px;">
+                                    <li>2 medium eggs (scrambled in 1 tsp olive oil)</li>
+                                    <li>1 slice whole wheat toast</li>
+                                    <li>1/2 avocado</li>
+                                    <li>Herbal tea or black coffee</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mid-Morning Snack</strong></td>
+                            <td>240 cal</td>
+                            <td>17g</td>
+                            <td>23g</td>
+                            <td>10.5g</td>
+                        </tr>
+                        <tr style="background: #f8f9fa;">
+                            <td colspan="5">
+                                <ul style="margin: 10px 0; padding-left: 20px;">
+                                    <li>Greek yogurt (150g, plain, 0%)</li>
+                                    <li>Berries (80g blueberries)</li>
+                                    <li>Almonds (20g, ~14 nuts)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lunch</strong></td>
+                            <td>420 cal</td>
+                            <td>60.5g</td>
+                            <td>38g</td>
+                            <td>6.5g</td>
+                        </tr>
+                        <tr style="background: #f8f9fa;">
+                            <td colspan="5">
+                                <ul style="margin: 10px 0; padding-left: 20px;">
+                                    <li>Grilled chicken breast (150g)</li>
+                                    <li>Brown rice (1/2 cup cooked)</li>
+                                    <li>Steamed broccoli (200g)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Afternoon Snack</strong></td>
+                            <td>205 cal</td>
+                            <td>14.5g</td>
+                            <td>29g</td>
+                            <td>5.3g</td>
+                        </tr>
+                        <tr style="background: #f8f9fa;">
+                            <td colspan="5">
+                                <ul style="margin: 10px 0; padding-left: 20px;">
+                                    <li>Cottage cheese (100g, 2% fat)</li>
+                                    <li>Apple (medium, 182g)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dinner</strong></td>
+                            <td>463 cal</td>
+                            <td>36g</td>
+                            <td>29g</td>
+                            <td>26.1g</td>
+                        </tr>
+                        <tr style="background: #f8f9fa;">
+                            <td colspan="5">
+                                <ul style="margin: 10px 0; padding-left: 20px;">
+                                    <li>Grilled salmon (120g)</li>
+                                    <li>Sweet potato (120g, baked)</li>
+                                    <li>Mixed salad with olive oil dressing (1 tbsp)</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr style="font-weight: bold; background: #e7f3ff;">
+                            <td><strong>DAILY TOTAL</strong></td>
+                            <td>1,688 cal</td>
+                            <td>146g</td>
+                            <td>141g</td>
+                            <td>72.4g</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="warning">
+                    <strong>⚙️ Adjustment Note:</strong> Sample is slightly high in calories (1,688 vs 1,550 target). 
+                    Minor reductions: reduce salmon to 100g (−20 cal), almonds to 15g (−40 cal), olive oil to 2 tsp (−45 cal).
+                    <br><br>
+                    <strong>Revised total: ~1,560 kcal | 145g protein | 141g carbs | 56g fat ✅</strong>
+                </div>
+            </section>
+            
+            <!-- ACTION PLAN -->
+            <section>
+                <h2>🚀 Breaking the Plateau: Action Plan</h2>
+                
+                <h3>Week 1–2: Reset Phase</h3>
+                <ol style="margin-left: 20px;">
+                    <li><strong>Track meals precisely</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>Use MyFitnessPal or Cronometer for 2 weeks minimum</li>
+                            <li>Sonia likely doesn't realize current intake (common after initial weight loss)</li>
+                            <li>GLP-1 agonists reduce hunger but don't eliminate calorie awareness need</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top: 15px;"><strong>Implement structured meals</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>Follow the plan above</li>
+                            <li>Reduces decision fatigue and makes tracking easier</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top: 15px;"><strong>Protein front-loading</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>Ensure 40g protein by lunch</li>
+                            <li>Stabilizes blood sugar on Tirzepatide</li>
+                            <li>Reduces afternoon cravings</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top: 15px;"><strong>Hydration</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>2.5–3L water daily</li>
+                            <li>Tirzepatide can cause dehydration (GLP-1 effect on thirst)</li>
+                            <li>Water supports GLP-1 efficacy</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h3>Week 3–4: Activity Boost</h3>
+                <ol style="margin-left: 20px;">
+                    <li><strong>Increase daily steps to 8,000–10,000</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>Current 6,500 is good baseline; +1,500 steps ≈ +100 kcal/day</li>
+                            <li>Spread across 3–4 short walks (10–15 min each)</li>
+                            <li>Easier than formal exercise; Tirzepatide patients often tolerate walking well</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top: 15px;"><strong>Add light resistance (2×/week)</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>15–20 min of bodyweight or light dumbbells (3x8–10 reps per exercise)</li>
+                            <li>Preserves muscle during weight loss (critical at age 64)</li>
+                            <li>Doesn't need to be gym-based; home workouts fine</li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                <h3>Ongoing (Weeks 4+)</h3>
+                <ul>
+                    <li><strong>Weekly weigh-in</strong> (same day/time, after bathroom)
+                        <ul style="margin-top: 10px;">
+                            <li>Expect 0.5 kg/week loss if plan is followed</li>
+                            <li>Normal water fluctuation: ±1 kg day-to-day (ignore spikes)</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top: 15px;"><strong>Plateau management</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>If no loss after 3 weeks → reduce calories to 1,450 kcal (−100 kcal)</li>
+                            <li>If loss continues → maintain current targets</li>
+                            <li>Reassess every 4 weeks</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top: 15px;"><strong>Tirzepatide optimization</strong>
+                        <ul style="margin-top: 10px;">
+                            <li>Current dose (1.5 mg) may be ineffective if tolerance has developed</li>
+                            <li>Sonia's doctor can consider: dosage increase to 2.5 mg (next Mounjaro step) OR switch to GLP-1 only (semaglutide)</li>
+                            <li><strong>Timeline:</strong> Can discuss with prescriber if no progress by week 4</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- KEY PRINCIPLES -->
+            <section>
+                <h2>💡 Key Principles for Sonia</h2>
+                
+                <div class="success">
+                    <strong>1. Protein is non-negotiable</strong> — 120–130g daily, every day
+                    <ul style="margin-top: 10px;">
+                        <li>Will feel more full despite lower calories</li>
+                        <li>Protects muscle and metabolism</li>
+                    </ul>
+                </div>
+                
+                <div class="success">
+                    <strong>2. Quality carbs, not restriction</strong> — 145–160g of low-GI sources
+                    <ul style="margin-top: 10px;">
+                        <li>Avoid refined carbs (white bread, pasta, sugar)</li>
+                        <li>Tirzepatide works better with complex carbs</li>
+                    </ul>
+                </div>
+                
+                <div class="success">
+                    <strong>3. Precision tracking for 4 weeks minimum</strong>
+                    <ul style="margin-top: 10px;">
+                        <li>Sonia has already lost 12 kg (good momentum)</li>
+                        <li>Plateau is temporary; precision resets it</li>
+                    </ul>
+                </div>
+                
+                <div class="success">
+                    <strong>4. Realistic expectations</strong>
+                    <ul style="margin-top: 10px;">
+                        <li>10 kg over 20 weeks (0.5 kg/week) = achievable and sustainable</li>
+                        <li>Not a sprint; consistency matters more than perfection</li>
+                    </ul>
+                </div>
+                
+                <div class="success">
+                    <strong>5. GLP-1 agonist synergy</strong>
+                    <ul style="margin-top: 10px;">
+                        <li>Tirzepatide + high protein + walking = powerful combination</li>
+                        <li>Don't waste the medication's effect by eating back the deficit</li>
+                    </ul>
+                </div>
+            </section>
+            
+            <!-- EXPECTED TIMELINE -->
+            <section>
+                <h2>📅 Expected Timeline</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <strong>Week 1–2</strong>
+                        <p>Plateau breaks, first 1–2 kg loss (water + fat)</p>
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Week 3–8</strong>
+                        <p>Consistent 0.5 kg/week = 2–3 kg loss</p>
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Week 9–20</strong>
+                        <p>Continue 0.5 kg/week = 5–6 kg loss</p>
+                    </div>
+                    <div class="timeline-item">
+                        <strong>Month 5</strong>
+                        <p>Target 86.2 kg achieved ✅</p>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- SUMMARY -->
+            <section>
+                <h2>✅ Summary</h2>
+                
+                <h3>Sonia's Calorie/Macro Targets</h3>
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <strong>Calories</strong>
+                        <div class="value">1,550/day</div>
+                        <p style="font-size: 0.9em; margin-top: 5px;">500 kcal/day deficit</p>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Protein</strong>
+                        <div class="value">120–130g</div>
+                        <p style="font-size: 0.9em; margin-top: 5px;">31% of calories</p>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Carbs</strong>
+                        <div class="value">145–160g</div>
+                        <p style="font-size: 0.9em; margin-top: 5px;">38% (low-GI focus)</p>
+                    </div>
+                    <div class="metric-card">
+                        <strong>Fat</strong>
+                        <div class="value">45–55g</div>
+                        <p style="font-size: 0.9em; margin-top: 5px;">26% of calories</p>
+                    </div>
+                </div>
+                
+                <h3>Success Factors</h3>
+                <ol style="margin-left: 20px;">
+                    <li>Protein priority (satiety + muscle preservation)</li>
+                    <li>Precise calorie/macro tracking (first 4 weeks minimum)</li>
+                    <li>Modest activity increase (8,000–10,000 steps)</li>
+                    <li>Tirzepatide optimization (doctor consultation if plateau continues)</li>
+                    <li>Weekly weighing + monthly measurements</li>
+                </ol>
+                
+                <div class="success">
+                    <strong>🎯 Final Note:</strong> Good luck to Sonia! The 12 kg already lost is excellent progress. 
+                    With this plan, she should break through the plateau within 2–3 weeks.
+                </div>
+            </section>
+        </div>
+        
+        <footer>
+            <p><strong>Profile created:</strong> 2026-05-02</p>
+            <p><strong>Next review:</strong> 2026-05-09 (after 1 week of tracking)</p>
+            <p style="margin-top: 15px; font-size: 0.85em;">This profile is for informational purposes. Always consult with healthcare providers before making significant dietary or medication changes.</p>
+        </footer>
+    </div>
+</body>
+</html>

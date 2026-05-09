@@ -1,0 +1,164 @@
+{
+  "top20": [
+    {
+      "rank": 1,
+      "code": "5021",
+      "description": "HULETTS SUGAR WHITE",
+      "qtyPerMonthGrowth": 7.6,
+      "gpGrowthPerMonth": 487.61,
+      "currentGpRand": 17600
+    },
+    {
+      "rank": 2,
+      "code": "5690",
+      "description": "F&M MACARONI",
+      "qtyPerMonthGrowth": 5.61,
+      "gpGrowthPerMonth": 68.44,
+      "currentGpRand": 3091
+    },
+    {
+      "rank": 3,
+      "code": "5691",
+      "description": "F&M SPAGHETTI",
+      "qtyPerMonthGrowth": 4.26,
+      "gpGrowthPerMonth": 51.42,
+      "currentGpRand": 2494
+    },
+    {
+      "rank": 4,
+      "code": "805",
+      "description": "PARMALAT GROWTH MILK 1+",
+      "qtyPerMonthGrowth": 3.37,
+      "gpGrowthPerMonth": 89.69,
+      "currentGpRand": 6951
+    },
+    {
+      "rank": 5,
+      "code": "7369",
+      "description": "SAVEMOR OIL COOKING",
+      "qtyPerMonthGrowth": 3.26,
+      "gpGrowthPerMonth": 28.37,
+      "currentGpRand": 2045
+    },
+    {
+      "rank": 6,
+      "code": "5468",
+      "description": "SPAR SHREDDED TUNA WATER",
+      "qtyPerMonthGrowth": 3,
+      "gpGrowthPerMonth": 66.57,
+      "currentGpRand": 3276
+    },
+    {
+      "rank": 7,
+      "code": "3158",
+      "description": "SPAR CANOLA OIL",
+      "qtyPerMonthGrowth": 2.35,
+      "gpGrowthPerMonth": 124.64,
+      "currentGpRand": 400
+    },
+    {
+      "rank": 8,
+      "code": "800",
+      "description": "E/FRESH L/L MILK 2% L/FAT",
+      "qtyPerMonthGrowth": 2.16,
+      "gpGrowthPerMonth": 32.67,
+      "currentGpRand": 88
+    },
+    {
+      "rank": 9,
+      "code": "6152",
+      "description": "AQUELLE NATURAL STILL",
+      "qtyPerMonthGrowth": 2.02,
+      "gpGrowthPerMonth": 24.1,
+      "currentGpRand": 2314
+    },
+    {
+      "rank": 10,
+      "code": "4634",
+      "description": "CLOVER CONDENSED MILK",
+      "qtyPerMonthGrowth": 1.98,
+      "gpGrowthPerMonth": 66.51,
+      "currentGpRand": 1792
+    },
+    {
+      "rank": 11,
+      "code": "6150",
+      "description": "AQULLE  WATER",
+      "qtyPerMonthGrowth": 1.75,
+      "gpGrowthPerMonth": 21.64,
+      "currentGpRand": 3043
+    },
+    {
+      "rank": 12,
+      "code": "5348",
+      "description": "SPAR MILK L/L F/CREAM",
+      "qtyPerMonthGrowth": 1.68,
+      "gpGrowthPerMonth": 26.81,
+      "currentGpRand": 2126
+    },
+    {
+      "rank": 13,
+      "code": "4516",
+      "description": "ROB ENV BLACK PEPPER",
+      "qtyPerMonthGrowth": 1.48,
+      "gpGrowthPerMonth": 6.94,
+      "currentGpRand": 595
+    },
+    {
+      "rank": 14,
+      "code": "3351",
+      "description": "SPAR PRO BAL CAT SEAFOOD",
+      "qtyPerMonthGrowth": 1.45,
+      "gpGrowthPerMonth": 12.47,
+      "currentGpRand": 358
+    },
+    {
+      "rank": 15,
+      "code": "4462",
+      "description": "ROB RAJAH ENV MEDIUM",
+      "qtyPerMonthGrowth": 1.37,
+      "gpGrowthPerMonth": 4.41,
+      "currentGpRand": 263
+    },
+    {
+      "rank": 16,
+      "code": "6153",
+      "description": "AQUELLE NATURAL STILL",
+      "qtyPerMonthGrowth": 1.31,
+      "gpGrowthPerMonth": 12.21,
+      "currentGpRand": 556
+    },
+    {
+      "rank": 17,
+      "code": "1942",
+      "description": "KELLOGGS CORN FLAKES",
+      "qtyPerMonthGrowth": 1.23,
+      "gpGrowthPerMonth": 78.57,
+      "currentGpRand": 2930
+    },
+    {
+      "rank": 18,
+      "code": "3354",
+      "description": "SPAR PRO BAL CAT GOR BEEF",
+      "qtyPerMonthGrowth": 1.06,
+      "gpGrowthPerMonth": 9.11,
+      "currentGpRand": 842
+    },
+    {
+      "rank": 19,
+      "code": "807",
+      "description": "PARMALAT GROWTH MILK 3+",
+      "qtyPerMonthGrowth": 0.93,
+      "gpGrowthPerMonth": 22.88,
+      "currentGpRand": 1570
+    },
+    {
+      "rank": 20,
+      "code": "698",
+      "description": "BOKOMO CORN FLAKES",
+      "qtyPerMonthGrowth": 0.83,
+      "gpGrowthPerMonth": 40.79,
+      "currentGpRand": 150
+    }
+  ]
+}

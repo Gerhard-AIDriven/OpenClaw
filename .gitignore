@@ -1,0 +1,25 @@
+# OpenClaw / workspace runtime state
+.openclaw/
+
+# Node
+node_modules/
+
+# Secrets / auth tokens
+gmail/credentials.json
+gmail/token.json
+gmail/*auth*
+openai/*.txt
+
+# Private / potentially sensitive logs
+health/gmail-log.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local scratch
+_tmp_*.js
+_tmp_*.py
+_tmp_*.json
+_tmp_*.txt
+*.bak

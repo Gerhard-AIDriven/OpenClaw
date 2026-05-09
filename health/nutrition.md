@@ -1,4 +1,4 @@
-# Nutrition Tracking — 2026
+# Nutrition Tracking - 2026
 
 Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
@@ -34,8 +34,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
-| 05:04 | Greek yogurt (159g) + Spar honey & almond muesli (50g) + banana (1 medium) | 449 | 65.5 | 16.3 | 14.8 | Breakfast | 
-| 13:50 | Chicken (250g) + brown rice (100g cooked) + tomato (35g) + red onion (55g) + Spar tomato sauce (20g, from “20mg”) + cider vinegar (1 tsp) + apple (75g) + greek yogurt (100g) + honey (1 tsp) + KOO beetroot slices in brine (100g) | 766 | 62.5 | 87.3 | 15.4 | Lunch | 
+| 05:04 | Greek yogurt (159g) + Spar honey & almond muesli (50g) + banana (1 medium) | 449 | 65.5 | 16.3 | 14.8 | Breakfast |
+| 13:50 | Chicken (250g) + brown rice (100g cooked) + tomato (35g) + red onion (55g) + Spar tomato sauce (20g, from "20mg") + cider vinegar (1 tsp) + apple (75g) + greek yogurt (100g) + honey (1 tsp) + KOO beetroot slices in brine (100g) | 766 | 62.5 | 87.3 | 15.4 | Lunch |
 | 18:49 | 2 slices Albany low-GI wholewheat bread + cottage cheese (34g, Spar low-fat plain) + banana (1 medium) + coffee (25ml low-fat milk) | 337 | 57.2 | 15.7 | 6.3 | Dinner (actual) |
 
 ### Daily Totals
@@ -46,7 +46,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.9 (morning reading)
-- **General notes:** —
+- **General notes:** -
 
 ---
 
@@ -68,8 +68,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Fat:** 35.8 / 45g
 
 ### Blood Sugar & Health
-- **Fasting blood sugar:** —
-- **General notes:** —
+- **Fasting blood sugar:** 6.2 (fasting)
+- **General notes:** Breakfast plan: no berries (out). Add 1 tsp honey. Coffee with 25ml low-fat milk.
 
 ---
 
@@ -91,7 +91,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.0 (morning reading) ✅
-- **General notes:** Strong day — hit all macro targets. 4 walks completed + 6,873 steps.
+- **General notes:** Strong day - hit all macro targets. 4 walks completed + 6,873 steps.
 
 ---
 
@@ -113,7 +113,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.2 (morning reading)
-- **General notes:** Skipped pre-breakfast walk. Strong day — hit all macro targets + 4 walks (after skipping morning walk) + 15,747 steps.
+- **General notes:** Skipped pre-breakfast walk. Strong day - hit all macro targets + 4 walks (after skipping morning walk) + 15,747 steps.
 
 ---
 
@@ -159,7 +159,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.0 (morning reading)
-- **General notes:** Strong nutrition day — nearly hit all macros (protein 94/101, fat 45.6/45). 3 walks + 8,804 steps so far.
+- **General notes:** Strong nutrition day - nearly hit all macros (protein 94/101, fat 45.6/45). 3 walks + 8,804 steps so far.
 
 ---
 
@@ -180,9 +180,149 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.2 (morning reading)
-- **General notes:** Restaurant lunch (pork ribs) — high fat/calorie day. Skipping dinner to manage overall intake. Will monitor glucose response tomorrow.
+- **General notes:** Restaurant lunch (pork ribs) - high fat/calorie day. Skipping dinner to manage overall intake. Will monitor glucose response tomorrow.
 
 ---
+
+## 2026-05-04 (Monday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 08:42 | Greek yogurt (110g) + Spar muesli (60g) + 1 banana + apple (59g) | 488 | 74.8 | 27.4 | 11.0 | Breakfast |
+| 13:00 | Tuna salad: tuna (114g) + lettuce (25g) + green pepper (25g) + red onion (25g) + tomato (50g) + feta cheese (25g) + Ina Paarman reduced oil honey & mustard sauce (2 tbsp) + apple cider vinegar (1 tbsp) | 262 | 11.8 | 31.3 | 8.5 | Lunch (actual) |
+| 14:15 | Banana (1 medium) | 105 | 27.0 | 1.3 | 0.3 | Snack |
+| 18:30 | Pork strips (145g, visible fat removed, fried in pan with Spray and Cook) + air-fried potatoes (150g) + honey (1 tsp) + butter (1 tbs) + beetroot (60g) | 518 | 37.8 | 37.4 | 24.9 | Dinner (actual) |
+
+### Daily Totals
+- **Calories:** 1373 / 1600 ✅
+- **Carbs:** 151.4 / 200g ✅
+- **Protein:** 97.4 / 101g ✅
+- **Fat:** 44.7 / 45g ✅
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.6 (morning reading)
+- **General notes:** Excellent day! ✅ All macros on target. Walks: breakfast (8:50, 15.08 min, 1857 steps), lunch (18 min, 1739 steps), pre-dinner (16 min, 1637 steps), after-dinner (15 min, 1650 steps). Total: 4 walks, 64.08 min. **Daily steps: 15,305** (exceeded 10k goal).
+
+---
+
+## 2026-05-05 (Tuesday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 07:00 | 1 wrap + 2 eggs (fried, no oil) + cottage cheese (30g) + ostrich biltong (25g) + Nandos lemon & herb sauce (1 tsp) + coffee (25ml low-fat milk, sweetener) | 474 | 39 | 36.5 | 15 | Breakfast (actual) |
+| 13:00 | Tuna in brine (100g) + red onion (50g) + feta cheese (50g) + blueberries (40g) + Nola light dressing (1 tbs) | 315 | 12.5 | 29.6 | 17.2 | Lunch (actual) |
+| 15:30 | Banana (1 medium) | 105 | 27 | 1.3 | 0.3 | Afternoon snack |
+| 18:30 | Chicken breast grilled (200g) basted with Worcestershire sauce (1 tbs) + honey (2 tsp) + broccoli (75g) with salt & pepper | 405 | 17 | 65 | 7.3 | Dinner (actual) |
+
+### Daily Totals
+- **Calories:** 1299 / 1600 ✅
+- **Carbs:** 95.5 / 200g ✅
+- **Protein:** 132.4 / 101g ✅ (+31.4g)
+- **Fat:** 39.8 / 45g ✅
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.0 (morning reading)
+- **General notes:** Pre-breakfast walk: 15 min, 1819 steps. After-breakfast walk: 15 min, 1735 steps. After-lunch walk: 28 min, 2470 steps. After-dinner walk: 15 min, 1750 steps. **Total: 73 min, 4 walks. Daily steps: 18,141** ✅ (well above 10k goal)
+
+---
+
+## 2026-05-06 (Wednesday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| Breakfast (actual) | 100g yogurt + 50g muesli + 50g blueberries + 1 banana + coffee (25ml low-fat milk) | ~420 | ~65 | ~20 | ~10 | estimated |
+| Lunch (plan) | 2 slices toast + 50g cottage cheese + 30g ostrich biltong + 0.5 avocado | ~430 | ~36 | ~27 | ~19 | estimated |
+| Dinner (actual) | 177g ostrich fillet + 110g sweet potato + 60g beetroot + 1 large banana | ~525 | ~63 | ~44 | ~5 | estimated |
+| Snack (actual) | Banana (1 medium) | 105 | 27 | 1.3 | 0.3 | locked in |
+
+### Daily Totals
+- **Calories:** ~1480 / 1600 ✅
+- **Carbs:** ~191 / 200g ✅
+- **Protein:** ~92 / 101g ✅
+- **Fat:** ~34 / 45g ✅
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.3 (logged)
+- **General notes:** Pre-breakfast walk: 30 min, 3,626 steps. Post-breakfast walk: 15 min, 1,819 steps. After-lunch walk: 20 min, 1,774 steps. After-dinner walk: 15 min, 1,769 steps. **Walks so far: 4 (80 min, 8,988 steps).** Daily steps: 16,795.
+
+---
+
+## 2026-05-07 (Thursday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| Breakfast (actual) | 228g cooked jungle oats (in water) + 50ml low-fat milk + 30g blueberries + 30g raspberries + 1 banana + coffee with 25ml low-fat milk | ~465 | ~88.6 | ~17.5 | ~7.0 | Breakfast logged |
+| Lunch (actual) | 2 slices low-GI wholewheat bread + 2 lean bacon rashers + 2 eggs + 1 tbsp tomato sauce | ~480 | ~9.0 | ~34.5 | ~17.2 | Lunch logged |
+| Dinner (actual) | 188g ostrich fillet + 180g sweet potato + 1 tbsp butter + 1 tbsp honey + 75g beetroot salad + 5g tomato + 25g red onion + 1 tbsp tomato sauce | ~658 | ~66.0 | ~56.0 | ~19.0 | Dinner logged |
+
+### Daily Totals (actual/estimated)
+- **Calories:** ~1603 / 1600 ⚠️ (+3 over)
+- **Carbs:** ~163.6 / 200g ✅ (36.4g under)
+- **Protein:** ~108.0 / 101g ✅ (+7.0g over)
+- **Fat:** ~43.2 / 45g ✅ (1.8g under)
+
+### Activity Summary
+- **Walks:** 4 x 15 min = 60 min total
+- **Steps:** ~14,000 (well above 10k target) 🎯
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.2 (fasting)
+- **General notes:** Pre-breakfast walk: 15 min, 1,815 steps. After-breakfast walk: 16 min, 1,653 steps. After-lunch walk: 15 min, 1,426 steps. After-dinner walk: 15 min (estimated ~1,580 steps to reach 14k). **Total activity: 4 walks (61 min), ~14,000 steps.** ✅ Excellent adherence. |
+
+---
+
+## 2026-05-08 (Friday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| Morning | Yogurt + muesli + banana (planned) | ~400 | ~62 | ~19 | ~10 | No berries (out). Add 1 tsp honey. Coffee with 25ml low-fat milk |
+
+| 07:50 | Breakfast (actual) | ~400 | ~70 | ~19 | ~10 | No berries (out). + 1 tsp honey. Coffee with 25ml low-fat milk |
+
+| 14:20 | Lunch (actual) | ~500 | ~34 | ~23 | ~25 | 3 SPAR bacon rashers, 2 eggs, 25g tomato, 25g onion, no avocado, 1 banana |
+
+| 18:00 | Dinner (actual) | ~630 | ~56 | ~59 | ~13 | 175g chicken, 190g cooked brown rice. Mixed salad portion: 14.5g red onion, 29g tomato, 10.5g lettuce, 12.5g feta, 1 tbsp Ina Paarman honey & mustard dressing. Eat half today; remainder tomorrow (with tuna for lunch) |
+
+### Daily Totals (so far)
+- **Calories:** ~1530 / 1600
+- **Carbs:** ~160 / 200g
+- **Protein:** ~101 / 101g
+- **Fat:** ~48 / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.2 (fasting)
+- **General notes:** Pre-breakfast walk: 30 min, 3,602 steps. After-breakfast walk: 9:35am, 15 min, 1,764 steps. After-lunch walk: 15:15, 16 min, 1,655 steps. After-dinner walk: 15 min, 1,731 steps. **Total steps: 15,720**.
+
+---
+
+## 2026-05-09 (Saturday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| (morning) | Yogurt (75g) + Apple (70g) + Muesli (40g) + Coffee (25ml milk) | ~330 | ~50 | ~20 | ~8 | Breakfast (approx) |
+| 13:00 (planned) | Lunch (planned) | ~600 | ~64 | ~27 | ~26 | 2 slices Albany low-GI wholewheat bread + 30g cottage cheese + 2 rashers bacon + 0.5 avocado + 1 banana |
+
+### Daily Totals
+- **Calories:** - / 1600
+- **Carbs:** - / 200g
+- **Protein:** - / 101g
+- **Fat:** - / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.5 (fasting)
+- **General notes:** Awaiting lunch/dinner macro totals for the day; fasting glucose logged.
 
 ## Template for New Days
 
@@ -196,12 +336,12 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |      |      |          |           |             |         |       |
 
 ### Daily Totals
-- **Calories:** — / 1600
-- **Carbs:** — / 200g
-- **Protein:** — / 101g
-- **Fat:** — / 45g
+- **Calories:** - / 1600
+- **Carbs:** - / 200g
+- **Protein:** - / 101g
+- **Fat:** - / 45g
 
 ### Blood Sugar & Health
-- **Fasting blood sugar:** —
-- **General notes:** —
+- **Fasting blood sugar:** -
+- **General notes:** -
 ```

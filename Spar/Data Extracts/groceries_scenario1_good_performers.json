@@ -1,0 +1,1640 @@
+{
+  "timestamp": "2026-04-19T14:19:00.150Z",
+  "scenario": "Scenario 1 - Good Performers (Uptrend)",
+  "totalAnalyzed": 999,
+  "foundGoodPerformers": 161,
+  "period": "01/03/22 to 01/04/26",
+  "top20": [
+    {
+      "code": "7369",
+      "description": "SAVEMOR OIL COOKING",
+      "qtyPerMonthGrowth": 3.26,
+      "gpPercentGrowthPerMonth": 0.09,
+      "latestGpPercent": 20.1,
+      "totalQty": 10988,
+      "avgQty": 219.76
+    },
+    {
+      "code": "5468",
+      "description": "SPAR SHREDDED TUNA WATER",
+      "qtyPerMonthGrowth": 3,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 9.4,
+      "totalQty": 11576,
+      "avgQty": 231.52
+    },
+    {
+      "code": "5348",
+      "description": "SPAR MILK L/L F/CREAM",
+      "qtyPerMonthGrowth": 1.68,
+      "gpPercentGrowthPerMonth": 0.1,
+      "latestGpPercent": 24.6,
+      "totalQty": 4237,
+      "avgQty": 84.74
+    },
+    {
+      "code": "4516",
+      "description": "ROB ENV BLACK PEPPER",
+      "qtyPerMonthGrowth": 1.48,
+      "gpPercentGrowthPerMonth": 0.19,
+      "latestGpPercent": 31.6,
+      "totalQty": 9775,
+      "avgQty": 195.5
+    },
+    {
+      "code": "3351",
+      "description": "SPAR PRO BAL CAT SEAFOOD",
+      "qtyPerMonthGrowth": 1.45,
+      "gpPercentGrowthPerMonth": 0.48,
+      "latestGpPercent": 18.8,
+      "totalQty": 1607,
+      "avgQty": 32.14
+    },
+    {
+      "code": "4462",
+      "description": "ROB RAJAH ENV MEDIUM",
+      "qtyPerMonthGrowth": 1.37,
+      "gpPercentGrowthPerMonth": 0.4,
+      "latestGpPercent": 32.4,
+      "totalQty": 4377,
+      "avgQty": 87.54
+    },
+    {
+      "code": "6153",
+      "description": "AQUELLE NATURAL STILL",
+      "qtyPerMonthGrowth": 1.31,
+      "gpPercentGrowthPerMonth": 0.09,
+      "latestGpPercent": 22.4,
+      "totalQty": 4320,
+      "avgQty": 86.4
+    },
+    {
+      "code": "3354",
+      "description": "SPAR PRO BAL CAT GOR BEEF",
+      "qtyPerMonthGrowth": 1.06,
+      "gpPercentGrowthPerMonth": 0.52,
+      "latestGpPercent": 19.9,
+      "totalQty": 1090,
+      "avgQty": 21.8
+    },
+    {
+      "code": "698",
+      "description": "BOKOMO CORN FLAKES",
+      "qtyPerMonthGrowth": 0.83,
+      "gpPercentGrowthPerMonth": 0.22,
+      "latestGpPercent": 15.1,
+      "totalQty": 984,
+      "avgQty": 19.68
+    },
+    {
+      "code": "2086",
+      "description": "KOO PEAS GARDEN SWT BRINE",
+      "qtyPerMonthGrowth": 0.83,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 22.5,
+      "totalQty": 1349,
+      "avgQty": 26.98
+    },
+    {
+      "code": "741",
+      "description": "OROS RTD ORANGE",
+      "qtyPerMonthGrowth": 0.8,
+      "gpPercentGrowthPerMonth": 0.36,
+      "latestGpPercent": 16.8,
+      "totalQty": 2138,
+      "avgQty": 42.76
+    },
+    {
+      "code": "1511",
+      "description": "IMANA SCE CHEDDAR CHEESE",
+      "qtyPerMonthGrowth": 0.71,
+      "gpPercentGrowthPerMonth": 0.49,
+      "latestGpPercent": 22.5,
+      "totalQty": 974,
+      "avgQty": 19.48
+    },
+    {
+      "code": "6675",
+      "description": "WHISKAS TUNA IN JELLY",
+      "qtyPerMonthGrowth": 0.7,
+      "gpPercentGrowthPerMonth": 0.33,
+      "latestGpPercent": 21.5,
+      "totalQty": 743,
+      "avgQty": 14.86
+    },
+    {
+      "code": "2089",
+      "description": "DOMESTOS ORIGINAL",
+      "qtyPerMonthGrowth": 0.68,
+      "gpPercentGrowthPerMonth": 0.26,
+      "latestGpPercent": 13.1,
+      "totalQty": 468,
+      "avgQty": 9.36
+    },
+    {
+      "code": "6151",
+      "description": "AQUELLE NATURAL SPARKLING",
+      "qtyPerMonthGrowth": 0.67,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 24.4,
+      "totalQty": 3559,
+      "avgQty": 71.18
+    },
+    {
+      "code": "1256",
+      "description": "L/STAR SARDINES VEG OIL",
+      "qtyPerMonthGrowth": 0.63,
+      "gpPercentGrowthPerMonth": 0.36,
+      "latestGpPercent": 12.2,
+      "totalQty": 1117,
+      "avgQty": 22.34
+    },
+    {
+      "code": "4690",
+      "description": "SASKO CAKE FLOUR",
+      "qtyPerMonthGrowth": 0.61,
+      "gpPercentGrowthPerMonth": 0.4,
+      "latestGpPercent": 6.4,
+      "totalQty": 810,
+      "avgQty": 16.2
+    },
+    {
+      "code": "4663",
+      "description": "SPAR REFUSE BAGS-ON-ROLL",
+      "qtyPerMonthGrowth": 0.59,
+      "gpPercentGrowthPerMonth": 0.5,
+      "latestGpPercent": 9.7,
+      "totalQty": 374,
+      "avgQty": 7.48
+    },
+    {
+      "code": "5026",
+      "description": "HULETTS S/SWEET SUGAR BRN",
+      "qtyPerMonthGrowth": 0.56,
+      "gpPercentGrowthPerMonth": 0.31,
+      "latestGpPercent": 19.1,
+      "totalQty": 672,
+      "avgQty": 13.44
+    },
+    {
+      "code": "4636",
+      "description": "PECKS ANCHOVETTE",
+      "qtyPerMonthGrowth": 0.49,
+      "gpPercentGrowthPerMonth": 0.51,
+      "latestGpPercent": 15.9,
+      "totalQty": 428,
+      "avgQty": 8.56
+    }
+  ],
+  "allProducts": [
+    {
+      "code": "7369",
+      "description": "SAVEMOR OIL COOKING",
+      "qtyPerMonthGrowth": 3.26,
+      "gpPercentGrowthPerMonth": 0.09,
+      "latestGpPercent": 20.1,
+      "totalQty": 10988,
+      "avgQty": 219.76
+    },
+    {
+      "code": "5468",
+      "description": "SPAR SHREDDED TUNA WATER",
+      "qtyPerMonthGrowth": 3,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 9.4,
+      "totalQty": 11576,
+      "avgQty": 231.52
+    },
+    {
+      "code": "5348",
+      "description": "SPAR MILK L/L F/CREAM",
+      "qtyPerMonthGrowth": 1.68,
+      "gpPercentGrowthPerMonth": 0.1,
+      "latestGpPercent": 24.6,
+      "totalQty": 4237,
+      "avgQty": 84.74
+    },
+    {
+      "code": "4516",
+      "description": "ROB ENV BLACK PEPPER",
+      "qtyPerMonthGrowth": 1.48,
+      "gpPercentGrowthPerMonth": 0.19,
+      "latestGpPercent": 31.6,
+      "totalQty": 9775,
+      "avgQty": 195.5
+    },
+    {
+      "code": "3351",
+      "description": "SPAR PRO BAL CAT SEAFOOD",
+      "qtyPerMonthGrowth": 1.45,
+      "gpPercentGrowthPerMonth": 0.48,
+      "latestGpPercent": 18.8,
+      "totalQty": 1607,
+      "avgQty": 32.14
+    },
+    {
+      "code": "4462",
+      "description": "ROB RAJAH ENV MEDIUM",
+      "qtyPerMonthGrowth": 1.37,
+      "gpPercentGrowthPerMonth": 0.4,
+      "latestGpPercent": 32.4,
+      "totalQty": 4377,
+      "avgQty": 87.54
+    },
+    {
+      "code": "6153",
+      "description": "AQUELLE NATURAL STILL",
+      "qtyPerMonthGrowth": 1.31,
+      "gpPercentGrowthPerMonth": 0.09,
+      "latestGpPercent": 22.4,
+      "totalQty": 4320,
+      "avgQty": 86.4
+    },
+    {
+      "code": "3354",
+      "description": "SPAR PRO BAL CAT GOR BEEF",
+      "qtyPerMonthGrowth": 1.06,
+      "gpPercentGrowthPerMonth": 0.52,
+      "latestGpPercent": 19.9,
+      "totalQty": 1090,
+      "avgQty": 21.8
+    },
+    {
+      "code": "698",
+      "description": "BOKOMO CORN FLAKES",
+      "qtyPerMonthGrowth": 0.83,
+      "gpPercentGrowthPerMonth": 0.22,
+      "latestGpPercent": 15.1,
+      "totalQty": 984,
+      "avgQty": 19.68
+    },
+    {
+      "code": "2086",
+      "description": "KOO PEAS GARDEN SWT BRINE",
+      "qtyPerMonthGrowth": 0.83,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 22.5,
+      "totalQty": 1349,
+      "avgQty": 26.98
+    },
+    {
+      "code": "741",
+      "description": "OROS RTD ORANGE",
+      "qtyPerMonthGrowth": 0.8,
+      "gpPercentGrowthPerMonth": 0.36,
+      "latestGpPercent": 16.8,
+      "totalQty": 2138,
+      "avgQty": 42.76
+    },
+    {
+      "code": "1511",
+      "description": "IMANA SCE CHEDDAR CHEESE",
+      "qtyPerMonthGrowth": 0.71,
+      "gpPercentGrowthPerMonth": 0.49,
+      "latestGpPercent": 22.5,
+      "totalQty": 974,
+      "avgQty": 19.48
+    },
+    {
+      "code": "6675",
+      "description": "WHISKAS TUNA IN JELLY",
+      "qtyPerMonthGrowth": 0.7,
+      "gpPercentGrowthPerMonth": 0.33,
+      "latestGpPercent": 21.5,
+      "totalQty": 743,
+      "avgQty": 14.86
+    },
+    {
+      "code": "2089",
+      "description": "DOMESTOS ORIGINAL",
+      "qtyPerMonthGrowth": 0.68,
+      "gpPercentGrowthPerMonth": 0.26,
+      "latestGpPercent": 13.1,
+      "totalQty": 468,
+      "avgQty": 9.36
+    },
+    {
+      "code": "6151",
+      "description": "AQUELLE NATURAL SPARKLING",
+      "qtyPerMonthGrowth": 0.67,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 24.4,
+      "totalQty": 3559,
+      "avgQty": 71.18
+    },
+    {
+      "code": "1256",
+      "description": "L/STAR SARDINES VEG OIL",
+      "qtyPerMonthGrowth": 0.63,
+      "gpPercentGrowthPerMonth": 0.36,
+      "latestGpPercent": 12.2,
+      "totalQty": 1117,
+      "avgQty": 22.34
+    },
+    {
+      "code": "4690",
+      "description": "SASKO CAKE FLOUR",
+      "qtyPerMonthGrowth": 0.61,
+      "gpPercentGrowthPerMonth": 0.4,
+      "latestGpPercent": 6.4,
+      "totalQty": 810,
+      "avgQty": 16.2
+    },
+    {
+      "code": "4663",
+      "description": "SPAR REFUSE BAGS-ON-ROLL",
+      "qtyPerMonthGrowth": 0.59,
+      "gpPercentGrowthPerMonth": 0.5,
+      "latestGpPercent": 9.7,
+      "totalQty": 374,
+      "avgQty": 7.48
+    },
+    {
+      "code": "5026",
+      "description": "HULETTS S/SWEET SUGAR BRN",
+      "qtyPerMonthGrowth": 0.56,
+      "gpPercentGrowthPerMonth": 0.31,
+      "latestGpPercent": 19.1,
+      "totalQty": 672,
+      "avgQty": 13.44
+    },
+    {
+      "code": "4636",
+      "description": "PECKS ANCHOVETTE",
+      "qtyPerMonthGrowth": 0.49,
+      "gpPercentGrowthPerMonth": 0.51,
+      "latestGpPercent": 15.9,
+      "totalQty": 428,
+      "avgQty": 8.56
+    },
+    {
+      "code": "3236",
+      "description": "SPAR SOUP WHITE ONION",
+      "qtyPerMonthGrowth": 0.49,
+      "gpPercentGrowthPerMonth": 0.27,
+      "latestGpPercent": 27,
+      "totalQty": 1684,
+      "avgQty": 33.68
+    },
+    {
+      "code": "2790",
+      "description": "NESCAFE COFFEE GOLD",
+      "qtyPerMonthGrowth": 0.48,
+      "gpPercentGrowthPerMonth": 0.09,
+      "latestGpPercent": 3.1,
+      "totalQty": 572,
+      "avgQty": 11.44
+    },
+    {
+      "code": "5361",
+      "description": "F/CHOICE MILK UHT F/CRM",
+      "qtyPerMonthGrowth": 0.48,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 25.2,
+      "totalQty": 2945,
+      "avgQty": 58.9
+    },
+    {
+      "code": "2936",
+      "description": "NOLA MAYONNAISE ORIGINAL",
+      "qtyPerMonthGrowth": 0.47,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 21.6,
+      "totalQty": 511,
+      "avgQty": 10.22
+    },
+    {
+      "code": "4510",
+      "description": "KNORR CUP SP REG LAMB&VEG",
+      "qtyPerMonthGrowth": 0.47,
+      "gpPercentGrowthPerMonth": 0.51,
+      "latestGpPercent": 24.8,
+      "totalQty": 726,
+      "avgQty": 14.52
+    },
+    {
+      "code": "6682",
+      "description": "WHISKAS SEN CHIC GRAVY",
+      "qtyPerMonthGrowth": 0.44,
+      "gpPercentGrowthPerMonth": 0.23,
+      "latestGpPercent": 21.5,
+      "totalQty": 1045,
+      "avgQty": 20.9
+    },
+    {
+      "code": "5753",
+      "description": "SEEPO FINE TABLE SALT ORANGE",
+      "qtyPerMonthGrowth": 0.43,
+      "gpPercentGrowthPerMonth": 0.26,
+      "latestGpPercent": 41,
+      "totalQty": 2911,
+      "avgQty": 58.22
+    },
+    {
+      "code": "4459",
+      "description": "ROB ENV SPICE FOR RICE",
+      "qtyPerMonthGrowth": 0.43,
+      "gpPercentGrowthPerMonth": 0.36,
+      "latestGpPercent": 31.7,
+      "totalQty": 3237,
+      "avgQty": 64.74
+    },
+    {
+      "code": "4363",
+      "description": "RHODES JAM SMOOTH APRICOT",
+      "qtyPerMonthGrowth": 0.41,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 13.3,
+      "totalQty": 2088,
+      "avgQty": 41.76
+    },
+    {
+      "code": "4399",
+      "description": "RHODES JAM APRICOT MANGO",
+      "qtyPerMonthGrowth": 0.4,
+      "gpPercentGrowthPerMonth": 0.51,
+      "latestGpPercent": 19.1,
+      "totalQty": 415,
+      "avgQty": 8.3
+    },
+    {
+      "code": "6273",
+      "description": "B WELL MAYO CRMY GOURMET",
+      "qtyPerMonthGrowth": 0.37,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 16.5,
+      "totalQty": 761,
+      "avgQty": 15.22
+    },
+    {
+      "code": "2006",
+      "description": "KOO PEACH HALVES",
+      "qtyPerMonthGrowth": 0.37,
+      "gpPercentGrowthPerMonth": 0.25,
+      "latestGpPercent": 26.9,
+      "totalQty": 497,
+      "avgQty": 9.94
+    },
+    {
+      "code": "5027",
+      "description": "HULETTS SUGAR BRN SUNSWT",
+      "qtyPerMonthGrowth": 0.35,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 15.5,
+      "totalQty": 984,
+      "avgQty": 19.68
+    },
+    {
+      "code": "738",
+      "description": "BROOKES LOW CAL LEMON LIME",
+      "qtyPerMonthGrowth": 0.33,
+      "gpPercentGrowthPerMonth": 0.08,
+      "latestGpPercent": 23.2,
+      "totalQty": 505,
+      "avgQty": 10.1
+    },
+    {
+      "code": "1141",
+      "description": "G/L SPONGE EASYGRIP ABRAS",
+      "qtyPerMonthGrowth": 0.32,
+      "gpPercentGrowthPerMonth": 0.52,
+      "latestGpPercent": 27.5,
+      "totalQty": 764,
+      "avgQty": 15.28
+    },
+    {
+      "code": "5470",
+      "description": "SPAR TUNA CHUNKS IN WATER",
+      "qtyPerMonthGrowth": 0.31,
+      "gpPercentGrowthPerMonth": 0.06,
+      "latestGpPercent": 22.2,
+      "totalQty": 603,
+      "avgQty": 12.06
+    },
+    {
+      "code": "729",
+      "description": "OROS SQUASH ORANGE 2LT",
+      "qtyPerMonthGrowth": 0.28,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 8.2,
+      "totalQty": 7084,
+      "avgQty": 141.68
+    },
+    {
+      "code": "3482",
+      "description": "SPAR SAUCE SWEET CHILLI",
+      "qtyPerMonthGrowth": 0.28,
+      "gpPercentGrowthPerMonth": 0.09,
+      "latestGpPercent": 21.2,
+      "totalQty": 715,
+      "avgQty": 14.3
+    },
+    {
+      "code": "4632",
+      "description": "OLIVE PRIDE BLEND O/OIL",
+      "qtyPerMonthGrowth": 0.27,
+      "gpPercentGrowthPerMonth": 0.28,
+      "latestGpPercent": 21.8,
+      "totalQty": 318,
+      "avgQty": 6.36
+    },
+    {
+      "code": "3623",
+      "description": "SPAR PEANUT BUTTER SMOOTH",
+      "qtyPerMonthGrowth": 0.27,
+      "gpPercentGrowthPerMonth": 0.18,
+      "latestGpPercent": 15.2,
+      "totalQty": 184,
+      "avgQty": 3.68
+    },
+    {
+      "code": "2007",
+      "description": "KOO PEACH SLICES",
+      "qtyPerMonthGrowth": 0.27,
+      "gpPercentGrowthPerMonth": 0.37,
+      "latestGpPercent": 26.9,
+      "totalQty": 539,
+      "avgQty": 10.78
+    },
+    {
+      "code": "2991",
+      "description": "OUMA RUSKS SLICED MUESLI",
+      "qtyPerMonthGrowth": 0.25,
+      "gpPercentGrowthPerMonth": 0.2,
+      "latestGpPercent": 21.2,
+      "totalQty": 590,
+      "avgQty": 11.8
+    },
+    {
+      "code": "4587",
+      "description": "KNORROX CUBES CHILLI BEEF",
+      "qtyPerMonthGrowth": 0.25,
+      "gpPercentGrowthPerMonth": 0.3,
+      "latestGpPercent": 24.3,
+      "totalQty": 1289,
+      "avgQty": 25.78
+    },
+    {
+      "code": "5942",
+      "description": "W/STAR INST POR VANILLA",
+      "qtyPerMonthGrowth": 0.25,
+      "gpPercentGrowthPerMonth": 0.48,
+      "latestGpPercent": 25,
+      "totalQty": 419,
+      "avgQty": 8.38
+    },
+    {
+      "code": "5529",
+      "description": "SPAR CHICK PEAS",
+      "qtyPerMonthGrowth": 0.24,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 27.8,
+      "totalQty": 1025,
+      "avgQty": 20.5
+    },
+    {
+      "code": "6163",
+      "description": "AQUELLE HNY&MEL SPARKLING",
+      "qtyPerMonthGrowth": 0.23,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 28.8,
+      "totalQty": 738,
+      "avgQty": 14.76
+    },
+    {
+      "code": "3222",
+      "description": "SPAR SYRUP GOLDEN",
+      "qtyPerMonthGrowth": 0.22,
+      "gpPercentGrowthPerMonth": 0.08,
+      "latestGpPercent": 20,
+      "totalQty": 592,
+      "avgQty": 11.84
+    },
+    {
+      "code": "2111",
+      "description": "COMFORT F/C POUCH PURE",
+      "qtyPerMonthGrowth": 0.21,
+      "gpPercentGrowthPerMonth": 0.06,
+      "latestGpPercent": 10.5,
+      "totalQty": 511,
+      "avgQty": 10.22
+    },
+    {
+      "code": "751",
+      "description": "HALLS DAILY OR/MAN DRINK",
+      "qtyPerMonthGrowth": 0.21,
+      "gpPercentGrowthPerMonth": 0.49,
+      "latestGpPercent": 25.9,
+      "totalQty": 534,
+      "avgQty": 10.68
+    },
+    {
+      "code": "4379",
+      "description": "RHODES GRANADILLA PULP",
+      "qtyPerMonthGrowth": 0.21,
+      "gpPercentGrowthPerMonth": 0.19,
+      "latestGpPercent": 29.7,
+      "totalQty": 560,
+      "avgQty": 11.2
+    },
+    {
+      "code": "1992",
+      "description": "KOO VEG CURRY",
+      "qtyPerMonthGrowth": 0.2,
+      "gpPercentGrowthPerMonth": 0.08,
+      "latestGpPercent": 20.7,
+      "totalQty": 1133,
+      "avgQty": 22.66
+    },
+    {
+      "code": "5012",
+      "description": "ROYCO P/BAKE PARM&GARLIC",
+      "qtyPerMonthGrowth": 0.2,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 22,
+      "totalQty": 921,
+      "avgQty": 18.42
+    },
+    {
+      "code": "6185",
+      "description": "AQUELLE P/APPLE SPARKLING",
+      "qtyPerMonthGrowth": 0.2,
+      "gpPercentGrowthPerMonth": 0.12,
+      "latestGpPercent": 28.8,
+      "totalQty": 884,
+      "avgQty": 17.68
+    },
+    {
+      "code": "6280",
+      "description": "BWELL CANOLA OLIVE BLEND",
+      "qtyPerMonthGrowth": 0.19,
+      "gpPercentGrowthPerMonth": 0.46,
+      "latestGpPercent": 23.4,
+      "totalQty": 346,
+      "avgQty": 6.92
+    },
+    {
+      "code": "6708",
+      "description": "SPAR WHITE VINEGAR CLSD",
+      "qtyPerMonthGrowth": 0.19,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 16.1,
+      "totalQty": 938,
+      "avgQty": 18.76
+    },
+    {
+      "code": "1877",
+      "description": "LION WHOLE LENTILS",
+      "qtyPerMonthGrowth": 0.19,
+      "gpPercentGrowthPerMonth": 0.11,
+      "latestGpPercent": 18.4,
+      "totalQty": 586,
+      "avgQty": 11.72
+    },
+    {
+      "code": "3105",
+      "description": "SPAR GHERKINS MILD DILL C",
+      "qtyPerMonthGrowth": 0.19,
+      "gpPercentGrowthPerMonth": 0.35,
+      "latestGpPercent": 19.2,
+      "totalQty": 267,
+      "avgQty": 5.34
+    },
+    {
+      "code": "4389",
+      "description": "RHODES JAM CUP APRICOT",
+      "qtyPerMonthGrowth": 0.18,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 19.1,
+      "totalQty": 1099,
+      "avgQty": 21.98
+    },
+    {
+      "code": "3522",
+      "description": "SPAR CONES POINTED",
+      "qtyPerMonthGrowth": 0.18,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 23.8,
+      "totalQty": 360,
+      "avgQty": 7.2
+    },
+    {
+      "code": "789",
+      "description": "OROS SQUASH PINEAPPLE",
+      "qtyPerMonthGrowth": 0.17,
+      "gpPercentGrowthPerMonth": 0.02,
+      "latestGpPercent": 9.4,
+      "totalQty": 1044,
+      "avgQty": 20.88
+    },
+    {
+      "code": "6674",
+      "description": "WHISKAS SALMON IN GRAVY",
+      "qtyPerMonthGrowth": 0.17,
+      "gpPercentGrowthPerMonth": 0.1,
+      "latestGpPercent": 21.5,
+      "totalQty": 1058,
+      "avgQty": 21.16
+    },
+    {
+      "code": "2813",
+      "description": "NESCAFE GOLD CAPPUCCINO",
+      "qtyPerMonthGrowth": 0.16,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 17.9,
+      "totalQty": 9134,
+      "avgQty": 182.68
+    },
+    {
+      "code": "3241",
+      "description": "SPAR SOUP MUSHROOM",
+      "qtyPerMonthGrowth": 0.16,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 27.2,
+      "totalQty": 2813,
+      "avgQty": 56.26
+    },
+    {
+      "code": "1717",
+      "description": "DUCK ACT OCEAN FORCE",
+      "qtyPerMonthGrowth": 0.16,
+      "gpPercentGrowthPerMonth": 0.19,
+      "latestGpPercent": 16.9,
+      "totalQty": 505,
+      "avgQty": 10.1
+    },
+    {
+      "code": "6159",
+      "description": "AQUELLE HNY&MEL SPARKLING",
+      "qtyPerMonthGrowth": 0.16,
+      "gpPercentGrowthPerMonth": 0.14,
+      "latestGpPercent": 23.9,
+      "totalQty": 1284,
+      "avgQty": 25.68
+    },
+    {
+      "code": "2229",
+      "description": "SUNLIGHT AUTO",
+      "qtyPerMonthGrowth": 0.15,
+      "gpPercentGrowthPerMonth": 0.14,
+      "latestGpPercent": 11.7,
+      "totalQty": 215,
+      "avgQty": 4.3
+    },
+    {
+      "code": "727",
+      "description": "ROSES TONIC KOLA",
+      "qtyPerMonthGrowth": 0.15,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 20.2,
+      "totalQty": 399,
+      "avgQty": 7.98
+    },
+    {
+      "code": "2636",
+      "description": "F/ROSES T/BAGS SA BLEND",
+      "qtyPerMonthGrowth": 0.15,
+      "gpPercentGrowthPerMonth": 0.22,
+      "latestGpPercent": 12.3,
+      "totalQty": 340,
+      "avgQty": 6.8
+    },
+    {
+      "code": "1994",
+      "description": "KOO SWEETCORN CREAMSTYLE",
+      "qtyPerMonthGrowth": 0.15,
+      "gpPercentGrowthPerMonth": 0.39,
+      "latestGpPercent": 29.9,
+      "totalQty": 713,
+      "avgQty": 14.26
+    },
+    {
+      "code": "2700",
+      "description": "SAVEMOR VANILLA CREAMS",
+      "qtyPerMonthGrowth": 0.15,
+      "gpPercentGrowthPerMonth": 0.15,
+      "latestGpPercent": 25.3,
+      "totalQty": 1579,
+      "avgQty": 31.58
+    },
+    {
+      "code": "5499",
+      "description": "SPAR CATFOOD TUNA IN WATE",
+      "qtyPerMonthGrowth": 0.15,
+      "gpPercentGrowthPerMonth": 0.26,
+      "latestGpPercent": 22.5,
+      "totalQty": 302,
+      "avgQty": 6.04
+    },
+    {
+      "code": "7416",
+      "description": "PRONUTRO TRAD BANANA",
+      "qtyPerMonthGrowth": 0.14,
+      "gpPercentGrowthPerMonth": 0.41,
+      "latestGpPercent": 19.8,
+      "totalQty": 179,
+      "avgQty": 3.58
+    },
+    {
+      "code": "3363",
+      "description": "SPAR CHUTNEY PEACH",
+      "qtyPerMonthGrowth": 0.14,
+      "gpPercentGrowthPerMonth": 0.4,
+      "latestGpPercent": 19.7,
+      "totalQty": 137,
+      "avgQty": 2.74
+    },
+    {
+      "code": "1779",
+      "description": "RAID ELEC LIQ PRIM",
+      "qtyPerMonthGrowth": 0.12,
+      "gpPercentGrowthPerMonth": 0.21,
+      "latestGpPercent": 20.7,
+      "totalQty": 160,
+      "avgQty": 3.2
+    },
+    {
+      "code": "924",
+      "description": "L/FRT ORANGE",
+      "qtyPerMonthGrowth": 0.11,
+      "gpPercentGrowthPerMonth": 0.15,
+      "latestGpPercent": 16.7,
+      "totalQty": 553,
+      "avgQty": 11.06
+    },
+    {
+      "code": "3184",
+      "description": "SPAR HOT CHOCOLATE",
+      "qtyPerMonthGrowth": 0.11,
+      "gpPercentGrowthPerMonth": 0.17,
+      "latestGpPercent": 7.7,
+      "totalQty": 186,
+      "avgQty": 3.72
+    },
+    {
+      "code": "6543",
+      "description": "SHIELD F/MIST JASMINE&AMB",
+      "qtyPerMonthGrowth": 0.11,
+      "gpPercentGrowthPerMonth": 0.18,
+      "latestGpPercent": 28,
+      "totalQty": 304,
+      "avgQty": 6.08
+    },
+    {
+      "code": "3059",
+      "description": "SPAR CHAKALAKA MILD&SPICY",
+      "qtyPerMonthGrowth": 0.11,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 24.1,
+      "totalQty": 481,
+      "avgQty": 9.62
+    },
+    {
+      "code": "1502",
+      "description": "TOP CLASS SPICE MIX ORIG",
+      "qtyPerMonthGrowth": 0.11,
+      "gpPercentGrowthPerMonth": 0.33,
+      "latestGpPercent": 25.6,
+      "totalQty": 328,
+      "avgQty": 6.56
+    },
+    {
+      "code": "2797",
+      "description": "NESCAFE CAPPUCCINO HAZEL",
+      "qtyPerMonthGrowth": 0.11,
+      "gpPercentGrowthPerMonth": 0.35,
+      "latestGpPercent": 22.4,
+      "totalQty": 142,
+      "avgQty": 2.84
+    },
+    {
+      "code": "7335",
+      "description": "INFACARE 1 CARTON",
+      "qtyPerMonthGrowth": 0.1,
+      "gpPercentGrowthPerMonth": 0.09,
+      "latestGpPercent": 7.2,
+      "totalQty": 135,
+      "avgQty": 2.7
+    },
+    {
+      "code": "726",
+      "description": "ROSES CORDIAL PASSION FRT",
+      "qtyPerMonthGrowth": 0.1,
+      "gpPercentGrowthPerMonth": 0.17,
+      "latestGpPercent": 12.4,
+      "totalQty": 371,
+      "avgQty": 7.42
+    },
+    {
+      "code": "5573",
+      "description": "SPAR TOILET BLK PINE GRN",
+      "qtyPerMonthGrowth": 0.1,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 19.1,
+      "totalQty": 351,
+      "avgQty": 7.02
+    },
+    {
+      "code": "723",
+      "description": "AG TOMATO COCKTAIL",
+      "qtyPerMonthGrowth": 0.1,
+      "gpPercentGrowthPerMonth": 0.31,
+      "latestGpPercent": 26.5,
+      "totalQty": 262,
+      "avgQty": 5.24
+    },
+    {
+      "code": "5940",
+      "description": "W/STAR INST POR ORIG",
+      "qtyPerMonthGrowth": 0.1,
+      "gpPercentGrowthPerMonth": 0.31,
+      "latestGpPercent": 21.1,
+      "totalQty": 351,
+      "avgQty": 7.02
+    },
+    {
+      "code": "6568",
+      "description": "MR SHEEN TILE CLN M/FRESH",
+      "qtyPerMonthGrowth": 0.09,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 26.6,
+      "totalQty": 487,
+      "avgQty": 9.74
+    },
+    {
+      "code": "3374",
+      "description": "SPAR BRAN FLAKES",
+      "qtyPerMonthGrowth": 0.09,
+      "gpPercentGrowthPerMonth": 0.28,
+      "latestGpPercent": 22.8,
+      "totalQty": 360,
+      "avgQty": 7.2
+    },
+    {
+      "code": "3048",
+      "description": "SPAR F/JCE ORANGE",
+      "qtyPerMonthGrowth": 0.09,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 23.5,
+      "totalQty": 656,
+      "avgQty": 13.12
+    },
+    {
+      "code": "6711",
+      "description": "SAFARI VINEGAR WHITE",
+      "qtyPerMonthGrowth": 0.09,
+      "gpPercentGrowthPerMonth": 0.1,
+      "latestGpPercent": 22.5,
+      "totalQty": 364,
+      "avgQty": 7.28
+    },
+    {
+      "code": "6",
+      "description": "DOOM MOSQ.MAT",
+      "qtyPerMonthGrowth": 0.09,
+      "gpPercentGrowthPerMonth": 0.16,
+      "latestGpPercent": 18.6,
+      "totalQty": 264,
+      "avgQty": 5.28
+    },
+    {
+      "code": "5170",
+      "description": "TRUMPS COCOA POWDER",
+      "qtyPerMonthGrowth": 0.09,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 16.9,
+      "totalQty": 119,
+      "avgQty": 2.38
+    },
+    {
+      "code": "3400",
+      "description": "SPAR GERMEX KITCHEN ORANG",
+      "qtyPerMonthGrowth": 0.09,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 22.9,
+      "totalQty": 216,
+      "avgQty": 4.32
+    },
+    {
+      "code": "2953",
+      "description": "YUM YUM P/NUT BUTT SMTH",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.24,
+      "latestGpPercent": 22.9,
+      "totalQty": 711,
+      "avgQty": 14.22
+    },
+    {
+      "code": "774",
+      "description": "ENERGADE CONC NAARTJIE",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.12,
+      "latestGpPercent": 19.8,
+      "totalQty": 606,
+      "avgQty": 12.12
+    },
+    {
+      "code": "2827",
+      "description": "NESCAFE CAPP SALTED CARAM",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.17,
+      "latestGpPercent": 20.7,
+      "totalQty": 309,
+      "avgQty": 6.18
+    },
+    {
+      "code": "3209",
+      "description": "SPAR SWEET STICK SACHETS",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.34,
+      "latestGpPercent": 31.9,
+      "totalQty": 317,
+      "avgQty": 6.34
+    },
+    {
+      "code": "7345",
+      "description": "S26 PROMIL GOLD NO2",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 6.4,
+      "totalQty": 73,
+      "avgQty": 1.46
+    },
+    {
+      "code": "2762",
+      "description": "SAVEMORE PINE GEL",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.24,
+      "latestGpPercent": 19.8,
+      "totalQty": 709,
+      "avgQty": 14.18
+    },
+    {
+      "code": "5970",
+      "description": "MX-19 CAUSTIC SODA",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.47,
+      "latestGpPercent": 25.7,
+      "totalQty": 175,
+      "avgQty": 3.5
+    },
+    {
+      "code": "3005",
+      "description": "BOBTAIL ADLT STEAK GRAVY",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.11,
+      "latestGpPercent": 17.1,
+      "totalQty": 128,
+      "avgQty": 2.56
+    },
+    {
+      "code": "898",
+      "description": "L/FRT PASSION POWER",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.26,
+      "latestGpPercent": 16.7,
+      "totalQty": 355,
+      "avgQty": 7.1
+    },
+    {
+      "code": "5469",
+      "description": "SPAR TUNA CHUNKS IN OIL",
+      "qtyPerMonthGrowth": 0.08,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 18.8,
+      "totalQty": 340,
+      "avgQty": 6.8
+    },
+    {
+      "code": "4685",
+      "description": "SASKO FLOUR CAKE",
+      "qtyPerMonthGrowth": 0.07,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 9.9,
+      "totalQty": 596,
+      "avgQty": 11.92
+    },
+    {
+      "code": "788",
+      "description": "OROS SQUASH TROPICAL",
+      "qtyPerMonthGrowth": 0.07,
+      "gpPercentGrowthPerMonth": 0.08,
+      "latestGpPercent": 8,
+      "totalQty": 1022,
+      "avgQty": 20.44
+    },
+    {
+      "code": "6677",
+      "description": "WHISKAS FISH&MEAT JELL MP",
+      "qtyPerMonthGrowth": 0.07,
+      "gpPercentGrowthPerMonth": 0.17,
+      "latestGpPercent": 14.7,
+      "totalQty": 127,
+      "avgQty": 2.54
+    },
+    {
+      "code": "1680",
+      "description": "BOSTON CAPPU R/BOS STICKS",
+      "qtyPerMonthGrowth": 0.07,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 20.2,
+      "totalQty": 317,
+      "avgQty": 6.34
+    },
+    {
+      "code": "2981",
+      "description": "CANINE CUISINE LG CH&RC",
+      "qtyPerMonthGrowth": 0.07,
+      "gpPercentGrowthPerMonth": 0.19,
+      "latestGpPercent": 10.2,
+      "totalQty": 103,
+      "avgQty": 2.06
+    },
+    {
+      "code": "4910",
+      "description": "SAVEMOR SALT COARSE",
+      "qtyPerMonthGrowth": 0.07,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 25.7,
+      "totalQty": 1162,
+      "avgQty": 23.24
+    },
+    {
+      "code": "347",
+      "description": "P/TOUCH W/PWD AUTO SHEET",
+      "qtyPerMonthGrowth": 0.07,
+      "gpPercentGrowthPerMonth": 0.08,
+      "latestGpPercent": 19.7,
+      "totalQty": 201,
+      "avgQty": 4.02
+    },
+    {
+      "code": "7338",
+      "description": "INFACARE 1 CARTON",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.01,
+      "latestGpPercent": 9,
+      "totalQty": 620,
+      "avgQty": 12.4
+    },
+    {
+      "code": "6161",
+      "description": "AQUELLE NAARTJIE SPARKLNG",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.12,
+      "latestGpPercent": 28.8,
+      "totalQty": 1731,
+      "avgQty": 34.62
+    },
+    {
+      "code": "2763",
+      "description": "SAVEMORE PINE GEL",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.23,
+      "latestGpPercent": 22.3,
+      "totalQty": 502,
+      "avgQty": 10.04
+    },
+    {
+      "code": "2801",
+      "description": "NESCAFE CLASSIC DECAF",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.15,
+      "latestGpPercent": 14.7,
+      "totalQty": 171,
+      "avgQty": 3.42
+    },
+    {
+      "code": "2203",
+      "description": "SUNLIGHT AUTO 2 IN 1",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.15,
+      "latestGpPercent": 16.3,
+      "totalQty": 346,
+      "avgQty": 6.92
+    },
+    {
+      "code": "3521",
+      "description": "SPAR CONES SUGAR",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 22.8,
+      "totalQty": 287,
+      "avgQty": 5.74
+    },
+    {
+      "code": "6541",
+      "description": "SHIELD F/MIST FRESH LINEN",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 28.5,
+      "totalQty": 315,
+      "avgQty": 6.3
+    },
+    {
+      "code": "922",
+      "description": "L/FRT APPLE CLEAR",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 16.7,
+      "totalQty": 435,
+      "avgQty": 8.7
+    },
+    {
+      "code": "4923",
+      "description": "TASTIC RICE PARBOILED",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.14,
+      "latestGpPercent": 19.3,
+      "totalQty": 65,
+      "avgQty": 1.3
+    },
+    {
+      "code": "6189",
+      "description": "AQUELLE APPLE SPARKLING",
+      "qtyPerMonthGrowth": 0.06,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 28.8,
+      "totalQty": 524,
+      "avgQty": 10.48
+    },
+    {
+      "code": "6191",
+      "description": "AQUELLE GRANADILLA SPARK",
+      "qtyPerMonthGrowth": 0.05,
+      "gpPercentGrowthPerMonth": 0.17,
+      "latestGpPercent": 28.8,
+      "totalQty": 1207,
+      "avgQty": 24.14
+    },
+    {
+      "code": "4665",
+      "description": "SPAR PEDAL BIN BAGS WHITE",
+      "qtyPerMonthGrowth": 0.05,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 24.4,
+      "totalQty": 584,
+      "avgQty": 11.68
+    },
+    {
+      "code": "3247",
+      "description": "SPAR P/BUT NO SUGAR ADDED",
+      "qtyPerMonthGrowth": 0.05,
+      "gpPercentGrowthPerMonth": 0.08,
+      "latestGpPercent": 16.1,
+      "totalQty": 440,
+      "avgQty": 8.8
+    },
+    {
+      "code": "1704",
+      "description": "DUCK RIM PINE FRESH REFILL",
+      "qtyPerMonthGrowth": 0.05,
+      "gpPercentGrowthPerMonth": 0.18,
+      "latestGpPercent": 20.3,
+      "totalQty": 239,
+      "avgQty": 4.78
+    },
+    {
+      "code": "776",
+      "description": "ENERGADE CONC TROPICAL",
+      "qtyPerMonthGrowth": 0.05,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 20.5,
+      "totalQty": 345,
+      "avgQty": 6.9
+    },
+    {
+      "code": "1425",
+      "description": "ILLOVO GOLD SYRUP SQUEEZE",
+      "qtyPerMonthGrowth": 0.05,
+      "gpPercentGrowthPerMonth": 0.11,
+      "latestGpPercent": 20.2,
+      "totalQty": 179,
+      "avgQty": 3.58
+    },
+    {
+      "code": "899",
+      "description": "L/FRT BERRY BLAZE",
+      "qtyPerMonthGrowth": 0.05,
+      "gpPercentGrowthPerMonth": 0.12,
+      "latestGpPercent": 16.7,
+      "totalQty": 418,
+      "avgQty": 8.36
+    },
+    {
+      "code": "5939",
+      "description": "W/STAR INST POR CHOC",
+      "qtyPerMonthGrowth": 0.05,
+      "gpPercentGrowthPerMonth": 0.31,
+      "latestGpPercent": 25,
+      "totalQty": 362,
+      "avgQty": 7.24
+    },
+    {
+      "code": "5916",
+      "description": "SPEKKO RICE PARBOILED",
+      "qtyPerMonthGrowth": 0.04,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 30.5,
+      "totalQty": 658,
+      "avgQty": 13.16
+    },
+    {
+      "code": "775",
+      "description": "ENERGADE CONC BLUEBERRY",
+      "qtyPerMonthGrowth": 0.04,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 21.7,
+      "totalQty": 1000,
+      "avgQty": 20
+    },
+    {
+      "code": "5031",
+      "description": "EQUISWEET SACHETS 100'S",
+      "qtyPerMonthGrowth": 0.04,
+      "gpPercentGrowthPerMonth": 0.21,
+      "latestGpPercent": 27.9,
+      "totalQty": 286,
+      "avgQty": 5.72
+    },
+    {
+      "code": "3229",
+      "description": "SPAR F/JCE LITCHI",
+      "qtyPerMonthGrowth": 0.04,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 23.9,
+      "totalQty": 528,
+      "avgQty": 10.56
+    },
+    {
+      "code": "4049",
+      "description": "VANISH O2 POWDER",
+      "qtyPerMonthGrowth": 0.04,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 10.5,
+      "totalQty": 106,
+      "avgQty": 2.12
+    },
+    {
+      "code": "3488",
+      "description": "SPAR P/B DOG STICK BACON",
+      "qtyPerMonthGrowth": 0.04,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 23.5,
+      "totalQty": 416,
+      "avgQty": 8.32
+    },
+    {
+      "code": "2698",
+      "description": "SAVEMOR STRAWBERRY CREAMS",
+      "qtyPerMonthGrowth": 0.04,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 25.5,
+      "totalQty": 1629,
+      "avgQty": 32.58
+    },
+    {
+      "code": "4682",
+      "description": "SPAR ZIPPER BAG L",
+      "qtyPerMonthGrowth": 0.03,
+      "gpPercentGrowthPerMonth": 0.06,
+      "latestGpPercent": 21.4,
+      "totalQty": 372,
+      "avgQty": 7.44
+    },
+    {
+      "code": "3332",
+      "description": "SPAR PRO BALANCE CAT CHIC",
+      "qtyPerMonthGrowth": 0.03,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 18.1,
+      "totalQty": 176,
+      "avgQty": 3.52
+    },
+    {
+      "code": "1422",
+      "description": "ILLOVO SAUCE CHOC",
+      "qtyPerMonthGrowth": 0.03,
+      "gpPercentGrowthPerMonth": 0.06,
+      "latestGpPercent": 23,
+      "totalQty": 241,
+      "avgQty": 4.82
+    },
+    {
+      "code": "4146",
+      "description": "FINISH ALL IN 1 TAB REG",
+      "qtyPerMonthGrowth": 0.03,
+      "gpPercentGrowthPerMonth": 0.16,
+      "latestGpPercent": 8.6,
+      "totalQty": 64,
+      "avgQty": 1.28
+    },
+    {
+      "code": "1945",
+      "description": "KELLOGGS SPECIAL K CLASSI",
+      "qtyPerMonthGrowth": 0.03,
+      "gpPercentGrowthPerMonth": 0.1,
+      "latestGpPercent": 25.5,
+      "totalQty": 216,
+      "avgQty": 4.32
+    },
+    {
+      "code": "1421",
+      "description": "ILLOVO MAPLE SYRUP SQZE",
+      "qtyPerMonthGrowth": 0.03,
+      "gpPercentGrowthPerMonth": 0.18,
+      "latestGpPercent": 16.4,
+      "totalQty": 210,
+      "avgQty": 4.2
+    },
+    {
+      "code": "4376",
+      "description": "RHODES TOMATO INDIAN",
+      "qtyPerMonthGrowth": 0.03,
+      "gpPercentGrowthPerMonth": 0.06,
+      "latestGpPercent": 21.4,
+      "totalQty": 323,
+      "avgQty": 6.46
+    },
+    {
+      "code": "2974",
+      "description": "BOBTAIL GRVY/CHNKS MLT/PK",
+      "qtyPerMonthGrowth": 0.02,
+      "gpPercentGrowthPerMonth": 0.04,
+      "latestGpPercent": 24.9,
+      "totalQty": 286,
+      "avgQty": 5.72
+    },
+    {
+      "code": "3049",
+      "description": "SPAR F/JCE RED GRAPE",
+      "qtyPerMonthGrowth": 0.02,
+      "gpPercentGrowthPerMonth": 0.12,
+      "latestGpPercent": 23.9,
+      "totalQty": 389,
+      "avgQty": 7.78
+    },
+    {
+      "code": "2952",
+      "description": "YUM YUM P/BUTTER UL/CRMY",
+      "qtyPerMonthGrowth": 0.02,
+      "gpPercentGrowthPerMonth": 0.14,
+      "latestGpPercent": 15.9,
+      "totalQty": 117,
+      "avgQty": 2.34
+    },
+    {
+      "code": "4518",
+      "description": "KNORR S/D CRMY ITALIAN",
+      "qtyPerMonthGrowth": 0.02,
+      "gpPercentGrowthPerMonth": 0.12,
+      "latestGpPercent": 23,
+      "totalQty": 257,
+      "avgQty": 5.14
+    },
+    {
+      "code": "4406",
+      "description": "RHODES SQUISH FRUIT SALAD",
+      "qtyPerMonthGrowth": 0.02,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 11,
+      "totalQty": 751,
+      "avgQty": 15.02
+    },
+    {
+      "code": "2823",
+      "description": "NESCAFE ESPRESSO",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.02,
+      "latestGpPercent": 3.1,
+      "totalQty": 626,
+      "avgQty": 12.52
+    },
+    {
+      "code": "1112",
+      "description": "TUFFY BUDGET BLACK BAG",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.01,
+      "latestGpPercent": 26.2,
+      "totalQty": 1207,
+      "avgQty": 24.14
+    },
+    {
+      "code": "2581",
+      "description": "SPAR CAT LITTER",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.09,
+      "latestGpPercent": 20.5,
+      "totalQty": 415,
+      "avgQty": 8.3
+    },
+    {
+      "code": "3134",
+      "description": "SPAR COFFEE BLUE MOUNTAIN",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.02,
+      "latestGpPercent": 21.3,
+      "totalQty": 334,
+      "avgQty": 6.68
+    },
+    {
+      "code": "4522",
+      "description": "AROMAT TRIO PK ORIGINAL",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.17,
+      "latestGpPercent": 24.2,
+      "totalQty": 814,
+      "avgQty": 16.28
+    },
+    {
+      "code": "3192",
+      "description": "SPAR DISHWASH IT GRN TEA",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.03,
+      "latestGpPercent": 13.3,
+      "totalQty": 827,
+      "avgQty": 16.54
+    },
+    {
+      "code": "1103",
+      "description": "TUFFY REFUSE BAG H/DUTY",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 24.1,
+      "totalQty": 406,
+      "avgQty": 8.12
+    },
+    {
+      "code": "3132",
+      "description": "SPAR COFFEE PURE CLASSIC 250G",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.15,
+      "latestGpPercent": 4.1,
+      "totalQty": 217,
+      "avgQty": 4.34
+    },
+    {
+      "code": "734",
+      "description": "ROSES CORDIAL LIME",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.13,
+      "latestGpPercent": 19.3,
+      "totalQty": 321,
+      "avgQty": 6.42
+    },
+    {
+      "code": "4530",
+      "description": "KNORR S/DRESSING GREEK",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.08,
+      "latestGpPercent": 23,
+      "totalQty": 402,
+      "avgQty": 8.04
+    },
+    {
+      "code": "1104",
+      "description": "TUFFY REFUSE BAG CLEAR",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 23.3,
+      "totalQty": 187,
+      "avgQty": 3.74
+    },
+    {
+      "code": "2996",
+      "description": "CANINE CUISINE ADLT CHI&R",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.14,
+      "latestGpPercent": 10.7,
+      "totalQty": 45,
+      "avgQty": 0.9
+    },
+    {
+      "code": "1424",
+      "description": "ILLOVO TRAD SYRUP SQZE",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.15,
+      "latestGpPercent": 17.4,
+      "totalQty": 279,
+      "avgQty": 5.58
+    },
+    {
+      "code": "4032",
+      "description": "NUGGET BLACK",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.07,
+      "latestGpPercent": 23.9,
+      "totalQty": 237,
+      "avgQty": 4.74
+    },
+    {
+      "code": "4525",
+      "description": "KNORR S/DRESSING FRENCH",
+      "qtyPerMonthGrowth": 0.01,
+      "gpPercentGrowthPerMonth": 0.05,
+      "latestGpPercent": 23,
+      "totalQty": 258,
+      "avgQty": 5.16
+    }
+  ]
+}

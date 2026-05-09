@@ -75,6 +75,7 @@ When you chat with me on console:
 | `health/TELEGRAM_SESSION.md` | This file | ✅ Yes |
 | `health/metrics.md` | Health metrics log | ✅ Yes |
 | `health/nutrition.md` | Nutrition tracking | ✅ Yes |
+| `health/activity.md` | Walks/steps activity tracking | ✅ Yes |
 | `MEMORY.md` | Long-term memory | ✅ Yes (read-only on Telegram) |
 | `health/gmail-log.json` | Email status | ✅ Yes |
 

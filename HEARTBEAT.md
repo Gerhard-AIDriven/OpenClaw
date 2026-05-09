@@ -5,6 +5,7 @@
 ### Health Metrics (ask once per day, morning)
 - Ask Gerhard for his blood pressure, weight, and blood sugar
 - Log to health/metrics.md
+- Log walks/steps to health/activity.md
 - If not yet asked today, ask now
 - Check health/metrics.md to see if today's entry already exists before asking
 - **Daily nutrition target:** 1750 cal | Carbs 219g | Protein 110g | Fat 49g
@@ -12,13 +13,13 @@
 
 ### Anthropic Balance Reminder (once per day, morning)
 - Remind Gerhard to check his Anthropic balance at console.anthropic.com → Billing
-- Last known balance: $24.85 (2026-04-27)
+- Last known balance: $24.48 (2026-05-09)
 - If Gerhard reports balance is $2 or below → alert him to top up immediately
 - Update the "Last known balance" above when Gerhard reports it
 
 ### OpenAI Balance Reminder (once per day, morning)
 - Remind Gerhard to check his OpenAI balance daily (console.openai.com → Billing)
-- Last known balance: $12.07 (2026-04-27)
+- Last known balance: $10.99 (2026-05-09)
 - Update the "Last known balance" above when Gerhard reports it
 
 ### Tomorrow (2026-04-09) — One-time reminders

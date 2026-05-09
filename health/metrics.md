@@ -1,5 +1,8 @@
 # Health Metrics Log
 
+## Targets
+- **Weight target:** 100.0 kg
+
 |Date|Blood Pressure|Weight (kg)|Blood Sugar (mmol/L)|Notes|
 |-|-|-|-|-|
 |2026-04-07|120/88|110.9|-|Baseline|
@@ -30,6 +33,16 @@
 |2026-04-29|129/84|111.0|6.0 (fasting)|✅ Good control. Sugar up slightly (5.9→6.0). BP stable (129/84). Weight stable. Keep your pre/post-meal walks and stay within carb targets.**|
 |2026-04-30|127/84|110.8|6.2 (fasting)|✅ Good control. Sugar +0.2 (6.0→6.2), still in target range. BP improved (129/84 → 127/84, sys down 2). Weight down 0.2kg. **Pattern strong: hitting macro targets + 4 walks/day + 10k+ steps = stable glucose + improving BP.**|
 |2026-05-01|134/76|110.2|6.2 (fasting)|✅ Good control. Sugar stable at 6.2. BP elevation (127/84 → 134/76, sys +7, dia -8). Weight down 0.6kg. Diastolic improving; systolic variation within normal daily range. Keep the routine.|
+|2026-05-02|126/84|109.9|6.0 (fasting)|✅ Good control. Sugar stable/improved (6.2 → 6.0). BP 126/84 and weight slightly down (110.2 → 109.9). Continue routine and post-meal walks.|
+|2026-05-03|129/80|108.8|6.2 (fasting)|✅ Excellent day. Weight down 1.1kg (109.9 → 108.8). Sugar stable (6.0 → 6.2). BP 129/80. **Final step count: 14,319** — well above target. After-lunch walk: 15 min, 1720 steps. Sustaining the formula: consistent walking + macro targets = glucose control + weight loss.|
+
+|2026-05-04|131/78|108.8|6.6 (fasting)|✅ Good control. Sugar up slightly (6.2 → 6.6), still well below 7.0. BP: sys +2 (129→131), dia -2 (80→78, improvement). Weight stable. Keep the walking routine — aim for carb targets today.|
+|2026-05-05|133/87|108.6|6.0 (fasting)|✅ Logged morning reading.|
+|2026-05-06|120/75|108.4|6.3|✅ Logged from user (08:17 GMT+2).|
+|2026-05-07|120/71|107.9|6.2 (fasting)|✅ Logged from user (fasting).|
+
+|2026-05-08|128/74|108.1|6.2 (fasting)|✅ Logged from user.|
+|2026-05-09|127/76|108.9|6.5 (fasting)|✅ Logged from user. Nothing before reading; pre-breakfast walk: 15 min, 1745 steps. After breakfast walk: 19 min (07:15), 1670 steps.|
 
 
 ---
@@ -426,3 +439,158 @@
 **Analysis:** Same batch from Thursday. No new emails overnight. All administrative notifications.
 
 **Action:** None required.
+
+## Gmail Check � 2026-05-04 06:16 (Cron)
+
+**Unread Emails:** 1
+
+### Summary
+1. **Total unread:** 1
+2. **From:** Google Payments <payments-noreply@google.com>
+3. **Urgent/Important:** No
+
+### Details
+
+| Subject | From | Date | Type |
+|---------|------|------|------|
+| Google Workspace: Your invoice is available for aidriven.biz | Google Payments | 2026-05-01 19:26:38 -0700 | ?? Invoice notification |
+
+**Analysis:** Routine billing notification for your Google Workspace subscription (aidriven.biz account). This is the monthly invoice for your Google Workspace Gmail account that was migrated from Zoho.
+
+**Action:** No alerts required. Informational only.
+
+## Gmail Check � 2026-05-04 09:32 (Cron)
+
+**Unread Emails:** 1
+
+### Summary
+1. **Total unread:** 1
+2. **From:** Google Payments <payments-noreply@google.com>
+3. **Urgent/Important:** No
+
+### Details
+
+| Subject | From | Date | Type |
+|---------|------|------|------|
+| Google Workspace: Your invoice is available for aidriven.biz | Google Payments | 2026-05-01 19:26:38 -0700 | ?? Invoice notification |
+
+**Analysis:** Same routine billing notification from May 1st. Monthly Google Workspace invoice for aidriven.biz. No action required � automatic charge as scheduled.
+
+**Action:** No alerts required. Informational only.
+
+## Gmail Check � 2026-05-04 10:34 (Cron)
+
+**Unread Emails:** 0
+
+### Summary
+1. **Total unread:** 0 ? Inbox clear
+2. **From:** N/A
+3. **Urgent/Important:** None
+
+**Analysis:** Inbox is clean. The previous Google Workspace invoice email has been read or archived.
+
+**Action:** No emails requiring attention. Good to go!
+
+## Gmail Check � 2026-05-04 11:36 (Cron)
+
+**Unread Emails:** 2
+
+### Summary
+1. **Total unread:** 2
+2. **From:** Jan Prins, Store Manager <manager@bonspar.co.za> (SPAR Bonnievale)
+3. **Urgent/Important:** No
+
+### Details
+
+| Subject | From | Date | Type |
+|---------|------|------|------|
+| FW: SALES SUMMARY.xls | manager@bonspar.co.za | Mon, 4 May 2026 12:54:21 +0200 | ?? SPAR data |
+| FW: Monthly Sales VS Purchases Performance tracker.xlsx | manager@bonspar.co.za | Mon, 4 May 2026 12:53:53 +0200 | ?? SPAR data |
+
+**Analysis:** Work-related emails from your SPAR Bonnievale store manager Jan Prins. Forwarding sales and performance data � likely part of daily/weekly store reporting. These are relevant to your AI Driven consulting opportunity (inventory optimization, stock analysis).
+
+**Action:** No urgent alerts. Review these when convenient as they're useful for your case study analysis.
+
+## Gmail Check � 2026-05-04 19:54 (Cron)
+
+**Unread Emails:** 2
+
+### Summary
+1. **Total unread:** 2
+2. **From:** Jan Prins, Store Manager <manager@bonspar.co.za> (SPAR Bonnievale)
+3. **Urgent/Important:** No
+
+### Details
+
+| Subject | From | Date | Type |
+|---------|------|------|------|
+| FW: SALES SUMMARY.xls | manager@bonspar.co.za | Mon, 4 May 2026 12:54:21 +0200 | ?? SPAR data |
+| FW: Monthly Sales VS Purchases Performance tracker.xlsx | manager@bonspar.co.za | Mon, 4 May 2026 12:53:53 +0200 | ?? SPAR data |
+
+**Analysis:** Work-related forwards with sales/performance trackers for SPAR Bonnievale. No urgent classification flagged.
+
+**Action:** No urgent alerts�review when convenient.
+
+## Gmail Check � 2026-05-04 20:55 (Cron)
+
+**Unread Emails:** 2
+
+### Summary
+1. **Total unread:** 2
+2. **From:** Jan Prins, Store Manager <manager@bonspar.co.za> (SPAR Bonnievale)
+3. **Urgent/Important:** No
+
+### Details
+
+| Subject | From | Date | Type |
+|---------|------|------|------|
+| FW: SALES SUMMARY.xls | manager@bonspar.co.za | Mon, 4 May 2026 12:54:21 +0200 | ?? SPAR data |
+| FW: Monthly Sales VS Purchases Performance tracker.xlsx | manager@bonspar.co.za | Mon, 4 May 2026 12:53:53 +0200 | ?? SPAR data |
+
+**Analysis:** Same SPAR forwarding of sales/performance trackers. Not flagged as urgent.
+
+**Action:** No urgent alerts�review when convenient.
+
+## Gmail Check � 2026-05-04 21:57 (Cron)
+
+**Unread Emails:** 2
+
+### Summary
+1. **Total unread:** 2
+2. **From:** Jan Prins, Store Manager <manager@bonspar.co.za> (SPAR Bonnievale)
+3. **Urgent/Important:** No
+
+**Action:** No urgent alerts�these are sales/performance data forwards.
+
+## Gmail Check � 2026-05-04 23:06 (Cron)
+
+**Unread Emails:** 2
+
+### Summary
+1. **Total unread:** 2
+2. **From:** Jan Prins, Store Manager <manager@bonspar.co.za> (SPAR Bonnievale)
+3. **Urgent/Important:** No
+
+**Action:** No urgent alerts�still sales/performance data forwards.
+
+## Gmail Check � 2026-05-05 02:14 (Cron)
+
+**Unread Emails:** 2
+
+### Summary
+1. **Total unread:** 2
+2. **From:** Jan Prins, Store Manager <manager@bonspar.co.za> (SPAR Bonnievale)
+3. **Urgent/Important:** No
+
+**Action:** No urgent alerts.
+
+## Gmail Check � 2026-05-05 03:22 (Cron)
+
+**Unread Emails:** 2
+
+### Summary
+1. **Total unread:** 2
+2. **From:** Jan Prins, Store Manager <manager@bonspar.co.za> (SPAR Bonnievale)
+3. **Urgent/Important:** No
+
+**Action:** No urgent alerts.

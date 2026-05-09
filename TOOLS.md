@@ -22,6 +22,19 @@ Things like:
 
 This applies to any HTML you need to paste into Gmail.
 
+## Food Shortcuts & Standards
+
+**Feta** = Spar South African Feta Cheese Plain (default)
+**Wrap** = Spar Large Brown Wrap
+  - Per wrap: 887 kJ | 6.6g protein | 35g carbs | 1.1g fat
+
+**Bread (Albany low-GI wholewheat)** = per 100g: 1015 kJ | 11.2g protein | 3.8g carbs | 3.4g fat
+  - Per 1 slice (45g): 457 kJ | 5.0g protein | 1.7g carbs | 1.5g fat
+
+## Nutrition Values (User-Specified)
+These override generic estimates for accuracy:
+- **Spar Large Brown Wrap:** 887 kJ | 6.6g protein | 35g carbs | 1.1g fat
+
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.

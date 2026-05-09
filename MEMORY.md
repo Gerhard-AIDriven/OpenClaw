@@ -21,8 +21,8 @@
 ## Tech Setup
 - OpenClaw on Windows, Telegram connected
 - Zalo channel removed (April 2026)
-- **Anthropic API balance:** $24.85 (2026-04-27)
-- **OpenAI API balance:** $12.07 (2026-04-27)
+- **Anthropic API balance:** $30.38 (2026-05-04)
+- **OpenAI API balance:** $5.19 (2026-05-04) ⚠️ Getting low — consider topping up
 - **Email:** gerhard@aidriven.biz now on Google Workspace Gmail (migrated from Zoho)
 - **Gmail API:** ✅ OAuth setup complete (project: AIdriven-openclaw)
   - Credentials file: `C:\Users\gstim\.openclaw\workspace\gmail\credentials.json`
@@ -125,3 +125,29 @@
 
 <!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:19:19 -->
 - **No change.** Still 1 unread email (same OpenAI notification from 07:04 check). [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:19-19]
+
+## Promoted From Short-Term Memory (2026-04-28)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:5:5 -->
+- **Unread Emails:** 1 [score=0.874 recalls=0 avg=0.620 source=memory/2026-04-22.md:5-5]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:23:23 -->
+- **No change.** Still 1 unread email (same OpenAI notification). No new messages. [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:23-23]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:27:27 -->
+- **Total Unread:** 1 (same email from earlier checks) [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:27-27]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:37:37 -->
+- **Total Unread:** 0 (inbox clear) [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:37-37]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:39:39 -->
+- All emails have been processed and read. No pending messages. [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:39-39]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:43:43 -->
+- **Total Unread:** 1 (NEW EMAIL) [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:43-43]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:45:48 -->
+- **Subject:** Deprecation notice: upcoming model shutdowns in 2026 **From:** OpenAI <noreply@email.openai.com> **Date:** Wed, 22 Apr 2026 20:57:21 UTC [score=0.872 recalls=0 avg=0.620 source=memory/2026-04-22.md:45-47]
+
+## Promoted From Short-Term Memory (2026-04-29)
+
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:7:7 -->
+- **Summary:** [score=0.884 recalls=0 avg=0.620 source=memory/2026-04-22.md:7-7]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:29:29 -->
+- **Email Details:** [score=0.874 recalls=0 avg=0.620 source=memory/2026-04-22.md:29-29]
+<!-- openclaw-memory-promotion:memory:memory/2026-04-22.md:55:55 -->
+- No new emails since the 23:05 check. [score=0.868 recalls=0 avg=0.620 source=memory/2026-04-22.md:55-55]

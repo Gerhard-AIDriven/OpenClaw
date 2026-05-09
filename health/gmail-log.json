@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-04-21T05:03:50.754Z",
-  "count": 2,
+  "timestamp": "2026-05-09T06:46:18.584Z",
+  "count": 6,
   "opportunities": [],
   "emails": [
     {
-      "id": "19daba4409d3045a",
-      "subject": "Gerhard, you added a new card to use with Google Pay",
-      "from": "Google Pay <googlepay-noreply@google.com>",
-      "date": "Mon, 20 Apr 2026 09:06:01 -0700",
-      "snippet": "Discover how to quickly and safely pay online.‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ",
+      "id": "19e0856f2052120e",
+      "subject": "Your OpenAI API account has been funded",
+      "from": "noreply@tm.openai.com",
+      "date": "Fri, 08 May 2026 16:06:14 +0000 (UTC)",
+      "snippet": "Hi AI Driven, We charged $11.50 to your credit card ending in 0550 to fund your OpenAI API credit balance. You may review your billing history at any time. You received this email because you have a",
       "classification": {
         "isOpportunity": false,
         "isHighPriority": false,
@@ -16,11 +16,59 @@
       }
     },
     {
-      "id": "19dab9b82b97fc30",
-      "subject": "Your API usage limits have increased",
-      "from": "noreply@tm.openai.com",
-      "date": "Mon, 20 Apr 2026 15:56:27 +0000 (UTC)",
-      "snippet": "Review your new rate limits in your account settings. Hi AI Driven, We&#39;re happy to share that we&#39;ve automatically moved your organization to Usage Tier 1 based on your usage history on our",
+      "id": "19e074e94f47364a",
+      "subject": "FW: BNVS - STOCK & SALES ANALYSIS",
+      "from": "<manager@bonspar.co.za>",
+      "date": "Fri, 8 May 2026 13:17:52 +0200",
+      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From: Fanie",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19df7d872ce9789c",
+      "subject": "FW: 35297 SPAR Bonnievale 35297 WC SPAR ROC NATIONAL   (AssureCloud Non Conformance Report)",
+      "from": "<manager@bonspar.co.za>",
+      "date": "Tue, 5 May 2026 13:14:41 +0200",
+      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From:",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19df7d83fe815f3e",
+      "subject": "FW: 35497T TOPS at SPAR Bonnievale 35497T WC SPAR RTTT NATIONAL   (AssureCloud Non Conformance Report)",
+      "from": "<manager@bonspar.co.za>",
+      "date": "Tue, 5 May 2026 13:14:26 +0200",
+      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From:",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19df29f7b163440e",
+      "subject": "FW: SALES SUMMARY.xls",
+      "from": "<manager@bonspar.co.za>",
+      "date": "Mon, 4 May 2026 12:54:21 +0200",
+      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From: Lea",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19df29f194adf3b7",
+      "subject": "FW: Monthly Sales VS Purchases Performance tracker.xlsx",
+      "from": "<manager@bonspar.co.za>",
+      "date": "Mon, 4 May 2026 12:53:53 +0200",
+      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From: Lea",
       "classification": {
         "isOpportunity": false,
         "isHighPriority": false,

@@ -5,6 +5,11 @@
 
 ---
 
+## Health logging standard (all channels)
+- **health/metrics.md** = BP / weight / fasting blood sugar
+- **health/nutrition.md** = meals + macros + nutrition totals
+- **health/activity.md** = walks + steps
+
 ## Today's Health Metrics (Morning)
 
 | Metric | Value | vs Yesterday | Status |
