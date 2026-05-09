@@ -313,6 +313,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | (morning) | Yogurt (75g) + Apple (70g) + Muesli (40g) + Coffee (25ml milk) | ~330 | ~50 | ~20 | ~8 | Breakfast (approx) |
 | 11:30 (actual) | Lunch (actual) | ~600 | ~64 | ~27 | ~26 | 2 slices Albany low-GI wholewheat bread + 2 rashers lean bacon + 30g cottage cheese + 0.5 avocado + 1 banana + coffee (25ml low-fat milk) |
+| 18:30 (planned) | Dinner (planned) | ~510 | ~64 | ~52 | ~6 | 150g chicken + 150g sweet potato (airfryer) + 50g beetroot + 1 banana |
 
 ### Daily Totals (so far)
 - **Calories:** ~930 / 1600
@@ -320,11 +321,23 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~47 / 101g
 - **Fat:** ~34 / 45g
 
-**Remaining budget for today (targets - consumed so far):**
+**Remaining budget after lunch (targets - consumed so far):**
 - **Calories:** ~670 kcal
 - **Carbs:** ~86 g
 - **Protein:** ~54 g
 - **Fat:** ~11 g
+
+**Projected total after planned dinner:**
+- **Calories:** ~1440 / 1600
+- **Carbs:** ~178 / 200g
+- **Protein:** ~99 / 101g
+- **Fat:** ~40 / 45g
+
+**Projected remaining after dinner:**
+- **Calories:** ~160 kcal
+- **Carbs:** ~22 g
+- **Protein:** ~2 g
+- **Fat:** ~5 g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.5 (fasting)
