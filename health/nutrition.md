@@ -4,6 +4,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 **Target Daily (trial from 2026-04-27):** 1600 cal | Carbs 200g | Protein 101g | Fat 45g
 
+**Vital Health Foods Sweet & Sour Soy sauce (your standard for “soy sauce”):** per 100ml — 461 kJ; 25g carbs; 2.1g protein; fat <0.1g.
+
 ---
 
 ## 2026-04-26 (Sunday)
