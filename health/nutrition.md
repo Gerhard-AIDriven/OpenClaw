@@ -353,12 +353,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 05:43 | Yogurt (100g) + Muesli (50g) + Blueberries (30g) + 1 banana + coffee (25ml low-fat milk) | ~369 | ~73.0 | ~13.3 | ~5.9 | Estimates (no labels provided) |
 | Lunch (planned) | Tuna (110g) + tomato (30g) + onion (25g) + greenpepper (30g) + feta (30g) + Ina Paarman honey & mustard dressing (2 tbsp) + lettuce (30g) | ~296 | ~20.0 | ~33.0 | ~11.0 | Estimated macros |
+| Dinner (planned) | Brown rice (0.5 cup cooked) + chicken (100g) + broccoli (80g) + onion (30g) + tomato (60g) + soy (1 tbsp) + apple cider vinegar (1 tsp) + honey (1 tsp) + coffee (25ml low fat milk) | ~358 | ~44.4 | ~38.3 | ~5.2 | Estimated macros |
 
-### Daily Totals (projected after planned lunch)
-- **Calories:** ~665 / 1600
-- **Carbs:** ~93.0 / 200g
-- **Protein:** ~46.3 / 101g
-- **Fat:** ~16.9 / 45g
+### Daily Totals (projected after planned dinner)
+- **Calories:** ~1023 / 1600
+- **Carbs:** ~137.4 / 200g
+- **Protein:** ~84.6 / 101g
+- **Fat:** ~22.1 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 5.8 (fasting)
