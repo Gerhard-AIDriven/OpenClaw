@@ -352,14 +352,14 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 05:43 | Yogurt (100g) + Muesli (50g) + Blueberries (30g) + 1 banana + coffee (25ml low-fat milk) | ~369 | ~73.0 | ~13.3 | ~5.9 | Estimates (no labels provided) |
-| Lunch (planned) | Tuna (110g) + tomato (30g) + onion (25g) + greenpepper (30g) + feta (30g) + Ina Paarman honey & mustard dressing (2 tbsp) + lettuce (30g) + 1 banana + almonds (20g) | ~518 | ~51.4 | ~38.6 | ~21.3 | Estimated macros (added banana + almonds) |
-| Dinner (planned) | Brown rice (0.5 cup cooked) + chicken (100g) + broccoli (80g) + onion (30g) + tomato (60g) + soy (1 tbsp) + apple cider vinegar (1 tsp) + honey (1 tsp) + coffee (25ml low fat milk) | ~358 | ~44.4 | ~38.3 | ~5.2 | Estimated macros |
+| Lunch (planned) | 1 grilled chicken thighs + roast beef (80g) + spinach (60g) + cauliflower (60g, roasted) + mixed vegetables (60g, roasted) + cheese (30g) + cream (30ml) | ~830 | ~16.0 | ~63.5 | ~54.0 | Estimated macros (lunch changed; assumed portion sizes) |
+| Dinner (planned) | 300ml soup + 3 slices low-GI wholewheat bread | ~497 | ~33.1 | ~22.0 | ~7.0 | Estimated (soup assumed similar to prior 300ml veg soup) |
 
-### Daily Totals (projected after planned dinner)
-- **Calories:** ~1245 / 1600
-- **Carbs:** ~168.8 / 200g
-- **Protein:** ~90.2 / 101g
-- **Fat:** ~32.4 / 45g
+### Daily Totals (up to and including dinner)
+- **Calories:** ~1696 / 1600
+- **Carbs:** ~122.1 / 200g
+- **Protein:** ~98.8 / 101g
+- **Fat:** ~66.9 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 5.8 (fasting)
