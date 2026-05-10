@@ -198,7 +198,7 @@ Daily log of walks, steps, and movement for insulin resistance management.
 - Completed 2 double walks during the day (extended walking sessions)
 - Total step count includes in-store movement during non-work hours
 
---- 
+---
 
 ## 2026-05-03 (Sunday)
 
@@ -215,7 +215,7 @@ Daily log of walks, steps, and movement for insulin resistance management.
 - **Total walking time:** 46 minutes
 
 ### Notes
-— 
+-
 
 ---
 
@@ -239,7 +239,7 @@ Daily log of walks, steps, and movement for insulin resistance management.
 - Strong day: Hit all 4 target walks + exceeded daily step goal by 5,305 steps
 - In-store movement during work shift contributed significantly to total steps
 
---- 
+---
 
 ## 2026-05-09 (Saturday)
 
@@ -262,7 +262,25 @@ Daily log of walks, steps, and movement for insulin resistance management.
 - Total steps for the day: 17181 (includes non-walk movement).
 
 --- 
+ 
+## 2026-05-10 (Sunday)
 
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|-------|-----------------|-------|-------|
+| Pre-breakfast | 15 | 1706 | Pre-breakfast walk |
+
+### Daily Totals (logged so far)
+- **Total walks:** 1 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 1706 / 10000 (goal)
+- **Total walking time:** 15 minutes
+
+### Notes
+- Pre-breakfast walk done.
+
+--- 
+ 
 ## Template for New Days
 
 ```markdown
@@ -275,10 +293,10 @@ Daily log of walks, steps, and movement for insulin resistance management.
 |      |    |    |              |
 
 ### Daily Totals
-- **Total walks:** — / 4 (target: 4 with pre-breakfast)
-- **Total steps:** — / 10000 (goal)
-- **Total walking time:** — minutes
+- **Total walks:** - / 4 (target: 4 with pre-breakfast)
+- **Total steps:** - / 10000 (goal)
+- **Total walking time:** - minutes
 
 ### Notes
-— 
+-
 ```
