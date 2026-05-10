@@ -1,8 +1,20 @@
 {
-  "timestamp": "2026-05-09T11:07:50.911Z",
-  "count": 6,
+  "timestamp": "2026-05-10T12:00:49.542Z",
+  "count": 7,
   "opportunities": [],
   "emails": [
+    {
+      "id": "19e0c9c14a175eb1",
+      "subject": "[GitHub] A first-party GitHub OAuth application has been added to your account",
+      "from": "GitHub <noreply@github.com>",
+      "date": "Sat, 09 May 2026 05:00:15 -0700",
+      "snippet": "Hey Gerhard-AIDriven! A first-party GitHub OAuth application (Git Credential Manager) with gist, repo, and workflow scopes was recently authorized to access your account. Visit https://github.com/",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
     {
       "id": "19e0856f2052120e",
       "subject": "Your OpenAI API account has been funded",

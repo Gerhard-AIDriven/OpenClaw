@@ -353,13 +353,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 05:43 | Yogurt (100g) + Muesli (50g) + Blueberries (30g) + 1 banana + coffee (25ml low-fat milk) | ~369 | ~73.0 | ~13.3 | ~5.9 | Estimates (no labels provided) |
 | Lunch (planned) | 1 grilled chicken thighs + roast beef (80g) + spinach (60g) + cauliflower (60g, roasted) + mixed vegetables (60g, roasted) + cheese (30g) + cream (30ml) | ~830 | ~16.0 | ~63.5 | ~54.0 | Estimated macros (lunch changed; assumed portion sizes) |
-| Dinner (planned) | 300ml soup + 3 slices low-GI wholewheat bread | ~497 | ~33.1 | ~22.0 | ~7.0 | Estimated (soup assumed similar to prior 300ml veg soup) |
+| Dinner (planned) | 300ml clear veg/stock soup (no cream/cheese, skim fat) + 3 slices low-GI wholewheat bread (plain) | ~470 | ~33.1 | ~20.0 | ~4.0 | Dinner updated per plan (lower fat) |
 
 ### Daily Totals (up to and including dinner)
-- **Calories:** ~1696 / 1600
+- **Calories:** ~1669 / 1600
 - **Carbs:** ~122.1 / 200g
-- **Protein:** ~98.8 / 101g
-- **Fat:** ~66.9 / 45g
+- **Protein:** ~96.8 / 101g
+- **Fat:** ~63.9 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 5.8 (fasting)
