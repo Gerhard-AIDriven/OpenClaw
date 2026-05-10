@@ -43,6 +43,7 @@
 
 |2026-05-08|128/74|108.1|6.2 (fasting)|✅ Logged from user.|
 |2026-05-09|127/76|108.9|6.5 (fasting)|✅ Logged from user. Nothing before reading; pre-breakfast walk: 15 min, 1745 steps. After breakfast walk: 19 min (07:15), 1670 steps.|
+|2026-05-10|120/78|108.1|5.8 (fasting)|✅ Logged from user.| 
 
 
 ---
