@@ -345,6 +345,24 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Fasting blood sugar:** 6.5 (fasting)
 - **General notes:** Dinner logged as per plan at 20:15.
 
+## 2026-05-10 (Sunday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:43 | Yogurt (100g) + Muesli (50g) + Blueberries (30g) + 1 banana + coffee (25ml low-fat milk) | ~369 | ~73.0 | ~13.3 | ~5.9 | Estimates (no labels provided) |
+
+### Daily Totals (so far)
+- **Calories:** ~369 / 1600
+- **Carbs:** ~73.0 / 200g
+- **Protein:** ~13.3 / 101g
+- **Fat:** ~5.9 / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 5.8 (fasting)
+- **General notes:** Pre-breakfast walk done: 15 min, 1706 steps.
+
 ## Template for New Days
 
 ```markdown
