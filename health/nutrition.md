@@ -353,7 +353,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 05:43 | Yogurt (100g) + Muesli (50g) + Blueberries (30g) + 1 banana + coffee (25ml low-fat milk) | ~369 | ~73.0 | ~13.3 | ~5.9 | Estimates (no labels provided) |
 | Lunch (planned) | 1 grilled chicken thighs + roast beef (80g) + spinach (60g) + cauliflower (60g, roasted) + mixed vegetables (60g, roasted) + cheese (30g) + cream (30ml) | ~830 | ~16.0 | ~63.5 | ~54.0 | Estimated macros (lunch changed; assumed portion sizes) |
-| Dinner (planned) | 300ml clear veg/stock soup (no cream/cheese, skim fat) + 3 slices low-GI wholewheat bread (plain) | ~470 | ~33.1 | ~20.0 | ~4.0 | Dinner updated per plan (lower fat) |
+| Dinner (actual 19:00) | 300ml clear veg/stock soup (no cream/cheese, skim fat) + 3 slices low-GI wholewheat bread (plain) | ~470 | ~33.1 | ~20.0 | ~4.0 | Dinner completed at 19:00 |
 
 ### Daily Totals (up to and including dinner)
 - **Calories:** ~1669 / 1600
@@ -365,6 +365,26 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Fasting blood sugar:** 5.8 (fasting)
 - **General notes:** Pre-breakfast walk done: 15 min, 1706 steps.
 
+## 2026-05-11 (Monday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:33 | 1 slice toast + 1 egg + 1 tsp Nola low-oil mayonnaise + 1 tbsp tomato sauce + coffee (25ml low-fat milk) | ~233 | ~18.9 | ~12.2 | ~9.5 | Breakfast (actual) |
+| 12:00 (Lunch actual) | Tuna (100g) + lettuce (25g) + red onion (25g) + green pepper (25g) + feta (25g) + 2 tbsp Ina Paarman honey & mustard dressing + banana (1 medium) + 2 slices bread + coffee (25ml low-fat milk) | ~719 | ~67.4 | ~44.5 | ~15.2 | Lunch (actual) |
+| 16:00 | Banana (1 medium) | ~105 | ~27.0 | ~1.3 | ~0.3 | Snack |
+| 17:30 (Dinner actual) | Chicken (153g) + 2 slices bread + tomato (50g) + onion (30g) + 1 tsp crushed garlic + 1 tbsp soya + 1 tsp honey + coffee (25ml low-fat milk) | ~551 | ~20.9 | ~59.4 | ~9.1 | Dinner (actual) |
+
+### Daily Totals (so far)
+- **Calories:** ~1608 / 1600
+- **Carbs:** ~134.2 / 200g
+- **Protein:** ~117.4 / 101g ✅
+- **Fat:** ~34.1 / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 5.9 (fasting)
+- **General notes:** Breakfast + lunch logged; dinner logged at 17:30.
 ## Template for New Days
 
 ```markdown

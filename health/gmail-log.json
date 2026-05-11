@@ -1,8 +1,20 @@
 {
-  "timestamp": "2026-05-10T12:00:49.542Z",
-  "count": 7,
+  "timestamp": "2026-05-11T12:02:08.888Z",
+  "count": 8,
   "opportunities": [],
   "emails": [
+    {
+      "id": "19e11c4fc9b43594",
+      "subject": "Butchery plan data",
+      "from": "<manager@bonspar.co.za>",
+      "date": "Sun, 10 May 2026 14:03:28 +0200",
+      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
     {
       "id": "19e0c9c14a175eb1",
       "subject": "[GitHub] A first-party GitHub OAuth application has been added to your account",
