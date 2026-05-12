@@ -385,6 +385,35 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 5.9 (fasting)
 - **General notes:** Breakfast + lunch logged; dinner logged at 17:30.
+
+## 2026-05-12 (Tuesday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:33 | Breakfast (actual) | ~320 | ~43.0 | ~13.5 | ~10.0 | 1 slice toast + 1 egg + 1 tsp Nola light mayo + 1 tsp tomato sauce + 1 banana |
+| 11:51 (Lunch) | Lunch (actual) | ~574 | ~47.3 | ~46.1 | ~17.6 | 85g chicken + 2 boiled eggs + 50g tomato + 25g onion + 1 tbsp tomato sauce + 1 tsp soy + 1 tsp Nando’s lemon & herb + 1 wrap + lemon/herb |
+| 11:51 (Coffee) | Coffee (with 25ml low-fat milk) | ~12 | ~1.0 | ~0.6 | ~0.3 | alongside lunch |
+
+| 19:00 (Dinner actual) | Dinner (actual) | ~440 | ~25.3 | ~41.2 | ~15.3 | 150g sirloin steak (fat removed) + 100g sweet potato (air-fried) + 100g tomato + 1 tsp soya |
+
+### Daily Totals (planned)
+- **Calories:** ~1346 / 1600
+- **Carbs:** ~116.6 / 200g
+- **Protein:** ~101.4 / 101g
+- **Fat:** ~43.2 / 45g
+
+### Remaining budget after dinner (forecast)
+- **Calories:** ~254 kcal
+- **Carbs:** ~83.4 g
+- **Protein:** ~0 g (slightly over)
+- **Fat:** ~1.8 g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.1 (fasting)
+- **General notes:** After-breakfast walk: 06:50 (20 min, 1,579 steps).
+
 ## Template for New Days
 
 ```markdown
