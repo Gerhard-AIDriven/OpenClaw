@@ -420,7 +420,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
-| 04:40 | 60g dry jungle oats (cooked in water) + 100g yogurt + 1 banana + coffee (25ml low-fat milk) | ~411 | ~72.6 | ~15.8 | ~8.2 | estimates (yogurt type + banana size not specified) |
+| 04:40 | 60g dry jungle oats (cooked in water) + 100g yogurt + 1 banana + coffee (25ml low-fat milk) | ~411 | ~72.6 | ~15.8 | ~8.2 | yogurt confirmed: Clover Authentikos Greek-style (per 100g: 383kJ, P5.1g, C6g, F5g); oats/banana size and milk macros estimated |
 
 ### Daily Totals (so far)
 - **Calories:** ~411 / 1600
