@@ -28,7 +28,7 @@
   - Credentials file: `C:\Users\gstim\.openclaw\workspace\gmail\credentials.json`
   - Token file: `C:\Users\gstim\.openclaw\workspace\gmail\token.json` ✅
   - Monitor script: `gmail-monitor.js` (Node.js version)
-  - Cron job: Checks unread emails every 30 minutes ✅
+  - Gmail inbox auto-check cron: **paused per your request (2026-05-13)**
   - Job ID: `0289c38f-d1b8-4ff0-ba2f-99f5ebddd8e4`
 
 ## LinkedIn
