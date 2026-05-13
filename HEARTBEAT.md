@@ -13,13 +13,13 @@
 
 ### Anthropic Balance Reminder (once per day, morning)
 - Remind Gerhard to check his Anthropic balance at console.anthropic.com → Billing
-- Last known balance: $24.48 (2026-05-09)
+- Last known balance: $24.13 (2026-05-13)
 - If Gerhard reports balance is $2 or below → alert him to top up immediately
 - Update the "Last known balance" above when Gerhard reports it
 
 ### OpenAI Balance Reminder (once per day, morning)
 - Remind Gerhard to check his OpenAI balance daily (console.openai.com → Billing)
-- Last known balance: $10.99 (2026-05-09)
+- Last known balance: $8.95 (2026-05-13)
 - Update the "Last known balance" above when Gerhard reports it
 
 ### Tomorrow (2026-04-09) — One-time reminders
