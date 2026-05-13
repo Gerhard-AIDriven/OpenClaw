@@ -417,17 +417,20 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 ## 2026-05-13 (Wednesday)
 
 ### Meals
-- No food yet (fasting).
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:40 | 60g dry jungle oats (cooked in water) + 100g yogurt + 1 banana + coffee (25ml low-fat milk) | ~411 | ~72.6 | ~15.8 | ~8.2 | estimates (yogurt type + banana size not specified) |
 
 ### Daily Totals (so far)
-- **Calories:** ~0 / 1600
-- **Carbs:** ~0 / 200g
-- **Protein:** ~0 / 101g
-- **Fat:** ~0 / 45g
+- **Calories:** ~411 / 1600
+- **Carbs:** ~72.6 / 200g
+- **Protein:** ~15.8 / 101g
+- **Fat:** ~8.2 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.1 (fasting)
-- **General notes:** Haven’t eaten yet—logging will start with the first meal.
+- **General notes:** Breakfast logged.
 
 ## Template for New Days
 
