@@ -45,6 +45,7 @@
 |2026-05-09|127/76|108.9|6.5 (fasting)|✅ Logged from user. Nothing before reading; dinner 21:00 → reading 04:30 (~7.5h fasting). Pre-breakfast walk: 15 min, 1745 steps. After breakfast walk: 19 min (07:15), 1670 steps.|
 |2026-05-10|120/78|108.1|5.8 (fasting)|✅ Logged from user. Last meal 20:00 → reading 05:30 (~9.5h fasting).|
 |2026-05-11|125/79|108.2|5.9 (fasting)|✅ Logged from user. Last meal 19:30 → reading 03:36 (~8.1h fasting).|
+|2026-05-13|117/68|108.2|6.1 (fasting)|✅ Logged from user.| 
 
 
 ---

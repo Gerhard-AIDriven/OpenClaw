@@ -301,6 +301,24 @@ Daily log of walks, steps, and movement for insulin resistance management.
 ### Notes
 - After-breakfast + after-lunch walks done.
 
+## 2026-05-12 (Tuesday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| After breakfast (06:50) | 20 | 1579 | After breakfast walk |
+
+### Daily Totals
+- **Total walks:** 1 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 11027 / 10000 (goal) ✅
+- **Total walking time:** 20 minutes (logged walks)
+
+### Notes
+- After-breakfast walk completed at 06:50 (20 min, 1,579 steps).
+- **No after-dinner walk** — resting knee (old sport injury).
+- **Total daily steps: 11,027** (includes non-walk movement throughout day).
+
 ## Template for New Days
 
 ```markdown

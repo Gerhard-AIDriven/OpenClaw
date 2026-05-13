@@ -414,6 +414,21 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Fasting blood sugar:** 6.1 (fasting)
 - **General notes:** After-breakfast walk: 06:50 (20 min, 1,579 steps).
 
+## 2026-05-13 (Wednesday)
+
+### Meals
+- No food yet (fasting).
+
+### Daily Totals (so far)
+- **Calories:** ~0 / 1600
+- **Carbs:** ~0 / 200g
+- **Protein:** ~0 / 101g
+- **Fat:** ~0 / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.1 (fasting)
+- **General notes:** Haven’t eaten yet—logging will start with the first meal.
+
 ## Template for New Days
 
 ```markdown
