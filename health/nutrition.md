@@ -421,16 +421,18 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 04:40 | 60g dry jungle oats (cooked in water) + 100g yogurt + 1 banana + coffee (25ml low-fat milk) | ~411 | ~72.6 | ~15.8 | ~8.2 | yogurt confirmed: Clover Authentikos Greek-style (per 100g: 383kJ, P5.1g, C6g, F5g); oats/banana size and milk macros estimated |
+| 13:55 | 130g sirloin steak + 2 slices low-GI wholewheat bread + 1 tsp mustard + 1 tbs butter (Butro) + coffee + 25ml low-fat milk | ~603 | ~5.3 | ~46.5 | ~29.7 | macros estimated |
+| 18:00 | 40g onion + 50g tomato + 65g potato + 65g KOO pineapple rings (light syrup) + 15g Rajah medium curry + 1 tsp turmeric + 0.5 tsp ginger + 1 tbs apple cider vinegar + 160g lean beef mince + 1 slice bread | ~548 | ~36.6 | ~50.5 | ~13.7 | macros estimated |
 
 ### Daily Totals (so far)
-- **Calories:** ~411 / 1600
-- **Carbs:** ~72.6 / 200g
-- **Protein:** ~15.8 / 101g
-- **Fat:** ~8.2 / 45g
+- **Calories:** ~1562 / 1600
+- **Carbs:** ~114.5 / 200g
+- **Protein:** ~112.8 / 101g
+- **Fat:** ~51.6 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.1 (fasting)
-- **General notes:** Breakfast logged.
+- **General notes:** Breakfast + lunch + dinner logged.
 
 ## Template for New Days
 
