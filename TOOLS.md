@@ -34,6 +34,7 @@ This applies to any HTML you need to paste into Gmail.
 ## Nutrition Values (User-Specified)
 These override generic estimates for accuracy:
 - **Spar Large Brown Wrap:** 887 kJ | 6.6g protein | 35g carbs | 1.1g fat
+- **Alpen Muesli:** per 100g — 348 kcal | 12.3g protein | 58g carbs | 5.0g fat
 
 ---
 

@@ -46,7 +46,7 @@
 |2026-05-10|120/78|108.1|5.8 (fasting)|✅ Logged from user. Last meal 20:00 → reading 05:30 (~9.5h fasting).|
 |2026-05-11|125/79|108.2|5.9 (fasting)|✅ Logged from user. Last meal 19:30 → reading 03:36 (~8.1h fasting).|
 |2026-05-13|117/68|108.2|6.1 (fasting)|✅ Logged from user. Last meal 19.00 → reading 03:55 (~8.5h fasting).| 
-
+|2026-05-14|120/69|108.1|6.8 (fasting)|⚠️ Sugar jumped +0.7 (6.1→6.8). Weight stable (108.2→108.1). BP up (117/68 → 120/69). **ROOT CAUSE: Missed pre-breakfast walk yesterday + carbs only 114.5g (52% of 219g target).** Pattern confirmed: skipping morning walk = glucose spike. ACTION: Do pre-breakfast walk today + hit 219g carbs.|
 
 ---
 

@@ -434,6 +434,25 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Fasting blood sugar:** 6.1 (fasting)
 - **General notes:** Breakfast + lunch + dinner logged.
 
+## 2026-05-14 (Thursday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:44 | 70g yogurt + 75g Alpen muesli + 1 banana + 65ml low-fat milk (40ml with muesli, 25ml in coffee) | ~437 | ~77.0 | ~19.8 | ~5.4 | Estimates (yogurt/milk macros assumed) |
+| 13:30 | 30g onion + 30g tomato + 45g potato + 30g KOO pineapple rings (light syrup) + 10g Rajah medium curry + 1 tsp turmeric + ginger + 1 tbsp apple cider vinegar + 130g lean beef mince + 2 slices Albany low-GI wholewheat bread (45g/slice) | ~643 | ~25.6 | ~48.6 | ~24.4 | Macros estimated; bread set to Albany low-GI wholewheat (2 slices) |
+
+### Daily Totals (so far)
+- **Calories:** ~1080 / 1600
+- **Carbs:** ~102.6 / 200g
+- **Protein:** ~68.4 / 101g
+- **Fat:** ~29.8 / 45g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** -
+- **General notes:** Pre-breakfast walk logged: 15 min, 1,768 steps (04:43). Milk split: 40ml with muesli + 25ml in coffee (65ml total). After-breakfast walk logged: 15 min, 1,768 steps (05:20).
+
 ## Template for New Days
 
 ```markdown
