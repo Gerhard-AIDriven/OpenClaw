@@ -2,7 +2,7 @@
 
 Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
-**Target Daily (trial from 2026-04-27):** 1600 cal | Carbs 200g | Protein 101g | Fat 45g
+**Target Daily (updated 2026-05-14):** 1600 cal | Carbs 219g | Protein 120g | Fat 65g
 
 **Vital Health Foods Sweet & Sour Soy sauce (your standard for “soy sauce”):** per 100ml — 461 kJ; 25g carbs; 2.1g protein; fat <0.1g.
 
@@ -442,16 +442,39 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 04:44 | 70g yogurt + 75g Alpen muesli + 1 banana + 65ml low-fat milk (40ml with muesli, 25ml in coffee) | ~437 | ~77.0 | ~19.8 | ~5.4 | Estimates (yogurt/milk macros assumed) |
 | 13:30 | 30g onion + 30g tomato + 45g potato + 30g KOO pineapple rings (light syrup) + 10g Rajah medium curry + 1 tsp turmeric + ginger + 1 tbsp apple cider vinegar + 130g lean beef mince + 2 slices Albany low-GI wholewheat bread (45g/slice) | ~643 | ~25.6 | ~48.6 | ~24.4 | Macros estimated; bread set to Albany low-GI wholewheat (2 slices) |
+| 19:00 | 120g chicken + 130g sweet potato + 1 tbs butro + 110g tomato + 35g red onion + 1 tsp honey + 1 wrap + 1 tsp soy | ~684 | ~75.6 | ~47.4 | ~17.1 | Macros estimated; wrap uses saved macros |
 
 ### Daily Totals (so far)
-- **Calories:** ~1080 / 1600
-- **Carbs:** ~102.6 / 200g
-- **Protein:** ~68.4 / 101g
-- **Fat:** ~29.8 / 45g
+- **Calories:** ~1764 / 1600
+- **Carbs:** ~178.1 / 200g
+- **Protein:** ~115.8 / 101g
+- **Fat:** ~46.9 / 45g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** -
-- **General notes:** Pre-breakfast walk logged: 15 min, 1,768 steps (04:43). Milk split: 40ml with muesli + 25ml in coffee (65ml total). After-breakfast walk logged: 15 min, 1,768 steps (05:20).
+- **General notes:** Pre-breakfast walk logged: 15 min, 1,768 steps (04:43). Milk split: 40ml with muesli + 25ml in coffee (65ml total). After-breakfast walk logged: 15 min, 1,768 steps (05:20). Dinner logged at 19:00 (7pm).
+
+## 2026-05-15 (Friday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:49 | Jungle oats (30g uncooked, cooked in water) + Greak yogurt (90g) + 1 banana + coffee w/ 25ml low-fat milk | ~320 | ~53.4 | ~9.8 | ~7.0 | Macros estimated (yogurt brand label not provided; oats/banana assumed standard sizes). |
+| 12:30 | Lunch (actual): 2 slices Albany wholewheat bread + 79g Spar low-fat plain cottage cheese + 2 eggs fried (no oil) + 1 tbsp tomato sauce + 1 tsp Worcestershire sauce + 1 banana + coffee (25ml low-fat milk) | ~525 | ~72 | ~32.8 | ~15.1 | Macros updated: added 1 banana (carb/fat/protein based on your prior banana estimates). |
+
+| 15:30 | Afternoon snack (actual): 1 Spar honey & almond granola bar | ~140 | ~20 | ~4 | ~6 | Estimated (label not provided). |
+| 19:30 | Dinner: 120g chicken + 1 cup mixed salad (tomato, onion, lettuce, green pepper) + 1 tbsp Nola light mayonnaise | ~310 | ~11 | ~40 | ~10 | Estimated portions (salad + mayo assumed). |
+
+### Daily Totals (so far)
+- **Calories:** ~1295 / 1600
+- **Carbs:** ~156.4 / 219g
+- **Protein:** ~86.6 / 120g
+- **Fat:** ~38.2 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.4 (logged)
+- **General notes:** Pre-breakfast walk: 15 min, 1668 steps.
 
 ## Template for New Days
 
@@ -466,9 +489,9 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 ### Daily Totals
 - **Calories:** - / 1600
-- **Carbs:** - / 200g
-- **Protein:** - / 101g
-- **Fat:** - / 45g
+- **Carbs:** - / 219g
+- **Protein:** - / 120g
+- **Fat:** - / 65g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** -

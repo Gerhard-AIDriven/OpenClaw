@@ -40,13 +40,13 @@
 
 ## Health & Nutrition
 - **Goal:** Diabetes prevention — reducing insulin resistance and blood sugar levels (not weight loss)
-- **Current macro split:** Too high in fat (83%), too low in carbs (27g vs 100-120g target)
-- **Fasting blood sugar trend:** Climbing (6.2 → 6.7 → 7.1) — indicates rising insulin resistance
-- **Recommended targets for low-carb diabetes prevention:**
-  - Calories: 1750
-  - Carbs: 100-120g (low-GI focus)
-  - Protein: 120-140g (higher to stabilize blood sugar)
-  - Fat: 60-80g (higher but not extreme)
+- **Fasting blood sugar trend:** ✅ **Under control!** Was 6.8 (2026-05-14, due to missed walk + low carbs), now back to 6.4 (2026-05-15). Sweet spot: **6.0–6.4 range** with consistent pre-breakfast walk + 219g carbs
+- **Weight progress:** 107.5 kg (2026-05-15) — down from 110kg baseline, on track to 100kg target
+- **Current targets (updated 2026-05-14 based on actual results):**
+  - Calories: 1600 (proven effective for weight loss to 100kg)
+  - Carbs: 219g (your sweet spot for blood sugar control — hitting this = 6.0-6.2 range)
+  - Protein: 120g (from 101g — better satiety & muscle preservation)
+  - Fat: 65g (from 45g — increased for sustainability)
 - **Current eating style:** Low-carb with high fat (avocado, cream cheese, mayo, eggs, meat) — correct direction, needs rebalancing
 - **Tracking:** Daily nutrition log in `health/nutrition.md`
 

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-04T01:15:22.116Z",
+  "updatedAt": "2026-05-14T17:37:50.591Z",
   "entries": {
     "memory:memory/.dreams/session-corpus/2026-04-07.txt:1:1": {
       "key": "memory:memory/.dreams/session-corpus/2026-04-07.txt:1:1",
@@ -112305,6 +112305,37 @@
         "today's",
         "metrics",
         "logged"
+      ]
+    },
+    "memory:memory/2026-04-14.md:97:122": {
+      "key": "memory:memory/2026-04-14.md:97:122",
+      "path": "memory/2026-04-14.md",
+      "startLine": 97,
+      "endLine": 122,
+      "source": "memory",
+      "snippet": "- status: staged - Candidate: Assistant: Good evening Gerhard! 🌅 Time for your daily health check-in. Can you share today's readings? - 🩺 **Blood pressure** - ⚖️ **Weight** (kg) - 🩸 **Blood sugar** (mmol/L) - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:29-29 - recalls: 0 - status: staged - Candidate: User: Sender (untrusted metadata): ```json { \"label\": \"openclaw-control-ui\", \"id\": \"openclaw-control-ui\" } ``` [Mon 2026-04-13 19:44 GMT+2] Hi Seb - confidence: 0.58 - evidence: memory/.dreams/session-corpus/2026-04-13.txt:30-30 - recalls: 0 - status: staged - Candidate: Assistant: Hey Gerhard! 👋 How's the move going? You're settling into SPAR",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5216167525720341,
+      "maxScore": 0.5216167525720341,
+      "firstRecalledAt": "2026-05-14T17:37:50.591Z",
+      "lastRecalledAt": "2026-05-14T17:37:50.591Z",
+      "queryHashes": [
+        "9d8604f64094"
+      ],
+      "recallDays": [
+        "2026-05-14"
+      ],
+      "conceptTags": [
+        "check-in",
+        "mmol/l",
+        "0.58",
+        "29-29",
+        "openclaw-control-ui",
+        "30-30",
+        "status",
+        "staged"
       ]
     }
   }
