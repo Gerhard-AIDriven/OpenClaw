@@ -47,7 +47,12 @@
 |2026-05-11|125/79|108.2|5.9 (fasting)|✅ Logged from user. Last meal 19:30 → reading 03:36 (~8.1h fasting).|
 |2026-05-13|117/68|108.2|6.1 (fasting)|✅ Logged from user. Last meal 19.00 → reading 03:55 (~8.5h fasting).| 
 |2026-05-14|120/69|108.1|6.8 (fasting)|⚠️ Sugar jumped +0.7 (6.1→6.8). Weight stable (108.2→108.1). BP up (117/68 → 120/69). **ROOT CAUSE: Missed pre-breakfast walk yesterday + carbs only 114.5g (52% of 219g target).** Pattern confirmed: skipping morning walk = glucose spike. ACTION: Do pre-breakfast walk today + hit 219g carbs.|
-|2026-05-15|120/70|107.5|6.4 (fasting)|✅✅✅ **EXCELLENT RECOVERY!** Sugar down 0.4 (6.8→6.4), back in ideal range. Weight down 0.6kg (108.1→107.5, closer to 100kg target). BP solid (120/70). **This confirms the formula is working: consistent pre-breakfast walk + hitting carb targets = glucose control + weight loss.** Keep it up!
+|2026-05-15|120/70|107.5|6.4 (fasting)|✅✅✅ **EXCELLENT RECOVERY!** Sugar down 0.4 (6.8→6.4), back in ideal range. Weight down 0.6kg (108.1→107.5, closer to 100kg target). BP solid (120/70). **This confirms the formula is working: consistent pre-breakfast walk + hitting carb targets = glucose control + weight loss.** Keep it up!|
+|2026-05-16|121/79|107.7|6.9 (fasting)|Moving day (Cape Town → Bonnievale). Walk routine disrupted today; meals harder—did my best. Routine returns Monday.|
+|2026-05-17|132/75|107.2|5.5 (fasting)|✅ Great reading this morning—glucose down to 5.5 and weight trending lower. Keep routine and stay consistent with carbs + walks.|
+|2026-05-18|125/72|106.4|5.8 (fasting)|✅ Logged today: BP 125/72, sugar 5.8. Keep pre-breakfast walk + carb target.|
+|2026-05-19|125/78|106.1|6.1 (fasting)|✅ Logged: BP 125/78, weight 106.1kg, sugar 6.1.|
+|2026-05-20|127/74|105.5|5.8 (fasting)|✅ Great reading: sugar down 0.3 (6.1→5.8) and weight down 0.6kg. BP solid (127/74). Keep pre-breakfast walk + carb target.|
 
 ---
 

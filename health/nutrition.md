@@ -4,7 +4,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 **Target Daily (updated 2026-05-14):** 1600 cal | Carbs 219g | Protein 120g | Fat 65g
 
-**Vital Health Foods Sweet & Sour Soy sauce (your standard for “soy sauce”):** per 100ml — 461 kJ; 25g carbs; 2.1g protein; fat <0.1g.
+**Vital Health Foods Sweet & Sour Soy sauce (your standard for "soy sauce"):** per 100ml - 461 kJ; 25g carbs; 2.1g protein; fat <0.1g.
 
 ---
 
@@ -393,7 +393,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
 | 04:33 | Breakfast (actual) | ~320 | ~43.0 | ~13.5 | ~10.0 | 1 slice toast + 1 egg + 1 tsp Nola light mayo + 1 tsp tomato sauce + 1 banana |
-| 11:51 (Lunch) | Lunch (actual) | ~574 | ~47.3 | ~46.1 | ~17.6 | 85g chicken + 2 boiled eggs + 50g tomato + 25g onion + 1 tbsp tomato sauce + 1 tsp soy + 1 tsp Nando’s lemon & herb + 1 wrap + lemon/herb |
+| 11:51 (Lunch) | Lunch (actual) | ~574 | ~47.3 | ~46.1 | ~17.6 | 85g chicken + 2 boiled eggs + 50g tomato + 25g onion + 1 tbsp tomato sauce + 1 tsp soy + 1 tsp Nando's lemon & herb + 1 wrap + lemon/herb |
 | 11:51 (Coffee) | Coffee (with 25ml low-fat milk) | ~12 | ~1.0 | ~0.6 | ~0.3 | alongside lunch |
 
 | 19:00 (Dinner actual) | Dinner (actual) | ~440 | ~25.3 | ~41.2 | ~15.3 | 150g sirloin steak (fat removed) + 100g sweet potato (air-fried) + 100g tomato + 1 tsp soya |
@@ -465,16 +465,115 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 | 15:30 | Afternoon snack (actual): 1 Spar honey & almond granola bar | ~140 | ~20 | ~4 | ~6 | Estimated (label not provided). |
 | 19:30 | Dinner: 120g chicken + 1 cup mixed salad (tomato, onion, lettuce, green pepper) + 1 tbsp Nola light mayonnaise | ~310 | ~11 | ~40 | ~10 | Estimated portions (salad + mayo assumed). |
+| 20:01 | Extra after dinner: 1 banana | ~105 | ~27 | ~1.3 | ~0.3 | Medium banana estimate. |
 
 ### Daily Totals (so far)
-- **Calories:** ~1295 / 1600
-- **Carbs:** ~156.4 / 219g
-- **Protein:** ~86.6 / 120g
-- **Fat:** ~38.2 / 65g
+- **Calories:** ~1400 / 1600
+- **Carbs:** ~183.4 / 219g
+- **Protein:** ~87.9 / 120g
+- **Fat:** ~38.5 / 65g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.4 (logged)
-- **General notes:** Pre-breakfast walk: 15 min, 1668 steps.
+- **General notes:** Pre-breakfast walk: 15 min, 1668 steps. **Total steps:** 13,756.
+
+## 2026-05-16 (Saturday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 08:59 | 150g Lancewood yogurt + 1 banana + coffee (25ml low-fat milk) | ~162 | ~31.2 | ~10.0 | ~1.1 | Moving day (walks difficult); macros estimated. |
+| 13:03 | 1 small apple | ~95 | ~25.0 | ~0.3 | ~0.2 | Extra snack (moving day); estimated. |
+| 13:50 | Lunch: 150g chicken + 1 tbsp Butro + 2 tbsp Nola light mayonnaise + 4 slices wholewheat bread | ~800 | ~70.0 | ~66.5 | ~26.4 | Estimated (moving day; exact labels unknown). |
+| 20:00 | Dinner: 120g chicken | ~200 | ~0 | ~37.0 | ~4.0 | Dinner (last night); estimated (no sauce/oil noted). |
+
+### Daily Totals (so far)
+- **Calories:** ~1257 / 1600
+- **Carbs:** ~126.2 / 219g
+- **Protein:** ~113.8 / 120g
+- **Fat:** ~31.7 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.9 (logged)
+- **General notes:** Moving day (Cape Town → Bonnievale). Walk routine disrupted; will resume Monday. Dinner logged: 20:00 (120g chicken).
+
+## 2026-05-17 (Sunday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 09:05 | Lancewood yogurt (150g) + 1 banana + 2 cups coffee (25ml low-fat milk each, 50ml total) | ~211 | ~30.6 | ~10.8 | ~0.8 | Breakfast (actual) |
+
+### Daily Totals (so far)
+- **Calories:** ~211 / 1600
+- **Carbs:** ~30.6 / 219g
+- **Protein:** ~10.8 / 120g
+- **Fat:** ~0.8 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 5.5 (logged 08:44)
+- **General notes:** -
+
+## 2026-05-18 (Monday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 09:21 | 3 rashers bacon + 1 slice low-GI wholewheat bread + 2 eggs + coffee (1 cup with 25ml low-fat milk) | ~430 | ~5.2 | ~28.8 | ~22.4 | Macros estimated for bacon/eggs & 25ml milk (label not provided). |
+| 16:25 | 100g tuna + 30g tomato + 30g red onion + 2 tbsp Nola light mayonnaise + 2 slices bread + 1 banana + coffee (25ml low-fat milk) | ~580 | ~38.0 | ~41.5 | ~10.6 | Macros estimated (incl. 25ml low-fat milk). |
+| 21:43 | 150g hake in batter + 100g potato chips (deep fried) | ~966 | ~88.0 | ~37.0 | ~54.0 | Estimates (battered fish + deep-fried chips are typically higher fat & higher-GI). |
+
+### Daily Totals (so far)
+- **Calories:** ~1976 / 1600 ⚠️
+- **Carbs:** ~131.2 / 219g ✅
+- **Protein:** ~107.3 / 120g ✅
+- **Fat:** ~87.0 / 65g ⚠️
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 5.8
+- **General notes:** Breakfast + lunch logged. Dinner added (battered hake + deep-fried chips - higher fat & higher-GI). If you can, take a short walk tonight and we'll watch tomorrow's fasting reading. |
+
+## 2026-05-19 (Tuesday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 11:48 | French toast: 2 slices bread + 2 eggs + 2 rashers bacon + 1 banana + coffee (1 cup with 25ml low-fat milk) | ~565 | ~32.5 | ~30.5 | ~20.5 | Estimated (label not provided). |
+| 14:13 | Lunch: 2 slices bread + 2 eggs + 1 tbsp Nola light + 1 tbsp tomato sauce + coffee (25ml low-fat milk) | ~430 | ~10.0 | ~22.5 | ~20.4 | Estimated (label not provided). |
+| 22:49 | Dinner: 150g chicken + 100g sweet potato + 75g broccoli | ~364 | ~25.7 | ~50.6 | ~5.9 | Estimated (typical cooked values). |
+
+### Daily Totals (so far)
+- **Calories:** ~1359 / 1600
+- **Carbs:** ~68.2 / 219g
+- **Protein:** ~103.6 / 120g
+- **Fat:** ~46.8 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.1 (logged)
+- **General notes:** Pre-breakfast + after-lunch walks logged. Dinner logged-if you can, do a short **after-dinner walk** and tell me your next reading.
+
+## 2026-05-20 (Wednesday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 09:40 | Cooked junge oats (159g) + yogurt (75g) + banana (1 medium) + coffee w/ 25ml low-fat milk (artificial sweetener; no honey) | ~319 | ~56.2 | ~13.0 | ~3.7 | **Macros estimated** (no label/brand provided; "cooked oats" weight assumed to match typical cooked portion). |
+| 16:41 | 2 scrambled eggs + tomato (50g) + onion (30g) + feta (30g) on 1 toasted breakfast muffin (medium) + coffee (sweetener) + 25ml low-fat milk | ~537 | ~52.4 | ~27.1 | ~24.8 | **Macros estimated** (feta/brand not provided). |
+
+### Daily Totals (so far)
+- **Calories:** ~856 / 1600
+- **Carbs:** ~108.6 / 219g
+- **Protein:** ~40.1 / 120g
+- **Fat:** ~28.5 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 5.8 (logged)
+- **General notes:** Good lunch—try an after-lunch walk (10–20 min) to keep glucose steady, and we’ll aim to make up remaining carbs later today.
 
 ## Template for New Days
 

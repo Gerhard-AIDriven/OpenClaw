@@ -35,6 +35,9 @@ This applies to any HTML you need to paste into Gmail.
 These override generic estimates for accuracy:
 - **Spar Large Brown Wrap:** 887 kJ | 6.6g protein | 35g carbs | 1.1g fat
 - **Alpen Muesli:** per 100g — 348 kcal | 12.3g protein | 58g carbs | 5.0g fat
+- **Lancewood yogurt:**
+  - Per 100g: 130 kJ | 5.3g protein | glycaemic carbs 2g (sugars 1.8g) | fat 0.3g | sodium 58mg | calcium 139mg | fibre <0.5g
+  - Per 150g serving: 195 kJ | 7.9g protein | glycaemic carbs 3g (sugars 2.7g) | fat 0.4g | sodium 87mg | calcium 208.5mg | fibre <0.5g
 
 ---
 

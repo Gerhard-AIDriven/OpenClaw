@@ -261,8 +261,8 @@ Daily log of walks, steps, and movement for insulin resistance management.
 - Dinner walk completed at 20:55: 15 min, 1745 steps.
 - Total steps for the day: 17181 (includes non-walk movement).
 
---- 
- 
+---
+
 ## 2026-05-10 (Sunday)
 
 ### Walks
@@ -282,8 +282,8 @@ Daily log of walks, steps, and movement for insulin resistance management.
 - After breakfast walk done (07:00).
 - No after-dinner walk (completed step goal via daily movement).
 
---- 
- 
+---
+
 ## 2026-05-11 (Monday)
 
 ### Walks
@@ -316,7 +316,7 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ### Notes
 - After-breakfast walk completed at 06:50 (20 min, 1,579 steps).
-- **No after-dinner walk** — resting knee (old sport injury).
+- **No after-dinner walk** - resting knee (old sport injury).
 - **Total daily steps: 11,027** (includes non-walk movement throughout day).
 
 ## 2026-05-13 (Wednesday)
@@ -374,6 +374,57 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ### Notes
 - Pre-breakfast walk completed.
+- After-dinner walk skipped (needed to sleep).
+
+## 2026-05-16 (Saturday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| Total | - | 14113 | Reported total steps; walk sessions not provided. |
+
+### Daily Totals
+- **Total walks:** - / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 14113 / 10000 (goal) ✅
+- **Total walking time:** - minutes
+
+### Notes
+- Total steps reported: **14,113**.
+
+## 2026-05-18 (Monday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| 10:11 | 15.5 | 1877 | After breakfast walk |
+| 16:31 | 15 | 1630 | After lunch walk |
+
+### Daily Totals (logged so far)
+- **Total walks:** 2 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 3507 / 10000 (goal)
+- **Total walking time:** 30.5 minutes
+
+## 2026-05-19 (Tuesday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| Pre-breakfast | 15 | 1730 | Pre-breakfast walk |
+| After lunch | 15 | 1682 | After lunch walk |
+
+### Daily Totals
+- **Total walks:** 2 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 9062 / 10000 (goal)
+- **Total walking time:** 30 minutes
+
+### Notes
+- Pre-breakfast + after-lunch walks logged today.
+- Total daily steps reported: 9,062.
+
+---
 
 ## Template for New Days
 
