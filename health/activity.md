@@ -426,6 +426,67 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ---
 
+## 2026-05-20 (Wednesday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+|      |      |      | Knee injured while moving boxes — long walks difficult; do what you can |
+
+### Daily Totals
+- **Total walks:** - / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 9199 / 10000 (goal)
+- **Total walking time:** - minutes
+
+### Notes
+- Knee injury at time of moving boxes.
+- Doing shorter/whatever movement is comfortable for now.
+
+---
+
+## 2026-05-21 (Thursday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| After lunch | 17 | 1830 | After lunch walk (knee injury—short walk as tolerated) |
+
+### Daily Totals
+- **Total walks:** 1 / 4 (after-lunch walk logged)
+- **Total steps:** 9114 / 10000 (goal)
+- **Total walking time:** - minutes
+
+### Notes
+- Knee injured while moving boxes; long walks difficult.
+- Pain now: **2–3/10** (stilpane and/or cortisone helping; was 7/10 earlier).
+- Went to the Dr: anti-inflammatories + pain tablets + cortisone tablets (course: **7 days**, today is day 1).
+- Meds (today):
+  - Stilpane: 2 tablets after lunch; **also took 2 tablets for the night** (max 3 times/day, only when needed)
+  - Etiflam 120: 1 tablet after lunch (1 per day)
+- Doing what I can for the moment (short movement as tolerated).
+- Steps so far today (total for the day): **9114**.
+- Yesterday’s total steps (05-20): **9199**.
+
+## 2026-05-22 (Friday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| After breakfast | 17 | 1481 | After breakfast walk |
+| Pre-lunch | 17 | 1746 | Pre lunch walk |
+| After lunch | 16 | 1663 | After lunch walk |
+
+### Daily Totals (logged so far)
+- **Total walks:** 3 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 4890 / 10000 (goal)
+- **Total walking time:** 50 minutes
+
+### Notes
+- Knee-friendly: keep it at a comfortable pace.
+
 ## Template for New Days
 
 ```markdown

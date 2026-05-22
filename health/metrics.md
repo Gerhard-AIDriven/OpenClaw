@@ -53,6 +53,8 @@
 |2026-05-18|125/72|106.4|5.8 (fasting)|✅ Logged today: BP 125/72, sugar 5.8. Keep pre-breakfast walk + carb target.|
 |2026-05-19|125/78|106.1|6.1 (fasting)|✅ Logged: BP 125/78, weight 106.1kg, sugar 6.1.|
 |2026-05-20|127/74|105.5|5.8 (fasting)|✅ Great reading: sugar down 0.3 (6.1→5.8) and weight down 0.6kg. BP solid (127/74). Keep pre-breakfast walk + carb target.|
+|2026-05-21|126/76|105.8|5.7 (fasting)|✅ Nice: sugar staying low (5.8→5.7) and BP solid. Weight +0.3kg—likely normal variation; keep carbs + pre-breakfast walk routine.|
+|2026-05-22|120/76|105.4|6.4 (fasting)|✅ Logged: sugar still in your sweet spot (6.0–6.4). BP good; keep pre-breakfast walk + cortisone carbs target. |
 
 ---
 

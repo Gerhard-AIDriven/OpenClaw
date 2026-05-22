@@ -40,13 +40,24 @@
 
 ## Health & Nutrition
 - **Goal:** Diabetes prevention — reducing insulin resistance and blood sugar levels (not weight loss)
-- **Fasting blood sugar trend:** ✅ **Under control!** Was 6.8 (2026-05-14, due to missed walk + low carbs), now back to 6.4 (2026-05-15). Sweet spot: **6.0–6.4 range** with consistent pre-breakfast walk + 219g carbs
-- **Weight progress:** 107.5 kg (2026-05-15) — down from 110kg baseline, on track to 100kg target
+- **Fasting blood sugar trend:** ✅ **Under control!** 5.7 fasting (2026-05-21), down from 6.4 (2026-05-15). Sweet spot: **6.0–6.4 range** with consistent pre-breakfast walk + 219g carbs
+- **Weight progress:** 105.8 kg (2026-05-21) — down from 110kg baseline, on track to 100kg target
 - **Current targets (updated 2026-05-14 based on actual results):**
   - Calories: 1600 (proven effective for weight loss to 100kg)
   - Carbs: 219g (your sweet spot for blood sugar control — hitting this = 6.0-6.2 range)
   - Protein: 120g (from 101g — better satiety & muscle preservation)
   - Fat: 65g (from 45g — increased for sustainability)
+- **TEMPORARY ADJUSTMENT (2026-05-21 to 2026-05-28, cortisone course):**
+  - Knee injury from moving boxes (May 20) — ~60% lower activity, pain 7/10
+  - Cortisone course: 7 days (started 2026-05-21)
+  - Adjusted targets during injury:
+    - Calories: 1350–1450 (down ~10–15% for lower activity)
+    - Carbs: 160–180g (cortisone raises blood sugar; need margin)
+    - Protein: 130–140g (increase for knee healing)
+    - Fat: 55–65g (maintain for absorption)
+  - **Monitor:** Daily fasting sugar during cortisone course; if >7.0, drop carbs 20–30g more
+  - **Anti-inflammatory foods:** fatty fish, leafy greens, berries, turmeric
+  - **Meds:** Stilpane (2 tablets up to 3x daily as needed), Etiflam 120 (1 daily), Cortisone (7 days)
 - **Current eating style:** Low-carb with high fat (avocado, cream cheese, mayo, eggs, meat) — correct direction, needs rebalancing
 - **Tracking:** Daily nutrition log in `health/nutrition.md`
 

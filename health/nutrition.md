@@ -6,6 +6,12 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 **Vital Health Foods Sweet & Sour Soy sauce (your standard for "soy sauce"):** per 100ml - 461 kJ; 25g carbs; 2.1g protein; fat <0.1g.
 
+**Coffee convention (future reference):** coffee + **1 sachet sweetener** + **25ml full cream milk**.
+
+**Yogurt naming convention (future reference):**
+- **“Parmalat yogurt”** = Parmalat **Protein full cream plain yogurt**
+  - Per 100g: **343kJ**, **5.7g protein**, **5.1g carbs**, **fat 4.0g**.
+
 ---
 
 ## 2026-04-26 (Sunday)
@@ -564,16 +570,60 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 09:40 | Cooked junge oats (159g) + yogurt (75g) + banana (1 medium) + coffee w/ 25ml low-fat milk (artificial sweetener; no honey) | ~319 | ~56.2 | ~13.0 | ~3.7 | **Macros estimated** (no label/brand provided; "cooked oats" weight assumed to match typical cooked portion). |
 | 16:41 | 2 scrambled eggs + tomato (50g) + onion (30g) + feta (30g) on 1 toasted breakfast muffin (medium) + coffee (sweetener) + 25ml low-fat milk | ~537 | ~52.4 | ~27.1 | ~24.8 | **Macros estimated** (feta/brand not provided). |
+| 21:34 | 150g chicken + 2 tbsp Ina Paarman pepper sauce + baked potato (100g, no oil) + carrots (50g) + steamed broccoli (70g) | ~444 | ~35.6 | ~52.2 | ~8.9 | **Macros estimated** (sauce brand/label not provided; typical cooked values used). |
+| 21:41 | 1 large banana | ~118 | ~33.0 | ~1.3 | ~0.4 | **Macros estimated** (large banana). |
 
 ### Daily Totals (so far)
-- **Calories:** ~856 / 1600
-- **Carbs:** ~108.6 / 219g
-- **Protein:** ~40.1 / 120g
-- **Fat:** ~28.5 / 65g
+- **Calories:** ~1418 / 1600
+- **Carbs:** ~177.2 / 219g
+- **Protein:** ~93.6 / 120g
+- **Fat:** ~37.8 / 65g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 5.8 (logged)
-- **General notes:** Good lunch—try an after-lunch walk (10–20 min) to keep glucose steady, and we’ll aim to make up remaining carbs later today.
+- **General notes:** Dinner logged—good protein + veg. If you’re hungry later, keep it low-carb and we’ll see how tomorrow’s fasting reading looks.
+
+## 2026-05-21 (Thursday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:17 | 50g muesli + 150g yogurt + 1 banana | ~326 | ~59 | ~15.4 | ~3.3 | **Estimated**: muesli assumed *Alpen Muesli*; yogurt assumed *Lancewood yogurt* (150g serving); banana = 1 medium. |
+| 12:10 | 150g Saldanha sardines + 1 tbsp tomato sauce (30g) + onion (30g) | ~340 | ~6 | ~36 | ~17 | **Estimated**: sardines assumed canned in water/salt; tomato sauce & onion portions estimated from typical nutrition. |
+| 15:45 | 1 granola bar | ~130 | ~18 | ~3.5 | ~5.5 | **Estimated**: typical granola bar (brand/label not provided). |
+| 22:10 | Dinner: 150g **raw beef cubes** browned in **1 tbsp canola oil** + onions (30g); add **sweet potato ~100g** until soft; spices (rajah curry powder, chicken spice, garlic salt) and cook until thick; served with **0.75 cup cooked brown rice (separate)** + **100g yellow sweet carrot** | ~760 | ~56.5 | ~45 | ~38.1 | **Estimated macros** (sweet potato set to ~100g). |
+| 20:15 | 1 banana (medium) | ~105 | ~27 | ~1.3 | ~0.3 | Snack after dinner. |
+
+### Daily Totals (FINAL)
+- **Calories:** ~1661 / 1350–1450 ⚠️ ~211 high
+- **Carbs:** ~166.5 / 160–180g ✅ within range
+- **Protein:** ~101.2 / 130–140g ⚠️ ~28.8–38.8g short
+- **Fat:** ~64.2 / 55–65g ✅ within range
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 5.7 (logged)
+- **General notes:** Day 1 cortisone course. Knee injury limiting movement (9114 steps today). Pain managed (2–4/10 range with meds). Nutrition adjusted for lower activity + cortisone. Dinner updated (sweet potato ~100g + 1 tbsp oil): carbs OK; protein still short; fats OK; calories ended higher—aim to add more protein tomorrow and keep portions steady. Watch tomorrow’s fasting sugar closely.
+
+## 2026-05-22 (Friday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| Breakfast (actual) | 2 slices low-GI wholewheat bread + 2 rashers bacon + 1 ts butter + coffee + 25ml full cream milk | ~410 | ~5 | ~29 | ~16 | **Macros estimated** (bacon/full-cream amounts approximate; adjust if bacon brand/grams differ). |
+| Lunch (plan) | 100g raw beef cubes (0.5 ts canola oil) + 50g sweet potato + 0.5 cup cooked brown rice | ~520 | ~36 | ~30 | ~28 | **Macros estimated** (scaled from your prior beef+sweet potato+rice portions; exact values vary). |
+| Dinner (plan) | **200g ostrich fillet** (pan-fried **no oil**) + **200g sweet potato** (air-fried) + **~170g cooked brown rice (≈0.85 cup)** + **1 ts butter** + **1 ts honey** + **330g Parmalat yogurt (Protein full cream plain)** | ~1024 | ~107 | ~77 | ~22 | **Recalculated** using Parmalat yogurt: per 100g = 343kJ, 5.7g protein, 5.1g carbs, 4.0g fat. |
+
+### Daily Totals (plan)
+- **Calories:** ~1954 / 1350–1450 ⚠️ high
+- **Carbs:** ~148 / 160–180g ⚠️ still low
+- **Protein:** ~136 / 130–140g ✅ in range
+- **Fat:** ~66 / 55–65g ⚠️ slightly high
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** -
+- **General notes:** Cortisone course—if fasting >7.0, reduce carbs further.
 
 ## Template for New Days
 
