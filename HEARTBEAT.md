@@ -26,3 +26,10 @@
 ### Tomorrow (2026-04-09) — One-time reminders
 - 9am: Send medical reports to Maryanne ✅ (cron job set)
 - 1pm: ABSA bank appointment at 2pm (check during heartbeat)
+
+### Shift-Aware Eating (from 2026-06-01)
+- Each morning, check which shift week Gerhard is on (Early or Late) and what day
+- Reference `health/shift-eating-schedule.md` for the right eating plan that day
+- Rotation reference: Wk1 (1–7 Jun) Early → Wk2 (8–14 Jun) Late → Wk3 (15–21 Jun) Early → Wk4 (22–28 Jun) Late → alternating
+- **Sleep targets:** Early week bed by 21:00; Late week bed by 23:00
+- **No food within 2h of bedtime** — remind if logging late evening meals

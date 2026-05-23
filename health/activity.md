@@ -494,11 +494,13 @@ Daily log of walks, steps, and movement for insulin resistance management.
 | Time | Duration (min) | Steps | Notes |
 |------|----------------|-------|-------|
 | After breakfast | 15 | 1442 | After breakfast walk |
+| Pre-lunch | 15 | 1475 | Pre lunch walk |
+| After lunch | 17 | 1647 | After lunch walk |
 
 ### Daily Totals (logged so far)
-- **Total walks:** 1 / 4 (target: 4 with pre-breakfast)
-- **Total steps:** 1442 / 10000 (goal)
-- **Total walking time:** 15 minutes
+- **Total walks:** 3 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 4566 / 10000 (goal)
+- **Total walking time:** 47 minutes
 
 ### Notes
 - Knee pain improved today (about 3/10). Keep pace knee-friendly.

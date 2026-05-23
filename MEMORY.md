@@ -61,6 +61,13 @@
 - **Current eating style:** Low-carb with high fat (avocado, cream cheese, mayo, eggs, meat) — correct direction, needs rebalancing
 - **Tracking:** Daily nutrition log in `health/nutrition.md`
 
+### Blood Test Results (2026-05-23) — Baseline Metabolic Markers
+- **PSA (Abbott):** 0.68 µg/L ✅ (well below 4.0 normal cutoff — excellent prostate health)
+- **Fasting Insulin:** 7.0 mIU/L ⚠️ (lab "normal" 2–25, but optimal is 2–6 — borderline)
+- **HOMA-IR:** ~1.78–1.87 (using typical fasting glucose 5.7–6.0) — healthy/early IR threshold
+- **Interpretation:** Mild insulin resistance confirmed — not deep, fully reversible. Strategy: continue weight loss, pre-breakfast walks, protein-forward meals; consider lower carb baseline and 14–16h overnight fasting to drive insulin <6.
+- **Re-test:** Scheduled ~2026-08-23 (3 months) to track progress.
+
 ## Brand — AI Driven
 - Business name: **AI Driven**
 - Domain: aidriven.biz
