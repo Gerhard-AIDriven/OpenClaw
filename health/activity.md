@@ -487,6 +487,22 @@ Daily log of walks, steps, and movement for insulin resistance management.
 ### Notes
 - Knee-friendly: keep it at a comfortable pace.
 
+## 2026-05-23 (Saturday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| After breakfast | 15 | 1442 | After breakfast walk |
+
+### Daily Totals (logged so far)
+- **Total walks:** 1 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** 1442 / 10000 (goal)
+- **Total walking time:** 15 minutes
+
+### Notes
+- Knee pain improved today (about 3/10). Keep pace knee-friendly.
+
 ## Template for New Days
 
 ```markdown

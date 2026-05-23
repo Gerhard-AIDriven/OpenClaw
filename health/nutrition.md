@@ -613,13 +613,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | Breakfast (actual) | 2 slices low-GI wholewheat bread + 2 rashers bacon + 1 ts butter + coffee + 25ml full cream milk | ~410 | ~5 | ~29 | ~16 | **Macros estimated** (bacon/full-cream amounts approximate; adjust if bacon brand/grams differ). |
 | Lunch (plan) | 100g raw beef cubes (0.5 ts canola oil) + 50g sweet potato + 0.5 cup cooked brown rice | ~520 | ~36 | ~30 | ~28 | **Macros estimated** (scaled from your prior beef+sweet potato+rice portions; exact values vary). |
-| Dinner (plan) | **200g ostrich fillet** (pan-fried **no oil**) + **200g sweet potato** (air-fried) + **~170g cooked brown rice (≈0.85 cup)** + **1 ts butter** + **1 ts honey** + **330g Parmalat yogurt (Protein full cream plain)** | ~1024 | ~107 | ~77 | ~22 | **Recalculated** using Parmalat yogurt: per 100g = 343kJ, 5.7g protein, 5.1g carbs, 4.0g fat. |
+| Dinner (actual) | **200g ostrich fillet** (pan-fried **no oil**) + **200g sweet potato** (air-fried) + **~170g cooked brown rice (≈0.85 cup)** + **1 ts butter** + **1 ts honey** + **200g Greek yogurt (plain)** | ~796 | ~94 | ~69 | ~10 | **Macros estimated** (adjusted for yogurt 200g instead of 330g). |
 
-### Daily Totals (plan)
-- **Calories:** ~1954 / 1350–1450 ⚠️ high
-- **Carbs:** ~148 / 160–180g ⚠️ still low
-- **Protein:** ~136 / 130–140g ✅ in range
-- **Fat:** ~66 / 55–65g ⚠️ slightly high
+### Daily Totals (actual/plan estimate)
+- **Calories:** ~1726 / 1350–1450 ⚠️ high
+- **Carbs:** ~135 / 160–180g ⚠️ still low
+- **Protein:** ~128 / 130–140g ⚠️ slightly low
+- **Fat:** ~54 / 55–65g ⚠️ slightly low
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** -
