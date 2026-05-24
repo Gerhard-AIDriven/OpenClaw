@@ -625,6 +625,24 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Fasting blood sugar:** -
 - **General notes:** Cortisone course—if fasting >7.0, reduce carbs further.
 
+## 2026-05-24 (Sunday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 06:01 | Greek yogurt 100g + Alpen muesli 25g + blueberries 25g + coffee | ~183 | ~23.2 | ~9.0 | ~5.4 | **Estimates:** Greek yogurt macros not provided (using your usual plain Greek/yogurt estimate). **Coffee:** 1 cup Ricoffee + 1 sweetener + 25ml low-fat milk (your convention). |
+
+### Daily Totals (so far)
+- **Calories:** ~183 / 1350–1450
+- **Carbs:** ~23.2 / 160–180g
+- **Protein:** ~9.0 / 130–140g
+- **Fat:** ~5.4 / 55–65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 5.7 (logged)
+- **General notes:** Breakfast logged. Breakfast was already eaten—so **no pre-breakfast walk today**. After-breakfast walk done: 24 min, 1,820 steps.
+
 ## Template for New Days
 
 ```markdown

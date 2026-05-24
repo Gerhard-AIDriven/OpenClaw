@@ -56,6 +56,7 @@
 |2026-05-21|126/76|105.8|5.7 (fasting)|✅ Nice: sugar staying low (5.8→5.7) and BP solid. Weight +0.3kg—likely normal variation; keep carbs + pre-breakfast walk routine.|
 |2026-05-22|120/76|105.4|6.4 (fasting)|✅ Logged: sugar still in your sweet spot (6.0–6.4). BP good; keep pre-breakfast walk + cortisone carbs target. |
 |2026-05-23|136/75|106.1|6.4 (fasting)|✅ Sugar stable at 6.4 (sweet spot). BP systolic +16 (120→136) — likely cortisone effect, watch through course. Weight +0.7kg (105.4→106.1) — also expected on cortisone (water retention). Keep cortisone-adjusted carb target (160–180g).|
+|2026-05-24|125/71|105.9|5.7 (fasting)|✅ Great rebound: sugar back to 5.7 (6.4→5.7), BP improved (136/75→125/71), weight slightly down. Keep cortisone-adjusted carbs (160–180g) + pre-breakfast walk.|
 
 ---
 

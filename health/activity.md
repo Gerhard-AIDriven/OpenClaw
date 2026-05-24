@@ -496,14 +496,35 @@ Daily log of walks, steps, and movement for insulin resistance management.
 | After breakfast | 15 | 1442 | After breakfast walk |
 | Pre-lunch | 15 | 1475 | Pre lunch walk |
 | After lunch | 17 | 1647 | After lunch walk |
+| Pre-dinner | 15 | 1480 | Pre dinner walk |
 
-### Daily Totals (logged so far)
-- **Total walks:** 3 / 4 (target: 4 with pre-breakfast)
-- **Total steps:** 4566 / 10000 (goal)
-- **Total walking time:** 47 minutes
+### Daily Totals
+- **Total walks:** 4 / 4 ✅ (target hit!)
+- **Total steps:** **13,240** / 10000 ✅ (132% of goal)
+- **Total walking time:** 62 minutes (formal walks); additional incidental movement throughout day
 
 ### Notes
 - Knee pain improved today (about 3/10). Keep pace knee-friendly.
+- ✅ Hit 4-walk target despite knee + cortisone day.
+- ✅ **Exceeded 10k step goal** — 13,240 total. Strong day given injury + cortisone.
+
+## 2026-05-24 (Sunday)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| After breakfast | 24 | 1820 | Breakfast already eaten—so no pre-breakfast walk today. | 
+
+### Daily Totals
+- **Total walks:** 1 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** **1,820** / 10,000 (goal)
+- **Total walking time:** 24 minutes
+
+### Notes
+- After-breakfast walk completed (knee permitting). If you can later today, aim for 1 more short walk. 
+
+---
 
 ## Template for New Days
 
