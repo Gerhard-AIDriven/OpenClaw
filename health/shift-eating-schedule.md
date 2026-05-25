@@ -29,7 +29,7 @@
 ### Early Shift Week Detail
 | Day | Hours | Break |
 |---|---|---|
-| Mon | 05:30–16:00 | Lunch 11:00–12:00 |
+| **Mon** | **04:30–15:00** | **Lunch 11:00–12:00** |
 | Tue | 05:30–16:00 | Lunch 11:00–12:00 |
 | **Wed** | 05:30–12:00 | **No break (half day)** |
 | Thu | 05:30–16:00 | Lunch 11:00–12:00 |
@@ -56,7 +56,22 @@
 **Fasting window:** 19:00–06:30 (~11.5 hours minimum)
 **Bedtime:** 21:00 → **last food 19:00 absolute latest** (ideal 18:00 → 15h fast)
 
-### Mon/Tue/Thu/Fri (05:30–16:00)
+### Monday Early (04:30–15:00)
+| Time | Meal | Notes |
+|---|---|---|
+| 03:45–04:15 | **Pre-shift walk** | Critical — fasted state (earlier start) |
+| 04:30 | Shift starts | Black coffee OK |
+| 05:30–06:00 | **Breakfast** (light) | At store: Greek yogurt + nuts + boiled eggs |
+| 11:00–12:00 | **Lunch (main meal)** | Protein-forward; carbs OK; post-meal walk |
+| 15:00 | Shift ends | |
+| 15:30 | Post-shift walk | 15–20 min |
+| 17:30–18:00 | **Dinner (light)** | Protein + veg, minimal carbs |
+| 18:00 | **Window closes** | Water/herbal tea only |
+| 21:00 | Bed | |
+
+**Result:** 15h overnight fast. Strong insulin reset.
+
+### Tue/Thu/Fri (05:30–16:00)
 | Time | Meal | Notes |
 |---|---|---|
 | 04:45–05:15 | **Pre-shift walk** | Critical — fasted state |
