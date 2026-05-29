@@ -8,19 +8,18 @@
 - Log walks/steps to health/activity.md
 - If not yet asked today, ask now
 - Check health/metrics.md to see if today's entry already exists before asking
-- **⚠️ CORTISONE COURSE (2026-05-21 to 2026-05-28):** Daily fasting sugar critical — cortisone raises blood sugar. If >7.0, drop carbs 20–30g.
-- **Daily nutrition target (adjusted for knee injury + cortisone):** 1350–1450 cal | Carbs 160–180g | Protein 130–140g | Fat 55–65g
+- **Daily nutrition targets (NORMAL, post-cortisone from 2026-05-28):** 1600 cal | Carbs 219g | Protein 120g | Fat 65g
   - Ask if he's tracking food today and what he's eaten so far
 
 ### Anthropic Balance Reminder (once per day, morning)
 - Remind Gerhard to check his Anthropic balance at console.anthropic.com → Billing
-- Last known balance: $14.39 (2026-05-24)
+- Last known balance: $10.00 (2026-05-29)
 - If Gerhard reports balance is $2 or below → alert him to top up immediately
 - Update the "Last known balance" above when Gerhard reports it
 
 ### OpenAI Balance Reminder (once per day, morning)
 - Remind Gerhard to check his OpenAI balance daily (console.openai.com → Billing)
-- Last known balance: $7.53 (2026-05-24)
+- Last known balance: $8.07 (2026-05-29)
 - Update the "Last known balance" above when Gerhard reports it
 
 ### Tomorrow (2026-04-09) — One-time reminders

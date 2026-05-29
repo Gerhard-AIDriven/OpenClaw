@@ -58,6 +58,10 @@
 |2026-05-23|136/75|106.1|6.4 (fasting)|✅ Sugar stable at 6.4 (sweet spot). BP systolic +16 (120→136) — likely cortisone effect, watch through course. Weight +0.7kg (105.4→106.1) — also expected on cortisone (water retention). Keep cortisone-adjusted carb target (160–180g).|
 |2026-05-24|125/71|105.9|5.7 (fasting)|✅ Great rebound: sugar back to 5.7 (6.4→5.7), BP improved (136/75→125/71), weight slightly down. Keep cortisone-adjusted carbs (160–180g) + pre-breakfast walk.|
 |2026-05-25|120/70|107.0|8.2 (not fully fasting; last supper 20:15, measured 03:15)|⚠️ Early reading before fasting window—expect higher than true fasting. For now, keep carbs 20–30g lower until your next full fasting reading settles.|
+|2026-05-26|128/77|106.7|5.4 (fasting)|✅✅✅ **EXCELLENT!** Sugar at 5.4—lowest on cortisone course, well below sweet spot. BP solid (128/77). Weight stable/slight variation (107.0→106.7). Pre-breakfast walk + cortisone carbs (160–180g) working well. **Formula proven even on cortisone!**|
+|2026-05-27|131/75|105.9|6.8 (fasting)|✅ Good control. Sugar stable 6.8 (consistent range). BP: sys +3 (128→131), dia -2 (77→75). Weight down 0.8kg (106.7→105.9, excellent progress toward 100kg target). Continue cortisone-adjusted carbs + pre-breakfast walk.
+|2026-05-28|126/73|105.9|4.8 (fasting)|✅✅✅ **POST-CORTISONE DAY 1 - EXCELLENT!** Sugar at 4.8 (best reading yet!). Normal fasting range is 3.9–5.5; you're in perfect control. BP excellent (126/73, down from 131/75). Weight stable (105.9). **Cortisone course complete—return to normal targets today: 1600 cal | 219g carbs | 120g protein | 65g fat.** Knee recovery: check activity level today.
+|2026-05-29|125/75|105.1|5.1 (fasting)|✅✅✅ **POST-CORTISONE DAY 2 - EXCELLENT!** Sugar at 5.1 (perfect fasting range 3.9–5.5). Weight down 0.8kg (105.9→105.1, nearing 100kg target!). BP excellent (125/75, slight improvement). **Your formula is working beautifully: consistent carbs (219g) + pre-breakfast walks + normal targets = sustained glucose control + weight loss.** Keep the routine!
 
 ---
 

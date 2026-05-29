@@ -1,0 +1,12 @@
+{
+  agents: {
+    defaults: {
+      models: {
+        "anthropic/claude-haiku-5.5": {}
+      },
+      model: {
+        primary: "anthropic/claude-haiku-5.5"
+      }
+    }
+  }
+}

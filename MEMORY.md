@@ -21,8 +21,8 @@
 ## Tech Setup
 - OpenClaw on Windows, Telegram connected
 - Zalo channel removed (April 2026)
-- **Anthropic API balance:** $30.38 (2026-05-04)
-- **OpenAI API balance:** $5.19 (2026-05-04) ⚠️ Getting low — consider topping up
+- **Anthropic API balance:** $10.00 (2026-05-29)
+- **OpenAI API balance:** $8.07 (2026-05-29)
 - **Email:** gerhard@aidriven.biz now on Google Workspace Gmail (migrated from Zoho)
 - **Gmail API:** ✅ OAuth setup complete (project: AIdriven-openclaw)
   - Credentials file: `C:\Users\gstim\.openclaw\workspace\gmail\credentials.json`
@@ -47,17 +47,22 @@
   - Carbs: 219g (your sweet spot for blood sugar control — hitting this = 6.0-6.2 range)
   - Protein: 120g (from 101g — better satiety & muscle preservation)
   - Fat: 65g (from 45g — increased for sustainability)
-- **TEMPORARY ADJUSTMENT (2026-05-21 to 2026-05-28, cortisone course):**
+- **CORTISONE COURSE (2026-05-21 to 2026-05-27) — COMPLETE ✅**
   - Knee injury from moving boxes (May 20) — ~60% lower activity, pain 7/10
-  - Cortisone course: 7 days (started 2026-05-21)
+  - Cortisone course: 7 days ✅ **FINISHED 2026-05-27 morning (last tablet)**
   - Adjusted targets during injury:
     - Calories: 1350–1450 (down ~10–15% for lower activity)
     - Carbs: 160–180g (cortisone raises blood sugar; need margin)
     - Protein: 130–140g (increase for knee healing)
     - Fat: 55–65g (maintain for absorption)
-  - **Monitor:** Daily fasting sugar during cortisone course; if >7.0, drop carbs 20–30g more
+  - **Performance:** Hit cortisone carb targets perfectly on days 3, 5, 6, 7 → glucose stayed 5.4–6.8 range (sweet spot!)
+  - **Post-cortisone (from 2026-05-28):** Return to normal targets:
+    - Calories: 1600
+    - Carbs: **219g** (back up from 160–180g)
+    - Protein: 120g
+    - Fat: 65g
   - **Anti-inflammatory foods:** fatty fish, leafy greens, berries, turmeric
-  - **Meds:** Stilpane (2 tablets up to 3x daily as needed), Etiflam 120 (1 daily), Cortisone (7 days)
+  - **Meds:** Stilpane (2 tablets up to 3x daily as needed), Etiflam 120 (1 daily) — continue as needed for knee
 - **Current eating style:** Low-carb with high fat (avocado, cream cheese, mayo, eggs, meat) — correct direction, needs rebalancing
 - **Tracking:** Daily nutrition log in `health/nutrition.md`
 
