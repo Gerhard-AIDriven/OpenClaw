@@ -38,6 +38,7 @@ These override generic estimates for accuracy:
 - **Lancewood yogurt:**
   - Per 100g: 130 kJ | 5.3g protein | glycaemic carbs 2g (sugars 1.8g) | fat 0.3g | sodium 58mg | calcium 139mg | fibre <0.5g
   - Per 150g serving: 195 kJ | 7.9g protein | glycaemic carbs 3g (sugars 2.7g) | fat 0.4g | sodium 87mg | calcium 208.5mg | fibre <0.5g
+- **Capedry bar snack mix:** per 100g — 478 kcal | 14.3g protein | 50.7g carbs | 25.5g fat
 
 ---
 

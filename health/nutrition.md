@@ -218,16 +218,40 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | 11:59 | Lunch: 120g Saldanha sardines + 30g red onion + 50g tomato + 1 ts apple cider vinegar + 1 tbs Nola light mayo + 1 tbs tomato sauce + 2 slices Albany low-GI wholewheat bread + 1 cup coffee (sweetener + 25ml full-cream milk, per convention) | ~701 | ~11.0 | ~48.5 | ~33.3 | **Excellent lunch macro balance!** High protein (48.5g) from sardines + bread. Very low carbs (11g)—perfect for balancing the breakfast carb load. Shift lunch at 11:59 GMT+2. |
 
 | 18:30 | Dinner: 250g roasted lean pork + 105g cooked brown rice + 1 tbs soya sauce + 1 tsp honey | ~780 | ~32.9 | ~68.0 | ~38.4 | **Excellent protein (68g) from pork. Moderate carbs (32.9g). Clean, simple dinner.** |
+| 19:00 | Post-dinner snack: 1 banana (medium) + 150g Greek yogurt (Lancewood) | ~234 | ~34.65 | ~9.85 | ~6.3 | **Good recovery snack after shift work. Carbs + protein balance.** |
 
 ### Daily Totals (FINAL) ⚠️
-- **Calories:** ~1,752 / 1600 ✅ (+152)
-- **Carbs:** ~95.7 / 219g ⚠️ (44% of target—**significantly short**)
-- **Protein:** ~127.0 / 120g ✅ (106% of target—excellent!)
-- **Fat:** ~74.2 / 65g ✅ (114% of target—acceptable)
+- **Calories:** ~1,986 / 1600 ✅ (+386)
+- **Carbs:** ~130.35 / 219g ⚠️ (59% of target—**still short by ~89g**)
+- **Protein:** ~136.85 / 120g ✅ (114% of target—excellent!)
+- **Fat:** ~80.5 / 65g ✅ (124% of target—acceptable)
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 5.1 ✅ (excellent—sweet spot)
-- **General notes:** **⚠️ CARB SHORTFALL:** You've logged only 95.7g carbs vs 219g target—a gap of 123g. This is a **significant undershoot**. For blood sugar stability post-cortisone, aim closer to 219g. **Recommendation:** Add a **post-dinner snack** (fruit + yogurt, or toast + jam, or muesli bar) to add ~100–120g carbs before bed. This will help stabilize tomorrow's fasting glucose and maintain the good control you've had. Protein is excellent; fat slightly high but acceptable. **Walks:** 3 logged (4,687 steps). One post-dinner walk will push you over 10k.
+- **General notes:** **⚠️ CARB SHORTFALL STILL PRESENT:** Banana + yogurt snack helped (+34.65g carbs), but you're still ~89g short of the 219g target. Pattern: breakfast was carb-loaded (51.8g), lunch ultra-low (11g), dinner moderate (32.9g), snack low (34.65g). For sustained glucose stability post-cortisone, you need more consistent carb distribution. **Can you fit in one more snack?** (toast + jam, ~40g carbs, or small bowl of cereal, ~50g carbs?) This would bring you to ~170–180g — much closer to target. If you're heading to bed soon, it's okay to call the day at 130g, but watch tomorrow's fasting reading. If it spikes, we'll know carbs were too low. **Walks:** 3 logged (4,687 steps). One post-dinner walk will finish the day strong.
+
+## 2026-05-30 (Saturday) — Weekend Off, Post-Cortisone Day 3
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 08:44 | Breakfast: 2 slices toasted Albany low-GI wholewheat bread + 59g Spar low-fat plain cottage cheese + 60g sliced sandwich ham + 1 tsp Marmite yeast extract spread + 2 cups coffee | 386 | 6.2 | 25.6 | 14.4 | **High-protein breakfast (25.6g)!** Low carbs (6.2g)—leaves plenty of room for lunch/dinner carbs (212.8g available). Sugar 6.8 this morning (slightly above sweet spot), so this protein-forward breakfast is smart. |
+
+| 11:26 | [ACTUAL] Lunch: 250g skin-on sweet potato (baked airfryer), 200g chicken mince (browned skillet), 100g baked beans, 1 tbsp chicken spice, 1 tbsp Ina Paarman Lemon & herb sauce | 578 | 68.3 | 48.7 | 8.7 | ✅ Lunch eaten as planned. Excellent carb load! Sweet potato (50.3g carbs) + baked beans (16g carbs) = 66.3g carbs this meal. High protein (48.7g) from chicken mince + beans. |
+
+### Daily Totals (so far)
+- **Calories:** ~964 / 1600
+- **Carbs:** ~74.5 / 219g
+- **Protein:** ~74.3 / 120g
+- **Fat:** ~23.1 / 65g
+- **Remaining:** ~636 cal | ~144.5g carbs | ~45.7g protein | ~41.9g fat
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.8 (logged—slightly elevated, likely honey tail from yesterday)
+- **General notes:** Weekend off! ✅ **Planned lunch looks great!** Sweet potato + beans = 66g carbs—exactly what you need to reset glucose and hit daily targets. Still have room for dinner (aim ~80–100g carbs) to reach 219g target. This carb distribution (low breakfast + moderate lunch + moderate dinner) should bring glucose back to 6.0–6.2 range by tomorrow morning. Avoid added sugars; stick to whole foods.
+
+---
 
 ## Template for New Days
 

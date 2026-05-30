@@ -179,17 +179,17 @@ Daily log of walks, steps, and movement for insulin resistance management.
 | Pre-dinner | 16 | 1590 | Pre-dinner walk |
 
 
-### Daily Totals (logged so far)
-- **Total walks:** 3 / 4 (target: 4 with pre-breakfast)
-- **Total steps (from formal walks):** 4,687 / 10,000
+### Daily Totals (FINAL) ✅
+- **Total walks:** 3 / 4 (formal walks logged)
+- **Total steps (all day, incidental + walks):** **11,281 / 10,000** ✅ (113% of goal!)
 - **Total walking time (formal):** 48 minutes
 
 ### Notes
-- Post-cortisone day 2. Knee recovery continues.
-- Blood sugar: 5.1 (excellent), weight: 105.1kg (trending down). Keep routine.
-- Shift: Early week schedule (05:30–16:00). Incidental movement at SPAR will contribute to daily total.
-- Target: 1 more walk (post-dinner) to hit 10k+ steps.
-- **Shift progress:** Excellent pacing—3 walks logged through 18:11. Pre-dinner walk solid (1590 steps). ~5,300 steps needed to hit 10k; post-dinner/evening walk should close the gap.
+- Post-cortisone day 2. Knee recovery solid—no pain issues.
+- Blood sugar: 5.1 (excellent), weight: 105.1kg (trending down). Strong day.
+- Shift: Early week schedule (05:30–16:00). Great mix of formal walks + incidental SPAR movement.
+- **Excellent effort:** 11,281 total steps exceeds target. 3 formal walks completed (1,502 + 1,595 + 1,590 = 4,687), plus ~6,600 from incidental movement.
+- **Off this weekend (Sat–Sun):** Will need to be more intentional about walks (no shift movement). Target 4 walks/day or 10k+ steps per day.
 
 ---
 
