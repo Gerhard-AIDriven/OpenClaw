@@ -240,18 +240,43 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 | 11:26 | [ACTUAL] Lunch: 250g skin-on sweet potato (baked airfryer), 200g chicken mince (browned skillet), 100g baked beans, 1 tbsp chicken spice, 1 tbsp Ina Paarman Lemon & herb sauce | 578 | 68.3 | 48.7 | 8.7 | ✅ Lunch eaten as planned. Excellent carb load! Sweet potato (50.3g carbs) + baked beans (16g carbs) = 66.3g carbs this meal. High protein (48.7g) from chicken mince + beans. |
 
-### Daily Totals (so far)
-- **Calories:** ~964 / 1600
-- **Carbs:** ~74.5 / 219g
-- **Protein:** ~74.3 / 120g
-- **Fat:** ~23.1 / 65g
-- **Remaining:** ~636 cal | ~144.5g carbs | ~45.7g protein | ~41.9g fat
+| 19:30 | [ACTUAL] Dinner: 250g macaroni and cheese | 388 | 40.0 | 17.5 | 18.8 | Comfort food dinner. Quick evening meal. |
+
+### Daily Totals (FINAL) ✅
+- **Calories:** 1,512 / 1,600 (**95% of target**)
+- **Carbs:** 132.8 / 219g (**61% of target**)
+- **Protein:** 100.8 / 120g (**84% of target**)
+- **Fat:** 44.2 / 65g (**68% of target**)
 
 ### Blood Sugar & Health
-- **Fasting blood sugar:** 6.8 (logged—slightly elevated, likely honey tail from yesterday)
-- **General notes:** Weekend off! ✅ **Planned lunch looks great!** Sweet potato + beans = 66g carbs—exactly what you need to reset glucose and hit daily targets. Still have room for dinner (aim ~80–100g carbs) to reach 219g target. This carb distribution (low breakfast + moderate lunch + moderate dinner) should bring glucose back to 6.0–6.2 range by tomorrow morning. Avoid added sugars; stick to whole foods.
+- **Fasting blood sugar:** 6.8 (morning, slightly elevated from honey yesterday)
+- **General notes:** ✅ **Good reset day!** Carbs at 133g (61% of target) is solid for glucose recovery. Protein slightly light at 101g (would have been 130g with tuna pasta, but still adequate). Calorie distribution: low-carb breakfast + moderate lunch + comfort dinner = balanced day. Tomorrow morning reading should show glucose back to 6.0–6.2 range. Weekend rest is helping recovery. Continue pre-breakfast walks and stay hydrated.
 
 ---
+
+## 2026-05-31 (Sunday) — Weekend, Post-Cortisone Day 4
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 09:55 | Breakfast: 100g Clover Authentikos Greek yogurt + 30g Alpen muesli + 64g Cani sugar-free rusks + 1 banana + 2 cups coffee (sweetener + 25ml low-fat milk × 2, per convention) | 581 | 75.3 | 18.3 | 25.1 | **Hearty breakfast!** Rusks bring 280 kcal (48% of breakfast energy) + carbs 22.5g. Banana adds natural sweetness (27g carbs). High-fat breakfast (25.1g) from yogurt (5g) + rusks (17.5g). Total breakfast: 36.3% of daily cal, 34.4% of daily carbs. |
+| 12:15 | Lunch (actual): 300g beef fillet + 100g mixed veg (zucchini, red/green pepper, bean sprout, carrot) blanched al dente + small side salad (greens, tomato, onion) + 250ml cappuccino | 775 | 18 | 84.5 | 40 | **Excellent choice!** Lean beef fillet is protein-packed (84.5g). Veg + salad bring 22.5g carbs. Cappuccino ~100 kcal. Total lunch: 775 kcal with fantastic protein-to-carb ratio. |
+
+| 18:37 | Dinner (actual): 150g oven-baked sweet potato + 100g macaroni and cheese | 250 | 31 | 8.5 | 9.2 | Sweet potato (23g carbs, minimal fat) + mac & cheese (8g carbs, 9g fat). |
+| 19:15 | Snack: 1 banana (medium) + 2 oranges (medium) | 227 | 58.2 | 3.54 | 1.08 | Perfect carb top-up! Banana (27g) + 2 oranges (31.2g) = 58.2g carbs with virtually no fat. |
+
+### Daily Totals (FINAL) ✅
+- **Calories:** ~1,833 / 1,600 ⚠️ (114.5% of target—**+233 kcal**)
+- **Carbs:** ~182.5 / 219g ✅ (83.3% of target—**only 36.5g short now**)
+- **Protein:** ~114.84 / 120g ✅ (95.7% of target—excellent)
+- **Fat:** ~75.38 / 65g ⚠️ (116% of target—**10.4g OVER**)
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.2 ✅ (excellent—back to sweet spot)
+- **Weight:** 103.2 kg ✅ (down 0.5kg from yesterday)
+- **BP:** 118/71 ✅ (excellent)
+- **General notes:** ✅ **Much better carb position!** Fruit snack brought carbs from 124g up to 182.5g (within 37g of target). Protein nailed (114.84g). Trade-off: Calories +233 over budget, fat 10.4g over. **Pattern emerging:** You naturally underfuel on carbs—need to plan higher-carb meals earlier in day. Post-dinner walk recommended. Monitor tomorrow’s glucose given excellent fasting baseline + better carb intake today.
 
 ## Template for New Days
 

@@ -63,6 +63,7 @@
 |2026-05-28|126/73|105.9|4.8 (fasting)|✅✅✅ **POST-CORTISONE DAY 1 - EXCELLENT!** Sugar at 4.8 (best reading yet!). Normal fasting range is 3.9–5.5; you're in perfect control. BP excellent (126/73, down from 131/75). Weight stable (105.9). **Cortisone course complete—return to normal targets today: 1600 cal | 219g carbs | 120g protein | 65g fat.** Knee recovery: check activity level today.
 |2026-05-29|125/75|105.1|5.1 (fasting)|✅✅✅ **POST-CORTISONE DAY 2 - EXCELLENT!** Sugar at 5.1 (perfect fasting range 3.9–5.5). Weight down 0.8kg (105.9→105.1, nearing 100kg target!). BP excellent (125/75, slight improvement). **Your formula is working beautifully: consistent carbs (219g) + pre-breakfast walks + normal targets = sustained glucose control + weight loss.** Keep the routine!
 |2026-05-30|123/79|103.7|6.8 (fasting)|⚠️ Sugar up to 6.8 (above sweet spot 6.0–6.4)—likely effect of honey in dinner yesterday + lingering cortisone tail. Weight down **1.4kg** (105.1→103.7) — **excellent progress!** BP solid (123/79, sys -2). Back to normal targets today: 1600 cal | 219g carbs | 120g protein | 65g fat. Monitor glucose today; expect it to settle back into range if you avoid added sugars (honey, sauces with sugar). Keep pre-breakfast walk + routine.
+|2026-05-31|118/71|103.2|6.2 (fasting)|✅✅ **Excellent recovery!** Sugar back to sweet spot (6.8→6.2, -0.6). Weight down 0.5kg (103.7→103.2, on track to 100kg target!). BP excellent (118/71, sys -5, dia -8). **Formula proven: consistent carbs + pre-breakfast walk = glucose control + weight loss.** Keep it up!
 
 ---
 
