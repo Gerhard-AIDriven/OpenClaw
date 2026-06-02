@@ -278,6 +278,62 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **BP:** 118/71 ✅ (excellent)
 - **General notes:** ✅ **Much better carb position!** Fruit snack brought carbs from 124g up to 182.5g (within 37g of target). Protein nailed (114.84g). Trade-off: Calories +233 over budget, fat 10.4g over. **Pattern emerging:** You naturally underfuel on carbs—need to plan higher-carb meals earlier in day. Post-dinner walk recommended. Monitor tomorrow’s glucose given excellent fasting baseline + better carb intake today.
 
+## 2026-06-01 (Monday) — Late Shift Week 1, Day 1
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 07:00 | Pre-shift walk (fasted) | 0 | 0 | 0 | 0 | 20 min walk before breakfast — critical for insulin sensitivity. |
+| 08:00 | Breakfast: 200g cooked jungle oats + 1 banana + 2 cups coffee (sweetener + 25ml low-fat milk × 2, per convention) | 302 | 56.4 | 10.8 | 4.6 | Carb-loaded start for late shift. 37% of daily carbs in one meal. |
+| 10:00 | Shift starts | — | — | — | — | Black coffee OK. |
+| 14:00–15:00 | Lunch (actual): 250g chicken (uncooked, pan-fried no oil) stir-fried with 200g McCain Hawaiian veg (no oil) + 1 tbsp soy sauce + 1 tbsp tomato sauce + 200g sweet potato (air-fried) + 1 cup coffee (1 sachet sweetener + 25ml full cream milk) | 572 | 48.5 | 64 | 9.7 | Good protein from chicken; sweet potato carries most carbs. Post-lunch walk completed. |
+| 15:30 | Post-lunch walk (on break) | 0 | 0 | 0 | 0 | 15–20 min walk after eating — crucial for glucose control. |
+| 19:00 | Shift ends | — | — | — | — | Ready for dinner. |
+| 19:30 | Dinner (actual): 2 slices Albany low-GI wholewheat bread toasted + 100g Saldanha sardines + 20g red onion + 20g tomato + 1 tbsp tomato sauce + 1 banana + 1 cup coffee (standard) | 611 | 39.9 | 37.8 | 17.8 | Complete dinner with banana. High protein (37.8g) from sardines. Carbs solid (39.9g from bread + tomato + banana).|
+| 20:00 | Eating window closes | 0 | 0 | 0 | 0 | No eating after 21:00 (strict rule for sleep). |
+| 23:00 | Bed | — | — | — | — | Aim for 23:00 bedtime (11h sleep target). |
+
+### Daily Totals (FINAL) ✅
+- **Calories:** 1,485 / 1,600 (92.8% of target)
+- **Carbs:** 144.8 / 150–170g ✅ (**5.2–25.2g short** — excellent!)
+- **Protein:** 112.6 / 120g (93.8% ✅)
+- **Fat:** 32.1 / 65g (49.4% ✅)
+
+### Blood Sugar & Health
+- **Fasting blood sugar (baseline):** 6.2 (from May 31)
+- **Weight (start):** 103.9kg
+- **Shift:** 10:00 AM – 19:00 PM ✅ Completed
+- **Eating window:** 08:00–19:30 (11.5 hours) → **Fasting window:** 19:30–08:00 next morning (12.5 hours)
+- **Activity:** Pre-breakfast walk (31 min, 3,522 steps) + Pre-lunch walk (22 min, 1,523 steps) + After-lunch walk (14 min, 1,347 steps) = **67 min, 6,392 steps**
+- **Post-dinner walk (planned):** 15–20 min to push toward 10k steps
+- **Bed target:** 23:00 (11h sleep)
+- **General notes:** ✅ **Excellent day!** Carbs nailed (144.8g vs 150–170g target — only 5–25g short!). Protein strong at 112.6g (93.8% of target). Fat well-controlled (32.1g vs 65g). Sardines brought high protein + omega-3s. Three walks during shift + post-dinner walk should hit 10k+ steps. **Expect fasting glucose tomorrow (Jun 2):** 6.0–6.3 range given excellent macro balance + consistent walking routine + late shift sleep.
+
+## 2026-06-02 (Tuesday) — Early Shift Week (Wk1), Early Shift 05:30–16:00
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 08:34 | Breakfast: 80g Authenticos Greek yogurt + 25g Alpen muesli + 1 banana (medium) | ~244 | ~42.3 | ~8.3 | ~5.6 | **Fresh breakfast—perfect carb timing for shift.** Pre-breakfast walk done (15 min, 1,825 steps). Shift starts soon (05:30). |
+
+### Daily Totals (so far)
+- **Calories:** ~244 / 1,600 (15%)
+- **Carbs:** ~42.3 / 150–170g ✅ (25–28% — late shift target)
+- **Protein:** ~8.3 / 120g (7%)
+- **Fat:** ~5.6 / 65g (9%)
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.1 ✅ (sweet spot)
+- **BP:** 117/66 ✅ (excellent)
+- **Weight:** 104.1kg (on track to 100kg)
+- **Pre-breakfast walk:** 15 min, 1,825 steps ✅
+- **Shift:** LATE SHIFT (10:00–19:00) — corrected
+- **Eating window:** 08:00–21:00 (13 hours max) | Fasting: 21:00–08:00 (11 hours min)
+- **Bedtime:** 23:00 (NOT 21:00)
+- **General notes:** **LATE SHIFT TUESDAY (Wk2 transition or schedule adjustment).** ✅ Breakfast logged: Greek yogurt + muesli + banana = solid carb load for late shift (08:00 after pre-breakfast walk). Shift starts 10:00. Still need: lunch (14:00–15:00, main meal with carbs) + post-lunch walk + optional dinner (19:30–20:00, protein only if hungry, or skip for 16h fast). **Target today: 150–170g carbs | 120g protein | 65g fat | Bed by 23:00.** Keep pushing toward 10k+ steps.
+
 ## Template for New Days
 
 ```markdown

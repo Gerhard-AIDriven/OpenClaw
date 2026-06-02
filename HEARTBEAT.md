@@ -13,13 +13,13 @@
 
 ### Anthropic Balance Reminder (once per day, morning)
 - Remind Gerhard to check his Anthropic balance at console.anthropic.com → Billing
-- Last known balance: $10.00 (2026-05-29)
+- Last known balance: $23.37 (2026-06-02)
 - If Gerhard reports balance is $2 or below → alert him to top up immediately
 - Update the "Last known balance" above when Gerhard reports it
 
 ### OpenAI Balance Reminder (once per day, morning)
 - Remind Gerhard to check his OpenAI balance daily (console.openai.com → Billing)
-- Last known balance: $8.07 (2026-05-29)
+- Last known balance: $7.08 (2026-06-02)
 - Update the "Last known balance" above when Gerhard reports it
 
 ### Tomorrow (2026-04-09) — One-time reminders
@@ -29,6 +29,6 @@
 ### Shift-Aware Eating (from 2026-06-01)
 - Each morning, check which shift week Gerhard is on (Early or Late) and what day
 - Reference `health/shift-eating-schedule.md` for the right eating plan that day
-- Rotation reference: Wk1 (1–7 Jun) Early → Wk2 (8–14 Jun) Late → Wk3 (15–21 Jun) Early → Wk4 (22–28 Jun) Late → alternating
+- Rotation reference: Wk1 (1–7 Jun) **LATE** → Wk2 (8–14 Jun) Early → Wk3 (15–21 Jun) Late → Wk4 (22–28 Jun) Early → alternating (corrected 2026-06-02)
 - **Sleep targets:** Early week bed by 21:00; Late week bed by 23:00
 - **No food within 2h of bedtime** — remind if logging late evening meals

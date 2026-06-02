@@ -193,6 +193,65 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ---
 
+## 2026-06-01 (Monday) — Early Shift Week (Wk1)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| Pre-breakfast | 31 | 3522 | Strong start to the day! |
+| Pre-lunch | 22 | 1523 | Before shift lunch at 14:00 |
+| After-lunch | 14 | 1347 | Post-lunch walk during shift |
+
+### Daily Totals (FINAL) ✅
+- **Total walks (formal):** 4 / 4 ✅
+- **Total steps (all day):** **13,220 / 10,000** ✅ (132% of goal!)
+- **Total walking time (formal walks):** 67+ minutes
+
+### Walks
+| Time | Duration | Steps | Notes |
+|------|----------|-------|-------|
+| Pre-breakfast | 31 min | 3,522 | Strong start |
+| Pre-lunch | 22 min | 1,523 | Before shift lunch |
+| After-lunch | 14 min | 1,347 | Post-lunch shift break |
+| Post-dinner | ~30-40 min | ~6,828 | Evening walk + incidental movement |
+
+### Notes
+- **Excellent day!** Blood sugar: 6.2 (sweet spot). Weight: 103.9kg (3.9kg to 100kg target).
+- Late shift (10:00–19:00) completed. Pre-breakfast walk + 3 shift walks + strong post-dinner walk = exceptional activity day.
+- **3,220 steps above target** — excellent for glucose control & weight loss momentum.
+- Bed target: 23:00 (11h sleep). Eating window closed at 19:30.
+
+---
+
+## 2026-06-02 (Tuesday) — Early Shift Week (Wk1)
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| Pre-breakfast | 15 | 1825 | Strong pre-shift walk |
+
+### Daily Totals (so far)
+- **Total walks (formal):** 2 / 4 (pre-breakfast ✅ + after-breakfast ✅)
+- **Total steps (logged walks):** 3,630 / 10,000
+- **Total walking time (formal):** 30 minutes
+
+### Walks
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| Pre-breakfast | 15 | 1825 | Strong start |
+| After breakfast | 15 | 1805 | Before shift (shift starts 10:00) |
+
+### Notes
+- **LATE SHIFT TODAY:** 10:00–19:00 (NOT early shift — corrected)
+- Pre-breakfast walk: 15 min, 1,825 steps ✅
+- After-breakfast walk: 15 min, 1,805 steps ✅ (09:21 logged)
+- Target: 2 more walks today (post-lunch 15–20 min, optional post-dinner) + shift incidental movement
+- Blood sugar: 6.1 (sweet spot). Weight: 104.1kg. On track to 100kg target.
+
+---
+
 ## Template for New Days
 
 ```markdown
