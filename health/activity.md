@@ -232,9 +232,9 @@ Daily log of walks, steps, and movement for insulin resistance management.
 |------|----------------|-------|-------|
 | Pre-breakfast | 15 | 1825 | Strong pre-shift walk |
 
-### Daily Totals (so far)
-- **Total walks (formal):** 2 / 4 (pre-breakfast ✅ + after-breakfast ✅)
-- **Total steps (logged walks):** 3,630 / 10,000
+### Daily Totals (FINAL) ✅
+- **Total walks (formal):** 2 (pre-breakfast ✅ + after-breakfast ✅)
+- **Total steps (all day):** **10,601 / 10,000** ✅ (106% of goal!)
 - **Total walking time (formal):** 30 minutes
 
 ### Walks
@@ -242,13 +242,33 @@ Daily log of walks, steps, and movement for insulin resistance management.
 |------|----------------|-------|-------|
 | Pre-breakfast | 15 | 1825 | Strong start |
 | After breakfast | 15 | 1805 | Before shift (shift starts 10:00) |
+| Shift + incidental | — | 6971 | During 10:00–19:00 late shift + post-shift activity |
 
 ### Notes
-- **LATE SHIFT TODAY:** 10:00–19:00 (NOT early shift — corrected)
+- **LATE SHIFT TODAY:** 10:00–19:00 (late shift adjusted targets: 150–170g carbs, bed 23:00)
 - Pre-breakfast walk: 15 min, 1,825 steps ✅
-- After-breakfast walk: 15 min, 1,805 steps ✅ (09:21 logged)
-- Target: 2 more walks today (post-lunch 15–20 min, optional post-dinner) + shift incidental movement
+- After-breakfast walk: 15 min, 1,805 steps ✅
+- **Shift + incidental movement:** 6,971 steps (shift activity + post-shift until 22:02)
+- **Final step count: 10,601** ✅ (excellent! exceeded 10k goal by 601 steps)
 - Blood sugar: 6.1 (sweet spot). Weight: 104.1kg. On track to 100kg target.
+- Late shift completed successfully. Good activity day.
+
+## 2026-06-04 (Thursday) — Late Shift Day 4
+
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| After breakfast | 15 | 1645 | Post-breakfast walk |
+
+### Daily Totals
+- **Total walks:** 1 / 4
+- **Total steps:** 1645 / 10000
+- **Total walking time:** 15 minutes
+
+### Notes
+- Logged after-breakfast walk for glucose control.
+- Keep the rest of the day moving toward the 10k step target.
 
 ---
 

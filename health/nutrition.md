@@ -334,6 +334,53 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Bedtime:** 23:00 (NOT 21:00)
 - **General notes:** **LATE SHIFT TUESDAY (Wk2 transition or schedule adjustment).** ✅ Breakfast logged: Greek yogurt + muesli + banana = solid carb load for late shift (08:00 after pre-breakfast walk). Shift starts 10:00. Still need: lunch (14:00–15:00, main meal with carbs) + post-lunch walk + optional dinner (19:30–20:00, protein only if hungry, or skip for 16h fast). **Target today: 150–170g carbs | 120g protein | 65g fat | Bed by 23:00.** Keep pushing toward 10k+ steps.
 
+## 2026-06-03 (Wednesday) — LATE SHIFT DAY 3
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 15:52 | Breakfast: 50g Jungle Oats (cooked) + 100g yogurt (Lancewood) + 1 banana (medium) + coffee (sweetener + 25ml full cream milk) | ~372 | ~68.5 | ~14.2 | ~5.1 | ✅ Pre-breakfast walk done (15 min). Solid carb load. |
+| 13:52 | Lunch: 220g ostrich fillet (fried) + 2 fried eggs + 159g sweet potato (airfryer) + 1 tbsp butter + 1 tbsp honey + coffee (sweetener + 25ml full cream milk) | ~776 | ~50.6 | ~68.1 | ~34.9 | Excellent protein from ostrich + eggs. Honey adds carbs (17.3g). |
+
+| 21:33 | Dinner: 1 cup Knorr cream of tomato cup-a-soup + 2 slices bread (Albany low-GI) + 1 banana (medium) | ~423 | ~42.4 | ~13.3 | ~7.8 | Quick dinner before bed. Soup + bread combo = comfort + carbs. Still reasonable macro balance. |
+
+### Daily Totals (FINAL)
+- **Calories:** ~1,571 / 1,600 ✅ (98%)
+- **Carbs:** ~161.5 / 219g ⚠️ (74% — 57.5g short)
+- **Protein:** ~95.6 / 120g ⚠️ (80% — 24.4g short)
+- **Fat:** ~47.8 / 65g ✅ (74%)
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.8 (logged AM)
+- **BP:** 117/65 ✅ (excellent)
+- **Weight:** 104.2kg (5.8kg down from 110kg baseline)
+- **Shift:** LATE SHIFT Day 3 ✅ (10:00–19:00)
+- **Bedtime target:** 23:00 ✅ (no food within 2h → last meal 21:33, bed by 23:33)
+- **Activity:** Pre-breakfast walk done (15 min). Post-lunch walk status: not reported. Post-dinner walk: none.
+- **General notes:** **LATE SHIFT DAY 3 — COMPLETE.** Carbs came in 57.5g short of target (161.5g vs 219g). Root cause: dinner was lighter than optimal (soup + bread instead of protein + starch combo). Protein also 24.4g short. **Impact:** Tomorrow's fasting glucose may tick up slightly (6.8→7.0–7.2 range) due to carb shortfall + lower protein. **Action for tomorrow:** Aim for **180g+ carbs + 120g protein** to reset. Keep pre-breakfast walk + 3 post-meal walks. **Tonight:** No more food; bed by 23:33 (at latest).
+
+## 2026-06-04 (Thursday) — LATE SHIFT DAY 4
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 07:45 | Breakfast: 2 boiled eggs + 100g Greek yogurt + 20g Alpen muesli + 30g blueberries + 1 cup coffee | ~327 | ~23.4 | ~20.6 | ~16.7 | **Actual breakfast logged.** Blueberries confirmed instead of banana. Coffee assumed black / negligible calories. |
+| 14:30 | Lunch: 120g ostrich fillet + 150g Hawaiian stir-fry vegetables + 1 tbsp soya sauce + 1 brown wrap + 1 cup coffee + 1 banana | ~590 | ~74.0 | ~48.0 | ~7.5 | **Estimated lunch logged.** Ostrich and veg assumed lean; coffee uses the standard milk + sweetener convention. |
+
+### Daily Totals (so far)
+- **Calories:** ~917 / 1600
+- **Carbs:** ~97.4 / 219g
+- **Protein:** ~68.6 / 120g
+- **Fat:** ~24.2 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.1
+- **BP:** 120/81
+- **Weight:** 104.1kg
+- **General notes:** Morning metrics logged and breakfast confirmed with blueberries. Good low-carb breakfast for steadier sugar. Post-breakfast walk done (15 min, 1,645 steps). Lunch logged: ostrich, Hawaiian veg, soya sauce, brown wrap, coffee, and banana. Keep the rest of the day protein-forward and stay within the bedtime eating window.
+
 ## Template for New Days
 
 ```markdown
