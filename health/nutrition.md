@@ -368,18 +368,44 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 |------|------|----------|-----------|-------------|---------|-------|
 | 07:45 | Breakfast: 2 boiled eggs + 100g Greek yogurt + 20g Alpen muesli + 30g blueberries + 1 cup coffee | ~327 | ~23.4 | ~20.6 | ~16.7 | **Actual breakfast logged.** Blueberries confirmed instead of banana. Coffee assumed black / negligible calories. |
 | 14:30 | Lunch: 120g ostrich fillet + 150g Hawaiian stir-fry vegetables + 1 tbsp soya sauce + 1 brown wrap + 1 cup coffee + 1 banana | ~590 | ~74.0 | ~48.0 | ~7.5 | **Estimated lunch logged.** Ostrich and veg assumed lean; coffee uses the standard milk + sweetener convention. |
+| 21:00 | Dinner: 3 slices Albany low-GI wholewheat bread (toasted) + 70g Saldanha sardines + 60g tomato + 30g onion + 1 tsp apple cider vinegar + 1 banana + 1 Knorr cup-a-soup (instead of coffee) | ~623 | ~72.0 | ~30.0 | ~19.2 | **Dinner updated.** Soup swapped in for coffee. |
 
 ### Daily Totals (so far)
-- **Calories:** ~917 / 1600
-- **Carbs:** ~97.4 / 219g
-- **Protein:** ~68.6 / 120g
-- **Fat:** ~24.2 / 65g
+- **Calories:** ~1,540 / 1,600
+- **Carbs:** ~169.4 / 219g
+- **Protein:** ~98.6 / 120g
+- **Fat:** ~43.4 / 65g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.1
 - **BP:** 120/81
 - **Weight:** 104.1kg
 - **General notes:** Morning metrics logged and breakfast confirmed with blueberries. Good low-carb breakfast for steadier sugar. Post-breakfast walk done (15 min, 1,645 steps). Lunch logged: ostrich, Hawaiian veg, soya sauce, brown wrap, coffee, and banana. Keep the rest of the day protein-forward and stay within the bedtime eating window.
+
+## 2026-06-05 (Friday) — Morning Check-in
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 07:50 | Morning metrics only | 0 | 0 | 0 | 0 | No food logged yet. |
+| 10:25 | 2 slices bread + 2 eggs + 1 banana + 1 tsp honey + coffee | ~516 | ~38.5 | ~24.7 | ~14.8 | Estimated using Albany low-GI wholewheat bread and the standard coffee convention (sweetener + 25ml full cream milk). Banana + honey adds a decent glucose hit, so keep the rest of the morning steady. |
+| 13:12 | 120g Greek yogurt + 1 banana + 1 tsp honey + coffee | ~177 | ~36.9 | ~8.2 | ~1.5 | Estimated using Lancewood yogurt values and the standard coffee convention (sweetener + 25ml full cream milk). Light lunch, but mostly carbs, so dinner should carry the protein. |
+| 16:58 | USN protein bar (68g) | ~232 | 27 | 20.5 | 6.7 | Bar label provided: 971kJ, 20.5g protein, 27g carbs, 6.7g fat. Solid protein snack. |
+
+### Daily Totals (so far)
+- **Calories:** ~925 / 1,600
+- **Carbs:** ~102.4 / 219g
+- **Protein:** ~53.4 / 120g
+- **Fat:** ~23.0 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.7
+- **BP:** 127/86
+- **Weight:** 103.5kg
+- **General notes:** Fasting sugar is a bit above your sweet spot today, and BP is also up a touch versus your usual. Breakfast and lunch are both light-to-moderate carb loads, but lunch is especially protein-light. Dinner should be proper protein, not more sweet stuff.
+- **Activity:** After-lunch walk: 21 min, 1,652 steps.
+- **Activity:** Afternoon walk: 16 min, 1,408 steps.
 
 ## Template for New Days
 

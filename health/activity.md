@@ -263,12 +263,13 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ### Daily Totals
 - **Total walks:** 1 / 4
-- **Total steps:** 1645 / 10000
+- **Total steps:** 9388 / 10000
 - **Total walking time:** 15 minutes
 
 ### Notes
 - Logged after-breakfast walk for glucose control.
-- Keep the rest of the day moving toward the 10k step target.
+- Final step count for the day: 9,388.
+- Close to target - nice work.
 
 ---
 
