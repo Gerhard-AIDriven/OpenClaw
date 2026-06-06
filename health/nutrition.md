@@ -392,12 +392,13 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | 10:25 | 2 slices bread + 2 eggs + 1 banana + 1 tsp honey + coffee | ~516 | ~38.5 | ~24.7 | ~14.8 | Estimated using Albany low-GI wholewheat bread and the standard coffee convention (sweetener + 25ml full cream milk). Banana + honey adds a decent glucose hit, so keep the rest of the morning steady. |
 | 13:12 | 120g Greek yogurt + 1 banana + 1 tsp honey + coffee | ~177 | ~36.9 | ~8.2 | ~1.5 | Estimated using Lancewood yogurt values and the standard coffee convention (sweetener + 25ml full cream milk). Light lunch, but mostly carbs, so dinner should carry the protein. |
 | 16:58 | USN protein bar (68g) | ~232 | 27 | 20.5 | 6.7 | Bar label provided: 971kJ, 20.5g protein, 27g carbs, 6.7g fat. Solid protein snack. |
+| 19:40 | 1 hamburger patty + 2 eggs + 100g macaroni and cheese | ~549 | ~17.2 | ~36.6 | ~37.1 | Estimated: hamburger patty assumed standard cooked beef patty (~100g). Macaroni and cheese scaled from prior 250g estimate. Better than another sweet snack; still a fairly rich dinner. |
 
 ### Daily Totals (so far)
-- **Calories:** ~925 / 1,600
-- **Carbs:** ~102.4 / 219g
-- **Protein:** ~53.4 / 120g
-- **Fat:** ~23.0 / 65g
+- **Calories:** ~1,474 / 1,600
+- **Carbs:** ~119.6 / 219g
+- **Protein:** ~90.0 / 120g
+- **Fat:** ~60.1 / 65g
 
 ### Blood Sugar & Health
 - **Fasting blood sugar:** 6.7
@@ -406,6 +407,24 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **General notes:** Fasting sugar is a bit above your sweet spot today, and BP is also up a touch versus your usual. Breakfast and lunch are both light-to-moderate carb loads, but lunch is especially protein-light. Dinner should be proper protein, not more sweet stuff.
 - **Activity:** After-lunch walk: 21 min, 1,652 steps.
 - **Activity:** Afternoon walk: 16 min, 1,408 steps.
+- **Activity:** Total steps today: 9,574.
+## 2026-06-06 (Saturday) — Early Shift Long Day Prep
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:05 | 150g cooked Jungle oats + 30g blueberries + 1 boiled egg + 1 coffee | ~259 | ~27.9 | ~14.1 | ~9.5 | Estimated using prior cooked Jungle oats entries and standard coffee convention (sweetener + 25ml full cream milk). |
+
+### Daily Totals
+- **Calories:** ~259 / 1600
+- **Carbs:** ~27.9 / 219g
+- **Protein:** ~14.1 / 120g
+- **Fat:** ~9.5 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** -
+- **General notes:** Early shift long day tomorrow. Prep tonight so the morning is easier: eggs, a wrap/sandwich, a protein snack, veg/protein for break 2, cheese cubes for later, and water ready.
 
 ## Template for New Days
 

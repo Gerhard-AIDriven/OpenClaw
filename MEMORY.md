@@ -65,6 +65,7 @@
   - **Meds:** Stilpane (2 tablets up to 3x daily as needed), Etiflam 120 (1 daily) — continue as needed for knee
 - **Current eating style:** Low-carb with high fat (avocado, cream cheese, mayo, eggs, meat) — correct direction, needs rebalancing
 - **Tracking:** Daily nutrition log in `health/nutrition.md`
+- **Boiled egg macro default:** When Gerhard says "boiled egg", treat it as a **68g egg in shell** and log approximately **90 kcal, 0.6g carbs, 7.3g protein, 6.1g fat**.
 
 ### Blood Test Results (2026-05-23) — Baseline Metabolic Markers
 - **PSA (Abbott):** 0.68 µg/L ✅ (well below 4.0 normal cutoff — excellent prostate health)
