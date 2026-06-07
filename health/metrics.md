@@ -68,6 +68,7 @@
 |2026-06-02|117/66|104.1|6.1 (fasting)|✅✅ **LATE SHIFT DAY 2.** Sugar stable at 6.1 (perfect sweet spot). BP excellent (117/66). Weight +0.2kg (normal daily variation). Progress: 5.9kg down from 110kg baseline. On track to 100kg target. Continue pre-breakfast walk + 219g carbs. No food within 2h of bedtime (bed by 23:00).
 |2026-06-03|117/65|104.2|6.8 (fasting)|✅ **LATE SHIFT DAY 3.** Sugar up slightly (6.1→6.8)—possibly cortisone tail still lingering or carb timing yesterday. BP excellent (117/65, dia -1). Weight +0.1kg (normal). Keep pre-breakfast walk + 219g carbs today. No food within 2h of bedtime (bed by 23:00).
 |2026-06-04|120/81|104.1|6.1 (fasting)|✅ **LATE SHIFT DAY 4.** Sugar back in sweet spot (6.8→6.1). BP solid (120/81). Weight stable (104.1kg). Breakfast and nutrition logged. Keep pre-breakfast walk + 219g carbs today. No food within 2h of bedtime (bed by 23:00).|
+|2026-06-07|113/69|102.9|5.8 (fasting)|✅ Excellent reading. BP is strong, sugar is still in a good range, and weight is holding just under 103kg. Nice progress toward the 100kg target.|
 
 ---
 

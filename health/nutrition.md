@@ -426,6 +426,28 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Fasting blood sugar:** -
 - **General notes:** Early shift long day tomorrow. Prep tonight so the morning is easier: eggs, a wrap/sandwich, a protein snack, veg/protein for break 2, cheese cubes for later, and water ready.
 
+## 2026-06-07 (Sunday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:49 | Breakfast: 169g cooked Jungle oats + 1 banana + 1 boiled egg + 1 coffee | ~348 | ~53.6 | ~17.1 | ~9.8 | Estimated using prior cooked Jungle oats entries, the boiled egg default (68g egg in shell), and the standard coffee convention (sweetener + 25ml milk). |
+| Lunch | 2 slices normal bread + 120g savoury mince with peas/carrots + 1 ts Rajah medium curry + 1 coffee | ~535 | ~33.0 | ~31.5 | ~23.0 | Estimated with your added detail. Coffee logged with the standard coffee convention (sweetener + 25ml milk). |
+
+### Daily Totals (so far)
+- **Calories:** ~883 / 1600
+- **Carbs:** ~86.6 / 219g
+- **Protein:** ~48.6 / 120g
+- **Fat:** ~32.8 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 5.8
+- **BP:** 113/69
+- **Weight:** 102.9kg
+- **Activity:** After-breakfast walk: 16 min, 1,584 steps.
+- **General notes:** Strong start. Breakfast is carb-forward but still reasonable, and the egg helps stop it from being just a sugar puddle in a bowl. Lunch is decent protein with some added carbs from the bread and veg, so keep the rest of the day steady and aim for a good walk later if the knees cooperate.
+
 ## Template for New Days
 
 ```markdown
@@ -447,3 +469,5 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Fasting blood sugar:** -
 - **General notes:** -
 ```
+
+| 14:06 | After-lunch walk | 0 | 0 | 0 | 0 | 15 min, 1,504 steps |
