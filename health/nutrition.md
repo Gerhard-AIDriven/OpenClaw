@@ -435,6 +435,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 | 05:49 | Breakfast: 169g cooked Jungle oats + 1 banana + 1 boiled egg + 1 coffee | ~348 | ~53.6 | ~17.1 | ~9.8 | Estimated using prior cooked Jungle oats entries, the boiled egg default (68g egg in shell), and the standard coffee convention (sweetener + 25ml milk). |
 | Lunch | 2 slices normal bread + 120g savoury mince with peas/carrots + 1 ts Rajah medium curry + 1 coffee | ~535 | ~33.0 | ~31.5 | ~23.0 | Estimated with your added detail. Coffee logged with the standard coffee convention (sweetener + 25ml milk). |
 
+| 03:46 | Breakfast: 150g cooked Jungle oats + 80g Greek yogurt + 1 banana + 1 coffee | ~336 | ~58.0 | ~10.5 | ~8.1 | Estimated with the standard coffee convention (sweetener + 25ml full cream milk). Oats are the main carb load; yogurt adds protein and a bit of fat. |
+
 ### Daily Totals (so far)
 - **Calories:** ~883 / 1600
 - **Carbs:** ~86.6 / 219g
