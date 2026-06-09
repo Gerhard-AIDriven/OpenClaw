@@ -41,7 +41,7 @@
 ## Health & Nutrition
 - **Goal:** Diabetes prevention — reducing insulin resistance and blood sugar levels (not weight loss)
 - **Fasting blood sugar trend:** ✅ **Under control!** 5.7 fasting (2026-05-21), down from 6.4 (2026-05-15). Sweet spot: **6.0–6.4 range** with consistent pre-breakfast walk + 219g carbs
-- **Weight progress:** 105.8 kg (2026-05-21) — down from 110kg baseline, on track to 100kg target
+- **Weight progress:** 102.9 kg (2026-06-09) — down from 110kg baseline, on track to 100kg target
 - **Current targets (updated 2026-05-14 based on actual results):**
   - Calories: 1600 (proven effective for weight loss to 100kg)
   - Carbs: 219g (your sweet spot for blood sugar control — hitting this = 6.0-6.2 range)

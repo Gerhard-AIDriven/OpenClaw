@@ -473,3 +473,23 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 ```
 
 | 14:06 | After-lunch walk | 0 | 0 | 0 | 0 | 15 min, 1,504 steps |
+
+## 2026-06-09 (Tuesday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:04 | 130g cooked Jungle oats + 70g Greek yogurt + 30g blueberries + 1 coffee | ~220 | ~32.0 | ~11.5 | ~6.8 | Estimated using prior cooked Jungle oats entries, your Greek yogurt convention, and the standard coffee convention (sweetener + 25ml full cream milk). |
+
+### Daily Totals (so far)
+- **Calories:** ~220 / 1600
+- **Carbs:** ~32.0 / 219g
+- **Protein:** ~11.5 / 120g
+- **Fat:** ~6.8 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.1
+- **BP:** 120/80
+- **Weight:** 102.9kg
+- **General notes:** Good steady breakfast. Carbs are moderate, protein is only modest, so lunch should carry the next real protein hit.

@@ -70,6 +70,7 @@
 |2026-06-04|120/81|104.1|6.1 (fasting)|✅ **LATE SHIFT DAY 4.** Sugar back in sweet spot (6.8→6.1). BP solid (120/81). Weight stable (104.1kg). Breakfast and nutrition logged. Keep pre-breakfast walk + 219g carbs today. No food within 2h of bedtime (bed by 23:00).|
 |2026-06-07|113/69|102.9|5.8 (fasting)|✅ Excellent reading. BP is strong, sugar is still in a good range, and weight is holding just under 103kg. Nice progress toward the 100kg target.|
 |2026-06-08|121/71|103.4|6.2|✅ Logged from user. Weight is up 0.5kg from yesterday, sugar is still in a good range, and BP remains solid. Fasting status not specified.|
+|2026-06-09|120/80|102.9|6.1 (fasting)|✅ Morning metrics logged from daily check-in.|
 
 ---
 
