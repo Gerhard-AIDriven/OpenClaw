@@ -21,8 +21,8 @@
 ## Tech Setup
 - OpenClaw on Windows, Telegram connected
 - Zalo channel removed (April 2026)
-- **Anthropic API balance:** $18.86 (2026-06-06)
-- **OpenAI API balance:** $10.46 (2026-06-06)
+ - **Anthropic API balance:** $18.86 (2026-06-10)
+ - **OpenAI API balance:** $1.16 (2026-06-10)
 - **Email:** gerhard@aidriven.biz now on Google Workspace Gmail (migrated from Zoho)
 - **Gmail API:** ✅ OAuth setup complete (project: AIdriven-openclaw)
   - Credentials file: `C:\Users\gstim\.openclaw\workspace\gmail\credentials.json`
