@@ -39,6 +39,8 @@ These override generic estimates for accuracy:
   - Per 100g: 130 kJ | 5.3g protein | glycaemic carbs 2g (sugars 1.8g) | fat 0.3g | sodium 58mg | calcium 139mg | fibre <0.5g
 - **Clover Authentikos Greek Style Double Cream Plain Yoghurt (greek yogurt):**
   - Per 100g: 353 kJ | 5.1g protein | 6g carbs (of which 4.5g sugar) | 5.0g fat
+- **Spar Low Fat Plain Yogurt:**
+  - Per 100g: 177 kJ | 3g protein | 4g carbs | 1.5g fat
 - **Capedry bar snack mix:** per 100g — 478 kcal | 14.3g protein | 50.7g carbs | 25.5g fat
 - **Cani refined sugar free rusks:** per 100g — 1832 kJ | 10.4g protein | 35.1g carbs | 27.4g fat
 

@@ -493,3 +493,48 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **BP:** 120/80
 - **Weight:** 102.9kg
 - **General notes:** Good steady breakfast. Carbs are moderate, protein is only modest, so lunch should carry the next real protein hit.
+
+## 2026-06-11 (Thursday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 04:44 | 100g cooked Jungle oats + 30g blackberries + 100g Greek yogurt + 1 standard coffee | ~205 | ~24.0 | ~10.0 | ~7.5 | Estimated from prior cooked Jungle oats entries, your Greek yogurt convention, and the standard coffee convention (sweetener + 25ml full cream milk). |
+| 07:29 | After-breakfast walk | 0 | 0 | 0 | 0 | 20 min, 1,720 steps |
+| 11:37 | 2 slices bread + 1 tbsp butter + 80g Saldanha sardines + 1 tbsp tomato sauce + 1 standard coffee | ~488 | ~6.0 | ~29.5 | ~23.0 | Estimated using your bread convention, prior sardine log entries, the 1 tbsp butter shortcut, and the standard coffee convention (sweetener + 25ml full cream milk). |
+| 15:48 | After-lunch walk | 0 | 0 | 0 | 0 | 15 min, 1,645 steps |
+
+### Daily Totals (so far)
+- **Calories:** ~693 / 1600
+- **Carbs:** ~30.0 / 219g
+- **Protein:** ~39.5 / 120g
+- **Fat:** ~30.5 / 65g
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.4
+- **BP:** 129/70
+- **Weight:** 102.4kg
+- **General notes:** Solid breakfast, and lunch is nicely protein-forward. The butter pushes fat up, but the carbs are still controlled, so this is a decent blood-sugar-friendly pattern for the day so far. The after-lunch walk helps too, because glucose dislikes being left alone with its thoughts.
+
+## 2026-06-12 (Friday)
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:05 | 120g cooked Jungle oats + 100g Spar low fat yogurt + 26g blueberries + 1 standard coffee | ~278 | ~43.6 | ~13.4 | ~5.3 | Estimated using 120g cooked Jungle oats (~170 cal, 35g carbs, 4.8g protein, ~4g fat), Spar low fat yogurt convention (177 kJ = 42 cal per 100g | 3g protein | 4g carbs | 1.5g fat), blueberries (~30 cal, ~7.5g carbs, 0.3g protein, 0.2g fat per 30g), and standard coffee convention (sweetener + 25ml full cream milk = 37 cal, 0.5g carbs, 1.5g protein, 2.5g fat). |
+
+| 11:39 | Lunch: 2 slices bread + 2 eggs + 60g Gouda cheese + 1 ts butter + 1 standard coffee | ~590 | ~21.0 | ~28.5 | ~38.2 | Estimated using 2 slices Albany low-GI bread (90g, ~413 cal, 3.4g carbs, 10g protein, 3g fat), 2 boiled eggs (~180 cal, 1.2g carbs, 14.6g protein, 12.2g fat), Gouda cheese 60g (~250 cal, ~1.2g carbs, ~15g protein, ~20g fat), 1 ts butter (~37 cal, 0g carbs, 0g protein, 4.1g fat), and standard coffee (sweetener + 25ml full cream milk = 37 cal, 0.5g carbs, 1.5g protein, 2.5g fat). |
+
+### Daily Totals (so far)
+- **Calories:** ~868 / 1600
+- **Carbs:** ~64.6 / 219g ✅
+- **Protein:** ~41.9 / 120g
+- **Fat:** ~43.5 / 65g ⚠️ (getting close; watch dinner)
+
+### Blood Sugar & Health
+- **Fasting blood sugar:** 6.9
+- **BP:** 117/69
+- **Weight:** 101.0kg ← **Just 1kg from 100kg target!**
+- **General notes:** Breakfast + lunch done. Protein is now solid at 41.9g (lunch helped), and carbs are well-controlled at 64.6g. **Fat is getting close to target at 43.5g**, so dinner should be lighter on fat—focus on lean protein + veg to finish the day strong. You're on track to hit all targets. Keep going!
