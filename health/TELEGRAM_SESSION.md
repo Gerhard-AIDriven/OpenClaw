@@ -29,7 +29,7 @@ When you chat via Telegram, I will:
 When you chat with me on Telegram:
 - I read `SYNC_TELEGRAM.md` (daily summary)
 - I read this file (Telegram-specific context)
-- I load workspace files as needed (health/metrics.md, nutrition.md, etc.)
+- I load `health/metrics.md` first for daily metrics and `health/nutrition.md` only for meals/macros
 - After chat, I update this file with key points
 - You can see full Telegram history on console
 

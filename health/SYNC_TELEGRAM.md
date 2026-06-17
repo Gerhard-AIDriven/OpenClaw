@@ -6,8 +6,8 @@
 ---
 
 ## Health logging standard (all channels)
-- **health/metrics.md** = BP / weight / fasting blood sugar
-- **health/nutrition.md** = meals + macros + nutrition totals
+- **health/metrics.md** = BP / weight / blood sugar only; use this as the single source of truth across console and Telegram
+- **health/nutrition.md** = meals + macros + nutrition totals only; do not store metrics here
 - **health/activity.md** = walks + steps
 
 ## Today's Health Metrics (Morning)

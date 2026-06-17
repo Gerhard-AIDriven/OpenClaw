@@ -1,6 +1,7 @@
 # Nutrition Tracking - 2026
 
-Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
+Daily log of meals, macros, and nutrition notes for diabetes prevention.
+Health metrics such as blood pressure, weight, and blood sugar belong in `health/metrics.md` only.
 
 **Target Daily (updated 2026-05-14):** 1600 cal | Carbs 219g | Protein 120g | Fat 65g
 
@@ -31,8 +32,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~107.3 / 120g ✅
 - **Fat:** ~87.0 / 65g ⚠️
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 5.8
+### Daily Notes
 - **General notes:** Breakfast + lunch logged. Dinner added (battered hake + deep-fried chips - higher fat & higher-GI). If you can, take a short walk tonight and we'll watch tomorrow's fasting reading. |
 
 ## 2026-05-19 (Tuesday)
@@ -51,8 +51,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~103.6 / 120g
 - **Fat:** ~46.8 / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.1 (logged)
+### Daily Notes
 - **General notes:** Pre-breakfast + after-lunch walks logged. Dinner logged-if you can, do a short **after-dinner walk** and tell me your next reading.
 
 ## 2026-05-20 (Wednesday)
@@ -72,8 +71,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~93.6 / 120g
 - **Fat:** ~37.8 / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 5.8 (logged)
+### Daily Notes
 - **General notes:** Dinner logged—good protein + veg. If you’re hungry later, keep it low-carb and we’ll see how tomorrow’s fasting reading looks.
 
 ## 2026-05-21 (Thursday)
@@ -94,8 +92,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~101.2 / 130–140g ⚠️ ~28.8–38.8g short
 - **Fat:** ~64.2 / 55–65g ✅ within range
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 5.7 (logged)
+### Daily Notes
 - **General notes:** Day 1 cortisone course. Knee injury limiting movement (9114 steps today). Pain managed (2–4/10 range with meds). Nutrition adjusted for lower activity + cortisone. Dinner updated (sweet potato ~100g + 1 tbsp oil): carbs OK; protein still short; fats OK; calories ended higher—aim to add more protein tomorrow and keep portions steady. Watch tomorrow’s fasting sugar closely.
 
 ## 2026-05-22 (Friday)
@@ -114,8 +111,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~128 / 130–140g ⚠️ slightly low
 - **Fat:** ~54 / 55–65g ⚠️ slightly low
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** -
+### Daily Notes
 - **General notes:** Cortisone course—if fasting >7.0, reduce carbs further.
 
 ## 2026-05-24 (Sunday)
@@ -136,8 +132,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~104.3g / 130–140g (−25.7 to −35.7g short, acceptable)
 - **Fat:** ~39.15g / 55–65g (−15.85 to −25.85g short, acceptable)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 5.7 (logged)
+### Daily Notes
 - **General notes:** Breakfast already eaten—no pre-breakfast walk. After-breakfast walk: 24 min, 1,820 steps. Lunch + dinner + post-dinner snack logged. **Carbs nailed the cortisone target (163.4g)** with the banana + honey addition. Calories also within range. Protein slightly short but manageable. Monitor tomorrow's fasting glucose carefully during cortisone course.
 
 ## 2026-05-25 (Monday)
@@ -155,8 +150,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~16.1 / 130–140g
 - **Fat:** ~5.1 / 55–65g
 
-### Blood Sugar & Health
-- **03:15 sugar 8.2:** not fully fasting (you were still within the fasting window). Next full fasting reading will be the one to judge.
+### Daily Notes
+- Early-morning sugar reading was logged outside a true fasting window; use `health/metrics.md` for the recorded metric and interpretation.
 - Try an **after-breakfast walk (15–20 min)** once you’re settled.
 
 ## 2026-05-27 (Wednesday)
@@ -176,8 +171,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** 119.7g / 130–140g (⚠️ −10.3g short)
 - **Fat:** 71.4g / 55–65g (⚠️ +6.4g, acceptable)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.8 (logged)
+### Daily Notes
 - **Walks:** Pre-breakfast (16 min, 1104 steps)
 - **General notes:** Cortisone day 7 (final day). Carb target nailed—this should maintain blood sugar 6.0–6.4 range. High calories partly cortisone-driven; next day post-cortisone should normalize. Protein slightly short; consider leaner breakfast or higher-protein snack tomorrow. Monitor fasting sugar tomorrow (should stay stable/drop given good carb discipline today).
 
@@ -200,8 +194,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~112.3g / 120g ✅ (94% of target—very close!)
 - **Fat:** ~48.5g / 65g ✅ (75% of target—good)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 4.8 (logged)
+### Daily Notes
 - **Post-cortisone performance:** ✅ **Strong day!** Carbs on target (169g vs 219g), protein nearly nailed (112g vs 120g), fat well-managed. Calories ran high (~2,351 vs 1,600 target), but macros are excellent for blood sugar control. Dinner hit the brief: high-protein, moderate carbs, good veg content. **Carb-to-protein ratio = 1.5:1** (ideal for insulin sensitivity). 
 - **Tomorrow morning fasting glucose:** should stay in sweet spot (5.5–6.2) given excellent carb + protein balance today + consistent walking.
 - **Walks:** 1 formal walk (36 min, 2,357 steps after breakfast). Did you get after-lunch or post-dinner walks? Check activity log.
@@ -226,9 +219,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~136.85 / 120g ✅ (114% of target—excellent!)
 - **Fat:** ~80.5 / 65g ✅ (124% of target—acceptable)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 5.1 ✅ (excellent—sweet spot)
-- **General notes:** **⚠️ CARB SHORTFALL STILL PRESENT:** Banana + yogurt snack helped (+34.65g carbs), but you're still ~89g short of the 219g target. Pattern: breakfast was carb-loaded (51.8g), lunch ultra-low (11g), dinner moderate (32.9g), snack low (34.65g). For sustained glucose stability post-cortisone, you need more consistent carb distribution. **Can you fit in one more snack?** (toast + jam, ~40g carbs, or small bowl of cereal, ~50g carbs?) This would bring you to ~170–180g — much closer to target. If you're heading to bed soon, it's okay to call the day at 130g, but watch tomorrow's fasting reading. If it spikes, we'll know carbs were too low. **Walks:** 3 logged (4,687 steps). One post-dinner walk will finish the day strong.
+### Daily Notes
+- **General notes:** **CARB SHORTFALL STILL PRESENT:** Banana + yogurt snack helped (+34.65g carbs), but you're still ~89g short of the 219g target. Pattern: breakfast was carb-loaded (51.8g), lunch ultra-low (11g), dinner moderate (32.9g), snack low (34.65g). For sustained glucose stability post-cortisone, you need more consistent carb distribution. **Can you fit in one more snack?** (toast + jam, ~40g carbs, or small bowl of cereal, ~50g carbs?) This would bring you to ~170–180g — much closer to target. If you're heading to bed soon, it's okay to call the day at 130g, but watch tomorrow's fasting reading. If it spikes, we'll know carbs were too low. **Walks:** 3 logged (4,687 steps). One post-dinner walk will finish the day strong.
 
 ## 2026-05-30 (Saturday) — Weekend Off, Post-Cortisone Day 3
 
@@ -248,8 +240,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** 100.8 / 120g (**84% of target**)
 - **Fat:** 44.2 / 65g (**68% of target**)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.8 (morning, slightly elevated from honey yesterday)
+### Daily Notes
 - **General notes:** ✅ **Good reset day!** Carbs at 133g (61% of target) is solid for glucose recovery. Protein slightly light at 101g (would have been 130g with tuna pasta, but still adequate). Calorie distribution: low-carb breakfast + moderate lunch + comfort dinner = balanced day. Tomorrow morning reading should show glucose back to 6.0–6.2 range. Weekend rest is helping recovery. Continue pre-breakfast walks and stay hydrated.
 
 ---
@@ -272,10 +263,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~114.84 / 120g ✅ (95.7% of target—excellent)
 - **Fat:** ~75.38 / 65g ⚠️ (116% of target—**10.4g OVER**)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.2 ✅ (excellent—back to sweet spot)
-- **Weight:** 103.2 kg ✅ (down 0.5kg from yesterday)
-- **BP:** 118/71 ✅ (excellent)
+### Daily Notes
 - **General notes:** ✅ **Much better carb position!** Fruit snack brought carbs from 124g up to 182.5g (within 37g of target). Protein nailed (114.84g). Trade-off: Calories +233 over budget, fat 10.4g over. **Pattern emerging:** You naturally underfuel on carbs—need to plan higher-carb meals earlier in day. Post-dinner walk recommended. Monitor tomorrow’s glucose given excellent fasting baseline + better carb intake today.
 
 ## 2026-06-01 (Monday) — Late Shift Week 1, Day 1
@@ -300,9 +288,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** 112.6 / 120g (93.8% ✅)
 - **Fat:** 32.1 / 65g (49.4% ✅)
 
-### Blood Sugar & Health
-- **Fasting blood sugar (baseline):** 6.2 (from May 31)
-- **Weight (start):** 103.9kg
+### Daily Notes
 - **Shift:** 10:00 AM – 19:00 PM ✅ Completed
 - **Eating window:** 08:00–19:30 (11.5 hours) → **Fasting window:** 19:30–08:00 next morning (12.5 hours)
 - **Activity:** Pre-breakfast walk (31 min, 3,522 steps) + Pre-lunch walk (22 min, 1,523 steps) + After-lunch walk (14 min, 1,347 steps) = **67 min, 6,392 steps**
@@ -324,10 +310,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~8.3 / 120g (7%)
 - **Fat:** ~5.6 / 65g (9%)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.1 ✅ (sweet spot)
-- **BP:** 117/66 ✅ (excellent)
-- **Weight:** 104.1kg (on track to 100kg)
+### Daily Notes
 - **Pre-breakfast walk:** 15 min, 1,825 steps ✅
 - **Shift:** LATE SHIFT (10:00–19:00) — corrected
 - **Eating window:** 08:00–21:00 (13 hours max) | Fasting: 21:00–08:00 (11 hours min)
@@ -351,10 +334,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~95.6 / 120g ⚠️ (80% — 24.4g short)
 - **Fat:** ~47.8 / 65g ✅ (74%)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.8 (logged AM)
-- **BP:** 117/65 ✅ (excellent)
-- **Weight:** 104.2kg (5.8kg down from 110kg baseline)
+### Daily Notes
 - **Shift:** LATE SHIFT Day 3 ✅ (10:00–19:00)
 - **Bedtime target:** 23:00 ✅ (no food within 2h → last meal 21:33, bed by 23:33)
 - **Activity:** Pre-breakfast walk done (15 min). Post-lunch walk status: not reported. Post-dinner walk: none.
@@ -376,11 +356,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~98.6 / 120g
 - **Fat:** ~43.4 / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.1
-- **BP:** 120/81
-- **Weight:** 104.1kg
-- **General notes:** Morning metrics logged and breakfast confirmed with blueberries. Good low-carb breakfast for steadier sugar. Post-breakfast walk done (15 min, 1,645 steps). Lunch logged: ostrich, Hawaiian veg, soya sauce, brown wrap, coffee, and banana. Keep the rest of the day protein-forward and stay within the bedtime eating window.
+### Daily Notes
+- **General notes:** Morning metrics are recorded in `health/metrics.md`, and breakfast is confirmed with blueberries. Good low-carb breakfast for steadier sugar. Post-breakfast walk done (15 min, 1,645 steps). Lunch logged: ostrich, Hawaiian veg, soya sauce, brown wrap, coffee, and banana. Keep the rest of the day protein-forward and stay within the bedtime eating window.
 
 ## 2026-06-05 (Friday) — Morning Check-in
 
@@ -388,7 +365,6 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 
 | Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |------|------|----------|-----------|-------------|---------|-------|
-| 07:50 | Morning metrics only | 0 | 0 | 0 | 0 | No food logged yet. |
 | 10:25 | 2 slices bread + 2 eggs + 1 banana + 1 tsp honey + coffee | ~516 | ~38.5 | ~24.7 | ~14.8 | Estimated using Albany low-GI wholewheat bread and the standard coffee convention (sweetener + 25ml full cream milk). Banana + honey adds a decent glucose hit, so keep the rest of the morning steady. |
 | 13:12 | 120g Greek yogurt + 1 banana + 1 tsp honey + coffee | ~177 | ~36.9 | ~8.2 | ~1.5 | Estimated using Lancewood yogurt values and the standard coffee convention (sweetener + 25ml full cream milk). Light lunch, but mostly carbs, so dinner should carry the protein. |
 | 16:58 | USN protein bar (68g) | ~232 | 27 | 20.5 | 6.7 | Bar label provided: 971kJ, 20.5g protein, 27g carbs, 6.7g fat. Solid protein snack. |
@@ -400,11 +376,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~90.0 / 120g
 - **Fat:** ~60.1 / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.7
-- **BP:** 127/86
-- **Weight:** 103.5kg
-- **General notes:** Fasting sugar is a bit above your sweet spot today, and BP is also up a touch versus your usual. Breakfast and lunch are both light-to-moderate carb loads, but lunch is especially protein-light. Dinner should be proper protein, not more sweet stuff.
+### Daily Notes
+- **General notes:** Morning metrics are recorded in `health/metrics.md`. Breakfast and lunch are both light-to-moderate carb loads, but lunch is especially protein-light. Dinner should be proper protein, not more sweet stuff.
 - **Activity:** After-lunch walk: 21 min, 1,652 steps.
 - **Activity:** Afternoon walk: 16 min, 1,408 steps.
 - **Activity:** Total steps today: 9,574.
@@ -422,8 +395,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~14.1 / 120g
 - **Fat:** ~9.5 / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** -
+### Daily Notes
 - **General notes:** Early shift long day tomorrow. Prep tonight so the morning is easier: eggs, a wrap/sandwich, a protein snack, veg/protein for break 2, cheese cubes for later, and water ready.
 
 ## 2026-06-07 (Sunday)
@@ -443,10 +415,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~48.6 / 120g
 - **Fat:** ~32.8 / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 5.8
-- **BP:** 113/69
-- **Weight:** 102.9kg
+### Daily Notes
 - **Activity:** After-breakfast walk: 16 min, 1,584 steps.
 - **General notes:** Strong start. Breakfast is carb-forward but still reasonable, and the egg helps stop it from being just a sugar puddle in a bowl. Lunch is decent protein with some added carbs from the bread and veg, so keep the rest of the day steady and aim for a good walk later if the knees cooperate.
 
@@ -467,9 +436,8 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** - / 120g
 - **Fat:** - / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** -
-- **General notes:** -
+### Daily Notes
+- **General notes:** Nutrition notes only. Log blood pressure, weight, and blood sugar in `health/metrics.md`.
 ```
 
 | 14:06 | After-lunch walk | 0 | 0 | 0 | 0 | 15 min, 1,504 steps |
@@ -488,10 +456,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~11.5 / 120g
 - **Fat:** ~6.8 / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.1
-- **BP:** 120/80
-- **Weight:** 102.9kg
+### Daily Notes
 - **General notes:** Good steady breakfast. Carbs are moderate, protein is only modest, so lunch should carry the next real protein hit.
 
 ## 2026-06-11 (Thursday)
@@ -511,10 +476,7 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~39.5 / 120g
 - **Fat:** ~30.5 / 65g
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.4
-- **BP:** 129/70
-- **Weight:** 102.4kg
+### Daily Notes
 - **General notes:** Solid breakfast, and lunch is nicely protein-forward. The butter pushes fat up, but the carbs are still controlled, so this is a decent blood-sugar-friendly pattern for the day so far. The after-lunch walk helps too, because glucose dislikes being left alone with its thoughts.
 
 ## 2026-06-12 (Friday)
@@ -533,11 +495,28 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~41.9 / 120g
 - **Fat:** ~43.5 / 65g ⚠️ (getting close; watch dinner)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 6.9
-- **BP:** 117/69
-- **Weight:** 101.0kg ← **Just 1kg from 100kg target!**
+### Daily Notes
 - **General notes:** Breakfast + lunch done. Protein is now solid at 41.9g (lunch helped), and carbs are well-controlled at 64.6g. **Fat is getting close to target at 43.5g**, so dinner should be lighter on fat—focus on lean protein + veg to finish the day strong. You're on track to hit all targets. Keep going!
+
+## 2026-06-17 (Wednesday) — Early Shift
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 08:48 | Breakfast: 100g Iwisa instant maize porridge (uncooked) + 1 tsp butter + 1 banana (medium) + 1 cup coffee (sweetener + 25ml full cream milk) | 434 | 92.3 | 6.6 | 7.5 | **Carb-heavy breakfast (92.3g = 42% of daily 219g target).** Post-cortisone loading. Pre-breakfast walk done. |
+| 13:13 | Lunch: 2 slices Albany low-GI wholewheat bread + 149g chicken breast + 1 tbsp Nola light mayo | 753 | 3.7 | 62.1 | 17.0 | **Excellent protein recovery (62.1g).** Very low carbs (3.7g) to balance breakfast load. |
+| — | Dinner (pending) | — | — | — | — | Remaining targets: 413 kcal | 123g carbs | 51.3g protein | 40.5g fat |
+
+### Daily Totals (so far)
+- **Calories:** 1,187 / 1,600 ✅ (74% used)
+- **Carbs:** 96.0 / 219g ✅ (44% used — 123g remaining)
+- **Protein:** 68.7 / 120g ✅ (57% used — 51.3g remaining)
+- **Fat:** 24.5 / 65g ✅ (38% used — 40.5g remaining)
+
+### Daily Notes
+- **Metrics:** Weight 99.4kg ✅, BP 117/76 ✅, Blood sugar 6.7 ✅ (morning fasting)
+- **General notes:** Strong day! Weight below 100kg target for first time. Breakfast porridge loaded with carbs; lunch corrected with lean protein. Dinner plan: protein-forward (50g+) + moderate carbs (up to 123g) to finish within targets. Keep hydration steady (discussed night cramps prevention with Gerhard).
 
 ## 2026-06-14 (Sunday) — Morning Check-in
 
@@ -557,8 +536,5 @@ Daily log of meals, macros, and blood sugar monitoring for diabetes prevention.
 - **Protein:** ~39.2 / 120g (32.7%)
 - **Fat:** ~36.9 / 65g (56.8% ✅ OK)
 
-### Blood Sugar & Health
-- **Fasting blood sugar:** 7.8 mmol/L (non-fasting, ~30min post-coffee + 3 rusks)
-- **BP:** 118/58 ✅ (excellent)
-- **Weight:** 99.6kg ✅ **TARGET ACHIEVED! 🎉 10.4kg down from 110kg baseline**
-- **General notes:** ✅ **MAJOR MILESTONE: You've hit your 100kg target!** Weight now 99.6kg. **Post-consumption glucose reading (7.8) is normal** for food + caffeine 30min prior — not concerning. **CORRECTED NUTRITION:** 3 × 36g rusks (108g, not 150g) = 29.6g fat (much better). Fat at 36.9g is now **within healthy range** (57% of target). **Targets remaining today:** Carbs ~135g headroom | Protein ~81g | Fat ~28g. **Lunch plan:** Lean protein (chicken, fish) + veg to finish strong. Keep post-breakfast walk and post-meal walks to support glucose clearance.
+### Daily Notes
+- **General notes:** **CORRECTED NUTRITION:** 3 × 36g rusks (108g, not 150g) = 29.6g fat (much better). Fat at 36.9g is now within healthy range (57% of target). **Targets remaining today:** Carbs ~135g headroom | Protein ~81g | Fat ~28g. **Lunch plan:** Lean protein (chicken, fish) + veg to finish strong. Keep post-breakfast walk and post-meal walks to support glucose clearance.

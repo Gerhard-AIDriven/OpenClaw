@@ -5,6 +5,8 @@
 ### Health Metrics (ask once per day, morning)
 - Ask Gerhard for his blood pressure, weight, and blood sugar
 - Log to health/metrics.md
+- Treat `health/metrics.md` as the only source of truth for daily metrics
+- Never scan or store health metrics in `health/nutrition.md`
 - Log walks/steps to health/activity.md
 - If not yet asked today, ask now
 - Check health/metrics.md to see if today's entry already exists before asking

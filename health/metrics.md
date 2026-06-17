@@ -2,6 +2,7 @@
 
 ## Targets
 - **Weight target:** 100.0 kg
+- **Source of truth:** Store all blood pressure, weight, and blood sugar readings in this file only.
 
 |Date|Blood Pressure|Weight (kg)|Blood Sugar (mmol/L)|Notes|
 |-|-|-|-|-|
@@ -68,12 +69,15 @@
 |2026-06-02|117/66|104.1|6.1 (fasting)|✅✅ **LATE SHIFT DAY 2.** Sugar stable at 6.1 (perfect sweet spot). BP excellent (117/66). Weight +0.2kg (normal daily variation). Progress: 5.9kg down from 110kg baseline. On track to 100kg target. Continue pre-breakfast walk + 219g carbs. No food within 2h of bedtime (bed by 23:00).
 |2026-06-03|117/65|104.2|6.8 (fasting)|✅ **LATE SHIFT DAY 3.** Sugar up slightly (6.1→6.8)—possibly cortisone tail still lingering or carb timing yesterday. BP excellent (117/65, dia -1). Weight +0.1kg (normal). Keep pre-breakfast walk + 219g carbs today. No food within 2h of bedtime (bed by 23:00).
 |2026-06-04|120/81|104.1|6.1 (fasting)|✅ **LATE SHIFT DAY 4.** Sugar back in sweet spot (6.8→6.1). BP solid (120/81). Weight stable (104.1kg). Breakfast and nutrition logged. Keep pre-breakfast walk + 219g carbs today. No food within 2h of bedtime (bed by 23:00).|
+|2026-06-05|127/86|103.5|6.7 (fasting)|✅ Transferred from `health/nutrition.md`. Morning metrics logged; sugar and BP were a bit above the usual sweet spot, so dinner needed to stay protein-forward.|
 |2026-06-07|113/69|102.9|5.8 (fasting)|✅ Excellent reading. BP is strong, sugar is still in a good range, and weight is holding just under 103kg. Nice progress toward the 100kg target.|
 |2026-06-08|121/71|103.4|6.2|✅ Logged from user. Weight is up 0.5kg from yesterday, sugar is still in a good range, and BP remains solid. Fasting status not specified.|
 |2026-06-09|120/80|102.9|6.1 (fasting)|✅ Morning metrics logged from daily check-in.|
 |2026-06-10|123/76|103.1|6.8 (fasting)|✅ Logged from daily check-in. Sugar is a bit higher than the sweet spot, so keep carbs and snacking disciplined.|
 |2026-06-11|129/70|102.4|6.4 (fasting)|✅ Daily check-in logged. Weight is down 0.7kg from yesterday, sugar is back in a better range, and BP is still healthy.|
 |2026-06-12|117/69|101.0|6.9 (fasting)|✅ **Nearly there!** Weight at 101.0kg—just 1kg from the 100kg target! Sugar slightly above sweet spot (6.4→6.9) but still in healthy control. BP excellent (117/69). Keep the pre-breakfast walk + 219g carbs to nail that final kilo.|
+|2026-06-14|118/58|99.6|7.8 (non-fasting, ~30min post-coffee + 3 rusks)|✅ Transferred from `health/nutrition.md`. Weight target reached. Reading was non-fasting, so compare it separately from true fasting values.|
+|2026-06-17|117/76|99.4|6.7 (fasting)|✅ **Below 100kg target!** Weight 99.4kg — personal record. BP excellent (117/76). Sugar in sweet spot (6.7). Strong morning. Early shift day — breakfast carb-loaded (porridge 100g + banana), lunch corrected with lean chicken breast. Dinner pending.
 
 ---
 
