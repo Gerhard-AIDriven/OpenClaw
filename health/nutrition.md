@@ -506,17 +506,17 @@ Health metrics such as blood pressure, weight, and blood sugar belong in `health
 |------|------|----------|-----------|-------------|---------|-------|
 | 08:48 | Breakfast: 100g Iwisa instant maize porridge (uncooked) + 1 tsp butter + 1 banana (medium) + 1 cup coffee (sweetener + 25ml full cream milk) | 434 | 92.3 | 6.6 | 7.5 | **Carb-heavy breakfast (92.3g = 42% of daily 219g target).** Post-cortisone loading. Pre-breakfast walk done. |
 | 13:13 | Lunch: 2 slices Albany low-GI wholewheat bread + 149g chicken breast + 1 tbsp Nola light mayo | 753 | 3.7 | 62.1 | 17.0 | **Excellent protein recovery (62.1g).** Very low carbs (3.7g) to balance breakfast load. |
-| — | Dinner (pending) | — | — | — | — | Remaining targets: 413 kcal | 123g carbs | 51.3g protein | 40.5g fat |
+| 21:11 | Dinner: 150g pork loin chop (bone in, cooked) + 100g airfryer potato chips + 2 boiled eggs | 750 | 18.2 | 64.6 | 42.2 | Excellent protein from pork + eggs. Chips provided modest carbs. |
 
-### Daily Totals (so far)
-- **Calories:** 1,187 / 1,600 ✅ (74% used)
-- **Carbs:** 96.0 / 219g ✅ (44% used — 123g remaining)
-- **Protein:** 68.7 / 120g ✅ (57% used — 51.3g remaining)
-- **Fat:** 24.5 / 65g ✅ (38% used — 40.5g remaining)
+### Daily Totals (FINAL) ✅
+- **Calories:** 1,937 / 1,600 ⚠️ (+337 kcal — high)
+- **Carbs:** 114.2 / 219g ⚠️ (52% of target — **104.8g SHORT**)
+- **Protein:** 133.3 / 120g ✅ (111% of target — excellent)
+- **Fat:** 66.7 / 65g ✅ (102.6% of target — on point)
 
 ### Daily Notes
-- **Metrics:** Weight 99.4kg ✅, BP 117/76 ✅, Blood sugar 6.7 ✅ (morning fasting)
-- **General notes:** Strong day! Weight below 100kg target for first time. Breakfast porridge loaded with carbs; lunch corrected with lean protein. Dinner plan: protein-forward (50g+) + moderate carbs (up to 123g) to finish within targets. Keep hydration steady (discussed night cramps prevention with Gerhard).
+- **Metrics:** Weight 99.4kg ✅ (personal record!), BP 117/76 ✅, Blood sugar 6.7 ✅ (morning fasting)
+- **General notes:** **CARB DISTRIBUTION ISSUE:** Breakfast loaded (92.3g), lunch ultra-low (3.7g), dinner minimal (18.2g) = 114g total, 105g short of 219g target. Protein excellent (133g) — pork loin was lean choice. Calories high (+337) due to fat from pork + chips + eggs. **Tomorrow:** Rebalance carbs across all meals (60–70g breakfast, 60–70g lunch, 80–90g dinner) to hit 219g target without big swings. **Expected tomorrow fasting reading:** 7.0–7.3 range (carb deficit may spike glucose slightly, but protein + walking should mitigate). Keep pre-breakfast walk routine.
 
 ## 2026-06-14 (Sunday) — Morning Check-in
 
