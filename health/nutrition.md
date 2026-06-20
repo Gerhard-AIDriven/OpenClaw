@@ -538,3 +538,39 @@ Health metrics such as blood pressure, weight, and blood sugar belong in `health
 
 ### Daily Notes
 - **General notes:** **CORRECTED NUTRITION:** 3 × 36g rusks (108g, not 150g) = 29.6g fat (much better). Fat at 36.9g is now within healthy range (57% of target). **Targets remaining today:** Carbs ~135g headroom | Protein ~81g | Fat ~28g. **Lunch plan:** Lean protein (chicken, fish) + veg to finish strong. Keep post-breakfast walk and post-meal walks to support glucose clearance.
+
+---
+
+## 2026-06-19 (Friday) — Late Shift
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:30 | Breakfast: 2 boiled eggs + 1 slice Albany low-GI wholewheat bread + 50g feta cheese + 1 standard coffee | 415 | 2.8 | 24.6 | 18.3 | Pre-breakfast walk done. Feta-forward breakfast (low carb strategy). |
+| 14:00 | Lunch: 1 Spar large brown wrap + 150g chicken breast + 30g tomato + 30g red onion + 2 tbsp Nola light mayo | 700 | 38.7 | 26.3 | 27.7 | Single wrap lunch (not the planned 2-wrap strategy). Tomato + onion added. |
+| 21:30 | Dinner: 2 slices Albany low-GI wholewheat bread + 2 chicken breast schnitzel (150g) + 30g tomato + 30g red onion + 2 tbsp Nola light mayo + 100g sweet potato | 1,011 | 27.3 | 61.3 | 36.1 | Late dinner, sweet potato for carbs. |
+
+### Daily Totals (FINAL) ✅
+- **Calories:** 2,126 / 1,600 ⚠️ (+526 kcal — high)
+- **Carbs:** 68.8 / 219g ⚠️ (31% of target — **150.2g SHORT**)
+- **Protein:** 112.2 / 120g ✅ (93.5% of target — solid)
+- **Fat:** 82.1 / 65g ⚠️ (126% of target — +17.1g over)
+
+### Activity (2026-06-19)
+- **Steps:** 11,050 ✅
+
+### Daily Notes
+- **Metrics:** Weight 100.3kg, BP 121/77, Blood sugar 6.1 (fasting)
+- **Pattern Alert:** **CRITICAL:** Carbs only 68.8g (31% of 219g target) — 150g short. This is the lowest carb day on record, yet glucose stayed at 6.1 (perfect!). **Why?** 11,050 steps + protein-heavy meals + pre-breakfast walk + strong insulin sensitivity compensated. **BUT: This is not sustainable.** You cannot rely on exceptional activity + high protein to cover a 150g carb deficit indefinitely. **Root cause:** Single wrap at lunch (1-wrap strategy not working). **Solution:** Implement 2-wrap lunch immediately — adds 18g carbs, gets you closer to target without relying on dinner alone. Calories high (+526) due to high fat (82.1g) from mayo, feta, schnitzel — acceptable given the trade-off, but calorie drift should slow weight loss momentum after reaching 100kg target.
+
+---
+
+## 2026-06-20 (Saturday) — Late Shift
+
+### Meals
+
+| Time | Meal | Calories | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|------|------|----------|-----------|-------------|---------|-------|
+| 05:04 | Breakfast: 159g cooked oats + 100g low fat yogurt + 30g blueberries + 1 standard coffee | 356 | 54.3 | 13.3 | 9.7 | **Carb-forward breakfast.** Logged. Pre-breakfast walk: not recorded. Post-breakfast walk (15 min): 1,584 steps ✅ |
+| 09:00–10:00 | Break 1 (Lunch): 1 Spar large brown wrap + 120g chicken breast + 30g red onion + 59g tomato + 1 tbsp Nola light mayo + 1 standard coffee | 631 | 49.2 | 40.3 | 20.5 | **Wrap + chicken strategy.** Wrap (35g carbs) + chicken (0g carbs) + veg (8g carbs) + mayo (0.2g carbs). Post-lunch walk (20 min): 1,791 steps ✅ |

@@ -273,6 +273,18 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ---
 
+## 2026-06-19 (Friday) — Late Shift Day
+
+### Activity Summary
+- **Total steps (all day):** **11,050 / 10,000** ✅ (110.5% of goal!)
+- **Shift:** 14:00–23:00 (late shift)
+
+### Notes
+- Late shift completed. Good activity throughout the day.
+- Steps logged at 21:09.
+
+---
+
 ## Template for New Days
 
 ```markdown
