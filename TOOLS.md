@@ -43,6 +43,8 @@ These override generic estimates for accuracy:
   - Per 100g: 177 kJ | 3g protein | 4g carbs | 1.5g fat
 - **Capedry bar snack mix:** per 100g — 478 kcal | 14.3g protein | 50.7g carbs | 25.5g fat
 - **Cani refined sugar free rusks:** per 100g — 1832 kJ | 10.4g protein | 35.1g carbs | 27.4g fat
+- **Iwisa Instant Maize Porridge:**
+  - Per 150g serving: 301 kcal | 65g carbs | 5.2g protein | 1.6g fat
 
 ---
 
