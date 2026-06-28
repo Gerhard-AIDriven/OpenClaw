@@ -21,7 +21,15 @@
 ## Tech Setup
 - OpenClaw on Windows, Telegram connected
 - Zalo channel removed (April 2026)
- - **Anthropic API balance:** $9.94 (2026-06-17)
+- **Hardware:** ASUS UX370UAR ultrabook (i7-8550U, Intel UHD 620 1GB GPU, 16GB RAM)
+  - No PCIe slots for discrete GPU (ultrabook limitation)
+  - GPU can't handle large models (1GB VRAM too small)
+- **Ollama Setup (2026-06-28):**
+  - Default model changed to `anthropic/claude-haiku-4-5` (cloud, instant, reliable)
+  - TinyLLaMA 1.1B available for local testing only (~50 tok/sec CPU, ~10 min download)
+  - Removed qwen3.5:latest (9.7B too large, causes 6-min timeouts on CPU)
+  - OLLAMA_GPU=false set (CPU-only inference)
+- **Anthropic API balance:** $9.94 (2026-06-17)
  - **OpenAI API balance:** $9.97 (2026-06-17)
 - **Email:** gerhard@aidriven.biz now on Google Workspace Gmail (migrated from Zoho)
 - **Gmail API:** ✅ OAuth setup complete (project: AIdriven-openclaw)
@@ -99,10 +107,10 @@
 
 ## Pending / Next Steps
 - Set up Cloudflare Pages hosting for aidriven.biz
-- Decide on email hosting (Zoho free vs Google Workspace)
-- Connect Gmail API to OpenClaw for email management
+- Connect Gmail API to OpenClaw for email management (✅ Done; configured IMAP)
 - Update LinkedIn profile (Gerhard still needs to supply details)
 - Build out aidriven.biz website
+- **Future (NZ Setup):** Consider discrete GPU (RTX 4070+) for fast local inference if needed
 
 ## Promoted From Short-Term Memory (2026-04-20)
 
