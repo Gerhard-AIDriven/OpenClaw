@@ -3,10 +3,17 @@
     "anthropic_balance": 1782115200,
     "openai_balance": 1782115200,
     "nutrition_tracking": 1780982457,
-    "heartbeat_check": 1782650435
+    "heartbeat_check": 1782729880,
+    "memory_review": 1782729880
   },
   "overdue": [
-    "health_metrics (last: 2026-06-20, 8 days ago)",
-    "api_balance_check (last: 2026-06-04, 24 days ago)"
-  ]
+    "api_balance_check (last: 2026-06-04, 25 days ago) — Anthropic & OpenAI balances should be verified",
+    "health_metrics (last: 2026-06-20, 9 days ago) — weight, BP, glucose due"
+  ],
+  "pending": [
+    "LinkedIn profile update (awaiting Gerhard's details)",
+    "SPAR/IntelliAcc project status (progress unclear)",
+    "aidriven.biz website (planning/dev phase — clarify next steps)"
+  ],
+  "lastHeartbeat": "2026-06-29T12:08:00Z"
 }

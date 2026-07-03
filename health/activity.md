@@ -285,6 +285,18 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ---
 
+## 2026-06-28 (Sunday) — Early Shift Week (Wk4)
+
+### Activity Summary
+- **Total steps (all day):** **1,700 / 10,000** ⚠️ (17% of goal)
+- **Shift:** Off today
+
+### Notes
+- Very low activity today (1,700 steps). Watch blood sugar response — low steps + carb intake may spike glucose.
+- Health metrics: pending (BP, weight, blood sugar not yet logged).
+
+---
+
 ## Template for New Days
 
 ```markdown
