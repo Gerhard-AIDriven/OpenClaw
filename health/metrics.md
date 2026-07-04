@@ -83,6 +83,7 @@
 |2026-06-22|115/72|101.0|7.2 (non-fasting, 3:20 AM ~9h after Father's Day dinner 18:30)|✅ Logged from morning check-in. **Non-fasting reading** — eaten only 9h prior, so glucose level is expected. Actual fasting reading needed tomorrow morning after pre-breakfast walk. Yesterday (Sun 2026-06-21) summary: pre-breakfast walk 18 min + breakfast 25g carbs + wraps 64g + pizza (4 slices) 30g = **119g total carbs** (54% of 219g target, very lean day for Father's Day celebration). Weight stable (100.8→101.0, +0.2kg—normal daily variation). Awaiting **true fasting glucose tomorrow morning** to assess insulin response to lean carb day.
 |2026-06-27|111/69|101.8|❓ (not logged yet)|✅ Weight tracking excellent — only 1.8kg above goal (100kg). BP solid. **Fasting glucose: ?** (ask Gerhard if available)
 |2026-07-03|133/77|105.4|5.7 (fasting)|✅ Excellent glucose control! 5.7 is below your sweet spot (6.0–6.4), very strong fasting reading. **Weight 105.4kg** — 5.4kg above goal, 3.6kg up from 2026-06-20 (100.8kg). **Gap alert:** No health tracking since 2026-06-27 (6 days). Need to understand: carbs hitting target? Walking routine maintained? What shift this week?
+|2026-07-04|131/77|105.2|5.9 (fasting)|✅ Excellent fasting glucose at 5.9 (perfect control). Weight down 0.2kg (105.4→105.2). BP solid (131/77, sys -2 from yesterday). **Key check:** Are you hitting your 219g carb target daily? Weight plateau (5.4kg above goal) suggests possible carb drift. Confirm nutrition tracking + pre-breakfast walks.
 
 ---
 

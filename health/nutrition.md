@@ -3,6 +3,12 @@
 Daily log of meals, macros, and nutrition notes for diabetes prevention.
 Health metrics such as blood pressure, weight, and blood sugar belong in `health/metrics.md` only.
 
+## 2026-07-04 (Saturday)
+
+| Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|-|-|-|-|-|-|-|
+| 05:30 | **Breakfast:** 40g Bokomo Weetbix + 0.5 cup low-fat milk + 30g blueberries + 1 boiled egg + black coffee | 310 | 38 | 15 | 9 | Strong start. Pre-breakfast walk: 18 min, 1,720 steps. ✅ |
+
 **Target Daily (updated 2026-05-14):** 1600 cal | Carbs 219g | Protein 120g | Fat 65g
 
 **Vital Health Foods Sweet & Sour Soy sauce (your standard for "soy sauce"):** per 100ml - 461 kJ; 25g carbs; 2.1g protein; fat <0.1g.
