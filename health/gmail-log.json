@@ -1,98 +1,134 @@
 {
-  "timestamp": "2026-05-12T12:02:23.953Z",
-  "count": 8,
+  "timestamp": "2026-07-03T16:00:49.103Z",
+  "count": 11,
   "opportunities": [],
   "emails": [
     {
-      "id": "19e11c4fc9b43594",
-      "subject": "Butchery plan data",
+      "id": "19f2357a19fd1d73",
+      "subject": "Fw: BONNIEVALE SPAR",
+      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
+      "date": "Thu, 2 Jul 2026 14:59:28 +0000",
+      "snippet": "From: receiving@bonspar.co.za &lt;receiving@bonspar.co.za&gt; Sent: Thursday, 02 July 2026 13:31 To: Phakama Mvandaba &lt;phakama.mvandaba@spar.co.za&gt;; WCReturns &lt;wcreturns@spar.co.za&gt; Cc: Ja",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f235775e0cc76b",
+      "subject": "Fw: BONNIEVALE SPAR",
+      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
+      "date": "Thu, 2 Jul 2026 14:59:16 +0000",
+      "snippet": "From: receiving@bonspar.co.za &lt;receiving@bonspar.co.za&gt; Sent: Thursday, 02 July 2026 13:32 To: Phakama Mvandaba &lt;phakama.mvandaba@spar.co.za&gt;; WCReturns &lt;wcreturns@spar.co.za&gt; Cc: Ja",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f23574ee6de878",
+      "subject": "Fw: BONNNIEVALE SPAR",
+      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
+      "date": "Thu, 2 Jul 2026 14:59:07 +0000",
+      "snippet": "From: receiving@bonspar.co.za &lt;receiving@bonspar.co.za&gt; Sent: Thursday, 02 July 2026 13:34 To: Phakama Mvandaba &lt;phakama.mvandaba@spar.co.za&gt;; WCReturns &lt;wcreturns@spar.co.za&gt; Cc: Ja",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f2357264cb9fa2",
+      "subject": "Fw: BONNIEVALE SPAR",
+      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
+      "date": "Thu, 2 Jul 2026 14:58:56 +0000",
+      "snippet": "From: receiving@bonspar.co.za &lt;receiving@bonspar.co.za&gt; Sent: Thursday, 02 July 2026 13:35 To: Phakama Mvandaba &lt;phakama.mvandaba@spar.co.za&gt;; WCReturns &lt;wcreturns@spar.co.za&gt; Cc: Ja",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f1f9123871bf18",
+      "subject": "Google Workspace: Your invoice is available for aidriven.biz",
+      "from": "Google Payments <payments-noreply@google.com>",
+      "date": "Wed, 01 Jul 2026 14:23:52 -0700",
+      "snippet": "Google Workspace Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email. IMPORTANT: The balance will be automatically charged so you don",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f1e09ae143f3bc",
+      "subject": "Ollama 0.31: Faster Gemma 4 on Apple Silicon with multi-token prediction (MTP)",
+      "from": "Ollama <hello@ollama.com>",
+      "date": "Wed, 1 Jul 2026 14:16:18 +0000",
+      "snippet": "Gemma 4 is now significantly faster in Ollama 0.31 with MLX. On Apple Silicon, it generates tokens nearly 90% faster on a coding agent benchmark, with no change to the model&#39;s output. The speedup",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f13e347521da85",
+      "subject": "[Legal Update] Changes to Google Terms of Service for Additional Services",
+      "from": "The Google Workspace Team <workspace-noreply@google.com>",
+      "date": "Mon, 29 Jun 2026 07:58:09 -0700",
+      "snippet": "We are updating our Terms of Service for users with access to Additional Services on Jul 30, 2026. We&#39;re updating the Google Terms of Service for users with access to Google Additional Services.",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f13ad54ea1fb30",
+      "subject": "Faster GLM-5.2 with new coding integration support",
+      "from": "Ollama <hello@ollama.com>",
+      "date": "Mon, 29 Jun 2026 13:59:14 +0000",
+      "snippet": "Ollama has added GLM-5.2 capacity for faster performance on Ollama&#39;s cloud with zero data retention on its US and European servers. To get started, download Ollama and run: ollama run glm-5.2:clou",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f0f37707792af7",
+      "subject": "Thank you for joining Ollama",
+      "from": "Ollama <hello@ollama.com>",
+      "date": "Sun, 28 Jun 2026 17:11:58 +0000",
+      "snippet": "Hello! Thanks for joining Ollama. If you haven&#39;t yet, make sure to download the app: Download Ollama Here are some examples of what you can build with Ollama: Set up a personal assistant with",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f00cceabb1389d",
+      "subject": "[Action Advised] Google Vids personal avatar feature and Admin control",
+      "from": "The Google Workspace Team <workspace-noreply@google.com>",
+      "date": "Thu, 25 Jun 2026 15:00:56 -0700",
+      "snippet": "Review the Administrative controls available to you. Dear administrator, We&#39;re preparing to release a new feature in Google Vids that will allow users to create a personal avatar using their own",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19efdd187e2c57ba",
+      "subject": "FW: OUTSTANDING DC CLAIMS",
       "from": "<manager@bonspar.co.za>",
-      "date": "Sun, 10 May 2026 14:03:28 +0200",
-      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19e0c9c14a175eb1",
-      "subject": "[GitHub] A first-party GitHub OAuth application has been added to your account",
-      "from": "GitHub <noreply@github.com>",
-      "date": "Sat, 09 May 2026 05:00:15 -0700",
-      "snippet": "Hey Gerhard-AIDriven! A first-party GitHub OAuth application (Git Credential Manager) with gist, repo, and workflow scopes was recently authorized to access your account. Visit https://github.com/",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19e0856f2052120e",
-      "subject": "Your OpenAI API account has been funded",
-      "from": "noreply@tm.openai.com",
-      "date": "Fri, 08 May 2026 16:06:14 +0000 (UTC)",
-      "snippet": "Hi AI Driven, We charged $11.50 to your credit card ending in 0550 to fund your OpenAI API credit balance. You may review your billing history at any time. You received this email because you have a",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19e074e94f47364a",
-      "subject": "FW: BNVS - STOCK & SALES ANALYSIS",
-      "from": "<manager@bonspar.co.za>",
-      "date": "Fri, 8 May 2026 13:17:52 +0200",
-      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From: Fanie",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19df7d872ce9789c",
-      "subject": "FW: 35297 SPAR Bonnievale 35297 WC SPAR ROC NATIONAL   (AssureCloud Non Conformance Report)",
-      "from": "<manager@bonspar.co.za>",
-      "date": "Tue, 5 May 2026 13:14:41 +0200",
+      "date": "Thu, 25 Jun 2026 10:07:52 +0200",
       "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From:",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19df7d83fe815f3e",
-      "subject": "FW: 35497T TOPS at SPAR Bonnievale 35497T WC SPAR RTTT NATIONAL   (AssureCloud Non Conformance Report)",
-      "from": "<manager@bonspar.co.za>",
-      "date": "Tue, 5 May 2026 13:14:26 +0200",
-      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From:",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19df29f7b163440e",
-      "subject": "FW: SALES SUMMARY.xls",
-      "from": "<manager@bonspar.co.za>",
-      "date": "Mon, 4 May 2026 12:54:21 +0200",
-      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From: Lea",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19df29f194adf3b7",
-      "subject": "FW: Monthly Sales VS Purchases Performance tracker.xlsx",
-      "from": "<manager@bonspar.co.za>",
-      "date": "Mon, 4 May 2026 12:53:53 +0200",
-      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From: Lea",
       "classification": {
         "isOpportunity": false,
         "isHighPriority": false,
