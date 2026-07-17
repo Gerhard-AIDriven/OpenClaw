@@ -4,7 +4,26 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ---
 
+## 2026-07-17 (Friday)
 
+### Walks
+
+| Time | Duration (min) | Steps | Notes |
+|------|----------------|-------|-------|
+| 12:29 | 17 | 1379 | Post-lunch walk |
+| 15:28 | 11 | 876 | Mid-afternoon walk |
+| 17:47 | 11 | 846 | Pre-dinner walk |
+
+### Daily Totals
+- **Total walks:** 3 / 4 (target: 4 with pre-breakfast)
+- **Total steps:** **10,138** / 10,000 ✅ (101% of goal!)
+- **Total walking time:** 39 minutes
+
+### Notes
+- Hit the 10k step goal! Great movement today.
+- Strong consistency with short, frequent walks to manage glucose.
+
+---
 
 ## 2026-05-21 (Thursday)
 
@@ -124,7 +143,7 @@ Daily log of walks, steps, and movement for insulin resistance management.
 
 ### Notes
 -
-
+S
 ---
 
 ## 2026-05-27 (Wednesday)
@@ -177,6 +196,8 @@ Daily log of walks, steps, and movement for insulin resistance management.
 | After breakfast | 15 | 1502 | After-breakfast walk |
 | After lunch | 17 | 1595 | After-lunch walk during shift |
 | Pre-dinner | 16 | 1590 | Pre-dinner walk |
+
+
 
 
 ### Daily Totals (FINAL) ✅
@@ -294,25 +315,3 @@ Daily log of walks, steps, and movement for insulin resistance management.
 ### Notes
 - Very low activity today (1,700 steps). Watch blood sugar response — low steps + carb intake may spike glucose.
 - Health metrics: pending (BP, weight, blood sugar not yet logged).
-
----
-
-## Template for New Days
-
-```markdown
-## YYYY-MM-DD (Day)
-
-### Walks
-
-| Time | Duration (min) | Steps | Notes |
-|------|----------------|-------|-------|
-|      |    |    |              |
-
-### Daily Totals
-- **Total walks:** - / 4 (target: 4 with pre-breakfast)
-- **Total steps:** - / 10000 (goal)
-- **Total walking time:** - minutes
-
-### Notes
--
-```
