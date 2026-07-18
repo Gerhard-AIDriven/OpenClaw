@@ -1,8 +1,80 @@
 {
-  "timestamp": "2026-07-03T16:00:49.103Z",
-  "count": 11,
+  "timestamp": "2026-07-18T15:56:59.630Z",
+  "count": 17,
   "opportunities": [],
   "emails": [
+    {
+      "id": "19f75a5e8d065abf",
+      "subject": "Your free Copilot access is ready",
+      "from": "GitHub <noreply@github.com>",
+      "date": "Sat, 18 Jul 2026 07:33:55 -0700",
+      "snippet": "Your free Copilot access is ready Gerhard-AIDriven, Start here: Install Copilot for your editor (or just sign in with your GitHub account if you use VS Code). Then ask Copilot about the code you&#39;r",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f71b937c257a08",
+      "subject": "OpenAI Dev News: OpenAI Build Week, GPT-5.6, ChatGPT Work",
+      "from": "OpenAI <noreply@email.openai.com>",
+      "date": "Fri, 17 Jul 2026 20:15:59 +0000 (UTC)",
+      "snippet": "That idea in your backlog has a deadline﻿. Build Week is open﻿. ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍͏ ͏ ‍",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f600a80505c13a",
+      "subject": "BONNIEVALE SPAR",
+      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
+      "date": "Tue, 14 Jul 2026 09:51:56 +0000",
+      "snippet": "Good day Please find attached claims Kin regards Jeff",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f4bfd38bf58282",
+      "subject": "Claim 755985 document",
+      "from": "<hr@bonspar.co.za>",
+      "date": "Fri, 10 Jul 2026 14:25:58 +0200",
+      "snippet": "",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f499a1fd96d167",
+      "subject": "All Aboard Open Models - Ollama Raises $65M to Accelerate Open Models",
+      "from": "Ollama <hello@ollama.com>",
+      "date": "Fri, 10 Jul 2026 01:17:44 +0000",
+      "snippet": "Michael and I first met in college, where we started our first company, Kitematic, which made Docker dead-simple to run. In 2015, it was acquired by Docker. There, our work became Docker Desktop,",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f2b75390022944",
+      "subject": "More access to advanced tools",
+      "from": "ChatGPT <noreply@email.openai.com>",
+      "date": "Sat, 04 Jul 2026 04:48:49 +0000 (UTC)",
+      "snippet": "Create more images, upload more files, and send more messages with advanced models. Do more with ChatGPT More room to chat, create, and explore—for a limited time. Try ChatGPT For a limited time, you",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
     {
       "id": "19f2357a19fd1d73",
       "subject": "Fw: BONNIEVALE SPAR",

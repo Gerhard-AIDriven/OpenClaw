@@ -3,6 +3,13 @@
 Daily log of meals, macros, and nutrition notes for diabetes prevention.
 Health metrics such as blood pressure, weight, and blood sugar belong in `health/metrics.md` only.
 
+## 2026-07-18 (Saturday)
+
+| Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|-|-|-|-|-|-|-|
+| 07:25 | **Breakfast:** 3x Ouma Muesli Rusks + 1 standard coffee | 615 | 82.5 | 12.6 | 23.5 | Logged. |
+| 17:24 | **Lunch:** 1x Spar Brown Wrap + 2 eggs + 2 slices polony + 40g Gouda + 1 standard coffee | 680 | 39 | 32 | 43 | Logged. |
+
 ## 2026-07-17 (Friday)
 
 | Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
