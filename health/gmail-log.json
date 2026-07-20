@@ -1,20 +1,8 @@
 {
-  "timestamp": "2026-07-18T15:56:59.630Z",
-  "count": 17,
+  "timestamp": "2026-07-19T06:42:00.903Z",
+  "count": 16,
   "opportunities": [],
   "emails": [
-    {
-      "id": "19f75a5e8d065abf",
-      "subject": "Your free Copilot access is ready",
-      "from": "GitHub <noreply@github.com>",
-      "date": "Sat, 18 Jul 2026 07:33:55 -0700",
-      "snippet": "Your free Copilot access is ready Gerhard-AIDriven, Start here: Install Copilot for your editor (or just sign in with your GitHub account if you use VS Code). Then ask Copilot about the code you&#39;r",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
     {
       "id": "19f71b937c257a08",
       "subject": "OpenAI Dev News: OpenAI Build Week, GPT-5.6, ChatGPT Work",
