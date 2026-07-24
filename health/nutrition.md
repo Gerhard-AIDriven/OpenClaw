@@ -1,7 +1,8 @@
-# Nutrition Tracking - 2026
+## 2026-07-23 (Thursday)
 
-Daily log of meals, macros, and nutrition notes for diabetes prevention.
-Health metrics such as blood pressure, weight, and blood sugar belong in `health/metrics.md` only.
+| Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|-|-|-|-|-|-|-|
+| 09:30 | **Breakfast:** 2 slices bacon + 1 egg on a white bun + 1 standard coffee | 480 | 32 | 18 | 28 | Logged. |
 
 ## 2026-07-18 (Saturday)
 

@@ -1,6 +1,3 @@
-| Date | Weight (kg) | Blood Pressure | Blood Sugar (mmol/L) | Notes |
-| :--- | :--- | :--- | :--- | :--- |
-| 2026-07-16 | 98.5 | 125/74 | 6.7 | |
-| 2026-07-17 | 98.7 | 120/76 | 6.9 | |
-| 2026-07-18 | 99.7 | 120/64 | | Not in fasting window; will measure tomorrow |
-| 2026-07-21 | 99.8 | 122/72 | 7.2 | |
+| Date | Weight (kg) | BP | Fasting Glucose (mmol/L) |
+| :--- | :--- | :--- | :--- |
+| 2026-07-23 | 100.6 | 120/75 | 6.2 |
