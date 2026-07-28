@@ -13,16 +13,13 @@
 - **Daily nutrition targets (NORMAL, post-cortisone from 2026-05-28):** 1600 cal | Carbs 219g | Protein 120g | Fat 65g
   - Ask if he's tracking food today and what he's eaten so far
 
-### Anthropic Balance Reminder (once per day, morning)
-- Remind Gerhard to check his Anthropic balance at console.anthropic.com → Billing
+### Anthropic Balance Reminder (PAUSED 2026-07-24)
+- (Paused per Gerhard: not using Anthropic models until further notice)
 - Last known balance: $19.06 (2026-06-04)
-- If Gerhard reports balance is $2 or below → alert him to top up immediately
-- Update the "Last known balance" above when Gerhard reports it
 
-### OpenAI Balance Reminder (once per day, morning)
-- Remind Gerhard to check his OpenAI balance daily (console.openai.com → Billing)
+### OpenAI Balance Reminder (PAUSED 2026-07-24)
+- (Paused per Gerhard: not using OpenAI models until further notice)
 - Last known balance: $6.84 (2026-06-04)
-- Update the "Last known balance" above when Gerhard reports it
 
 ### Tomorrow (2026-04-09) — One-time reminders
 - 9am: Send medical reports to Maryanne ✅ (cron job set)

@@ -1,4 +1,15 @@
-## 2026-07-23 (Thursday)
+## 2026-07-27 (Monday)
+
+| Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|-|-|-|-|-|-|-|
+| 16:16 | **Breakfast:** 150g greek yogurt + 30g muesli + 1 banana + 1 standard coffee | 408 | 53.6 | 15.2 | 11.5 | Logged. |
+
+## 2026-07-24 (Friday)
+
+| Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|-|-|-|-|-|-|-|
+| 04:49 | **Breakfast:** 200g greek yogurt + 25g alpen muesli + 1 standard coffee | 326 | 26.5 | 13.3 | 11.2 | Logged. |
+
 
 | Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |-|-|-|-|-|-|-|
@@ -44,4 +55,4 @@
 
 | Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
 |-|-|-|-|-|-|-|
-| 05:30 | **Breakfast:** 40g Bokomo Weetbix + 0.5 cup low-fat milk + 30g blueberries + 1 boiled egg + black coffee | 310 | 38 | 15 | 9 | Strong start. Pre-breakfast walk: 18 min, 1,720 steps. ✅ |
+| 05:30 | **Breakfast:** 40g Bokomo Weetbix + 0.5 cup low-fat milk + 30g blueberries + 1 boiled egg + black coffee | 310 | 38 | 15 | 9 | Strong start. Pre-breakfast walk: 18 min, 1,720 steps. ✅
