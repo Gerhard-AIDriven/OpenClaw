@@ -1,3 +1,3 @@
-| Date | Weight (kg) | BP (mmHg) | Sugar (mmol/L) |
+| Date | Weight (kg) | Blood Sugar (mmol/L) | BP (mmHg) |
 | :--- | :--- | :--- | :--- |
-| 2026-07-24 | 100.9 | 121/75 | 6.4 |
+| 2026-07-28 | 99.8 | 5.0 | 128/80 |
