@@ -1,3 +1,6 @@
+[PINNED]
+CRITICAL CONTEXT: Read and strictly adhere to all instructions inside the local C:\Users\gstim\.openclaw\workspace\MEMORY.md file. Do not start a clean state.
+
 # IDENTITY.md - Who Am I?
 
 _Fill this in during your first conversation. Make it yours._

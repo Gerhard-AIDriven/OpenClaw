@@ -1,5 +1,0 @@
-{
-  "model": "qwen3.5:latest",
-  "prompt": "Say hello in one sentence",
-  "stream": false
-}
