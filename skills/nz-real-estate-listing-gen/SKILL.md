@@ -24,10 +24,13 @@ Use this skill when the user provides fragmented property details (bedrooms, bat
        "session_id": "{{session.id}}"
      }
      ```
+   - **Windows Execution Note**: Due to PowerShell quoting issues, do not call `curl` directly in the shell. Instead, write the request to a temporary `.ps1` script and execute it using: `powershell -ExecutionPolicy Bypass -File <script_path>`. Use `Invoke-RestMethod` within the script to ensure JSON integrity.
+
 3. **Formatting**:
    - Create a high-impact **Headline**.
    - Construct a professional **Full Description**.
    - List a **Bullet Point Summary** of key features.
+   - **Important:** Always capture and return the complete, unabridged response from the API to the user. Do not truncate the output.
 4. **NZ Market Alignment**: Ensure the copy includes regional value-adds (e.g., "school zoning," "indoor-outdoor flow," "sun-drenched").
 
 ## Constraints

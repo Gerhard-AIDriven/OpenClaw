@@ -1,10 +1,10 @@
 {
   "lastChecks": {
-    "email": 1785232800,
-    "calendar": 1785232800,
-    "projects": 1785232800,
-    "health": 1785232800
+    "email": 1785859200,
+    "calendar": 1785859200,
+    "projects": 1785859200,
+    "health": 1785859200
   },
-  "lastHeartbeat": 1785232800,
-  "note": "2026-07-28 12:00 — Tuesday midday heartbeat. Health metrics already logged."
+  "lastHeartbeat": 1785859200,
+  "note": "2026-07-31 16:00 — Friday afternoon heartbeat. Found 20 unread emails; none flagged as urgent by monitor."
 }

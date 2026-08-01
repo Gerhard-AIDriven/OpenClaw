@@ -1,8 +1,200 @@
 {
-  "timestamp": "2026-07-21T06:41:56.883Z",
-  "count": 16,
+  "timestamp": "2026-07-31T14:00:31.963Z",
+  "count": 20,
   "opportunities": [],
   "emails": [
+    {
+      "id": "19fb40495bb497ec",
+      "subject": "From contacts to conversations",
+      "from": "Apollo <hello@mail.apollo.io>",
+      "date": "Thu, 30 Jul 2026 17:13:46 +0000",
+      "snippet": "You&#39;ve built a list. Here&#39;s the move that turns it into actual outreach. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fb3d8c8dc05cc1",
+      "subject": "New login from Android (Chrome Mobile)",
+      "from": "Link <notifications@link.com>",
+      "date": "Thu, 30 Jul 2026 16:25:56 +0000",
+      "snippet": "We noticed a login to your Link account from a new device. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fb339a2251416f",
+      "subject": "Welcome to Parallel",
+      "from": "Parallel Web Systems <welcome@notifications.parallel.ai>",
+      "date": "Thu, 30 Jul 2026 13:32:06 +0000",
+      "snippet": "Welcome to Parallel ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏﻿ ‌​‍‎‏",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19faede33acb9dbf",
+      "subject": "Most teams stop at 4 filters. Here's what's beyond that.",
+      "from": "Apollo <hello@mail.apollo.io>",
+      "date": "Wed, 29 Jul 2026 17:13:44 +0000",
+      "snippet": "Tech stack. Buying intent. Job changes. Here&#39;s why they make a difference. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fa9b73b61666f9",
+      "subject": "The 4 filters successful Apollo teams always use",
+      "from": "Apollo <hello@mail.apollo.io>",
+      "date": "Tue, 28 Jul 2026 17:13:04 +0000",
+      "snippet": "Most people only set one or two. Here&#39;s the combination that actually tightens your list. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fa9a875ca77c5a",
+      "subject": "Ollama weekly usage at 90%",
+      "from": "Ollama <hello@ollama.com>",
+      "date": "Tue, 28 Jul 2026 16:56:56 +0000",
+      "snippet": "Hello interesting_jones_598, You&#39;ve reached 90% of your weekly limit for your free plan. Your usage resets in in 5 days, or you can upgrade your plan for higher limits: Upgrade Ollama Just a as a",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fa89b3b09ddac3",
+      "subject": "Don't let your free plan hold you back",
+      "from": "Apollo <hello@mail.apollo.io>",
+      "date": "Tue, 28 Jul 2026 12:02:50 +0000",
+      "snippet": "Upgrade today and prospect without limits. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fa885b469c7cd4",
+      "subject": "Ollama session usage at 90%",
+      "from": "Ollama <hello@ollama.com>",
+      "date": "Tue, 28 Jul 2026 11:39:22 +0000",
+      "snippet": "Hello interesting_jones_598, You&#39;ve reached 90% of your session limit for your free plan. Your usage resets in in 20 minutes, or you can upgrade your plan for higher limits: Upgrade Ollama Just a",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fa490d8252efe6",
+      "subject": "Your first list of buyers takes 2 minutes",
+      "from": "Apollo <hello@mail.apollo.io>",
+      "date": "Mon, 27 Jul 2026 17:13:03 +0000",
+      "snippet": "275M+ contacts. Filter by title, industry, location. A targeted list of verified buyers in under 2 minutes. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fa43b5fd67aa24",
+      "subject": "Claims outstanding",
+      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
+      "date": "Mon, 27 Jul 2026 15:39:36 +0000",
+      "snippet": "",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19fa374e288973b4",
+      "subject": "Unlock advanced filters + 30,000 credits",
+      "from": "Apollo <hello@mail.apollo.io>",
+      "date": "Mon, 27 Jul 2026 12:02:53 +0000",
+      "snippet": "Upgrade today to find your best buyers faster. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f9e4e6b49c0ac4",
+      "subject": "Smarter filters = smarter prospecting",
+      "from": "Apollo Team <win@mail.apollo.io>",
+      "date": "Sun, 26 Jul 2026 12:02:46 +0000",
+      "snippet": "Target the right buyers 10x faster with advanced filters. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f9e3fd417ece75",
+      "subject": "Mailbox Linked",
+      "from": "Apollo <support@apollo.io>",
+      "date": "Sun, 26 Jul 2026 11:46:51 +0000",
+      "snippet": "A user (gerhard@aidriven.biz) on your team just linked a new mailbox (gerhard@aidriven.biz). If this change was unexpected, you can reset it as a team admin or contact support. ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f9e3c43c4245d7",
+      "subject": "Welcome to Apollo - your sales journey starts here",
+      "from": "Apollo <hello@mail.apollo.io>",
+      "date": "Sun, 26 Jul 2026 11:42:57 +0000",
+      "snippet": "Get started with your all-in-one platform for building pipeline and booking more meetings ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ͏ ",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f8d8099bd803a8",
+      "subject": "[Notice] Possible unresolved security risks in your Admin Console",
+      "from": "The Google Workspace Team <workspace-noreply@google.com>",
+      "date": "Wed, 22 Jul 2026 22:44:02 -0700",
+      "snippet": "Take action now for better protection. We found some security gaps for your organization Review the latest issues we found below. Take action now to better protect your organization, with just a few",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
+    {
+      "id": "19f8bd2c2c3bdba9",
+      "subject": "[Action Advised] Secure Google Cloud Identity users with required 2SV",
+      "from": "Google Cloud <CloudPlatform-noreply@google.com>",
+      "date": "Wed, 22 Jul 2026 14:54:33 -0700",
+      "snippet": "2SV will be required for Cloud Identity users starting Oct 20, 2026. MY CONSOLE Hello Gerhard, We&#39;re writing to inform you about an upcoming security update for your organization. Starting October",
+      "classification": {
+        "isOpportunity": false,
+        "isHighPriority": false,
+        "reason": ""
+      }
+    },
     {
       "id": "19f71b937c257a08",
       "subject": "OpenAI Dev News: OpenAI Build Week, GPT-5.6, ChatGPT Work",
@@ -45,150 +237,6 @@
       "from": "Ollama <hello@ollama.com>",
       "date": "Fri, 10 Jul 2026 01:17:44 +0000",
       "snippet": "Michael and I first met in college, where we started our first company, Kitematic, which made Docker dead-simple to run. In 2015, it was acquired by Docker. There, our work became Docker Desktop,",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f2b75390022944",
-      "subject": "More access to advanced tools",
-      "from": "ChatGPT <noreply@email.openai.com>",
-      "date": "Sat, 04 Jul 2026 04:48:49 +0000 (UTC)",
-      "snippet": "Create more images, upload more files, and send more messages with advanced models. Do more with ChatGPT More room to chat, create, and explore—for a limited time. Try ChatGPT For a limited time, you",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f2357a19fd1d73",
-      "subject": "Fw: BONNIEVALE SPAR",
-      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
-      "date": "Thu, 2 Jul 2026 14:59:28 +0000",
-      "snippet": "From: receiving@bonspar.co.za &lt;receiving@bonspar.co.za&gt; Sent: Thursday, 02 July 2026 13:31 To: Phakama Mvandaba &lt;phakama.mvandaba@spar.co.za&gt;; WCReturns &lt;wcreturns@spar.co.za&gt; Cc: Ja",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f235775e0cc76b",
-      "subject": "Fw: BONNIEVALE SPAR",
-      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
-      "date": "Thu, 2 Jul 2026 14:59:16 +0000",
-      "snippet": "From: receiving@bonspar.co.za &lt;receiving@bonspar.co.za&gt; Sent: Thursday, 02 July 2026 13:32 To: Phakama Mvandaba &lt;phakama.mvandaba@spar.co.za&gt;; WCReturns &lt;wcreturns@spar.co.za&gt; Cc: Ja",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f23574ee6de878",
-      "subject": "Fw: BONNNIEVALE SPAR",
-      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
-      "date": "Thu, 2 Jul 2026 14:59:07 +0000",
-      "snippet": "From: receiving@bonspar.co.za &lt;receiving@bonspar.co.za&gt; Sent: Thursday, 02 July 2026 13:34 To: Phakama Mvandaba &lt;phakama.mvandaba@spar.co.za&gt;; WCReturns &lt;wcreturns@spar.co.za&gt; Cc: Ja",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f2357264cb9fa2",
-      "subject": "Fw: BONNIEVALE SPAR",
-      "from": "\"receiving@bonspar.co.za\" <receiving@bonspar.co.za>",
-      "date": "Thu, 2 Jul 2026 14:58:56 +0000",
-      "snippet": "From: receiving@bonspar.co.za &lt;receiving@bonspar.co.za&gt; Sent: Thursday, 02 July 2026 13:35 To: Phakama Mvandaba &lt;phakama.mvandaba@spar.co.za&gt;; WCReturns &lt;wcreturns@spar.co.za&gt; Cc: Ja",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f1f9123871bf18",
-      "subject": "Google Workspace: Your invoice is available for aidriven.biz",
-      "from": "Google Payments <payments-noreply@google.com>",
-      "date": "Wed, 01 Jul 2026 14:23:52 -0700",
-      "snippet": "Google Workspace Your Google Workspace monthly invoice is available. Please find the PDF document attached at the bottom of this email. IMPORTANT: The balance will be automatically charged so you don",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f1e09ae143f3bc",
-      "subject": "Ollama 0.31: Faster Gemma 4 on Apple Silicon with multi-token prediction (MTP)",
-      "from": "Ollama <hello@ollama.com>",
-      "date": "Wed, 1 Jul 2026 14:16:18 +0000",
-      "snippet": "Gemma 4 is now significantly faster in Ollama 0.31 with MLX. On Apple Silicon, it generates tokens nearly 90% faster on a coding agent benchmark, with no change to the model&#39;s output. The speedup",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f13e347521da85",
-      "subject": "[Legal Update] Changes to Google Terms of Service for Additional Services",
-      "from": "The Google Workspace Team <workspace-noreply@google.com>",
-      "date": "Mon, 29 Jun 2026 07:58:09 -0700",
-      "snippet": "We are updating our Terms of Service for users with access to Additional Services on Jul 30, 2026. We&#39;re updating the Google Terms of Service for users with access to Google Additional Services.",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f13ad54ea1fb30",
-      "subject": "Faster GLM-5.2 with new coding integration support",
-      "from": "Ollama <hello@ollama.com>",
-      "date": "Mon, 29 Jun 2026 13:59:14 +0000",
-      "snippet": "Ollama has added GLM-5.2 capacity for faster performance on Ollama&#39;s cloud with zero data retention on its US and European servers. To get started, download Ollama and run: ollama run glm-5.2:clou",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f0f37707792af7",
-      "subject": "Thank you for joining Ollama",
-      "from": "Ollama <hello@ollama.com>",
-      "date": "Sun, 28 Jun 2026 17:11:58 +0000",
-      "snippet": "Hello! Thanks for joining Ollama. If you haven&#39;t yet, make sure to download the app: Download Ollama Here are some examples of what you can build with Ollama: Set up a personal assistant with",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19f00cceabb1389d",
-      "subject": "[Action Advised] Google Vids personal avatar feature and Admin control",
-      "from": "The Google Workspace Team <workspace-noreply@google.com>",
-      "date": "Thu, 25 Jun 2026 15:00:56 -0700",
-      "snippet": "Review the Administrative controls available to you. Dear administrator, We&#39;re preparing to release a new feature in Google Vids that will allow users to create a personal avatar using their own",
-      "classification": {
-        "isOpportunity": false,
-        "isHighPriority": false,
-        "reason": ""
-      }
-    },
-    {
-      "id": "19efdd187e2c57ba",
-      "subject": "FW: OUTSTANDING DC CLAIMS",
-      "from": "<manager@bonspar.co.za>",
-      "date": "Thu, 25 Jun 2026 10:07:52 +0200",
-      "snippet": "Kind Regards Jan Prins Store Manager SPAR Bonnievale Western Cape Tel: +27 (0) 23 616 2670 | E-mail: manager@bonspar.co.za 85 Main Road; Bonnievale; 6730 Description: SPAR email signature From:",
       "classification": {
         "isOpportunity": false,
         "isHighPriority": false,
