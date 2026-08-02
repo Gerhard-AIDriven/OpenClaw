@@ -3,39 +3,32 @@ name: "nz-real-estate-listing-gen"
 description: "A skill to convert fragmented property notes into professional NZ real estate listings for Trade Me and Realestate.co.nz via a local API endpoint."
 ---
 
-# Skill: NZ Real Estate Property Listing Generator
+# NZ Real Estate Listing Generator Skill
 
 ## Description
-Converts rough, fragmented agent notes about a property (house, section, etc.) into professional, high-converting listings tailored for the New Zealand market (Trade Me and Realestate.co.nz).
+This skill transforms raw property notes into professional real estate advertisements and integrates with the local real estate API to save the property data.
 
-## Trigger
-Use this skill when the user provides fragmented property details (bedrooms, bathrooms, location, unique features, price) and requests a professional listing description.
+## API Specification
+- **Base URL:** `http://127.0.0.1:8000` (Ensure this is used instead of http://localhost:11434/)
+- **Endpoint:** `/api/v1/realestate/listing`
+- **Method:** `POST`
+- **Payload:** JSON object containing property details.
 
 ## Procedure
-1. **Parameter Extraction**: Extract key details from the notes.
-2. **API Execution**: Send the notes to the local listing generation endpoint.
-   - **Endpoint**: `http://127.0.0.1:8000`
-   - **Method**: `POST`
-   - **Payload**: 
-     ```json
-     {
-       "raw_text": "{{message.content}}",
-       "agent_id": "{{agent.id}}",
-       "session_id": "{{session.id}}"
-     }
-     ```
-   - **Windows Execution Note**: Due to PowerShell quoting issues, do not call `curl` directly in the shell. Instead, write the request to a temporary `.ps1` script and execute it using: `powershell -ExecutionPolicy Bypass -File <script_path>`. Use `Invoke-RestMethod` within the script to ensure JSON integrity.
 
-3. **Formatting**:
-   - Create a high-impact **Headline**.
-   - Construct a professional **Full Description**.
-   - List a **Bullet Point Summary** of key features.
-   - **Important:** Always capture and return the complete, unabridged response from the API to the user. Do not truncate the output.
-4. **NZ Market Alignment**: Ensure the copy includes regional value-adds (e.g., "school zoning," "indoor-outdoor flow," "sun-drenched").
+### 1. Gather and Extract Property Data
+Extract key features from the user's input (Location, Bedrooms, Bathrooms, Price, Features).
 
-## Constraints
-- Only execute if minimum parameters (e.g., location and property type) are present.
-- If the API call fails, the agent should fallback to generating a high-quality listing manually using its internal knowledge of NZ real estate copywriting.
+### 2. Automatically Save to Database
+Send the extracted data to the local API.
 
-## Tooling
-- `exec` (curl) for the API call.
+**Handling the API Result (Debugging Priority):**
+- **Success:** Proceed to generate the full advertisement.
+- **Failure:** Stop and provide the **full, raw error detail** from the API.
+
+### 3. Generate and Present FULL Advertisement
+When a **new** listing is provided by the user, always generate and present the **full listing text** (the comprehensive ad) as the primary response. This allows the user to review the marketing copy immediately.
+
+## Example Workflow
+- **User:** "New listing in Orewa, 4 bed, 2 bath, 1.4M..."
+- **Assistant:** (Saves to API) $\rightarrow$ (API Success) $\rightarrow$ "Property saved. Here is the full advertisement: [Full Detailed Ad Text]"

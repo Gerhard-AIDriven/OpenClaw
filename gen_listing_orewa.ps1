@@ -1,5 +1,5 @@
 $body = @{
-    raw_text = "New apartment in Napier. 3bed 1.5 bath. 2 beds on 1st floor, 1 bed on ground floor. Openplan lounge and kitchen. 2 Open parkings. Price 999000."
+    raw_text = "3 bedroom, office with seperate entrance, 3 bathrooms, large well equiped kitchen with buttlers pantry, double garage in Orewa for 2million."
     agent_id = "sebastian"
     session_id = "85e79f95-3f0a-4d37-94b7-b6eeb9a90fd8"
 } | ConvertTo-Json
