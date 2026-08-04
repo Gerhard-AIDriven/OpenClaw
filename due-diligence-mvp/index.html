@@ -1,0 +1,1760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Due Diligence Report | AI Driven</title>
+    <meta name="description" content="Fast, affordable property due diligence reports for Hawke's Bay. Screen properties before making an offer." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --bg: #000000;
+            --orange: #f7931e;
+            --orange-light: #fbb040;
+            --purple: #8b2fc9;
+            --purple-light: #a855f7;
+            --white: #ffffff;
+            --muted: #888899;
+            --card: #111111;
+            --border: rgba(247,147,30,0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: #f0f0f0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Background glow effects */
+        body::before {
+            content: '';
+            position: fixed;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(139,47,201,0.12) 0%, transparent 65%);
+            top: 30%; left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+        body::after {
+            content: '';
+            position: fixed;
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(247,147,30,0.08) 0%, transparent 65%);
+            top: 60%; left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 160px;
+            width: auto;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #f0f0f0;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--orange);
+        }
+
+        nav a.cta-button {
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            padding: 0.5rem 1.25rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        nav a.cta-button:hover {
+            color: #f0f0f0;
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(247,147,30,0.1);
+            border: 1px solid rgba(247,147,30,0.35);
+            color: var(--orange);
+            padding: 0.4rem 1.1rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1.8rem;
+        }
+
+        .hero h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #f0f0f0;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--orange), var(--orange-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: #e0e0e0;
+            max-width: 600px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-features {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        .feature-check {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .section-header h2 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-header h2 span {
+            background: linear-gradient(90deg, var(--orange), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-header p {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--purple), var(--orange));
+            border-radius: 2px;
+            margin: 1.5rem auto;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--orange);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .about-photo {
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            border-radius: 16px;
+            padding: 8px;
+        }
+
+        .about-photo-placeholder {
+            background: var(--card);
+            border-radius: 12px;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e0e0e0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .about-content h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: #f0f0f0;
+        }
+
+        .about-content p {
+            color: #e0e0e0;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-quote {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(247,147,30,0.05);
+            border-left: 3px solid var(--orange);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .about-quote p {
+            font-style: italic;
+            color: #f0f0f0;
+            margin-bottom: 0.75rem;
+        }
+
+        .about-quote cite {
+            color: var(--orange);
+            font-style: normal;
+            font-weight: 600;
+        }
+
+        .about-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #e0e0e0;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* Sample Report Section */
+        .sample-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sample-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--orange), var(--purple));
+        }
+
+        .sample-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: rgba(247,147,30,0.1);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+
+        .sample-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 12px;
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .sample-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .sample-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 2.5rem;
+            text-align: left;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sample-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: #e0e0e0;
+            font-size: 0.95rem;
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            background: rgba(247,147,30,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--orange);
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        /* Professionals Section */
+        .pros-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .pro-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .pro-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--orange);
+        }
+
+        .pro-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .pro-card h4 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .pro-card p {
+            color: #e0e0e0;
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
+
+        .use-cases {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+        }
+
+        .use-cases h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #f0f0f0;
+        }
+
+        .use-cases-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .use-case h4 {
+            color: var(--orange);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .use-case ul {
+            list-style: none;
+            margin-left: 2rem;
+        }
+
+        .use-case li {
+            color: #e0e0e0;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+
+        .use-case li::before {
+            content: '•';
+            color: var(--purple);
+            font-weight: bold;
+            position: absolute;
+            left: -1.25rem;
+        }
+
+        .pros-cta {
+            margin-top: 2.5rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .pros-cta h4 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #f0f0f0;
+        }
+
+        .pros-cta p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .pros-cta a {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--white);
+            color: var(--orange);
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .pros-cta a:hover {
+            transform: scale(1.05);
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.02);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: rgba(247,147,30,0.05);
+        }
+
+        .faq-icon {
+            width: 28px;
+            height: 28px;
+            flex-shrink: 0;
+        }
+
+        .faq-icon circle {
+            stroke: var(--orange);
+            stroke-width: 2;
+            fill: none;
+        }
+
+        .faq-icon path {
+            stroke: var(--orange);
+            stroke-width: 2;
+            fill: none;
+            stroke-linecap: round;
+        }
+
+        .faq-question h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #f0f0f0;
+            flex: 1;
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #e0e0e0;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .faq-answer ul {
+            margin-left: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Guarantee Banner */
+        .guarantee {
+            padding: 4rem 0;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            position: relative;
+            z-index: 1;
+        }
+
+        .guarantee-content {
+            text-align: center;
+            color: #f0f0f0;
+        }
+
+        .guarantee-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            fill: var(--white);
+            opacity: 0.9;
+        }
+
+        .guarantee h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .guarantee p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        /* Pricing Section */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: transform 0.3s, border-color 0.3s;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--orange);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--orange);
+            box-shadow: 0 0 30px rgba(247,147,30,0.15);
+        }
+
+        .pricing-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            color: #f0f0f0;
+            padding: 0.35rem 1rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .pricing-name {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #f0f0f0;
+        }
+
+        .pricing-price {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            color: #e0e0e0;
+            margin-bottom: 0.75rem;
+            padding-left: 1.5rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--orange);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .pricing-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            color: #f0f0f0;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: opacity 0.3s, transform 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .pricing-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Form Section */
+        .form-section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .form-header h2 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #f0f0f0;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            color: #e0e0e0;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #f0f0f0;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: #f0f0f0;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--orange);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.25rem;
+        }
+
+        .checkbox-group label {
+            color: #e0e0e0;
+            font-weight: 400;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .required {
+            color: var(--orange);
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: linear-gradient(135deg, var(--orange), var(--purple));
+            color: #f0f0f0;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s, transform 0.3s;
+            margin-top: 2rem;
+        }
+
+        .submit-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .secure-badge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: #e0e0e0;
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0,0,0,0.5);
+            border-top: 1px solid var(--border);
+            padding: 4rem 0 2rem;
+            margin-top: 5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h4 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #f0f0f0;
+            margin-bottom: 1.25rem;
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: #e0e0e0;
+            line-height: 2;
+            font-size: 0.95rem;
+        }
+
+        .footer-section a {
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--orange);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            color: #e0e0e0;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .about-grid,
+            .pros-grid,
+            .use-cases-grid,
+            .pricing-grid,
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            .sample-features {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            .hero-features {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="../aidriven-website/logo.png" alt="AI Driven Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#sample-report">Sample Report</a></li>
+                    <li><a href="#professionals">For Professionals</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#order" class="cta-button">Order Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">🚀 Fast & Affordable Property Due Diligence</div>
+            <h1>Property <span>Due Diligence</span> Reports</h1>
+            <p>Screen properties in minutes, not days. Get comprehensive data from LINZ and council databases at a fraction of LIM cost. Perfect for pre-offer due diligence.</p>
+            
+            <div class="hero-features">
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <span>24-48 Hour Turnaround</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <span>From $75 NZD</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <span>LINZ + Council Data</span>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-check">✓</div>
+                    <span>Investment Metrics Included</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How <span>It Works</span></h2>
+                <div class="divider"></div>
+                <p>Three simple steps to your comprehensive property report</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📝</div>
+                    <h4 style="font-family: 'Rajdhani', sans-serif; font-size: 1.4rem; margin-bottom: 1rem; color: #f0f0f0;">1. Submit Property Details</h4>
+                    <p style="color: #e0e0e0; line-height: 1.7;">Complete our simple form with the property address and your requirements. Takes less than 2 minutes.</p>
+                </div>
+
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">⚙️</div>
+                    <h4 style="font-family: 'Rajdhani', sans-serif; font-size: 1.4rem; margin-bottom: 1rem; color: #f0f0f0;">2. We Generate Your Report</h4>
+                    <p style="color: #e0e0e0; line-height: 1.7;">Our system aggregates data from LINZ, council databases, and public records into a comprehensive PDF report.</p>
+                </div>
+
+                <div class="card" style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+                    <h4 style="font-family: 'Rajdhani', sans-serif; font-size: 1.4rem; margin-bottom: 1rem; color: #f0f0f0;">3. Receive & Review</h4>
+                    <p style="color: #e0e0e0; line-height: 1.7;">Get your professional PDF report via email within 24-48 hours. Review insights and make informed decisions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About + Sample Report Section -->
+    <section id="about-sample" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+                
+                <!-- Left: About AI Driven -->
+                <div id="about">
+                    <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                        <h2>About <span>AI Driven</span></h2>
+                        <div class="divider" style="margin: 1.5rem 0;"></div>
+                        <p style="text-align: left;">Practical AI for real businesses – starting with property due diligence</p>
+                    </div>
+
+                    <div class="about-grid" style="display: block;">
+                        <div class="about-photo">
+                            <img src="../aidriven-website/GWS Profile pic - small.jpg" alt="Gerhard Stimie" style="width: 60%; border-radius: 12px; display: block; margin: 0 auto;">
+                        </div>
+
+                        <div class="about-content" style="margin-top: 2rem;">
+                            <h3>Hi, I'm Gerhard</h3>
+                            <p>I've spent 30 years as a Business Analyst and Project Manager implementing large-scale systems across New Zealand and South Africa. With an MBL from UNISA and experience spanning call centre management, import/export, and now AI consulting, I've seen firsthand how technology can transform business processes.</p>
+
+                            <p><strong>Why I built this:</strong> When I started exploring property investment in Hawke's Bay, I was shocked at how slow and expensive basic property research was. A formal LIM costs $300-$450 and takes 3-5 working days. For investors screening multiple properties, that adds up fast – both in cost and missed opportunities.</p>
+
+                            <p>I realized that 70% of the data in a LIM is already available digitally through LINZ and council databases. The problem? It's scattered across multiple systems, requiring manual lookup and cross-referencing. Sound familiar if you're a busy professional?</p>
+
+                            <p><strong>AI Driven</strong> automates that aggregation process. What used to take hours of manual research now happens in minutes, delivering a comprehensive report at a fraction of the cost. It's not a replacement for a formal LIM (you'll still need that for settlement), but it's the perfect screening tool for the pre-offer phase.</p>
+
+                            <div class="about-quote">
+                                <p>"My goal is to make property due diligence fast, affordable, and accessible – so you can make informed decisions without breaking the bank or waiting days for answers."</p>
+                                <cite>– Gerhard Stimie, Founder</cite>
+                            </div>
+
+                            <div class="about-stats">
+                                <div class="stat-card">
+                                    <div class="stat-number">30+</div>
+                                    <div class="stat-label">Years Experience</div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-number">MBL</div>
+                                    <div class="stat-label">UNISA Graduate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Sample Report -->
+                <div id="sample-report">
+                    <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                        <h2>See a <span>Sample Report</span></h2>
+                        <div class="divider" style="margin: 1.5rem 0;"></div>
+                        <p style="text-align: left;">Don't just take our word for it – see exactly what you'll receive</p>
+                    </div>
+
+                    <div class="sample-card">
+                        <div class="sample-icon">📄</div>
+                        <h3 style="font-family: 'Rajdhani', sans-serif; font-size: 1.8rem; margin-bottom: 1rem; color: #f0f0f0;">Sample Property Due Diligence Report</h3>
+                        <p style="color: #e0e0e0; line-height: 1.7; margin-bottom: 1.5rem;">This is a complete 7-page sample report for 42 Marewa Road, Napier. See exactly what data we include, how it's formatted, and the insights you'll receive.</p>
+
+                        <a href="#" class="sample-btn" onclick="alert('Sample PDF will be linked here once generated at home')" style="display: block; text-align: center;">📄 View Sample Report (PDF)</a>
+
+                        <div class="sample-features" style="margin-top: 2rem;">
+                            <div class="sample-feature">
+                                <div class="check-icon">✓</div>
+                                <span>Property ID & Title Details</span>
+                            </div>
+                            <div class="sample-feature">
+                                <div class="check-icon">✓</div>
+                                <span>Zoning Analysis</span>
+                            </div>
+                            <div class="sample-feature">
+                                <div class="check-icon">✓</div>
+                                <span>Natural Hazards Check</span>
+                            </div>
+                            <div class="sample-feature">
+                                <div class="check-icon">✓</div>
+                                <span>Infrastructure & Services</span>
+                            </div>
+                            <div class="sample-feature">
+                                <div class="check-icon">✓</div>
+                                <span>HAIL Contamination Screen</span>
+                            </div>
+                            <div class="sample-feature">
+                                <div class="check-icon">✓</div>
+                                <span>Building Consents Summary</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- For Professionals Section -->
+    <section id="professionals" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <div class="section-header">
+                <h2>For <span>Property Professionals</span></h2>
+                <div class="divider"></div>
+                <p>Built for QSs, valuers, real estate agents, and building consultants who need fast, reliable property data</p>
+            </div>
+
+            <div class="pros-grid">
+                <div class="pro-card">
+                    <div class="pro-icon">⏱️</div>
+                    <h4>Save 3+ Hours Per Property</h4>
+                    <p>Automate the initial research phase. Get all the key data in one report instead of calling councils, searching LINZ, and cross-referencing files.</p>
+                </div>
+
+                <div class="pro-card">
+                    <div class="pro-icon">💰</div>
+                    <h4>High-Margin Service Add-On</h4>
+                    <p>Offer enhanced due diligence to your clients at a fraction of LIM cost. Keep the margin or pass savings on – your choice.</p>
+                </div>
+
+                <div class="pro-card">
+                    <div class="pro-icon">📊</div>
+                    <h4>Investment Metrics Built-In</h4>
+                    <p>Standard & Premium reports include rental yield analysis, cash flow projections, and market comparisons – perfect for investor clients.</p>
+                </div>
+            </div>
+
+            <div class="use-cases">
+                <h3>Who Uses Our Reports?</h3>
+                <div class="use-cases-grid">
+                    <div class="use-case">
+                        <h4>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--orange)" stroke-width="2"/><path d="M12 8v4l3 3" stroke="var(--orange)" stroke-width="2" stroke-linecap="round"/></svg>
+                            Quantity Surveyors
+                        </h4>
+                        <ul>
+                            <li>Fast initial research for depreciation schedules</li>
+                            <li>Verify property age, construction type, improvements</li>
+                            <li>Check consent history before client meetings</li>
+                            <li>Bulk pricing available for practices</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h4>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--orange)" stroke-width="2"/><path d="M12 8v4l3 3" stroke="var(--orange)" stroke-width="2" stroke-linecap="round"/></svg>
+                            Real Estate Agents
+                        </h4>
+                        <ul>
+                            <li>Pre-listing due diligence for vendor packs</li>
+                            <li>Answer buyer questions faster</li>
+                            <li>Flag potential issues before they derail deals</li>
+                            <li>First 3 reports free for partner agencies</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h4>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--orange)" stroke-width="2"/><path d="M12 8v4l3 3" stroke="var(--orange)" stroke-width="2" stroke-linecap="round"/></svg>
+                            Property Valuers
+                        </h4>
+                        <ul>
+                            <li>Quick title and zoning verification</li>
+                            <li>Hazard checks before site visits</li>
+                            <li>Comparable sales data in Premium reports</li>
+                            <li>Supporting documentation for valuation reports</li>
+                        </ul>
+                    </div>
+
+                    <div class="use-case">
+                        <h4>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="var(--orange)" stroke-width="2"/><path d="M12 8v4l3 3" stroke="var(--orange)" stroke-width="2" stroke-linecap="round"/></svg>
+                            Building Consultants
+                        </h4>
+                        <ul>
+                            <li>Consent history overview before inspections</li>
+                            <li>Identify unconsented work red flags</li>
+                            <li>Hazard awareness for client safety</li>
+                            <li>Complement detailed building reports</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="pros-cta">
+                    <h4>Interested in Bulk or Corporate Pricing?</h4>
+                    <p>We offer discounted rates for practices ordering 10+ reports per month. Let's discuss your needs.</p>
+                    <a href="mailto:gerhard@aidriven.biz?subject=Professional%20Partnership%20Inquiry">📧 Contact Us for Professional Rates</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked <span>Questions</span></h2>
+                <div class="divider"></div>
+                <p>Everything you need to know about Property Due Diligence Reports</p>
+            </div>
+
+            <div class="faq-container">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <svg class="faq-icon" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="12"/>
+                            <path d="M14 10v8M14 19v.01"/>
+                        </svg>
+                        <h3>Is this a legal Land Information Memorandum (LIM)?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>No.</strong> This is a Property Due Diligence Report for informational screening purposes only. It is NOT a substitute for a formal LIM issued under the Building Act 2004.</p>
+                        <p style="margin-top: 1rem;"><strong>Use this report for:</strong> Pre-offer screening, initial due diligence, investment analysis, identifying potential red flags.</p>
+                        <p style="margin-top: 1rem;"><strong>Still obtain before settlement:</strong> Formal LIM from council, professional building inspection, legal advice, valuation report (if required by lender).</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <svg class="faq-icon" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="12"/>
+                            <path d="M14 10v8M14 19v.01"/>
+                        </svg>
+                        <h3>Can I use this report for final settlement?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>No.</strong> This report does not provide the statutory protections of a formal LIM and should not be relied upon for final settlement decisions.</p>
+                        <p style="margin-top: 1rem;">Think of it as a <strong>screening tool</strong> – it helps you decide whether to proceed with a property before spending $300-$450 on a full LIM. If the report looks good and you're serious about buying, then order the formal LIM as part of your settlement due diligence.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <svg class="faq-icon" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="12"/>
+                            <path d="M14 10v8M14 19v.01"/>
+                        </svg>
+                        <h3>How accurate is the data?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We source data directly from official databases:</p>
+                        <ul>
+                            <li><strong>LINZ Data Service:</strong> Title details, ownership, easements, covenants</li>
+                            <li><strong>Council GIS/Rates databases:</strong> Zoning, hazards, rates, valuations</li>
+                            <li><strong>Ministry for the Environment:</strong> HAIL contamination register</li>
+                            <li><strong>GNS Science:</strong> Natural hazard layers (flood, erosion, liquefaction)</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">However, we aggregate publicly available data – we don't verify it independently. Always confirm critical information with official sources before making purchase decisions.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <svg class="faq-icon" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="12"/>
+                            <path d="M14 10v8M14 19v.01"/>
+                        </svg>
+                        <h3>What's included in each package?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Basic ($75):</strong> Property ID, title details, zoning overview, natural hazards check, infrastructure/services, HAIL screen, building consents summary, rates info. (7 pages)</p>
+                        <p style="margin-top: 1rem;"><strong>Standard ($125):</strong> Everything in Basic + detailed zoning analysis, development potential assessment, investment metrics, rental yield calculations, cash flow projections, comparable sales analysis. (10-12 pages)</p>
+                        <p style="margin-top: 1rem;"><strong>Premium ($200):</strong> Everything in Standard + 5-year capital growth forecast, total return projections, risk factor analysis, growth drivers assessment, priority 12-24 hour turnaround. (13-14 pages)</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <svg class="faq-icon" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="12"/>
+                            <path d="M14 10v8M14 19v.01"/>
+                        </svg>
+                        <h3>How long does it take to receive the report?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>Standard turnaround:</strong> 24-48 hours from when we receive your completed property details form.</p>
+                        <p style="margin-top: 1rem;"><strong>Premium priority:</strong> 12-24 hours (included with Premium package).</p>
+                        <p style="margin-top: 1rem;">Reports are delivered as PDF via email to the address you provide in the order form.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <svg class="faq-icon" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="12"/>
+                            <path d="M14 10v8M14 19v.01"/>
+                        </svg>
+                        <h3>What areas do you cover?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Currently, we focus on <strong>Hawke's Bay region</strong> (Napier, Hastings, Central Hawke's Bay) as this is where our founder is based and where we have deep local knowledge.</p>
+                        <p style="margin-top: 1rem;">We're actively expanding to other NZ regions. If you're outside Hawke's Bay and interested in our service, contact us and we'll let you know when we launch in your area.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <svg class="faq-icon" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="12"/>
+                            <path d="M14 10v8M14 19v.01"/>
+                        </svg>
+                        <h3>Do you offer refunds?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We stand behind the quality of our reports. If you're not satisfied with your report for any reason, contact us within 7 days and we'll provide a full refund – no questions asked.</p>
+                        <p style="margin-top: 1rem;">That said, please remember this is a screening tool, not a formal LIM. Make sure you understand the limitations before ordering (see first FAQ above).</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <svg class="faq-icon" viewBox="0 0 28 28">
+                            <circle cx="14" cy="14" r="12"/>
+                            <path d="M14 10v8M14 19v.01"/>
+                        </svg>
+                        <h3>Can I get a report on a rural property or lifestyle block?</h3>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, but with some limitations. Our automated system works best for residential properties in urban areas with standard titles and council services.</p>
+                        <p style="margin-top: 1rem;">For rural properties, lifestyle blocks, or unusual titles, we can still generate a report, but some data may be incomplete (e.g., wastewater may be septic rather than council-connected, zoning may be more complex). We'll flag any limitations in the report. If the property is highly unusual, we may recommend a formal LIM instead.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Still Have Questions CTA -->
+            <div style="margin-top: 3rem; text-align: center; padding: 2.5rem; background: rgba(247,147,30,0.05); border: 2px solid var(--orange); border-radius: 16px;">
+                <h4 style="font-family: 'Rajdhani', sans-serif; font-size: 1.5rem; color: #f0f0f0; margin-bottom: 1rem;">Still Have Questions?</h4>
+                <p style="color: #e0e0e0; margin-bottom: 1.5rem;">We're happy to chat! Email us or give us a call.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="mailto:gerhard@aidriven.biz" style="display: inline-block; padding: 0.875rem 1.75rem; background: linear-gradient(135deg, var(--orange), var(--purple)); color: #f0f0f0; text-decoration: none; font-weight: 600; border-radius: 8px;">📧 gerhard@aidriven.biz</a>
+                    <a href="tel:+64214028807" style="display: inline-block; padding: 0.875rem 1.75rem; background: rgba(255,255,255,0.1); color: #f0f0f0; text-decoration: none; font-weight: 600; border-radius: 8px; border: 1px solid var(--border);">📱 021 402 8807</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Banner -->
+    <section class="guarantee">
+        <div class="container guarantee-content">
+            <svg class="guarantee-icon" viewBox="0 0 80 80">
+                <path d="M40 5L10 15v20c0 18 12 32 30 40 18-8 30-22 30-40V15L40 5zm0 55L20 45l5-5 15 15 25-25 5 5-30 30z"/>
+            </svg>
+            <h3>100% Satisfaction Guarantee</h3>
+            <p>If you're not completely satisfied with your Property Due Diligence Report, we'll refund your payment in full – no questions asked. We're confident in the quality and accuracy of our reports, and we want you to feel secure in your purchase.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent <span>Pricing</span></h2>
+                <div class="divider"></div>
+                <p>Choose the package that fits your needs. All prices in NZD.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic Package -->
+                <div class="pricing-card">
+                    <div class="pricing-name">Basic Report</div>
+                    <div class="pricing-price">$75</div>
+                    <ul class="pricing-features">
+                        <li>Property identification & legal details</li>
+                        <li>Title ownership & easements</li>
+                        <li>Zoning overview</li>
+                        <li>Natural hazards assessment</li>
+                        <li>Infrastructure & services check</li>
+                        <li>HAIL contamination screen</li>
+                        <li>Building consents summary (10 yrs)</li>
+                        <li>Rates information</li>
+                        <li>7-page professional PDF</li>
+                        <li>24-48 hour turnaround</li>
+                    </ul>
+                    <button class="pricing-btn" onclick="scrollToOrder('basic')">Order Basic Report</button>
+                </div>
+
+                <!-- Standard Package -->
+                <div class="pricing-card featured">
+                    <div class="pricing-name">Standard Report</div>
+                    <div class="pricing-price">$125</div>
+                    <ul class="pricing-features">
+                        <li><strong>Everything in Basic, plus:</strong></li>
+                        <li>Detailed zoning analysis</li>
+                        <li>Development potential assessment</li>
+                        <li>Investment metrics & financials</li>
+                        <li>Rental yield calculations (gross & net)</li>
+                        <li>Cash flow projections</li>
+                        <li>Comparable sales analysis</li>
+                        <li>Market value range estimation</li>
+                        <li>10-12 page professional PDF</li>
+                        <li>24-48 hour turnaround</li>
+                    </ul>
+                    <button class="pricing-btn" onclick="scrollToOrder('standard')">Order Standard Report</button>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="pricing-card">
+                    <div class="pricing-name">Premium Report</div>
+                    <div class="pricing-price">$200</div>
+                    <ul class="pricing-features">
+                        <li><strong>Everything in Standard, plus:</strong></li>
+                        <li>5-year capital growth forecast</li>
+                        <li>Total return projections</li>
+                        <li>Risk factor analysis</li>
+                        <li>Growth drivers assessment</li>
+                        <li>Priority 12-24 hour turnaround</li>
+                        <li>13-14 page professional PDF</li>
+                        <li>15-minute consultation call</li>
+                        <li>Email support priority</li>
+                    </ul>
+                    <button class="pricing-btn" onclick="scrollToOrder('premium')">Order Premium Report</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="order">
+        <div class="container">
+            <div class="form-section">
+                <div class="form-header">
+                    <h2>Order Your Report</h2>
+                    <p>Complete the form below to get started. Takes less than 2 minutes.</p>
+                </div>
+
+                <form id="dueDiligenceForm">
+                    <!-- Section 1: Property Details -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="font-family: 'Rajdhani', sans-serif; color: var(--orange); margin-bottom: 1.5rem; font-size: 1.3rem;">1. Property Details</h4>
+                        
+                        <div class="form-group">
+                            <label for="address">Street Address <span class="required">*</span></label>
+                            <input type="text" id="address" name="address" placeholder="e.g., 123 Smith Street" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="suburb">Suburb <span class="required">*</span></label>
+                            <input type="text" id="suburb" name="suburb" placeholder="e.g., Marewa" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City/District <span class="required">*</span></label>
+                            <select id="city" name="city" required>
+                                <option value="">Select...</option>
+                                <option value="napier">Napier</option>
+                                <option value="hastings">Hastings</option>
+                                <option value="chb">Central Hawke's Bay</option>
+                                <option value="other">Other (specify below)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="postcode">Postcode</label>
+                            <input type="text" id="postcode" name="postcode" placeholder="e.g., 4112" pattern="[0-9]{4}" maxlength="4">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="propertyType">Property Type</label>
+                            <select id="propertyType" name="propertyType">
+                                <option value="residential">Residential</option>
+                                <option value="commercial">Commercial</option>
+                                <option value="industrial">Industrial</option>
+                                <option value="land">Land Only (No Buildings)</option>
+                                <option value="mixed">Mixed Use</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Your Situation -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="font-family: 'Rajdhani', sans-serif; color: var(--orange); margin-bottom: 1.5rem; font-size: 1.3rem;">2. Your Situation</h4>
+
+                        <div class="form-group">
+                            <label for="intent">I am...</label>
+                            <select id="intent" name="intent">
+                                <option value="buying">Looking to buy this property</option>
+                                <option value="selling">Selling this property</option>
+                                <option value="investor">Property investor researching</option>
+                                <option value="professional">Property professional (QS, valuer, agent)</option>
+                                <option value="curious">Just curious / researching market</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="concerns">Specific Concerns or Questions (Optional)</label>
+                            <textarea id="concerns" name="concerns" placeholder="e.g., 'I'm worried about flood risk' or 'Want to know if I can build a granny flat'"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="timeline">When do you need this?</label>
+                            <select id="timeline" name="timeline">
+                                <option value="standard">Standard (24-48 hours)</option>
+                                <option value="priority">Priority (12-24 hours, +$50)</option>
+                                <option value="research">No rush (within 72 hours)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Report Package -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="font-family: 'Rajdhani', sans-serif; color: var(--orange); margin-bottom: 1.5rem; font-size: 1.3rem;">3. Choose Your Package</h4>
+                        
+                        <div class="pricing-options" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                            <label class="card" style="cursor: pointer; border: 2px solid var(--border);">
+                                <input type="radio" name="package" value="basic" checked style="display: none;">
+                                <div style="text-align: center; padding: 1.5rem;">
+                                    <div style="font-family: 'Rajdhani', sans-serif; font-size: 1.3rem; font-weight: 700; color: #f0f0f0; margin-bottom: 0.5rem;">Basic</div>
+                                    <div style="font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, var(--orange), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$75</div>
+                                    <div style="color: #e0e0e0; font-size: 0.85rem; margin-top: 0.75rem;">Essential property data</div>
+                                </div>
+                            </label>
+
+                            <label class="card" style="cursor: pointer; border: 2px solid var(--orange);">
+                                <input type="radio" name="package" value="standard" style="display: none;">
+                                <div style="text-align: center; padding: 1.5rem; position: relative;">
+                                    <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--orange), var(--purple)); color: #f0f0f0; padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">POPULAR</div>
+                                    <div style="font-family: 'Rajdhani', sans-serif; font-size: 1.3rem; font-weight: 700; color: #f0f0f0; margin-bottom: 0.5rem;">Standard</div>
+                                    <div style="font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, var(--orange), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$125</div>
+                                    <div style="color: #e0e0e0; font-size: 0.85rem; margin-top: 0.75rem;">+ Investment metrics</div>
+                                </div>
+                            </label>
+
+                            <label class="card" style="cursor: pointer; border: 2px solid var(--border);">
+                                <input type="radio" name="package" value="premium" style="display: none;">
+                                <div style="text-align: center; padding: 1.5rem;">
+                                    <div style="font-family: 'Rajdhani', sans-serif; font-size: 1.3rem; font-weight: 700; color: #f0f0f0; margin-bottom: 0.5rem;">Premium</div>
+                                    <div style="font-size: 2rem; font-weight: 700; background: linear-gradient(135deg, var(--orange), var(--purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">$200</div>
+                                    <div style="color: #e0e0e0; font-size: 0.85rem; margin-top: 0.75rem;">+ Growth forecasts</div>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Contact Details -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="font-family: 'Rajdhani', sans-serif; color: var(--orange); margin-bottom: 1.5rem; font-size: 1.3rem;">4. Your Contact Details</h4>
+
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="John Smith" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="021 402 8807">
+                        </div>
+                    </div>
+
+                    <!-- Section 5: Terms & Consent -->
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="font-family: 'Rajdhani', sans-serif; color: var(--orange); margin-bottom: 1.5rem; font-size: 1.3rem;">5. Terms & Privacy</h4>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">
+                                I understand this Property Due Diligence Report is for <strong>informational purposes only</strong> and is NOT a substitute for a formal LIM, legal advice, building inspection, or valuation. I will not rely on this report for final settlement decisions. <span class="required">*</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">
+                                I agree to the processing of my personal data in accordance with the Privacy Act 2020. My information will be retained for 90 days and used only for report delivery and quality assurance. <span class="required">*</span>
+                            </label>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="marketing" name="marketing">
+                            <label for="marketing">
+                                Keep me informed about similar properties and market updates (optional)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">
+                        Submit Order Request →
+                    </button>
+
+                    <div class="secure-badge">
+                        <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor">
+                            <path d="M9 0C4.03 0 0 4.03 0 9v2.7c0 .45.34.9.79.95l1.8.53V15c0 .45.34.9.79.95l5.3.53c.22.03.45-.03.67-.16l5.3-.53c.45-.05.79-.5.79-.95v-1.87l1.8-.53c.45-.05.79-.5.79-.95V9c0-4.97-4.03-9-9-9zm0 12.5c-.83 0-1.5-.67-1.5-1.5S8.17 9.5 9 9.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm2.25-4.75c0 .22-.18.45-.45.45s-.45-.18-.45-.45V6.08c0-.22.18-.45.45-.45s.45.18.45.45v1.67z"/>
+                        </svg>
+                        <span>Your information is secure and encrypted</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AI Driven</h4>
+                    <p>Practical AI for real businesses. Property due diligence reports powered by automated data aggregation from LINZ and council databases.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Gerhard Stimie<br>
+                    Email: gerhard@aidriven.biz<br>
+                    Phone: 021 402 8807<br>
+                    Napier, New Zealand</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <p>
+                        <a href="#about">About AI Driven</a><br>
+                        <a href="#how-it-works">How It Works</a><br>
+                        <a href="#sample-report">Sample Report</a><br>
+                        <a href="#professionals">For Professionals</a><br>
+                        <a href="#faq">FAQ</a><br>
+                        <a href="#pricing">Pricing</a><br>
+                        <a href="#order">Order Now</a><br>
+                        <a href="#">Terms of Service</a><br>
+                        <a href="#">Privacy Policy</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4>Business Hours</h4>
+                    <p>Monday - Friday: 8am - 6pm<br>
+                    Saturday: 9am - 1pm<br>
+                    Sunday: Closed<br>
+                    <em style="color: #e0e0e0; font-size: 0.85rem;">(Automated reports available 24/7)</em></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AI Driven. All rights reserved. | Not a registered LIM provider under the Building Act 2004</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            const isActive = answer.classList.contains('active');
+            
+            // Close all FAQs
+            document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('active'));
+            
+            // Open clicked FAQ if it wasn't active
+            if (!isActive) {
+                answer.classList.add('active');
+            }
+        }
+
+        // Scroll to Order with Package Selection
+        function scrollToOrder(packageType) {
+            const orderSection = document.getElementById('order');
+            orderSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Select the appropriate package radio button
+            setTimeout(() => {
+                const radio = document.querySelector(`input[name="package"][value="${packageType}"]`);
+                if (radio) {
+                    radio.checked = true;
+                    // Visual feedback
+                    radio.closest('.card').style.borderColor = 'var(--orange)';
+                }
+            }, 500);
+        }
+
+        // Form Submission Handler (Placeholder)
+        document.getElementById('dueDiligenceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData.entries());
+            
+            // For MVP: Show success message
+            alert('Thank you for your order request!\n\nFor MVP testing, we\'ll process this manually. In production, this would redirect to Stripe payment.\n\nPackage: ' + data.package + '\nProperty: ' + data.address + ', ' + data.suburb);
+            
+            // TODO: Replace with actual form handler:
+            // - Google Forms webhook
+            // - Email notification
+            // - Stripe checkout redirect
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+
