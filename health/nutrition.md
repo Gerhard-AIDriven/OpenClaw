@@ -1,3 +1,9 @@
+## 2026-08-05 (Wednesday)
+
+| Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
+|-|-|-|-|-|-|-|
+| 04:45 | **Breakfast:** 150g greek yogurt, 25g Alpen muesli, 1 banana, 1 standard coffee | 394 | 49.2 | 13.6 | 11.2 | Greek yogurt + muesli + banana |
+
 ## 2026-08-02 (Sunday)
 
 | Time | Meal | kcal | Carbs (g) | Protein (g) | Fat (g) | Notes |
