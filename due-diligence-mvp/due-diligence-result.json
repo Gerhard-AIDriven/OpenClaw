@@ -1,0 +1,55 @@
+{
+  "address": {
+    "longitude": 176.90405875,
+    "latitude": -39.5005800554,
+    "full_address": "31 Douglas McLean Avenue, Marewa, Napier",
+    "town_city": "Napier"
+  },
+  "title": {
+    "id": 18850,
+    "title_no": "HBE2/765",
+    "status": "LIVE",
+    "type": "Freehold",
+    "estate": "Fee Simple, 1/1, Lot 88 Deposited Plan 8162, 803 m2",
+    "guarantee_status": "Guarantee",
+    "land_district": "Hawkes Bay",
+    "issue_date": "1972-11-22T00:00:00Z",
+    "number_owners": 2,
+    "title_id": "1817046",
+    "geometry": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              176.9038966833,
+              -39.5005742167
+            ],
+            [
+              176.90406605,
+              -39.5004533167
+            ],
+            [
+              176.90421495,
+              -39.5005784833
+            ],
+            [
+              176.90383215,
+              -39.5008517
+            ],
+            [
+              176.9037221,
+              -39.50069885
+            ],
+            [
+              176.9038966833,
+              -39.5005742167
+            ]
+          ]
+        ]
+      ]
+    },
+    "bbox_area": 1.9634320940274047e-07
+  },
+  "query_timestamp": "2026-08-07 17:56:13.997114"
+}

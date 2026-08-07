@@ -82,6 +82,13 @@
 - **Interpretation:** Mild insulin resistance confirmed — not deep, fully reversible. Strategy: continue weight loss, pre-breakfast walks, protein-forward meals; consider lower carb baseline and 14–16h overnight fasting to drive insulin <6.
 - **Re-test:** Scheduled ~2026-08-23 (3 months) to track progress.
 
+### Food Tracking Status (2026-08-07)
+- **Status:** PAUSED indefinitely
+- **Reason:** Metrics stable and in range — resuming intuitive eating with diabetic-aware choices
+- **Restart Trigger:** Will resume daily tracking if any metrics deteriorate out of range (fasting blood sugar >6.4, weight gain trend, or HbA1c increase)
+- **Current Approach:** Low-carb, high-fat focus (avocado, cream cheese, mayo, eggs, meat) with portion awareness
+- **Targets on Standby:** 1600 cal | 219g carbs | 120g protein | 65g fat (ready to reactivate if needed)
+
 ## Brand — AI Driven
 - Business name: **AI Driven**
 - Domain: aidriven.biz

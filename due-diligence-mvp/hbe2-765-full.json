@@ -1,0 +1,50 @@
+{
+  "type": "Feature",
+  "id": "layer-50804.1817046",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            176.9038966833,
+            -39.5005742167
+          ],
+          [
+            176.90406605,
+            -39.5004533167
+          ],
+          [
+            176.90421495,
+            -39.5005784833
+          ],
+          [
+            176.90383215,
+            -39.5008517
+          ],
+          [
+            176.9037221,
+            -39.50069885
+          ],
+          [
+            176.9038966833,
+            -39.5005742167
+          ]
+        ]
+      ]
+    ]
+  },
+  "geometry_name": "shape",
+  "properties": {
+    "id": 1817046,
+    "title_no": "HBE2/765",
+    "status": "LIVE",
+    "type": "Freehold",
+    "land_district": "Hawkes Bay",
+    "issue_date": "1972-11-22T00:00:00Z",
+    "guarantee_status": "Guarantee",
+    "estate_description": "Fee Simple, 1/1, Lot 88 Deposited Plan 8162, 803 m2",
+    "number_owners": 2,
+    "spatial_extents_shared": false
+  }
+}
