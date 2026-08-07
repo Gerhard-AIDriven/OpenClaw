@@ -779,6 +779,12 @@
             transform: translateY(-2px);
         }
 
+        /* Package selection visual feedback */
+        .package-card.selected {
+            border-color: var(--orange) !important;
+            box-shadow: 0 0 20px rgba(247,147,30,0.3);
+        }
+
         /* Form Section */
         .form-section {
             background: var(--card);
@@ -829,6 +835,12 @@
             font-family: 'Inter', sans-serif;
             font-size: 1rem;
             transition: border-color 0.3s;
+        }
+
+        /* Fix dropdown options visibility */
+        .form-group select option {
+            background: #111111;
+            color: #f0f0f0;
         }
 
         .form-group input:focus,
@@ -989,6 +1001,7 @@
                     <li><a href="#order" class="cta-button">Order Now</a></li>
                 </ul>
             </nav>
+            <button id="testModeToggle" onclick="toggleTestMode()" style="background: linear-gradient(135deg, #f7931e, #8b2fc9); border: none; color: #fff; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer; font-weight: 600; margin-left: 1rem; transition: all 0.3s ease;" title="Enable/disable test mode for development">🧪 Test Mode: OFF</button>
         </div>
     </header>
 
@@ -1472,6 +1485,11 @@
         </div>
     </section>
 
+    <!-- Test Mode Banner (Visible Only in Test Mode) -->
+    <div id="testModeBanner" style="display: none; background: linear-gradient(135deg, #f7931e, #8b2fc9); padding: 1rem; text-align: center; font-weight: 600; position: sticky; top: 0; z-index: 2000;">
+        ⚠️ TEST MODE ACTIVE - No payments will be processed | <a href="#" onclick="toggleTestMode(); return false;" style="color: #fff; text-decoration: underline;">Disable Test Mode</a>
+    </div>
+
     <!-- Order Form Section -->
     <section id="order">
         <div class="container">
@@ -1479,6 +1497,9 @@
                 <div class="form-header">
                     <h2>Order Your Report</h2>
                     <p>Complete the form below to get started. Takes less than 2 minutes.</p>
+                    <div id="testModeIndicator" style="display: none; margin-top: 1rem; padding: 0.75rem; background: rgba(247,147,30,0.1); border: 1px solid var(--orange); border-radius: 8px; color: var(--orange); font-size: 0.9rem;">
+                        🔧 <strong>Test Mode:</strong> Payment step is skipped. Reports will be marked as "Test - No Payment Required"
+                    </div>
                 </div>
 
                 <form id="dueDiligenceForm">
@@ -1559,7 +1580,7 @@
                         <h4 style="font-family: 'Rajdhani', sans-serif; color: var(--orange); margin-bottom: 1.5rem; font-size: 1.3rem;">3. Choose Your Package</h4>
                         
                         <div class="pricing-options" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
-                            <label class="card" style="cursor: pointer; border: 2px solid var(--border);">
+                            <label class="card package-card" style="cursor: pointer; border: 2px solid var(--border);" onclick="selectPackage('basic')">
                                 <input type="radio" name="package" value="basic" checked style="display: none;">
                                 <div style="text-align: center; padding: 1.5rem;">
                                     <div style="font-family: 'Rajdhani', sans-serif; font-size: 1.3rem; font-weight: 700; color: #f0f0f0; margin-bottom: 0.5rem;">Basic</div>
@@ -1568,7 +1589,7 @@
                                 </div>
                             </label>
 
-                            <label class="card" style="cursor: pointer; border: 2px solid var(--orange);">
+                            <label class="card package-card" style="cursor: pointer; border: 2px solid var(--orange);" onclick="selectPackage('standard')">
                                 <input type="radio" name="package" value="standard" style="display: none;">
                                 <div style="text-align: center; padding: 1.5rem; position: relative;">
                                     <div style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--orange), var(--purple)); color: #f0f0f0; padding: 0.25rem 0.75rem; border-radius: 100px; font-size: 0.7rem; font-weight: 700;">POPULAR</div>
@@ -1578,7 +1599,7 @@
                                 </div>
                             </label>
 
-                            <label class="card" style="cursor: pointer; border: 2px solid var(--border);">
+                            <label class="card package-card" style="cursor: pointer; border: 2px solid var(--border);" onclick="selectPackage('premium')">
                                 <input type="radio" name="package" value="premium" style="display: none;">
                                 <div style="text-align: center; padding: 1.5rem;">
                                     <div style="font-family: 'Rajdhani', sans-serif; font-size: 1.3rem; font-weight: 700; color: #f0f0f0; margin-bottom: 0.5rem;">Premium</div>
@@ -1717,16 +1738,111 @@
             
             // Select the appropriate package radio button
             setTimeout(() => {
-                const radio = document.querySelector(`input[name="package"][value="${packageType}"]`);
-                if (radio) {
-                    radio.checked = true;
-                    // Visual feedback
-                    radio.closest('.card').style.borderColor = 'var(--orange)';
-                }
+                selectPackage(packageType);
             }, 500);
         }
 
-        // Form Submission Handler (Placeholder)
+        // Package Selection Handler
+        function selectPackage(packageType) {
+            // Get all radio buttons and cards
+            const radios = document.querySelectorAll('input[name="package"]');
+            const cards = document.querySelectorAll('.package-card');
+            
+            // Find the selected radio and update it
+            radios.forEach(radio => {
+                if (radio.value === packageType) {
+                    radio.checked = true;
+                    // Add visual feedback to parent card
+                    const card = radio.closest('.package-card');
+                    if (card) {
+                        card.classList.add('selected');
+                        card.style.borderColor = 'var(--orange)';
+                    }
+                } else {
+                    radio.checked = false;
+                    // Remove visual feedback from other cards
+                    const card = radio.closest('.package-card');
+                    if (card && !card.style.border.includes('var(--orange)')) {
+                        card.classList.remove('selected');
+                        card.style.borderColor = 'var(--border)';
+                    }
+                }
+            });
+        }
+
+        // Initialize Standard package as default on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            selectPackage('standard');
+        });
+
+        // Test Mode Management
+        let testMode = false;
+        
+        function toggleTestMode() {
+            testMode = !testMode;
+            const banner = document.getElementById('testModeBanner');
+            const indicator = document.getElementById('testModeIndicator');
+            const toggleBtn = document.getElementById('testModeToggle');
+            
+            if (testMode) {
+                banner.style.display = 'block';
+                indicator.style.display = 'block';
+                toggleBtn.textContent = '🧪 Test Mode: ON';
+                toggleBtn.style.background = 'linear-gradient(135deg, #22c55e, #16a34a)';
+                localStorage.setItem('ddm_testMode', 'true');
+            } else {
+                banner.style.display = 'none';
+                indicator.style.display = 'none';
+                toggleBtn.textContent = '🧪 Test Mode: OFF';
+                toggleBtn.style.background = 'linear-gradient(135deg, #f7931e, #8b2fc9)';
+                localStorage.setItem('ddm_testMode', 'false');
+            }
+        }
+        
+        // Load test mode preference on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const savedTestMode = localStorage.getItem('ddm_testMode') === 'true';
+            if (savedTestMode) {
+                toggleTestMode();
+            }
+        });
+
+        // PayPal Payment Links
+        const PAYPAL_LINKS = {
+            basic: 'https://www.paypal.com/ncp/payment/BPT55E5D4CNAY',
+            standard: 'https://www.paypal.com/ncp/payment/8LM82NH7ATWKJ',
+            premium: 'https://www.paypal.com/ncp/payment/R9G9C4DR554Z6'
+        };
+
+        // Google Sheets Integration - REPLACE WITH YOUR GOOGLE APPS SCRIPT URL
+        // Follow instructions in GOOGLE_SHEET_TRACKING_SETUP.md to get your URL
+        const GOOGLE_SCRIPT_URL = 'YOUR_DEPLOYED_WEB_APP_URL_HERE'; // e.g., 'https://script.google.com/macros/s/AKf.../exec'
+
+        // Helper: Submit data to Google Sheet
+        async function submitToGoogleSheet(data, scriptUrl) {
+            try {
+                const response = await fetch(scriptUrl, {
+                    method: 'POST',
+                    mode: 'no-cors', // Required for Google Apps Script
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+                
+                // With no-cors, we can't read response but success = no error thrown
+                return {
+                    success: true,
+                    orderId: 'Saved-' + Date.now(),
+                    message: 'Order recorded in sheet'
+                };
+            } catch (error) {
+                console.error('Error submitting to Google Sheet:', error);
+                throw error;
+            }
+        }
+
+        // Form Submission Handler with Google Sheets Integration
         document.getElementById('dueDiligenceForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
@@ -1734,13 +1850,87 @@
             const formData = new FormData(this);
             const data = Object.fromEntries(formData.entries());
             
-            // For MVP: Show success message
-            alert('Thank you for your order request!\n\nFor MVP testing, we\'ll process this manually. In production, this would redirect to Stripe payment.\n\nPackage: ' + data.package + '\nProperty: ' + data.address + ', ' + data.suburb);
+            // Get selected package from radio buttons (more reliable than FormData)
+            const selectedRadio = document.querySelector('input[name="package"]:checked');
+            const selectedPackage = selectedRadio ? selectedRadio.value : (data.package || 'standard');
             
-            // TODO: Replace with actual form handler:
-            // - Google Forms webhook
-            // - Email notification
-            // - Stripe checkout redirect
+            // Add test mode flag and package to data object
+            data.testMode = testMode;
+            data.package = selectedPackage;
+            
+            // Check if Google Script URL is configured
+            const isScriptConfigured = GOOGLE_SCRIPT_URL && !GOOGLE_SCRIPT_URL.includes('YOUR_DEPLOYED');
+            
+            if (!isScriptConfigured) {
+                console.warn('⚠️ Google Script URL not configured. Orders will not be tracked.');
+            }
+            
+            if (testMode) {
+                // TEST MODE: Optionally save to sheet, skip payment
+                if (isScriptConfigured) {
+                    submitToGoogleSheet(data, GOOGLE_SCRIPT_URL)
+                        .then(response => {
+                            alert('✅ TEST ORDER SUBMITTED\n\nOrder ID: ' + response.orderId + '\n\nNo payment required in test mode.\n\nPackage: ' + selectedPackage.toUpperCase() + ' Report\nProperty: ' + data.address + ', ' + data.suburb + '\nEmail: ' + data.email + '\n\n✓ Order saved to Google Sheet (Test Mode)');
+                            console.log('TEST ORDER SAVED:', response);
+                            
+                            // Reset form but keep package selection
+                            const currentPackage = selectedPackage;
+                            this.reset();
+                            setTimeout(() => selectPackage(currentPackage), 100);
+                        })
+                        .catch(error => {
+                            console.error('Error saving test order:', error);
+                            alert('⚠️ Test order submitted but failed to save to sheet. Check console.');
+                            
+                            // Still allow testing even if sheet fails
+                            const currentPackage = selectedPackage;
+                            this.reset();
+                            setTimeout(() => selectPackage(currentPackage), 100);
+                        });
+                } else {
+                    // No sheet configured - just show alert
+                    alert('✅ TEST ORDER SUBMITTED\n\nNo payment required in test mode.\n\nPackage: ' + selectedPackage.toUpperCase() + ' Report\nProperty: ' + data.address + ', ' + data.suburb + '\nEmail: ' + data.email + '\n\n⚠️ Google Sheet tracking not configured yet. See GOOGLE_SHEET_TRACKING_SETUP.md');
+                    console.log('TEST ORDER (not saved):', data);
+                    
+                    const currentPackage = selectedPackage;
+                    this.reset();
+                    setTimeout(() => selectPackage(currentPackage), 100);
+                }
+            } else {
+                // LIVE MODE: Save to sheet first, then redirect to PayPal
+                if (!isScriptConfigured) {
+                    alert('⚠️ Google Sheet tracking not configured! Please set up tracking before accepting live orders.\n\nSee: GOOGLE_SHEET_TRACKING_SETUP.md');
+                    return;
+                }
+                
+                submitToGoogleSheet(data, GOOGLE_SCRIPT_URL)
+                    .then(response => {
+                        // Store order data for post-payment tracking
+                        sessionStorage.setItem('ddm_orderData', JSON.stringify({
+                            ...data,
+                            orderId: response.orderId,
+                            timestamp: new Date().toISOString(),
+                            paymentStatus: 'pending',
+                            package: selectedPackage
+                        }));
+                        
+                        // Show confirmation before redirect
+                        const packageNames = {
+                            basic: 'Basic Property Due Diligence Report ($75 NZD)',
+                            standard: 'Standard Property Due Diligence Report ($125 NZD)',
+                            premium: 'Premium Property Due Diligence Report ($200 NZD)'
+                        };
+                        
+                        if (confirm('✅ Order Saved!\n\nOrder ID: ' + response.orderId + '\n\nReady to complete payment?\n\nYou will be redirected to PayPal to pay for:\n' + packageNames[selectedPackage] + '\n\nProperty: ' + data.address + ', ' + data.suburb + '\n\nClick OK to proceed to PayPal.')) {
+                            // Redirect to PayPal
+                            window.location.href = PAYPAL_LINKS[selectedPackage];
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error submitting order:', error);
+                        alert('⚠️ Error saving order to tracking sheet. Please try again or contact us directly at gerhard@aidriven.biz');
+                    });
+            }
         });
 
         // Smooth scroll for navigation links
