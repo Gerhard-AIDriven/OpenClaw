@@ -1,0 +1,14 @@
+{
+  "rid": "138159-107977",
+  "url": "https://www.napier.govt.nz/services/properties-and-rates/my-property/?rid=138159-107977",
+  "scrape_timestamp": "2026-08-08T18:18:44.577638",
+  "success": true,
+  "data": {
+    "capital_value": 1400000,
+    "land_value": 920000,
+    "annual_rates": 6763.38,
+    "legal_description": "LOT 1 DP 414475",
+    "improvements_value": 480000,
+    "rates_as_percent_cv": 0.483
+  }
+}
