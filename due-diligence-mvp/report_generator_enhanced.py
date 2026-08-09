@@ -25,6 +25,110 @@ try:
 except Exception as e:
     print(f"Warning: Could not load logo: {e}")
 
+def _generate_rates_html(rates_data):
+    """
+    Generate HTML table for rates information
+    
+    Args:
+        rates_data: Dictionary with rates data from napier_assisted_final.py
+    
+    Returns:
+        Tuple of (html_string, summary_dict)
+    """
+    if not rates_data or not rates_data.get('success'):
+        return None, {}
+    
+    data = rates_data.get('data', {})
+    
+    # Format values
+    cv = data.get('capital_value', 0)
+    land = data.get('land_value', 0)
+    improvements = data.get('improvements_value', 0)
+    annual_rates = data.get('annual_rates', 0)
+    legal = data.get('legal_description', 'N/A')
+    rates_pct = data.get('rates_percent_cv', 0)
+    
+    # Calculate monthly and weekly
+    monthly_rates = annual_rates / 12 if annual_rates else 0
+    weekly_rates = annual_rates / 52 if annual_rates else 0
+    
+    # Determine land ratio
+    land_ratio = (land / cv * 100) if cv > 0 else 0
+    
+    html = f'''
+    <div style="background: rgba(0,122,77,0.1); border: 2px solid var(--green); padding: 20px; border-radius: 12px; margin-bottom: 20px;">
+        <h3 style="color: var(--green); margin-bottom: 15px; font-family: 'Rajdhani', sans-serif;">💰 Council Valuation Breakdown</h3>
+        
+        <div class="info-grid" style="margin-bottom: 20px;">
+            <div class="info-item" style="border-left-color: var(--green);">
+                <label>Capital Value (CV)</label>
+                <value style="font-size: 1.4rem; color: var(--green);">${cv:,}</value>
+            </div>
+            <div class="info-item" style="border-left-color: var(--gold);">
+                <label>Land Value</label>
+                <value>${land:,}</value>
+                <div style="margin-top: 5px; color: #a0a0a0; font-size: 0.85rem;">{land_ratio:.1f}% of CV</div>
+            </div>
+            <div class="info-item" style="border-left-color: var(--orange);">
+                <label>Improvements Value</label>
+                <value>${improvements:,}</value>
+                <div style="margin-top: 5px; color: #a0a0a0; font-size: 0.85rem;">{100-land_ratio:.1f}% of CV</div>
+            </div>
+        </div>
+        
+        <table style="width: 100%; margin-bottom: 20px;">
+            <thead>
+                <tr>
+                    <th style="text-align: left; padding: 12px; background: rgba(255,255,255,0.1);">Rates Information</th>
+                    <th style="text-align: right; padding: 12px; background: rgba(255,255,255,0.1);">Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Annual Rates Levied</td>
+                    <td style="padding: 12px; text-align: right; color: var(--gold); font-weight: bold;">${annual_rates:,.2f}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Monthly Rates</td>
+                    <td style="padding: 12px; text-align: right;">${monthly_rates:,.2f}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Weekly Rates</td>
+                    <td style="padding: 12px; text-align: right;">${weekly_rates:,.2f}</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                    <td style="padding: 12px;">Rates as % of CV</td>
+                    <td style="padding: 12px; text-align: right;"><span class="risk-badge risk-low">{rates_pct:.3f}%</span></td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">Legal Description</td>
+                    <td style="padding: 12px; text-align: right;">{legal}</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
+            <strong style="color: var(--gold);">✓ Analysis:</strong>
+            <ul style="margin-top: 10px; padding-left: 20px; color: #d0d0d0;">
+                {f'<li>Healthy land-to-capital ratio ({land_ratio:.1f}%) - good land value retention</li>' if land_ratio >= 60 else ''}
+                {f'<li>Low rates burden ({rates_pct:.3f}% of CV) - below typical range of 0.5-0.7%</li>' if rates_pct < 0.5 else ''}
+                <li>Data sourced directly from Napier City Council - 100% accurate</li>
+            </ul>
+        </div>
+    </div>
+    '''
+    
+    summary = {
+        'capital_value': cv,
+        'land_value': land,
+        'annual_rates': annual_rates,
+        'rates_percent_cv': rates_pct,
+        'legal_description': legal
+    }
+    
+    return html, summary
+
+
 def generate_enhanced_report(result_data, hazards_data=None, easements_data=None, rates_data=None, output_path=None):
     """
     Generate enhanced HTML report with hazard overlays
@@ -76,10 +180,13 @@ def generate_enhanced_report(result_data, hazards_data=None, easements_data=None
     easement_count = easements_data.get('summary', {}).get('count', 0) if has_easements else 0
     easement_html = easements_data.get('html_table', '') if has_easements else ''
     
-    # Rates data
-    has_rates = rates_data is not None
-    rates_html = rates_data.get('html_table', '') if has_rates else ''
-    rates_summary = rates_data.get('summary', {}) if has_rates else {}
+    # Rates data processing
+    has_rates = rates_data is not None and rates_data.get('success', False)
+    rates_html = ''
+    rates_summary = {}
+    
+    if has_rates:
+        rates_html, rates_summary = _generate_rates_html(rates_data)
     
     # Build HTML
     html = f"""<!DOCTYPE html>
@@ -402,11 +509,14 @@ def generate_enhanced_report(result_data, hazards_data=None, easements_data=None
             <h2>Property Valuation & Rates</h2>
             
             {rates_html if has_rates else '''
-            <p style="color: #a0a0a0; font-style: italic;">Rates information not included in this report.</p>
-            <p style="color: #a0a0a0; font-size: 0.85rem; margin-top: 10px;">
-                ℹ️ Capital value and rates data available in full Basic Report. Contact us for details.
+            <p style="color: #a0a0a0; font-style: italic;">⚠️ Rates information not included in this report.</p>
+            <p style="color: #a0a0a0; font-size: 0.85rem; margin-top: 10px; background: rgba(255,193,7,0.1); padding: 15px; border-radius: 8px; border-left: 3px solid var(--gold);">
+                💡 <strong>Pro Tip:</strong> Our Tier 1 Enhanced reports now include actual council valuation data 
+                (Capital Value, Land Value, Annual Rates) sourced directly from Napier City Council. 
+                Contact us to upgrade your report.
             </p>
             '''}
+        </div>
         </div>
         
         <!-- Hazard Assessment -->

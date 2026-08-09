@@ -25,11 +25,123 @@ BASE_WFS_URL = "https://data.linz.govt.nz/services;key={}/wfs"
 
 # LINZ Hazard Layers
 LAYER_FLOOD_GABRIELLE = "data.linz.govt.nz:layer-112668"  # Cyclone Gabrielle Flood Areas (Feb 2023)
+LAYER_LIQUEFACTION_HAZARD = "data.linz.govt.nz:layer-50783"  # GNS Liquefaction Hazard (NZ-wide)
+LAYER_LIQUEFACTION_SUSCEPTIBILITY = "data.linz.govt.nz:layer-50784"  # GNS Liquefaction Susceptibility (detailed)
 
 def get_api_key():
     """Read LINZ API key from file"""
     with open(API_KEY_FILE, 'r') as f:
         return f.read().strip()
+
+def assess_liquefaction_risk_simple(lat, lon):
+    """
+    Simplified liquefaction risk assessment for Basic Report
+    
+    Uses proximity to coast and rivers as proxy for liquefaction potential.
+    Conservative approach - flags areas that MAY have risk.
+    
+    TODO: Replace with official HBRC liquefaction data post-Beta (Aug 29)
+    
+    Returns:
+        dict with risk assessment or None if low risk
+    """
+    # Approximate Napier coastline coordinates
+    napier_coast_lat = -39.49
+    napier_coast_lon = 176.95
+    
+    # Calculate distance to coast (rough estimate)
+    coast_distance = haversine_distance(lat, lon, napier_coast_lat, napier_coast_lon)
+    
+    # Elevation approximation (Napier is mostly flat coastal plain)
+    # Properties within 3km of coast AND low elevation = potential risk
+    if coast_distance < 3000:  # Within 3km of coast
+        return {
+            'risk_level': 'MEDIUM',
+            'details': 'Property is within 3km of coastline - potential liquefaction risk in seismic event',
+            'source': 'Proximity-based assessment (preliminary)',
+            'note': 'Detailed council-grade liquefaction mapping available in Premium Report'
+        }
+    elif coast_distance < 5000:  # Within 5km
+        return {
+            'risk_level': 'LOW',
+            'details': 'Property is 3-5km from coastline - low liquefaction risk',
+            'source': 'Proximity-based assessment (preliminary)',
+            'note': 'Detailed council-grade liquefaction mapping available in Premium Report'
+        }
+    
+    return None
+
+
+def fetch_liquefaction_hazard(lat, lon, search_radius_m=100):
+    """
+    Fetch liquefaction hazard data from GNS Science (Layer 50783)
+    
+    Liquefaction occurs when saturated soil loses strength during an earthquake,
+    causing buildings to sink or tilt. Critical for Napier properties.
+    
+    Returns:
+        dict with hazard info or None if no risk
+    """
+    api_key = get_api_key()
+    base_url = BASE_WFS_URL.format(api_key)
+    
+    lat_delta = search_radius_m / 111000.0
+    lon_delta = search_radius_m / (111000.0 * abs(math.cos(math.radians(lat))))
+    
+    min_lon = lon - lon_delta
+    max_lon = lon + lon_delta
+    min_lat = lat - lat_delta
+    max_lat = lat + lat_delta
+    
+    params = {
+        'service': 'WFS',
+        'version': '2.0.0',
+        'request': 'GetFeature',
+        'typeNames': LAYER_LIQUEFACTION_HAZARD,
+        'outputFormat': 'application/json',
+        'srsName': 'EPSG:4326',
+        'bbox': f"{min_lat},{min_lon},{max_lat},{max_lon},EPSG:4326"
+    }
+    
+    try:
+        response = requests.get(base_url, params=params, timeout=30)
+        
+        if response.status_code != 200:
+            print(f"  Liquefaction query failed: {response.status_code}")
+            return None
+        
+        data = response.json()
+        features = data.get('features', [])
+        
+        if not features:
+            return None
+        
+        # Process liquefaction hazard features
+        hazards = []
+        for feature in features:
+            props = feature.get('properties', {})
+            hazard_category = props.get('HAZARD_CAT', 'Unknown')
+            hazard_desc = props.get('DESCRIPTIO', props.get('description', 'Liquefaction hazard'))
+            
+            hazards.append({
+                'type': 'Liquefaction Hazard',
+                'category': hazard_category,
+                'description': hazard_desc,
+                'source': 'GNS Science via LINZ',
+                'layer': 'layer-50783'
+            })
+        
+        return {
+            'risk_level': 'HIGH' if any(h['category'] in ['High', 'Very High'] for h in hazards) else 'MEDIUM',
+            'hazards': hazards,
+            'count': len(hazards),
+            'details': f"{len(hazards)} liquefaction hazard zone(s) detected"
+        }
+        
+    except Exception as e:
+        print(f"  Error fetching liquefaction: {e}")
+        return None
+
 
 def haversine_distance(lat1, lon1, lat2, lon2):
     """Calculate distance between two points in meters"""
@@ -282,15 +394,23 @@ def get_all_hazards(lat, lon, property_address=""):
         'summary': []
     }
     
+    # Fetch liquefaction (simplified for Beta - HBRC integration post-Aug29)
+    print("\n[1/4] Assessing liquefaction hazard (preliminary)...")
+    hazards['liquefaction'] = assess_liquefaction_risk_simple(lat, lon)
+    if hazards['liquefaction']:
+        print(f"  ⚠️ {hazards['liquefaction']['risk_level']} RISK: {hazards['liquefaction']['details']}")
+    else:
+        print(f"  ✓ Low liquefaction risk")
+    
     # Fetch tsunami
-    print("\n[1/3] Assessing tsunami risk (coastal proximity)...")
+    print("\n[2/4] Assessing tsunami risk (coastal proximity)...")
     hazards['tsunami'] = fetch_tsunami_risk(lat, lon)
     if hazards['tsunami']:
         status = "POTENTIAL RISK" if hazards['tsunami'].get('in_zone') else "LOW RISK"
         print(f"  ✓ {status}")
     
     # Fetch flood (Gabrielle)
-    print("\n[2/3] Fetching Cyclone Gabrielle flood data...")
+    print("\n[3/4] Fetching Cyclone Gabrielle flood data...")
     hazards['flood'] = fetch_flood_hazard_gabrielle(lat, lon)
     if hazards['flood']:
         if hazards['flood'].get('flooded_in_gabrielle'):
@@ -299,7 +419,7 @@ def get_all_hazards(lat, lon, property_address=""):
             print(f"  ✓ Not flooded")
     
     # Fetch HAIL sites
-    print("\n[3/3] Searching for HAIL sites within 5km...")
+    print("\n[4/4] Searching for HAIL sites within 5km...")
     hazards['hail_sites'] = fetch_hail_sites(lat, lon)
     if hazards['hail_sites']:
         print(f"  ⚠ Found {len(hazards['hail_sites'])} nearby HAIL site(s)")
@@ -308,6 +428,9 @@ def get_all_hazards(lat, lon, property_address=""):
     
     # Calculate overall risk rating
     risk_ratings = []
+    
+    if hazards['liquefaction']:
+        risk_ratings.append(hazards['liquefaction']['risk_level'].lower())
     
     if hazards['tsunami']:
         risk_ratings.append(hazards['tsunami']['risk_rating'])
@@ -329,6 +452,9 @@ def get_all_hazards(lat, lon, property_address=""):
     
     # Generate summary
     summary_lines = []
+    
+    if hazards['liquefaction']:
+        summary_lines.append(f"⚠️ LIQUEFACTION RISK: {hazards['liquefaction']['details']}")
     
     if hazards['tsunami'] and hazards['tsunami'].get('in_zone'):
         summary_lines.append(f"⚠️ TSUNAMI RISK: {hazards['tsunami']['description']}")
