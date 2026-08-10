@@ -100,8 +100,16 @@
 
 ## Future Automation Plans
 - **Email Replies:** In future, Seb will reply to certain emails on Gerhard's behalf (pending setup of Gmail send permissions)
-- **WhatsApp Lead Qualification:** Will set up a WhatsApp channel that Seb oversees initially to qualify leads before escalating to Gerhard
+- **WhatsApp Lead Qualification:** ✅ LIVE - WhatsApp channel automated for property due diligence requests
 - **Client Communication:** Smart routing of inquiries → auto-replies, lead scoring, escalation
+- **WhatsApp Automation System** (2026-08-10):
+  - Cloudflare Worker handles Meta webhooks and KV storage
+  - OpenClaw polls every 3 minutes via cron job
+  - Auto-generates property due diligence reports (LINZ + Hazards + Rates)
+  - Sends reports back via WhatsApp
+  - Cron Job ID: `6c924c8b-6adb-49c8-95bd-8400554c0b7f`
+  - **New WhatsApp Number (2026-08-10 14:52):** +27 66 027 8366
+  - **New Phone Number ID:** 1200711009799782
 
 ## Current Employment
 - **Position:** Assistant Manager, SPAR Bonnievale (South Africa)
