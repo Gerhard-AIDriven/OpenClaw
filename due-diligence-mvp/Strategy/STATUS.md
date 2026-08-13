@@ -1,7 +1,222 @@
 # Due Diligence MVP - Status Report
 
-**Last Updated:** 2026-08-10 14:52 GMT+2  
-**Status:** ✅ **PRODUCTION READY - WHATSAPP AUTOMATION LIVE**
+**Last Updated:** 2026-08-12 18:30 GMT+2  
+**Status:** ⚠️ **RESETTING - META BUSINESS PROFILE RESTART REQUIRED**
+
+---
+
+## ☢️ NUCLEAR RESTART GUIDE (2026-08-12)
+
+**Reason for Restart:** Meta SMS verification failure — locked out of WhatsApp Business API and Business Portfolio. Codes not arriving on multiple numbers/networks/devices over 4+ hours.
+
+### What Went Wrong
+- Original WhatsApp number +27 66 027 8366 stuck in "Pending confirmation" state
+- Meta not sending SMS verification codes (infrastructure issue, especially in South Africa)
+- Tried multiple phone numbers, different devices, new SIM cards — all failed
+- Account now rate-limited/locked due to repeated verification attempts
+- Cannot access Meta Business Portfolio or WhatsApp Business app
+
+### Critical Lesson Learned
+**DO NOT delete your Meta Business Profile unless absolutely necessary.** Deleting won't fix SMS delivery issues — you'll still need to verify a phone number via SMS, and Meta's infrastructure problems will persist. Only restart if you're completely locked out with no recovery path.
+
+---
+
+### 🔄 Complete Restart Checklist
+
+#### Phase 1: Pre-Restart Preparation
+- [ ] **Document current configuration** (see "Current Configuration Snapshot" below)
+- [ ] **Save all credentials and IDs** from existing setup
+- [ ] **Export Cloudflare Worker code** (`worker-with-poll.js`)
+- [ ] **Note down KV namespace ID** from Cloudflare
+- [ ] **Download/copy all environment variables**
+- [ ] **Ensure you have a working phone number** that CAN receive SMS (test first!)
+
+#### Phase 2: Delete Old Setup
+- [ ] Go to `business.facebook.com`
+- [ ] Navigate to **Business Settings** → **Business Info**
+- [ ] Click **Delete Business** (permanent action — confirm you have backups!)
+- [ ] Wait 5-10 minutes for deletion to propagate
+
+#### Phase 3: Create New Meta Business Portfolio
+- [ ] Go to `business.facebook.com`
+- [ ] Click **Create Account**
+- [ ] Enter business details:
+  - Business name: **AI Driven**
+  - Your name: **Gerhard Stimie**
+  - Email: **gerhard@aidriven.biz**
+- [ ] Complete business verification (may require documents later)
+
+#### Phase 4: Set Up WhatsApp Business API
+- [ ] Go to **Business Settings** → **Accounts** → **WhatsApp Accounts**
+- [ ] Click **Add** → **Create a WhatsApp Account**
+- [ ] **CRITICAL STEP:** Use a phone number that YOU KNOW can receive SMS
+  - Test the number first with regular WhatsApp personal app
+  - Recommended: Use your new SIM (+27 99 448 564X) since it's already verified in WhatsApp Business app
+- [ ] Enter phone number: **+27 79 944 8564** (already verified in WhatsApp Business app)
+- [ ] Click **Send Code** — should arrive within 1-2 minutes
+- [ ] Enter 6-digit verification code
+- [ ] Once verified, note down:
+  - **Phone Number ID** (format: 120XXXXXXXXXXXXX)
+  - **WhatsApp Business Account ID** (format: XXXXXXXXXXXXXXX)
+
+#### Phase 5: Create Meta Developer App
+- [ ] Go to `developers.facebook.com`
+- [ ] Click **My Apps** → **Create App**
+- [ ] Select use case: **Other** → **Next**
+- [ ] App name: **AI Driven WhatsApp**
+- [ ] App contact email: **gerhard@aidriven.biz**
+- [ ] Click **Create App**
+- [ ] Add product: **WhatsApp** → **Set Up**
+- [ ] Under **API Setup**, copy:
+  - **Permanent Access Token** (click Generate Token if needed)
+  - **App ID**
+  - **App Secret**
+
+#### Phase 6: Configure Webhooks
+- [ ] In Meta Developer App dashboard, go to **WhatsApp** → **Configuration**
+- [ ] Under **Webhooks**, click **Edit**
+- [ ] Callback URL: `https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev/webhook`
+- [ ] Verify Token: `aidriven-lim-verify-2026` (or generate new one)
+- [ ] Subscribe to fields: **messages**, **message_deliveries**, **message_reads**
+- [ ] Click **Verify and Save**
+
+#### Phase 7: Update Cloudflare Worker
+- [ ] Log into Cloudflare Dashboard → Workers & Pages
+- [ ] Open your worker: `aidriven-whatsapp-webhook`
+- [ ] Go to **Settings** → **Environment Variables**
+- [ ] Update these variables:
+  ```
+  WHATSAPP_PHONE_NUMBER_ID = [NEW Phone Number ID from Phase 4]
+  WHATSAPP_BUSINESS_ACCOUNT_ID = [NEW Business Account ID from Phase 4]
+  WHATSAPP_ACCESS_TOKEN = [NEW Permanent Access Token from Phase 5]
+  WEBHOOK_VERIFY_TOKEN = aidriven-lim-verify-2026 (or your new token)
+  POLL_API_TOKEN = [Keep existing or generate new]
+  ```
+- [ ] Click **Save**
+- [ ] Go to **Deployments** → **Redeploy** (to apply new variables)
+
+#### Phase 8: Test the New Setup
+- [ ] Send test message to new WhatsApp number: +27 79 944 8564
+  - Message: "Test LIM report for 18 Ferguson Avenue, Napier"
+- [ ] Check Cloudflare Worker logs for webhook receipt
+- [ ] Verify auto-reply sent back to WhatsApp
+- [ ] Check OpenClaw cron job picks up the request (within 3 min)
+- [ ] Confirm report generated and sent via WhatsApp
+- [ ] End-to-end test successful? ✅ Mark as LIVE
+
+#### Phase 9: Update Documentation
+- [ ] Update this STATUS.md file with new phone number and IDs
+- [ ] Update `whatsapp/README.md` with new configuration
+- [ ] Update `whatsapp/DASHBOARD.md` monitoring page
+- [ ] Update MEMORY.md with new WhatsApp number
+- [ ] Update any .env files or local config references
+
+---
+
+### 📋 Current Configuration Snapshot (PRE-DELETE BACKUP)
+
+**⚠️ SAVE THIS INFORMATION BEFORE DELETING ANYTHING!**
+
+#### Cloudflare Worker Configuration
+- **Worker Name:** `aidriven-whatsapp-webhook`
+- **Worker URL:** `https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev`
+- **KV Namespace:** *[Check Cloudflare Dashboard → Workers → Your Worker → KV]*
+
+#### Environment Variables (Old Setup)
+```
+WHATSAPP_PHONE_NUMBER_ID = 1200711009799782
+WHATSAPP_BUSINESS_ACCOUNT_ID = 4713904522229723
+WHATSAPP_ACCESS_TOKEN = EAAPjA...ZDZD [CHECK YOUR ACTUAL TOKEN IN CLOUDFLARE]
+WEBHOOK_VERIFY_TOKEN = aidriven-lim-verify-2026
+POLL_API_TOKEN = uGiRA5…dwoH [CHECK poll-whatsapp-requests.js]
+```
+
+#### OpenClaw Cron Job
+- **Job Name:** WhatsApp LIM Poll
+- **Schedule:** Every 3 minutes
+- **Job ID:** `6c924c8b-6adb-49c8-95bd-8400554c0b7f`
+- **Script:** `C:\Users\gstim\.openclaw\workspace\whatsapp\poll-whatsapp-requests.js`
+
+#### Key Files
+- Cloudflare Worker: `whatsapp/worker-with-poll.js`
+- Polling Script: `whatsapp/poll-whatsapp-requests.js`
+- Monitor Script: `whatsapp/monitor.js`
+- Documentation: `whatsapp/DASHBOARD.md`, `whatsapp/README.md`
+
+#### Old Phone Numbers (Problematic)
+- +27 66 027 8366 (original automation number — STUCK)
+- +27 71 461 0886 (personal — also having SMS issues)
+- **New Working Number:** +27 79 944 8564 ✅ (verified in WhatsApp Business app)
+
+---
+
+### 🎯 Success Criteria for New Setup
+
+After restart, verify:
+- [ ] Can log into Meta Business Portfolio without issues
+- [ ] WhatsApp number shows as **Verified** (not Pending)
+- [ ] Can send test message from personal WhatsApp to business number
+- [ ] Auto-reply received within 2 seconds
+- [ ] Report generated within 3-6 minutes
+- [ ] Final report delivered via WhatsApp
+- [ ] No SMS verification loops or lockouts
+
+---
+
+### 🆘 If SMS Still Fails on New Setup
+
+If you create new business portfolio and STILL don't receive SMS codes:
+
+1. **STOP immediately** — don't trigger lockout again
+2. **Try voice call verification** after 2-3 SMS failures
+3. **Contact Meta Business Support** BEFORE proceeding:
+   - Go to `business.facebook.com` → Help → Contact Support
+   - Explain: "SMS verification codes not arriving in South Africa. Need manual verification or voice call option."
+   - Provide: Business ID, phone number, impact (blocked from customer communication)
+4. **Consider using a different carrier** — some SA networks block Meta short codes
+5. **Temporary workaround:** Use someone else's verified phone number temporarily, then change later
+
+---
+
+### 💡 Alternative: Don't Delete, Just Add New Number
+
+**Less destructive option:** Keep existing business portfolio, just add new verified number:
+
+1. Log into existing Meta Business Portfolio (if you can access it)
+2. Go to **Business Settings** → **WhatsApp Accounts**
+3. Click **Add** → Connect new number (+27 99 448 564X)
+4. Verify the new number (should work since it's fresh)
+5. Update Cloudflare Worker with new Phone Number ID
+6. Test with new number
+7. Once working, you can optionally remove the old problematic number
+
+**This preserves:** Business verification history, app configurations, developer settings
+
+---
+
+**Decision Point:** Are you certain you want to delete the entire business profile? Or would you prefer to try adding the new number (+27 99 448 564X) to your existing portfolio first?
+
+Once you confirm the full new phone number and decide on delete vs. add-new-number approach, I'll help you execute the chosen path.
+
+---
+
+## 🔄 Reboot Snapshot (2026-08-11 11:06)
+
+**Reason:** Laptop reboot — preserving operational context
+
+**System State at Reboot:**
+- ✅ WhatsApp automation cron job running (every 3 min, Job ID: `6c924c8b-6adb-49c8-95bd-8400554c0b7f`)
+- ✅ Cloudflare Worker active and healthy
+- ✅ Meta WhatsApp Business API connected
+- ✅ Phone number: +27 66 027 8366 (Phone Number ID: `1200711009799782`)
+- ✅ Last poll successful (no errors)
+- ✅ 19 sample reports validated and ready
+
+**Post-Reboot Checklist:**
+1. Verify cron job still running: `openclaw cron list`
+2. Check last poll timestamp in KV store
+3. Send test WhatsApp message to confirm end-to-end flow
+4. Monitor next scheduled poll (every 3 min)
 
 ---
 
