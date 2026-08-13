@@ -19,7 +19,7 @@ const execPromise = util.promisify(exec);
 
 // Configuration
 const WORKER_URL = 'https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev';
-const POLL_TOKEN = 'uGiRA536eCL0kJP8UxbjFl7BMEaqdwoH';
+const POLL_TOKEN = 'aidriven_poll_secret_2026_xK9mP';
 const WORKSPACE_ROOT = 'C:\\Users\\gstim\\.openclaw\\workspace';
 const DUE_DILIGENCE_DIR = path.join(WORKSPACE_ROOT, 'due-diligence-mvp');
 const REPORTS_DIR = path.join(DUE_DILIGENCE_DIR, 'reports');

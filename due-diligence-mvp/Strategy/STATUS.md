@@ -1,11 +1,85 @@
 # Due Diligence MVP - Status Report
 
-**Last Updated:** 2026-08-12 18:30 GMT+2  
-**Status:** ⚠️ **RESETTING - META BUSINESS PROFILE RESTART REQUIRED**
+**Last Updated:** 2026-08-13 18:46 GMT+2  
+**Status:** ⏳ **WAITING FOR WHATSAPP NUMBER VERIFICATION (Rate Limit Reset)**
+
+---
+
+---
+
+## 📅 TODAY'S UPDATE (2026-08-13 18:46)
+
+### ✅ RECOVERY COMPLETED - META DEVELOPER ACCESS RESTORED
+
+**What Happened:**
+- Locked out of Meta Developer Portal due to 2FA SMS failure
+- Codes sent to old numbers (082 444 5825, 071 461 0886) — neither received SMS
+- Business Manager accessible, but Developer Portal hard-locked
+
+**Recovery Steps Completed:**
+1. ✅ Used WhatsApp-based 2FA code delivery (worked when SMS failed!)
+2. ✅ Regained access to Developer Portal
+3. ✅ Added Google Authenticator as primary 2FA method (no more SMS dependency)
+4. ✅ Created recovery documentation: `meta-2fa-recovery.md`
+
+### 🔄 PHONE NUMBER MIGRATION IN PROGRESS
+
+**Old Number:** +27 66 027 8366 (cancelled)
+**New Number:** +27 79 944 8564 (active, verified in WhatsApp Business app)
+
+**Current State:**
+- ✅ New number added to WhatsApp Business Account
+- ✅ Phone Number ID assigned: `1526775087176551`
+- ✅ Business Account ID unchanged: `4713904522229723`
+- ✅ Local `.env` updated with new credentials
+- ✅ Cloudflare Worker updated:
+  - `POLL_API_TOKEN` = `aidriven_poll_secret_2026_xK9mP`
+  - Ready for Phone Number ID update once verified
+- ⏳ **Verification rate-limited** — hit Meta's code request limit
+- ⏳ **Next attempt:** 2026-08-14 10:00 (reminder set)
+
+**Updated Configuration:**
+```env
+WHATSAPP_PHONE_NUMBER_ID = 1526775087176551
+WHATSAPP_BUSINESS_ACCOUNT_ID = 4713904522229723
+WHATSAPP_ACCESS_TOKEN = EAAPjA...ZDZD (existing token still valid)
+BUSINESS_PHONE_NUMBER = +27799448564
+WEBHOOK_VERIFY_TOKEN = aidriven-lim-verify-2026
+POLL_API_TOKEN = aidriven_poll_secret_2026_xK9mP
+```
+
+**Tomorrow's Checklist (2026-08-14 10:00):**
+1. [ ] Go to WhatsApp Manager → Phone numbers
+2. [ ] Click **Verify** on +27 79 944 8564
+3. [ ] Choose **Phone call** option (more reliable than SMS)
+4. [ ] Enter 6-digit verification code
+5. [ ] Once verified, update Cloudflare Worker:
+   - `WHATSAPP_PHONE_NUMBER_ID` = `1526775087176551`
+   - `BUSINESS_PHONE_NUMBER` = `+27799448564`
+6. [ ] Redeploy Cloudflare Worker
+7. [ ] Send test WhatsApp message to +27 79 944 8564
+8. [ ] Verify auto-reply and report generation working
+9. [ ] Mark system as LIVE
+
+### 🛡️ SECURITY IMPROVEMENTS
+
+**2FA Setup:**
+- ✅ Primary: Google Authenticator (offline codes, no SMS needed)
+- ✅ Backup codes: Generated and saved (store in password manager)
+- ✅ Recovery email: gerhard@aidriven.biz
+- ✅ Documentation: `meta-2fa-recovery.md` created with full recovery guide
+
+**Lesson Learned:**
+- ❌ NEVER rely solely on SMS for 2FA (carrier issues, number changes)
+- ✅ Always use authenticator app (Google Authenticator, Authy)
+- ✅ Always generate backup codes immediately
+- ✅ Document recovery paths BEFORE you need them
 
 ---
 
 ## ☢️ NUCLEAR RESTART GUIDE (2026-08-12)
+
+**Status:** ON HOLD — Recovery successful, nuclear option not needed
 
 **Reason for Restart:** Meta SMS verification failure — locked out of WhatsApp Business API and Business Portfolio. Codes not arriving on multiple numbers/networks/devices over 4+ hours.
 
@@ -122,13 +196,25 @@
 - **Worker URL:** `https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev`
 - **KV Namespace:** *[Check Cloudflare Dashboard → Workers → Your Worker → KV]*
 
-#### Environment Variables (Old Setup)
-```
-WHATSAPP_PHONE_NUMBER_ID = 1200711009799782
+#### Environment Variables (Cloudflare Worker) - UPDATED 2026-08-13
+
+| Variable | Value | Status |
+|----------|-------|--------|
+| `WHATSAPP_PHONE_NUMBER_ID` | `1526775087176551` | ✅ Ready (awaiting verification) |
+| `WHATSAPP_BUSINESS_ACCOUNT_ID` | `4713904522229723` | ✅ Unchanged |
+| `WHATSAPP_ACCESS_TOKEN` | `EAAPjA...ZDZD` | ✅ Valid (permanent token) |
+| `WEBHOOK_VERIFY_TOKEN` | `aidriven-lim-verify-2026` | ✅ Verified |
+| `POLL_API_TOKEN` | `aidriven_poll_secret_2026_xK9mP` | ✅ Updated 2026-08-13 |
+| `LIM_QUEUE_KV` | *[KV Namespace]* | ✅ Connected |
+
+**Local Reference (.env file):**
+```env
+WHATSAPP_PHONE_NUMBER_ID = 1526775087176551
 WHATSAPP_BUSINESS_ACCOUNT_ID = 4713904522229723
-WHATSAPP_ACCESS_TOKEN = EAAPjA...ZDZD [CHECK YOUR ACTUAL TOKEN IN CLOUDFLARE]
+WHATSAPP_ACCESS_TOKEN = EAAPjA...ZDZD
+BUSINESS_PHONE_NUMBER = +27799448564
 WEBHOOK_VERIFY_TOKEN = aidriven-lim-verify-2026
-POLL_API_TOKEN = uGiRA5…dwoH [CHECK poll-whatsapp-requests.js]
+POLL_API_TOKEN = aidriv…K9mP
 ```
 
 #### OpenClaw Cron Job
@@ -144,9 +230,9 @@ POLL_API_TOKEN = uGiRA5…dwoH [CHECK poll-whatsapp-requests.js]
 - Documentation: `whatsapp/DASHBOARD.md`, `whatsapp/README.md`
 
 #### Old Phone Numbers (Problematic)
-- +27 66 027 8366 (original automation number — STUCK)
-- +27 71 461 0886 (personal — also having SMS issues)
-- **New Working Number:** +27 79 944 8564 ✅ (verified in WhatsApp Business app)
+- +27 66 027 8366 (original automation number — CANCELLED)
+- +27 71 461 0886 (personal — SMS delivery unreliable)
+- **New Number:** +27 79 944 8564 ✅ (pending verification, rate limit reset needed)
 
 ---
 
@@ -204,12 +290,14 @@ Once you confirm the full new phone number and decide on delete vs. add-new-numb
 
 **Reason:** Laptop reboot — preserving operational context
 
+**WhatsApp Automation:** ⏳ PAUSED — awaiting number verification (rate limit reset 2026-08-14 10:00)
+
 **System State at Reboot:**
-- ✅ WhatsApp automation cron job running (every 3 min, Job ID: `6c924c8b-6adb-49c8-95bd-8400554c0b7f`)
-- ✅ Cloudflare Worker active and healthy
-- ✅ Meta WhatsApp Business API connected
-- ✅ Phone number: +27 66 027 8366 (Phone Number ID: `1200711009799782`)
-- ✅ Last poll successful (no errors)
+- ⏸️ WhatsApp automation cron job: Running but no new requests (awaiting number change)
+- ✅ Cloudflare Worker: Active and healthy
+- ✅ Meta WhatsApp Business API: Connected (Business Account ID: 4713904522229723)
+- ⏳ Phone number migration: +27 66 027 8366 → +27 79 944 8564
+- ⏳ Verification: Rate-limited, retry scheduled 2026-08-14 10:00
 - ✅ 19 sample reports validated and ready
 
 **Post-Reboot Checklist:**
@@ -324,8 +412,8 @@ Mark as completed
 
 | Job Name | Schedule | Status | Job ID |
 |----------|----------|--------|--------|
-| WhatsApp LIM Poll | Every 3 min | ✅ Running | `6c924c8b-6adb-49c8-95bd-8400554c0b7f` |
-| Heartbeat (2-hourly) | 6am-6pm | ✅ Active | `f58e422a-...` |
+| WhatsApp LIM Poll | Every 3 min | ⏸️ Running (paused pending verification) | `6c924c8b-6adb-49c8-95bd-8400554c0b7f` |
+| Meta Verification Reminder | 2026-08-14 10:00 | ✅ Scheduled | `526740a1-990f-41de-8065-f93dc8a46ce8` |
 
 ---
 
@@ -378,7 +466,7 @@ Mark as completed
 
 ## 🚀 Launch Status
 
-### ✅ PRODUCTION READY - WAITING FOR WHATSAPP UNBLOCK
+### ✅ PRODUCTION READY - WAITING FOR WHATSAPP NUMBER VERIFICATION
 
 **System Readiness:**
 - ✅ All technical components deployed and tested
@@ -388,18 +476,22 @@ Mark as completed
 - ✅ Report generation validated (19 sample reports)
 - ✅ Documentation complete (dashboard, README, deployment guide)
 - ✅ Monitoring script operational (`node monitor.js`)
-- ✅ **New WhatsApp number active: +27 66 027 8366** 🎉
+- ✅ Meta Developer access recovered (2026-08-13)
+- ✅ Google Authenticator 2FA configured (no more SMS dependency)
+- ⏳ **New WhatsApp number:** +27 79 944 8564 (verification rate-limited until 2026-08-14 10:00)
 
 **Next Steps:**
-1. ✅ **Update Cloudflare Worker** with new Phone Number ID: `1200711009799782`
-2. ✅ **Redeploy Cloudflare Worker**
-3. Send test message: "LIM report for 18 Ferguson Avenue, Napier" to +27 66 027 8366
-4. Verify auto-reply received instantly
-5. Confirm report generated within 3 minutes
-6. Verify final report sent via WhatsApp
-7. Process first 10 real customer requests
-8. Monitor success rate and timing
-9. Launch beta on August 15 as planned
+1. ⏳ **Wait for rate limit reset** (scheduled 2026-08-14 10:00)
+2. [ ] Verify +27 79 944 8564 using phone call option
+3. [ ] Update Cloudflare Worker with new Phone Number ID: `1526775087176551`
+4. [ ] Redeploy Cloudflare Worker
+5. [ ] Send test WhatsApp message: "LIM report for 18 Ferguson Avenue, Napier" to +27 79 944 8564
+6. [ ] Verify auto-reply received instantly
+7. [ ] Confirm report generated within 3 minutes
+8. [ ] Verify final report sent via WhatsApp
+9. [ ] Process first 10 real customer requests
+10. [ ] Monitor success rate and timing
+11. [ ] Launch beta on August 15 as planned
 
 **Known Limitations:**
 - ⚠️ Semi-automated rates extraction (requires manual browser step for Napier Council)
@@ -513,4 +605,5 @@ Ready to launch beta on August 15!
 
 *AI Driven | Practical AI for real businesses*  
 *gerhard@aidriven.biz | 021 402 8807*  
-*WhatsApp: +27 66 027 8366 (automation live)*
+*WhatsApp: +27 79 944 8564 (automation pending verification)*  
+*Meta 2FA: Google Authenticator ✅ | Recovery doc: meta-2fa-recovery.md*
