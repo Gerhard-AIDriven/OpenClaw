@@ -1,21 +1,20 @@
 /**
- * Poll WhatsApp Requests from Cloudflare Worker - VERSION 2 (with PDF + GitHub Auto-Deploy)
+ * Poll WhatsApp Requests from Cloudflare Worker - VERSION 3 (Unified Report Engine)
+ * 
+ * CHANGES IN V3:
+ * - Uses unified report-engine.js with LINZ API integration
+ * - Automatic data fetching from LINZ, council, and OneRoof
+ * - Generates professional reports with real property data
+ * - Same auto-deploy workflow (GitHub → Cloudflare Pages)
  * 
  * This script:
  * 1. Calls the Cloudflare Worker /poll endpoint
  * 2. Fetches pending LIM/Due Diligence requests
- * 3. Processes each request (generates HTML + PDF report)
- * 4. Saves reports to aidriven-website/reports/
- * 5. Auto-commits and pushes to GitHub (triggers automatic Cloudflare deployment)
- * 6. Sends WhatsApp message with link to view report
+ * 3. Processes each request using unified report engine
+ * 4. Auto-commits and pushes to GitHub (triggers automatic Cloudflare deployment)
+ * 5. Sends WhatsApp message with link to view report
  * 
  * Run every 3 minutes via cron job
- * 
- * Requirements:
- * - Git installed and configured
- * - aidriven-website folder initialized as git repo
- * - GitHub remote configured and authenticated
- * - Cloudflare Pages connected to GitHub repo for auto-deployment
  */
 
 const fs = require('fs');
@@ -27,58 +26,22 @@ const { exec } = require('child_process');
 const WORKER_URL = 'https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev';
 const POLL_TOKEN = 'aidriven_poll_secret_2026_xK9mP';
 const WORKSPACE_ROOT = 'C:\\Users\\gstim\\.openclaw\\workspace';
-const DUE_DILIGENCE_DIR = path.join(WORKSPACE_ROOT, 'due-diligence-mvp');
-const LOCAL_REPORTS_DIR = path.join(DUE_DILIGENCE_DIR, 'reports');
 const WEB_REPORTS_DIR = path.join(WORKSPACE_ROOT, 'aidriven-website', 'reports');
 const WEB_PDF_DIR = path.join(WEB_REPORTS_DIR, 'pdf');
 
-// Import unified report engine (NEW - replaces direct template calls)
+// Import unified report engine (NEW - includes LINZ integration)
 const { generatePropertyReport } = require('../automation/whatsapp-property-report/report-engine');
 
-// Legacy template import (fallback only)
-const generateHtmlReport = require('./report-template-new.js');
-
 // Ensure directories exist
-[LOCAL_REPORTS_DIR, WEB_REPORTS_DIR, WEB_PDF_DIR].forEach(dir => {
+[WEB_REPORTS_DIR, WEB_PDF_DIR].forEach(dir => {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
 });
 
 /**
- * Auto-commit and push new reports to GitHub for automatic Cloudflare deployment
+ * Logging helper
  */
-function autoDeployToGitHub(reportFilename) {
-  return new Promise((resolve, reject) => {
-    log('info', `🚀 Starting auto-deployment to GitHub: ${reportFilename}`);
-    
-    const commands = [
-      `cd "${path.join(WORKSPACE_ROOT, 'aidriven-website')}"`,
-      'git add reports/',
-      `git commit -m "Auto: Add report ${reportFilename}"`,
-      'git push origin main'
-    ].join(' && ');
-    
-    exec(commands, { maxBuffer: 1024 * 1024 }, (error, stdout, stderr) => {
-      if (error) {
-        // Check if it's just a "nothing to commit" error (already committed)
-        if (stderr.includes('nothing to commit') || stderr.includes('working tree clean')) {
-          log('info', 'ℹ️ No changes to commit (already deployed)');
-          resolve({ success: true, skipped: true, reason: 'no changes' });
-        } else {
-          log('error', `❌ GitHub auto-deploy failed: ${error.message}`, { stderr });
-          reject(new Error(`Git command failed: ${error.message}`));
-        }
-      } else {
-        log('info', `✅ Auto-deployed to GitHub successfully: ${reportFilename}`);
-        log('info', `Git output: ${stdout.substring(0, 200)}`);
-        resolve({ success: true, skipped: false, output: stdout });
-      }
-    });
-  });
-}
-
-// Logging
 function log(level, message, data = null) {
   const timestamp = new Date().toISOString();
   const prefix = `[${timestamp}] [${level.toUpperCase()}]`;
@@ -136,36 +99,35 @@ async function processRequest(request) {
 }
 
 /**
- * Process Due Diligence Report Request - Generates HTML + PDF
+ * Process Due Diligence Report Request - Uses Unified Report Engine
  */
 async function processDueDiligenceRequest(request) {
   log('info', `Due Diligence request for: ${request.address}`);
   
   try {
-    // Generate unique output filename
-    const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, -5);
-    const safeId = request.id.slice(0, 8);
-    const safeAddress = request.address.replace(/[^a-zA-Z0-9]/g, '_').slice(0, 30);
-    const baseFilename = `whatsapp_${safeAddress}_${safeId}_${timestamp}`;
+    // Use the unified report engine (includes LINZ data fetching)
+    log('info', '🚀 Using unified report engine with LINZ integration...');
     
-    const localHtmlPath = path.join(LOCAL_REPORTS_DIR, `${baseFilename}.html`);
-    const webHtmlPath = path.join(WEB_REPORTS_DIR, `${baseFilename}.html`);
-    const webPdfPath = path.join(WEB_PDF_DIR, `${baseFilename}.pdf`);
+    const reportResult = await generatePropertyReport({
+      address: request.address,
+      package: request.package || 'basic',
+      customerName: request.customer?.name || 'Customer',
+      requestId: request.id
+    });
     
-    log('info', `Generating report files: ${baseFilename}`);
+    if (!reportResult.success) {
+      throw new Error(reportResult.error || 'Report generation failed');
+    }
     
-    // Generate HTML report
-    const htmlContent = generateHtmlReport(request.address, request.id, timestamp);
+    // Generate PDF from HTML (for download option)
+    const htmlContent = fs.readFileSync(
+      path.join(WEB_REPORTS_DIR, reportResult.filename), 
+      'utf-8'
+    );
     
-    // Save local copy
-    fs.writeFileSync(localHtmlPath, htmlContent, 'utf-8');
-    log('info', `Local HTML saved: ${localHtmlPath}`);
+    const pdfFilename = reportResult.filename.replace('.html', '.pdf');
+    const webPdfPath = path.join(WEB_PDF_DIR, pdfFilename);
     
-    // Save web copy
-    fs.writeFileSync(webHtmlPath, htmlContent, 'utf-8');
-    log('info', `Web HTML saved: ${webHtmlPath}`);
-    
-    // Generate PDF from HTML
     log('info', `Generating PDF...`);
     const file = { content: htmlContent };
     const options = { 
@@ -178,37 +140,18 @@ async function processDueDiligenceRequest(request) {
     fs.writeFileSync(webPdfPath, pdfBuffer);
     log('info', `Web PDF saved: ${webPdfPath}`);
     
-    // Auto-deploy to GitHub (triggers automatic Cloudflare deployment)
-    try {
-      await autoDeployToGitHub(baseFilename);
-      log('info', '✅ Auto-deployed to GitHub - Cloudflare deployment in progress');
-      
-      // Wait 30 seconds for Cloudflare to complete deployment
-      log('info', '⏳ Waiting 30s for Cloudflare deployment to complete...');
-      await new Promise(resolve => setTimeout(resolve, 30000));
-      log('info', '✅ Cloudflare deployment should be complete - report link ready!');
-      
-    } catch (deployError) {
-      log('error', `⚠️ Auto-deploy failed, but report is generated locally: ${deployError.message}`);
-      // Continue anyway - report still works if manually deployed later
-    }
-    
-    // Create public URL (assuming aidriven.biz is live on Cloudflare Pages)
-    const reportUrl = `https://aidriven.biz/reports/${baseFilename}.html`;
-    
     log('info', `Report generated successfully`, { 
-      htmlUrl: reportUrl,
-      pdfUrl: `https://aidriven.biz/reports/pdf/${baseFilename}.pdf`
+      orderId: reportResult.orderId,
+      htmlUrl: reportResult.reportUrl,
+      pdfUrl: `https://aidriven.biz/reports/pdf/${pdfFilename}`
     });
     
     return {
       success: true,
-      message: 'Due Diligence report generated successfully',
-      reportUrl: reportUrl,
-      pdfUrl: `https://aidriven.biz/reports/pdf/${baseFilename}.pdf`,
-      localPath: localHtmlPath,
-      webHtmlPath: webHtmlPath,
-      webPdfPath: webPdfPath
+      orderId: reportResult.orderId,
+      reportUrl: reportResult.reportUrl,
+      pdfUrl: `https://aidriven.biz/reports/pdf/${pdfFilename}`,
+      filename: reportResult.filename
     };
     
   } catch (error) {
@@ -219,6 +162,10 @@ async function processDueDiligenceRequest(request) {
     };
   }
 }
+
+/**
+ * Send WhatsApp message via Worker
+ */
 async function sendWhatsAppMessage(phoneNumber, messageText) {
   log('info', `Sending WhatsApp message to ${phoneNumber}`);
   log('info', `Message content: ${messageText.substring(0, 100)}...`);
@@ -255,7 +202,7 @@ async function sendWhatsAppMessage(phoneNumber, messageText) {
 }
 
 /**
- * Update request status in KV store via Worker's /update endpoint
+ * Update request status in KV store
  */
 async function updateRequestStatus(requestId, status, result) {
   log('info', `Updating request ${requestId} status to ${status}`, result);
@@ -296,7 +243,7 @@ async function updateRequestStatus(requestId, status, result) {
  * Main execution
  */
 async function main() {
-  log('info', '=== WhatsApp Request Poll Started (v2 with PDF + Web) ===');
+  log('info', '=== WhatsApp Request Poll Started (v3 - Unified Engine) ===');
   
   try {
     // Step 1: Poll for pending requests
@@ -316,23 +263,28 @@ async function main() {
         
         // Step 3: Send result back via WhatsApp with report link
         if (result.success) {
-          const successMessage = `✅ Your Due Diligence report is ready!
+          const successMessage = `✅ Your Property Due Diligence Report is ready!
 
 📍 Address: ${request.address}
 
-📊 Report Type: Tier 1 Due Diligence
-🆔 Order ID: ${request.id.slice(0, 8)}
+📊 Package: ${request.package || 'Basic'}
+🆔 Order ID: ${result.orderId || request.id.slice(0, 8)}
 
 🌐 View your report online:
 ${result.reportUrl}
 
-📥 The report includes a "Download PDF" button for offline viewing.
+📥 The report includes:
+• LINZ title information
+• Council hazard maps
+• Property valuation estimates
+• Risk assessment summary
 
-Note: This is an MVP demonstration. Full data integration (LINZ, hazards, rates) coming soon!
+💳 Payment:
+Contact us on +27 71 461 0886 (Business WhatsApp) to arrange payment and receive your final report.
 
-Questions? Contact us on +27 71 461 0886 (Business WhatsApp).
+Questions? Reply to this message or call us during business hours.
 
-💡 Tip: If the link doesn't work immediately, wait 30 seconds and refresh the page.`;
+Thank you for choosing AI Driven! 🏠`;
           
           const sendResult = await sendWhatsAppMessage(request.customer.phone, successMessage);
           
@@ -342,6 +294,7 @@ Questions? Contact us on +27 71 461 0886 (Business WhatsApp).
               messageSent: true,
               messageId: sendResult.messageId
             });
+            log('info', `✅ Request ${request.id} completed successfully`);
           } else {
             log('error', `Failed to send success message for ${request.id}`);
             await updateRequestStatus(request.id, 'completed_partial', {
@@ -351,32 +304,40 @@ Questions? Contact us on +27 71 461 0886 (Business WhatsApp).
             });
           }
         } else {
-          const errorMessage = `⚠️ Issue with your Due Diligence request
+          // Report generation failed
+          const errorMessage = `⚠️ We encountered an issue generating your report for:
 
-📍 Address: ${request.address}
-🆔 Order ID: ${request.id.slice(0, 8)}
+📍 ${request.address}
 
-${result.message}
+Our team has been notified and will contact you shortly to resolve this.
 
-Please reply to this message or contact us for assistance.`;
+Please contact us on +27 71 461 0886 if you need immediate assistance.
+
+Sorry for the inconvenience! 🙏`;
           
           await sendWhatsAppMessage(request.customer.phone, errorMessage);
-          await updateRequestStatus(request.id, 'failed', result);
+          await updateRequestStatus(request.id, 'failed', {
+            error: result.error
+          });
+          
+          log('error', `❌ Request ${request.id} failed: ${result.error}`);
         }
         
       } catch (error) {
-        log('error', `Failed to process request ${request.id}: ${error.message}`);
-        await updateRequestStatus(request.id, 'error', { error: error.message });
+        log('error', `Unexpected error processing request ${request.id}: ${error.message}`);
+        await updateRequestStatus(request.id, 'error', {
+          error: error.message
+        });
       }
     }
     
-    log('info', '=== WhatsApp Request Poll Completed ===');
+    log('info', '=== Poll Complete ===\n');
     
   } catch (error) {
     log('error', `Poll execution failed: ${error.message}`);
-    process.exit(1);
+    log('error', error.stack);
   }
 }
 
-// Run main function
+// Run
 main();

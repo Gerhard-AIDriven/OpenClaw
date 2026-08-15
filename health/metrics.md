@@ -1,3 +1,4 @@
+| 2026-08-15 | 99.1 | 133/79 | 6.8 | Day 2 of cortisone course — BP elevated, BG slightly up but manageable |
 | 2026-08-11 | 99.6 | 127/74 | 6.1 | Consistent under 100kg, BG in sweet spot |
 | 2026-08-10 | 99.9 | 129/76 | 5.9 | Under 100kg! |
 | 2026-08-08 | 99.6 | 125/77 | 5.7 | |

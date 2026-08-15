@@ -1,0 +1,9 @@
+# Cloudflare Pages redirects configuration
+# Allow direct access to HTML files in /reports/
+# Don't rewrite .html file requests to index.html
+
+# Serve reports directly (no SPA routing)
+/reports/*    /reports/:splat    200
+
+# Everything else goes to index.html (for future SPA if needed)
+/*    /index.html    404
