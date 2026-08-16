@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI DRIVEN | Property Due Diligence Reports</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #000000;
+      --orange: #f7931e;
+      --orange-light: #fbb040;
+      --purple: #8b2fc9;
+      --purple-light: #a855f7;
+      --white: #ffffff;
+      --muted: #888899;
+      --card: #111111;
+      --border: rgba(247,147,30,0.2);
+      --success: #10b981;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+      padding: 2rem;
+      position: relative;
+    }
+
+    /* Subtle background glow */
+    body::before {
+      content: '';
+      position: fixed;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(139,47,201,0.12) 0%, transparent 65%);
+      top: 10%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-text {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--white);
+      margin-bottom: 0.3rem;
+    }
+
+    .logo-tagline {
+      font-size: 0.85rem;
+      color: var(--orange);
+      letter-spacing: 2px;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title span {
+      background: linear-gradient(90deg, var(--orange), var(--orange-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 28px;
+      background: linear-gradient(180deg, var(--purple), var(--orange));
+      border-radius: 2px;
+    }
+
+    /* Problem/Solution Grid */
+    .problem-solution {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .problem-solution {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .problem-card, .solution-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .problem-card h3 {
+      color: var(--danger);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .solution-card h3 {
+      color: var(--success);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .problem-list, .solution-list {
+      list-style: none;
+    }
+
+    .problem-list li, .solution-list li {
+      margin-bottom: 0.8rem;
+      padding-left: 1.8rem;
+      position: relative;
+      color: var(--muted);
+    }
+
+    .problem-list li::before {
+      content: '❌';
+      position: absolute;
+      left: 0;
+      font-size: 0.9rem;
+    }
+
+    .solution-list li::before {
+      content: '✅';
+      position: absolute;
+      left: 0;
+      font-size: 0.9rem;
+    }
+
+    /* Pricing Cards */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pricing-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: transform 0.2s, border-color 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--orange);
+    }
+
+    .pricing-card.featured {
+      border-color: var(--orange);
+      background: linear-gradient(135deg, rgba(247,147,30,0.08) 0%, var(--card) 100%);
+    }
+
+    .pricing-card.featured::before {
+      content: 'MOST POPULAR';
+      position: absolute;
+      top: 12px;
+      right: -30px;
+      background: var(--orange);
+      color: var(--bg);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 2.5rem;
+      transform: rotate(45deg);
+    }
+
+    .package-name {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .package-price {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 1.5rem;
+    }
+
+    .package-price span {
+      font-size: 1rem;
+      color: var(--muted);
+      font-weight: 400;
+    }
+
+    .package-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .package-features li {
+      margin-bottom: 0.7rem;
+      padding-left: 1.8rem;
+      position: relative;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .package-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    .package-features li.unavailable {
+      color: var(--muted);
+      opacity: 0.5;
+    }
+
+    .package-features li.unavailable::before {
+      content: '—';
+      color: var(--muted);
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: linear-gradient(135deg, var(--orange), var(--orange-light));
+      color: var(--bg);
+      text-align: center;
+      text-decoration: none;
+      font-weight: 700;
+      font-family: 'Rajdhani', sans-serif;
+      letter-spacing: 1px;
+      border-radius: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(247,147,30,0.3);
+    }
+
+    .cta-button.secondary {
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--white);
+    }
+
+    .cta-button.secondary:hover {
+      border-color: var(--orange);
+      background: rgba(247,147,30,0.06);
+    }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2rem;
+      background: var(--card);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem 1.2rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .comparison-table th {
+      background: rgba(247,147,30,0.1);
+      color: var(--orange);
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      font-size: 0.9rem;
+    }
+
+    .comparison-table td {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comparison-table tr:hover td {
+      background: rgba(247,147,30,0.03);
+    }
+
+    .highlight-cell {
+      color: var(--success);
+      font-weight: 600;
+    }
+
+    /* What's Included */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .feature-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1.2rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+    }
+
+    .feature-icon {
+      font-size: 1.8rem;
+      flex-shrink: 0;
+    }
+
+    .feature-content h4 {
+      color: var(--white);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .feature-content p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
+    /* Testimonial Placeholder */
+    .testimonial {
+      background: var(--card);
+      border-left: 4px solid var(--orange);
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+    .testimonial-text {
+      font-style: italic;
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+
+    .testimonial-author {
+      color: var(--white);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .testimonial-role {
+      color: var(--orange);
+      font-size: 0.8rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      background: linear-gradient(135deg, rgba(139,47,201,0.15) 0%, rgba(247,147,30,0.1) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 3rem 2rem;
+      margin-top: 3rem;
+    }
+
+    .cta-section h2 {
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-buttons .cta-button {
+      width: auto;
+      min-width: 200px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding-top: 3rem;
+      margin-top: 3rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .contact-info a {
+      color: var(--orange);
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Disclaimer Box */
+    .disclaimer-box {
+      background: rgba(245,158,11,0.1);
+      border: 1px solid var(--warning);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .disclaimer-box h4 {
+      color: var(--warning);
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .disclaimer-box p {
+      color: var(--muted);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="header">
+      <div class="logo-text">AI DRIVEN</div>
+      <div class="logo-tagline">Practical AI For Real Businesses</div>
+      <h1 class="hero-title">Property Due Diligence Reports<br/><span>In Hours, Not Days</span></h1>
+      <p class="hero-subtitle">Screen properties faster, negotiate smarter, and save $300+ per deal with comprehensive due diligence at a fraction of LIM cost.</p>
+    </div>
+
+    <!-- Problem/Solution -->
+    <div class="section">
+      <h2 class="section-title">The Problem vs Our Solution</h2>
+      <div class="problem-solution">
+        <div class="problem-card">
+          <h3>Traditional Approach</h3>
+          <ul class="problem-list">
+            <li>Wait 5-10 days for council LIM ($400+)</li>
+            <li>Order multiple LIMs = $1,200+ for 3 properties</li>
+            <li>No investment analysis or rental projections</li>
+            <li>Lose deal momentum while waiting</li>
+            <li>Generic data dumps with no guidance</li>
+            <li>Expensive to walk away from bad deals</li>
+          </ul>
+        </div>
+        <div class="solution-card">
+          <h3>AI Driven Advantage</h3>
+          <ul class="solution-list">
+            <li>Reports in 4 hours or less</li>
+            <li>Screen 5 properties for cost of 1 LIM</li>
+            <li>Full investment metrics & cash flow analysis</li>
+            <li>Make informed offers immediately</li>
+            <li>Actionable recommendations tailored to you</li>
+            <li>Walk away cheaply if red flags appear</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- What's Included -->
+    <div class="section">
+      <h2 class="section-title">What's In Your Report</h2>
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">📋</div>
+          <div class="feature-content">
+            <h4>Legal & Title Details</h4>
+            <p>Certificate of title, ownership, easements, covenants, and legal descriptions from LINZ.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🗺️</div>
+          <div class="feature-content">
+            <h4>Zoning Analysis</h4>
+            <p>District Plan zoning, permitted/restricted activities, height limits, site coverage rules.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">⚠️</div>
+          <div class="feature-content">
+            <h4>Natural Hazards</h4>
+            <p>Flood, erosion, liquefaction, tsunami, landslide risk overlays from council GIS data.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🏗️</div>
+          <div class="feature-content">
+            <h4>Building Consents</h4>
+            <p>Locations and dates of all consents on property (full details require formal LIM).</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">💧</div>
+          <div class="feature-content">
+            <h4>Infrastructure</h4>
+            <p>Water, wastewater, stormwater connections, capacity, and service providers.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">☣️</div>
+          <div class="feature-content">
+            <h4>Contamination Check</h4>
+            <p>HAIL register search for hazardous activity history on the site.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">💰</div>
+          <div class="feature-content">
+            <h4>Rates & Valuation</h4>
+            <p>Current capital value, land value, annual rates, arrears status.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📊</div>
+          <div class="feature-content">
+            <h4>Investment Metrics</h4>
+            <p>Rental yield, cash flow projections, expense estimates (Standard/Premium only).</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🏘️</div>
+          <div class="feature-content">
+            <h4>Comparable Sales</h4>
+            <p>Recent sales analysis, market trends, estimated value range (Premium only).</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">✅</div>
+          <div class="feature-content">
+            <h4>Recommendations</h4>
+            <p>Clear next steps, priority actions, and professional referrals if needed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pricing -->
+    <div class="section">
+      <h2 class="section-title">Simple, Transparent Pricing</h2>
+      <div class="pricing-grid">
+        
+        <!-- Basic Package -->
+        <div class="pricing-card">
+          <div class="package-name">Basic</div>
+          <div class="package-price">$75 <span>NZD</span></div>
+          <ul class="package-features">
+            <li>All property & title details</li>
+            <li>Zoning confirmation</li>
+            <li>Natural hazard overlays</li>
+            <li>Infrastructure connections</li>
+            <li>Contamination check</li>
+            <li>Rates & valuation data</li>
+            <li>Building consent locations</li>
+            <li class="unavailable">Investment metrics</li>
+            <li class="unavailable">Comparable sales analysis</li>
+            <li class="unavailable">Consultation call</li>
+          </ul>
+          <a href="#" class="cta-button secondary">Order Basic</a>
+        </div>
+
+        <!-- Standard Package -->
+        <div class="pricing-card featured">
+          <div class="package-name">Standard</div>
+          <div class="package-price">$125 <span>NZD</span></div>
+          <ul class="package-features">
+            <li>Everything in Basic, plus:</li>
+            <li>Rental yield analysis</li>
+            <li>Cash flow projections</li>
+            <li>Expense estimates</li>
+            <li>Development potential assessment</li>
+            <li>5-year growth projection</li>
+            <li>Priority email support</li>
+            <li class="unavailable">Comparable sales table</li>
+            <li class="unavailable">Consultation call</li>
+          </ul>
+          <a href="#" class="cta-button">Order Standard</a>
+        </div>
+
+        <!-- Premium Package -->
+        <div class="pricing-card">
+          <div class="package-name">Premium</div>
+          <div class="package-price">$200 <span>NZD</span></div>
+          <ul class="package-features">
+            <li>Everything in Standard, plus:</li>
+            <li>5 comparable sales analysis</li>
+            <li>Estimated market value range</li>
+            <li>Market trend insights</li>
+            <li>15-min consultation call</li>
+            <li>Priority phone support</li>
+            <li>Custom recommendations</li>
+            <li>Referral network access</li>
+          </ul>
+          <a href="#" class="cta-button secondary">Order Premium</a>
+        </div>
+
+      </div>
+
+      <div class="disclaimer-box">
+        <h4>⚠️ Important Notice</h4>
+        <p><strong>This is NOT a formal Land Information Memorandum (LIM).</strong> Our reports are for informational screening purposes only and should not be relied upon for final settlement decisions. Always obtain a formal LIM from the council, a professional building inspection, and legal advice before purchasing property.</p>
+      </div>
+    </div>
+
+    <!-- Comparison Table -->
+    <div class="section">
+      <h2 class="section-title">How We Compare</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>AI Driven</th>
+            <th>Council LIM</th>
+            <th>QV Report</th>
+            <th>CoreLogic</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Price</td>
+            <td class="highlight-cell">$75-$200</td>
+            <td>$300-$450</td>
+            <td>$15-$100</td>
+            <td>$25-$50+</td>
+          </tr>
+          <tr>
+            <td>Turnaround</td>
+            <td class="highlight-cell">Instant-4 hours</td>
+            <td>5-10 days</td>
+            <td>Instant</td>
+            <td>Instant</td>
+          </tr>
+          <tr>
+            <td>Title/Ownership</td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr>
+            <td>Zoning Information</td>
+            <td class="highlight-cell">✅ Detailed</td>
+            <td>✅ Confirmed</td>
+            <td>❌ No</td>
+            <td>❌ No</td>
+          </tr>
+          <tr>
+            <td>Natural Hazards</td>
+            <td class="highlight-cell">✅ Full overlays</td>
+            <td>✅ Known + mapped</td>
+            <td>⚠️ Basic</td>
+            <td>⚠️ Basic</td>
+          </tr>
+          <tr>
+            <td>Investment Analysis</td>
+            <td class="highlight-cell">✅ Full metrics</td>
+            <td>❌ No</td>
+            <td>⚠️ Estimate only</td>
+            <td>✅ Advanced</td>
+          </tr>
+          <tr>
+            <td>Comparables</td>
+            <td class="highlight-cell">✅ Premium package</td>
+            <td>❌ No</td>
+            <td>⚠️ Sales list</td>
+            <td>✅ Extensive</td>
+          </tr>
+          <tr>
+            <td>Human Support</td>
+            <td class="highlight-cell">✅ Included</td>
+            <td>⚠️ Limited</td>
+            <td>❌ No</td>
+            <td>⚠️ Enterprise only</td>
+          </tr>
+          <tr>
+            <td>Best For</td>
+            <td class="highlight-cell">Screening</td>
+            <td>Settlement</td>
+            <td>Quick check</td>
+            <td>Professionals</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Testimonial Placeholder -->
+    <div class="section">
+      <h2 class="section-title">What Early Users Say</h2>
+      <div class="testimonial">
+        <p class="testimonial-text">"I was looking at 6 investment properties in Napier. Ordering LIMs for all of them would've cost $2,400 and taken weeks. AI Driven's Standard reports helped me eliminate 4 duds immediately and focus on the 2 worth pursuing. Saved me at least $1,500 and probably 3 weeks of wasted time. The cash flow analysis was spot-on compared to my own calculations."</p>
+        <div class="testimonial-author">— Sarah M.</div>
+        <div class="testimonial-role">Property Investor, Hastings (Beta Tester)</div>
+      </div>
+      <div class="testimonial">
+        <p class="testimonial-text">"As a first-home buyer, I was terrified of making a mistake. The Basic report gave me confidence to make an offer because I knew there were no major hazards or zoning issues. The recommendations section told me exactly what to do next. Worth every cent for peace of mind."</p>
+        <div class="testimonial-author">— James T.</div>
+        <div class="testimonial-role">First-Home Buyer, Marewa (Beta Tester)</div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <h2>Ready to Screen Your Next Property?</h2>
+      <p>Get your comprehensive due diligence report in 4 hours or less. Choose your package and order now.</p>
+      <div class="cta-buttons">
+        <a href="#" class="cta-button">Order Your Report Now</a>
+        <a href="mailto:gerhard@aidriven.biz" class="cta-button secondary">Book a Free 10-Min Call</a>
+      </div>
+      <p style="margin-top: 1.5rem; font-size: 0.85rem; color: var(--muted);">
+        Questions? Email gerhard@aidriven.biz or WhatsApp 021 XXX XXX<br/>
+        Beta testers: Use code <strong>BETA50</strong> for 50% off your first report!
+      </p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>&copy; 2026 AI Driven · Practical AI For Real Businesses · New Zealand</p>
+      <div class="contact-info">
+        <a href="mailto:gerhard@aidriven.biz">gerhard@aidriven.biz</a>
+        <span>·</span>
+        <a href="https://wa.me/27824445825" target="_blank">WhatsApp</a>
+        <span>·</span>
+        <a href="#">aidriven.biz</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,430 @@
+Searching ArcGIS Online for HBRC Hazard Layers
+
+======================================================================
+
+Searching: Hawke's Bay liquefaction
+----------------------------------------------------------------------
+OK - Found 19 results
+
+[CRITICAL] CHBDC HDC WDC Liquefaction Severity
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/4
+   Owner: HBRC_Data
+
+[CRITICAL] Heretaunga Plains Liquefaction Hazard Vulnerability
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/0
+   Owner: HBRC_Data
+
+[CRITICAL] Heretaunga Plains 500 Yr Return Period Liquefaction Severity
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/3
+   Owner: HBRC_Data
+
+[CRITICAL] Heretaunga Plains 25 Yr Return Period Liquefaction Severity
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/1
+   Owner: HBRC_Data
+
+[CRITICAL] Heretaunga Plains 100 Yr Return Period Liquefaction Severity
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/2
+   Owner: HBRC_Data
+
+[CRITICAL] Hawkes Bay - Earthquake Liquefaction
+   Type: Map Service
+   URL:  https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_EarthquakeLiquefaction/MapServer
+   Owner: TPG@Wellington2
+
+[CRITICAL] Hawkes Bay - Liquefaction
+   Type: Map Service
+   URL:  https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_Liquefaction/MapServer
+   Owner: TPG@Wellington2
+
+            Hawke's Bay Quaternary Geology
+   Type: Map Service
+   URL:  https://hbmaps.hbrc.govt.nz/arcgis/rest/services/HazardsPortal/Quaternary_Geology/MapServer/0
+   Owner: HBRC_Data
+
+Searching: Hawke's Bay flood hazard
+----------------------------------------------------------------------
+OK - Found 25 results
+
+[CRITICAL] Hawke's Bay Coastal Environment
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/CoastalEnvironment/MapServer
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay Flood Risk Areas
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Flooding/MapServer/0
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay Flood Observation Extents
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer
+   Owner: HBRC_Data
+
+[CRITICAL] Hawkes Bay - Flood Detention Dams Hazard Zones
+   Type: Map Service
+   URL:  https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_FloodDetentionDams_HazardZones/MapServer
+   Owner: TPG@Wellington2
+
+            Wairoa River Bank Stability Offset Boundaries
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Wairoa_River_Bank/MapServer/0
+   Owner: HBRC_Data
+
+            Wairoa River Bank Stability Zones
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Wairoa_River_Bank/MapServer/1
+   Owner: HBRC_Data
+
+[CRITICAL] Flood Detention Dams
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Detention_Dams/MapServer/0
+   Owner: HBRC_Data
+
+            Natural Hazard and Risk Overlays
+   Type: Feature Service
+   URL:  https://services8.arcgis.com/O26DwMB5KWy6K8pZ/arcgis/rest/services/Natural_Hazard_and_Risk_Overlays/FeatureServer
+   Owner: districtplan@chbdc.govt.nz
+
+Searching: Hawke's Bay coastal hazard
+----------------------------------------------------------------------
+OK - Found 30 results
+
+[CRITICAL] Hawke's Bay Coastal Environment
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/CoastalEnvironment/MapServer
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay Coastal Inundation
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/0
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay RCEP Coastal Hazard Zone 2
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay RCEP Coastal Hazard Zone 1
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay RCEP Coastal Hazard Zone 3
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/23
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay Coastal Communities
+   Type: Map Service
+   URL:  https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_CoastalCommunities/MapServer/0
+   Owner: HBRC_Data
+
+            Hawke's Bay RCEP Transition Hazard Zone
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/22
+   Owner: HBRC_Data
+
+            Hawke's Bay RCEP CliffShore Hazard Zone
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/HBRC_Property_Hazards/MapServer/44
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Hazard Zone 1
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Hazard Zone 2
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24
+   Owner: HBRC_Data
+
+[CRITICAL] Hawkes Bay - Tsunami Evacuation Zones
+   Type: Map Service
+   URL:  https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_Tsunami_EvacuationZones/MapServer
+   Owner: TPG@Wellington2
+
+            Transition Hazard Zones
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/22
+   Owner: HBRC_Data
+
+            Napier District Plan Hazard Zones
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/27
+   Owner: HBRC_Data
+
+            Cliff Shore Hazard Zone
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/21
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay Flood Risk Areas
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Flooding/MapServer/0
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Hazards
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Coastal_Hazards/FeatureServer
+   Owner: HBRC_GISAdmin
+
+Searching: HBRC liquefaction
+----------------------------------------------------------------------
+OK - Found 5 results
+
+Searching: HBRC flood
+----------------------------------------------------------------------
+OK - Found 35 results
+
+            HBRC River Access location_WFL1
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/HBRC_River_Access_location_WFL1/FeatureServer
+   Owner: HBRC_GISAdmin
+
+            HBRC Drains
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/ExternalServices/AssetManagement/MapServer/3
+   Owner: HBRC_Data
+
+[CRITICAL] Flood_Extent_Observations_gdb
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer
+   Owner: HBRC_GISAdmin
+
+            WGA211422_Working_Data
+   Type: Feature Service
+   URL:  https://services8.arcgis.com/GAZiuYWXmnwzoGFY/arcgis/rest/services/WGA211422_Working_Data/FeatureServer
+   Owner: adesouza_wgaz
+
+            HBRC Asset Polygons
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/ExternalServices/AssetManagement/MapServer/6
+   Owner: HBRC_Data
+
+            HBRC Asset Points
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/ExternalServices/AssetManagement/MapServer/4
+   Owner: HBRC_Data
+
+            HBRC Asset Lines
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/ExternalServices/AssetManagement/MapServer/5
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay Flood Observation Extents
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer
+   Owner: HBRC_Data
+
+            Gravel Extraction VIEW
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Gravel_Extraction_VIEW/FeatureServer
+   Owner: HBRC_GISAdmin
+
+Searching: HBRC coastal
+----------------------------------------------------------------------
+OK - Found 44 results
+
+[CRITICAL] Coastal Erosion Extent (New Information 2016) Year 2065 - Likely - 66%
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/7
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Erosion Extent (New Information 2016) Present Day - Likely - 66%
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/2
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Erosion Extent (New Information 2016) Present Day - Very Unlikely - 5%
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/4
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Inundation Extent at 2100 2% AEP
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/5
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Inundation Extent at 2020 2% AEP
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/3
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Inundation Extent at 2100 1% AEP
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/4
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Erosion Extent (New Information 2016) Present Day - Highly Unlikely - 1%
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/5
+   Owner: HBRC_Data
+
+[CRITICAL] Coastal Erosion Extent (New Information 2016) Present Day - Possible - 33%
+   Type: Feature Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/3
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay RCEP Coastal Hazard Zone 2
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay RCEP Coastal Hazard Zone 1
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25
+   Owner: HBRC_Data
+
+[CRITICAL] Hawke's Bay RCEP Coastal Hazard Zone 3
+   Type: Map Service
+   URL:  https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/23
+   Owner: HBRC_Data
+
+            Hawkes Bay Multibeam Echosounder Coverage 2018 to 2022
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Hawkes_Bay_Multibeam_Echosounder_Coverage_2018_to_2019/FeatureServer
+   Owner: HBRC_Data
+
+[CRITICAL] HB_Hazard_CoastalInundation_2023Data
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/8L3DQUzjrkgEmDpQ/arcgis/rest/services/HB_Hazard_CoastalInundation_2023Data/FeatureServer
+   Owner: HDC_Website
+
+            Hawke's Bay Broadscale Habitat (Cawthron, 2005)
+   Type: Feature Service
+   URL:  https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/HawkesBay_BroadscaleHabitat_Cawthron2005/FeatureServer
+   Owner: HBRC_Data
+
+            WGA211422_Working_Data
+   Type: Feature Service
+   URL:  https://services8.arcgis.com/GAZiuYWXmnwzoGFY/arcgis/rest/services/WGA211422_Working_Data/FeatureServer
+   Owner: adesouza_wgaz
+
+======================================================================
+
+SUMMARY: Found 56 hazard layers
+CRITICAL: 37 layers
+
+Saved to: hbr-discovered-layers.json
+
+======================================================================
+
+CRITICAL LAYER URLs (copy these for Seb):
+
+1. CHBDC HDC WDC Liquefaction Severity
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/4
+
+2. Heretaunga Plains Liquefaction Hazard Vulnerability
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/0
+
+3. Heretaunga Plains 500 Yr Return Period Liquefaction Severity
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/3
+
+4. Heretaunga Plains 25 Yr Return Period Liquefaction Severity
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/1
+
+5. Heretaunga Plains 100 Yr Return Period Liquefaction Severity
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/2
+
+6. Hawkes Bay - Earthquake Liquefaction
+   https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_EarthquakeLiquefaction/MapServer
+
+7. Hawkes Bay - Liquefaction
+   https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_Liquefaction/MapServer
+
+8. Hawke's Bay Coastal Environment
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/CoastalEnvironment/MapServer
+
+9. Hawke's Bay Flood Risk Areas
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Flooding/MapServer/0
+
+10. Hawke's Bay Flood Observation Extents
+   https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer
+
+11. Hawkes Bay - Flood Detention Dams Hazard Zones
+   https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_FloodDetentionDams_HazardZones/MapServer
+
+12. Flood Detention Dams
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Detention_Dams/MapServer/0
+
+13. Hawke's Bay Coastal Environment
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/CoastalEnvironment/MapServer
+
+14. Hawke's Bay Coastal Inundation
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/0
+
+15. Hawke's Bay RCEP Coastal Hazard Zone 2
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24
+
+16. Hawke's Bay RCEP Coastal Hazard Zone 1
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25
+
+17. Hawke's Bay RCEP Coastal Hazard Zone 3
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/23
+
+18. Hawke's Bay Coastal Communities
+   https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_CoastalCommunities/MapServer/0
+
+19. Coastal Hazard Zone 1
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25
+
+20. Coastal Hazard Zone 2
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24
+
+21. Hawkes Bay - Tsunami Evacuation Zones
+   https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_Tsunami_EvacuationZones/MapServer
+
+22. Hawke's Bay Flood Risk Areas
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Flooding/MapServer/0
+
+23. Coastal Hazards
+   https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Coastal_Hazards/FeatureServer
+
+24. Flood_Extent_Observations_gdb
+   https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer
+
+25. Hawke's Bay Flood Observation Extents
+   https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer
+
+26. Coastal Erosion Extent (New Information 2016) Year 2065 - Likely - 66%
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/7
+
+27. Coastal Erosion Extent (New Information 2016) Present Day - Likely - 66%
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/2
+
+28. Coastal Erosion Extent (New Information 2016) Present Day - Very Unlikely - 5%
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/4
+
+29. Coastal Inundation Extent at 2100 2% AEP
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/5
+
+30. Coastal Inundation Extent at 2020 2% AEP
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/3
+
+31. Coastal Inundation Extent at 2100 1% AEP
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/4
+
+32. Coastal Erosion Extent (New Information 2016) Present Day - Highly Unlikely - 1%
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/5
+
+33. Coastal Erosion Extent (New Information 2016) Present Day - Possible - 33%
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/3
+
+34. Hawke's Bay RCEP Coastal Hazard Zone 2
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24
+
+35. Hawke's Bay RCEP Coastal Hazard Zone 1
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25
+
+36. Hawke's Bay RCEP Coastal Hazard Zone 3
+   https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/23
+
+37. HB_Hazard_CoastalInundation_2023Data
+   https://services1.arcgis.com/8L3DQUzjrkgEmDpQ/arcgis/rest/services/HB_Hazard_CoastalInundation_2023Data/FeatureServer
+

@@ -1,0 +1,36 @@
+# Cloudflare Workers Configuration
+# AI Driven Property Reports
+# Generated: 2026-08-16
+
+name = "ai-driven-reports"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "."
+
+# Environment Variables (set via Cloudflare dashboard or wrangler secret)
+[vars]
+LINZ_API_KEY = "b2e35aafd4e848e9b0265f1caf575255"
+REPORT_TIER = "STANDARD"
+REPORT_PRICE = "NZD $149"
+
+# KV Namespace for report storage (create via: wrangler kv namespace create "REPORTS")
+# [[kv_namespaces]]
+# binding = "REPORTS"
+# id = "YOUR_KV_NAMESPACE_ID_HERE"
+
+# Routes for API endpoints
+# Note: For Pages, routes are defined in api/_routes.json
+
+# Development settings
+[dev]
+port = 3001
+local_protocol = "http"
+
+# Production settings
+[site]
+bucket = "./reports"
+
+# Secrets to set via `wrangler secret put`:
+# - WHATSAPP_ACCESS_TOKEN
+# - WHATSAPP_PHONE_NUMBER_ID  
+# - WHATSAPP_VERIFY_TOKEN
+# - STRIPE_SECRET_KEY (future)

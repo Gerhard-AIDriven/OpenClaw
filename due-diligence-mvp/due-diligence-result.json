@@ -1,0 +1,71 @@
+{
+  "address": {
+    "longitude": 176.8813839,
+    "latitude": -39.4756435886,
+    "full_address": "16 Ferguson Avenue, Westshore, Napier",
+    "town_city": "Napier"
+  },
+  "title": {
+    "id": 78112,
+    "title_no": "454362",
+    "status": "LIVE",
+    "type": "Freehold",
+    "estate": "Fee Simple, 1/1, Lot 1 Deposited Plan 414475, 425 m2",
+    "guarantee_status": "Guarantee",
+    "land_district": "Hawkes Bay",
+    "issue_date": "2010-03-05T09:10:56Z",
+    "number_owners": 3,
+    "title_id": "4532942",
+    "geometry": {
+      "type": "MultiPolygon",
+      "coordinates": [
+        [
+          [
+            [
+              176.88136475,
+              -39.4755187667
+            ],
+            [
+              176.88152355,
+              -39.4756117167
+            ],
+            [
+              176.8815374333,
+              -39.4756198667
+            ],
+            [
+              176.88136935,
+              -39.4757923
+            ],
+            [
+              176.8813554333,
+              -39.4757841667
+            ],
+            [
+              176.8813521667,
+              -39.4757620167
+            ],
+            [
+              176.8813441,
+              -39.4757628667
+            ],
+            [
+              176.88122435,
+              -39.4756927667
+            ],
+            [
+              176.8812057667,
+              -39.4756819
+            ],
+            [
+              176.88136475,
+              -39.4755187667
+            ]
+          ]
+        ]
+      ]
+    },
+    "bbox_area": 9.072185960011452e-08
+  },
+  "query_timestamp": "2026-08-08 16:55:42.460701"
+}

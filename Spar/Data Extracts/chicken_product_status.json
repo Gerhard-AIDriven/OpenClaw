@@ -1,0 +1,819 @@
+{
+  "timestamp": "2026-04-18T21:06:17.233Z",
+  "totalProducts": 89,
+  "dataSource": "SPAR Sigma System - Department: Chicken",
+  "period": "1 March 2022 - 1 April 2026",
+  "reportDate": "18 April 2026",
+  "fileName": "Spar/Data Extracts/gws chicken.xls",
+  "dateFormat": "D/MM/YY (e.g., 01/02/26 = 1st February 2026)",
+  "monthsDetected": 49,
+  "statusSummary": {
+    "ACTIVE": 40,
+    "RECENT": 8,
+    "STALE": 15,
+    "DEAD STOCK": 26
+  },
+  "products": [
+    {
+      "code": "11318",
+      "description": "C/FAIR FRSH DRUM&THIGH",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 296.755,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "11324",
+      "description": "C/FAIR FRSH PARTY PACK",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 557.681,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "11330",
+      "description": "SPAR SLT CHKN WINGS 8'S",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 57.426,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11331",
+      "description": "SPAR SLT DRUMS/THIGHS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 196.317,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11332",
+      "description": "SPAR SLT CHKN BRAAIPK 8",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 113.794,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "11333",
+      "description": "BREAST FILLET",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 110.213,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11334",
+      "description": "SPAR SLT BREAST FLT 4'S",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 98.049,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11335",
+      "description": "SPAR SLT CHKN THIGHS 4'S",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 44.168,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11344",
+      "description": "SPAR SLT CHKN BRAAIPK 5",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 72.074,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11346",
+      "description": "SPAR SLT BREAST B/IN 3'S",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 104.353,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11347",
+      "description": "SPAR FSH CHKN BRAAIPK 16PC",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 289.366,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11348",
+      "description": "SPAR SLT CHKN DBL STAR PK",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 315.841,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11354",
+      "description": "T&T SKEWERED WINGS BBQ",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 28.761,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11356",
+      "description": "T&T BUFFALO WINGS BBQ",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 62.384,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "11359",
+      "description": "C/FAIR BRAAIPACK FRSH 3PC",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 34.144,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "12326",
+      "description": "SPAR S/BUTCH CHICK KEBABS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 120.49,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "14749",
+      "description": "R/BOW FRSH WHOLE BIRD(10)",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 70.642,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "15194",
+      "description": "SOUL FOOD SMK CH/FILL PL",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 8.928,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "34303",
+      "description": "SPATCHCOCK CHICKEN",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 28.668,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "41685",
+      "description": "T&T CHKN ESPETADA BBQ",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 69.927,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "46025",
+      "description": "LAZENA F/RANGE DRUM&THIG8",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 2.324,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "46091",
+      "description": "SPAR SLT CHKN IN/B NO GIB",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 135.167,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "46353",
+      "description": "CRUMBED CHICKEN NUGGETS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 17.448,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "46444",
+      "description": "CRUMBED CHICK STEAKLETS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 46.853,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "46446",
+      "description": "CRUMBED CHICKEN STRIPS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 18.876,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "46447",
+      "description": "CRUMBED CHICKEN BURGER",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 49.767,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "50785",
+      "description": "COUNTY FAIR BREAST FILLETS 12P",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 108.726,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "52096",
+      "description": "RAINBOW BRAAI PK FRSH 12PCE P/",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 287.002,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "52205",
+      "description": "RAINBOW DRUMS&THIGH FRSH",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 222.153,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "52206",
+      "description": "RAINBOW BRAAI PK FRSH  P/K",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 49.651,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "52684",
+      "description": "SPAR T&T CHIC SKPDJIES FR P/KG",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 1.346,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "53544",
+      "description": "SPAR SLT CHKN BRAAIPK 12",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 119.666,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "56238",
+      "description": "COUNTRY VALUE THIGHS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 10.747,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "56239",
+      "description": "COUNTRY VALUE DRUMSTICKS",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 164.434,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "58896",
+      "description": "NOORSVELD CHIC WHOLE",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 23.418,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "58906",
+      "description": "NOORSVELD CHIC FILLET 3PC",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 27.256,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "62200",
+      "description": "SPAR T&T CHIC ESP RST G/BUTT P",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 1.508,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "64619",
+      "description": "CRUMBED CHIC STEAKLETS 800G",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 16,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "64620",
+      "description": "CRUMBED CHIC STRIPS 800G",
+      "lastMonth": "01/02/26",
+      "lastMonthReadable": "February 2026",
+      "lastSalesQty": 4,
+      "status": "ACTIVE",
+      "monthsAgo": 2
+    },
+    {
+      "code": "64621",
+      "description": "CRUMBED CHIC BURGERS  800G",
+      "lastMonth": "01/03/26",
+      "lastMonthReadable": "March 2026",
+      "lastSalesQty": 13,
+      "status": "ACTIVE",
+      "monthsAgo": 1
+    },
+    {
+      "code": "45285",
+      "description": "CHICKEN LEG 1/4 10KG",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "December 2025",
+      "lastSalesQty": 3,
+      "status": "RECENT",
+      "monthsAgo": 4
+    },
+    {
+      "code": "49329",
+      "description": "COUNTRY VALUE S/PACK",
+      "lastMonth": "01/01/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 2,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "52099",
+      "description": "RAINBOW WING FRSH 8PC P/KG",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "December 2025",
+      "lastSalesQty": 16.969,
+      "status": "RECENT",
+      "monthsAgo": 4
+    },
+    {
+      "code": "52207",
+      "description": "RAINBOW BRAAI PACK FRSH  1'",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "December 2025",
+      "lastSalesQty": 61.485,
+      "status": "RECENT",
+      "monthsAgo": 4
+    },
+    {
+      "code": "52661",
+      "description": "R/BOW BREAST FILLET S/L 12PCE",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "December 2025",
+      "lastSalesQty": 23.57,
+      "status": "RECENT",
+      "monthsAgo": 4
+    },
+    {
+      "code": "52663",
+      "description": "R/BOW DRUM 8 & THIGH 8 FRSH P/",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "December 2025",
+      "lastSalesQty": 74.15,
+      "status": "RECENT",
+      "monthsAgo": 4
+    },
+    {
+      "code": "64618",
+      "description": "CRUMBED CHIC NUGGETS 800G",
+      "lastMonth": "01/01/26",
+      "lastMonthReadable": "January 2026",
+      "lastSalesQty": 3,
+      "status": "RECENT",
+      "monthsAgo": 3
+    },
+    {
+      "code": "64932",
+      "description": "SPAR T&T CHIC MOROCCAN P/KG",
+      "lastMonth": "01/12/25",
+      "lastMonthReadable": "December 2025",
+      "lastSalesQty": 3.446,
+      "status": "RECENT",
+      "monthsAgo": 4
+    },
+    {
+      "code": "11337",
+      "description": "COUNTRY VALUE BREAST B/IN",
+      "lastMonth": "01/09/25",
+      "lastMonthReadable": "September 2025",
+      "lastSalesQty": 39.07,
+      "status": "STALE",
+      "monthsAgo": 7
+    },
+    {
+      "code": "11343",
+      "description": "COUNTRY VALUE WINGS",
+      "lastMonth": "01/09/25",
+      "lastMonthReadable": "September 2025",
+      "lastSalesQty": 24.724,
+      "status": "STALE",
+      "monthsAgo": 7
+    },
+    {
+      "code": "11350",
+      "description": "T&T SPATCHCOCK BARBEQUE",
+      "lastMonth": "01/05/25",
+      "lastMonthReadable": "May 2025",
+      "lastSalesQty": 9.68,
+      "status": "STALE",
+      "monthsAgo": 11
+    },
+    {
+      "code": "12840",
+      "description": "CHICKENS WHOLE BIRD",
+      "lastMonth": "01/07/25",
+      "lastMonthReadable": "July 2025",
+      "lastSalesQty": 1.41,
+      "status": "STALE",
+      "monthsAgo": 9
+    },
+    {
+      "code": "41686",
+      "description": "T&T CHKN ESPETADA P/PERI",
+      "lastMonth": "01/10/25",
+      "lastMonthReadable": "October 2025",
+      "lastSalesQty": 1.374,
+      "status": "STALE",
+      "monthsAgo": 6
+    },
+    {
+      "code": "45650",
+      "description": "CHIC BRAAI PK 14 P",
+      "lastMonth": "01/08/25",
+      "lastMonthReadable": "August 2025",
+      "lastSalesQty": 50.68,
+      "status": "STALE",
+      "monthsAgo": 8
+    },
+    {
+      "code": "46121",
+      "description": "5KG CC CHIC LEG",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "November 2025",
+      "lastSalesQty": 7,
+      "status": "STALE",
+      "monthsAgo": 5
+    },
+    {
+      "code": "52210",
+      "description": "F/BROWN DRUMS&THIGHS FRSH",
+      "lastMonth": "01/10/25",
+      "lastMonthReadable": "October 2025",
+      "lastSalesQty": 52.504,
+      "status": "STALE",
+      "monthsAgo": 6
+    },
+    {
+      "code": "52258",
+      "description": "F/BROWN BRAAI PK FRSH 16PC P/K",
+      "lastMonth": "01/10/25",
+      "lastMonthReadable": "October 2025",
+      "lastSalesQty": 60.25,
+      "status": "STALE",
+      "monthsAgo": 6
+    },
+    {
+      "code": "57440",
+      "description": "SANGIRO CHIC B/PK N/B 6PK P/KG",
+      "lastMonth": "01/09/25",
+      "lastMonthReadable": "September 2025",
+      "lastSalesQty": 52.174,
+      "status": "STALE",
+      "monthsAgo": 7
+    },
+    {
+      "code": "57441",
+      "description": "SANGIRO CHIC B/PK N/B 12'S P/K",
+      "lastMonth": "01/09/25",
+      "lastMonthReadable": "September 2025",
+      "lastSalesQty": 261.562,
+      "status": "STALE",
+      "monthsAgo": 7
+    },
+    {
+      "code": "57442",
+      "description": "SANGIRO CHIC MIX PORT 5'S P/KG",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "November 2025",
+      "lastSalesQty": 85.506,
+      "status": "STALE",
+      "monthsAgo": 5
+    },
+    {
+      "code": "57443",
+      "description": "SANGIRO CHIC MIX PORT 10'S P/K",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "November 2025",
+      "lastSalesQty": 340.519,
+      "status": "STALE",
+      "monthsAgo": 5
+    },
+    {
+      "code": "57444",
+      "description": "SANGIRO CHIC FILLET 4'S P/KG",
+      "lastMonth": "01/11/25",
+      "lastMonthReadable": "November 2025",
+      "lastSalesQty": 85.497,
+      "status": "STALE",
+      "monthsAgo": 5
+    },
+    {
+      "code": "57445",
+      "description": "SANGIRO CHIC FILLET 12'S P/KG",
+      "lastMonth": "01/09/25",
+      "lastMonthReadable": "September 2025",
+      "lastSalesQty": 38.682,
+      "status": "STALE",
+      "monthsAgo": 7
+    },
+    {
+      "code": "11325",
+      "description": "C/FAIR FRSH BRSTS FIL 4'S",
+      "lastMonth": "01/02/23",
+      "lastMonthReadable": "February 2023",
+      "lastSalesQty": 55.668,
+      "status": "DEAD STOCK",
+      "monthsAgo": 38
+    },
+    {
+      "code": "11328",
+      "description": "C/FAIR FRSH BRAAI 5 PIECE",
+      "lastMonth": "01/06/24",
+      "lastMonthReadable": "June 2024",
+      "lastSalesQty": 62.345,
+      "status": "DEAD STOCK",
+      "monthsAgo": 22
+    },
+    {
+      "code": "11353",
+      "description": "T&T SKEWER WINGS PERI",
+      "lastMonth": "01/06/24",
+      "lastMonthReadable": "June 2024",
+      "lastSalesQty": 14.696,
+      "status": "DEAD STOCK",
+      "monthsAgo": 22
+    },
+    {
+      "code": "11379",
+      "description": "CHICKEN LEG QUARTER FROZ",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "12618",
+      "description": "MATADOR CHIC THIGH KEBABS",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "12837",
+      "description": "CC CHICKENS SPATCHCOCK",
+      "lastMonth": "01/11/24",
+      "lastMonthReadable": "November 2024",
+      "lastSalesQty": 2.772,
+      "status": "DEAD STOCK",
+      "monthsAgo": 17
+    },
+    {
+      "code": "14750",
+      "description": "RAINBOW BRAAIPACK 5PCE",
+      "lastMonth": "01/08/24",
+      "lastMonthReadable": "August 2024",
+      "lastSalesQty": 41.598,
+      "status": "DEAD STOCK",
+      "monthsAgo": 20
+    },
+    {
+      "code": "34224",
+      "description": "CHICKEN FILLET KEBAB",
+      "lastMonth": "01/05/24",
+      "lastMonthReadable": "May 2024",
+      "lastSalesQty": 4.676,
+      "status": "DEAD STOCK",
+      "monthsAgo": 23
+    },
+    {
+      "code": "34293",
+      "description": "CHICKEN FILLETS 8 PC",
+      "lastMonth": "01/04/23",
+      "lastMonthReadable": "April 2023",
+      "lastSalesQty": 4.182,
+      "status": "DEAD STOCK",
+      "monthsAgo": 36
+    },
+    {
+      "code": "38901",
+      "description": "S/CHUNKY LEMON & HERB 1KG",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "38902",
+      "description": "S/CHUNKY BBQ IRR 1KG",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "45775",
+      "description": "S/CHUNKY MANGO & CHUTNEY",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "45776",
+      "description": "S/CHUNKY PERI PERI IRR",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "46445",
+      "description": "CRUMBED CHICK SCHNITZEL",
+      "lastMonth": "01/09/24",
+      "lastMonthReadable": "September 2024",
+      "lastSalesQty": 3.042,
+      "status": "DEAD STOCK",
+      "monthsAgo": 19
+    },
+    {
+      "code": "52662",
+      "description": "R/BOW BREASTE FILLET 4PCE",
+      "lastMonth": "01/02/25",
+      "lastMonthReadable": "February 2025",
+      "lastSalesQty": 13.39,
+      "status": "DEAD STOCK",
+      "monthsAgo": 14
+    },
+    {
+      "code": "54102",
+      "description": "CHIC VALLEI KREEF",
+      "lastMonth": "01/12/24",
+      "lastMonthReadable": "December 2024",
+      "lastSalesQty": 0.668,
+      "status": "DEAD STOCK",
+      "monthsAgo": 16
+    },
+    {
+      "code": "56985",
+      "description": "BURGER UNIVERSAL CHICKEN",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "58900",
+      "description": "NOORSVELD CHIC STAR PACK",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "63369",
+      "description": "SANGIRO CHIC MIX PORT 3'S P/KG",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "63370",
+      "description": "SANGIRO CHIC WINGS C/TAIL P/KG",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "63371",
+      "description": "SANGIRO CHIC L/QUART 2'S P/KG",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "63372",
+      "description": "SANGIRO CHIC FILLETS MINI P/KG",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "63373",
+      "description": "SANGIRO CHIC STKLT CRMB 4'S P/",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "63374",
+      "description": "SANGIRO CHIC NUGGETS 15'S P/KG",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "64931",
+      "description": "SPAR T&T CHIC HOT HONEY P/KG",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    },
+    {
+      "code": "66207",
+      "description": "NOORSVELD CHIC WHOLE",
+      "lastMonth": null,
+      "lastMonthReadable": "No sales recorded",
+      "lastSalesQty": 0,
+      "status": "DEAD STOCK",
+      "monthsAgo": 999
+    }
+  ]
+}

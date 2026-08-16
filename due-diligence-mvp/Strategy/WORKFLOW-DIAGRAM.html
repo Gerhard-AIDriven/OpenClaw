@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Driven - Due Diligence Workflow Diagram</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        
+        h1 { 
+            text-align: center; 
+            color: white; 
+            margin-bottom: 10px; 
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+            font-size: 1.2rem;
+        }
+        
+        .workflow-container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        
+        /* Product Cards */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .product-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 12px;
+            padding: 25px;
+            border-left: 5px solid;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        
+        .product-card.basic { border-color: #007A4D; }
+        .product-card.lim { border-color: #FFB81C; }
+        .product-card.standard { border-color: #667eea; }
+        .product-card.advanced { border-color: #764ba2; }
+        
+        .product-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #2D2D2D;
+        }
+        
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #007A4D;
+            margin: 10px 0;
+        }
+        
+        .product-card ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .product-card li {
+            padding: 5px 0;
+            font-size: 0.9rem;
+            color: #444;
+        }
+        
+        .product-card li::before {
+            content: "✓ ";
+            color: #007A4D;
+            font-weight: bold;
+        }
+        
+        .channel-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .channel-whatsapp { background: #25D366; color: white; }
+        .channel-website { background: #667eea; color: white; }
+        .channel-both { background: linear-gradient(90deg, #25D366, #667eea); color: white; }
+        
+        /* Flow Diagram */
+        .flow-section {
+            margin-top: 50px;
+        }
+        
+        .flow-title {
+            text-align: center;
+            font-size: 1.8rem;
+            color: #2D2D2D;
+            margin-bottom: 30px;
+        }
+        
+        .flow-diagram {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .flow-step {
+            background: white;
+            border: 3px solid #007A4D;
+            border-radius: 12px;
+            padding: 20px 40px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2D2D2D;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .flow-arrow {
+            font-size: 2rem;
+            color: #007A4D;
+        }
+        
+        .flow-split {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        
+        .flow-branch {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border: 3px solid #667eea;
+            border-radius: 12px;
+            padding: 25px;
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+        }
+        
+        .flow-branch h4 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .flow-branch ol {
+            margin-left: 20px;
+        }
+        
+        .flow-branch li {
+            margin: 10px 0;
+            color: #444;
+        }
+        
+        /* Legend */
+        .legend {
+            margin-top: 50px;
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 25px;
+        }
+        
+        .legend h3 {
+            color: #2D2D2D;
+            margin-bottom: 15px;
+        }
+        
+        .legend-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .legend-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        
+        .green { background: #007A4D; color: white; }
+        .yellow { background: #FFB81C; color: white; }
+        .purple { background: #764ba2; color: white; }
+        .blue { background: #667eea; color: white; }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .workflow-container { padding: 20px; }
+            .flow-split { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧠 AI Driven</h1>
+        <p class="subtitle">Due Diligence & LIM Service - Customer Journey Workflows</p>
+        
+        <div class="workflow-container">
+            
+            <!-- Products Overview -->
+            <h2 style="text-align: center; color: #2D2D2D; margin-bottom: 25px;">OuNZD `4 Products</h2>
+            <div class="products-grid">
+                
+                <div class="product-card basic">
+                    <h3>📋 Basic Due Diligence</h3>
+                    <div class="price">NZD `299</div>
+                    <ul>
+                        <li>Address verification</li>
+                        <li>Basic property info</li>
+                        <li>Automated checks</li>
+                        <li>Instant PDF download</li>
+                    </ul>
+                    <span class="channel-badge channel-both">✅ WhatsApp + Website</span>
+                </div>
+                
+                <div class="product-card lim">
+                    <h3>🏛️ LIM Application</h3>
+                    <div class="price">NZD `499 - NZD `899</div>
+                    <ul>
+                        <li>Council LIM submission</li>
+                        <li>Tracking number</li>
+                        <li>Owner details required</li>
+                        <li>Possible manual work</li>
+                    </ul>
+                    <span class="channel-badge channel-both">✅ WhatsApp + Website</span>
+                </div>
+                
+                <div class="product-card standard">
+                    <h3>📊 Standard Report</h3>
+                    <div class="price">NZD `799</div>
+                    <ul>
+                        <li>LINZ title data</li>
+                        <li>Hazards summary</li>
+                        <li>Rates information</li>
+                        <li>24-48 hour delivery</li>
+                    </ul>
+                    <span class="channel-badge channel-website">🌐 Website Only</span>
+                </div>
+                
+                <div class="product-card advanced">
+                    <h3>🔍 Advanced Report</h3>
+                    <div class="price">NZD `1 499</div>
+                    <ul>
+                        <li>Full council records</li>
+                        <li>Building consents</li>
+                        <li>Environmental checks</li>
+                        <li>30-day support</li>
+                    </ul>
+                    <span class="channel-badge channel-website">🌐 Website Only</span>
+                </div>
+                
+            </div>
+            
+            <!-- Main Workflow Diagram -->
+            <div class="flow-section">
+                <h2 class="flow-title">🔄 Customer Journey Flow</h2>
+                
+                <div class="flow-diagram">
+                    
+                    <div class="flow-step" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none;">
+                        🚀 Customer Inquiry<br>
+                        <small>(WhatsApp or Website)</small>
+                    </div>
+                    
+                    <div class="flow-arrow">↓</div>
+                    
+                    <div class="flow-step">
+                        🤖 What product do they want?
+                    </div>
+                    
+                    <div class="flow-arrow">↓</div>
+                    
+                    <div class="flow-split">
+                        
+                        <!-- Left Branch: Basic/LIM -->
+                        <div class="flow-branch">
+                            <h4>🟢 Basic or LIM (Simple)</h4>
+                            <ol>
+                                <li>Auto-generate report/confirmation</li>
+                                <li>Create order ID</li>
+                                <li>Send WhatsApp with payment link</li>
+                                <li>Customer clicks → Checkout page</li>
+                                <li>Customer pays online</li>
+                                <li><strong>✅ Instant PDF unlock</strong></li>
+                                <li><small>(LIM: trigger manual submission if needed)</small></li>
+                            </ol>
+                            <div style="margin-top: 15px; padding: 10px; background: #d4edda; border-radius: 6px;">
+                                <strong>⏱️ Total Time:</strong> 5-10 minutes
+                            </div>
+                        </div>
+                        
+                        <!-- Right Branch: Standard/Advanced -->
+                        <div class="flow-branch">
+                            <h4>🔵 Standard or Advanced (Complex)</h4>
+                            <ol>
+                                <li>Auto-reply: "Please complete form on website"</li>
+                                <li>Customer visits website</li>
+                                <li>Fills detailed application</li>
+                                <li>Human review (Gerhard/team)</li>
+                                <li>Quote sent (2-4 hours)</li>
+                                <li>Customer pays online</li>
+                                <li><strong>👤 Manual processing begins</strong></li>
+                                <li>Delivery in 24h - 5 days</li>
+                            </ol>
+                            <div style="margin-top: 15px; padding: 10px; background: #e3f2fd; border-radius: 6px;">
+                                <strong>⏱️ Total Time:</strong> 24 hours - 5 days
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- Channel Comparison Legend -->
+            <div class="legend">
+                <h3>📱 Channel Strategy</h3>
+                <div class="legend-grid">
+                    <div class="legend-item">
+                        <div class="legend-icon green">✅</div>
+                        <div>
+                            <strong>WhatsApp:</strong> Best for Basic/LIM - instant, conversational, mobile-first
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon blue">🌐</div>
+                        <div>
+                            <strong>Website:</strong> Required for Standard/Advanced - forms, payments, professionalism
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon yellow">⚡</div>
+                        <div>
+                            <strong>Automated:</strong> Basic/LIM flow - no human intervention needed
+                        </div>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-icon purple">👤</div>
+                        <div>
+                            <strong>Manual:</strong> Standard/Advanced - requires human review and council contact
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <p style="text-align: center; color: white; margin-top: 30px; font-size: 0.9rem;">
+            Last Updated: 2026-08-14 | AI Driven | Practical AI for real businesses
+        </p>
+    </div>
+</body>
+</html>

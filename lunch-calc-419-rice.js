@@ -1,0 +1,78 @@
+// Lunch macro calculation - 2026-04-19 WITH BROWN RICE
+const items = [
+  { name: "Chicken breast cubes (250g)", cal: 300, carbs: 0, protein: 60, fat: 3.8 },
+  { name: "Canola oil (1 tsp)", cal: 40, carbs: 0, protein: 0, fat: 4.5 },
+  { name: "Red onion (75g)", cal: 28, carbs: 6.4, protein: 0.9, fat: 0.1 },
+  { name: "Broccoli (150g)", cal: 48, carbs: 9.9, protein: 3.8, fat: 0.4 },
+  { name: "Greek yogurt (120g, plain 0% fat)", cal: 71, carbs: 3.9, protein: 12, fat: 0.5 },
+  { name: "Curry powder (1 tsp)", cal: 8, carbs: 1.3, protein: 0.3, fat: 0.2 },
+  { name: "Brown rice cooked (1 cup = ~195g)", cal: 215, carbs: 45, protein: 5, fat: 1.8 }
+];
+
+let totals = { cal: 0, carbs: 0, protein: 0, fat: 0 };
+items.forEach(item => {
+  totals.cal += item.cal;
+  totals.carbs += item.carbs;
+  totals.protein += item.protein;
+  totals.fat += item.fat;
+});
+
+console.log("=== LUNCH BREAKDOWN (2026-04-19 WITH RICE) ===\n");
+items.forEach(item => {
+  console.log(`${item.name}`);
+  console.log(`  ${item.cal}cal | ${item.carbs}g carbs | ${item.protein}g protein | ${item.fat}g fat\n`);
+});
+
+console.log("=== TOTALS ===");
+console.log(`Calories: ${totals.cal}`);
+console.log(`Carbs: ${totals.carbs.toFixed(1)}g`);
+console.log(`Protein: ${totals.protein.toFixed(1)}g`);
+console.log(`Fat: ${totals.fat.toFixed(1)}g`);
+
+// Full day calculation
+const breakfast = { cal: 348, carbs: 42.1, protein: 25.4, fat: 8.5 };
+const dinner = { cal: 361, carbs: 66.2, protein: 21.8, fat: 1.4 };
+const daily = {
+  cal: breakfast.cal + totals.cal + dinner.cal,
+  carbs: breakfast.carbs + totals.carbs + dinner.carbs,
+  protein: breakfast.protein + totals.protein + dinner.protein,
+  fat: breakfast.fat + totals.fat + dinner.fat
+};
+
+console.log(`\n=== FULL DAY (Breakfast + Lunch + Dinner) ===`);
+console.log(`Calories: ${daily.cal}/1750 (${(daily.cal/1750*100).toFixed(0)}%)`);
+console.log(`Carbs: ${daily.carbs.toFixed(1)}/219g (${(daily.carbs/219*100).toFixed(0)}%)`);
+console.log(`Protein: ${daily.protein.toFixed(1)}/110g (${(daily.protein/110*100).toFixed(0)}%)`);
+console.log(`Fat: ${daily.fat.toFixed(1)}/49g (${(daily.fat/49*100).toFixed(0)}%)`);
+
+console.log(`\n=== DAILY BREAKDOWN ===`);
+console.log(`Breakfast (348 | 42.1g | 25.4g | 8.5g)`);
+console.log(`Lunch (${totals.cal} | ${totals.carbs.toFixed(1)}g | ${totals.protein.toFixed(1)}g | ${totals.fat.toFixed(1)}g)`);
+console.log(`Dinner (361 | 66.2g | 21.8g | 1.4g)`);
+
+console.log(`\n✅✅ ANALYSIS`);
+const carb_pct = (daily.carbs / 219 * 100).toFixed(0);
+const protein_pct = (daily.protein / 110 * 100).toFixed(0);
+const fat_pct = (daily.fat / 49 * 100).toFixed(0);
+
+if (carb_pct >= 90 && carb_pct <= 110) {
+  console.log(`Carbs: ${carb_pct}% — PERFECT! Hit target (${daily.carbs.toFixed(1)}g)`);
+} else if (carb_pct < 90) {
+  console.log(`Carbs: ${carb_pct}% — SHORT by ${(219 - daily.carbs).toFixed(1)}g`);
+} else {
+  console.log(`Carbs: ${carb_pct}% — OVER by ${(daily.carbs - 219).toFixed(1)}g`);
+}
+
+if (protein_pct <= 115) {
+  console.log(`Protein: ${protein_pct}% — OK (${daily.protein.toFixed(1)}g, target 110g)`);
+} else {
+  console.log(`Protein: ${protein_pct}% — OVER by ${(daily.protein - 110).toFixed(1)}g`);
+}
+
+if (fat_pct <= 100) {
+  console.log(`Fat: ${fat_pct}% — GOOD (${daily.fat.toFixed(1)}g, under budget by ${(49 - daily.fat).toFixed(1)}g)`);
+} else {
+  console.log(`Fat: ${fat_pct}% — OVER by ${(daily.fat - 49).toFixed(1)}g`);
+}
+
+console.log(`\n🎯 GLUCOSE OUTLOOK: Should see improvement tomorrow (carbs at 219g target).`);

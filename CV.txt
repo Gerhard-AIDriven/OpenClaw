@@ -1,0 +1,179 @@
+
+Gerhard Stimie
+Project Manager and Systems Integrator
+
+
+
+Strengths and technical competencies
+Gerhard’s technical competencies include the following:
+* Project Management Institute certified PROJECT Management Professional
+* PMBOK, Waterfall, and Agile methodologies.
+* SAP HCM and SuccessFactors
+* SAP Activate methodology
+* SAP ALM
+Recent experience
+* Gerhard is employed as a Systems Integrator with SPINX property maintenance. In this role, Gerhard is responsible for the configuration and integration of the operational support systems to optimize the process workflow in the company. Systems in use include:
+* Servcraft for job management and workflow
+* Respond.io for customer communications management and
+* Zoho product suite (Cliq and Workdrive) for internal communications and documentation management
+* In his role, Gerhard is also involved in overseeing the day to day management of the call centre activities in the organisation.
+
+Education
+* UNISA, 1993, Master’s degree in Business Leadership
+* University of Pretoria, 1982, BSc (Hons) Mathematical Statistics and Operations Research
+* RAU, 1980, BSc Mathematical Science
+Certifications and other qualifications
+* International Project Management Institute, 2003 – PMP
+* Johns Hopkins University (USA – Coursera), 2018 – Data Science Specialisation certification
+* Courses completed:
+* The Data Scientist’s Toolbox - R Programming
+* Processing Raw Data & Exploratory Data 
+
+
+
+Project consulting experience Thungela, South Africa
+SAP PMGM and ONB implementation/description
+01 March 2024 to Present
+Industry: MiningProject Manager
+* Project planning (Hybrid waterfall and agile methodology)
+* Progress tracking and reporting
+* Resource management
+* Client coordination and liaison
+* Invoicing and financial managementIllovo, South Africa
+SuccessFactors integration
+02 October 2023 to 29 March 2024
+Industry: Food and BeverageProject Manager
+* Project planning (Hybrid waterfall and agile methodology)
+* Progress tracking and reporting
+* Resource management
+* Client coordination and liaison
+* Invoicing and financial managementRicoh, Turkey
+SuccessFactors roll-out
+11 September 2023 to 15 December 2023
+Industry: ElectronicsProject Manager
+* Project planning (Waterfall methodology)
+* Progress tracking and reporting
+* Resource management
+* Client coordination and liaison
+* Invoicing and financial managementGlencore, South Africa
+SAGE to SuccessFactors cutover project
+14 August 2023 to 06 October 2023
+Industry: MiningAssistant Project Manager
+* Project planning (Waterfall methodology)
+* Progress tracking and reporting
+* Resource management
+* Client coordination and liaisonInternal Revenue Commission, Papua New Guinea
+SIGTAS implementation project
+2015 to 2020
+Industry: Public SectorProject Manager
+* Project Management: Ensuring on-time delivery of agreed scope within budget constraints (using PMBOK standards)
+* Process Engineering: Re-engineered the IRC’s Tax Payments process to eliminate backlogs and improve accuracy. 
+* Strategic Analysis and Reporting Specifications and Design: Developed and implemented an interim Tax Reconciliation system that automated the reconciliation of 5 corporate bank accounts – 90% automation was achieved, significantly reducing manual effort and errors. 
+* Business Intelligence solution design and implementation: Designed a solution to automate reporting and analysis of tax data for management decision support and risk management.
+
+Project consulting experience (continues)Provincial Government Western Cape: Government Motor Transport Department, South Africa
+Consulting services for modernisation of application landscape
+01 March 2014 to 31 July 2015
+Industry: Public SectorSenior Business Analyst: Business Case and Value Propositions
+* Assisting in 5-year business plan development for system modernisation.
+* Revising their Information Systems strategy, designing architectural blueprints and defining an implementation roadmap.
+* Defined various business cases for new system modules and enhancements of existing systems.
+* Lead Business Analyst: Segregation of Duties project: Eliminating risk of unauthorised access to systems and functions. Ensure that security rights are managed appropriately to protect process integrity while eliminating and preventing fraudulent system activities.International Monetary Fund, Various African countries
+Multiple missions and projects for various revenue authorities
+01 December 2012 to 01 May 2014
+Industry: Public SectorBusiness Analyst and Process Engineer 
+* FIRS Nigeria: Re-engineering of Tax Collection process:
+* Modelling of As-Is business processes – Assess and identify improvement opportunities
+* Design of To-Be business processes addressing inefficiencies or blockages.
+* Design and build a proof-of-concept technical solution
+* Identify, assess, and recommend suitable technology selection for industrialising the proof-of-concept solution.
+* FIRS Nigeria – Tender process management for the acquisition of an Integrated Tax System solution for Nigeria:
+* Coordinate and control the process of bid returns
+* Evaluate bid responses against tender requirement specifications.
+* Assess proposed solution architectures against Industry best practices and existing architecture of FIRS.
+* Provide recommendations to the Tender selection panel.
+* FIRS Nigeria – Tender process management for selecting a Solutions Integrator as an implementation partner for the technologies selected in the tender above:
+* Functional analysis of Solution Integrator proposals.
+* Technical evaluation of suitability for technical implementation
+* Financial bid comparative analysis.
+* Provide recommendations to the Tender selection panel. 
+* Eritrean Internal Revenue Division: Write an IT strategy:
+* Understanding and ensuring alignment of Organisational strategic context.
+* Detailed evaluation of As-Is systems and processes.
+* Design a To-Be IT architecture and operating model addressing gaps and risks.
+
+Project consulting experience (continues)Internal Revenue Division, Afghanistan
+Modernisation of all aspects of the tax process
+01 May 2009 to 01 February 2014
+Industry: Public SectorProject Management and Delivery Stream Leader
+* Project Management: Ensure on-time delivery of agreed scope within budget constraints. Supplemented PMBOK standards with Agile SCRUM project approaches and enabled the online JIRA system to track and manage epics, stories, activities, and issues.
+* System Implementation: Phases 1 and 2 - Configure the SIGTAS system for the local context, testing, and deployment to production.
+* Transition Management: Phase 3 – Change Management and ensuring system adoption is embedded into day-to-day processes. Petros Business Solutions, South Africa
+Integrated Performance Management System
+01 May 2003 to 01 November 2011
+Industry: Information Communication TechnologiesBusiness Intelligence Director
+* Design, architect, and establish an IT enabled platform for managing Balanced Scorecard Key Performance Metrics (KPIs) within an HR Performance Management System.
+* Designed a framework that integrated KPIs of individual employees with a clear and direct lineage to divisional and organisational Balanced Scorecard KPIs.
+* Project management of the development of the system (development was outsourced to a Software Development House).
+* Personally led strategic consulting assignments, including creating the Transnet Group Quarterly Performance report for the Strategy Management division of Transnet Group.Bytes Business Solutions, South Africa
+Establishment of a Business Intelligence Practice
+01 April 2002 to 01 May 2003
+Industry: Information Communication TechnologiesBusiness Intelligence Practice Manager
+* People Leader: Recruitment and Performance management
+* Operational Leader: Commercial, Risk, and Sustainability Management
+* Business Development: Presales Support, Customer Value Proposition creation, Thought Leadership.
+* Solution design for Business Objects solutions
+* Implementation management of BI solutions based on the full lifecycle approach (including Business Analysis, Extraction, transformation, and load (ETL) design and build, Data Warehouse Design and build and exploitation layer design and build)
+* Implementation management and presales support of analytical CRM solutions based on the Data Distilleries Analytical CRM solution set. This includes designing data mining models and implementing the resultant behaviour models in the operational CRM environment.Logical SA / 3Fifteen, South Africa
+Establishment of a new practice within the Technology Consulting organisation.
+01 February 2001 to 01 March 2002
+Industry: Information Communication TechnologiesBusiness Intelligence and Knowledge Management Practice Manager
+* Creation and implementation of a go-to-market strategy for the BI and KM practice
+* Overall responsibility for sales and marketing of consulting services and BI and KM products
+* Consulting to customers in BI strategy, architecture, and methodology
+* Managing the partner relationships with prime vendors, i.e., Microsoft SA and Harvey Jones (as the local representative of the ProClarity Corporation).
+* Integration of BI and knowledge management through ProClarity and SharePoint Portal Services.
+
+Project consulting experience (continues)PQ Africa, South Africa
+Divisional manager for the Business Intelligence consulting division.
+01 January 1999 to 01 January 2001
+Industry: Information Communication TechnologiesBusiness Intelligence Division Manager
+* General management of a team of BI consultants and a business development manager
+* Sales and marketing of consulting services and BI products
+* Consulting to customers in BI strategy, architecture, and methodology
+* Project management of projects for customers including Sasol, ABSA, Standard Bank and Apron Services
+* Data mining techniques were applied to a proof-of-concept project for the card division of FNB.
+* Facilitated executive management simulation workshops as change management initiatives to teach executives in a simulated business environment the power of BI and how it could be applied in their organisations.Various, South Africa
+Programmer, Systems Analyst, Consultant and Project Manager 
+01 December 1980 to 01 December 1999
+Industry: VariousSystems Analyst • Capacity Planner • Project Manager 
+* Oracle Corporation South Africa (3.2 years) – Principal Consultant (Applications) contributing to various implementations of Oracle Financials Application.
+* Spoornet Information Systems (3.5 years) - Business Analysis of an Executive Information System for Spoornet. SPL implemented the system using the Commander/EIS package.
+* Denel Informatics (1.5 years) - Business analysis for preparing an internal systems strategy for Denel Informatics and its subsidiaries. The business analysis included Human Resources, Finance, Marketing and Sales. Following this analysis, Denel Informatics decided to implement SAP.
+* Spoornet Human Resources (1 year) - Business Analysis of the human resources process in preparation for installing SAP HR.
+* JCI Gold Division (1 year) - Business Analysis and requirements specification for a Gold Division data warehouse to analyse business drivers in the gold production environment. This included the establishment of a proto-type Oracle data warehouse.
+* Bateman Davy Limited (2 years) - Management of the Artemis Project Management system implemented by BDL for managing the Mosgas refinery project. Analysis, design, and programming of management reporting system.
+* SA Breweries (1 year) - Using operational research techniques (such as linear programming, cluster analysis and regression) to plan the locality, capacity and maintenance schedules of breweries, packaging lines and warehouses, warehouse stock rotation planning, and transport modelling.
+* Iscor Ltd (6 years) - Analysis, design, and programming of an in-house project management system, specifically resource scheduling and graphics modules. Furthermore, responsible for supporting the modules above and training users in using project management techniques and the system. The system was programmed in FORTRAN on CDC Cyber mainframes under the NOS/VE operating system.
+Employment history.    Spinx Property Maintenance
+01 November 2025Systems IntegratorEPI-USE Africa (Pty) Ltd.
+01 November 2022 to October 2025Project Manager (Associate)Adam Smith International
+01 November 2015 to 31 March 2020Project Manager – Papua New GuineaProvincial Government Western Cape: Government Motor Transport Department (GMT)
+01 March 2014 to 31 July 2015Senior Business AnalystInternational Monetary Fund
+01 December 2011 to 28 February 2014Independent Process consultantPetros Business Solutions
+01 May 2003 to 30 November 2011Business Intelligence DirectorBytes Business Solutions
+01 April 2002 to 30 April 2003Business Practice ManagerLogical SA / 3 Fifteen
+01 February 2001 to 30 March 2002Business Intelligence and Knowledge Management Practice ManagerPQ Africa 
+01 January 1999 to 31 January 2001Business Intelligence Division ManagerOracle Corporation
+01 January 1996 to 31 December 1998Business Process ConsultantVarious Companies
+01 December 1980 to 31 December 1995Systems Analyst
+Capacity Planner
+Project manager
+
+
+
+
+Gerhard Stimie
+
+
+

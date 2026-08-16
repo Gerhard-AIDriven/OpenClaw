@@ -1,0 +1,454 @@
+{
+  "total_layers": 56,
+  "critical_layers": 37,
+  "layers": [
+    {
+      "title": "CHBDC HDC WDC Liquefaction Severity",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/4",
+      "owner": "HBRC_Data",
+      "id": "53a60e8296764f879eed707bee61fd0b",
+      "critical": true
+    },
+    {
+      "title": "Heretaunga Plains Liquefaction Hazard Vulnerability",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/0",
+      "owner": "HBRC_Data",
+      "id": "8c0b6f4f66fd492fb5b231e57410435a",
+      "critical": true
+    },
+    {
+      "title": "Heretaunga Plains 500 Yr Return Period Liquefaction Severity",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/3",
+      "owner": "HBRC_Data",
+      "id": "61ae4f048ba44ddeba581300ee01d149",
+      "critical": true
+    },
+    {
+      "title": "Heretaunga Plains 25 Yr Return Period Liquefaction Severity",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/1",
+      "owner": "HBRC_Data",
+      "id": "519d7309d4f44ec48b54fc670f0d8d32",
+      "critical": true
+    },
+    {
+      "title": "Heretaunga Plains 100 Yr Return Period Liquefaction Severity",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Earthquake_Liquefaction/MapServer/2",
+      "owner": "HBRC_Data",
+      "id": "34bf0e57929b4c989b4629934cce7cfc",
+      "critical": true
+    },
+    {
+      "title": "Hawkes Bay - Earthquake Liquefaction",
+      "type": "Map Service",
+      "url": "https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_EarthquakeLiquefaction/MapServer",
+      "owner": "TPG@Wellington2",
+      "id": "63e1a94423f7417bbee18d7f4d881ed3",
+      "critical": true
+    },
+    {
+      "title": "Hawkes Bay - Liquefaction",
+      "type": "Map Service",
+      "url": "https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_Liquefaction/MapServer",
+      "owner": "TPG@Wellington2",
+      "id": "5e64ca3b81f84ee19d07a3eda22372e1",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay Quaternary Geology",
+      "type": "Map Service",
+      "url": "https://hbmaps.hbrc.govt.nz/arcgis/rest/services/HazardsPortal/Quaternary_Geology/MapServer/0",
+      "owner": "HBRC_Data",
+      "id": "3a4c8261405a455f9ae0f71bfd288915",
+      "critical": false
+    },
+    {
+      "title": "Hawke's Bay Coastal Environment",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/CoastalEnvironment/MapServer",
+      "owner": "HBRC_Data",
+      "id": "24ff2b7dbdaf40ac818cc724bbad5b80",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay Flood Risk Areas",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Flooding/MapServer/0",
+      "owner": "HBRC_Data",
+      "id": "dd27fbc9633a496dad4e2f50fda8f1ee",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay Flood Observation Extents",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer",
+      "owner": "HBRC_Data",
+      "id": "362b2668281c4df7a8d3ada94b197adb",
+      "critical": true
+    },
+    {
+      "title": "Hawkes Bay - Flood Detention Dams Hazard Zones",
+      "type": "Map Service",
+      "url": "https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_FloodDetentionDams_HazardZones/MapServer",
+      "owner": "TPG@Wellington2",
+      "id": "1aacf63839fe46818491b7af10cd5d38",
+      "critical": true
+    },
+    {
+      "title": "Wairoa River Bank Stability Offset Boundaries",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Wairoa_River_Bank/MapServer/0",
+      "owner": "HBRC_Data",
+      "id": "4f8c7c8da1d047f5ba094466b9125404",
+      "critical": false
+    },
+    {
+      "title": "Wairoa River Bank Stability Zones",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Wairoa_River_Bank/MapServer/1",
+      "owner": "HBRC_Data",
+      "id": "716b45e54ecd4454a34adc73bc49335e",
+      "critical": false
+    },
+    {
+      "title": "Flood Detention Dams",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Detention_Dams/MapServer/0",
+      "owner": "HBRC_Data",
+      "id": "f22c76e8279a4964a0c69f6c163ce73d",
+      "critical": true
+    },
+    {
+      "title": "Natural Hazard and Risk Overlays",
+      "type": "Feature Service",
+      "url": "https://services8.arcgis.com/O26DwMB5KWy6K8pZ/arcgis/rest/services/Natural_Hazard_and_Risk_Overlays/FeatureServer",
+      "owner": "districtplan@chbdc.govt.nz",
+      "id": "3e668a1d852e430f930c38769b134a49",
+      "critical": false
+    },
+    {
+      "title": "Hawke's Bay Coastal Environment",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/CoastalEnvironment/MapServer",
+      "owner": "HBRC_Data",
+      "id": "24ff2b7dbdaf40ac818cc724bbad5b80",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay Coastal Inundation",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/0",
+      "owner": "HBRC_Data",
+      "id": "60af6c5ac30544edbfca9dd30ab9e7d5",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay RCEP Coastal Hazard Zone 2",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24",
+      "owner": "HBRC_Data",
+      "id": "b7efe21836de440ba94259d3091ad542",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay RCEP Coastal Hazard Zone 1",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25",
+      "owner": "HBRC_Data",
+      "id": "5a03ee9bdfa640d98ba3e82fb5108048",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay RCEP Coastal Hazard Zone 3",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/23",
+      "owner": "HBRC_Data",
+      "id": "f0bad93243be449d8dd61fa8cf764ca8",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay Coastal Communities",
+      "type": "Map Service",
+      "url": "https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_CoastalCommunities/MapServer/0",
+      "owner": "HBRC_Data",
+      "id": "3c1061443d434065be0fbdb3f2447028",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay RCEP Transition Hazard Zone",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/22",
+      "owner": "HBRC_Data",
+      "id": "c733f7c5a32242a495bbad2b401009a5",
+      "critical": false
+    },
+    {
+      "title": "Hawke's Bay RCEP CliffShore Hazard Zone",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/HBRC_Property_Hazards/MapServer/44",
+      "owner": "HBRC_Data",
+      "id": "ae47a59781e843629f18cf87fbbfa936",
+      "critical": false
+    },
+    {
+      "title": "Coastal Hazard Zone 1",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25",
+      "owner": "HBRC_Data",
+      "id": "632a5096b8d94885bb66797899990220",
+      "critical": true
+    },
+    {
+      "title": "Coastal Hazard Zone 2",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24",
+      "owner": "HBRC_Data",
+      "id": "5a24b71f464c4ab580579ee50cd7f433",
+      "critical": true
+    },
+    {
+      "title": "Hawkes Bay - Tsunami Evacuation Zones",
+      "type": "Map Service",
+      "url": "https://hbmaps.hbrc.govt.nz/arcgis/rest/services/Hazards/HawkesBay_Tsunami_EvacuationZones/MapServer",
+      "owner": "TPG@Wellington2",
+      "id": "0f223d877a2b4f8bb8ca4b059099b369",
+      "critical": true
+    },
+    {
+      "title": "Transition Hazard Zones",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/22",
+      "owner": "HBRC_Data",
+      "id": "4670185d92ae4dc5ab555dde4a640f0f",
+      "critical": false
+    },
+    {
+      "title": "Napier District Plan Hazard Zones",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/27",
+      "owner": "HBRC_Data",
+      "id": "af17c20b49834a72bb9f2d93c08da6b0",
+      "critical": false
+    },
+    {
+      "title": "Cliff Shore Hazard Zone",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/21",
+      "owner": "HBRC_Data",
+      "id": "00c619cdd6e94ec1bf70bf9bfa229316",
+      "critical": false
+    },
+    {
+      "title": "Hawke's Bay Flood Risk Areas",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Flooding/MapServer/0",
+      "owner": "HBRC_Data",
+      "id": "dd27fbc9633a496dad4e2f50fda8f1ee",
+      "critical": true
+    },
+    {
+      "title": "Coastal Hazards",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Coastal_Hazards/FeatureServer",
+      "owner": "HBRC_GISAdmin",
+      "id": "ae09258633cf456eb7f31e73eca60565",
+      "critical": true
+    },
+    {
+      "title": "HBRC River Access location_WFL1",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/HBRC_River_Access_location_WFL1/FeatureServer",
+      "owner": "HBRC_GISAdmin",
+      "id": "ed954d3a71374e87a83087f2ea496525",
+      "critical": false
+    },
+    {
+      "title": "HBRC Drains",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/ExternalServices/AssetManagement/MapServer/3",
+      "owner": "HBRC_Data",
+      "id": "9f0c4d8675c941159609cab92079fb79",
+      "critical": false
+    },
+    {
+      "title": "Flood_Extent_Observations_gdb",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer",
+      "owner": "HBRC_GISAdmin",
+      "id": "674a0badb22848c7a1af09159d8bcd26",
+      "critical": true
+    },
+    {
+      "title": "WGA211422_Working_Data",
+      "type": "Feature Service",
+      "url": "https://services8.arcgis.com/GAZiuYWXmnwzoGFY/arcgis/rest/services/WGA211422_Working_Data/FeatureServer",
+      "owner": "adesouza_wgaz",
+      "id": "81f65a75d8c34f9ea6c56e28f77f32e6",
+      "critical": false
+    },
+    {
+      "title": "HBRC Asset Polygons",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/ExternalServices/AssetManagement/MapServer/6",
+      "owner": "HBRC_Data",
+      "id": "3d97da6204854b45b35398ba64af7f86",
+      "critical": false
+    },
+    {
+      "title": "HBRC Asset Points",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/ExternalServices/AssetManagement/MapServer/4",
+      "owner": "HBRC_Data",
+      "id": "188b6052100a43069d6e0f6b02232724",
+      "critical": false
+    },
+    {
+      "title": "HBRC Asset Lines",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/ExternalServices/AssetManagement/MapServer/5",
+      "owner": "HBRC_Data",
+      "id": "a8ddc32a1669447e8abf5fc04e1f9dc3",
+      "critical": false
+    },
+    {
+      "title": "Hawke's Bay Flood Observation Extents",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Flood_Extent_Observations_gdb/FeatureServer",
+      "owner": "HBRC_Data",
+      "id": "362b2668281c4df7a8d3ada94b197adb",
+      "critical": true
+    },
+    {
+      "title": "Gravel Extraction VIEW",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Gravel_Extraction_VIEW/FeatureServer",
+      "owner": "HBRC_GISAdmin",
+      "id": "5d96f68d310340a6b045d6a9bc0a2ee5",
+      "critical": false
+    },
+    {
+      "title": "Coastal Erosion Extent (New Information 2016) Year 2065 - Likely - 66%",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/7",
+      "owner": "HBRC_Data",
+      "id": "56423fd9c7374ad2ab833592f13dea27",
+      "critical": true
+    },
+    {
+      "title": "Coastal Erosion Extent (New Information 2016) Present Day - Likely - 66%",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/2",
+      "owner": "HBRC_Data",
+      "id": "bcb3c14903004f9fb252fda4e4ebfa47",
+      "critical": true
+    },
+    {
+      "title": "Coastal Erosion Extent (New Information 2016) Present Day - Very Unlikely - 5%",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/4",
+      "owner": "HBRC_Data",
+      "id": "9588b1913b954fb2bfc0bdb251991d20",
+      "critical": true
+    },
+    {
+      "title": "Coastal Inundation Extent at 2100 2% AEP",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/5",
+      "owner": "HBRC_Data",
+      "id": "e461cf487ead4096b5506a50ec89fa0b",
+      "critical": true
+    },
+    {
+      "title": "Coastal Inundation Extent at 2020 2% AEP",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/3",
+      "owner": "HBRC_Data",
+      "id": "729ace651af2482f8fcb50ea65eedadd",
+      "critical": true
+    },
+    {
+      "title": "Coastal Inundation Extent at 2100 1% AEP",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Inundation/MapServer/4",
+      "owner": "HBRC_Data",
+      "id": "77a852bd1bd9466f86db24c9417bc64d",
+      "critical": true
+    },
+    {
+      "title": "Coastal Erosion Extent (New Information 2016) Present Day - Highly Unlikely - 1%",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/5",
+      "owner": "HBRC_Data",
+      "id": "39befca4fbe24dcba95e46f48e7185a1",
+      "critical": true
+    },
+    {
+      "title": "Coastal Erosion Extent (New Information 2016) Present Day - Possible - 33%",
+      "type": "Feature Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazards/MapServer/3",
+      "owner": "HBRC_Data",
+      "id": "e2919634057f4ea29b49937d99a78d70",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay RCEP Coastal Hazard Zone 2",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/24",
+      "owner": "HBRC_Data",
+      "id": "b7efe21836de440ba94259d3091ad542",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay RCEP Coastal Hazard Zone 1",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/25",
+      "owner": "HBRC_Data",
+      "id": "5a03ee9bdfa640d98ba3e82fb5108048",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay RCEP Coastal Hazard Zone 3",
+      "type": "Map Service",
+      "url": "https://gis.hbrc.govt.nz/server/rest/services/HazardPortal/Coastal_Hazard_Zones/MapServer/23",
+      "owner": "HBRC_Data",
+      "id": "f0bad93243be449d8dd61fa8cf764ca8",
+      "critical": true
+    },
+    {
+      "title": "Hawkes Bay Multibeam Echosounder Coverage 2018 to 2022",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/Hawkes_Bay_Multibeam_Echosounder_Coverage_2018_to_2019/FeatureServer",
+      "owner": "HBRC_Data",
+      "id": "5f03691f8480457ba5d04145b869bc6b",
+      "critical": false
+    },
+    {
+      "title": "HB_Hazard_CoastalInundation_2023Data",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/8L3DQUzjrkgEmDpQ/arcgis/rest/services/HB_Hazard_CoastalInundation_2023Data/FeatureServer",
+      "owner": "HDC_Website",
+      "id": "a690affb79ff4621990c779bb0e289f5",
+      "critical": true
+    },
+    {
+      "title": "Hawke's Bay Broadscale Habitat (Cawthron, 2005)",
+      "type": "Feature Service",
+      "url": "https://services1.arcgis.com/hWByVnSkh6ElzHkf/arcgis/rest/services/HawkesBay_BroadscaleHabitat_Cawthron2005/FeatureServer",
+      "owner": "HBRC_Data",
+      "id": "5d7f92ea19344c2f9b0ad8cb0ab3725a",
+      "critical": false
+    },
+    {
+      "title": "WGA211422_Working_Data",
+      "type": "Feature Service",
+      "url": "https://services8.arcgis.com/GAZiuYWXmnwzoGFY/arcgis/rest/services/WGA211422_Working_Data/FeatureServer",
+      "owner": "adesouza_wgaz",
+      "id": "81f65a75d8c34f9ea6c56e28f77f32e6",
+      "critical": false
+    }
+  ]
+}

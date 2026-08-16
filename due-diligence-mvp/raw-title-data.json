@@ -1,0 +1,50 @@
+{
+  "type": "Feature",
+  "id": "layer-50804.1793537",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            176.9042638833,
+            -39.50259115
+          ],
+          [
+            176.9042691167,
+            -39.5026540667
+          ],
+          [
+            176.9036856,
+            -39.50268295
+          ],
+          [
+            176.90367295,
+            -39.5025295167
+          ],
+          [
+            176.90425645,
+            -39.5025006333
+          ],
+          [
+            176.9042638833,
+            -39.50259115
+          ]
+        ]
+      ]
+    ]
+  },
+  "geometry_name": "shape",
+  "properties": {
+    "id": 1793537,
+    "title_no": "HBW2/126",
+    "status": "LIVE",
+    "type": "Cross lease",
+    "land_district": "Hawkes Bay",
+    "issue_date": "1999-09-07T00:00:00Z",
+    "guarantee_status": "Guarantee",
+    "estate_description": "Fee Simple, 1/4, Lot 77 Deposited Plan 8162, 858 m2\r\nLeasehold, 1/1, Flat 2 Deposited Plan 26501",
+    "number_owners": 1,
+    "spatial_extents_shared": true
+  }
+}

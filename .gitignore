@@ -1,0 +1,72 @@
+# AI Driven - Git Ignore File
+# Prevent large/generated files from being committed
+
+# Database caches (>100MB)
+*.db
+**/linz_titles_cache.db
+**/*.sqlite
+**/*.sqlite3
+
+# Node modules
+node_modules/
+package-lock.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Generated reports (keep structure, ignore content)
+aidriven-website/reports/*
+!aidriven-website/reports/.gitkeep
+
+automation/whatsapp-property-report/reports/*
+!automation/whatsapp-property-report/reports/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+.env.production
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp

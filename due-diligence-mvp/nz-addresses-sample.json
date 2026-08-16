@@ -1,0 +1,199 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "layer-123113.1103316",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          173.0352563333,
+          -40.8647935
+        ]
+      },
+      "geometry_name": "shape",
+      "properties": {
+        "address_id": 1103316,
+        "road_id": 3042339,
+        "full_address_number": "53",
+        "full_road_name": "Awaroa Inlet",
+        "full_address": "53 Awaroa Inlet, Awaroa Bay, T\u0101kaka",
+        "territorial_authority": "Tasman District",
+        "unit": null,
+        "address_number": 53,
+        "address_number_suffix": null,
+        "address_number_high": null,
+        "road_name": "Awaroa Inlet",
+        "road_name_type": null,
+        "road_name_suffix": null,
+        "suburb_locality": "Awaroa Bay",
+        "town_city": "T\u0101kaka",
+        "is_land": false,
+        "address_lifecycle": "Current",
+        "full_road_name_ascii": "Awaroa Inlet",
+        "full_address_ascii": "53 Awaroa Inlet, Awaroa Bay, Takaka",
+        "territorial_authority_ascii": "Tasman District",
+        "road_name_ascii": "Awaroa Inlet",
+        "suburb_locality_ascii": "Awaroa Bay",
+        "town_city_ascii": "Takaka"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "layer-123113.390570",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          177.0750894333,
+          -37.98543295
+        ]
+      },
+      "geometry_name": "shape",
+      "properties": {
+        "address_id": 390570,
+        "road_id": 3070335,
+        "full_address_number": "4",
+        "full_road_name": "Ohakana Island",
+        "full_address": "4 Ohakana Island, Ohakana Island, Whakat\u0101ne",
+        "territorial_authority": "Whakatane District",
+        "unit": null,
+        "address_number": 4,
+        "address_number_suffix": null,
+        "address_number_high": null,
+        "road_name": "Ohakana Island",
+        "road_name_type": null,
+        "road_name_suffix": null,
+        "suburb_locality": "Ohakana Island",
+        "town_city": "Whakat\u0101ne",
+        "is_land": false,
+        "address_lifecycle": "Current",
+        "full_road_name_ascii": "Ohakana Island",
+        "full_address_ascii": "4 Ohakana Island, Ohakana Island, Whakatane",
+        "territorial_authority_ascii": "Whakatane District",
+        "road_name_ascii": "Ohakana Island",
+        "suburb_locality_ascii": "Ohakana Island",
+        "town_city_ascii": "Whakatane"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "layer-123113.390571",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          177.0760132333,
+          -37.9858513
+        ]
+      },
+      "geometry_name": "shape",
+      "properties": {
+        "address_id": 390571,
+        "road_id": 3070335,
+        "full_address_number": "6",
+        "full_road_name": "Ohakana Island",
+        "full_address": "6 Ohakana Island, Ohakana Island, Whakat\u0101ne",
+        "territorial_authority": "Whakatane District",
+        "unit": null,
+        "address_number": 6,
+        "address_number_suffix": null,
+        "address_number_high": null,
+        "road_name": "Ohakana Island",
+        "road_name_type": null,
+        "road_name_suffix": null,
+        "suburb_locality": "Ohakana Island",
+        "town_city": "Whakat\u0101ne",
+        "is_land": false,
+        "address_lifecycle": "Current",
+        "full_road_name_ascii": "Ohakana Island",
+        "full_address_ascii": "6 Ohakana Island, Ohakana Island, Whakatane",
+        "territorial_authority_ascii": "Whakatane District",
+        "road_name_ascii": "Ohakana Island",
+        "suburb_locality_ascii": "Ohakana Island",
+        "town_city_ascii": "Whakatane"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "layer-123113.390572",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          177.0735916167,
+          -37.98807585
+        ]
+      },
+      "geometry_name": "shape",
+      "properties": {
+        "address_id": 390572,
+        "road_id": 3070335,
+        "full_address_number": "5",
+        "full_road_name": "Ohakana Island",
+        "full_address": "5 Ohakana Island, Ohakana Island, Whakat\u0101ne",
+        "territorial_authority": "Whakatane District",
+        "unit": null,
+        "address_number": 5,
+        "address_number_suffix": null,
+        "address_number_high": null,
+        "road_name": "Ohakana Island",
+        "road_name_type": null,
+        "road_name_suffix": null,
+        "suburb_locality": "Ohakana Island",
+        "town_city": "Whakat\u0101ne",
+        "is_land": false,
+        "address_lifecycle": "Current",
+        "full_road_name_ascii": "Ohakana Island",
+        "full_address_ascii": "5 Ohakana Island, Ohakana Island, Whakatane",
+        "territorial_authority_ascii": "Whakatane District",
+        "road_name_ascii": "Ohakana Island",
+        "suburb_locality_ascii": "Ohakana Island",
+        "town_city_ascii": "Whakatane"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "layer-123113.390573",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          177.0776668167,
+          -37.98651735
+        ]
+      },
+      "geometry_name": "shape",
+      "properties": {
+        "address_id": 390573,
+        "road_id": 3070335,
+        "full_address_number": "7",
+        "full_road_name": "Ohakana Island",
+        "full_address": "7 Ohakana Island, Ohakana Island, Whakat\u0101ne",
+        "territorial_authority": "Whakatane District",
+        "unit": null,
+        "address_number": 7,
+        "address_number_suffix": null,
+        "address_number_high": null,
+        "road_name": "Ohakana Island",
+        "road_name_type": null,
+        "road_name_suffix": null,
+        "suburb_locality": "Ohakana Island",
+        "town_city": "Whakat\u0101ne",
+        "is_land": false,
+        "address_lifecycle": "Current",
+        "full_road_name_ascii": "Ohakana Island",
+        "full_address_ascii": "7 Ohakana Island, Ohakana Island, Whakatane",
+        "territorial_authority_ascii": "Whakatane District",
+        "road_name_ascii": "Ohakana Island",
+        "suburb_locality_ascii": "Ohakana Island",
+        "town_city_ascii": "Whakatane"
+      }
+    }
+  ],
+  "totalFeatures": "unknown",
+  "numberReturned": 5,
+  "timeStamp": "2026-08-07T12:58:44.522Z",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:EPSG::4167"
+    }
+  }
+}

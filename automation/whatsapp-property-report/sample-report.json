@@ -1,0 +1,98 @@
+{
+  "reportId": "RPT-1786870256803",
+  "generatedAt": "2026-08-16T08:50:56.803Z",
+  "tier": "STANDARD",
+  "price": "NZD $149",
+  "property": {
+    "address": "18 Ferguson Avenue, Napier 4110",
+    "coordinates": {
+      "lat": -39.4928,
+      "lon": 176.912
+    },
+    "rid": "138159-107977"
+  },
+  "dataSources": {
+    "linz": {
+      "status": "Failed",
+      "error": "Request failed with status code 400"
+    },
+    "hazards": {
+      "linzGabrielle": "Layer 112668",
+      "hbrManual": "https://gis.hbrc.govt.nz/hazards/",
+      "fetchedAt": "2026-08-16T08:51:20.347Z"
+    },
+    "rates": {
+      "status": "Failed",
+      "error": "Rates JSON file not generated"
+    }
+  },
+  "sections": {
+    "parcel": {
+      "error": "Request failed with status code 400"
+    },
+    "hazards": {
+      "location": {
+        "latitude": -39.4928,
+        "longitude": 176.912
+      },
+      "hazards": {
+        "liquefaction": {
+          "status": "No data"
+        },
+        "flood": {
+          "status": "No data"
+        },
+        "coastal": {
+          "inundation": {
+            "status": "Fetch failed",
+            "error": "connect ETIMEDOUT 202.36.185.10:443"
+          },
+          "hazardZones": {
+            "status": "No data",
+            "inHazardZone": false,
+            "intersectedLayer": false
+          }
+        },
+        "cycloneGabrielle": {
+          "source": "LINZ Layer 112668",
+          "eventDate": "2023-02-14",
+          "affected": true,
+          "floodExtentPolygons": 1
+        }
+      },
+      "overallAssessment": {
+        "riskRating": "High",
+        "riskFactors": [
+          "Cyclone Gabrielle affected"
+        ],
+        "summary": "Risk: High. Cyclone Gabrielle affected."
+      },
+      "dataSources": {
+        "hbrArcGisPortal": "https://gis.hbrc.govt.nz/hazards/",
+        "linzDataService": "Layer 112668"
+      },
+      "fetchedAt": "2026-08-16T08:51:20.347Z"
+    },
+    "rates": {
+      "error": "Rates JSON file not generated",
+      "success": false
+    },
+    "hbrVerification": {
+      "status": "Manual Verification Required",
+      "note": "HBRC API access pending approval. Use the links below to manually verify hazards.",
+      "links": {
+        "hazardsMap": "https://hbmaps.hbrc.govt.nz/?lat=-39.4928&lon=176.912",
+        "liquefaction": "https://hbmaps.hbrc.govt.nz/?layer=Earthquake_Liquefaction&lat=-39.4928&lon=176.912",
+        "flooding": "https://hbmaps.hbrc.govt.nz/?layer=Flooding&lat=-39.4928&lon=176.912",
+        "coastalInundation": "https://hbmaps.hbrc.govt.nz/?layer=Coastal_Inundation&lat=-39.4928&lon=176.912",
+        "tsunami": "https://hbmaps.hbrc.govt.nz/?layer=Tsunami&lat=-39.4928&lon=176.912"
+      },
+      "instructions": [
+        "Click any link above to open HBRC Hazards Map",
+        "The map will center on your property coordinates",
+        "Toggle hazard layers to see if property is affected",
+        "Screenshot or note findings for your records"
+      ]
+    }
+  }
+}

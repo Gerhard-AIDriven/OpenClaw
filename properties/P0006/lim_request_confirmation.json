@@ -1,0 +1,48 @@
+{
+  "property_details": {
+    "property_id": "P0006",
+    "legal_description": {
+      "lot_number": "9",
+      "dp_number": "578787",
+      "title_reference": "N/A"
+    },
+    "physical_address": {
+      "street_number": "49",
+      "street_name": "Wai Whatu Street",
+      "suburb": "Meanee",
+      "city": "Napier",
+      "postcode": "4120",
+      "country": "New Zealand"
+    }
+  },
+  "applicant_details": {
+    "full_name": "Keegan Swanepoel",
+    "first_name": "Keegan",
+    "last_name": "Swanepoel",
+    "contact_info": {
+      "email": "gerhard@aidriven.biz",
+      "phone": "0220431584"
+    },
+    "relationship_to_property": "Individual",
+    "billing_address": {
+      "street": "49 Wai Whatu street",
+      "suburb": "Meanee",
+      "city": "Napier",
+      "postcode": "4120",
+      "country": "New Zealand"
+    },
+    "delivery_method": "Email"
+  },
+  "application_options": {
+    "request_type": "Standard",
+    "fee_type": "Residential / Rural Residential",
+    "fee_amount": "$420.00",
+    "additional_reports": {},
+    "urgency": "Standard"
+  },
+  "payment_info": {
+    "payment_method": "Credit Card (Manual)",
+    "total_due": "$420.00 NZD",
+    "status": "Pending Payment"
+  }
+}

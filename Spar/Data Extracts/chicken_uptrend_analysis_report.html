@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAR Chicken - Good Performers Analysis Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #ff6b35 0%, #d84315 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+        
+        .metadata {
+            background: #f9f9f9;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+            gap: 20px;
+        }
+        
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section h2 {
+            color: #ff6b35;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ff6b35;
+        }
+        
+        .section h3 {
+            color: #d84315;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #ffe0d5 0%, #ffccb3 100%);
+            padding: 20px;
+            border-left: 4px solid #ff6b35;
+            border-radius: 4px;
+        }
+        
+        .stat-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #ff6b35;
+        }
+        
+        .stat-card .label {
+            font-size: 0.95em;
+            color: #666;
+            margin-top: 8px;
+        }
+        
+        .stat-card .subtext {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.85em;
+        }
+        
+        thead {
+            background: #ff6b35;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background: #fff5f0;
+        }
+        
+        .code {
+            font-family: monospace;
+            font-weight: 600;
+            color: #ff6b35;
+        }
+        
+        .highlight-high {
+            background: #fff3e0;
+            font-weight: 600;
+        }
+        
+        .highlight-very-high {
+            background: #ffe0d5;
+            font-weight: 600;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #999;
+        }
+        
+        .alert {
+            background: #fff3e0;
+            border-left: 4px solid #ff6b35;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .alert strong {
+            color: #d84315;
+        }
+        
+        .recommendation {
+            background: #f1f8f4;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+        
+        .recommendation strong {
+            color: #2e7d32;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🍗 Chicken Department - Good Performers Analysis</h1>
+            <p>Products with Upward Trends in Sales Volume AND Profitability (Scenario 1)</p>
+        </div>
+        
+        <!-- Metadata -->
+        <div class="metadata">
+            <div><strong>Report Date:</strong> 18 April 2026</div>
+            <div><strong>Analysis Period:</strong> 1 March 2022 – 1 April 2026 (49 months)</div>
+            <div><strong>Data Source:</strong> SPAR Sigma System</div>
+            <div><strong>Department:</strong> Chicken</div>
+            <div><strong>Good Performers Found:</strong> 49</div>
+        </div>
+        
+        <!-- Executive Summary -->
+        <div class="section">
+            <h2>📊 Executive Summary</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="value">49</div>
+                    <div class="label">Good Performers</div>
+                    <div class="subtext">Uptrend in Qty & GP%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">8.74</div>
+                    <div class="label">Top Volume Growth</div>
+                    <div class="subtext">units/month</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">0.91</div>
+                    <div class="label">Best Margin Gain</div>
+                    <div class="subtext">percentage points/month</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">5,482</div>
+                    <div class="label">Highest Volume</div>
+                    <div class="subtext">total units (49 months)</div>
+                </div>
+            </div>
+            
+            <div class="alert">
+                <strong>✓ Key Finding:</strong> 49 chicken products show positive trends in BOTH sales volume AND profitability margins. These are proven winners and strong candidates for expansion, promotion, and increased shelf space allocation.
+            </div>
+        </div>
+        
+        <!-- Top Performers -->
+        <div class="section">
+            <h2>🏆 Top 20 Good Performers (by Combined Growth Strength)</h2>
+            
+            <p style="margin-bottom: 15px; color: #666;">
+                Ranked by total trend strength (Sales Qty slope + GP% slope). These products demonstrate sustained growth across both volume and profitability metrics.
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 70px;">Code</th>
+                        <th style="width: 40%;">Product Description</th>
+                        <th style="width: 90px; text-align: right;">Total Units</th>
+                        <th style="width: 110px; text-align: right;">Qty Slope</th>
+                        <th style="width: 110px; text-align: right;">GP% Slope</th>
+                        <th style="width: 80px; text-align: right;">Last GP%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="highlight-very-high">
+                        <td><span class="code">52205</span></td>
+                        <td>RAINBOW DRUMS&THIGH FRSH</td>
+                        <td style="text-align: right;">5,482</td>
+                        <td style="text-align: right;"><strong>+8.74</strong></td>
+                        <td style="text-align: right;"><strong>+0.37</strong></td>
+                        <td style="text-align: right;">26.19%</td>
+                    </tr>
+                    <tr class="highlight-high">
+                        <td><span class="code">56239</span></td>
+                        <td>COUNTRY VALUE DRUMSTICKS</td>
+                        <td style="text-align: right;">2,764</td>
+                        <td style="text-align: right;"><strong>+4.10</strong></td>
+                        <td style="text-align: right;"><strong>+0.85</strong></td>
+                        <td style="text-align: right;">27.76%</td>
+                    </tr>
+                    <tr class="highlight-high">
+                        <td><span class="code">56238</span></td>
+                        <td>COUNTRY VALUE THIGHS</td>
+                        <td style="text-align: right;">2,412</td>
+                        <td style="text-align: right;"><strong>+3.19</strong></td>
+                        <td style="text-align: right;"><strong>+0.91</strong></td>
+                        <td style="text-align: right;">30.95%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">49329</span></td>
+                        <td>COUNTRY VALUE S/PACK</td>
+                        <td style="text-align: right;">2,865</td>
+                        <td style="text-align: right;">+3.40</td>
+                        <td style="text-align: right;">+0.38</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">52258</span></td>
+                        <td>F/BROWN BRAAI PK FRSH 16PC P/K</td>
+                        <td style="text-align: right;">1,827</td>
+                        <td style="text-align: right;">+2.80</td>
+                        <td style="text-align: right;">+0.16</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">14749</span></td>
+                        <td>R/BOW FRSH WHOLE BIRD(10)</td>
+                        <td style="text-align: right;">3,245</td>
+                        <td style="text-align: right;">+2.52</td>
+                        <td style="text-align: right;">+0.25</td>
+                        <td style="text-align: right;">12.64%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">57443</span></td>
+                        <td>SANGIRO CHIC MIX PORT 10'S P/K</td>
+                        <td style="text-align: right;">1,706</td>
+                        <td style="text-align: right;">+2.31</td>
+                        <td style="text-align: right;">+0.23</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">53544</span></td>
+                        <td>SPAR SLT CHKN BRAAIPK 12</td>
+                        <td style="text-align: right;">1,162</td>
+                        <td style="text-align: right;">+1.92</td>
+                        <td style="text-align: right;">+0.17</td>
+                        <td style="text-align: right;">14.41%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">52663</span></td>
+                        <td>R/BOW DRUM 8 & THIGH 8 FRSH P/</td>
+                        <td style="text-align: right;">2,951</td>
+                        <td style="text-align: right;">+1.86</td>
+                        <td style="text-align: right;">+0.08</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr class="highlight-high">
+                        <td><span class="code">12326</span></td>
+                        <td>SPAR S/BUTCH CHICK KEBABS</td>
+                        <td style="text-align: right;">513</td>
+                        <td style="text-align: right;">+1.10</td>
+                        <td style="text-align: right;"><strong>+0.62</strong></td>
+                        <td style="text-align: right;">19.92%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">46091</span></td>
+                        <td>SPAR SLT CHKN IN/B NO GIB</td>
+                        <td style="text-align: right;">1,768</td>
+                        <td style="text-align: right;">+1.35</td>
+                        <td style="text-align: right;">+0.26</td>
+                        <td style="text-align: right;">11.26%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">41685</span></td>
+                        <td>T&T CHKN ESPETADA BBQ</td>
+                        <td style="text-align: right;">2,592</td>
+                        <td style="text-align: right;">+1.42</td>
+                        <td style="text-align: right;">+0.13</td>
+                        <td style="text-align: right;">19.25%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">52210</span></td>
+                        <td>F/BROWN DRUMS&THIGHS FRSH</td>
+                        <td style="text-align: right;">1,081</td>
+                        <td style="text-align: right;">+1.26</td>
+                        <td style="text-align: right;">+0.15</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">11334</span></td>
+                        <td>SPAR SLT BREAST FLT 4'S</td>
+                        <td style="text-align: right;">3,906</td>
+                        <td style="text-align: right;">+1.10</td>
+                        <td style="text-align: right;">+0.08</td>
+                        <td style="text-align: right;">18.67%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">52662</span></td>
+                        <td>R/BOW DRUM 8 & THIGH 8 FRZ P/</td>
+                        <td style="text-align: right;">1,341</td>
+                        <td style="text-align: right;">+0.93</td>
+                        <td style="text-align: right;">+0.10</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">52661</span></td>
+                        <td>R/BOW FRSH WHOLE BIRD(6)</td>
+                        <td style="text-align: right;">1,236</td>
+                        <td style="text-align: right;">+1.37</td>
+                        <td style="text-align: right;">+0.01</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">52213</span></td>
+                        <td>F/BROWN DRUM 8&THI 8 FRSH</td>
+                        <td style="text-align: right;">1,141</td>
+                        <td style="text-align: right;">+0.98</td>
+                        <td style="text-align: right;">+0.05</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">52211</span></td>
+                        <td>F/BROWN BRAAI PACK FRSH 8PC</td>
+                        <td style="text-align: right;">1,015</td>
+                        <td style="text-align: right;">+0.90</td>
+                        <td style="text-align: right;">+0.02</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                    <tr>
+                        <td><span class="code">52209</span></td>
+                        <td>F/BROWN THIGHS FRSH</td>
+                        <td style="text-align: right;">828</td>
+                        <td style="text-align: right;">+0.87</td>
+                        <td style="text-align: right;">+0.09</td>
+                        <td style="text-align: right;">0.00%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Strategic Recommendations -->
+        <div class="section">
+            <h2>💡 Strategic Recommendations</h2>
+            
+            <h3>Tier 1: Exceptional Performers (Expand Aggressively)</h3>
+            <div class="recommendation">
+                <strong>RAINBOW DRUMS&THIGH FRSH (52205):</strong> The clear volume leader with +8.74 units/month growth. Highest total sales (5,482 units). Recommend: Increase shelf space by 50%, restock 2x/week instead of weekly, feature in promotions.
+            </div>
+            
+            <h3>Tier 2: Strong Margin Winners (Optimize & Promote)</h3>
+            <div class="recommendation">
+                <strong>COUNTRY VALUE THIGHS (56238):</strong> Best margin improvement (+0.91 pts/month, reaching 30.95% GP%). Recommend: Premium shelf placement, bundle with complementary products, create variation packs (spiced, marinated, etc.).
+            </div>
+            <div class="recommendation">
+                <strong>COUNTRY VALUE DRUMSTICKS (56239):</strong> Second-best margin gain (+0.85 pts/month, 27.76% GP%) with strong volume (+4.10 units/month). Recommend: Cross-promote with Thighs, create combo packs, increase depth of stock.
+            </div>
+            
+            <h3>Tier 3: Solid Performers (Maintain & Monitor)</h3>
+            <div class="recommendation">
+                <strong>R/BOW FRSH WHOLE BIRD (14749):</strong> 3,245 total units with steady growth. High-margin opportunity for meal-planning customers. Recommend: Maintain current stock levels, ensure consistent availability.
+            </div>
+            
+            <h3>General Actions for All 49 Good Performers</h3>
+            <ul>
+                <li><strong>EXPAND:</strong> Allocate more linear shelf space to these 49 products (reduce space for underperformers)</li>
+                <li><strong>RESTOCK:</strong> Increase replenishment frequency for top 10 performers to prevent stockouts</li>
+                <li><strong>PROMOTE:</strong> Feature in weekly ads, in-store displays, and digital marketing</li>
+                <li><strong>BUNDLE:</strong> Create combo packs (e.g., Drumsticks + Thighs + Salad Kit) to drive higher basket size</li>
+                <li><strong>REPLICATE:</strong> Develop new SKUs based on winning formats (e.g., marinated, pre-seasoned variants)</li>
+                <li><strong>PRICE:</strong> Monitor competitor pricing; these products can sustain premium positioning due to strong demand</li>
+            </ul>
+        </div>
+        
+        <!-- Key Insights -->
+        <div class="section">
+            <h2>🔍 Key Insights</h2>
+            
+            <h3>Brand Performance</h3>
+            <ul>
+                <li><strong>COUNTRY VALUE:</strong> Leading budget brand with strongest margin gains (Thighs +0.91, Drumsticks +0.85 pts/month)</li>
+                <li><strong>RAINBOW:</strong> Premium volume leader (DRUMS&THIGH +8.74 units/month, 5,482 total units)</li>
+                <li><strong>SPAR SALTED:</strong> Consistent performer with good GP% (18–31% range)</li>
+                <li><strong>FRESH (F/BROWN) vs FROZEN:</strong> Fresh products show stronger growth trajectories</li>
+            </ul>
+            
+            <h3>Product Categories Winning</h3>
+            <ul>
+                <li><strong>Cut Chicken (Drums, Thighs, Breasts):</strong> Strongest growth (easier meal prep for consumers)</li>
+                <li><strong>Whole Birds:</strong> High-volume opportunity for meal planning (3,245 units)</li>
+                <li><strong>Braai Packs:</strong> Growing category (seasonal relevance)</li>
+                <li><strong>Specialty (Kebabs, Espetada):</strong> Niche winners with good margins</li>
+            </ul>
+        </div>
+        
+        <!-- Data Notes -->
+        <div class="section">
+            <h2>📝 Data Notes & Methodology</h2>
+            <ul style="margin-left: 20px; margin-bottom: 15px;">
+                <li><strong>Criteria:</strong> Included products with BOTH Sales Qty slope > 0 AND GP% slope > 0</li>
+                <li><strong>Period:</strong> 49 months (March 2022 – April 2026)</li>
+                <li><strong>Metric:</strong> Linear regression slopes used to calculate monthly growth rates</li>
+                <li><strong>Total Products Analyzed:</strong> ~90 chicken SKUs</li>
+                <li><strong>Good Performers Identified:</strong> 49 products meeting dual-growth criteria</li>
+                <li><strong>Data Source:</strong> SPAR Sigma System (Department 2: Chicken)</li>
+            </ul>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Report Generated: 18 April 2026 | SPAR Chicken Department | Good Performers Analysis (Scenario 1)</p>
+            <p style="margin-top: 10px; color: #ccc;">Data source: SPAR Sigma System, Department: Chicken, Period: March 2022 – April 2026</p>
+            <p style="margin-top: 10px; color: #ccc;">JSON data file: chicken_uptrend_analysis.json</p>
+        </div>
+    </div>
+</body>
+</html>
