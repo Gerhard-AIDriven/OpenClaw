@@ -1,72 +1,133 @@
-# AI Driven - Git Ignore File
-# Prevent large/generated files from being committed
+# ===========================================
+# OPENCLAW WORKSPACE - GITIGNORE
+# Prevents repository bloat from generated files
+# ===========================================
 
-# Database caches (>100MB)
+# --- Local Archive (NEVER TRACK) ---
+.git-ignored-archive/
+
+# --- Generated Reports (Archive Locally) ---
+automation/whatsapp-property-report/reports/*.html
+automation/whatsapp-property-report/reports/*.json
+automation/whatsapp-property-report/sample-report.html
+automation/whatsapp-property-report/sample-report.json
+due-diligence-mvp/reports/*.html
+due-diligence-mvp/reports/*.json
+due-diligence-mvp/reports/*.pdf
+due-diligence-mvp/sample-reports/*.html
+due-diligence-mvp/sample-reports/*.pdf
+due-diligence-mvp/*-report.html
+due-diligence-mvp/*_report.html
+due-diligence-mvp/report-*.html
+due-diligence-mvp/report-*.json
+aidriven-website/reports/*.html
+aidriven-website/reports/*.json
+reports/*.html
+reports/*.json
+reports/*.pdf
+
+# --- Cache Files ---
 *.db
-**/linz_titles_cache.db
-**/*.sqlite
-**/*.sqlite3
+*.sqlite
+*.sqlite3
+*_cache.*
+*.cache
+linz_titles_cache.db
+linz_capabilities.xml
+linz-wfs-capabilities.xml
+*-capabilities.xml
+*.xml.cache
 
-# Node modules
+# --- Temporary/Debug Files ---
+_tmp_*.js
+_tmp_*.py
+debug-*.js
+debug-*.py
+test-*.js
+test-*.py
+*_test.js
+*_test.py
+*.log
+*.tmp
+*.bak
+*~
+
+# --- Screenshots & Images (Generated) ---
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.webp
+!logo.png
+!*.logo.png
+
+# --- Data Exports ---
+*.csv.export
+*_export.json
+*-export.json
+*_data.json
+dump-*.json
+
+# --- Node Modules & Dependencies ---
 node_modules/
 package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
-# Python
+# --- Python Virtual Environments ---
+venv/
+env/
+.env.local
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
-env/
-venv/
-ENV/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
 
-# Generated reports (keep structure, ignore content)
-aidriven-website/reports/*
-!aidriven-website/reports/.gitkeep
-
-automation/whatsapp-property-report/reports/*
-!automation/whatsapp-property-report/reports/.gitkeep
-
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# OS files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# IDE
+# --- IDE & Editor ---
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+.DS_Store
+Thumbs.db
 
-# Environment
-.env
-.env.local
+# --- Build Outputs ---
+dist/
+build/
+out/
+.next/
+
+# --- Secrets & Credentials (Keep templates only) ---
+*.key
+*.pem
+token.json
+credentials.production.json
 .env.production
+.secrets/
 
-# Temporary files
-tmp/
-temp/
-*.tmp
-*.temp
+# --- Large Data Files ---
+*.gz
+*.zip
+*.tar
+*.rar
+>50MB
+
+# --- Session/Memory Archives ---
+memory/.dreams/
+memory/dreaming/
+session-corpus/
+
+# --- Old/Duplicate Directories ---
+due-diligence-mvp/due-diligence-mvp/
+due-diligence-mvp/report-generator/
+due-diligence-mvp/report-templates/
+
+# ===========================================
+# ARCHIVE PROCEDURE
+# Before each git push, run:
+#   1. Move reports to local archive folder
+#   2. Run: git clean -fdx reports/
+#   3. Then push normally
+# ===========================================
