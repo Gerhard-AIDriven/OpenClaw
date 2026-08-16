@@ -56,6 +56,7 @@ const CONFIG = {
  * @param {string} address - Full street address (e.g., "123 Station Street, Napier")
  * @param {Object} options - Optional parameters
  * @param {number} options.timeout - Request timeout in ms (default: 15000)
+ * @param {Object} options.coords - Pre-geocoded coordinates {lat, lon} to use instead of geocoding
  * @returns {Promise<Object|null>} LINZ property data or null on failure
  */
 async function fetchLinZData(address, options = {}) {
@@ -65,19 +66,26 @@ async function fetchLinZData(address, options = {}) {
   console.log(`  [LINZ WFS] Address: ${address}`);
   
   try {
-    // Step 1: Geocode address to get approximate coordinates
-    // (For now, we'll use a simple approach - in production, use a geocoding service)
-    const coords = await geocodeAddress(address);
-    
-    if (!coords) {
-      console.log('  [LINZ WFS] ⚠️ Could not geocode address - using Napier center');
-      coords = { lat: -39.4928, lon: 176.9120 }; // Napier center
+    // Step 1: Use provided coords or geocode address
+    let coords;
+    if (options.coords && options.coords.lat && options.coords.lon) {
+      coords = options.coords;
+      console.log(`  [LINZ WFS] ✓ Using provided coords: ${coords.lat}, ${coords.lon}`);
+    } else {
+      coords = await geocodeAddress(address);
+      
+      if (!coords) {
+        console.log('  [LINZ WFS] ⚠️ Could not geocode - using Napier center');
+        coords = { lat: -39.4928, lon: 176.9120 };
+      } else {
+        console.log(`  [LINZ WFS] ✓ Geocoded: ${coords.lat}, ${coords.lon}`);
+      }
     }
     
-    console.log(`  [LINZ WFS] Coords: ${coords.lat}, ${coords.lon}`);
-    
-    // Step 2: Create small bounding box around coordinates (~100m radius)
-    const bbox = createBoundingBox(coords.lon, coords.lat, 0.005); // ~500m box
+    // Step 2: Create tight bounding box around coordinates (~50m radius)
+    // Using EPSG:4326 suffix is REQUIRED for LINZ WFS
+    const bbox = createBoundingBox(coords.lon, coords.lat, 0.0005); // 0.0005 degrees ≈ 55m box
+    console.log(`  [LINZ WFS] BBOX: ${bbox}`);
     
     // Step 3: Fetch parcel data for this location
     console.log('  [LINZ WFS] Fetching parcel data...');
@@ -88,22 +96,36 @@ async function fetchLinZData(address, options = {}) {
       return generateFallbackData(address);
     }
     
-    // Step 4: Get the first/primary parcel (in production, filter by address match)
-    const primaryParcel = parcelData.features[0];
-    console.log(`  [LINZ WFS] ✓ Found parcel: ${primaryParcel.properties.appellation || 'N/A'}`);
+    // Step 4: Find the best matching parcel
+    // Strategy: 1) Check if pin is inside any parcel (point-in-polygon)
+    //           2) If not, use closest by centroid
+    console.log('  [LINZ WFS] Selecting best matching parcel...');
+    const primaryParcel = selectBestParcel(parcelData.features, coords);
+    
+    if (!primaryParcel) {
+      console.log('  [LINZ WFS] ⚠️ Could not identify relevant parcel');
+      return generateFallbackData(address);
+    }
+    
+    console.log(`  [LINZ WFS] ✓ Selected: ${primaryParcel.properties.appellation || 'N/A'}`);
     
     // Step 5: Extract title references from parcel
     const titleRefs = extractTitleReferences(primaryParcel);
     
-    // Step 6: Fetch title estate data if we have title references
+    // Step 6: Extract title number from parcel data
+    // Note: Title estate layer (52068) doesn't support bbox queries, so we use title from parcel
+    let titleNumber = 'N/A';
     let titleData = null;
+    
     if (titleRefs.length > 0) {
-      console.log(`  [LINZ WFS] Fetching title data for: ${titleRefs.join(', ')}`);
-      titleData = await fetchTitleEstateData(titleRefs, timeout);
+      titleNumber = titleRefs[0];
+      console.log(`  [LINZ WFS] ✓ Title number: ${titleNumber}`);
+    } else {
+      console.log('  [LINZ WFS] ℹ️ No title references on parcel');
     }
     
-    // Step 7: Compile final result
-    const result = compilePropertyData(primaryParcel, titleData, address);
+    // Step 7: Compile final result with title number
+    const result = compilePropertyData(primaryParcel, titleData, address, titleNumber);
     
     console.log(`  [LINZ WFS] ✅ Success: ${result.legalDescription || 'Parcel data retrieved'}`);
     return result;
@@ -116,35 +138,58 @@ async function fetchLinZData(address, options = {}) {
 }
 
 /**
- * Simple address geocoding (placeholder - replace with real geocoding service)
- * For now, returns Napier center or extracts rough coords from address
+ * Simple address geocoding using OpenStreetMap Nominatim API
+ * @param {string} address - Full address string (e.g., "123 Station Street, Napier")
+ * @returns {Promise<{lat: number, lon: number}|null>} Coordinates or null
  */
 async function geocodeAddress(address) {
-  // TODO: Implement proper geocoding with OpenStreetMap Nominatim or similar
-  // For now, return Napier center as default
-  
-  // Simple heuristic: if address contains "Napier", return Napier center
-  if (address.toLowerCase().includes('napier')) {
-    return { lat: -39.4928, lon: 176.9120 };
+  try {
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(address)}&limit=1`;
+    
+    console.log(`  [GEOCODE] Querying: ${address}`);
+    
+    const response = await axios.get(url, {
+      headers: { 
+        'User-Agent': 'AI-Driven-Property-Reports/1.0',
+        'Accept-Language': 'en'
+      },
+      timeout: 5000
+    });
+    
+    if (response.data && response.data.length > 0) {
+      const result = response.data[0];
+      console.log(`  [GEOCODE] ✓ Found: ${result.display_name.substring(0, 60)}...`);
+      console.log(`  [GEOCODE] Coords: ${result.lat}, ${result.lon}`);
+      
+      return {
+        lat: parseFloat(result.lat),
+        lon: parseFloat(result.lon)
+      };
+    }
+    
+    console.log('  [GEOCODE] ⚠️ No results found');
+    return null;
+    
+  } catch (error) {
+    console.log('  [GEOCODE] ❌ Error:', error.message);
+    return null;
   }
-  
-  // TODO: Add more cities/towns
-  return null;
 }
 
 /**
  * Create bounding box from center point
  * @param {number} lon - Center longitude
  * @param {number} lat - Center latitude
- * @param {number} delta - Degrees in each direction (~0.005 = ~500m)
- * @returns {string} BBOX string for WFS request
+ * @param {number} delta - Degrees in each direction (0.01 ≈ 1km)
+ * @returns {string} BBOX string for WFS request with EPSG:4326
  */
-function createBoundingBox(lon, lat, delta = 0.005) {
+function createBoundingBox(lon, lat, delta = 0.01) {
   const minLon = lon - delta;
   const minLat = lat - delta;
   const maxLon = lon + delta;
   const maxLat = lat + delta;
   
+  // IMPORTANT: Must include EPSG:4326 suffix for LINZ WFS
   return `${minLon},${minLat},${maxLon},${maxLat},EPSG:4326`;
 }
 
@@ -162,10 +207,10 @@ async function fetchParcelData(bbox, timeout = 15000) {
     typeName: CONFIG.linz.layers.parcels,
     outputFormat: CONFIG.linz.outputFormat,
     bbox: bbox,
-    count: '10' // Limit to 10 parcels
+    count: '100' // Get enough parcels to ensure we capture the target
   });
   
-  console.log(`  [LINZ WFS] Request: ${url.substring(0, 100)}...`);
+  console.log(`  [LINZ WFS] Request: ${url.substring(0, 120)}...`);
   
   const response = await axios.get(url, { timeout });
   
@@ -189,10 +234,18 @@ function extractTitleReferences(parcel) {
     const titlesStr = parcel.properties.titles;
     
     // Parse comma-separated title numbers
-    if (typeof titlesStr === 'string') {
-      const matches = titlesStr.match(/[A-Z]{1,3}\d{2,}\/\d+/gi);
+    // Format examples: "HBC3/166", "NA123/45", "HB2/765"
+    if (typeof titlesStr === 'string' && titlesStr.trim()) {
+      // Match LINZ title format: 2-3 letters + numbers + slash + numbers
+      const matches = titlesStr.match(/[A-Z]{2,3}\d{1,}\/\d+/gi);
       if (matches) {
         titles.push(...matches.map(t => t.toUpperCase()));
+      } else {
+        // Try simpler pattern if first doesn't match
+        const simpleMatch = titlesStr.match(/[A-Z0-9\/]+/i);
+        if (simpleMatch) {
+          titles.push(simpleMatch[0].toUpperCase());
+        }
       }
     }
   }
@@ -202,20 +255,14 @@ function extractTitleReferences(parcel) {
 }
 
 /**
- * Fetch title estate data for specific titles
- * @param {Array<string>} titleNumbers - Array of title numbers
+ * Fetch title estate data for specific titles using bbox spatial query
+ * @param {Array<string>} titleNumbers - Array of title numbers (not used for spatial query)
  * @param {number} timeout - Request timeout
  * @returns {Promise<Object|null>} Title data or null
  */
 async function fetchTitleEstateData(titleNumbers, timeout = 15000) {
-  if (titleNumbers.length === 0) {
-    return null;
-  }
-  
-  // Build CQL filter for title numbers
-  // Example: title_number IN ('NA123/45', 'NA678/90')
-  const titleList = titleNumbers.map(t => `'${t}'`).join(',');
-  const cqlFilter = `ttl_title_no IN (${titleList})`;
+  // Note: We're using bbox query instead of CQL filter as LINZ WFS doesn't support CQL
+  // This returns all titles in the area, caller should match by title number if needed
   
   const url = `${CONFIG.linz.baseUrl}?` + new URLSearchParams({
     service: 'WFS',
@@ -223,7 +270,8 @@ async function fetchTitleEstateData(titleNumbers, timeout = 15000) {
     request: 'GetFeature',
     typeName: CONFIG.linz.layers.titleEstate,
     outputFormat: CONFIG.linz.outputFormat,
-    CQL_FILTER: cqlFilter
+    bbox: '176.85,-39.55,177.00,-39.40,EPSG:4326', // Napier area bbox
+    count: '20'
   });
   
   try {
@@ -241,13 +289,125 @@ async function fetchTitleEstateData(titleNumbers, timeout = 15000) {
 }
 
 /**
+ * Select the best matching parcel from a list
+ * Strategy: 1) Find parcel containing the point (point-in-polygon)
+ *           2) If none, use closest by centroid
+ * @param {Array} parcels - Array of parcel features
+ * @param {Object} coords - Target coordinates {lat, lon}
+ * @returns {Object|null} Best matching parcel or null
+ */
+function selectBestParcel(parcels, coords) {
+  if (!parcels || parcels.length === 0) return null;
+  
+  // Helper: Check if point is inside polygon
+  function isPointInPolygon(point, polygon) {
+    const [lat, lon] = point;
+    let inside = false;
+    
+    for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
+      const [lati, loni] = polygon[i];
+      const [latj, lonj] = polygon[j];
+      
+      const intersect = ((loni > lon) !== (lonj > lon)) &&
+          (lat < (latj - lati) * (lon - loni) / (lonj - loni) + lati);
+      
+      if (intersect) inside = !inside;
+    }
+    
+    return inside;
+  }
+  
+  // Helper: Get centroid of polygon
+  function getCentroid(exteriorRing) {
+    let sumLat = 0, sumLon = 0, count = 0;
+    exteriorRing.forEach(coord => {
+      if (coord.length >= 2) {
+        sumLat += coord[1];
+        sumLon += coord[0];
+        count++;
+      }
+    });
+    return count > 0 ? [sumLat / count, sumLon / count] : null;
+  }
+  
+  // Helper: Calculate distance in meters
+  function calcDistance(lat1, lon1, lat2, lon2) {
+    const dLat = (lat2 - lat1) * 111000;
+    const dLon = (lon2 - lon1) * 111000 * Math.cos(lat1 * Math.PI / 180);
+    return Math.sqrt(dLat * dLat + dLon * dLon);
+  }
+  
+  const targetPoint = [coords.lat, coords.lon];
+  let containingParcel = null;
+  let closestParcel = null;
+  let minDistance = Infinity;
+  
+  console.log(`  [LINZ WFS] Checking ${parcels.length} parcels for point-in-polygon...`);
+  
+  parcels.forEach((parcel, idx) => {
+    if (!parcel.geometry) {
+      return;
+    }
+    if (!parcel.geometry.coordinates) {
+      return;
+    }
+    
+    // Get exterior ring
+    let exteriorRing;
+    if (parcel.geometry.type === 'MultiPolygon') {
+      exteriorRing = parcel.geometry.coordinates[0][0];
+    } else if (parcel.geometry.type === 'Polygon') {
+      exteriorRing = parcel.geometry.coordinates[0];
+    } else {
+      return;
+    }
+    
+    const appName = parcel.properties.appellation || 'N/A';
+    
+    // Convert to [lat, lon] format
+    const polygon = exteriorRing.map(coord => [coord[1], coord[0]]);
+    
+    // Check if point is inside
+    if (isPointInPolygon(targetPoint, polygon)) {
+      console.log(`  [LINZ WFS] ✓ Pin is INSIDE ${appName}`);
+      containingParcel = parcel;
+    }
+    
+    // Calculate distance to centroid
+    const centroid = getCentroid(exteriorRing);
+    if (centroid) {
+      const dist = calcDistance(coords.lat, coords.lon, centroid[0], centroid[1]);
+      if (dist < minDistance) {
+        minDistance = dist;
+        closestParcel = parcel;
+      }
+    }
+  });
+  
+  // Return containing parcel if found, otherwise closest
+  if (containingParcel) {
+    console.log(`  [LINZ WFS] ✓ Pin is INSIDE ${containingParcel.properties.appellation || 'parcel'}`);
+    return containingParcel;
+  }
+  
+  if (closestParcel) {
+    console.log(`  [LINZ WFS] → Using closest parcel (${minDistance.toFixed(0)}m away)`);
+    return closestParcel;
+  }
+  
+  // Fallback to first parcel with geometry
+  return parcels.find(p => p.geometry) || parcels[0];
+}
+
+/**
  * Compile parcel and title data into unified property report
  * @param {Object} parcel - Primary parcel feature
  * @param {Object|null} titleData - Title estate data
  * @param {string} address - Original address
+ * @param {string} titleNumber - Extracted title number
  * @returns {Object} Compiled property data
  */
-function compilePropertyData(parcel, titleData, address) {
+function compilePropertyData(parcel, titleData, address, titleNumber = 'N/A') {
   const props = parcel.properties || {};
   
   // Extract ownership info from title data
@@ -285,7 +445,7 @@ function compilePropertyData(parcel, titleData, address) {
     tenureType: tenureType,
     
     // Title information
-    titleNumber: extractTitleReferences(parcel)[0] || 'N/A',
+    titleNumber: titleNumber,
     
     // Additional parcel info
     landDistrict: props.land_district || 'Hawkes Bay',

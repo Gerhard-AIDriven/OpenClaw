@@ -1,0 +1,140 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Due Diligence Report - 123 Station Street, Napier</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a1a; color: #e0e0e0; padding: 40px; }
+    .container { max-width: 900px; margin: 0 auto; background: #2a2a2a; padding: 40px; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+    h1 { color: #FFB81C; font-size: 2rem; margin-bottom: 10px; }
+    h2 { color: #F7931E; font-size: 1.5rem; margin-top: 30px; border-bottom: 2px solid #F7931E; padding-bottom: 10px; }
+    h3 { color: #FFB81C; font-size: 1.2rem; margin-top: 25px; }
+    .meta { color: #a0a0a0; font-size: 0.9rem; margin-bottom: 30px; }
+    .section { margin: 30px 0; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 8px; }
+    .data-point { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #333; }
+    .data-label { color: #b0b0b0; }
+    .data-value { color: #f0f0f0; font-weight: 600; }
+    .success { color: #4CAF50; }
+    .warning { color: #FFC107; }
+    .error { color: #F44336; }
+    table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+    th { text-align: left; padding: 12px; background: rgba(247,147,30,0.1); color: #F7931E; border-bottom: 2px solid #F7931E; }
+    td { padding: 12px; border-bottom: 1px solid #333; }
+    tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+    .link-box { background: rgba(255,184,28,0.1); border: 1px solid #FFB81C; padding: 20px; border-radius: 8px; margin: 20px 0; }
+    .link-box a { color: #FFB81C; text-decoration: none; display: block; padding: 8px 0; }
+    .link-box a:hover { text-decoration: underline; }
+    .footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #333; color: #808080; font-size: 0.85rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🏠 Property Due Diligence Report</h1>
+    <p class="meta">
+      <strong>Report ID:</strong> RPT-1786881695368<br>
+      <strong>Generated:</strong> 2026-08-16T12:01:35.368Z<br>
+      <strong>Tier:</strong> STANDARD (NZD $149)<br>
+      <strong>Address:</strong> 123 Station Street, Napier
+    </p>
+    
+    <!-- PARCEL DATA -->
+    <div class="section">
+      <h2>📋 Parcel & Title Information</h2>
+      
+        <table>
+          <tr><th>Field</th><th>Value</th></tr>
+          <tr><td colspan="2">No parcel data available</td></tr>
+        </table>
+      
+      <p class="meta">Source: LINZ Data Service</p>
+    </div>
+    
+    <!-- HAZARD ASSESSMENT -->
+    <div class="section">
+      <h2>⚠️ Natural Hazard Assessment</h2>
+      
+        <div style="padding: 15px; background: rgba(244,67,54,0.1); border-left: 4px solid #F44336; margin: 20px 0;">
+          <strong style="color: #F44336; font-size: 1.2rem;">
+            Risk Rating: High
+          </strong>
+          <p style="margin: 10px 0 0 0; color: #e0e0e0;">Risk: High. Cyclone Gabrielle affected.</p>
+        </div>
+        
+        <h3>Cyclone Gabrielle Impact</h3>
+        <div class="data-point">
+          <span class="data-label">Affected:</span>
+          <span class="data-value error">
+            YES - Property in flood extent area
+          </span>
+        </div>
+        
+        <div class="data-point">
+          <span class="data-label">Flood Polygons Nearby:</span>
+          <span class="data-value">1</span>
+        </div>
+        
+      
+    </div>
+    
+    <!-- RATES DATA -->
+    <div class="section">
+      <h2>💰 Council Rates Information</h2>
+      <p class="warning">Rates data unavailable - RID not provided or extraction failed</p>
+    </div>
+    
+    <!-- HBRC MANUAL VERIFICATION -->
+    <div class="section">
+      <h2>🗺️ HBRC Hazard Verification (Manual)</h2>
+      <div class="link-box">
+        <p style="margin-top: 0; color: #FFB81C; font-weight: 600;">⚠️ HBRC API Access Pending Approval</p>
+        <p style="margin-bottom: 20px;">Click the links below to manually verify hazards on the HBRC Hazards Map:</p>
+        <a href="https://hbmaps.hbrc.govt.nz/?lat=-39.4933895&lon=176.9135659" target="_blank">🗺️ Open HBRC Hazards Map (All Layers)</a>
+        <a href="https://hbmaps.hbrc.govt.nz/?layer=Earthquake_Liquefaction&lat=-39.4933895&lon=176.9135659" target="_blank">🌍 Liquefaction Hazard Map</a>
+        <a href="https://hbmaps.hbrc.govt.nz/?layer=Flooding&lat=-39.4933895&lon=176.9135659" target="_blank">💧 Flood Risk Map</a>
+        <a href="https://hbmaps.hbrc.govt.nz/?layer=Coastal_Inundation&lat=-39.4933895&lon=176.9135659" target="_blank">🌊 Coastal Inundation Map</a>
+        <a href="https://hbmaps.hbrc.govt.nz/?layer=Tsunami&lat=-39.4933895&lon=176.9135659" target="_blank">🌊 Tsunami Evacuation Zone</a>
+      </div>
+      <p class="meta">Instructions: Click any link → Map centers on your property → Toggle layers to check hazards → Screenshot findings</p>
+    </div>
+    
+    <!-- DATA SOURCES -->
+    <div class="section">
+      <h2>📊 Data Sources</h2>
+      <table>
+        <tr><th>Source</th><th>Status</th><th>Details</th></tr>
+        <tr>
+          <td>LINZ Data Service</td>
+          <td class="success">Success</td>
+          <td>Parcels, Title Estate, Title-Parcel Association</td>
+        </tr>
+        <tr>
+          <td>LINZ Cyclone Gabrielle</td>
+          <td class="success">Success</td>
+          <td>Layer 112668 - Satellite radar flood extent</td>
+        </tr>
+        <tr>
+          <td>Napier City Council</td>
+          <td class="warning">Skipped</td>
+          <td>No RID</td>
+        </tr>
+        <tr>
+          <td>HBRC Hazards</td>
+          <td class="warning">Manual Verification</td>
+          <td>API access pending - use verification links above</td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class="footer">
+      <p><strong>AI Driven</strong> | Practical AI for Real Businesses</p>
+      <p>Report generated: 2026-08-16T12:01:35.368Z | RPT-1786881695368</p>
+      <p style="font-size: 0.75rem; color: #606060;">
+        Disclaimer: This report is for informational purposes only. Verify all information with official sources before making property decisions.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
+  

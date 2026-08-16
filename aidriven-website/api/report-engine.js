@@ -18,9 +18,9 @@ const { execSync } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-// Import fetchers
-const { fetchHazardData } = require('./hazard-fetcher');
-const { fetchLinZData } = require('./linz-fetcher');
+// Import fetchers from lib folder
+const { fetchHazardData } = require('../lib/hazard-fetcher');
+const { fetchLinZData } = require('../lib/linz-fetcher');
 
 /**
  * Generate Standard Tier Property Report
@@ -56,7 +56,10 @@ async function generateStandardReport(input) {
   // === 1. LINZ PARCEL & TITLE DATA ===
   console.log('\n[1/4] Fetching LINZ parcel data...');
   try {
-    const linzData = await fetchLinZData(input.address);
+    const linzData = await fetchLinZData(input.address, { 
+      coords: input.coords,
+      timeout: 20000 
+    });
     report.sections.parcel = linzData;
     report.dataSources.linz = {
       status: 'Success',
@@ -207,23 +210,68 @@ function generateReportHTML(report) {
       ${sections.parcel?.error ? `<p class="error">Error: ${sections.parcel.error}</p>` : `
         <table>
           <tr><th>Field</th><th>Value</th></tr>
-          ${sections.parcel?.parcels?.length ? sections.parcel.parcels.map(p => `
-            <tr>
-              <td>Parcel ID</td>
-              <td class="data-value">${p.parcelId || 'N/A'}</td>
-            </tr>
-            <tr>
-              <td>Legal Description</td>
-              <td class="data-value">${p.legalDescription || 'N/A'}</td>
-            </tr>
-            <tr>
-              <td>Area</td>
-              <td class="data-value">${p.area ? `${p.area} m²` : 'N/A'}</td>
-            </tr>
-          `).join('') : '<tr><td colspan="2">No parcel data available</td></tr>'}
+          <tr>
+            <td>Legal Description</td>
+            <td class="data-value">${sections.parcel?.legalDescription || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td>Land Area</td>
+            <td class="data-value">${sections.parcel?.landArea || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td>Ownership</td>
+            <td class="data-value">${sections.parcel?.owners || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td>Tenure Type</td>
+            <td class="data-value">${sections.parcel?.tenureType || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td>Title Number</td>
+            <td class="data-value">${sections.parcel?.titleNumber || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td>Land District</td>
+            <td class="data-value">${sections.parcel?.landDistrict || 'N/A'}</td>
+          </tr>
+          <tr>
+            <td>Status</td>
+            <td class="data-value">${sections.parcel?.status || 'N/A'}</td>
+          </tr>
         </table>
       `}
-      <p class="meta">Source: LINZ Data Service</p>
+      <p class="meta">Source: LINZ Data Service | Fetched: ${sections.parcel?.fetchedAt || 'N/A'}</p>
+    </div>
+    
+    <!-- PROPERTY LOCATION MAP -->
+    <div class="section">
+      <h2>📍 Property Location</h2>
+      ${property.coordinates ? `
+        <div style="text-align: center; margin: 20px 0;">
+          <iframe 
+            width="100%" 
+            height="450" 
+            frameborder="0" 
+            scrolling="no" 
+            marginheight="0" 
+            marginwidth="0"
+            style="border-radius: 8px; border: 2px solid #FFB81C;"
+            src="https://maps.google.com/maps?q=${property.coordinates.lat},${property.coordinates.lon}&hl=en&z=17&output=embed">
+          </iframe>
+          <p style="margin-top: 15px; color: #a0a0a0; font-size: 0.9rem;">
+            📍 ${property.address}<br/>
+            Coordinates: ${property.coordinates.lat.toFixed(6)}, ${property.coordinates.lon.toFixed(6)}
+          </p>
+          <div style="margin-top: 15px;">
+            <a href="https://www.google.com/maps?q=${property.coordinates.lat},${property.coordinates.lon}" target="_blank" style="color: #FFB81C; text-decoration: none; margin-right: 20px;">
+              🗺️ Open in Google Maps
+            </a>
+            <a href="https://www.google.com/maps/search/property+boundaries/@${property.coordinates.lat},${property.coordinates.lon},17z" target="_blank" style="color: #FFB81C; text-decoration: none;">
+              📐 View Property Boundaries
+            </a>
+          </div>
+        </div>
+      ` : '<p class="warning">Location coordinates unavailable</p>'}
     </div>
     
     <!-- HAZARD ASSESSMENT -->
