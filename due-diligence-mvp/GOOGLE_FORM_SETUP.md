@@ -151,6 +151,12 @@ Click **Add section** → Title: "Choose Your Package"
   Rush delivery (15 minutes) - +$25
   Additional property comparison - +$50/property
   Body corporate record review - +$75
+  Rates Information - Requires manual processing (adds 24-48 hours)
+  Council Fees & Permits - Requires manual processing (adds 24-48 hours)
+  
+  ⚠️ NOTE: Selecting Rates or Council Fees requires manual intervention 
+  and will delay report delivery by 24-48 hours. You'll receive a 
+  confirmation email once your report is ready.
   ```
 
 ---

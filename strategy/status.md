@@ -1,318 +1,212 @@
 # AI Driven - Project Status
 
-**Last Updated:** 2026-08-16 16:24 (LINZ Integration Complete - Perfect Match Achieved)
+**Last Updated:** 2026-08-16 18:10 (LINZ Integration Complete - Ready for Monday Launch)
 
 ---
 
-## 🎯 Current Focus: Property Due Diligence Reports - LINZ INTEGRATION COMPLETE
+## 🎯 Current Status: PRODUCTION READY WITH MINOR ERROR HANDLING FIX NEEDED
 
-### ✅ COMPLETED - LINZ WFS INTEGRATION BREAKTHROUGH
+### ✅ COMPLETED TODAY (2026-08-16)
 
-#### Critical Fixes Implemented (2026-08-16)
+#### LINZ WFS Integration Breakthrough
 - [x] **Point-in-Polygon Parcel Selection** ✅
-  - Implemented geometry-based parcel matching
-  - Pin must be INSIDE parcel polygon, not just nearby
-  - Uses ray casting algorithm for accurate containment testing
-  - Falls back to closest-by-centroid if no containment found
+  - Geometry-based matching (pin must be INSIDE parcel)
+  - Ray casting algorithm for accurate containment
+  - Fallback to closest-by-centroid if no match
+  
+- [x] **Optimized Bounding Box** ✅
+  - Changed from 1km → **55m bbox (0.0005°)**
+  - Ensures target parcel always included in results
+  - Eliminates false positives from distant parcels
 
-- [x] **Optimized Bounding Box Size** ✅
-  - Changed from 1km bbox (0.01°) to **55m bbox (0.0005°)**
-  - Prevents LINZ from returning irrelevant distant parcels
-  - Ensures target parcel is always included in results
-  - Dramatically improves accuracy and reduces false positives
-
-- [x] **Coordinate Passthrough Support** ✅
-  - `linz-fetcher.js` now accepts pre-geocoded coordinates
-  - Bypasses geocoding when exact coords provided (from map click)
-  - Eliminates geocoding errors for address matching
+- [x] **Coordinate Passthrough** ✅
+  - Accept pre-geocoded coords from map clicks
+  - Bypasses geocoding errors
   - Critical for production accuracy
 
-- [x] **Geometry-Aware Parcel Selection** ✅
-  - Parses GeoJSON MultiPolygon/Polygon geometries from LINZ
-  - Converts coordinates from [lon,lat] to [lat,lon] format
-  - Calculates centroids for distance-based fallback
-  - Selects BEST matching parcel, not first in array
+- [x] **Perfect Test Match Validated** ✅
+  - Address: 31 Douglas McLean Avenue, Napier
+  - Coords: -39.50068107, 176.9039117
+  - Result: **Lot 88 DP 8162 / HBE2/765 / 803 m²** ✅
+  - Source: LINZ Data Service WFS (real data)
 
-#### Test Results - PERFECT MATCH
-```
-Test Address: 31 Douglas McLean Avenue, Napier
-Coordinates: -39.50068107, 176.9039117 (from LINZ Maps screenshot)
-
-Expected Result:
-  Legal: Lot 88 DP 8162
-  Title: HBE2/765
-  Area: 803 m²
-
-Actual Result: ✅ PERFECT MATCH
-  Legal: Lot 88 DP 8162
-  Title: HBE2/765
-  Area: 803 m²
-  Source: LINZ Data Service WFS
-```
-
-#### Files Modified
-- `lib/linz-fetcher.js`
-  - Added `selectBestParcel()` function with point-in-polygon logic
-  - Updated bbox size from 0.01 to 0.0005 degrees
-  - Added coordinate override support via options
-  - Enhanced geometry parsing and validation
-
-- `api/report-engine.js`
-  - Updated to pass coordinates to `fetchLinZData()`
-  - Ensures consistent coord usage throughout pipeline
-
-- `api/generate-report.js`
-  - Supports coordinate passthrough from web form
-
-#### Report Features Now Working
-- ✅ Interactive Google Maps iframe (zoomable, draggable, street view)
-- ✅ Real LINZ parcel data (legal description, title number, area)
-- ✅ Accurate property location matching
-- ✅ Cyclone Gabrielle flood assessment
-- ✅ Professional HTML formatting with brand colors
-- ✅ Direct links to Google Maps and LINZ Maps
+#### System Validation
+- [x] Test server restarted and stable after reboot
+- [x] Regenerated test report: RPT-1786896605283 ✅
+- [x] Perfect match confirmed post-reboot
+- [x] Interactive maps working correctly
+- [x] Cyclone Gabrielle assessment functional
 
 ---
 
-## 📊 CURRENT SYSTEM CAPABILITIES
+## 🚨 CRITICAL FIX NEEDED BEFORE LAUNCH
 
-### What the System Does Automatically
-1. **Accepts Input:**
-   - Address + coordinates from web form
-   - WhatsApp message with address
-   - Map click coordinates (future enhancement)
+### Issue: No Error Handling for Missing Properties
+**Problem:** When LINZ returns no parcels (property not found / geocoding failure), system generates blank/placeholder report instead of notifying user.
 
-2. **Geocoding:**
-   - OpenStreetMap Nominatim (free, no API key)
-   - Accuracy: ~10-50m for NZ addresses
-   - Fallback to Napier center if geocoding fails
+**Test Case:** 10 Russel Road, Napier (WhatsApp Standard request)
+- Result: Placeholder report sent (Legal: "Lot 1 DP XXXXX", Title: "N/A")
+- Expected: Clear error message + offer to retry with map coordinates
 
-3. **LINZ Data Retrieval:**
-   - WFS API query with tight bbox (55m radius)
-   - Point-in-polygon test for exact parcel match
-   - Extracts: legal description, title number, land area, tenure type
-   - Handles MultiPolygon geometries correctly
+**Impact:** Customer receives useless report, loses confidence in service.
 
-4. **Hazard Assessment:**
-   - Cyclone Gabrielle flood extent (LINZ Layer 112668)
-   - Liquefaction risk (HBRC - currently timing out)
-   - Coastal inundation zones (HBRC - currently timing out)
-   - Overall risk rating (Low/Medium/High)
+**Fix Required:**
+1. Detect when LINZ returns no parcels or only fallback data
+2. Return error response instead of generating report
+3. Send conversational message via WhatsApp: 
+   - "Couldn't find property at [address]"
+   - "This can happen with new subdivisions or rural properties"
+   - "Would you like to try again with exact coordinates from LINZ Maps?"
+   - Offer manual assistance option
 
-5. **Report Generation:**
-   - Professional HTML with dark theme branding
-   - Interactive map showing exact location
-   - Parcel data table with LINZ-sourced information
-   - Hazard assessment summary
-   - HBRC verification links (for manual follow-up)
+**Priority:** 🔴 **BLOCKER** - Must fix before Monday launch
 
-6. **Delivery:**
-   - WhatsApp: Link sent via Business API
-   - Web: Direct download/view URL
-   - GitHub auto-commit for permanent hosting
-   - Cloudflare Pages deployment (~30-60 seconds)
+**Estimated Fix Time:** 30-45 minutes
 
 ---
 
-## 🚧 REMAINING ISSUES
+## 📊 CURRENT CAPABILITIES
 
-### High Priority (Before Launch)
-- [ ] **HBRC Maps Still Down** ⚠️
-  - `hbmaps.hbrc.govt.nz` returning Error 523 (Origin Unreachable)
-  - Cannot verify liquefaction/coastal hazard data automatically
-  - **Workaround:** Include manual HBRC links in reports for customer verification
-  - **Impact:** Can launch with Gabrielle data only, transparent about limitation
+### What Works Perfectly
+✅ LINZ parcel/title lookup (when coordinates accurate)  
+✅ Point-in-polygon matching (55m bbox)  
+✅ Interactive Google Maps in reports  
+✅ Cyclone Gabrielle flood assessment  
+✅ Professional HTML report generation  
+✅ WhatsApp delivery via Cloudflare  
+✅ GitHub auto-deployment  
 
-- [ ] **Address-to-Parcel Matching Edge Cases** ⚠️
-  - Geocoding may be slightly off from actual property boundaries
-  - Some addresses geocode to street center, not parcel centroid
-  - **Solution:** Let users click map to select exact coordinates (recommended)
-  - **Alternative:** Use tighter bbox + point-in-polygon (already implemented)
+### What Needs Work
+🔴 Error handling for missing properties  
+🟡 HBRC maps still down (Error 523)  
+🟡 Geocoding edge cases (street center vs parcel)  
 
-### Medium Priority (Post-Launch Enhancement)
-- [ ] **Title Estate Layer Query** 
-  - Currently extracting titles from parcel data only
-  - Could query Title Estate layer for additional ownership details
-  - Not critical for MVP (parcel titles field usually sufficient)
-
-- [ ] **Multiple Parcel Handling**
-  - Some properties span multiple parcels (e.g., unit titles, cross-leases)
-  - Current system uses first/primary parcel
-  - Future: Show all parcels and let user select
-
-- [ ] **Map-Based Property Selection**
-  - Build interactive map interface for users to click exact location
-  - Eliminates geocoding uncertainty
-  - Provides better UX for property investors
+### Known Limitations (Acceptable for Launch)
+- HBRC liquefaction/coastal data unavailable (transparent messaging in reports)
+- Geocoding ~80-90% accurate (solution: map-click coordinates)
+- Some LINZ layers timeout occasionally (fallback to partial data)
 
 ---
 
-## 📋 PHONE NUMBER ARCHITECTURE
+## 📋 LAUNCH READINESS CHECKLIST
 
-| Number | Purpose | App? | Use Case |
-|--------|---------|------|----------|
-| +27 82 444 5825 | Personal/Testing | ✅ Yes | Test messages only |
-| +27 71 461 0886 | Business General | ✅ Yes | Customer inquiries, manual responses, support |
-| +27 79 944 8564 | API Automation | ❌ No | Due diligence/LIM requests only |
+### 🔴 BLOCKERS (Must Complete Before Monday 9am)
+- [ ] **Add error trapping for property-not-found cases**
+- [ ] **Test with 3-5 addresses that should fail gracefully**
+- [ ] **Deploy fix to Cloudflare Pages**
 
-**Workflow Pattern:** Pattern C (Escalation)
-- General inquiries → Business number → Manual response
-- LIM requests → Direct to API number (+27 79 944 8564)
-- If LIM requested on Business number → Refer customer to API number
-- **Support/questions in report messages → Business number (+27 71 461 0886)** ✅
+### 🟡 HIGH PRIORITY (Should Complete Before Launch)
+- [ ] Update website pricing page (Basic $89, Standard $149)
+- [ ] Prepare customer FAQ document
+- [ ] Draft social media launch posts
+- [ ] Test end-to-end with 5 real properties across Napier
 
----
-
-## 🛠️ TECHNICAL STACK
-
-### Core Services
-- **LINZ Data Service:** WFS API for parcels/titles (FREE)
-- **OpenStreetMap Nominatim:** Geocoding (FREE)
-- **Cloudflare Workers:** WhatsApp webhook handler
-- **Cloudflare Pages:** Static site + report hosting
-- **Cloudflare KV:** Session state + request queue
-- **Meta WhatsApp API:** Business messaging
-- **GitHub:** Version control + auto-deployment trigger
-
-### Key Libraries
-- `axios:` HTTP requests to LINZ/APIs
-- `xml2js:` XML parsing (if needed for legacy APIs)
-- `express:` Local test server
-- `fs/path:` File system operations
-
-### Infrastructure Costs
-| Service | Plan | Monthly Cost | Usage |
-|---------|------|--------------|-------|
-| Cloudflare Workers | Free | $0 | <1% of 100k requests |
-| Cloudflare Pages | Free | $0 | 1 site, unlimited deploys |
-| Cloudflare KV | Free | $0 | Minimal usage |
-| LINZ WFS API | Free | $0 | Unlimited queries |
-| OSM Nominatim | Free | $0 | Rate-limited but sufficient |
-| Meta WhatsApp | Free tier | $0 | <1k conversations/month |
-| GitHub | Free | $0 | Public repo |
-| **TOTAL** | | **$0/month** | |
+### 🟢 NICE TO HAVE (Post-Launch Week 1)
+- [ ] Map-based property selection UI
+- [ ] Payment automation (Stripe/PayPal)
+- [ ] HBRC integration once maps restored
+- [ ] Analytics/tracking for report views
 
 ---
 
-## 📊 REPORT PACKAGES (Updated with LINZ Data)
+## 🛠️ TECHNICAL DETAILS
 
-| Package | Price | Description | Data Sources | Status |
-|---------|-------|-------------|--------------|--------|
-| **Express** | $39 | Professional formatting + WhatsApp delivery | None (manual input) | ✅ Ready |
-| **Basic** | $89 | Express + LINZ title lookup | LINZ parcels/titles | ✅ **READY TO LAUNCH** |
-| **Standard** | $149 | Basic + hazards + rates | LINZ + Gabrielle + Council GIS | ✅ **READY TO LAUNCH** |
-| **Premium** | $199 | Standard + full analysis | All sources + manual verification | ⏳ Needs HBRC restoration |
+### Files Modified Today
+- `lib/linz-fetcher.js` - Point-in-polygon, tight bbox, coord passthrough
+- `api/report-engine.js` - Pass coordinates to LINZ fetcher
+- `Strategy/status.md` - This document
 
-**Launch Recommendation:** 
-- **Launch Basic ($89) and Standard ($149) immediately**
-- Both tiers now include real LINZ data
-- Standard tier adds value with Gabrielle flood assessment
-- Transparent messaging about HBRC maps being temporarily unavailable
+### Files Needing Modification
+- `lib/linz-fetcher.js` - Add validation for empty/bad results
+- `api/report-engine.js` - Throw error when no valid parcel found
+- `api/whatsapp-webhook.js` or poll script - Handle error responses conversationally
 
----
-
-## 🎯 SUCCESS METRICS
-
-### Technical Performance
-- **Parcel Matching Accuracy:** 100% (when coordinates provided)
-- **Geocoding Accuracy:** ~80-90% (address-only input)
-- **Report Generation Time:** 2-3 minutes
-- **LINZ API Success Rate:** 95%+ (some timeouts on hazard layers)
-- **Point-in-Polygon Accuracy:** Perfect (validated against LINZ Maps)
-
-### Business Metrics (To Track)
-- Requests per day: Target 5-10 in first week
-- Conversion rate: WhatsApp inquiry → paid report
-- Average order value: Target $110 (mix of Basic + Standard)
-- Customer satisfaction: Report accuracy, delivery speed
+### Test Results Summary
+| Test Case | Expected | Actual | Status |
+|-----------|----------|--------|--------|
+| 31 Douglas McLean Ave (exact coords) | Lot 88 DP 8162 / HBE2/765 | ✅ Match | PASS |
+| 31 Douglas McLean Ave (geocoded) | Close parcel | ✅ Good | PASS |
+| 10 Russel Road, Napier | Error message | ❌ Placeholder report | FAIL |
 
 ---
 
-## 🚀 DEPLOYMENT CHECKLIST
+## 💰 PRICING TIERS (Ready to Launch)
 
-### Pre-Launch (Complete Before Monday AM)
-- [x] LINZ integration tested and working ✅
-- [x] Point-in-polygon selection implemented ✅
-- [x] Coordinate passthrough working ✅
-- [x] Interactive maps in reports ✅
-- [ ] Update website pricing page with new tiers
-- [ ] Prepare launch announcement for social media
-- [ ] Test end-to-end with 3-5 real properties
-- [ ] Draft customer FAQ (what's included, limitations)
+| Package | Price | Includes | Status |
+|---------|-------|----------|--------|
+| **Express** | $39 | WhatsApp delivery, professional formatting | ✅ Ready |
+| **Basic** | $89 | Express + LINZ title/ownership/area | ✅ Ready (pending error fix) |
+| **Standard** | $149 | Basic + Gabrielle flood + hazards | ✅ Ready (pending error fix) |
+| **Premium** | $199 | Standard + full analysis + manual verification | ⏳ Needs HBRC |
 
-### Launch Day (Monday Morning)
-- [ ] Deploy final code to Cloudflare Pages
-- [ ] Update WhatsApp Worker with live pricing
-- [ ] Post launch announcement on LinkedIn/Facebook
-- [ ] Monitor first few orders closely
-- [ ] Be ready to manually assist if issues arise
-
-### Post-Launch (Week 1)
-- [ ] Collect customer feedback on report quality
-- [ ] Track which package tier sells better
-- [ ] Monitor LINZ API performance and error rates
-- [ ] Document edge cases and improve error handling
-- [ ] Plan next feature (map-based selection, payment automation)
+**Launch Strategy:** Basic + Standard tiers only (80% of use cases)
 
 ---
 
-## 💡 LESSONS LEARNED - LINZ INTEGRATION
+## 📝 LESSONS LEARNED
 
-### The Bounding Box Problem
-**Issue:** Large bboxes (1km) returned too many parcels, and LINZ's ordering meant the target parcel wasn't always included.
+### Today's Breakthroughs
+1. **Tighter bbox = better accuracy** - 55m vs 1km makes all the difference
+2. **Point-in-polygon is essential** - Can't rely on "first parcel" or "closest centroid"
+3. **Geometry parsing matters** - LINZ returns [lon,lat], code needs [lat,lon]
+4. **Test with exact production params** - Standalone tests can lie if bbox/count differs
 
-**Solution:** Tight bbox (55m) ensures only relevant parcels returned, and target is always present.
-
-### First vs. Best Parcel
-**Issue:** Taking `features[0]` gave wrong parcel (first in array, not necessarily closest or containing the pin).
-
-**Solution:** Point-in-polygon test finds the ACTUAL parcel under the coordinates. Fallback to closest-by-centroid.
-
-### Geometry Format Confusion
-**Issue:** LINZ returns GeoJSON with [lon,lat] coordinates, but our code expected [lat,lon].
-
-**Solution:** Explicit conversion in `selectBestParcel()`: `polygon.map(coord => [coord[1], coord[0]])`
-
-### Coordinate Precision Matters
-**Issue:** Slight coordinate differences (even 10-20m) could put the pin in the wrong parcel or between parcels.
-
-**Solution:** Accept user-provided coordinates from map clicks rather than relying solely on geocoding.
-
-### Testing Reveals Edge Cases
-**Issue:** Standalone tests worked, but production code failed because it used different bbox sizes or parcel ordering.
-
-**Solution:** Test with EXACT same parameters as production, including bbox size, count limits, and URL construction.
+### Today's Reality Check
+1. **Error handling is as important as success path** - Users judge by worst case, not best
+2. **Geocoding isn't perfect** - Even good geocoding fails for some addresses
+3. **Placeholder data looks unprofessional** - Better to admit uncertainty than fake it
+4. **Conversational recovery builds trust** - "We couldn't find it, let's try together" > silent failure
 
 ---
 
-## 📝 NEXT STEPS
+## 🚀 NEXT ACTIONS (Monday Morning)
 
-### Immediate (Today - Aug 16)
-- [x] Fix LINZ parcel selection algorithm ✅
-- [x] Validate with exact coordinates from LINZ Maps ✅
-- [x] Generate perfect test report (Lot 88 DP 8162 / HBE2/765) ✅
-- [ ] **REBOOT MACHINE** ← Current priority
-- [ ] Commit all changes to GitHub
-- [ ] Trigger Cloudflare deployment
-- [ ] Verify live site has updated code
+### First Thing (8:30am)
+1. Implement error trapping in `linz-fetcher.js`
+2. Add validation in `report-engine.js`
+3. Test with known-bad addresses
+4. Deploy to Cloudflare Pages
 
-### Tomorrow (Aug 17 - Monday Launch Prep)
-- [ ] Test with 5 more properties across Napier
-- [ ] Update pricing on website
-- [ ] Prepare social media launch posts
-- [ ] Draft customer FAQ document
-- [ ] Set up analytics/tracking for report views
+### Pre-Launch (9:00am)
+1. Final end-to-end test with 3 properties
+2. Verify WhatsApp flow works with both success and error cases
+3. Update website with pricing
+4. Post launch announcement
 
-### Launch Week
-- [ ] Go live Monday morning
-- [ ] Monitor first 10 orders personally
-- [ ] Gather feedback and iterate
-- [ ] Plan HBRC integration once maps restored
+### Launch Day (9:30am onward)
+1. Go live with Basic ($89) and Standard ($149) tiers
+2. Monitor first 5-10 orders personally
+3. Collect feedback, iterate quickly
+4. Document any edge cases for Tuesday improvements
 
 ---
 
-**Current Status:** 🟢 **LINZ INTEGRATION COMPLETE - READY FOR LAUNCH**
+## 🎯 SUCCESS METRICS (Week 1 Targets)
 
-**Next Action:** Reboot machine, then commit and deploy to production.
+### Technical
+- Report accuracy: >95% (correct parcel matched)
+- Error handling: 100% (graceful failures, no blank reports)
+- Generation time: <5 minutes
+- Uptime: 99.9% (Cloudflare SLA)
 
-**Confidence Level:** 95% (only HBRC maps missing, but Gabrielle data provides solid value)
+### Business
+- Orders: 10-20 in first week
+- Average order value: $110+ (mix of Basic/Standard)
+- Customer satisfaction: >4/5 stars
+- Zero refund requests
+
+---
+
+**Current Status:** 🟡 **95% READY** - One critical fix needed before launch
+
+**Next Action:** Implement error trapping for property-not-found cases (30-45 min)
+
+**Confidence Level:** 90% (high confidence in core functionality, need error handling polish)
+
+**Launch Target:** Monday 2026-08-17, 9:30am (after morning fix + deploy)
+
+---
+
+*Quote of the Day:*  
+*"For the first time in my almost 40 year IT career, I feel like a project manager who has a brilliant tech team, analysis team, designers, coders, testers, scribe and documenter all rolled into 1."*  
+— Gerhard Stimie, 2026-08-16
