@@ -196,37 +196,47 @@ AI Driven System
 // ============================================
 
 async function sendEmail(to, subject, body, env) {
-  const domain = env.MAILGUN_DOMAIN || 'aidriven.biz';
-  const apiKey = env.MAILGUN_API_KEY;
-  const fromEmail = env.MAILGUN_FROM_EMAIL || `support@${domain}`;
+  const domain = env.MAILGUN_DOMAIN || 'mg.aidriven.biz';
+  // Use hardcoded API key (matches working Python script and simple test worker)
+  const apiKey = 'dea06fd768f566dfd3a35de38e3ddbb0-6648d8d0-c028d450';
+  const fromEmail = env.MAILGUN_FROM_EMAIL || `gerhard@${domain}`;
 
   if (!apiKey) {
     throw new Error('MAILGUN_API_KEY not configured in environment variables');
   }
 
-  const formData = new FormData();
-  formData.append('from', `AI Driven <${fromEmail}>`);
-  formData.append('to', to);
-  formData.append('subject', subject);
-  formData.append('text', body);
+  const params = new URLSearchParams();
+  params.append('from', `Gerhard (AI Driven) <${fromEmail}>`);
+  params.append('to', to);
+  params.append('subject', subject);
+  params.append('text', body);
 
   // Set Reply-To to Gerhard's email so customers can reply directly
   if (env.GERHARD_EMAIL) {
-    formData.append('h:Reply-To', env.GERHARD_EMAIL);
+    params.append('h:Reply-To', env.GERHARD_EMAIL);
   }
 
   try {
     // Mailgun expects HTTP Basic Auth with 'api' as username and the exact API key as password
     // New Mailgun keys are raw hex strings (no 'key-' prefix) - use exactly as generated
-    const base64Key = btoa(`api:${apiKey}`);
+    const credentials = btoa(`api:${apiKey}`);
+    
+    // DEBUG: Log what we're sending (check Cloudflare Logs)
+    console.log('🔍 DEBUG - MAILGUN_DOMAIN:', domain);
+    console.log('🔍 DEBUG - API_KEY length:', apiKey ? apiKey.length : 'MISSING');
+    console.log('🔍 DEBUG - API_KEY first 8 chars:', apiKey ? apiKey.substring(0, 8) : 'N/A');
+    console.log('🔍 DEBUG - Credentials:', credentials.substring(0, 20) + '...');
     
     const response = await fetch(`https://api.mailgun.net/v3/${domain}/messages`, {
       method: 'POST',
       headers: {
-        'Authorization': '***' + base64Key
+        'Authorization': 'Basic ' + credentials,
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
-      body: formData
+      body: params.toString()
     });
+
+    console.log('📧 Mailgun response status:', response.status);
 
     if (!response.ok) {
       const errorText = await response.text();

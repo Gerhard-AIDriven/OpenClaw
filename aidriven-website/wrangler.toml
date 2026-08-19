@@ -26,8 +26,8 @@ port = 3001
 local_protocol = "http"
 
 # Production settings
-[site]
-bucket = "./reports"
+# [site]  # COMMENTED OUT: Not supported by Cloudflare Pages
+# bucket = "./reports"
 
 # Secrets to set via `wrangler secret put`:
 # - WHATSAPP_ACCESS_TOKEN
