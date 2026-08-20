@@ -1,5 +1,6 @@
 | Date | Weight (kg) | BP | Sugar | Notes |
 |------|-------------|-----|-------|-------|
+| 2026-08-20 | 99.2 | 142/86 | 5.2 | Day 7 of cortisone course (FINAL DAY - finished this morning) ✅ |
 | 2026-08-18 | 100.3 | 134/77 | 6.2 | Day 5 of cortisone course - weight hovering at target, BP stable, BG in sweet spot |
 | 2026-08-17 | 100.7 | 134/77 | 5.8 | Monday morning - BP slightly elevated (cortisone course completed 10 days ago), BG excellent in sweet spot |
 | 2026-08-15 | 99.1 | 133/79 | 6.8 | Day 2 of cortisone course — BP elevated, BG slightly up but manageable |
