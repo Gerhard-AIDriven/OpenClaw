@@ -25,6 +25,10 @@ export default {
         return await handleGenerateReport(request, env);
       }
 
+      if (path === '/complete' && request.method === 'POST') {
+        return await handleComplete(request, env);
+      }
+
       // Health check
       if (path === '/health') {
         return new Response(JSON.stringify({
@@ -80,15 +84,22 @@ async function handleManualQueue(request, env) {
       notes
     };
 
-    // Store in KV
+    // Store in KV - separate queues for manual vs automated
     if (env.REPORT_QUEUE_KV) {
+      const isManual = requiresManualProcessing === true;
+      const queuePrefix = isManual ? 'manual' : 'automated';
+      const status = isManual ? 'pending_manual' : 'pending_auto';
+      
       await env.REPORT_QUEUE_KV.put(
-        `manual:${requestId}`,
-        JSON.stringify(manualRequest),
+        `${queuePrefix}:${requestId}`,
+        JSON.stringify({
+          ...manualRequest,
+          status
+        }),
         { expirationTtl: 7 * 24 * 60 * 60 }
       );
 
-      console.log(`✅ Manual request queued: ${requestId}`);
+      console.log(`✅ Request queued: ${requestId} (${status})`);
       console.log(`   Requires Manual Processing: ${requiresManualProcessing}`);
 
       // Send email notifications via Mailgun
@@ -264,20 +275,23 @@ async function handlePoll(request, env) {
       }), { status: 500, headers: { 'Content-Type': 'application/json' } });
     }
 
-    const keys = await env.REPORT_QUEUE_KV.list({ prefix: 'manual:' });
-    const manualRequests = [];
+    // Fetch automated requests (for OpenClaw cron job)
+    const autoKeys = await env.REPORT_QUEUE_KV.list({ prefix: 'automated:' });
+    const automatedRequests = [];
 
-    for (const key of keys.keys) {
+    for (const key of autoKeys.keys) {
       const value = await env.REPORT_QUEUE_KV.get(key.name);
       if (value) {
-        manualRequests.push(JSON.parse(value));
+        automatedRequests.push(JSON.parse(value));
       }
     }
 
+    console.log(`📋 Poll returned ${automatedRequests.length} automated request(s)`);
+
     return new Response(JSON.stringify({
       success: true,
-      count: manualRequests.length,
-      requests: manualRequests
+      count: automatedRequests.length,
+      requests: automatedRequests
     }), {
       status: 200,
       headers: { 'Content-Type': 'application/json' }
@@ -321,6 +335,56 @@ async function handleGenerateReport(request, env) {
 
   } catch (error) {
     console.error('❌ Generate report error:', error);
+    return new Response(JSON.stringify({
+      success: false,
+      error: error.message
+    }), { status: 500, headers: { 'Content-Type': 'application/json' } });
+  }
+}
+
+// ============================================
+// COMPLETE HANDLER (Mark Request as Done)
+// ============================================
+
+async function handleComplete(request, env) {
+  const url = new URL(request.url);
+  const token = url.searchParams.get('token');
+  const id = url.searchParams.get('id');
+
+  if (token !== env.POLL_API_TOKEN) {
+    return new Response(JSON.stringify({
+      success: false,
+      error: 'Unauthorized'
+    }), { status: 401, headers: { 'Content-Type': 'application/json' } });
+  }
+
+  if (!id) {
+    return new Response(JSON.stringify({
+      success: false,
+      error: 'Missing request ID'
+    }), { status: 400, headers: { 'Content-Type': 'application/json' } });
+  }
+
+  try {
+    if (!env.REPORT_QUEUE_KV) {
+      return new Response(JSON.stringify({
+        success: false,
+        error: 'KV store not available'
+      }), { status: 500, headers: { 'Content-Type': 'application/json' } });
+    }
+
+    // Delete from automated queue (move to completed/history if needed)
+    await env.REPORT_QUEUE_KV.delete(`automated:${id}`);
+    
+    console.log(`✅ Marked request ${id} as completed`);
+
+    return new Response(JSON.stringify({
+      success: true,
+      message: `Request ${id} marked as completed`
+    }), { status: 200, headers: { 'Content-Type': 'application/json' } });
+
+  } catch (error) {
+    console.error(`❌ Failed to complete request ${id}:`, error);
     return new Response(JSON.stringify({
       success: false,
       error: error.message
