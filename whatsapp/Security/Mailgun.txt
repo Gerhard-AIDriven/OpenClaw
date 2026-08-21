@@ -3,4 +3,17 @@ HTTP Webhook signing key : 701b73116d24f7c409f204dd66fd45d1
 Verification public key : pubkey-18b87501dbc7e64cf9c2c5b279543a42
 Sandbox domain : sandbox6f5a1a1f0af6458eb85d74d71e50bcf2.mailgun.org
 Base URL: https://api.mailgun.net
-APIKey : key-5936f6a508e3610c8a6f95c7a97cd1ed-6648d8d0-5e813234
+SMTP User login : gerhard@aidriven.biz
+          PW    : abb8c538318f937244a9a1f06bfc0295-6648d8d0-2ea9dc6d
+		  
+API Key Name  : AIdriven-18-8-14-15
+        Value : dea06fd768f566dfd3a35de38e3ddbb0-6648d8d0-c028d450
+		Key id: 6648d8d0-c028d450
+		
+API Key Name  : MG-AIDRIVEN-21-08-9-40
+		Value : e76228f22d7ae5d32190e01a696c7a2b-6648d8d0-9569165f
+		Key ID: 6648d8d0-9569165f
+		
+API Send Key  : MG-AIDRIVEN-SENDKEY-21-8-10-20
+		Value : f3afb8af7ec240a42f2191af74ab0124-6648d8d0-c6401181
+		Key ID: 6648d8d0-c6401181

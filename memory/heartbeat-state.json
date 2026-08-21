@@ -5,6 +5,6 @@
     "projects": 1786181587,
     "health": 1787133600
   },
-  "lastHeartbeat": 1787155200,
-  "note": "2026-08-19 18:00 — Evening heartbeat. Website beta launched today. Health metrics still pending for today."
+  "lastHeartbeat": 1787313600,
+  "note": "2026-08-21 14:00 - Heartbeat check. Still blocked on Mailgun API key (401 auth failure). Worker v5 code and Apps Script fixes ready. Next step: Gerhard generates domain-scoped API key from Mailgun dashboard for mg.aidriven.biz."
 }

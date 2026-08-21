@@ -2,12 +2,12 @@ import requests
 
 # 1. Define your exact endpoint and your actual secret API key value
 API_URL = "https://api.mailgun.net/v3/mg.aidriven.biz/messages"
-API_KEY = "dea06fd768f566dfd3a35de38e3ddbb0-6648d8d0-c028d450"  # Replace with your long alphanumeric key
+API_KEY = "46490b2301ebf73fa76a2d5c29b60930-6648d8d0-96b41ae8"  # Replace with your long alphanumeric key
 
 # 2. Construct the email payload parameters
 email_data = {
     "from": "Gerhard <gerhard@mg.aidriven.biz>",
-    "to": ["gstimie@gmail.com"],  # Sends a test straight to your Google Workspace inbox
+    "to": ["support@aidriven."],  # Sends a test straight to your Google Workspace inbox
     "subject": "Mailgun Pipeline Success!",
     "text": "Hello! This message confirms that the Cloudflare DNS and Mailgun subdomain integration is fully operational."
 }
