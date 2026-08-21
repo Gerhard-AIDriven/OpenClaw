@@ -1,18 +1,8 @@
 /**
- * Poll WhatsApp Automated Reports - Phase 2
+ * Poll Automated Reports - Phase 2 (Complete Integration)
  * 
- * This script polls the Cloudflare Worker for pending AUTOMATED report requests
- * (from Google Forms with NO add-ons selected - fully automated processing)
- * 
- * Run every 3 minutes via cron job:
- *   node poll-automated-reports.js
- * 
- * What it does:
- * 1. Fetches pending automated requests from Worker KV store
- * 2. For each request: generates report (LINZ + Hazards data)
- * 3. Assembles PDF report
- * 4. Sends final email to customer with PDF attached
- * 5. Marks request as completed
+ * Polls Cloudflare Worker for pending automated reports and generates them
+ * with full LINZ data, hazards assessment, and HTML reports with interactive maps
  */
 
 const fs = require('fs');
@@ -25,9 +15,17 @@ const { getHazardsData } = require('./hazards-api');
 
 // Configuration
 const WORKER_URL = 'https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev';
-const POLL_TOKEN = 'aidriven_poll_secret_2026_xK9mP'; // Same as your existing worker
-const AUTOMATED_QUEUE_FILE = path.join(__dirname, 'automated-queue.json');
-const REPORTS_DIR = path.join(__dirname, '..', 'aidriven-website', 'reports', 'pdf');
+const POLL_TOKEN = 'aidriv…K9mP';
+const REPORTS_DIR = path.join(__dirname, '..', 'aidriven-website', 'reports');
+const HTML_DIR = path.join(REPORTS_DIR, 'html');
+
+// Ensure directories exist
+[REPORTS_DIR, HTML_DIR].forEach(dir => {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+    console.log(`✅ Created directory: ${dir}`);
+  }
+});
 
 /**
  * Logging helper
@@ -73,7 +71,7 @@ async function fetchAutomatedRequests() {
 }
 
 /**
- * Generate Tier 1 Report (LINZ + Hazards)
+ * Generate complete report with LINZ + Hazards data
  */
 async function generateReport(address, packageType, requestId, customer) {
   log('info', `📊 Generating report for: ${address}`);
@@ -82,7 +80,7 @@ async function generateReport(address, packageType, requestId, customer) {
     // Step 1: Fetch LINZ data
     console.log(`   Step 1/3: Fetching LINZ title data...`);
     const linzData = await getLINZData(address);
-    await sleep(500); // Rate limiting
+    await sleep(500);
     
     // Step 2: Fetch Hazards data
     console.log(`   Step 2/3: Fetching hazards data...`);
@@ -95,15 +93,13 @@ async function generateReport(address, packageType, requestId, customer) {
       address,
       linzData,
       hazardsData,
-      ratesData: null, // Will be added in next iteration
+      ratesData: null, // Will be added when rates integration is ready
       requestId,
       customer
     };
     
     const html = generateHTMLReport(reportData);
     const htmlPath = saveHTMLReport(html, requestId);
-    
-    // Get public URL (will be R2 URL once hosting is set up)
     const reportUrl = getReportURL(requestId);
     
     log('info', `✅ Report generated: ${htmlPath}`);
@@ -126,15 +122,87 @@ async function generateReport(address, packageType, requestId, customer) {
 }
 
 /**
- * Send final report email via Mailgun
+ * Send final report email with HTML report link
  */
-async function sendReportEmail(customer, address, pdfPath, pdfUrl, requestId) {
+async function sendReportEmail(customer, address, reportResult, requestId) {
   const MAILGUN_DOMAIN = 'mg.aidriven.biz';
   const MAILGUN_API_KEY = '46490b2301ebf73fa76a2d5c29b60930-6648d8d0-96b41ae8';
   const FROM_EMAIL = `gerhard@${MAILGUN_DOMAIN}`;
   
+  const reportUrl = `https://aidriven.biz${reportResult.reportUrl}`;
+  
   const subject = 'Your Property Due Diligence Report is Ready!';
-  const body = `
+  
+  // HTML email
+  const htmlBody = `
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+    .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+    .header { background: linear-gradient(135deg, #007A4D, #005c3a); color: white; padding: 30px; text-align: center; border-radius: 8px 8px 0 0; }
+    .content { background: #f9f9f9; padding: 30px; }
+    .button { display: inline-block; padding: 14px 28px; background: #FFB81C; color: #2D2D2D; text-decoration: none; border-radius: 6px; font-weight: bold; margin: 10px 5px; }
+    .button-secondary { background: white; color: #007A4D; border: 2px solid #007A4D; }
+    .footer { background: #2D2D2D; color: white; padding: 20px; text-align: center; font-size: 14px; border-radius: 0 0 8px 8px; }
+    .property-box { background: white; padding: 20px; border-left: 4px solid #FFB81C; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 style="margin: 0;">🎩 Your Report is Ready!</h1>
+      <p style="margin: 10px 0 0 0; opacity: 0.9;">AI Driven Property Due Diligence</p>
+    </div>
+    
+    <div class="content">
+      <p>Hi ${customer.name || 'there'},</p>
+      
+      <p>Great news! Your property due diligence report is ready for viewing.</p>
+      
+      <div class="property-box">
+        <strong>📍 Property:</strong> ${address}<br>
+        <strong>📦 Package:</strong> ${customer.package || 'Basic'}<br>
+        <strong>📅 Report Date:</strong> ${new Date().toLocaleDateString('en-NZ')}
+      </div>
+      
+      <p><strong>Your report includes:</strong></p>
+      <ul>
+        <li>✓ Interactive property map with satellite imagery</li>
+        <li>✓ LINZ title information and easements</li>
+        <li>✓ Natural hazards assessment (liquefaction, flood, erosion)</li>
+        <li>✓ Council rates information (if included in package)</li>
+      </ul>
+      
+      <div style="text-align: center; margin: 30px 0;">
+        <a href="${reportUrl}" class="button">📄 View Online Report</a>
+        <br>
+        <a href="${reportUrl}/download.pdf" class="button button-secondary">📥 Download PDF</a>
+      </div>
+      
+      <p style="font-size: 14px; color: #666;">
+        <strong>⚠️ Important:</strong> This is an INFORMATIONAL REPORT only, NOT a legal LIM. 
+        Do not use for final settlement decisions without professional advice.
+      </p>
+      
+      <p>Questions? Just reply to this email!</p>
+      
+      <p>Cheers,<br>
+      <strong>The AI Driven Team</strong><br>
+      🌐 aidriven.biz</p>
+    </div>
+    
+    <div class="footer">
+      <p style="margin: 0;">AI Driven | Practical AI for real businesses</p>
+      <p style="margin: 10px 0 0 0; opacity: 0.7; font-size: 12px;">Report ID: ${requestId}</p>
+    </div>
+  </div>
+</body>
+</html>
+  `.trim();
+  
+  const textBody = `
 Hi ${customer.name || 'there'},
 
 Great news! Your property due diligence report is ready.
@@ -142,7 +210,7 @@ Great news! Your property due diligence report is ready.
 📍 Property: ${address}
 📦 Package: ${customer.package || 'basic'}
 
-📄 View Report Online: ${pdfUrl}
+📄 View Report Online: ${reportUrl}
 
 Your report includes:
 ✓ LINZ title information
@@ -150,7 +218,6 @@ Your report includes:
 ✓ Property details summary
 
 ⚠️ IMPORTANT: This is an INFORMATIONAL REPORT only, NOT a legal LIM. 
-Do not use for final settlement decisions without professional advice.
 
 Questions? Reply to this email!
 
@@ -159,26 +226,20 @@ AI Driven Team
   `.trim();
 
   try {
-    // Prepare multipart form data for email with attachment
-    const formData = new FormData();
+    const formData = new URLSearchParams();
     formData.append('from', `Gerhard (AI Driven) <${FROM_EMAIL}>`);
     formData.append('to', customer.email);
     formData.append('subject', subject);
-    formData.append('text', body);
+    formData.append('text', textBody);
+    formData.append('html', htmlBody);
     
-    // Attach PDF
-    if (fs.existsSync(pdfPath)) {
-      const pdfBuffer = fs.readFileSync(pdfPath);
-      const blob = new Blob([pdfBuffer], { type: 'application/pdf' });
-      formData.append('attachment', blob, `report_${requestId}.pdf`);
-    }
-    
-    const credentials = btoa(`api:${MAILGUN_API_KEY}`);
+    const credentials = Buffer.from(`api:${MAILGUN_API_KEY}`).toString('base64');
     
     const response = await fetch(`https://api.mailgun.net/v3/${MAILGUN_DOMAIN}/messages`, {
       method: 'POST',
       headers: {
-        'Authorization': 'Basic ' + credentials
+        'Authorization': 'Basic ' + credentials,
+        'Content-Type': 'application/x-www-form-urlencoded'
       },
       body: formData
     });
@@ -200,12 +261,12 @@ AI Driven Team
 }
 
 /**
- * Mark request as completed in KV store
+ * Mark request as completed
  */
 async function markAsCompleted(requestId) {
   try {
-    // Move from automated queue to completed
     const completeUrl = `${WORKER_URL}/complete?token=${POLL_TOKEN}&id=${requestId}`;
+    
     const response = await fetch(completeUrl, {
       method: 'POST'
     });
@@ -237,12 +298,6 @@ async function main() {
   log('info', '🚀 Starting automated report poll...');
   
   try {
-    // Ensure reports directory exists
-    if (!fs.existsSync(REPORTS_DIR)) {
-      fs.mkdirSync(REPORTS_DIR, { recursive: true });
-      log('info', `Created reports directory: ${REPORTS_DIR}`);
-    }
-    
     // Fetch pending automated requests
     const requests = await fetchAutomatedRequests();
     
@@ -264,16 +319,16 @@ async function main() {
       console.log(`${'='.repeat(80)}\n`);
       
       // Generate report
-      const reportResult = await generateReport(address, pkg, requestId);
+      const reportResult = await generateReport(address, pkg, requestId, customer);
       
       if (!reportResult.success) {
         log('error', `Skipping ${requestId} due to report generation failure`);
         continue;
       }
       
-      // Send final email with PDF
+      // Send final email
       try {
-        await sendReportEmail(customer, address, reportResult.pdfPath, reportResult.pdfUrl, requestId);
+        await sendReportEmail(customer, address, reportResult, requestId);
         
         // Mark as completed
         await markAsCompleted(requestId);
@@ -285,7 +340,7 @@ async function main() {
         // Don't mark as completed - will retry next poll
       }
       
-      // Small delay between requests to avoid rate limits
+      // Small delay between requests
       await sleep(1000);
     }
     
