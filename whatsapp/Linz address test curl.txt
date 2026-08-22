@@ -1,0 +1,8 @@
+curl -X GET "https://data.linz.govt.nz/services;b2e35aafd4e848e9b0265f1caf575255/wfs?\
+service=WFS&\
+version=2.0.0&\
+request=GetFeature&\
+typeNames=layer-123113&\
+srsName=EPSG:4326&\
+outputFormat=application/json&\
+cql_filter=address_number='39'+AND+full_road_name='Douglas Mclean Avenue'+AND+suburb_locality='Napier'"

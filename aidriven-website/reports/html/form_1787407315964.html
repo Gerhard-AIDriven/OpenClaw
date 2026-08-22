@@ -1,46 +1,9 @@
-/**
- * Property Due Diligence Report Engine v2
- * 
- * Generates HTML reports with interactive maps + PDF downloads
- * 
- * Features:
- * - Interactive Leaflet maps with LINZ tiles
- * - Hazards overlays (liquefaction, flood, erosion)
- * - LINZ title data integration
- * - Council rates integration
- * - Responsive design (mobile-friendly)
- * - PDF generation via Puppeteer
- * - Cloudflare R2 hosting
- */
-
-const fs = require('fs');
-const path = require('path');
-
-// Configuration
-const REPORTS_DIR = path.join(__dirname, '..', 'aidriven-website', 'reports');
-const HTML_DIR = path.join(REPORTS_DIR, 'html');
-const PDF_DIR = path.join(REPORTS_DIR, 'pdf');
-
-// Ensure directories exist
-[REPORTS_DIR, HTML_DIR, PDF_DIR].forEach(dir => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-    console.log(`✅ Created directory: ${dir}`);
-  }
-});
-
-/**
- * Generate HTML Report with Interactive Maps
- */
-function generateHTMLReport(data) {
-  const { address, linzData, hazardsData, ratesData, requestId, customer } = data;
-  
-  const html = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Property Due Diligence Report - ${address}</title>
+  <title>Property Due Diligence Report - 1 Thistle Street, Napier South, Napier, 4110</title>
   
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -433,19 +396,19 @@ function generateHTMLReport(data) {
       <div class="info-grid">
         <div class="info-item">
           <div class="info-label">Property Address</div>
-          <div class="info-value">${address}</div>
+          <div class="info-value">1 Thistle Street, Napier South, Napier, 4110</div>
         </div>
         <div class="info-item">
           <div class="info-label">Report Date</div>
-          <div class="info-value">${new Date().toLocaleDateString('en-NZ')}</div>
+          <div class="info-value">22/08/2026</div>
         </div>
         <div class="info-item">
           <div class="info-label">Report ID</div>
-          <div class="info-value">${requestId}</div>
+          <div class="info-value">form_1787407315964</div>
         </div>
         <div class="info-item">
           <div class="info-label">Package</div>
-          <div class="info-value">${linzData ? 'Premium' : 'Basic'}</div>
+          <div class="info-value">Premium</div>
         </div>
       </div>
     </div>
@@ -467,7 +430,7 @@ function generateHTMLReport(data) {
   </section>
   
   <!-- LINZ Title Data -->
-  ${linzData ? `
+  
   <section class="content-section">
     <div class="container">
       <h2 class="section-title">LINZ Title Information</h2>
@@ -477,127 +440,68 @@ function generateHTMLReport(data) {
           <table class="data-table">
             <tr>
               <td>Title Number</td>
-              <td>${linzData.titleNumber || 'N/A'}</td>
+              <td>N/A</td>
             </tr>
             <tr>
               <td>Legal Description</td>
-              <td>${linzData.legalDescription || 'N/A'}</td>
+              <td>N/A</td>
             </tr>
             <tr>
               <td>Area</td>
-              <td>${linzData.area || 'N/A'}</td>
+              <td>N/A</td>
             </tr>
             <tr>
               <td>Ownership</td>
-              <td>${linzData.ownership || 'N/A'}</td>
+              <td>N/A</td>
             </tr>
           </table>
         </div>
         
         <div class="data-card">
           <h3>⛓️ Easements</h3>
-          ${linzData.easements && linzData.easements.length > 0 ? `
-            <ul class="hazards-list">
-              ${linzData.easements.map(easement => `
-                <li>
-                  <span class="hazard-icon">⚡</span>
-                  <div>
-                    <strong>${easement.type || 'Easement'}</strong><br>
-                    <small>${easement.description || 'No description available'}</small>
-                  </div>
-                </li>
-              `).join('')}
-            </ul>
-          ` : '<p style="color: var(--muted); padding: 20px 0;">✓ No easements registered on this title.</p>'}
+          <p style="color: var(--muted); padding: 20px 0;">✓ No easements registered on this title.</p>
         </div>
       </div>
     </div>
   </section>
-  ` : ''}
+  
   
   <!-- Hazards Data -->
-  ${hazardsData ? `
+  
   <section class="content-section">
     <div class="container">
       <h2 class="section-title">Natural Hazards Assessment</h2>
       <div class="data-grid">
-        ${hazardsData.liquefaction ? `
+        
         <div class="data-card">
           <h3>🌊 Liquefaction Risk</h3>
-          <p style="margin-bottom: 15px;">${hazardsData.liquefaction.description}</p>
-          <span class="status-badge status-${(hazardsData.liquefaction.risk || '').toLowerCase().includes('high') ? 'danger' : hazardsData.liquefaction.risk.toLowerCase().includes('low') ? 'success' : 'warning'}">${hazardsData.liquefaction.risk} Risk</span>
+          <p style="margin-bottom: 15px;">This area has low to moderate liquefaction risk. Local soil conditions should be assessed for specific properties.</p>
+          <span class="status-badge status-success">Low to Moderate Risk</span>
         </div>
-        ` : ''}
         
-        ${hazardsData.flood ? `
+        
+        
         <div class="data-card">
           <h3>💧 Flood Risk</h3>
-          <p style="margin-bottom: 15px;">${hazardsData.flood.description}</p>
-          <span class="status-badge status-${(hazardsData.flood.risk || '').toLowerCase().includes('high') ? 'danger' : hazardsData.flood.risk.toLowerCase().includes('low') ? 'success' : 'warning'}">${hazardsData.flood.risk} Risk</span>
+          <p style="margin-bottom: 15px;">This property has low flood risk based on elevation. However, local drainage issues can still cause flooding.</p>
+          <span class="status-badge status-success">Low Risk</span>
         </div>
-        ` : ''}
         
-        ${hazardsData.erosion ? `
+        
+        
         <div class="data-card">
           <h3>⛰️ Coastal Erosion</h3>
-          <p style="margin-bottom: 15px;">${hazardsData.erosion.description}</p>
-          <span class="status-badge status-${(hazardsData.erosion.risk || '').toLowerCase().includes('high') ? 'danger' : hazardsData.erosion.risk.toLowerCase().includes('low') ? 'success' : 'warning'}">${hazardsData.erosion.risk} Risk</span>
-        </div>
-        ` : ''}
-      </div>
-    </div>
-  </section>
-  ` : ''}
-  
-  <!-- Rates Data -->
-  ${ratesData ? `
-  <section class="content-section">
-    <div class="container">
-      <h2 class="section-title">Council Rates Information</h2>
-      <div class="data-grid">
-        <div class="data-card">
-          <h3>💰 Valuation Details</h3>
-          <table class="data-table">
-            <tr>
-              <td>Capital Value (CV)</td>
-              <td>$${ratesData.capitalValue?.toLocaleString() || 'N/A'}</td>
-            </tr>
-            <tr>
-              <td>Land Value</td>
-              <td>$${ratesData.landValue?.toLocaleString() || 'N/A'}</td>
-            </tr>
-            <tr>
-              <td>Improvements Value</td>
-              <td>$${ratesData.improvementsValue?.toLocaleString() || 'N/A'}</td>
-            </tr>
-            <tr>
-              <td>Valuation Date</td>
-              <td>${ratesData.valuationDate || 'N/A'}</td>
-            </tr>
-          </table>
+          <p style="margin-bottom: 15px;">This property is not significantly affected by coastal erosion risk.</p>
+          <span class="status-badge status-success">Low Risk</span>
         </div>
         
-        <div class="data-card">
-          <h3>📊 Annual Rates</h3>
-          <table class="data-table">
-            <tr>
-              <td>General Rates</td>
-              <td>$${ratesData.generalRates?.toLocaleString() || 'N/A'}</td>
-            </tr>
-            <tr>
-              <td>Targeted Rates</td>
-              <td>$${ratesData.targetedRates?.toLocaleString() || 'N/A'}</td>
-            </tr>
-            <tr>
-              <td>Total Annual Rates</td>
-              <td><strong>$${ratesData.totalRates?.toLocaleString() || 'N/A'}</strong></td>
-            </tr>
-          </table>
-        </div>
       </div>
     </div>
   </section>
-  ` : ''}
+  
+  
+  <!-- Rates Data -->
+  
   
   <!-- Footer -->
   <footer>
@@ -616,12 +520,12 @@ function generateHTMLReport(data) {
         
         <div class="action-buttons">
           <a href="#" class="btn btn-primary" onclick="window.print()">🖨️ Print Report</a>
-          <a href="/download-pdf/${requestId}" class="btn btn-secondary">📥 Download PDF</a>
-          <a href="mailto:gerhard@aidriven.biz?subject=Question about report ${requestId}" class="btn btn-secondary">✉️ Ask a Question</a>
+          <a href="/download-pdf/form_1787407315964" class="btn btn-secondary">📥 Download PDF</a>
+          <a href="mailto:gerhard@aidriven.biz?subject=Question about report form_1787407315964" class="btn btn-secondary">✉️ Ask a Question</a>
         </div>
         
         <p style="margin-top: 30px; opacity: 0.7; font-size: 14px;">
-          Generated by AI Driven | aidriven.biz | Report ID: ${requestId}
+          Generated by AI Driven | aidriven.biz | Report ID: form_1787407315964
         </p>
       </div>
     </div>
@@ -632,7 +536,7 @@ function generateHTMLReport(data) {
   
   <script>
     // Initialize map
-    const map = L.map('map').setView([${linzData?.latitude || -39.4928}, ${linzData?.longitude || 176.9120}], 15);
+    const map = L.map('map').setView([-39.4928, 176.912], 15);
     
     // Base layers
     const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
@@ -647,9 +551,9 @@ function generateHTMLReport(data) {
     satelliteLayer.addTo(map);
     
     // Property marker
-    L.marker([${linzData?.latitude || -39.4928}, ${linzData?.longitude || 176.9120}])
+    L.marker([-39.4928, 176.912])
       .addTo(map)
-      .bindPopup('<strong>${address}</strong><br>Subject Property')
+      .bindPopup('<strong>1 Thistle Street, Napier South, Napier, 4110</strong><br>Subject Property')
       .openPopup();
     
     // Layer control
@@ -704,32 +608,4 @@ function generateHTMLReport(data) {
     }
   </script>
 </body>
-</html>`;
-
-  return html;
-}
-
-/**
- * Save HTML report to file
- */
-function saveHTMLReport(html, requestId) {
-  const filePath = path.join(HTML_DIR, `${requestId}.html`);
-  fs.writeFileSync(filePath, html, 'utf8');
-  console.log(`✅ HTML report saved: ${filePath}`);
-  return filePath;
-}
-
-/**
- * Get public URL for hosted report
- */
-function getReportURL(requestId) {
-  // For now, return local file path
-  // Will be replaced with Cloudflare R2 URL once hosting is set up
-  return `/reports/html/${requestId}.html`;
-}
-
-module.exports = {
-  generateHTMLReport,
-  saveHTMLReport,
-  getReportURL
-};
+</html>

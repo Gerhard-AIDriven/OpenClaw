@@ -1,9 +1,9 @@
 /**
  * AI Driven - Google Form to Cloudflare Worker Integration
- * FINAL BULLETPROOF VERSION - Calculates manual processing in Apps Script
+ * UPDATED FOR STRUCTURED ADDRESS FIELDS (2026-08-22)
  * 
- * KEY FIX: Don't read from Column R formula (it hasn't calculated yet when trigger fires).
- * Instead, calculate it ourselves using the same logic as the sheet formula.
+ * New form collects: House Number, Street Name, Street Type, Suburb, City, Postcode
+ * This eliminates parsing errors and improves LINZ match rates.
  */
 
 function onFormSubmit(e) {
@@ -13,20 +13,33 @@ function onFormSubmit(e) {
   
   console.log('📊 Total columns:', row.length);
 
-  // Fixed known columns
-  const email = row[1];               // Column B
-  const streetAddress = row[2];       // Column C
-  const suburb = row[3];              // Column D
-  const city = row[4];                // Column E
-  const postcode = row[5];            // Column F
-  const packageSelection = row[10];   // Column K
-  const addons = row[11];             // Column L
-  const name = row[12];               // Column M
-  const phone = row[14];              // Column O
+  // === NEW STRUCTURED FIELDS (Columns D-I) ===
+  const email = row[1];               // Column B: Email Address
+  const fullName = row[2];            // Column C: Full Name
+  const phone = row[3];               // Column D: Phone Number
+  const streetName = row[4];          // Column E: Street Name (e.g., "Douglas McLean")
+  const streetType = row[5];          // Column F: Street Type (e.g., "Avenue")
+  const houseNumber = row[6];         // Column G: House Number (e.g., "31")
+  const suburb = row[7];              // Column H: Suburb (e.g., "Marewa")
+  const city = row[8];                // Column I: City/District (e.g., "Napier")
+  const postcode = row[9];            // Column J: Post code (e.g., "4110")
+  
+  // === LEGACY/OTHER FIELDS ===
+  const propertyType = row[10];       // Column K: Property Type
+  const intent = row[11];             // Column L: I am... (selling, investor, etc.)
+  const packageSelection = row[13];   // Column N: Select Report Package
+  const addons = row[15];             // Column P: Would you like to add any extras?
+  const disclaimer = row[17];         // Column R: Important Disclaimer
+  const stayInformed = row[18];       // Column S: Stay informed (Optional)
+  
+  const name = fullName || 'N/A';
 
-  // === CALCULATE MANUAL PROCESSING OURSELVES ===
-  // Don't rely on Column R formula (it hasn't calculated yet when trigger fires!)
-  // Use the same logic as the sheet formula: YES if addons contains "rates" or "council"
+  // === CONSTRUCT FULL ADDRESS FOR DISPLAY ===
+  // Build address from structured parts
+  const streetFull = [houseNumber, streetName, streetType].filter(part => part && part.trim()).join(' ');
+  const address = [streetFull, suburb, city, postcode].filter(part => part && part.trim()).join(', ');
+
+  // === CALCULATE MANUAL PROCESSING ===
   let requiresManual = false;
   
   if (addons && addons.toString().trim() !== '') {
@@ -34,37 +47,43 @@ function onFormSubmit(e) {
     requiresManual = addonsLower.includes('rates') || addonsLower.includes('council');
   }
   
-  console.log('🔧 Addons field:', addons || '(empty)');
-  console.log('   Requires Manual Processing:', requiresManual);
-
-  // Construct full address
-  const address = [streetAddress, suburb, city, postcode].filter(part => part && part.trim()).join(', ');
-
-  console.log('📋 Summary:');
-  console.log('  Name:', name || 'N/A');
-  console.log('  Email:', email || 'N/A');
-  console.log('  Phone:', phone || 'N/A');
-  console.log('  Address:', address);
-  console.log('  Package:', packageSelection || 'basic');
+  console.log('📋 Structured Address Data:');
+  console.log('  House Number:', houseNumber || '(empty)');
+  console.log('  Street Name:', streetName || '(empty)');
+  console.log('  Street Type:', streetType || '(empty)');
+  console.log('  Suburb:', suburb || '(empty)');
+  console.log('  City:', city || '(empty)');
+  console.log('  Postcode:', postcode || '(empty)');
+  console.log('  Full Address:', address);
+  console.log('  Addons:', addons || '(empty)');
   console.log('  Requires Manual:', requiresManual);
 
-  // Prepare payload - ALWAYS send boolean true/false, never undefined
+  // Prepare payload with STRUCTURED address data
   const payload = {
     requestId: 'form_' + Date.now(),
     source: 'google-form',
     customer: {
-      name: name || 'N/A',
+      name: name,
       email: email || 'N/A',
       phone: phone || 'N/A'
     },
+    // Send both structured and full address
     address: address || 'Address not provided',
+    addressStructured: {
+      houseNumber: houseNumber || '',
+      streetName: streetName || '',
+      streetType: streetType || '',
+      suburb: suburb || '',
+      city: city || '',
+      postcode: postcode || ''
+    },
     package: packageSelection || 'basic',
     addons: {
       ratesInfo: addons && addons.toString().toLowerCase().includes('rates'),
       councilFees: addons && addons.toString().toLowerCase().includes('council')
     },
-    requiresManualProcessing: requiresManual, // Always boolean!
-    notes: 'Manual processing calculated in Apps Script (Column R formula runs after trigger)'
+    requiresManualProcessing: requiresManual,
+    notes: 'Structured address fields - improved LINZ matching'
   };
 
   console.log('📤 Payload to Worker:', JSON.stringify(payload, null, 2));

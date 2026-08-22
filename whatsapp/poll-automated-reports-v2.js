@@ -5,8 +5,11 @@
  * with full LINZ data, hazards assessment, and HTML reports with interactive maps
  */
 
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs');
+
+// Import push automation
+const { pushReport } = require('./push-to-github');
 
 // Import report engine and APIs
 const { generateHTMLReport, saveHTMLReport, getReportURL } = require('./report-engine-v2');
@@ -15,7 +18,7 @@ const { getHazardsData } = require('./hazards-api');
 
 // Configuration
 const WORKER_URL = 'https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev';
-const POLL_TOKEN = 'aidriv…K9mP';
+const POLL_TOKEN = 'aidriven_poll_secret_2026_xK9mP';
 const REPORTS_DIR = path.join(__dirname, '..', 'aidriven-website', 'reports');
 const HTML_DIR = path.join(REPORTS_DIR, 'html');
 
@@ -46,7 +49,9 @@ function log(level, message, data = null) {
  */
 async function fetchAutomatedRequests() {
   try {
-    const pollUrl = `${WORKER_URL}/poll?token=${POLL_TOKEN}`;
+    // URL-encode the token (Worker expects encoded tokens)
+    const encodedToken = encodeURIComponent(POLL_TOKEN);
+    const pollUrl = `${WORKER_URL}/poll?token=${encodedToken}`;
     
     const response = await fetch(pollUrl, {
       method: 'GET',
@@ -73,14 +78,21 @@ async function fetchAutomatedRequests() {
 /**
  * Generate complete report with LINZ + Hazards data
  */
-async function generateReport(address, packageType, requestId, customer) {
+async function generateReport(address, packageType, requestId, customer, addressStructured = null) {
   log('info', `📊 Generating report for: ${address}`);
   
   try {
-    // Step 1: Fetch LINZ data
+    // Step 1: Fetch LINZ data (pass structured data for better matching)
     console.log(`   Step 1/3: Fetching LINZ title data...`);
-    const linzData = await getLINZData(address);
+    const linzData = await getLINZData(address, addressStructured);
     await sleep(500);
+    
+    // Verify we have coordinates
+    if (!linzData.latitude || !linzData.longitude) {
+      throw new Error(`LINZ geocoding failed - no coordinates. Address: ${address}, Structured: ${JSON.stringify(addressStructured)}`);
+    }
+    
+    console.log(`   ✅ LINZ coords: [${linzData.latitude}, ${linzData.longitude}]`);
     
     // Step 2: Fetch Hazards data
     console.log(`   Step 2/3: Fetching hazards data...`);
@@ -310,25 +322,42 @@ async function main() {
     
     // Process each request
     for (const req of requests) {
-      const { id: requestId, customer, address, package: pkg } = req;
+      const { id: requestId, customer, address, addressStructured, package: pkg } = req;
       
       console.log(`\n${'='.repeat(80)}`);
       console.log(`Processing: ${requestId}`);
       console.log(`Address: ${address}`);
+      if (addressStructured) {
+        console.log(`Structured: ${addressStructured.houseNumber} ${addressStructured.streetName} ${addressStructured.streetType}, ${addressStructured.suburb}`);
+      }
       console.log(`Customer: ${customer.name} (${customer.email})`);
       console.log(`${'='.repeat(80)}\n`);
       
-      // Generate report
-      const reportResult = await generateReport(address, pkg, requestId, customer);
+      // Generate report with structured data for better LINZ matching
+      const reportResult = await generateReport(address, pkg, requestId, customer, addressStructured);
       
       if (!reportResult.success) {
         log('error', `Skipping ${requestId} due to report generation failure`);
         continue;
       }
       
-      // Send final email
+      // Push to GitHub and wait for deployment
+      log('info', `🚀 Pushing report to GitHub for deployment...`);
+      const pushResult = await pushReport(reportResult.htmlPath, requestId);
+      
+      if (!pushResult.success) {
+        log('error', `GitHub push failed, but will still send email with local URL`);
+        // Continue with email sending even if push fails
+      }
+      
+      // Update report URL if push was successful
+      const finalReportResult = pushResult.success 
+        ? { ...reportResult, reportUrl: pushResult.liveUrl.replace('https://aidriven.biz', '') }
+        : reportResult;
+      
+      // Send final email with LIVE URL
       try {
-        await sendReportEmail(customer, address, reportResult, requestId);
+        await sendReportEmail(customer, address, finalReportResult, requestId);
         
         // Mark as completed
         await markAsCompleted(requestId);

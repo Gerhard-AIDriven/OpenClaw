@@ -1,10 +1,11 @@
 {
   "lastChecks": {
-    "email": 1786181587,
-    "calendar": 1786181587,
-    "projects": 1786181587,
-    "health": 1787133600
+    "email": 1787381400,
+    "calendar": 1787381400,
+    "projects": 1787392800,
+    "health": 1787133600,
+    "whatsappQueue": 1787392800
   },
-  "lastHeartbeat": 1787320800,
-  "note": "2026-08-21 16:00 - Disabled automated report cron (every 3min) to stop token waste on guaranteed 401 auth failures. Mailgun API key still needs to be regenerated. Apps Script + Worker v5 code fixes are ready, just need valid Mailgun key to deploy."
+  "lastHeartbeat": 1787392800,
+  "note": "2026-08-22 12:00 - Saturday midday heartbeat. Cleared stale test request from WhatsApp queue. Blood test TOMORROW (Aug 23)."
 }
