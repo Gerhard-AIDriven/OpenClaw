@@ -681,6 +681,92 @@ function generateHTMLReport(data) {
   </section>
   ` : ''}
   
+  <!-- Building Consents History -->
+  ${ratesData?.myPropertyData?.building_consents && ratesData.myPropertyData.building_consents.length > 0 ? `
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">🏗️ Building Consent History</h2>
+      <p style="margin-bottom: 20px; color: #888;">Official building consents recorded for this property (source: Napier City Council)</p>
+      
+      <div class="data-grid">
+        ${ratesData.myPropertyData.building_consents.map((consent, index) => `
+        <div class="data-card">
+          <h3>Consent #${consent.consent_number || 'N/A'}</h3>
+          <table class="data-table">
+            <tr>
+              <td><strong>Status:</strong></td>
+              <td>${consent.status || 'Unknown'}</td>
+            </tr>
+            <tr>
+              <td><strong>Proposal:</strong></td>
+              <td>${consent.proposal || 'No details available'}</td>
+            </tr>
+          </table>
+        </div>
+        `).join('')}
+      </div>
+      
+      ${ratesData.myPropertyData.building_consents.length === 0 ? `
+      <p style="text-align: center; padding: 40px; color: #888;">
+        ℹ️ No building consents found in council records
+      </p>
+      ` : ''}
+    </div>
+  </section>
+  ` : ''}
+  
+  <!-- Easements & Covenants -->
+  ${linzData?.easements && linzData.easements.length > 0 ? `
+  <section class="content-section">
+    <div class="container">
+      <h2 class="section-title">⚠️ Easements & Covenants</h2>
+      <p style="margin-bottom: 20px; color: #888;">Registered easements and covenants affecting this property (source: LINZ)</p>
+      
+      <div class="alert-box" style="background: rgba(247,147,30,0.1); border-left: 4px solid #f7931e; padding: 20px; margin-bottom: 30px; border-radius: 0 8px 8px 0;">
+        <strong>⚠️ Important:</strong> This property has <strong>${linzData.easements.length}</strong> registered easement(s). 
+        These affect your rights to use the land and may restrict building, fencing, or landscaping. 
+        Review carefully with your lawyer before purchasing.
+      </div>
+      
+      <div class="data-grid">
+        ${linzData.easements.slice(0, 10).map((easement, index) => `
+        <div class="data-card">
+          <h3>Easement #${index + 1}</h3>
+          <table class="data-table">
+            <tr>
+              <td><strong>Type:</strong></td>
+              <td>${easement.type || easement.parcel_intent || 'Easement'}</td>
+            </tr>
+            <tr>
+              <td><strong>Legal Description:</strong></td>
+              <td>${easement.appellation || 'Not specified'}</td>
+            </tr>
+            ${easement.area ? `
+            <tr>
+              <td><strong>Area:</strong></td>
+              <td>${easement.area}</td>
+            </tr>
+            ` : ''}
+            ${easement.district ? `
+            <tr>
+              <td><strong>District:</strong></td>
+              <td>${easement.district}</td>
+            </tr>
+            ` : ''}
+          </table>
+        </div>
+        `).join('')}
+      </div>
+      
+      ${linzData.easements.length > 10 ? `
+      <p style="text-align: center; margin-top: 20px; color: #888;">
+        ℹ️ Showing first 10 of ${linzData.easements.length} easements. Contact us for full list.
+      </p>
+      ` : ''}
+    </div>
+  </section>
+  ` : ''}
+  
   <!-- Footer -->
   <footer>
     <div class="container">

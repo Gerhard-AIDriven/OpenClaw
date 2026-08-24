@@ -184,11 +184,17 @@ async function generateReport(address, packageType, requestId, customer, address
         linzData.landDistrict = titleData.landDistrict || null;
         linzData.numberOfOwners = titleData.numberOfOwners || 0;
         
-        // Note: Easements not yet implemented in LINZ integration
-        // Would require additional query to LINZ easements layer
-        if (titleData.easements && titleData.easements.length > 0) {
-          linzData.easements = titleData.easements;
-          console.log(`   ✅ Found ${linzData.easements.length} easement(s)`);
+        // Fetch LINZ Easements data (CRITICAL - MyProperty has this, we must too!)
+        console.log(`   Step 3c/4: Fetching LINZ easements...`);
+        const { getCompleteEasementsData } = require('./linz-easements-integration');
+        const easementsResult = await getCompleteEasementsData(linzGeoData.latitude, linzGeoData.longitude);
+        
+        if (easementsResult && easementsResult.easements && easementsResult.easements.length > 0) {
+          linzData.easements = easementsResult.easements;
+          console.log(`   ✅ Found ${linzData.easements.length} easement(s) from LINZ`);
+        } else {
+          console.log(`   ℹ️  No easements found at this location`);
+          linzData.easements = [];
         }
       }
       
