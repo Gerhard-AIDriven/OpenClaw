@@ -33,7 +33,7 @@ const PDF_DIR = path.join(REPORTS_DIR, 'pdf');
  * Generate HTML Report with Interactive Maps
  */
 function generateHTMLReport(data) {
-  const { address, linzData, hazardsData, ratesData, requestId, customer } = data;
+  const { address, linzData, hazardsData, ratesData, requestId, customer, packageType = 'Basic' } = data;
   
   const html = `<!DOCTYPE html>
 <html lang="en">
@@ -178,14 +178,14 @@ function generateHTMLReport(data) {
       display: inline-block;
       width: 4px;
       height: 24px;
-      background: var(--primary-gold);
+      background: var(--orange);
     }
     
     #map {
-      height: 500px;
+      height: 320px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      border: 2px solid var(--border-color);
+      border: 2px solid var(--border);
     }
     
     .map-controls {
@@ -197,7 +197,7 @@ function generateHTMLReport(data) {
     
     .map-control-btn {
       padding: 8px 16px;
-      border: 2px solid var(--primary-green);
+      border: 2px solid var(--purple);
       background: var(--card);
       color: var(--orange);
       border-radius: 6px;
@@ -208,7 +208,7 @@ function generateHTMLReport(data) {
     
     .map-control-btn:hover,
     .map-control-btn.active {
-      background: var(--primary-green);
+      background: var(--purple);
       color: white;
     }
     
@@ -445,7 +445,7 @@ function generateHTMLReport(data) {
         </div>
         <div class="info-item">
           <div class="info-label">Package</div>
-          <div class="info-value">${linzData ? 'Premium' : 'Basic'}</div>
+          <div class="info-value">${(customer?.package || packageType || 'Basic').toString().charAt(0).toUpperCase() + (customer?.package || packageType || 'Basic').toString().slice(1).toLowerCase()}</div>
         </div>
       </div>
     </div>
@@ -455,52 +455,106 @@ function generateHTMLReport(data) {
   <section class="map-section">
     <div class="container">
       <h2 class="section-title">Property Location & Hazards Map</h2>
-      <div id="map"></div>
-      <div class="map-controls">
-        <button class="map-control-btn active" onclick="toggleLayer('satellite')">🛰️ Satellite</button>
-        <button class="map-control-btn" onclick="toggleLayer('street')">🗺️ Street</button>
-        <button class="map-control-btn" onclick="toggleLayer('liquefaction')">🌊 Liquefaction</button>
-        <button class="map-control-btn" onclick="toggleLayer('flood')">💧 Flood</button>
-        <button class="map-control-btn" onclick="toggleLayer('erosion')">⛰️ Erosion</button>
+      
+      ${linzData?.latitude && linzData?.longitude ? `
+      <!-- Interactive Leaflet Map with Property Marker -->
+      <div id="map" style="width: 100%; height: 500px; border-radius: 12px; overflow: hidden; border: 2px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.3);"></div>
+      
+      <!-- Map Layer Controls -->
+      <div class="map-controls" style="display: flex; gap: 10px; margin-top: 15px; flex-wrap: wrap;">
+        <button class="map-control-btn active" onclick="toggleLayer('satellite')" style="padding: 8px 16px; background: var(--orange); color: white; border: none; border-radius: 6px; cursor: pointer; font-weight: 600;">🛰️ Satellite</button>
+        <button class="map-control-btn" onclick="toggleLayer('street')" style="padding: 8px 16px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; font-weight: 600;">🗺️ Street</button>
+        <a href="https://www.gns.cri.nz/Home/Our-Science/Natural-Hazards/Earthquake/Understanding-liquefaction" target="_blank" style="padding: 8px 16px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;"><span>🌊</span> Liquefaction Info</a>
+        <a href="https://www.hbrc.govt.nz/environment/flood-hazard-information/" target="_blank" style="padding: 8px 16px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;"><span>💧</span> Flood Info</a>
+        <a href="https://www.gns.cri.nz/Home/Our-Science/Natural-Hazards/Coastal-Hazards/Coastal-Erosion" target="_blank" style="padding: 8px 16px; background: var(--card); color: var(--text); border: 1px solid var(--border); border-radius: 6px; cursor: pointer; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;"><span>⛰️</span> Erosion Info</a>
       </div>
+      
+      <div style="margin-top: 20px; padding: 15px; background: var(--card); border-radius: 8px; border-left: 4px solid var(--orange);">
+        <p style="margin: 0; font-size: 14px; color: var(--muted);">
+          <strong>📍 Property Location:</strong> ${address}
+          <span style="display: block; margin-top: 8px; font-size: 12px;">
+            Coordinates: ${linzData.latitude.toFixed(8)}, ${linzData.longitude.toFixed(8)} (WGS84)
+          </span>
+        </p>
+      </div>
+      ` : `
+      <div style="width: 100%; height: 500px; border-radius: 12px; overflow: hidden; border: 2px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.3); background: var(--card); display: flex; align-items: center; justify-content: center;">
+        <p style="color: var(--muted); font-size: 16px;">🗺️ Map unavailable - coordinates not provided</p>
+      </div>
+      `}
     </div>
   </section>
   
-  <!-- LINZ Title Data -->
-  ${linzData ? `
+  <!-- Property Title Information (from MyProperty or LINZ) -->
+  ${linzData || (ratesData && ratesData.myPropertyData) ? `
   <section class="content-section">
     <div class="container">
-      <h2 class="section-title">LINZ Title Information</h2>
+      <h2 class="section-title">Property Title Information</h2>
       <div class="data-grid">
         <div class="data-card">
-          <h3>📋 Title Details</h3>
+          <h3>📄 Title Details</h3>
           <table class="data-table">
+            ${ratesData && ratesData.myPropertyData?.property?.record_of_title ? `
+            <tr>
+              <td>Title Number (Record of Title)</td>
+              <td>${ratesData.myPropertyData.property.record_of_title}</td>
+            </tr>
+            ` : linzData?.titleNumber ? `
             <tr>
               <td>Title Number</td>
               <td>${linzData.titleNumber || 'N/A'}</td>
             </tr>
+            ` : ''}
+            ${ratesData && ratesData.myPropertyData?.property?.legal_description ? `
+            <tr>
+              <td>Legal Description</td>
+              <td>${ratesData.myPropertyData.property.legal_description}</td>
+            </tr>
+            ` : linzData?.legalDescription ? `
             <tr>
               <td>Legal Description</td>
               <td>${linzData.legalDescription || 'N/A'}</td>
             </tr>
+            ` : ''}
+            ${ratesData && ratesData.myPropertyData?.property?.area_ha ? `
+            <tr>
+              <td>Area</td>
+              <td>${ratesData.myPropertyData.property.area_ha} ha</td>
+            </tr>
+            ` : linzData?.area ? `
             <tr>
               <td>Area</td>
               <td>${linzData.area || 'N/A'}</td>
             </tr>
+            ` : ''}
+            ${ratesData && ratesData.myPropertyData?.property?.valuation_number ? `
             <tr>
-              <td>Ownership</td>
-              <td>${linzData.ownership || 'N/A'}</td>
+              <td>Valuation Number</td>
+              <td>${ratesData.myPropertyData.property.valuation_number}</td>
             </tr>
+            ` : ''}
           </table>
         </div>
         
         <div class="data-card">
           <h3>⛓️ Easements</h3>
-          ${linzData.easements && linzData.easements.length > 0 ? `
+          ${ratesData && ratesData.myPropertyData?.easements && ratesData.myPropertyData.easements.length > 0 ? `
+            <ul class="hazards-list">
+              ${ratesData.myPropertyData.easements.map(easement => `
+                <li>
+                  <span class="hazard-icon">⛓️</span>
+                  <div>
+                    <strong>${easement.type || 'Easement'}</strong><br>
+                    <small>${easement.description || 'No description available'}</small>
+                  </div>
+                </li>
+              `).join('')}
+            </ul>
+          ` : linzData?.easements && linzData.easements.length > 0 ? `
             <ul class="hazards-list">
               ${linzData.easements.map(easement => `
                 <li>
-                  <span class="hazard-icon">⚡</span>
+                  <span class="hazard-icon">⛓️</span>
                   <div>
                     <strong>${easement.type || 'Easement'}</strong><br>
                     <small>${easement.description || 'No description available'}</small>
@@ -515,8 +569,7 @@ function generateHTMLReport(data) {
   </section>
   ` : ''}
   
-  <!-- Hazards Data -->
-  ${hazardsData ? `
+  <!-- Hazards Data -->  ${hazardsData ? `
   <section class="content-section">
     <div class="container">
       <h2 class="section-title">Natural Hazards Assessment</h2>
@@ -554,21 +607,36 @@ function generateHTMLReport(data) {
   <section class="content-section">
     <div class="container">
       <h2 class="section-title">Council Rates Information</h2>
+      
+      ${ratesData.myPropertyData?.property?.address ? `
+      <div class="data-card" style="margin-bottom: 20px;">
+        <h3>📍 Property Details</h3>
+        <table class="data-table">
+          ${ratesData.myPropertyData.property.address ? `<tr><td>Address</td><td>${ratesData.myPropertyData.property.address}</td></tr>` : ''}
+          ${ratesData.myPropertyData.property.valuation_number ? `<tr><td>Valuation Number</td><td>${ratesData.myPropertyData.property.valuation_number}</td></tr>` : ''}
+          ${ratesData.myPropertyData.property.record_of_title ? `<tr><td>Record of Title</td><td>${ratesData.myPropertyData.property.record_of_title}</td></tr>` : ''}
+          ${ratesData.myPropertyData.property.legal_description ? `<tr><td>Legal Description</td><td>${ratesData.myPropertyData.property.legal_description}</td></tr>` : ''}
+          ${ratesData.myPropertyData.property.area_ha ? `<tr><td>Area</td><td>${ratesData.myPropertyData.property.area_ha} ha</td></tr>` : ''}
+          ${ratesData.myPropertyData.property.property_id ? `<tr><td>Property ID</td><td>${ratesData.myPropertyData.property.property_id}</td></tr>` : ''}
+        </table>
+      </div>
+      ` : ''}
+      
       <div class="data-grid">
         <div class="data-card">
           <h3>💰 Valuation Details</h3>
           <table class="data-table">
             <tr>
               <td>Capital Value (CV)</td>
-              <td>$${ratesData.capitalValue?.toLocaleString() || 'N/A'}</td>
+              <td>${ratesData.capitalValue ? '$' + ratesData.capitalValue.toLocaleString() : 'N/A'}</td>
             </tr>
             <tr>
               <td>Land Value</td>
-              <td>$${ratesData.landValue?.toLocaleString() || 'N/A'}</td>
+              <td>${ratesData.landValue ? '$' + ratesData.landValue.toLocaleString() : 'N/A'}</td>
             </tr>
             <tr>
               <td>Improvements Value</td>
-              <td>$${ratesData.improvementsValue?.toLocaleString() || 'N/A'}</td>
+              <td>${ratesData.improvementsValue ? '$' + ratesData.improvementsValue.toLocaleString() : 'N/A'}</td>
             </tr>
             <tr>
               <td>Valuation Date</td>
@@ -577,23 +645,37 @@ function generateHTMLReport(data) {
           </table>
         </div>
         
+        ${ratesData.myPropertyData?.council_rates?.charges && ratesData.myPropertyData.council_rates.charges.length > 0 ? `
+        <div class="data-card">
+          <h3>📊 Rates Breakdown</h3>
+          <table class="data-table">
+            ${ratesData.myPropertyData.council_rates.charges.map(charge => `
+            <tr>
+              <td>${charge.type || 'General Rates'}</td>
+              <td>${charge.description ? charge.description + (charge.factor ? ' (' + charge.factor + ')' : '') : ''}</td>
+              <td style="text-align: right;">${charge.total ? '$' + charge.total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) : 'N/A'}</td>
+            </tr>
+            `).join('')}
+            ${ratesData.totalRates ? `
+            <tr style="font-weight: bold;">
+              <td>Total Annual Rates</td>
+              <td></td>
+              <td style="text-align: right;">$${ratesData.totalRates.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+            </tr>
+            ` : ''}
+          </table>
+        </div>
+        ` : `
         <div class="data-card">
           <h3>📊 Annual Rates</h3>
           <table class="data-table">
             <tr>
-              <td>General Rates</td>
-              <td>$${ratesData.generalRates?.toLocaleString() || 'N/A'}</td>
-            </tr>
-            <tr>
-              <td>Targeted Rates</td>
-              <td>$${ratesData.targetedRates?.toLocaleString() || 'N/A'}</td>
-            </tr>
-            <tr>
               <td>Total Annual Rates</td>
-              <td><strong>$${ratesData.totalRates?.toLocaleString() || 'N/A'}</strong></td>
+              <td>${ratesData.totalRates ? '$' + ratesData.totalRates.toLocaleString() : 'N/A'}</td>
             </tr>
           </table>
         </div>
+        `}
       </div>
     </div>
   </section>
@@ -616,7 +698,7 @@ function generateHTMLReport(data) {
         
         <div class="action-buttons">
           <a href="#" class="btn btn-primary" onclick="window.print()">🖨️ Print Report</a>
-          <a href="/download-pdf/${requestId}" class="btn btn-secondary">📥 Download PDF</a>
+          <a href="#" class="btn btn-secondary" onclick="downloadAsPDF()">📥 Download PDF</a>
           <a href="mailto:gerhard@aidriven.biz?subject=Question about report ${requestId}" class="btn btn-secondary">✉️ Ask a Question</a>
         </div>
         
@@ -627,81 +709,87 @@ function generateHTMLReport(data) {
     </div>
   </footer>
   
-  <!-- Leaflet JS -->
+  <!-- Leaflet JS for Maps -->
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   
   <script>
-    // Initialize map
-    const map = L.map('map').setView([${linzData?.latitude || -39.4928}, ${linzData?.longitude || 176.9120}], 15);
+    // Initialize map with property coordinates
+    const propertyLat = ${linzData?.latitude || -39.4928};
+    const propertyLon = ${linzData?.longitude || 176.9120};
+    const propertyAddress = "${address.replace(/"/g, '\\"')}";
     
-    // Base layers
+    const map = L.map('map').setView([propertyLat, propertyLon], 18);
+    
+    // Define tile layers
     const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-      attribution: 'Tiles © Esri'
+      attribution: 'Tiles © Esri',
+      maxZoom: 19
     });
     
     const streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
+      attribution: '© OpenStreetMap contributors',
+      maxZoom: 19
     });
     
-    // Add default layer
+    const hybridLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
+      attribution: '© Esri',
+      maxZoom: 19
+    });
+    
+    // Add satellite as default
     satelliteLayer.addTo(map);
     
-    // Property marker
-    L.marker([${linzData?.latitude || -39.4928}, ${linzData?.longitude || 176.9120}])
-      .addTo(map)
-      .bindPopup('<strong>${address}</strong><br>Subject Property')
-      .openPopup();
+    // Add property marker
+    const marker = L.marker([propertyLat, propertyLon]).addTo(map);
+    marker.bindPopup('<strong>' + propertyAddress + '</strong><br>📍 Subject Property').openPopup();
     
-    // Layer control
+    // Layer toggle function
     let currentLayer = 'satellite';
     
     function toggleLayer(layerName) {
-      // Remove all overlays first
+      // Remove all tile layers
       map.eachLayer(layer => {
         if (layer instanceof L.TileLayer) {
           map.removeLayer(layer);
         }
       });
       
-      // Update button states
+      // Update button styles
       document.querySelectorAll('.map-control-btn').forEach(btn => {
         btn.classList.remove('active');
+        btn.style.background = 'var(--card)';
+        btn.style.color = 'var(--text)';
       });
-      event.target.classList.add('active');
       
-      // Add selected layer
+      // Add selected layer and highlight button
       if (layerName === 'satellite') {
         satelliteLayer.addTo(map);
         currentLayer = 'satellite';
+        event.target.style.background = 'var(--orange)';
+        event.target.style.color = 'white';
       } else if (layerName === 'street') {
         streetLayer.addTo(map);
         currentLayer = 'street';
-      } else if (layerName === 'liquefaction') {
-        // TODO: Add liquefaction overlay from hazards data
-        streetLayer.addTo(map);
-        alert('Liquefaction overlay coming soon!');
-        currentLayer = 'liquefaction';
-      } else if (layerName === 'flood') {
-        // TODO: Add flood overlay from hazards data
-        streetLayer.addTo(map);
-        alert('Flood overlay coming soon!');
-        currentLayer = 'flood';
-      } else if (layerName === 'erosion') {
-        // TODO: Add erosion overlay from hazards data
-        streetLayer.addTo(map);
-        alert('Erosion overlay coming soon!');
-        currentLayer = 'erosion';
+        event.target.style.background = 'var(--orange)';
+        event.target.style.color = 'white';
+      } else if (layerName === 'hybrid') {
+        satelliteLayer.addTo(map);
+        hybridLayer.addTo(map);
+        currentLayer = 'hybrid';
+        event.target.style.background = 'var(--orange)';
+        event.target.style.color = 'white';
       }
     }
     
-    // Helper function for hazard classes
-    function getHazardClass(risk) {
-      if (!risk) return 'status-warning';
-      const riskLower = risk.toLowerCase();
-      if (riskLower.includes('high') || riskLower.includes('severe')) return 'status-danger';
-      if (riskLower.includes('low') || riskLower.includes('minimal')) return 'status-success';
-      return 'status-warning';
+    // Download as PDF using browser's print-to-PDF
+    function downloadAsPDF() {
+      // Show print dialog
+      window.print();
+      // Note: Browser will handle "Save as PDF" option in print dialog
+      // This is the most reliable cross-browser solution for static sites
     }
+    
+    console.log('✅ Map initialized at:', propertyLat, propertyLon);
   </script>
 </body>
 </html>`;
