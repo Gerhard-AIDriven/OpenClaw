@@ -1,13 +1,9 @@
-# Cloudflare Pages _redirects file
-# Documentation: https://developers.cloudflare.com/pages/configuration/serving-pages/#redirects
+# Cloudflare Pages redirects configuration
+# Allow direct access to HTML files in /reports/
+# Don't rewrite .html file requests to index.html
 
-# IMPORTANT: Cloudflare Pages serves static files automatically
-# We only need redirects for special cases
+# Serve reports directly (no SPA routing)
+/reports/*    /reports/:splat    200
 
-# DO NOT use catch-all rewrites - they break static file serving
-# Remove any /* /index.html rules
-
-# If you need custom redirects, add them here:
-# /old-path /new-path 301
-
-# That's it! Static files (HTML, CSS, JS, images) are served automatically.
+# Everything else goes to index.html (for future SPA if needed)
+/*    /index.html    404
