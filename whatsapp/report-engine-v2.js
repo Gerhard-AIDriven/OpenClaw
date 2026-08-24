@@ -647,7 +647,7 @@ function generateHTMLReport(data) {
         
         ${ratesData.myPropertyData?.council_rates?.charges && ratesData.myPropertyData.council_rates.charges.length > 0 ? `
         <div class="data-card">
-          <h3>📊 Rates Breakdown</h3>
+          <h3>📊 Rates Breakdown (City Council)</h3>
           <table class="data-table">
             ${ratesData.myPropertyData.council_rates.charges.map(charge => `
             <tr>
@@ -657,9 +657,8 @@ function generateHTMLReport(data) {
             </tr>
             `).join('')}
             ${ratesData.totalRates ? `
-            <tr style="font-weight: bold;">
-              <td>Total Annual Rates</td>
-              <td></td>
+            <tr style="font-weight: bold; background: rgba(247,147,30,0.1);">
+              <td colspan="2">Subtotal (City Council)</td>
               <td style="text-align: right;">$${ratesData.totalRates.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
             </tr>
             ` : ''}
@@ -676,6 +675,48 @@ function generateHTMLReport(data) {
           </table>
         </div>
         `}
+        
+        ${ratesData.myPropertyData?.regional_council_rates?.charges && ratesData.myPropertyData.regional_council_rates.charges.length > 0 ? `
+        <div class="data-card" style="border-left: 4px solid #007A4D;">
+          <h3 style="color: #007A4D;">🌿 Rates Breakdown (Regional Council)</h3>
+          <p style="font-size: 13px; color: #888; margin-bottom: 15px;">Hawke's Bay Regional Council rates for environmental services, flood protection, public transport</p>
+          <table class="data-table">
+            ${ratesData.myPropertyData.regional_council_rates.charges.map(charge => `
+            <tr>
+              <td>${charge.type || 'Regional Rate'}</td>
+              <td>${charge.description ? charge.description : ''}</td>
+              <td style="text-align: right;">${charge.amount ? '$' + charge.amount.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2}) : 'N/A'}</td>
+            </tr>
+            `).join('')}
+            ${ratesData.myPropertyData.regional_council_rates.total_rates_levied ? `
+            <tr style="font-weight: bold; background: rgba(0,122,77,0.1);">
+              <td colspan="2">Subtotal (Regional Council)</td>
+              <td style="text-align: right;">$${ratesData.myPropertyData.regional_council_rates.total_rates_levied.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+            </tr>
+            ` : ''}
+          </table>
+        </div>
+        ` : ''}
+        
+        ${ratesData.totalRates && ratesData.myPropertyData?.regional_council_rates?.total_rates_levied ? `
+        <div class="data-card" style="grid-column: 1 / -1; background: linear-gradient(135deg, rgba(247,147,30,0.1), rgba(0,122,77,0.1)); border: 2px solid #f7931e;">
+          <h3 style="text-align: center; color: #f7931e;">💰 TOTAL ANNUAL RATES SUMMARY</h3>
+          <table class="data-table" style="max-width: 400px; margin: 0 auto;">
+            <tr>
+              <td><strong>City Council Rates:</strong></td>
+              <td style="text-align: right;">$${ratesData.totalRates.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+            </tr>
+            <tr>
+              <td><strong>Regional Council Rates:</strong></td>
+              <td style="text-align: right;">$${ratesData.myPropertyData.regional_council_rates.total_rates_levied.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+            </tr>
+            <tr style="font-weight: bold; font-size: 18px; background: rgba(247,147,30,0.2);">
+              <td>TOTAL ANNUAL RATES:</td>
+              <td style="text-align: right; color: #f7931e;">$${(ratesData.totalRates + ratesData.myPropertyData.regional_council_rates.total_rates_levied).toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}</td>
+            </tr>
+          </table>
+        </div>
+        ` : ''}
       </div>
     </div>
   </section>
