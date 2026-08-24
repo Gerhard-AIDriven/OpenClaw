@@ -1,17 +1,13 @@
-# Cloudflare Pages redirects configuration
-# CRITICAL: Must serve .html files directly, NOT rewrite to index.html
+# Cloudflare Pages _redirects file
+# Documentation: https://developers.cloudflare.com/pages/configuration/serving-pages/#redirects
 
-# Rule 1: Serve all .html files directly (reports, etc.)
-/*.html    /*.html    200
+# IMPORTANT: Cloudflare Pages serves static files automatically
+# We only need redirects for special cases
 
-# Rule 2: Reports directory - serve as-is
-/reports/*    /reports/:splat    200
+# DO NOT use catch-all rewrites - they break static file serving
+# Remove any /* /index.html rules
 
-# Rule 3: API endpoints - pass through
-/api/*    /api/:splat    200
+# If you need custom redirects, add them here:
+# /old-path /new-path 301
 
-# Rule 4: Existing files should be served directly
-# (This prevents rewriting real files to index.html)
-
-# DO NOT add catch-all rewrite to index.html
-# Cloudflare Pages serves static files automatically
+# That's it! Static files (HTML, CSS, JS, images) are served automatically.
