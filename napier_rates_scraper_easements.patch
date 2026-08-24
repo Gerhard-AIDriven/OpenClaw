@@ -1,0 +1,34 @@
+--- a/napier_rates_scraper.py
++++ b/napier_rates_scraper.py
+@@ -310,6 +310,28 @@ def scrape_rates(page, rid: str, display: str) -> dict:
+                     })
+     out["building_consents"] = consents if consents else None
+ 
++    # ── Easements (if available on the page) 
++    # Look for easements section in tables
++    easements = []
++    for tbl in table_texts:
++        for i, row in enumerate(tbl):
++            joined_row = ' '.join(row).lower()
++            if 'easement' in joined_row or 'right of way' in joined_row:
++                if len(row) >= 2:
++                    easements.append({
++                        "type": row[0] if 'easement' not in row[0].lower() else 'Easement',
++                        "description": row[1] if len(row) > 1 else row[0],
++                    })
++    
++    # Also check dt/dd pairs for easements
++    for dt, dd in zip(dts, dds):
++        label = dt.inner_text().strip().lower()
++        value = dd.inner_text().strip()
++        if 'easement' in label or 'right of way' in label:
++            easements.append({
++                "type": dt.inner_text().strip(),
++                "description": value,
++            })
++    
++    out["easements"] = easements if easements else []
++
+     # ── Clean up empty dicts and None values 
+     for key in list(out.keys()):
+         if isinstance(out[key], dict) and not out[key]:

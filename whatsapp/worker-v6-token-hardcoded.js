@@ -59,6 +59,50 @@ export default {
 // MANUAL QUEUE HANDLER
 // ============================================
 
+/**
+ * Check if address is in Napier and has a valid RID
+ * Returns: { isNapier: boolean, hasRID: boolean, rid: string|null }
+ */
+async function checkNapierAddress(address) {
+  try {
+    // Simple Napier detection
+    const napierKeywords = ['napier', 'taradale', 'greenmeadows', 'westshore', 'marewa', 'poraiti'];
+    const isNapier = napierKeywords.some(keyword => address.toLowerCase().includes(keyword));
+    
+    if (!isNapier) {
+      return { isNapier: false, hasRID: false, rid: null };
+    }
+    
+    // Try to resolve address via NCC API
+    const url = `https://data.napier.govt.nz/regional/ncc/property_find.php?search=${encodeURIComponent(address)}&type=address`;
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: { 'Accept': 'application/json' },
+      cf: { cacheTtl: 60 } // Cache for 1 minute
+    });
+    
+    if (!response.ok) {
+      console.log(`⚠️ NCC API returned ${response.status} for: ${address}`);
+      return { isNapier: true, hasRID: false, rid: null };
+    }
+    
+    const results = await response.json();
+    
+    if (!results || results.length === 0) {
+      console.log(`ℹ️ No RID found for Napier address: ${address}`);
+      return { isNapier: true, hasRID: false, rid: null };
+    }
+    
+    const bestMatch = results[0];
+    console.log(`✅ Found RID ${bestMatch.id} for: ${bestMatch.value}`);
+    return { isNapier: true, hasRID: true, rid: bestMatch.id };
+    
+  } catch (error) {
+    console.error(`❌ Error checking Napier address: ${error.message}`);
+    return { isNapier: false, hasRID: false, rid: null };
+  }
+}
+
 async function handleManualQueue(request, env) {
   try {
     const body = await request.json();
@@ -81,15 +125,43 @@ async function handleManualQueue(request, env) {
       console.log('🏗️  Built LINZ address from structured:', linzAddress);
     }
 
+    // Determine if this can be automated or needs manual processing
+    let requiresManual = false;
+    let automationNotes = '';
+    
+    // Check if rates/council addon is requested
+    const hasRatesAddon = addons && (addons.rates || addons['council-fees'] || addons['rates-information']);
+    
+    if (hasRatesAddon) {
+      // Check if Napier address with valid RID
+      const napierCheck = await checkNapierAddress(linzAddress);
+      
+      if (!napierCheck.isNapier) {
+        requiresManual = true;
+        automationNotes = `Non-Napier property (${linzAddress}) - manual council research required`;
+        console.log(`ℹ️ ${automationNotes}`);
+      } else if (!napierCheck.hasRID) {
+        requiresManual = true;
+        automationNotes = `Napier address not found in MyProperty system - manual lookup required`;
+        console.log(`⚠️ ${automationNotes}`);
+      } else {
+        automationNotes = `Napier property with RID ${napierCheck.rid} - automated rates fetch possible`;
+        console.log(`✅ ${automationNotes}`);
+      }
+    }
+    
     const manualRequest = {
       id: requestId,
       source: 'google-form',
       customer,
-      address: linzAddress,  // Use the constructed address for LINZ
-      addressStructured: addressStructured || null,  // Keep structured data for reference
+      address: linzAddress,
+      addressStructured: addressStructured || null,
       package: pkg || 'basic',
       addons: addons || {},
-      requiresManualProcessing: requiresManualProcessing !== undefined ? requiresManualProcessing : true,
+      requiresManualProcessing: requiresManual,
+      automationNotes: automationNotes,
+      napierRID: hasRatesAddon && automationNotes.includes('automated') ? 
+        (await checkNapierAddress(linzAddress)).rid : null,
       notes: notes || '',
       submittedAt: new Date().toISOString()
     };
@@ -110,7 +182,7 @@ async function handleManualQueue(request, env) {
 
     // ALWAYS send customer confirmation email
     const customerSubject = `🏠 Property Due Diligence Request Received - ${address}`;
-    const customerBody = generateCustomerConfirmationEmail(customer, address, pkg, addons, manualRequest.requiresManualProcessing);
+    const customerBody = generateCustomerConfirmationEmail(customer, address, pkg, addons, requiresManual, automationNotes);
     
     try {
       await sendEmail(customer.email, customerSubject, customerBody, env);
@@ -120,7 +192,7 @@ async function handleManualQueue(request, env) {
     }
 
     // ONLY send Gerhard notification if manual processing is required
-    if (manualRequest.requiresManualProcessing) {
+    if (requiresManual) {
       const gerhardSubject = `⚠️ Manual Processing Required: ${address}`;
       const gerhardBody = generateGerhardNotificationEmail(manualRequest);
       
@@ -132,7 +204,7 @@ async function handleManualQueue(request, env) {
         console.error(`⚠️ Failed to send Gerhard notification: ${emailError.message}`);
       }
     } else {
-      console.log(`ℹ️ Automated request - no Gerhard notification needed`);
+      console.log(`ℹ️ Automated request - no Gerhard notification needed (${automationNotes})`);
     }
 
     return new Response(JSON.stringify({
@@ -405,18 +477,26 @@ function generateCustomerConfirmationEmail(customer, address, pkg, addons, requi
   body += `\n`;
   
   if (requiresManual) {
-    body += `Your request includes add-ons (Rates/Council Fees) that require manual processing.\n`;
-    body += `Gerhard will review your request and send the report within 24-48 hours.\n\n`;
+    // Custom message based on why it needs manual work
+    if (automationNotes && automationNotes.includes('Non-Napier')) {
+      body += `Your request includes council rates information for a property outside Napier City.\n`;
+      body += `Gerhard will manually research this from the relevant council and send your report within 24-48 hours.\n\n`;
+    } else if (automationNotes && automationNotes.includes('not found')) {
+      body += `The property address provided could not be automatically located in the council system.\n`;
+      body += `Gerhard will manually verify the address and send your report within 24-48 hours.\n\n`;
+    } else {
+      body += `Your request includes add-ons that require manual processing.\n`;
+      body += `Gerhard will review your request and send the report within 24-48 hours.\n\n`;
+    }
     body += `If you have urgent questions, reply to this email.\n`;
   } else {
-    body += `Your automated report is being generated and will be emailed to you shortly (typically within 5-10 minutes).\n\n`;
-    body += `The report will include:\n`;
-    body += `- LINZ property data (title, ownership, parcels)\n`;
-    body += `- Natural hazards assessment\n`;
-    body += `- Interactive maps and property analysis\n`;
+    body += `✅ Your request is being processed automatically.\n`;
+    body += `You will receive your comprehensive due diligence report shortly (typically within 5-10 minutes).\n\n`;
   }
   
-  body += `\nThank you for choosing AI Driven!\n`;
+  body += `Ngā mihi,\n`;
+  body += `AI Driven Team\n`;
+  body += `Practical AI for real businesses\n`;
   body += `www.aidriven.biz\n`;
   
   return body;
