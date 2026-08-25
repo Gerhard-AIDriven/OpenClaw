@@ -45,20 +45,21 @@ app.post('/api/generate-report', async (req, res) => {
     
     // Create report directory
     const reportId = report.reportId;
-    const reportDir = path.join(__dirname, 'web-reports', reportId);
+    const reportDir = path.join(__dirname, '..', '..', 'reports', 'html');
     await fs.mkdir(reportDir, { recursive: true });
     
     // Save JSON
     await fs.writeFile(
-      path.join(reportDir, 'report.json'),
+      path.join(__dirname, 'web-reports', reportId, 'report.json'),
       JSON.stringify(report, null, 2),
       'utf8'
     );
     
     // Save HTML
     const html = generateReportHTML(report);
+    const filename = `${reportId}.html`;
     await fs.writeFile(
-      path.join(reportDir, 'report.html'),
+      path.join(reportDir, filename),
       html,
       'utf8'
     );

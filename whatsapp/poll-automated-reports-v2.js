@@ -22,7 +22,7 @@ const { getHazardsData } = require('./hazards-linz-integration');
 // Configuration
 const WORKER_URL = 'https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev';
 const POLL_TOKEN = 'aidriven_poll_secret_2026_x';
-const REPORTS_DIR = path.join(__dirname, '..', 'aidriven-website', 'reports');
+const REPORTS_DIR = path.join(__dirname, '..', 'reports');
 const HTML_DIR = path.join(REPORTS_DIR, 'html');
 
 // Ensure directories exist
