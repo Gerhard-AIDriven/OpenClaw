@@ -23,9 +23,19 @@ async function main() {
   const requestId = `manual_${Date.now()}`;
   const customer = { email: 'test@aidriven.biz' };
   
+  // For manual triggers, we need to provide a mock "addressStructured" object
+  // so the poller's new cleaning logic can work for the Napier scraper.
+  const addressStructured = {
+    houseNumber: '31',
+    streetName: 'Douglas McLean',
+    streetType: 'avenue',
+    latitude: -39.5005800554,
+    longitude: 176.90405875
+  };
+  
   try {
-    // Trigger the generation logic used by the poller
-    const result = await generateReport(address, 'Basic', requestId, customer);
+    // Trigger the generation logic used by the poller, passing structured data
+    const result = await generateReport(address, 'Basic', requestId, customer, addressStructured);
     
     if (result.success) {
       console.log(`✅ Report generated locally: ${result.htmlPath}`);
