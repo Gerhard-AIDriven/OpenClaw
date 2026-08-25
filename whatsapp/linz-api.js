@@ -52,6 +52,60 @@ async function geocodeWithStructuredData(structured) {
   console.log(`📊 Found ${features.length} matching addresses`);
   
   if (features.length === 0) {
+    // Fallback 1: Try house number + suburb/city only (drop street name entirely for fuzzy match)
+    console.log(`   Fallback: Trying house number + suburb/city only...`);
+    let fallbackFilter = `address_number='${houseNumber}'`;
+    if (capSuburb) fallbackFilter += `+AND+suburb_locality='${encodeURIComponent(capSuburb)}'`;
+    if (capCity) fallbackFilter += `+AND+town_city='${encodeURIComponent(capCity)}'`;
+    
+    const fallbackFeatures = await queryWFS(fallbackFilter);
+    console.log(`📊 Found ${fallbackFeatures.length} addresses at number ${houseNumber} in ${capSuburb || capCity}`);
+    
+    if (fallbackFeatures.length > 0) {
+      // Try to find best match using Levenshtein distance on street name
+      const inputStreet = (capStreetName + (streetType ? ' ' + streetType : '')).toLowerCase();
+      let bestMatch = null;
+      let bestScore = Infinity;
+      
+      for (const f of fallbackFeatures) {
+        const candidate = (f.properties.full_road_name || '').toLowerCase();
+        const score = levenshteinDistance(inputStreet, candidate);
+        if (score < bestScore) {
+          bestScore = score;
+          bestMatch = f;
+        }
+      }
+      
+      // Accept if edit distance is reasonable (< 6 edits for typical street name corrections)
+      if (bestMatch && bestScore < 6) {
+        const coords = bestMatch.geometry?.coordinates;
+        if (coords) {
+          console.log(`✅ Fuzzy matched: ${bestMatch.properties.full_address} (edit distance: ${bestScore} from "${inputStreet}")`);
+          return {
+            success: true,
+            requiresManual: false,
+            address: bestMatch.properties.full_address,
+            latitude: parseFloat(coords[1]),
+            longitude: parseFloat(coords[0]),
+            matchQuality: 'FUZZY',
+            originalAddress: [houseNumber, capStreetName, streetType, suburb, city].filter(p=>p).join(', '),
+            correctedStreet: bestMatch.properties.full_road_name,
+            editDistance: bestScore,
+            raw: bestMatch.properties
+          };
+        }
+      }
+      
+      // No good fuzzy match — return suggestions
+      return {
+        success: false,
+        requiresManual: true,
+        reason: `Address "${houseNumber} ${capStreetName}${streetType ? ' ' + streetType : ''}" not found. ${fallbackFeatures.length} addresses exist at number ${houseNumber} in ${capSuburb || capCity}.`,
+        address: [houseNumber, capStreetName, streetType, suburb, city].filter(p=>p).join(', '),
+        suggestions: fallbackFeatures.slice(0, 5).map(f => f.properties.full_address_ascii || f.properties.full_address)
+      };
+    }
+    
     return {
       success: false,
       requiresManual: true,
@@ -79,6 +133,29 @@ async function geocodeWithStructuredData(structured) {
     matchQuality: 'EXACT',
     raw: match.properties
   };
+}
+
+/**
+ * Calculate Levenshtein edit distance between two strings
+ */
+function levenshteinDistance(a, b) {
+  const m = a.length;
+  const n = b.length;
+  const dp = Array.from({ length: m + 1 }, () => Array(n + 1).fill(0));
+  
+  for (let i = 0; i <= m; i++) dp[i][0] = i;
+  for (let j = 0; j <= n; j++) dp[0][j] = j;
+  
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (a[i - 1] === b[j - 1]) {
+        dp[i][j] = dp[i - 1][j - 1];
+      } else {
+        dp[i][j] = 1 + Math.min(dp[i - 1][j], dp[i][j - 1], dp[i - 1][j - 1]);
+      }
+    }
+  }
+  return dp[m][n];
 }
 
 /**

@@ -1,0 +1,140 @@
+Here is the general format for querying the Titles layer:
+
+https://data.linz.govt.nz/services/query/v1/vector.json?key=b2e35aafd4e848e9b0265f1caf575255&layer=50804&x=[x]&y=[y]&max_results=3&radius=10000&geometry=true&with_field_names=true
+
+Replace [x] and [y] with the proper coordinates.
+
+https://data.linz.govt.nz/services/query/v1/vector.json?key=b2e35aafd4e848e9b0265f1caf575255&layer=50804&x=176.9038079&y=-39.5006425&max_results=3&radius=10000&geometry=true&with_field_names=true
+
+returns
+
+{
+	"vectorQuery": {
+	"layers": {
+	"50804": {
+	"type": "FeatureCollection",
+	"crs": {
+"type": "name",
+"properties": {
+"name": "EPSG:4326"
+}
+},
+"features": [
+{
+"type": "Feature",
+"properties": {
+"id": 1902365,
+"title_no": "HB138/197",
+"status": "LIVE",
+"type": "Freehold",
+"land_district": "Hawkes Bay",
+"issue_date": "1950-12-01 00:00:00",
+"guarantee_status": "Guarantee",
+"estate_description": "Fee Simple, 1/1, Part Lot 2 Deposited Plan 6187, 1,315 m2",
+"number_owners": 1,
+"spatial_extents_shared": false
+},
+"distance": 0,
+"id": 4755579,
+"geometry": {
+"type": "MultiPolygon",
+"coordinates": [
+[
+[
+[176.90384043, -39.5002919],
+[176.90387673, -39.50029415],
+[176.90406605, -39.50045332],
+[176.90389668, -39.50057422],
+[176.9037221, -39.50069885],
+[176.90363608, -39.50076025],
+[176.90351893, -39.50066175],
+[176.90350532, -39.50049627],
+[176.90384043, -39.5002919]
+]
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"id": 1817046,
+"title_no": "HBE2/765",
+"status": "LIVE",
+"type": "Freehold",
+"land_district": "Hawkes Bay",
+"issue_date": "1972-11-22 00:00:00",
+"guarantee_status": "Guarantee",
+"estate_description": "Fee Simple, 1/1, Lot 88 Deposited Plan 8162, 803 m2",
+"number_owners": 2,
+"spatial_extents_shared": false
+},
+"distance": 0,
+"id": 8458653,
+"geometry": {
+"type": "MultiPolygon",
+"coordinates": [
+[
+[
+[176.90389663, -39.50057423],
+[176.90406601, -39.50045336],
+[176.9042149, -39.50057854],
+[176.90383209, -39.50085168],
+[176.90372213, -39.50069887],
+[176.90389663, -39.50057423]
+]
+]
+]
+}
+},
+{
+"type": "Feature",
+"properties": {
+"id": 1904596,
+"title_no": "HBJ4/163",
+"status": "LIVE",
+"type": "Freehold",
+"land_district": "Hawkes Bay",
+"issue_date": "1982-05-27 00:00:00",
+"guarantee_status": "Guarantee",
+"estate_description": "Fee Simple, 1/1, Lot 87 Deposited Plan 8162, 998 m2",
+"number_owners": 1,
+"spatial_extents_shared": false
+},
+"distance": 10,
+"id": 4745384,
+"geometry": {
+"type": "MultiPolygon",
+"coordinates": [
+[
+[
+[176.90363608, -39.50076025],
+[176.9037221, -39.50069885],
+[176.90383215, -39.5008517],
+[176.9039387, -39.50099967],
+[176.90396618, -39.5010378],
+[176.90355163, -39.50105833],
+[176.90351893, -39.50066175],
+[176.90363608, -39.50076025]
+]
+]
+]
+}
+}
+],
+"field_names": [
+"id",
+"title_no",
+"status",
+"type",
+"land_district",
+"issue_date",
+"guarantee_status",
+"estate_description",
+"number_owners",
+"spatial_extents_shared"
+]
+}
+}
+}
+}

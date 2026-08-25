@@ -1,8 +1,8 @@
 /**
- * LINZ Data Service API Integration
+ * LINZ Data Service API Integration - FIXED VERSION
  * 
- * Fetches property address geocoding from LINZ Addresses layer
- * using Vector Query API
+ * Fetches property address geocoding from LINZ Addresses layer using Vector Query API
+ * IMPROVED: Proper house number + street matching, no dangerous fallbacks
  * 
  * API Key: b2e35aafd4e848e9b0265f1caf575255 (Gerhard's key)
  * Layer: 123113 (NZ Addresses)
@@ -10,24 +10,35 @@
 
 const LINZ_API_KEY = 'b2e35aafd4e848e9b0265f1caf575255';
 const LINZ_VECTOR_URL = 'https://data.linz.govt.nz/services/query/v1/vector.json';
-const ADDRESSES_LAYER = '123113'; // NZ Addresses layer
+const ADDRESSES_LAYER = '123113';
 
 /**
- * Geocode address to get coordinates
- * Uses LINZ Addresses vector query API with multi-point search
+ * Geocode address - FIXED version with proper house number matching
  */
-async function geocodeAddress(address) {
+async function geocodeAddress(address, addressStructured = null) {
   try {
     console.log(`🔍 Geocoding address: ${address}`);
     
-    // Normalize target address for matching
-    const targetLower = address.toLowerCase().replace(/,/g, '').replace(/\s+/g, ' ').trim();
-    const streetPart = targetLower.split(' ')[0]; // house number
-    const roadPart = targetLower.split(' ').slice(1, 4).join(' '); // road name
+    // Parse house number and street name
+    let houseNumber = null;
+    let streetName = null;
     
-    // Search from Napier center with wide radius
+    if (addressStructured && addressStructured.houseNumber && addressStructured.streetName) {
+      houseNumber = addressStructured.houseNumber.trim();
+      streetName = [addressStructured.streetName, addressStructured.streetType, addressStructured.suburb]
+        .filter(p => p).join(' ').trim();
+      console.log(`   Using structured: "${houseNumber} ${streetName}"`);
+    } else {
+      const parts = address.split(/[,\s]+/).filter(Boolean);
+      houseNumber = parts[0];
+      streetName = parts.slice(1).join(' ');
+    }
+    
+    const targetLower = address.toLowerCase().replace(/,/g, '').replace(/\s+/g, ' ').trim();
+    
+    // Search from Napier center
     const napierCenter = { x: 176.9200, y: -39.4900 };
-    const url = `${LINZ_VECTOR_URL}?key=${LINZ_API_KEY}&layer=${ADDRESSES_LAYER}&x=${napierCenter.x}&y=${napierCenter.y}&max_results=100&radius=15000&geometry=true&with_field_names=true`;
+    const url = `${LINZ_VECTOR_URL}?key=${LINZ_API_KEY}&layer=${ADDRESSES_LAYER}&x=${napierCenter.x}&y=${napierCenter.y}&max_results=200&radius=15000&geometry=true&with_field_names=true`;
     
     const response = await fetch(url, {
       headers: {
@@ -44,43 +55,45 @@ async function geocodeAddress(address) {
     
     const data = await response.json();
     const features = data.vectorQuery?.layers?.[ADDRESSES_LAYER]?.features || [];
-    
-    console.log(`📊 Found ${features.length} addresses in search area`);
+    console.log(`📊 Found ${features.length} addresses`);
     
     if (features.length === 0) {
-      throw new Error('No addresses found in search area');
+      throw new Error('No addresses found');
     }
     
     // Strategy 1: Exact match on full address
     let match = features.find(f => {
-      const addr = (f.properties.full_address_ascii || '').toLowerCase().replace(/,/g, '').replace(/\s+/g, ' ').trim();
+      const addr = (f.properties.full_address_ascii || '').toLowerCase()
+        .replace(/,/g, '').replace(/\s+/g, ' ').trim();
       return addr === targetLower;
     });
     
-    // Strategy 2: Match on street number + road name
+    // Strategy 2: Match house number + street contains (MOST IMPORTANT)
     if (!match) {
       match = features.find(f => {
         const addr = (f.properties.full_address_ascii || '').toLowerCase();
-        return addr.includes(streetPart) && addr.includes(roadPart);
+        const num = f.properties.address_number || f.properties.house_number || '';
+        return num === houseNumber && addr.includes(streetName);
       });
+      if (match) console.log(`   ✅ Matched by house number + street`);
     }
     
-    // Strategy 3: Match on road name only (return closest)
+    // Strategy 3: Street name contains (any house number)
     if (!match) {
       match = features.find(f => {
         const addr = (f.properties.full_address_ascii || '').toLowerCase();
-        return addr.includes(roadPart);
+        return addr.includes(streetName);
       });
+      if (match) console.log(`   ⚠️ Matched by street only`);
     }
     
-    // Strategy 4: Return first feature as fallback
-    if (!match && features.length > 0) {
-      match = features[0];
-      console.log(`⚠️ Using first available address: ${match.properties.full_address}`);
-    }
-    
+    // NO automatic fallback - throw error if no match
     if (!match) {
-      throw new Error('No matching addresses found');
+      console.log(`❌ No match found. First 5 results:`);
+      features.slice(0, 5).forEach(f => {
+        console.log(`   - ${f.properties.full_address_ascii || f.properties.full_address}`);
+      });
+      throw new Error(`Address not found: ${address}`);
     }
     
     console.log(`✅ Matched: ${match.properties.full_address}`);
@@ -101,20 +114,18 @@ async function geocodeAddress(address) {
 
 /**
  * Get LINZ data for an address
- * Main entry point - geocodes address and returns all available data
  */
-async function getLINZData(address) {
+async function getLINZData(address, addressStructured = null) {
   try {
     console.log('🏛️  Fetching LINZ Data...');
-    
-    const geoResult = await geocodeAddress(address);
+    const geoResult = await geocodeAddress(address, addressStructured);
     
     return {
       success: true,
       address: geoResult.address,
       latitude: geoResult.latitude,
       longitude: geoResult.longitude,
-      titleNumber: null, // Would need titles layer
+      titleNumber: null,
       legalDescription: null,
       area: null,
       ownership: null,

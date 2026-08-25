@@ -1,12 +1,8 @@
 /**
  * Push Reports to GitHub for Cloudflare Pages Deployment
  * 
- * This script:
- * 1. Copies generated HTML reports to aidriven-website/reports/html/
- * 2. Commits changes with descriptive message
- * 3. Pushes to GitHub
- * 4. Waits for Cloudflare Pages deployment (~60 seconds)
- * 5. Returns the live URL
+ * CRITICAL FIX: Verifies report is actually accessible on aidriven.biz BEFORE returning success
+ * Prevents broken links in customer emails
  */
 
 const fs = require('fs');
@@ -98,35 +94,75 @@ async function commitAndPush(requestId) {
 }
 
 /**
- * Wait for Cloudflare Pages deployment
+ * Wait for Cloudflare Pages deployment AND VERIFY file is accessible
  */
 async function waitForDeployment(requestId, maxWaitSeconds = 90) {
   log(`Waiting for Cloudflare Pages deployment... (max ${maxWaitSeconds}s)`);
   
+  const liveUrl = `https://aidriven.biz/reports/html/${requestId}.html`;
   const startTime = Date.now();
-  const checkInterval = 5000; // Check every 5 seconds
+  const checkInterval = 3000; // Check every 3 seconds
+  const maxAttempts = Math.floor(maxWaitSeconds * 1000 / checkInterval);
   
-  while (Date.now() - startTime < maxWaitSeconds * 1000) {
-    await sleep(checkInterval);
+  let attempt = 0;
+  
+  while (attempt < maxAttempts) {
+    attempt++;
     const elapsed = Math.round((Date.now() - startTime) / 1000);
-    log(`Deployment in progress... (${elapsed}s elapsed)`, 'info');
     
-    // In production, we would check Cloudflare API for deployment status
-    // For now, we just wait a reasonable amount of time
-    if (elapsed >= 60) {
-      log(`Deployment should be complete!`, 'success');
-      break;
+    // First, wait a bit for Cloudflare to start deployment
+    await sleep(checkInterval);
+    
+    // Start checking after 10 seconds (deployment needs to begin)
+    if (elapsed >= 10) {
+      log(`Checking deployment... (${elapsed}s elapsed, attempt ${attempt}/${maxAttempts})`, 'info');
+      
+      try {
+        // Use HEAD request to check if file is accessible
+        const response = await fetch(liveUrl, { method: 'HEAD' });
+        
+        if (response.ok) {
+          log(`✅ Deployment verified! Status: ${response.status}`, 'success');
+          return { success: true, liveUrl, attempts: attempt, elapsed };
+        } else {
+          log(`⚠️ Status ${response.status}, waiting...`, 'warn');
+        }
+        
+      } catch (fetchError) {
+        log(`⚠️ Fetch error: ${fetchError.message}, waiting...`, 'warn');
+      }
     }
   }
   
-  // Return the expected live URL
-  const liveUrl = `https://aidriven.biz/reports/html/${requestId}.html`;
-  log(`Live URL: ${liveUrl}`, 'success');
-  return liveUrl;
+  // Verification failed after max attempts
+  log(`❌ Verification failed after ${maxAttempts} attempts (${maxWaitSeconds}s)`, 'error');
+  return {
+    success: false,
+    error: 'Deployment verification timeout - file not accessible on aidriven.biz',
+    liveUrl,
+    attempts: maxAttempts,
+    elapsed: maxWaitSeconds
+  };
 }
 
 /**
- * Main function - Push report to GitHub and wait for deployment
+ * Rollback git commit if verification fails
+ */
+async function rollbackCommit() {
+  log(`Rolling back git commit...`);
+  
+  try {
+    await execAsync('git reset --hard HEAD~1', { cwd: WEBSITE_DIR });
+    log(`Commit rolled back successfully`, 'warn');
+    return true;
+  } catch (error) {
+    log(`Rollback failed: ${error.message}`, 'error');
+    return false;
+  }
+}
+
+/**
+ * Main function - Push report to GitHub and VERIFY deployment
  */
 async function pushReport(sourcePath, requestId) {
   try {
@@ -138,19 +174,39 @@ async function pushReport(sourcePath, requestId) {
     // Step 2: Commit and push
     await commitAndPush(requestId);
     
-    // Step 3: Wait for deployment
-    const liveUrl = await waitForDeployment(requestId);
+    // Step 3: Wait for deployment AND VERIFY
+    const deploymentResult = await waitForDeployment(requestId, 90);
     
-    log(`✅ Report live at: ${liveUrl}`, 'success');
+    if (!deploymentResult.success) {
+      log(`Deployment verification FAILED`, 'error');
+      
+      // Rollback the commit since verification failed
+      await rollbackCommit();
+      
+      return {
+        success: false,
+        error: deploymentResult.error,
+        requestId,
+        attempts: deploymentResult.attempts
+      };
+    }
+    
+    log(`✅ Report verified live at: ${deploymentResult.liveUrl}`, 'success');
     
     return {
       success: true,
-      liveUrl,
-      requestId
+      liveUrl: deploymentResult.liveUrl,
+      requestId,
+      attempts: deploymentResult.attempts,
+      elapsed: deploymentResult.elapsed
     };
     
   } catch (error) {
     log(`Failed to push report: ${error.message}`, 'error');
+    
+    // Try to rollback
+    await rollbackCommit();
+    
     return {
       success: false,
       error: error.message,
@@ -160,7 +216,7 @@ async function pushReport(sourcePath, requestId) {
 }
 
 // Export for use in other scripts
-module.exports = { pushReport, copyReportToWebsite, commitAndPush, waitForDeployment };
+module.exports = { pushReport, copyReportToWebsite, commitAndPush, waitForDeployment, rollbackCommit };
 
 // If run directly from command line
 if (require.main === module) {

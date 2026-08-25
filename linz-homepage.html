@@ -1,0 +1,995 @@
+<!DOCTYPE html><html lang="en" class="js no-touch"><head>
+  <link as="script" href="https://assets.koordinates.com/fe/boot.js" rel="preload">
+  <link as="font" href="https://assets.koordinates.com/fe/fonts/MetricWeb-Regular-ca204ed7ffc6d935.woff2" rel="preload">
+  <link as="font" href="https://assets.koordinates.com/fe/fonts/MetricWeb-Medium-fc62ff4f9664732e.woff2" rel="preload">
+  
+  
+  
+  <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-B3WECHQ5G1&amp;cx=c&amp;_slc=1"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript">window.prerenderReady = false;</script>
+  
+  <link rel="icon" href="https://assets.koordinates.com/kx-dandelion-live2-public/settings/branding/logo_toitu-te-whenua_badge-only_2021.png">
+  
+  <meta name="apple-mobile-web-app-title" content="LINZ Data Service">
+  <meta name="application-name" content="LINZ Data Service">
+
+  <meta name="theme-color" content="#000000">
+  <meta name="msapplication-TileColor" content="#000000">
+<script src="https://assets.koordinates.com/fe/runtime.151ff89e7d0a00f7.js"></script><script src="https://assets.koordinates.com/fe/matai.6bee0e94f64cd984.js"></script><link data-rspack="@kx/matai:chunk-5401" rel="stylesheet" href="https://assets.koordinates.com/fe/5401.2ac3831e80e61ebc.css" crossorigin="anonymous"><link rel="preload" as="script" href="https://assets.koordinates.com/fe/5095.24cef72acf28288d.js" crossorigin="anonymous"><link rel="preload" as="script" href="https://assets.koordinates.com/fe/8483.72e37e527b483090.js" crossorigin="anonymous"><link rel="preload" as="script" href="https://assets.koordinates.com/fe/8278.e90d0ad88ca76973.js" crossorigin="anonymous"><link rel="preload" as="script" href="https://assets.koordinates.com/fe/8489.a9d4b4e0879cd635.js" crossorigin="anonymous"><link rel="preload" as="script" href="https://assets.koordinates.com/fe/2119.eb480893f4203447.js" crossorigin="anonymous"><link rel="preload" as="script" href="https://assets.koordinates.com/fe/browse-data-host-async.cdf20fe074cb9cac.js" crossorigin="anonymous"><link rel="preload" as="script" href="https://assets.koordinates.com/fe/browse-data-async.fde29380ad772b2d.js" crossorigin="anonymous"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/vendors-maplibre.635a71a66bd5cfa1.js"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/7158.fca2ea5f7a4871d9.js"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/6939.6f6b7e9efad935e6.js"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/2852.7ec5c7240046ba4c.js"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/9173.aae8d588e36c923b.js"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/3808.e482094a682df7be.js"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/1783.206b6812d5762b13.js"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/2032.48dcc9030665b042.js"><link crossorigin="anonymous" rel="prefetch" as="script" href="https://assets.koordinates.com/fe/manage-data-async.41c091efc7ae318f.js"><style>@font-face {
+      font-family: "Twemoji Country Flags";
+      unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067,
+        U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
+      src: url('https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1/dist/TwemojiCountryFlags.woff2') format('woff2');
+      font-display: swap;
+    }</style><style type="text/css">.c1wupbe700-canary49{contain:strict;contain:size layout style paint;padding:0 8px;border-right:1px solid var(--border-color);border-bottom:1px solid var(--border-color);background-color:inherit;white-space:nowrap;overflow:hidden;overflow:clip;text-overflow:ellipsis}.c1wupbe700-canary49[aria-selected=true]{box-shadow:inset 0 0 0 2px var(--selection-color)}.cd0kgiy700-canary49{position:sticky;z-index:1}.c1730fa4700-canary49{box-shadow:2px 0 5px -2px hsla(0,0%,53.3%,.3)}</style><style type="text/css">.r104f42s700-canary49{--color:#000;--border-color:#ddd;--summary-border-color:#aaa;--background-color:hsl(0deg 0% 100%);--header-background-color:hsl(0deg 0% 97.5%);--row-hover-background-color:hsl(0deg 0% 96%);--row-selected-background-color:hsl(207deg 76% 92%);--row-selected-hover-background-color:hsl(207deg 76% 88%);--checkbox-color:hsl(207deg 100% 29%);--checkbox-focus-color:hsl(207deg 100% 69%);--checkbox-disabled-border-color:#ccc;--checkbox-disabled-background-color:#ddd;--selection-color:#66afe9;--font-size:14px;contain:strict;contain:size layout style paint;content-visibility:auto;height:350px;border:1px solid var(--border-color);box-sizing:border-box;overflow:auto;user-select:none;background-color:var(--background-color);color:var(--color);font-size:var(--font-size)}@supports not (contain:strict){.r104f42s700-canary49{position:relative;z-index:0}}.r104f42s700-canary49 *,.r104f42s700-canary49 :after,.r104f42s700-canary49 :before{box-sizing:inherit}.r104f42s700-canary49.rdg-dark{--color:#ddd;--border-color:#444;--summary-border-color:#555;--background-color:hsl(0deg 0% 13%);--header-background-color:hsl(0deg 0% 10.5%);--row-hover-background-color:hsl(0deg 0% 9%);--row-selected-background-color:hsl(207deg 76% 42%);--row-selected-hover-background-color:hsl(207deg 76% 38%);--checkbox-color:hsl(207deg 100% 79%);--checkbox-focus-color:hsl(207deg 100% 89%);--checkbox-disabled-border-color:#000;--checkbox-disabled-background-color:#333}@media (prefers-color-scheme:dark){.r104f42s700-canary49:not(.rdg-light){--color:#ddd;--border-color:#444;--summary-border-color:#555;--background-color:hsl(0deg 0% 13%);--header-background-color:hsl(0deg 0% 10.5%);--row-hover-background-color:hsl(0deg 0% 9%);--row-selected-background-color:hsl(207deg 76% 42%);--row-selected-hover-background-color:hsl(207deg 76% 38%);--checkbox-color:hsl(207deg 100% 79%);--checkbox-focus-color:hsl(207deg 100% 89%);--checkbox-disabled-border-color:#000;--checkbox-disabled-background-color:#333}}.f7ly7s700-canary49{position:sticky;top:0;left:0;height:0;width:0;outline:0}.vc4f4zb700-canary49.r1otpg64700-canary49{cursor:move}</style><style type="text/css">.g1cvx5us700-canary49:not([aria-selected=true]){background-color:var(--header-background-color)}.g1cvx5us700-canary49>.c1wupbe700-canary49:not(:last-child):not(.c1730fa4700-canary49){border-right:none}.g1j2w62i700-canary49:after{content:"";position:absolute;top:0;right:0;bottom:0;left:0;box-shadow:inset 0 0 0 2px var(--selection-color);pointer-events:none;z-index:2}.g1j2w62i700-canary49>.c1wupbe700-canary49:first-child{box-shadow:inset 2px 0 0 0 var(--selection-color)}</style><style type="text/css">.h1fquj5h700-canary49{contain:strict;contain:size layout style paint;display:grid;grid-template-columns:var(--template-columns);grid-template-rows:var(--header-row-height);height:var(--header-row-height);line-height:var(--header-row-height);width:var(--row-width);position:sticky;top:0;background-color:var(--header-background-color);font-weight:700;z-index:3;touch-action:none}</style><style type="text/css">.r1otpg64700-canary49{contain:strict;contain:size layout style paint;display:grid;grid-template-rows:var(--row-height);grid-template-columns:var(--template-columns);position:absolute;left:0;width:var(--row-width);height:var(--row-height);line-height:var(--row-height);background-color:var(--background-color)}.r1otpg64700-canary49:hover{background-color:var(--row-hover-background-color)}.r1otpg64700-canary49[aria-selected=true]{background-color:var(--row-selected-background-color)}.r1otpg64700-canary49[aria-selected=true]:hover{background-color:var(--row-selected-hover-background-color)}.sel5gk2700-canary49{position:sticky;z-index:3;grid-template-rows:var(--summary-row-height);height:var(--summary-row-height);line-height:var(--summary-row-height)}.sel5gk2700-canary49>.c1wupbe700-canary49{border-top:2px solid var(--summary-border-color)}</style><style type="text/css">.c1w6d5eo700-canary49{cursor:pointer;display:flex;align-items:center;justify-content:center;position:absolute;top:0;right:0;bottom:0;left:0;margin-right:1px}.c1h7iz8d700-canary49{all:unset;width:0;margin:0}.cc79ydj700-canary49{content:"";width:20px;height:20px;border:2px solid var(--border-color);background-color:var(--background-color)}.c1h7iz8d700-canary49:checked+.cc79ydj700-canary49{background-color:var(--checkbox-color);box-shadow:inset 0 0 0 4px var(--background-color)}.c1h7iz8d700-canary49:focus+.cc79ydj700-canary49{border-color:var(--checkbox-focus-color)}.c1e5jt0b700-canary49{cursor:default}.c1e5jt0b700-canary49 .cc79ydj700-canary49{border-color:var(--checkbox-disabled-border-color);background-color:var(--checkbox-disabled-background-color)}</style><style type="text/css">.gch972y700-canary49{outline:none}.cz2qf0d700-canary49{margin-left:4px;stroke:currentColor;stroke-width:1.5px;fill:transparent;vertical-align:middle}.cz2qf0d700-canary49>path{transition:d .1s}</style><style type="text/css">.h13yq3r8700-canary49{cursor:pointer;display:flex}.ht6rdyl700-canary49{flex-grow:1;overflow:hidden;overflow:clip;text-overflow:ellipsis}</style><style type="text/css">.celq7o9700-canary49:after{content:"";cursor:col-resize;position:absolute;top:0;right:0;bottom:0;width:10px}</style><style type="text/css">.c1bmg16t700-canary49,.ccpfvsn700-canary49{background-color:#ccf}.c1bmg16t700-canary49.ccpfvsn700-canary49{background-color:#99f}.c12t67zz700-canary49{cursor:move;position:absolute;right:0;bottom:0;width:8px;height:8px;background-color:var(--selection-color)}.c12t67zz700-canary49:hover{width:16px;height:16px;border:2px solid var(--selection-color);background-color:var(--background-color)}</style><style type="text/css">.c1tngyp1700-canary49{padding:0}</style><style type="text/css">.t16y9g8l700-canary49{appearance:none;box-sizing:border-box;width:100%;height:100%;padding:0 6px;border:2px solid #ccc;vertical-align:top;color:var(--color);background-color:var(--background-color);font-family:inherit;font-size:var(--font-size)}.t16y9g8l700-canary49:focus{border-color:var(--selection-color);outline:none}.t16y9g8l700-canary49::placeholder{color:#999;opacity:1}</style><style data-emotion="matai-css-global" data-s=""></style><style data-emotion="matai-css-global" data-s=""></style><style data-emotion="matai-css-global" data-s=""></style><style data-emotion="matai-css-global" data-s=""></style><style data-emotion="matai-css-global" data-s=""></style><style data-emotion="matai-css" data-s=""></style><style>:root {
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-info: #3498db;
+  --toastify-color-success: #07bc0c;
+  --toastify-color-warning: #f1c40f;
+  --toastify-color-error: hsl(6, 78%, 57%);
+  --toastify-color-transparent: rgba(255, 255, 255, 0.7);
+
+  --toastify-icon-color-info: var(--toastify-color-info);
+  --toastify-icon-color-success: var(--toastify-color-success);
+  --toastify-icon-color-warning: var(--toastify-color-warning);
+  --toastify-icon-color-error: var(--toastify-color-error);
+
+  --toastify-container-width: fit-content;
+  --toastify-toast-width: 320px;
+  --toastify-toast-offset: 16px;
+  --toastify-toast-top: max(var(--toastify-toast-offset), env(safe-area-inset-top));
+  --toastify-toast-right: max(var(--toastify-toast-offset), env(safe-area-inset-right));
+  --toastify-toast-left: max(var(--toastify-toast-offset), env(safe-area-inset-left));
+  --toastify-toast-bottom: max(var(--toastify-toast-offset), env(safe-area-inset-bottom));
+  --toastify-toast-background: #fff;
+  --toastify-toast-padding: 14px;
+  --toastify-toast-min-height: 64px;
+  --toastify-toast-max-height: 800px;
+  --toastify-toast-bd-radius: 6px;
+  --toastify-toast-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  --toastify-font-family: sans-serif;
+  --toastify-z-index: 9999;
+  --toastify-text-color-light: #757575;
+  --toastify-text-color-dark: #fff;
+
+  /* Used only for colored theme */
+  --toastify-text-color-info: #fff;
+  --toastify-text-color-success: #fff;
+  --toastify-text-color-warning: #fff;
+  --toastify-text-color-error: #fff;
+
+  --toastify-spinner-color: #616161;
+  --toastify-spinner-color-empty-area: #e0e0e0;
+  --toastify-color-progress-light: linear-gradient(to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55);
+  --toastify-color-progress-dark: #bb86fc;
+  --toastify-color-progress-info: var(--toastify-color-info);
+  --toastify-color-progress-success: var(--toastify-color-success);
+  --toastify-color-progress-warning: var(--toastify-color-warning);
+  --toastify-color-progress-error: var(--toastify-color-error);
+  /* used to control the opacity of the progress trail */
+  --toastify-color-progress-bgo: 0.2;
+}
+
+.Toastify__toast-container {
+  z-index: var(--toastify-z-index);
+  -webkit-transform: translate3d(0, 0, var(--toastify-z-index));
+  position: fixed;
+  width: var(--toastify-container-width);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.Toastify__toast-container--top-left {
+  top: var(--toastify-toast-top);
+  left: var(--toastify-toast-left);
+}
+.Toastify__toast-container--top-center {
+  top: var(--toastify-toast-top);
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+.Toastify__toast-container--top-right {
+  top: var(--toastify-toast-top);
+  right: var(--toastify-toast-right);
+  align-items: end;
+}
+.Toastify__toast-container--bottom-left {
+  bottom: var(--toastify-toast-bottom);
+  left: var(--toastify-toast-left);
+}
+.Toastify__toast-container--bottom-center {
+  bottom: var(--toastify-toast-bottom);
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+.Toastify__toast-container--bottom-right {
+  bottom: var(--toastify-toast-bottom);
+  right: var(--toastify-toast-right);
+  align-items: end;
+}
+
+.Toastify__toast {
+  --y: 0px;
+  position: relative;
+  touch-action: none;
+  width: var(--toastify-toast-width);
+  min-height: var(--toastify-toast-min-height);
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  padding: var(--toastify-toast-padding);
+  border-radius: var(--toastify-toast-bd-radius);
+  box-shadow: var(--toastify-toast-shadow);
+  max-height: var(--toastify-toast-max-height);
+  font-family: var(--toastify-font-family);
+  /* webkit only issue #791 */
+  z-index: 0;
+  /* inner swag */
+  display: flex;
+  flex: 1 auto;
+  align-items: center;
+  word-break: break-word;
+}
+
+@media only screen and (max-width: 480px) {
+  .Toastify__toast-container {
+    width: 100vw;
+    left: env(safe-area-inset-left);
+    margin: 0;
+  }
+  .Toastify__toast-container--top-left,
+  .Toastify__toast-container--top-center,
+  .Toastify__toast-container--top-right {
+    top: env(safe-area-inset-top);
+    transform: translateX(0);
+  }
+  .Toastify__toast-container--bottom-left,
+  .Toastify__toast-container--bottom-center,
+  .Toastify__toast-container--bottom-right {
+    bottom: env(safe-area-inset-bottom);
+    transform: translateX(0);
+  }
+  .Toastify__toast-container--rtl {
+    right: env(safe-area-inset-right);
+    left: initial;
+  }
+  .Toastify__toast {
+    --toastify-toast-width: 100%;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+}
+
+.Toastify__toast-container[data-stacked='true'] {
+  width: var(--toastify-toast-width);
+}
+
+@media only screen and (max-width: 480px) {
+  .Toastify__toast-container[data-stacked='true'] {
+    width: 100vw;
+  }
+}
+
+.Toastify__toast--stacked {
+  position: absolute;
+  width: 100%;
+  transform: translate3d(0, var(--y), 0) scale(var(--s));
+  transition: transform 0.3s;
+}
+
+.Toastify__toast--stacked[data-collapsed] .Toastify__toast-body,
+.Toastify__toast--stacked[data-collapsed] .Toastify__close-button {
+  transition: opacity 0.1s;
+}
+
+.Toastify__toast--stacked[data-collapsed='false'] {
+  overflow: visible;
+}
+
+.Toastify__toast--stacked[data-collapsed='true']:not(:last-child) > * {
+  opacity: 0;
+}
+
+.Toastify__toast--stacked:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: calc(var(--g) * 1px);
+  bottom: 100%;
+}
+
+.Toastify__toast--stacked[data-pos='top'] {
+  top: 0;
+}
+
+.Toastify__toast--stacked[data-pos='bot'] {
+  bottom: 0;
+}
+
+.Toastify__toast--stacked[data-pos='bot'].Toastify__toast--stacked:before {
+  transform-origin: top;
+}
+
+.Toastify__toast--stacked[data-pos='top'].Toastify__toast--stacked:before {
+  transform-origin: bottom;
+}
+
+.Toastify__toast--stacked:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  transform: scaleY(3);
+  z-index: -1;
+}
+
+.Toastify__toast--rtl {
+  direction: rtl;
+}
+
+.Toastify__toast--close-on-click {
+  cursor: pointer;
+}
+
+.Toastify__toast-icon {
+  margin-inline-end: 10px;
+  width: 22px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.Toastify--animate {
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+}
+
+.Toastify--animate-icon {
+  animation-fill-mode: both;
+  animation-duration: 0.3s;
+}
+
+.Toastify__toast-theme--dark {
+  background: var(--toastify-color-dark);
+  color: var(--toastify-text-color-dark);
+}
+
+.Toastify__toast-theme--light {
+  background: var(--toastify-color-light);
+  color: var(--toastify-text-color-light);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--default {
+  background: var(--toastify-color-light);
+  color: var(--toastify-text-color-light);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--info {
+  color: var(--toastify-text-color-info);
+  background: var(--toastify-color-info);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+  color: var(--toastify-text-color-success);
+  background: var(--toastify-color-success);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--warning {
+  color: var(--toastify-text-color-warning);
+  background: var(--toastify-color-warning);
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--error {
+  color: var(--toastify-text-color-error);
+  background: var(--toastify-color-error);
+}
+
+.Toastify__progress-bar-theme--light {
+  background: var(--toastify-color-progress-light);
+}
+
+.Toastify__progress-bar-theme--dark {
+  background: var(--toastify-color-progress-dark);
+}
+
+.Toastify__progress-bar--info {
+  background: var(--toastify-color-progress-info);
+}
+
+.Toastify__progress-bar--success {
+  background: var(--toastify-color-progress-success);
+}
+
+.Toastify__progress-bar--warning {
+  background: var(--toastify-color-progress-warning);
+}
+
+.Toastify__progress-bar--error {
+  background: var(--toastify-color-progress-error);
+}
+
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--info,
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--success,
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--warning,
+.Toastify__progress-bar-theme--colored.Toastify__progress-bar--error {
+  background: var(--toastify-color-transparent);
+}
+
+.Toastify__close-button {
+  color: #fff;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: 0.3s ease;
+  z-index: 1;
+}
+
+.Toastify__toast--rtl .Toastify__close-button {
+  left: 6px;
+  right: unset;
+}
+
+.Toastify__close-button--light {
+  color: #000;
+  opacity: 0.3;
+}
+
+.Toastify__close-button > svg {
+  fill: currentColor;
+  height: 16px;
+  width: 14px;
+}
+
+.Toastify__close-button:hover,
+.Toastify__close-button:focus {
+  opacity: 1;
+}
+
+@keyframes Toastify__trackProgress {
+  0% {
+    transform: scaleX(1);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+.Toastify__progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.7;
+  transform-origin: left;
+}
+
+.Toastify__progress-bar--animated {
+  animation: Toastify__trackProgress linear 1 forwards;
+}
+
+.Toastify__progress-bar--controlled {
+  transition: transform 0.2s;
+}
+
+.Toastify__progress-bar--rtl {
+  right: 0;
+  left: initial;
+  transform-origin: right;
+  border-bottom-left-radius: initial;
+}
+
+.Toastify__progress-bar--wrp {
+  position: absolute;
+  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  border-bottom-left-radius: var(--toastify-toast-bd-radius);
+  border-bottom-right-radius: var(--toastify-toast-bd-radius);
+}
+
+.Toastify__progress-bar--wrp[data-hidden='true'] {
+  opacity: 0;
+}
+
+.Toastify__progress-bar--bg {
+  opacity: var(--toastify-color-progress-bgo);
+  width: 100%;
+  height: 100%;
+}
+
+.Toastify__spinner {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  border: 2px solid;
+  border-radius: 100%;
+  border-color: var(--toastify-spinner-color-empty-area);
+  border-right-color: var(--toastify-spinner-color);
+  animation: Toastify__spin 0.65s linear infinite;
+}
+
+@keyframes Toastify__bounceInRight {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes Toastify__bounceOutRight {
+  20% {
+    opacity: 1;
+    transform: translate3d(-20px, var(--y), 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(2000px, var(--y), 0);
+  }
+}
+
+@keyframes Toastify__bounceInLeft {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes Toastify__bounceOutLeft {
+  20% {
+    opacity: 1;
+    transform: translate3d(20px, var(--y), 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(-2000px, var(--y), 0);
+  }
+}
+
+@keyframes Toastify__bounceInUp {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(0, 3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0);
+  }
+  75% {
+    transform: translate3d(0, 10px, 0);
+  }
+  90% {
+    transform: translate3d(0, -5px, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes Toastify__bounceOutUp {
+  20% {
+    transform: translate3d(0, calc(var(--y) - 10px), 0);
+  }
+  40%,
+  45% {
+    opacity: 1;
+    transform: translate3d(0, calc(var(--y) + 20px), 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+}
+
+@keyframes Toastify__bounceInDown {
+  from,
+  60%,
+  75%,
+  90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -3000px, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(0, 25px, 0);
+  }
+  75% {
+    transform: translate3d(0, -10px, 0);
+  }
+  90% {
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes Toastify__bounceOutDown {
+  20% {
+    transform: translate3d(0, calc(var(--y) - 10px), 0);
+  }
+  40%,
+  45% {
+    opacity: 1;
+    transform: translate3d(0, calc(var(--y) + 20px), 0);
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0);
+  }
+}
+
+.Toastify__bounce-enter--top-left,
+.Toastify__bounce-enter--bottom-left {
+  animation-name: Toastify__bounceInLeft;
+}
+
+.Toastify__bounce-enter--top-right,
+.Toastify__bounce-enter--bottom-right {
+  animation-name: Toastify__bounceInRight;
+}
+
+.Toastify__bounce-enter--top-center {
+  animation-name: Toastify__bounceInDown;
+}
+
+.Toastify__bounce-enter--bottom-center {
+  animation-name: Toastify__bounceInUp;
+}
+
+.Toastify__bounce-exit--top-left,
+.Toastify__bounce-exit--bottom-left {
+  animation-name: Toastify__bounceOutLeft;
+}
+
+.Toastify__bounce-exit--top-right,
+.Toastify__bounce-exit--bottom-right {
+  animation-name: Toastify__bounceOutRight;
+}
+
+.Toastify__bounce-exit--top-center {
+  animation-name: Toastify__bounceOutUp;
+}
+
+.Toastify__bounce-exit--bottom-center {
+  animation-name: Toastify__bounceOutDown;
+}
+
+@keyframes Toastify__zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes Toastify__zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: translate3d(0, var(--y), 0) scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.Toastify__zoom-enter {
+  animation-name: Toastify__zoomIn;
+}
+
+.Toastify__zoom-exit {
+  animation-name: Toastify__zoomOut;
+}
+
+@keyframes Toastify__flipIn {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+  to {
+    transform: perspective(400px);
+  }
+}
+
+@keyframes Toastify__flipOut {
+  from {
+    transform: translate3d(0, var(--y), 0) perspective(400px);
+  }
+  30% {
+    transform: translate3d(0, var(--y), 0) perspective(400px) rotate3d(1, 0, 0, -20deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate3d(0, var(--y), 0) perspective(400px) rotate3d(1, 0, 0, 90deg);
+    opacity: 0;
+  }
+}
+
+.Toastify__flip-enter {
+  animation-name: Toastify__flipIn;
+}
+
+.Toastify__flip-exit {
+  animation-name: Toastify__flipOut;
+}
+
+@keyframes Toastify__slideInRight {
+  from {
+    transform: translate3d(110%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, var(--y), 0);
+  }
+}
+
+@keyframes Toastify__slideInLeft {
+  from {
+    transform: translate3d(-110%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, var(--y), 0);
+  }
+}
+
+@keyframes Toastify__slideInUp {
+  from {
+    transform: translate3d(0, 110%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, var(--y), 0);
+  }
+}
+
+@keyframes Toastify__slideInDown {
+  from {
+    transform: translate3d(0, -110%, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, var(--y), 0);
+  }
+}
+
+@keyframes Toastify__slideOutRight {
+  from {
+    transform: translate3d(0, var(--y), 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(110%, var(--y), 0);
+  }
+}
+
+@keyframes Toastify__slideOutLeft {
+  from {
+    transform: translate3d(0, var(--y), 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(-110%, var(--y), 0);
+  }
+}
+
+@keyframes Toastify__slideOutDown {
+  from {
+    transform: translate3d(0, var(--y), 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 500px, 0);
+  }
+}
+
+@keyframes Toastify__slideOutUp {
+  from {
+    transform: translate3d(0, var(--y), 0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, -500px, 0);
+  }
+}
+
+.Toastify__slide-enter--top-left,
+.Toastify__slide-enter--bottom-left {
+  animation-name: Toastify__slideInLeft;
+}
+
+.Toastify__slide-enter--top-right,
+.Toastify__slide-enter--bottom-right {
+  animation-name: Toastify__slideInRight;
+}
+
+.Toastify__slide-enter--top-center {
+  animation-name: Toastify__slideInDown;
+}
+
+.Toastify__slide-enter--bottom-center {
+  animation-name: Toastify__slideInUp;
+}
+
+.Toastify__slide-exit--top-left,
+.Toastify__slide-exit--bottom-left {
+  animation-name: Toastify__slideOutLeft;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.Toastify__slide-exit--top-right,
+.Toastify__slide-exit--bottom-right {
+  animation-name: Toastify__slideOutRight;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.Toastify__slide-exit--top-center {
+  animation-name: Toastify__slideOutUp;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+.Toastify__slide-exit--bottom-center {
+  animation-name: Toastify__slideOutDown;
+  animation-timing-function: ease-in;
+  animation-duration: 0.3s;
+}
+
+@keyframes Toastify__spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style><title>LINZ Data Service</title><meta name="description" content="Geospatial data from Land Information New Zealand. Export to CAD, GIS, PDF, CSV and access via API."><meta property="og:title" content="LINZ Data Service"><meta property="og:description" content="Geospatial data from Land Information New Zealand. Export to CAD, GIS, PDF, CSV and access via API."><meta property="og:type" content="website"><meta property="og:url" content="https://data.linz.govt.nz/"><meta name="twitter:card" content="summary"><meta name="status-code" content="200"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
+
+<body><span data-radix-focus-guard="" tabindex="0" style="outline: none; opacity: 0; position: fixed; pointer-events: none;"></span>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+  <div id="root" class="v10-app"><div class="metric"><div class="matai-css-wbjie0"><section class="Toastify" aria-live="polite" aria-atomic="false" aria-relevant="additions text" aria-label="Notifications Alt+T"></section></div><div class="matai-css-hc52vp"><div class="matai-css-f2dbce"><div data-nav-container="true" class="onclickoutside-datasheet--ignore matai-css-1e3afq4"><nav class="hide--desktop matai-css-qizwyn"><a href="/" class="portal-logo matai-css-5epuen"><img src="https://assets.koordinates.com/kx-dandelion-live2-public/settings/branding/linz.png" alt="LINZ Data Service logo"></a><button aria-label="Open menu" data-testid="menu-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r6:" data-state="closed" class="matai-css-1srwhkz"><span data-testid="text-icon" class="text-and-icon matai-css-hd93t1"><span class="text-and-icon__text matai-css-q7cawn">Menu</span><div class="icon-wrap menu-item__icon--rotate-when-active icon--caret-down matai-css-1xuxyty" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 8.6 4.7 5.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l4 4c.4.4 1 .4 1.4 0l4-4c.4-.4.4-1 0-1.4s-1-.4-1.4 0z"></path></svg></div></span></button></nav><nav class="hide--mobile matai-css-qizwyn"><a href="/" class="portal-logo matai-css-5epuen"><img src="https://assets.koordinates.com/kx-dandelion-live2-public/settings/branding/linz.png" alt="LINZ Data Service logo"></a><div class="matai-css-1sg2lsz"><button aria-label="Open menu" data-testid="menu-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r7:" data-state="closed" class="matai-css-1srwhkz"><span data-testid="text-icon" class="text-and-icon matai-css-hd93t1"><span class="text-and-icon__text matai-css-q7cawn">More data services</span><div class="icon-wrap menu-item__icon--rotate-when-active icon--caret-down matai-css-1xuxyty" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 8.6 4.7 5.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l4 4c.4.4 1 .4 1.4 0l4-4c.4-.4.4-1 0-1.4s-1-.4-1.4 0z"></path></svg></div></span></button></div></nav><div class="matai-css-18ynoab"><nav class="matai-css-5n6kxu"><div class="matai-css-umssdn"><button data-testid="top-nav-toggle--data" class="main-nav-toggle is-active matai-css-12ai3kw" type="button"><span data-testid="text-icon" class="text-and-icon matai-css-1ey1dph"><div class="icon-wrap text-and-icon__icon icon--nav-item-data matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><rect width="9" height="3" x="19" y="21" fill="currentColor" opacity=".45" rx="1.5" transform="rotate(-135 19 21)"></rect><path fill="currentColor" fill-rule="evenodd" d="M10.5 17a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13m0-2a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9" clip-rule="evenodd"></path></svg></div><span class="text-and-icon__text matai-css-uiecbt">Data</span></span></button><button data-testid="top-nav-toggle--map-viewer" class="main-nav-toggle is-active matai-css-12ai3kw" type="button"><span data-testid="text-icon" class="text-and-icon matai-css-1ey1dph"><div class="icon-wrap text-and-icon__icon icon--nav-item-map matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="currentColor" d="m8 4 8 2v14l-8-2z" opacity=".45"></path><path fill="currentColor" d="M2 6.694v9.945a2 2 0 0 0 2.329 1.973L8 18V4l-4.329.721A2 2 0 0 0 2 6.694m20 10.612V7.36a2 2 0 0 0-2.329-1.973L16 6v14l4.329-.721A2 2 0 0 0 22 17.306"></path></svg></div><span class="text-and-icon__text matai-css-uiecbt">Map</span></span></button></div></nav></div><div class="matai-css-oc9unr"><div class="matai-css-17lr9ll"></div><button aria-label="Open help menu" data-testid="help-trigger" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r8:" data-state="closed" class="matai-css-mgwvnu"><div class="icon-wrap help-trigger--not-large icon--circle-question matai-css-96ixhp" aria-hidden="true" width="20" height="20" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M7.986 8.151c-.587.64-.773.987-.813 1.72h1.306c0-.28.094-.573.56-1.053.627-.64 1.36-1.334 1.36-2.334 0-1.48-1-2.36-2.533-2.36-.973 0-1.893.414-2.454 1v1.414c.574-.574 1.387-1.134 2.374-1.134.827 0 1.253.387 1.253 1.094 0 .706-.6 1.146-1.053 1.653m-1.12 3.467c0 .52.4.92.907.92.506 0 .906-.4.906-.92s-.4-.92-.907-.92c-.506 0-.906.4-.906.92"></path><path fill-rule="evenodd" d="M8 15.111A7.111 7.111 0 1 0 8 .89a7.111 7.111 0 0 0 0 14.222zM8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16" clip-rule="evenodd"></path></svg></div></button><a data-testid="login" href="/login/?next=%2F" class="matai-css-hkqkxy">Log in</a></div></div></div><div class="matai-css-109rrqa"><div class="matai-css-sqchjg"><div width="750" height="660" class="react-resizable matai-css-uj9qh0"><div class="matai-css-1xsf7a5"><div class="matai-css-znm8rn"><div class="matai-css-4carhg"><div class="matai-css-shqq8l"><button class="icon-button matai-css-l7pysk" type="button" aria-label="Detach"><div class="icon-wrap icon--pane-detach matai-css-16qpz1t" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="16" viewBox="0 0 16 16"><path d="M14.2 6.1c-.3-.3-.8-.5-1.3-.5h-1.2V4.4c0-.5-.2-.9-.5-1.3-.3-.3-.8-.5-1.3-.5H3.1c-.5 0-1 .2-1.3.5s-.5.8-.5 1.3v4.9c0 .5.2.9.5 1.3.3.3.8.5 1.3.5h1.2v1.2c0 .5.2 1 .5 1.3s.8.5 1.3.5h6.7c.5 0 .9-.2 1.3-.5.3-.3.5-.8.5-1.3V7.4c.1-.5-.1-.9-.4-1.3M4.3 7.4v2.5H3.1c-.2 0-.3-.1-.4-.2-.2-.1-.2-.3-.2-.4V4.4c0-.2.1-.3.2-.4s.3-.2.4-.2h6.7c.2 0 .3.1.4.2s.2.3.2.4v1.2H6.2c-.5 0-1 .2-1.3.5-.4.4-.6.8-.6 1.3m9.2 4.9c0 .2-.1.3-.2.4s-.3.2-.4.2H6.2c-.2 0-.3-.1-.4-.2s-.2-.3-.2-.4V7.4c0-.2.1-.3.2-.4 0-.1.2-.2.4-.2h6.7c.2 0 .3.1.4.2s.2.3.2.4z"></path></svg></div></button><button class="icon-button matai-css-on2cvq" type="button" aria-label="Close"><div class="icon-wrap icon--close-thin matai-css-16qpz1t" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="16" viewBox="0 0 16 16"><path d="M12.9 13.5c-.2 0-.3-.1-.4-.2L8 8.9l-4.5 4.5c-.2.2-.6.2-.9 0-.2-.2-.2-.6 0-.9L7.1 8 2.7 3.5c-.2-.2-.2-.6 0-.9.2-.2.6-.2.9 0L8 7.1l4.5-4.5c.2-.2.6-.2.9 0 .2.2.2.6 0 .9L8.9 8l4.5 4.5c.2.2.2.6 0 .9-.2 0-.4.1-.5.1"></path></svg></div></button></div><div class="matai-css-1fw18vz"><div style="height: 100%;"><div class="browse-page browse-page--is-not-stacked matai-css-ndyxoc"><div class="browse-page__header"><div class="matai-css-1ff0pud"><div class="matai-css-1ox4ava"><div class="matai-css-tqablr"><button data-style-type="transparent" data-testid="browse-data--home-btn" aria-label="Explore datasets" class="matai-css-1s8bi0y"><span data-testid="text-icon" class="text-and-icon matai-css-v6nsuw"><div class="icon-wrap text-and-icon__icon icon--home matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M.5 8 8 2l3 2.25v-1h1.5V5.5l3 2.5H14v6h-3.75V9h-3v5H2V8zm0 0"></path></svg></div></span></button><button data-testid="browse-data--browse-btn" data-active="false" type="button" class="matai-css-vwz3j4">Browse</button></div></div></div></div><div class="browse-page__sidebar-and-body"><div class="browse-page__sidebar"></div><div class="browse-page__body"><div class="matai-css-w5ladz"><h1>Explore GIS data at LINZ Data Service</h1></div><div class="matai-css-iwai9a"><div class="matai-css-yzo9oa"><div class="matai-css-1qgk95d"><div data-testid="filters--search-bar" class="matai-css-16c8h8e"><div class="matai-css-1xm32e0" data-testid="search-field"><div class="text-input input-reset-container matai-css-dstvgg"><label for="browse-data-search" class="matai-css-1u5cxkn">Search LINZ Data Service</label><div class="matai-css-1xm32e0"><input data-testid="search-field__input" type="text" name="browse-data-search" id="browse-data-search" placeholder="Search LINZ Data Service" autocomplete="off" class="text-input__field input-reset matai-css-5dlgug" value="" style=""><div class="matai-css-1c9n3qy"><div class="icon-wrap icon--search matai-css-1xuxyty" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="m10.446 9.032 2.261 2.26a1 1 0 0 1-1.414 1.415l-2.261-2.26a4 4 0 1 1 1.414-1.414zM7 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path></svg></div></div></div></div></div></div></div></div><div class="matai-css-sedlol"><div class="matai-css-fakvsg"><div class="matai-css-12330iw"><div data-dataset-tile="true" data-testid="dataset-tile-125017" class="matai-css-1r4q4yv"><div class="thumb-container matai-css-apb8yt"><div class="matai-css-15rgbm2"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=125017.448247,style=auto/1200x630.png" alt="Manawatū-Whanganui - Horowhenua LiDAR 1m DSM (2025)" loading="lazy" class="matai-css-29ytr9"></div></div><div class="matai-css-cf4wbi"></div><div class="info-container matai-css-8qbze8"><div class="matai-css-z7kcve"><div><div><div class="matai-css-1ps1ecv"><div class="matai-css-vdzk36"></div></div><h2 class="matai-css-vpy915"><a class="matai-css-w6tc1x" href="/layer/125017-manawatu-whanganui-horowhenua-lidar-1m-dsm-2025/" data-xstate-tree="true">Manawatū-Whanganui - Horowhenua LiDAR 1m DSM (2025)</a></h2></div><div class="matai-css-cuqvy5">Land Information New Zealand</div></div><div class="matai-css-1onnxkh"><p>This layer contains the Digital Surface Model for LiDAR data in the Manawatū-Whanganui Region, captured between 25 April 2025 and 5 May 2025.</p>
+<ul>
+<li>
+<p>The DEM is available as layer <a href="https://data.linz.govt.nz/layer/125019">Manawatū-Whanganui - Horowhenua LiDAR 1m DEM (2025)</a>.</p>
+</li>
+<li>
+<p>The DSM is available as layer <a href="https://data.linz.govt.nz/layer/125017">Manawatū-Whanganui - Horowhenua LiDAR 1m DSM (2025)</a>.</p>
+</li>
+<li>
+<p>The Index Tiles are available as layer <a href="https://data.linz.govt.nz/layer/125018">Manawatū-Whanganui - Horowhenua LiDAR Index Tiles (2025)</a>.</p>
+</li>
+<li>
+<p>The LAS Point Cloud is available as layer <a href="https://data.linz.govt.nz/layer/d3YmLC84CWFZPVz">Manawatū-Whanganui - Horowhenua LiDAR Point Cloud (2025)</a>.</p>
+</li>
+</ul>
+<p>LiDAR was captured for Horowhenua District Council by Aerial Surveys Ltd between 25 April 2025 and 5 May 2025. These datasets were generated by Aerial Surveys and their subcontractors. Data management and distribution is by Toitū Te Whenua Land Information New Zealand.</p>
+<p>Note: data resampled from 0.5m to 1m grid resolution using average (mean) resampling to meet LINZ specification requirements.</p>
+<p>Data comprises:</p>
+<ul>
+<li>
+<p>DEM: tif or asc tiles in NZTM2000 projection, tiled into a 1:1,000 tile layout</p>
+</li>
+<li>
+<p>DSM: tif or asc tiles in NZTM2000 projection, tiled into a 1:1,000 tile layout</p>
+</li>
+<li>
+<p>Point cloud: las tiles in NZTM2000 projection, tiled into a 1:1,000 tile layout</p>
+</li>
+</ul>
+<p>Pulse density specification is at a minimum of 4 pulses/square metre.</p>
+<p>Vertical Accuracy Specification is +/- 0.2m (95%)<br>
+Horizontal Accuracy Specification is +/- 1.0m (95%)</p>
+<p>Vertical datum is NZVD2016.</p></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="white" data-testid="add-to-map-viewer" class="matai-css-1qqzgge" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button></div></div></div></div></div></div></div><div class="matai-css-m1fthf"><div data-testid="homepage-panel--most-popular-group" data-panel="true" class="matai-css-o44zn4"><div class="matai-css-1bvnf3b"><h2 class="matai-css-1kfnw5z">Most Popular</h2><div class="matai-css-8z8d8"><a class="matai-css-1h02c4z" href="/data/" data-xstate-tree="true"><span data-testid="text-icon" class="text-and-icon matai-css-hd93t1"><span class="text-and-icon__text matai-css-q7cawn">View all</span><div class="icon-wrap text-and-icon__icon icon--caret-right matai-css-1754m9h" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="m8.586 8-3.293 3.293a1 1 0 0 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414z"></path></svg></div></span></a></div></div><div class="dataset-list matai-css-1738biy"><div data-dataset-tile="true" data-testid="dataset-tile-121859" class="matai-css-73exei"><div class="thumb-container matai-css-166rmwg"><div class="matai-css-asylqy"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=121859.444426,style=auto/1200x630.png" alt="New Zealand LiDAR 1m DEM" loading="lazy" class="matai-css-29ytr9"></div><div class="matai-css-15670wd"><div class="matai-css-1a48slm"><div class="icon-wrap icon--dataset_grid matai-css-9d09os" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="37" height="31" fill="none" viewBox="0 0 37 31"><path fill="#EAEBEB" d="M6.5 3.5h6v6h-6zm0 12.001h6v6h-6zm6-6.001h6v6h-6zm0 12h6v6h-6zm6-18h6v6h-6zm0 12.001h6v6h-6z"></path><path fill="#989999" d="M6.5 9.5h6v6h-6zm0 12h6v6h-6zm6-18h6v6h-6zm0 12.001h6v6h-6zm6-6.001h6v6h-6zm0 12h6v6h-6zm6-18h6v6h-6zm0 12.001h6v6h-6z"></path><path fill="#EAEBEB" d="M24.5 9.5h6v6h-6zm0 12h6v6h-6z"></path></svg></div><div class="matai-css-1sysgyr"><strong class="matai-css-0">Grid Layer</strong><span>1m, 424 Tiles</span></div></div></div></div><div class="info-container matai-css-1rhqfnz"><div class="matai-css-15uzuqz"><div><div><h3 class="matai-css-1wbonns"><a class="matai-css-1aqpqo" href="/layer/121859-new-zealand-lidar-1m-dem/" data-xstate-tree="true">New Zealand LiDAR 1m DEM</a></h3></div><div class="matai-css-11xq2fl">Land Information New Zealand</div></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="primary" data-testid="add-to-map-viewer" class="matai-css-763u1u" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button><div class="matai-css-b2xnwa"></div></div></div></div></div></div></div><div data-dataset-tile="true" data-testid="dataset-tile-50804" class="matai-css-73exei"><div class="thumb-container matai-css-166rmwg"><div class="matai-css-asylqy"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=50804.449228,style=auto/1200x630.png" alt="NZ Property Titles" loading="lazy" class="matai-css-29ytr9"></div><div class="matai-css-15670wd"><div class="matai-css-1a48slm"><div class="icon-wrap icon--dataset_polygon matai-css-9d09os" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="37" height="33" fill="none" viewBox="0 0 37 33"><path fill="currentColor" fill-opacity=".4" stroke="currentColor" stroke-linejoin="round" stroke-width="1.093" d="m8.437 11.976 9.847-7.087 2.526 9.671 8.96 6.653c-5.06 1.593-15.23 4.87-15.428 5.235-.2.366-4.02-9.496-5.905-14.472z"></path><circle cx="18.746" cy="5.141" r="2.315" fill="currentColor" transform="rotate(28.55 18.746 5.14)"></circle><circle cx="21.528" cy="14.562" r="2.315" fill="currentColor" transform="rotate(28.55 21.528 14.562)"></circle><circle cx="30.127" cy="20.559" r="2.315" fill="currentColor" transform="rotate(28.55 30.127 20.56)"></circle><circle cx="13.872" cy="26.213" r="2.315" fill="currentColor" transform="rotate(28.55 13.872 26.213)"></circle><circle cx="8.681" cy="11.527" r="2.315" fill="currentColor" transform="rotate(28.55 8.681 11.527)"></circle></svg></div><div class="matai-css-1sysgyr"><strong class="matai-css-0">Polygon Layer</strong><span>2.4M Polygons</span></div></div></div></div><div class="info-container matai-css-1rhqfnz"><div class="matai-css-15uzuqz"><div><div><h3 class="matai-css-1wbonns"><a class="matai-css-1aqpqo" href="/layer/50804-nz-property-titles/" data-xstate-tree="true">NZ Property Titles</a></h3></div><div class="matai-css-11xq2fl">Land Information New Zealand</div></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="primary" data-testid="add-to-map-viewer" class="matai-css-763u1u" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button><div class="matai-css-b2xnwa"></div></div></div></div></div></div></div><div data-dataset-tile="true" data-testid="dataset-tile-122657" class="matai-css-73exei"><div class="thumb-container matai-css-166rmwg"><div class="matai-css-asylqy"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=122657.449016,style=auto/1200x630.png" alt="NZ Property Boundaries" loading="lazy" class="matai-css-29ytr9"></div><div class="matai-css-15670wd"><div class="matai-css-1a48slm"><div class="icon-wrap icon--dataset_polygon matai-css-9d09os" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="37" height="33" fill="none" viewBox="0 0 37 33"><path fill="currentColor" fill-opacity=".4" stroke="currentColor" stroke-linejoin="round" stroke-width="1.093" d="m8.437 11.976 9.847-7.087 2.526 9.671 8.96 6.653c-5.06 1.593-15.23 4.87-15.428 5.235-.2.366-4.02-9.496-5.905-14.472z"></path><circle cx="18.746" cy="5.141" r="2.315" fill="currentColor" transform="rotate(28.55 18.746 5.14)"></circle><circle cx="21.528" cy="14.562" r="2.315" fill="currentColor" transform="rotate(28.55 21.528 14.562)"></circle><circle cx="30.127" cy="20.559" r="2.315" fill="currentColor" transform="rotate(28.55 30.127 20.56)"></circle><circle cx="13.872" cy="26.213" r="2.315" fill="currentColor" transform="rotate(28.55 13.872 26.213)"></circle><circle cx="8.681" cy="11.527" r="2.315" fill="currentColor" transform="rotate(28.55 8.681 11.527)"></circle></svg></div><div class="matai-css-1sysgyr"><strong class="matai-css-0">Polygon Layer</strong><span>2.7M Polygons</span></div></div></div></div><div class="info-container matai-css-1rhqfnz"><div class="matai-css-15uzuqz"><div><div><h3 class="matai-css-1wbonns"><a class="matai-css-1aqpqo" href="/layer/122657-nz-property-boundaries/" data-xstate-tree="true">NZ Property Boundaries</a></h3></div><div class="matai-css-11xq2fl">Land Information New Zealand</div></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="primary" data-testid="add-to-map-viewer" class="matai-css-763u1u" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button><div class="matai-css-b2xnwa"></div></div></div></div></div></div></div><div data-dataset-tile="true" data-testid="dataset-tile-50772" class="matai-css-73exei"><div class="thumb-container matai-css-166rmwg"><div class="matai-css-asylqy"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=50772.449227,style=auto/1200x630.png" alt="NZ Primary Parcels" loading="lazy" class="matai-css-29ytr9"></div><div class="matai-css-15670wd"><div class="matai-css-1a48slm"><div class="icon-wrap icon--dataset_polygon matai-css-9d09os" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="37" height="33" fill="none" viewBox="0 0 37 33"><path fill="currentColor" fill-opacity=".4" stroke="currentColor" stroke-linejoin="round" stroke-width="1.093" d="m8.437 11.976 9.847-7.087 2.526 9.671 8.96 6.653c-5.06 1.593-15.23 4.87-15.428 5.235-.2.366-4.02-9.496-5.905-14.472z"></path><circle cx="18.746" cy="5.141" r="2.315" fill="currentColor" transform="rotate(28.55 18.746 5.14)"></circle><circle cx="21.528" cy="14.562" r="2.315" fill="currentColor" transform="rotate(28.55 21.528 14.562)"></circle><circle cx="30.127" cy="20.559" r="2.315" fill="currentColor" transform="rotate(28.55 30.127 20.56)"></circle><circle cx="13.872" cy="26.213" r="2.315" fill="currentColor" transform="rotate(28.55 13.872 26.213)"></circle><circle cx="8.681" cy="11.527" r="2.315" fill="currentColor" transform="rotate(28.55 8.681 11.527)"></circle></svg></div><div class="matai-css-1sysgyr"><strong class="matai-css-0">Polygon Layer</strong><span>2.7M Polygons</span></div></div></div></div><div class="info-container matai-css-1rhqfnz"><div class="matai-css-15uzuqz"><div><div><h3 class="matai-css-1wbonns"><a class="matai-css-1aqpqo" href="/layer/50772-nz-primary-parcels/" data-xstate-tree="true">NZ Primary Parcels</a></h3></div><div class="matai-css-11xq2fl">Land Information New Zealand</div></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="primary" data-testid="add-to-map-viewer" class="matai-css-763u1u" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button><div class="matai-css-b2xnwa"></div></div></div></div></div></div></div></div></div><div data-testid="homepage-panel--recently-updated-group" data-panel="true" class="matai-css-o44zn4"><div class="matai-css-1bvnf3b"><h2 class="matai-css-1kfnw5z">Recently Updated</h2><div class="matai-css-8z8d8"><a class="matai-css-1h02c4z" href="/data/?sort=updated_at" data-xstate-tree="true"><span data-testid="text-icon" class="text-and-icon matai-css-hd93t1"><span class="text-and-icon__text matai-css-q7cawn">View all</span><div class="icon-wrap text-and-icon__icon icon--caret-right matai-css-1754m9h" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="m8.586 8-3.293 3.293a1 1 0 0 0 1.414 1.414l4-4a1 1 0 0 0 0-1.414l-4-4a1 1 0 0 0-1.414 1.414z"></path></svg></div></span></a></div></div><div class="dataset-list matai-css-1738biy"><div data-dataset-tile="true" data-testid="dataset-tile-51681" class="matai-css-73exei"><div class="thumb-container matai-css-166rmwg"><div class="matai-css-asylqy"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=51681.449315,style=auto/1200x630.png" alt="NZ Place Names (NZGB)" loading="lazy" class="matai-css-29ytr9"></div><div class="matai-css-15670wd"><div class="matai-css-1a48slm"><div class="icon-wrap icon--dataset_point matai-css-9d09os" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="37" height="31" fill="none" viewBox="0 0 37 31"><circle cx="8.739" cy="12.6" r="1.723" fill="currentColor" transform="rotate(-16.45 8.739 12.6)"></circle><circle cx="16.743" cy="12.728" r="1.723" fill="currentColor" transform="rotate(-16.45 16.743 12.728)"></circle><circle cx="19.667" cy="5.739" r="1.723" fill="currentColor" transform="rotate(-16.45 19.667 5.74)"></circle><circle cx="12.612" cy="19.777" r="1.723" fill="currentColor" transform="rotate(-16.45 12.612 19.777)"></circle><circle cx="20.743" cy="17.743" r="1.723" fill="currentColor" transform="rotate(-16.45 20.743 17.743)"></circle><circle cx="24.809" cy="10.628" r="1.723" fill="currentColor" transform="rotate(-16.45 24.81 10.628)"></circle><circle cx="19.727" cy="24.859" r="1.723" fill="currentColor" transform="rotate(-16.45 19.727 24.859)"></circle><circle cx="27.859" cy="18.76" r="1.723" fill="currentColor" transform="rotate(-16.45 27.859 18.76)"></circle></svg></div><div class="matai-css-1sysgyr"><strong class="matai-css-0">Point Layer</strong><span>54.7K Points</span></div></div></div></div><div class="info-container matai-css-1rhqfnz"><div class="matai-css-15uzuqz"><div><div><h3 class="matai-css-1wbonns"><a class="matai-css-1aqpqo" href="/layer/51681-nz-place-names-nzgb/" data-xstate-tree="true">NZ Place Names (NZGB)</a></h3></div><div class="matai-css-11xq2fl">Land Information New Zealand</div></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="primary" data-testid="add-to-map-viewer" class="matai-css-763u1u" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button><div class="matai-css-b2xnwa"></div></div></div></div></div></div></div><div data-dataset-tile="true" data-testid="dataset-tile-50813" class="matai-css-73exei"><div class="thumb-container matai-css-166rmwg"><div class="matai-css-asylqy"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=50813.449292,style=auto/1200x630.png" alt="NZ Electronic Navigational Chart (ENC) Index" loading="lazy" class="matai-css-29ytr9"></div><div class="matai-css-15670wd"><div class="matai-css-1a48slm"><div class="icon-wrap icon--dataset_polygon matai-css-9d09os" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="37" height="33" fill="none" viewBox="0 0 37 33"><path fill="currentColor" fill-opacity=".4" stroke="currentColor" stroke-linejoin="round" stroke-width="1.093" d="m8.437 11.976 9.847-7.087 2.526 9.671 8.96 6.653c-5.06 1.593-15.23 4.87-15.428 5.235-.2.366-4.02-9.496-5.905-14.472z"></path><circle cx="18.746" cy="5.141" r="2.315" fill="currentColor" transform="rotate(28.55 18.746 5.14)"></circle><circle cx="21.528" cy="14.562" r="2.315" fill="currentColor" transform="rotate(28.55 21.528 14.562)"></circle><circle cx="30.127" cy="20.559" r="2.315" fill="currentColor" transform="rotate(28.55 30.127 20.56)"></circle><circle cx="13.872" cy="26.213" r="2.315" fill="currentColor" transform="rotate(28.55 13.872 26.213)"></circle><circle cx="8.681" cy="11.527" r="2.315" fill="currentColor" transform="rotate(28.55 8.681 11.527)"></circle></svg></div><div class="matai-css-1sysgyr"><strong class="matai-css-0">Polygon Layer</strong><span>334 Polygons</span></div></div></div></div><div class="info-container matai-css-1rhqfnz"><div class="matai-css-15uzuqz"><div><div><h3 class="matai-css-1wbonns"><a class="matai-css-1aqpqo" href="/layer/50813-nz-electronic-navigational-chart-enc-index/" data-xstate-tree="true">NZ Electronic Navigational Chart (ENC) Index</a></h3></div><div class="matai-css-11xq2fl">Land Information New Zealand</div></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="primary" data-testid="add-to-map-viewer" class="matai-css-763u1u" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button><div class="matai-css-b2xnwa"></div></div></div></div></div></div></div><div data-dataset-tile="true" data-testid="dataset-tile-50839" class="matai-css-73exei"><div class="thumb-container matai-css-166rmwg"><div class="matai-css-asylqy"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=50839.449288,style=auto/1200x630.png" alt="NZ Protected Survey Marks" loading="lazy" class="matai-css-29ytr9"></div><div class="matai-css-15670wd"><div class="matai-css-1a48slm"><div class="icon-wrap icon--dataset_point matai-css-9d09os" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="37" height="31" fill="none" viewBox="0 0 37 31"><circle cx="8.739" cy="12.6" r="1.723" fill="currentColor" transform="rotate(-16.45 8.739 12.6)"></circle><circle cx="16.743" cy="12.728" r="1.723" fill="currentColor" transform="rotate(-16.45 16.743 12.728)"></circle><circle cx="19.667" cy="5.739" r="1.723" fill="currentColor" transform="rotate(-16.45 19.667 5.74)"></circle><circle cx="12.612" cy="19.777" r="1.723" fill="currentColor" transform="rotate(-16.45 12.612 19.777)"></circle><circle cx="20.743" cy="17.743" r="1.723" fill="currentColor" transform="rotate(-16.45 20.743 17.743)"></circle><circle cx="24.809" cy="10.628" r="1.723" fill="currentColor" transform="rotate(-16.45 24.81 10.628)"></circle><circle cx="19.727" cy="24.859" r="1.723" fill="currentColor" transform="rotate(-16.45 19.727 24.859)"></circle><circle cx="27.859" cy="18.76" r="1.723" fill="currentColor" transform="rotate(-16.45 27.859 18.76)"></circle></svg></div><div class="matai-css-1sysgyr"><strong class="matai-css-0">Point Layer</strong><span>389.5K Points</span></div></div></div></div><div class="info-container matai-css-1rhqfnz"><div class="matai-css-15uzuqz"><div><div><h3 class="matai-css-1wbonns"><a class="matai-css-1aqpqo" href="/layer/50839-nz-protected-survey-marks/" data-xstate-tree="true">NZ Protected Survey Marks</a></h3></div><div class="matai-css-11xq2fl">Land Information New Zealand</div></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="primary" data-testid="add-to-map-viewer" class="matai-css-763u1u" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button><div class="matai-css-b2xnwa"></div></div></div></div></div></div></div><div data-dataset-tile="true" data-testid="dataset-tile-123113" class="matai-css-73exei"><div class="thumb-container matai-css-166rmwg"><div class="matai-css-asylqy"><img src="https://tiles-cdn.koordinates.com/services/tiles/v4/thumbnail/layer=123113.449283,style=auto/1200x630.png" alt="NZ Addresses" loading="lazy" class="matai-css-29ytr9"></div><div class="matai-css-15670wd"><div class="matai-css-1a48slm"><div class="icon-wrap icon--dataset_point matai-css-9d09os" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="37" height="31" fill="none" viewBox="0 0 37 31"><circle cx="8.739" cy="12.6" r="1.723" fill="currentColor" transform="rotate(-16.45 8.739 12.6)"></circle><circle cx="16.743" cy="12.728" r="1.723" fill="currentColor" transform="rotate(-16.45 16.743 12.728)"></circle><circle cx="19.667" cy="5.739" r="1.723" fill="currentColor" transform="rotate(-16.45 19.667 5.74)"></circle><circle cx="12.612" cy="19.777" r="1.723" fill="currentColor" transform="rotate(-16.45 12.612 19.777)"></circle><circle cx="20.743" cy="17.743" r="1.723" fill="currentColor" transform="rotate(-16.45 20.743 17.743)"></circle><circle cx="24.809" cy="10.628" r="1.723" fill="currentColor" transform="rotate(-16.45 24.81 10.628)"></circle><circle cx="19.727" cy="24.859" r="1.723" fill="currentColor" transform="rotate(-16.45 19.727 24.859)"></circle><circle cx="27.859" cy="18.76" r="1.723" fill="currentColor" transform="rotate(-16.45 27.859 18.76)"></circle></svg></div><div class="matai-css-1sysgyr"><strong class="matai-css-0">Point Layer</strong><span>2.4M Points</span></div></div></div></div><div class="info-container matai-css-1rhqfnz"><div class="matai-css-15uzuqz"><div><div><h3 class="matai-css-1wbonns"><a class="matai-css-1aqpqo" href="/layer/123113-nz-addresses/" data-xstate-tree="true">NZ Addresses</a></h3></div><div class="matai-css-11xq2fl">Land Information New Zealand</div></div><div data-testid="dataset-tile-info-container" class="matai-css-1bpwsga"><div class="matai-css-z7pydm"><div class="dataset-tile-actions matai-css-1txuu2o"><button data-style-type="primary" data-testid="add-to-map-viewer" class="matai-css-763u1u" aria-label="Add To"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn"><div class="matai-css-w5ladz">Add To </div>Map</span><div class="icon-wrap text-and-icon__icon icon--add matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M9 7V4a1 1 0 1 0-2 0v3H4a1 1 0 1 0 0 2h3v3a1 1 0 0 0 2 0V9h3a1 1 0 0 0 0-2z"></path></svg></div></span></button><div class="matai-css-b2xnwa"></div></div></div></div></div></div></div></div></div></div><div class="matai-css-gl9lo4"><a href="https://koordinates.com" target="_blank" rel="noopener noreferrer" class="matai-css-i1uuki"><svg width="101" height="32" viewBox="0 0 101 32" xmlns="http://www.w3.org/2000/svg" class=""><title>Koordinates logo</title><path d="M34 16.9736C34 15.8177 34.4 14.8195 35.2 14.0314C36 13.1908 36.95 12.823 38.1 12.823C39.25 12.823 40.2 13.2433 41 14.0314C41.8 14.872 42.2 15.8703 42.2 17.0787C42.2 18.2871 41.8 19.2853 41 20.126C40.2 20.9141 39.2 21.3344 38.05 21.3344C36.9 21.3344 35.95 20.9141 35.15 20.0734C34.4 19.2328 34 18.182 34 16.9736ZM35.8 17.0262C35.8 17.8142 36 18.4447 36.4 18.9176C36.8 19.3904 37.35 19.6531 38.05 19.6531C38.75 19.6531 39.3 19.443 39.7 18.9701C40.1 18.4973 40.3 17.8668 40.3 17.0787C40.3 16.2906 40.1 15.6601 39.7 15.1873C39.3 14.7144 38.75 14.4517 38.05 14.4517C37.35 14.4517 36.85 14.7144 36.4 15.1873C36 15.6601 35.8 16.2381 35.8 17.0262ZM42.65 16.9736C42.65 15.8177 43.05 14.8195 43.85 14.0314C44.65 13.1908 45.6 12.823 46.75 12.823C47.9 12.823 48.85 13.2433 49.65 14.0314C50.45 14.872 50.85 15.8703 50.85 17.0787C50.85 18.2871 50.45 19.2853 49.65 20.126C48.85 20.9141 47.85 21.3344 46.7 21.3344C45.55 21.3344 44.6 20.9141 43.8 20.0734C43.05 19.2328 42.65 18.182 42.65 16.9736ZM44.45 17.0262C44.45 17.8142 44.65 18.4447 45.05 18.9176C45.45 19.3904 46 19.6531 46.7 19.6531C47.4 19.6531 47.95 19.443 48.35 18.9701C48.75 18.4973 48.95 17.8668 48.95 17.0787C48.95 16.2906 48.75 15.6601 48.35 15.1873C47.95 14.7144 47.4 14.4517 46.7 14.4517C46 14.4517 45.5 14.7144 45.05 15.1873C44.65 15.6601 44.45 16.2381 44.45 17.0262ZM53.15 12.9806V13.7162C53.5 13.3484 53.75 13.1382 54 12.9806C54.25 12.823 54.55 12.7705 54.9 12.7705C55.35 12.7705 55.85 12.9281 56.35 13.2433L55.55 14.9246C55.2 14.6619 54.9 14.5568 54.55 14.5568C53.6 14.5568 53.1 15.3449 53.1 16.8685V21.0191H51.35V12.9806H53.15ZM61.95 7.09619H63.75V21.0717H61.95V20.2311C61.25 20.9666 60.45 21.2818 59.6 21.2818C58.55 21.2818 57.7 20.8615 57 20.0734C56.3 19.2328 55.95 18.2346 55.95 16.9736C55.95 15.7652 56.3 14.767 57 13.9789C57.7 13.1908 58.55 12.7705 59.55 12.7705C60.45 12.7705 61.25 13.1382 61.95 13.9263V7.09619ZM57.75 17.0262C57.75 17.8142 57.95 18.4447 58.35 18.9176C58.75 19.3904 59.25 19.6531 59.9 19.6531C60.55 19.6531 61.1 19.3904 61.5 18.9176C61.9 18.4447 62.1 17.8142 62.1 17.0262C62.1 16.2906 61.9 15.6601 61.5 15.1347C61.1 14.6619 60.55 14.3992 59.95 14.3992C59.35 14.3992 58.85 14.6619 58.4 15.1347C57.95 15.6601 57.75 16.2906 57.75 17.0262ZM64.25 9.67062C64.25 9.35539 64.35 9.04015 64.6 8.82999C64.85 8.5673 65.1 8.46222 65.4 8.46222C65.7 8.46222 66 8.5673 66.2 8.82999C66.45 9.04015 66.55 9.35539 66.55 9.67062C66.55 9.98586 66.45 10.3011 66.2 10.5113C66 10.774 65.7 10.879 65.4 10.879C65.1 10.879 64.8 10.774 64.6 10.5113C64.4 10.3011 64.25 9.98586 64.25 9.67062ZM66.3 12.9806V21.0191H64.55V12.9806H66.3ZM67.15 12.9806H68.95V13.7162C69.55 13.0857 70.25 12.7705 71.05 12.7705C71.95 12.7705 72.65 13.0857 73.15 13.6636C73.6 14.189 73.8 14.9771 73.8 16.133V21.0717H72V16.6058C72 15.8177 71.9 15.2398 71.7 14.9771C71.5 14.6619 71.1 14.5043 70.6 14.5043C70 14.5043 69.6 14.7144 69.35 15.1347C69.1 15.555 69 16.2381 69 17.2363V21.1242H67.2V12.9806H67.15ZM80.35 12.9806H82.15V21.0191H80.35V20.1785C79.6 20.9141 78.85 21.2293 78 21.2293C76.95 21.2293 76.05 20.809 75.35 20.0209C74.65 19.1803 74.3 18.182 74.3 16.9211C74.3 15.7127 74.65 14.7144 75.35 13.9263C76.05 13.1382 76.9 12.7179 77.95 12.7179C78.85 12.7179 79.65 13.0857 80.35 13.8738V12.9806ZM76.15 17.0262C76.15 17.8142 76.35 18.4447 76.75 18.9176C77.15 19.3904 77.65 19.6531 78.3 19.6531C78.95 19.6531 79.5 19.3904 79.9 18.9176C80.3 18.4447 80.5 17.8142 80.5 17.0262C80.5 16.2906 80.3 15.6601 79.9 15.1347C79.7068 14.9027 79.4684 14.7169 79.201 14.5901C78.9336 14.4632 78.6434 14.3981 78.35 14.3992C77.75 14.3992 77.25 14.6619 76.8 15.1347C76.35 15.6601 76.15 16.2906 76.15 17.0262ZM85.3 14.7144V21.0191H83.55V14.7144H82.8V12.9806H83.55V10.0384H85.3V12.9806H86.7V14.7144H85.3ZM94.15 17.4465H88.65C88.7 18.1295 88.9 18.6549 89.25 19.0226C89.6 19.3904 90.1 19.6006 90.65 19.6006C91.1 19.6006 91.45 19.4955 91.75 19.2853C92.05 19.0752 92.35 18.6549 92.7 18.0769L94.2 18.9701C93.95 19.3904 93.75 19.7582 93.45 20.0209C93.2 20.3361 92.9 20.5463 92.6 20.7565C92.3 20.9666 92 21.0717 91.65 21.1768C91.3 21.2818 90.95 21.3344 90.55 21.3344C89.4 21.3344 88.5 20.9666 87.8 20.1785C87.1 19.3904 86.75 18.3922 86.75 17.0787C86.75 15.8177 87.1 14.767 87.75 13.9789C88.45 13.1908 89.3 12.823 90.45 12.823C91.6 12.823 92.45 13.1908 93.1 13.9789C93.75 14.7144 94.1 15.7652 94.1 17.0787L94.15 17.4465ZM92.3 15.9228C92.05 14.9246 91.45 14.4517 90.5 14.4517C90.3 14.4517 90.1 14.5043 89.9 14.5568C89.7 14.6093 89.55 14.7144 89.4 14.872C89.25 14.9771 89.1 15.1347 89 15.3449C88.9 15.5025 88.8 15.7127 88.75 15.9754H92.3V15.9228ZM99.5 14.3466L98.05 15.1873C97.8 14.7144 97.55 14.4517 97.2 14.4517C97.05 14.4517 96.9 14.5043 96.8 14.6093C96.7 14.7144 96.65 14.872 96.65 15.0297C96.65 15.3449 97 15.6601 97.65 15.9228C98.6 16.3431 99.2 16.7635 99.55 17.0787C99.9 17.4465 100.05 17.9193 100.05 18.4973C100.05 19.2853 99.8 19.9158 99.25 20.4412C98.7 20.9141 98.1 21.1768 97.35 21.1768C96.05 21.1768 95.15 20.4938 94.6 19.1803L96.1 18.4447C96.3 18.8125 96.45 19.0752 96.6 19.1803C96.8 19.3904 97.05 19.4955 97.35 19.4955C97.95 19.4955 98.25 19.2328 98.25 18.6549C98.25 18.3396 98 18.0244 97.55 17.7092C97.35 17.6041 97.2 17.499 97 17.4465C96.8 17.3414 96.65 17.2888 96.45 17.1838C95.95 16.9211 95.55 16.6584 95.35 16.3957C95.1 16.0804 94.95 15.6076 94.95 15.0822C94.95 14.3992 95.2 13.8212 95.65 13.3484C96.1 12.8755 96.7 12.6654 97.35 12.6654C98.3 12.7705 99.05 13.2959 99.5 14.3466Z"></path><path d="M34.9 21.0193L31.05 17.0263L34.85 13.0333L32.4 12.9807L29.45 16.0806V7.09632H27.7V16.0806L24.75 13.0333H22.3L26.1 17.0263L22.25 21.0193H24.75L27.7 17.9194V21.0718H29.45V17.9194L32.4 21.0193H34.9ZM18.15 6.04553L14.3 2L9.25 7.30648L10.5 8.61997L14.3 4.62697L18.15 8.61997L19.35 7.35902L18.15 6.04553ZM0 17.0263L5.1 11.6673L6.3 12.9807L2.5 17.0263L6.3 21.0193L5.05 22.3328L0 17.0263ZM14.3 32L9.2 26.6935L10.45 25.38L14.3 29.4256L18.1 25.4326L19.35 26.7461L14.3 32Z"></path></svg></a><span class="matai-css-10v51wl">LINZ Data Service runs on <a href="https://koordinates.com/" target="_blank" rel="noopener noreferrer" class="matai-css-1nfbx2a">Koordinates</a></span></div></div></div></div></div></div></div></div></div></div></div></div><div class="matai-css-1hn207n"></div></div><div width="530" height="660" class="matai-css-192qi2n"><div class="matai-css-4b375e"><div data-testid="no-layout-map-viewer" class="matai-css-y28ydw"><div data-testid="map-container" class="matai-css-1oel1jp"><div data-testid="map-area" class="matai-css-mg8ajq react-resizable" style="width: 530px; height: 660px;"><div class="matai-css-jfcadu"><div data-testid="header-menu-row-1" class="matai-css-1xf6n7b"><div data-testid="map-name-action-wrapper" class="matai-css-xz37ph"><div class="matai-css-1t4ll8b"><div class="matai-css-u6699d"><div width="32" height="32" data-testid="map-config-thumbnail" class="matai-css-gyviv6" style="background-image: url(&quot;https://services.koordinates.com/public/protomaps-basemap-32-20250305.png&quot;);"></div><div class="matai-css-juwaj0"></div></div><button data-testid="map-name-editor-readonly" class="matai-css-iyvjck"><div class="matai-css-lr4g51"><span class="matai-css-13qfwbr">Map Viewer</span></div></button></div></div><div class="matai-css-h978r1"><div class="matai-css-14q2bmt"><div role="menubar" class="matai-css-bkf894" tabindex="0" data-orientation="horizontal" style="outline: none;"><button type="button" role="menuitem" id="radix-:ra:" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-testid="top-level-menu-item-0" data-intersection="0" class="matai-css-knpekq" tabindex="-1" data-orientation="horizontal" data-radix-collection-item="">File</button><button type="button" role="menuitem" id="radix-:re:" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-testid="top-level-menu-item-1" data-intersection="1" class="matai-css-knpekq" tabindex="-1" data-orientation="horizontal" data-radix-collection-item="">View</button><button type="button" role="menuitem" id="radix-:ri:" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-testid="top-level-menu-item-2" data-intersection="2" class="matai-css-knpekq" tabindex="-1" data-orientation="horizontal" data-radix-collection-item="">Tools</button></div></div></div><div class="matai-css-p39j97"><div width="28" data-testid="copy-link-box" class="matai-css-1cknidw"><div data-testid="copy-box-container" mode="horizontal" class="matai-css-11b8aal"><span class="matai-css-19wqbit"><button type="button" data-style-type="toolbar" aria-label="Copy map viewer link" data-state="closed" class="matai-css-1almflq"><span data-testid="text-icon" class="text-and-icon matai-css-v6nsuw"><div class="icon-wrap text-and-icon__icon icon--text-edit-link matai-css-n1r2li" aria-hidden="true" width="18" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M6 10a.707.707 0 0 0 1 0l3-3a.707.707 0 0 0-1-1L6 9a.707.707 0 0 0 0 1"></path><path d="m9.5 8.5 1.793-1.793a1 1 0 0 0 0-1.414l-.586-.586a1 1 0 0 0-1.414 0L7.5 6.5l-.293-.293a1 1 0 0 1 0-1.414l1.401-1.401a2 2 0 0 1 2.806-.023l1.152 1.116a2 2 0 0 1 .047 2.826l-1.406 1.457a1 1 0 0 1-1.427.012zm-3-1L4.707 9.293a1 1 0 0 0 0 1.414l.586.586a1 1 0 0 0 1.414 0L8.5 9.5l.293.293a1 1 0 0 1 0 1.414l-1.379 1.379a2 2 0 0 1-2.828 0l-1.172-1.172a2 2 0 0 1 0-2.828l1.379-1.379a1 1 0 0 1 1.414 0z"></path></svg></div></span></button></span></div></div><button data-style-type="toolbar" aria-label="Enter full browser view" class="matai-css-dc6cc6" data-state="closed"><span data-testid="text-icon" class="text-and-icon matai-css-v6nsuw"><div class="icon-wrap text-and-icon__icon icon--map-full-browser matai-css-5mcedc" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="16" viewBox="0 0 16 16"><path d="M8.7 8.1c-.2 0-.3-.1-.5-.2-.2-.3-.2-.7 0-1l2.5-2.6H9.2c-.4 0-.7-.3-.7-.6s.3-.7.7-.7h3.3c.1 0 .2.1.2.1l.2.2c0 .1 0 .2.1.2v3.1c0 .4-.3.7-.7.7s-.7-.3-.7-.7V5.3L9.2 7.9c-.1.1-.3.2-.5.2m-5 4.9h-.2c-.1 0-.2-.1-.2-.2-.1-.1-.1-.1-.1-.2V9.2c0-.4.3-.7.7-.7s.7.3.7.7v1.5l2.1-2.1c.3-.3.7-.3.9 0 .3.3.3.7 0 .9l-2.1 2.1H7c.4 0 .7.3.7.7s-.3.7-.7.7z"></path></svg></div></span></button></div></div><div data-testid="header-menu-row-2" class="matai-css-zkwdrw"><div class="matai-css-k9focf"><button data-style-type="toolbar" aria-label="2D map" class="matai-css-13wur4h" data-state="closed"><span data-testid="text-icon" class="text-and-icon matai-css-v6nsuw"><div class="icon-wrap text-and-icon__icon icon--ml-2d matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="16" viewBox="0 0 16 16"><path d="M3.5 11.5h3.1v1.3H1v-.1l2.5-3.2C4.3 8.4 5 7.6 5 6.6c0-.7-.5-1.3-1.4-1.3-1 0-1.9.6-2.5 1.2V5.1C1.8 4.4 2.8 4 3.8 4c1.6 0 2.7 1 2.7 2.5 0 1.2-.8 2.3-1.7 3.4zM8 12.8V4.1h2.9c2.5 0 4.2 1.7 4.2 4.3s-1.6 4.3-4.2 4.3H8zm1.4-1.3h1.4c1.8 0 2.8-1.2 2.8-3 0-1.9-1-3-2.8-3H9.4z"></path></svg></div></span></button><button data-style-type="toolbar" aria-label="3D map" class="matai-css-7yy5vd" data-state="closed"><span data-testid="text-icon" class="text-and-icon matai-css-v6nsuw"><div class="icon-wrap text-and-icon__icon icon--ml-3d matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="16" height="16" viewBox="0 0 16 16"><path d="M1.1 5.3V4h5.1L4.3 7.5c1.2.3 2 1.2 2 2.5 0 1.7-1.4 2.8-2.9 2.8-1.1 0-1.8-.3-2.4-.7v-1.5c.6.6 1.4.9 2.3.9 1 0 1.7-.5 1.7-1.5 0-1.1-1-1.6-2.4-1.6l1.6-3H1.1zm6.6 7.3V4h2.9c2.5 0 4.2 1.7 4.2 4.3s-1.6 4.3-4.2 4.3zm1.5-1.3h1.4c1.8 0 2.8-1.2 2.8-3 0-1.9-1-3-2.8-3H9.2z"></path></svg></div></span></button><button data-style-type="toolbar" aria-label="Display settings" class="matai-css-7yy5vd" data-state="closed"><span data-testid="text-icon" class="text-and-icon matai-css-v6nsuw"><div class="icon-wrap text-and-icon__icon icon--settings matai-css-9cl1pe" aria-hidden="true" width="12" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23.201 10.478-2.7-1.3c-.1-.4-.3-.8-.5-1.1l1.1-3.1c.1-.2 0-.4-.1-.5l-1.4-1.4c-.1-.1-.3-.2-.5-.1l-3.1 1.1c-.4-.2-.7-.3-1.1-.5 0 0-1-2.2-1.3-2.7s-.4-.6-.6-.6h-1.9c-.2 0-.3 0-.5.5s-1.3 2.8-1.3 2.8c-.5.1-.9.2-1.3.4l-3.1-1.1c-.2-.1-.4 0-.5.1l-1.4 1.4c-.1.1-.2.3-.1.5l1.1 3.1c-.2.4-.4.8-.5 1.2l-3 1.4c-.2.1-.3.3-.3.4v1.9c0 .2 0 .3.4.5s2.9 1.3 2.9 1.3c.1.4.3.8.5 1.1l-1.1 3.1c-.1.2 0 .4.1.5l1.4 1.4c.1.1.3.2.5.1l3.1-1.1c.4.2.7.3 1.1.5l1.4 3c.1.2.3.3.4.3h1.9c.2 0 .3.1.5-.4s1.3-2.9 1.3-2.9c.4-.1.8-.3 1.1-.5l3.1 1.1c.2.1.4 0 .5-.1l1.4-1.4c.1-.1.2-.3.1-.5l-1.1-3.1c.2-.4.3-.7.5-1.1l3-1.4c.2-.1.3-.3.3-.4v-1.9c0-.1-.1-.4-.3-.5m-11.2 7.1c-3 0-5.5-2.5-5.5-5.5s2.5-5.5 5.5-5.5c3.1 0 5.5 2.5 5.5 5.5s-2.4 5.5-5.5 5.5"></path></svg></div></span></button></div><div class="matai-css-t4ghp7"><div role="combobox" aria-haspopup="listbox" aria-owns="react-autowhatever-address-finder" aria-expanded="false" class="react-autosuggest__container"><div class="matai-css-1e62xf7"><input type="text" autocomplete="off" aria-autocomplete="list" aria-controls="react-autowhatever-address-finder" class="matai-css-n49htb" placeholder="Find location" value="" style=""></div><div id="react-autowhatever-address-finder" role="listbox" class="react-autosuggest__suggestions-container"><div class="matai-css-1qu4g10">Previous searches</div></div></div></div><div class="matai-css-vvpoea"><button data-style-type="toolbar" data-testid="header-icon-measurements" data-state="closed" class="matai-css-1bjao69"><span data-testid="text-icon" class="text-and-icon matai-css-v6nsuw"><div class="icon-wrap text-and-icon__icon icon--measure matai-css-5mcedc" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"><g stroke="#323233" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.51" clip-path="url(#measure__a)"><path d="M1.208 13.145V1.787c0-.2.163-.363.363-.363h11.358c.2 0 .363.162.363.363v4.108c0 .2-.162.362-.363.362H6.404c-.2 0-.362.163-.362.363v6.525c0 .2-.162.362-.363.362H1.571a.362.362 0 0 1-.363-.362ZM9.666 6.258V4.445M6.042 6.258V4.445M6.042 9.883H4.229M6.042 6.258H4.229"></path></g><defs><clipPath id="measure__a"><path fill="#fff" d="M0 .216h14.5v14.5H0z"></path></clipPath></defs></svg></div></span></button><button data-style-type="toolbar" data-state="closed" class="matai-css-1bjao69"><span data-testid="text-icon" class="text-and-icon matai-css-v6nsuw"><div class="icon-wrap text-and-icon__icon icon--pdf matai-css-5mcedc" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M11.8813 14.0998C11.8813 14.2929 11.7248 14.4494 11.5317 14.4494H2.90837C2.7153 14.4494 2.55878 14.2929 2.55878 14.0998V3.14586C2.55878 2.95278 2.7153 2.79626 2.90837 2.79626H9.6972C9.7899 2.79626 9.87882 2.83309 9.94437 2.89866L11.7789 4.73317C11.8445 4.79874 11.8813 4.88765 11.8813 4.98037V7.26023" stroke="#323233" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M9.55066 2.79626V4.7773C9.55066 4.97037 9.70716 5.12689 9.90025 5.12689H11.8813" stroke="#323233" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M6.49604 11.202H5.76885V12.4494H4.73401V8.43311H6.49604C7.36307 8.43311 7.95601 8.91976 7.95601 9.82036C7.95601 10.7098 7.36307 11.202 6.49604 11.202ZM6.93235 9.82036C6.93235 9.5127 6.76454 9.31132 6.38417 9.31132H5.76885V10.3182H6.38417C6.76454 10.3182 6.93235 10.1168 6.93235 9.82036Z" fill="#323233"></path>
+<path d="M8.41037 12.4494V8.43311H9.93187C11.1849 8.43311 11.9512 9.21623 11.9512 10.4413C11.9512 11.6663 11.1849 12.4494 9.93187 12.4494H8.41037ZM9.44521 11.5376H9.87593C10.5472 11.5376 10.9164 11.1125 10.9164 10.4413C10.9164 9.75882 10.5472 9.3337 9.87593 9.3337H9.44521V11.5376Z" fill="#323233"></path>
+<path d="M13.4275 12.4494H12.3926V8.43311H15.2175V9.34489H13.4275V10.1392H15.072V11.0286H13.4275V12.4494Z" fill="#323233"></path>
+</svg>
+</div></span></button><div class="matai-css-44gx6g"></div></div><div class="matai-css-pa2y5w"><div class="matai-css-1gfajpt"><button data-style-type="toolbar" data-testid="map-viewer-header--layer-list-trigger" aria-label="Close layer list" aria-haspopup="dialog" aria-expanded="true" aria-controls="radix-:rs:" data-state="open" class="matai-css-1hn072p"><span data-testid="text-icon" class="text-and-icon matai-css-1en1zrn"><span class="text-and-icon__text matai-css-q7cawn">Contents</span><div class="icon-wrap text-and-icon__icon icon--close matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path d="m9.485 8.071 2.122-2.121a1 1 0 0 0-1.415-1.414l-2.121 2.12-2.121-2.12A1 1 0 1 0 4.536 5.95l2.12 2.121-2.12 2.121a1 1 0 1 0 1.414 1.415l2.12-2.122 2.121 2.122a1 1 0 1 0 1.415-1.415z"></path></svg></div></span></button><div class="small-screen-header-menu-expander matai-css-139v8cl"><div data-radix-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(-227px, 40px); min-width: max-content; z-index: 220; --radix-popper-available-width: 514px; --radix-popper-available-height: 562px; --radix-popper-anchor-width: 93.125px; --radix-popper-anchor-height: 28px; --radix-popper-transform-origin: 0% 0px;"><div data-side="bottom" data-align="start" data-state="open" role="dialog" id="radix-:rs:" class="layer-list__content popover-content matai-css-66zrq1" tabindex="-1" style="--overlay-z: 1700; --radix-popover-content-transform-origin: var(--radix-popper-transform-origin); --radix-popover-content-available-width: var(--radix-popper-available-width); --radix-popover-content-available-height: var(--radix-popper-available-height); --radix-popover-trigger-width: var(--radix-popper-anchor-width); --radix-popover-trigger-height: var(--radix-popper-anchor-height);"><div data-testid="layer-list" class="matai-css-1sg2lsz"><div height="100%" class="matai-css-o3thha"><div class="matai-css-1a3fqmt">No layers to display - add one to get started</div><div data-testid="base-map-wrapper" class="matai-css-1gzf6b2"><div class="matai-css-av5wh1"><div class="matai-css-1dfo5vi"><button class="matai-css-sx7mk7"><div class="matai-css-bujpow"><div width="32" height="32" class="matai-css-1ubxfd9" style="background-image: url(&quot;https://services.koordinates.com/public/protomaps-basemap-32-20250305.png&quot;);"></div></div></button><div>Basemap</div></div><div class="matai-css-4nsoks"><button type="button" data-style-type="transparent" data-testid="popover-trigger" class="matai-css-ftx30d" aria-label="Open basemap selector" id="radix-:ru:" aria-haspopup="menu" aria-expanded="false" data-state="closed"><span data-testid="text-icon" class="text-and-icon matai-css-10w7cc9"><span class="text-and-icon__text matai-css-uiecbt"><p class="matai-css-j9j04p">Streets</p></span><div class="icon-wrap text-and-icon__icon icon--caret-down matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 8.6 4.7 5.3c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l4 4c.4.4 1 .4 1.4 0l4-4c.4-.4.4-1 0-1.4s-1-.4-1.4 0z"></path></svg></div></span></button></div></div></div><div id=":rt:" class="matai-css-els2mh">Press Space or Enter to pick up, then arrow up or arrow down to move it, Space or Enter to drop it, or Escape to cancel.</div><div role="status" aria-live="polite" data-testid="layer-list-reorder-announcer" class="matai-css-els2mh"></div></div></div></div></div></div></div></div></div></div><div id="map-viewer-container" class="matai-css-zis18x"><div data-testid="ml-container" class="chromatic-ignore matai-css-gvux9d"><div data-testid="mappane-0" class="primary-map-pane-0 matai-css-oenp64"><div class="attribution fullscreen-map--move-up-right matai-css-11me7c">© Protomaps © <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a></div><div class="maplibregl-canvas-container maplibregl-interactive maplibregl-touch-drag-pan maplibregl-touch-zoom-rotate"><canvas class="maplibregl-canvas" tabindex="0" aria-label="Map" role="region" width="530" height="576" style="width: 530px; height: 576px; cursor: default;"></canvas></div><div class="maplibregl-control-container"><div class="maplibregl-ctrl-top-left "><div class="maplibregl-ctrl maplibregl-ctrl-group"><button class="maplibregl-ctrl-compass" type="button" title="Drag to rotate map, click to reset north" aria-label="Drag to rotate map, click to reset north"><span class="maplibregl-ctrl-icon" aria-hidden="true" style="transform: scale(1) rotateZ(0deg) rotateX(0deg) rotateZ(0deg);"></span></button></div><div class="maplibregl-ctrl maplibregl-ctrl-group"><button class="maplibregl-ctrl-geolocate" type="button" title="Find my location" aria-label="Find my location" aria-pressed="false"><span class="maplibregl-ctrl-icon" aria-hidden="true"></span></button></div></div><div class="maplibregl-ctrl-top-right "></div><div class="maplibregl-ctrl-bottom-left "><div class="maplibregl-ctrl maplibregl-ctrl-scale" style="width: 58.3205px;">200&nbsp;km</div><div class="maplibregl-ctrl maplibregl-ctrl-scale" style="width: 46.9294px;">100&nbsp;mi</div></div><div class="maplibregl-ctrl-bottom-right "></div></div></div></div></div><span class="react-resizable-handle react-resizable-handle-se"></span></div></div><div data-testid="floating-window-host" class="matai-css-12vsin8"></div></div></div></div></div></div></div><div id="portal" class="matai-css-ic0pv5"></div></div></div>
+
+  <script>window.IS_PORTAL = true;</script>
+
+  <script id="pre-cached-user" type="application/json">{"geoip": {"country_code": "ZA", "state_code": null, "name": "South Africa", "key": "global/africa/south-africa"}, "is_authenticated": false}</script>
+  <script id="pre-cached-site" type="application/json">{"name": "LINZ Data Service", "domain": "data.linz.govt.nz", "owner": "Land Information New Zealand", "owner_short": "LINZ", "copyright": "NZ Crown Copyright", "tilegrids": [{"id": "EPSG:3857", "srid": 3857, "title": "GoogleMapsCompatible", "url": "https://data.linz.govt.nz/services/api/v1.x/site/tilegrids/EPSG:3857/"}, {"id": "EPSG:2193", "srid": 2193, "title": "NZTM2000", "url": "https://data.linz.govt.nz/services/api/v1.x/site/tilegrids/EPSG:2193/"}], "flags": {"portal": true, "legacy_dashboard": true, "datasource_info": true, "styled_sets": true, "feedback_enabled": true}, "geocoder": {"type": "geocode-earth", "api_key": "ge-9a6f0a410b8c3ebe"}, "basemap": {"base_layers": [{"key": "Terrain", "title": "Terrain", "thumbnail_url": "https://services.koordinates.com/public/mt-terrain-32-20250307.png", "type": "vector", "max_zoom_level": 22, "is_visible": true, "attribution": {"title": "\u00a9 MapTiler \u00a9 OpenStreetMap contributors", "url": "https://www.maptiler.com/copyright/"}, "vector_url": "//services.koordinates.com/public/basemaps/protomaps/style-terrain.json", "urls": []}, {"key": "New Zealand Aerial Imagery", "title": "New Zealand Aerial Imagery", "thumbnail_url": "https://assets.koordinates.com/kx-dandelion-live2-public/basemap/thumbnail_e7b50e63-614d-4017-b43b-36c7dd9c790d.png", "type": "raster", "max_zoom_level": 24, "is_visible": true, "attribution": {"title": "\u00a9 Land Information New Zealand", "url": "https://www.linz.govt.nz/data/linz-data/linz-basemaps/data-attribution"}, "urls": ["//basemaps.linz.govt.nz/v1/tiles/aerial/WebMercatorQuad/{z}/{x}/{y}.webp?api=d01edq7070qb1y31gakkyabawdk"]}, {"key": "Satellite", "title": "Satellite", "thumbnail_url": "https://services.koordinates.com/public/mt-satellite-32-20250307.webp", "type": "raster", "max_zoom_level": 22, "is_visible": true, "attribution": {"title": "\u00a9 Mapbox \u00a9 OpenStreetMap", "url": "https://www.mapbox.com/about/maps/"}, "urls": ["//api.mapbox.com/v4/mapbox.satellite/${z}/${x}/${y}.webp?access_token=pk.eyJ1Ijoia29vcmRpbmF0ZXMiLCJhIjoiY2xvMzloZTNzMGFnejJpbXlpMnBhejRmYiJ9.O6zz7n36s3gP11M44K3i7Q"]}, {"key": "Streets", "title": "Streets", "thumbnail_url": "https://services.koordinates.com/public/protomaps-basemap-32-20250305.png", "type": "vector", "max_zoom_level": null, "is_visible": true, "attribution": {"title": "\u00a9 Protomaps \u00a9 OpenStreetMap", "url": "https://docs.protomaps.com/basemaps/downloads"}, "vector_url": "https://services.koordinates.com/public/basemaps/protomaps/style-light.json", "urls": []}], "default_base_layer": "Streets", "terrain_layers": [{"key": "terrain-3d", "url": "https://s3.amazonaws.com/elevation-tiles-prod/terrarium/{z}/{x}/{y}.png", "type": "raster", "encoding": "terrarium", "title": "Global Terrain", "max_zoom_level": null, "is_visible": true}, {"key": "90-1m-national-elevation-dem", "url": "https://basemaps.linz.govt.nz/v1/tiles/elevation/WebMercatorQuad/{z}/{x}/{y}.png?api=d01K2ZZ4B5M7EFV3QEP5EA59P2A\u0026pipeline=terrain-rgb", "type": "raster", "encoding": "mapbox", "title": "1m National Elevation (DEM)", "max_zoom_level": 24, "is_visible": true}], "default_terrain_layer": "90-1m-national-elevation-dem"}, "sentry_dsn": "https://cd59b95ae972edd4b15f340cc086b7bb@sentry-live2.kx.gd/9", "theme": {"background_color": "#004964", "secondary_color": "#036C7A", "primary_text_color": "#023d48", "primary_color": "#E1E44A", "logo": "https://assets.koordinates.com/kx-dandelion-live2-public/settings/branding/linz.png", "secondary_logo": null, "favicon": "https://assets.koordinates.com/kx-dandelion-live2-public/settings/branding/logo_toitu-te-whenua_badge-only_2021.png", "ui_version": 10}, "org_url": "https://data.linz.govt.nz/services/api/v1.x/orgs/o3MzyVCb7p6JYVb/", "tile_cdn_urls": ["//tiles-cdn.koordinates.com/"], "geotag": null, "invite_only": false, "ui_version": "latest", "user_menus": [{"title": "More data services", "items": [{"type": "link", "title": "AWS Open Data Registry", "url": "https://registry.opendata.aws/?search=managedBy:toit%C5%AB%20te%20whenua%20land%20information%20new%20zealand"}, {"type": "link", "title": "LINZ Basemaps", "url": "https://basemaps.linz.govt.nz/"}, {"type": "link", "title": "LINZ ArcGIS REST services", "url": "https://linz.maps.arcgis.com/home/gallery.html"}, {"type": "link", "title": "LINZ Land Record Search", "url": "https://www.linz.govt.nz/products-services/land-records/land-record-search"}, {"type": "link", "title": "OpenTopography", "url": "https://portal.opentopography.org/datasets?loc=New%20Zealand"}, {"type": "divider"}, {"type": "link", "title": "LINZ@LinkedIn", "url": "https://www.linkedin.com/company/toit%C5%AB-te-whenua-linz-/"}]}], "help_menus": [{"title": "LDS guides", "url": "https://www.linz.govt.nz/guidance/data-service/linz-data-service-guide"}, {"title": "LINZ data", "url": "https://www.linz.govt.nz/products-services/data"}, {"title": "Data and map APIs", "url": "https://www.linz.govt.nz/guidance/data-service/linz-data-service-guide/web-services/which-lds-api-should-i-use"}, {"title": "Licensing and using data", "url": "https://www.linz.govt.nz/products-services/data/licensing-and-using-data"}], "export_name_prefix": "lds", "public_data_search_access": "third-party-auth", "public_permission_policy": "data-admins", "published_viewer_settings": {"can_publish_private_viewers_policy": "group-admins", "unlisted_published_viewers_policy": "disabled", "published_viewer_access_policy": "paid-seats"}, "auto_crop_map_viewer_extent": true, "size_limit_mb": 15000, "map_viewer_extent": {"type": "Polygon", "coordinates": [[[164.20071770941837, -47.65644549498389], [184.2890318080827, -47.65644549498389], [184.2890318080827, -34.056283543522845], [164.20071770941837, -34.056283543522845], [164.20071770941837, -47.65644549498389]]]}, "auth_domains": [{"org_name": "Land Information New Zealand", "email_domain": "linz.govt.nz", "auth_vendor": "azuread", "auth_type": "oauth2"}], "push_to_mirrors": false, "measurement_unit_default": "metric", "plan_capabilities": ["can-set-site-public", "can-set-site-service-permissions", "can-view-export-history-report", "can-edit-basemap-terrain-settings", "can-set-scheduled-updates", "can-configure-published-map-viewers", "can-configure-esri-rest-api", "can-import-copc", "can-set-dataset-service-enabled", "can-configure-data-table-ui", "can-configure-spatial-query-ui", "can-view-all-reports", "can-request-sandbox", "can-request-sso", "can-request-custom-domain", "can-request-access-groups", "can-configure-additional-token-scopes", "can-create-crop-layers", "can-create-custom-licenses", "can-access-adhoc-services", "can-configure-vector-tile-pmtiles", "can-configure-vector-tile-pmtiles-ui", "can-configure-vector-tile-pmtiles-ui-to-all-users"], "allowed_source_types": ["arcgis", "cifs", "postgres", "s3", "upload", "wfs"], "product_boundaries": {}, "ga_key": "UA-23232486-2", "courier_enabled": true, "trial": null, "sandbox": "sandbox-2gxknc.koordinates.com", "is_custom_domain": true}</script>
+  <script id="pre-cached-token" type="application/json">{"id": 5282816, "name": "", "key_hint": "119b0b...", "url": "https://data.linz.govt.nz/services/api/v1.x/tokens/5282816/", "site": "*", "created_at": "2026-08-24T07:46:43.735024Z", "expires_at": "2026-08-24T13:46:40.973232Z", "scope": "query tiles", "referrers": null, "groups_scope": [], "key": "119b0bf5fb6a4f3ebab6aacb25807494"}</script>
+
+  
+
+  <script>
+    window.preCachedData = [
+      {
+        url: "/users/me/",
+        data: JSON.parse(document.getElementById("pre-cached-user").textContent),
+      },
+      {
+        url: "/site/",
+        data: JSON.parse(document.getElementById("pre-cached-site").textContent),
+        expand: ["tilegrids"],
+      }
+    ];
+    let tokenData = JSON.parse(document.getElementById("pre-cached-token").textContent);
+    if (tokenData) {
+      window.preCachedData.push({
+        url: "/tokens/",
+        data: tokenData,
+        method: "POST",
+      });
+    }
+  </script>
+
+  <script>
+    var lsBootFileKey = "kx_boot_file";
+    function getBootFileFromLS() {
+      const result = localStorage.getItem(lsBootFileKey);
+      if (result) {
+        return JSON.parse(result);
+      }
+      return result;
+    }
+
+    function storeBootFileToLS(bootFile) {
+      localStorage.setItem(lsBootFileKey, JSON.stringify(bootFile));
+    }
+
+    function getBootFileFromUrlParams() {
+      var params = new URLSearchParams(window.location.search);
+      if (params.has("matai-branch") || params.has("sha")) {
+        const slug = params.get("matai-branch") || params.get("sha");
+        const slugType = params.has("matai-branch") ? "branch" : "git";
+        const url = "kx." + slugType + "-" + slug + ".boot.js";
+
+        return {
+          slug,
+          slugType,
+          url,
+        };
+      }
+    }
+
+    function getBootFileDetails() {
+      var defaultBootFile = {
+        slug: "master",
+        slugType: "branch",
+        url: "boot.js",
+      };
+
+      var urlBootFile = getBootFileFromUrlParams();
+      if (urlBootFile) {
+        return urlBootFile;
+      }
+
+      var lsBootFile = getBootFileFromLS();
+      if (lsBootFile) {
+        return lsBootFile;
+      }
+
+      const override = document.getElementById("boot-file-override");
+      if (override) {
+        return JSON.parse(override.textContent);
+      }
+
+      return defaultBootFile;
+    }
+
+    function getBootFileUrl() {
+      var bootFile = getBootFileDetails();
+      if (bootFile.slug !== "master") {
+        createNotification();
+        storeBootFileToLS(bootFile);
+      }
+      return bootFile.url;
+    }
+
+    function createNotification() {
+      var bootFile = getBootFileDetails();
+      var el = document.createElement("div");
+      el.style = "height: 30px;background: white;padding: 2px 5px;z-index: 10;position: fixed;top: 0px;font-size: 12px;opacity: 0.7;line-height: 2;border: 1px solid red;";
+      el.textContent = `${bootFile.slugType}: ${bootFile.slug}`;
+
+      var btn = document.createElement("button");
+      btn.textContent = "🗑";
+      btn.style = "margin-left: 10px";
+      btn.onclick = () => {
+        localStorage.removeItem(lsBootFileKey);
+        location.reload();
+      }
+      el.appendChild(btn);
+
+      document.body.appendChild(el);
+    }
+
+    var bootScript = document.createElement("script");
+    bootScript.setAttribute("src", "https://assets.koordinates.com/fe/" + getBootFileUrl());
+    document.body.appendChild(bootScript);
+  </script><script src="https://assets.koordinates.com/fe/boot.js"></script>
+
+
+
+<div class="radix-popover--is-closed"></div><div class="ReactModalPortal"></div><div class="radix-popover--is-closed"><div data-radix-popper-content-wrapper="" style="position: fixed; left: 0px; top: 0px; transform: translate(838px, 51px); min-width: max-content; z-index: 1700; --radix-popper-available-width: 1248px; --radix-popper-available-height: 653px; --radix-popper-anchor-width: 44px; --radix-popper-anchor-height: 32px; --radix-popper-transform-origin: 100% 0px;"><div data-side="bottom" data-align="end" data-state="closed" role="dialog" id="radix-:r8:" class="popover-content matai-css-aorefl" tabindex="-1" style="--overlay-z: 1700; --radix-popover-content-transform-origin: var(--radix-popper-transform-origin); --radix-popover-content-available-width: var(--radix-popper-available-width); --radix-popover-content-available-height: var(--radix-popper-available-height); --radix-popover-trigger-width: var(--radix-popper-anchor-width); --radix-popover-trigger-height: var(--radix-popper-anchor-height);"><div class="matai-css-zcq5wz">Help from LINZ Data Service</div><div class="matai-css-nf2tvc"><ul role="list" class="matai-css-rd8mvp"><li><a href="https://www.linz.govt.nz/guidance/data-service/linz-data-service-guide" target="_blank" rel="noopener noreferrer" class="matai-css-bgjbg7">LDS guides</a></li><li><a href="https://www.linz.govt.nz/products-services/data" target="_blank" rel="noopener noreferrer" class="matai-css-bgjbg7">LINZ data</a></li><li><a href="https://www.linz.govt.nz/guidance/data-service/linz-data-service-guide/web-services/which-lds-api-should-i-use" target="_blank" rel="noopener noreferrer" class="matai-css-bgjbg7">Data and map APIs</a></li><li><a href="https://www.linz.govt.nz/products-services/data/licensing-and-using-data" target="_blank" rel="noopener noreferrer" class="matai-css-bgjbg7">Licensing and using data</a></li><li><div class="matai-css-1dfppev"><a href="/login/?next=%2F%3Fdisplay_contactus_site" class="matai-css-1jl50ez">Contact LINZ Data Service</a><span data-testid="text-icon" class="text-and-icon matai-css-1oivvar"><div class="icon-wrap text-and-icon__icon icon--info matai-css-v7hocp" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M8 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12M7 8v3h2V8zm0-3v2h2V5z"></path></svg></div><span class="text-and-icon__text matai-css-q7cawn"><p size="7" class="matai-css-1ux8eef">Login required</p></span></span></div></li></ul></div><div data-orientation="horizontal" role="separator" class="matai-css-9bn0ld"></div><div class="matai-css-1vmscu5"><a target="_blank" rel="noopener noreferrer" href="https://koordinates.com/" class="matai-css-1ogvbjd"><div class="icon-wrap icon--kx-logo matai-css-rauyep" aria-hidden="true" width="100" height="30" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="107" height="32" viewBox="0 0 200 60"><path d="M68 31.5c0-2.2.8-4.1 2.4-5.6 1.6-1.6 3.5-2.3 5.8-2.3s4.2.8 5.8 2.3c1.6 1.6 2.4 3.5 2.4 5.8s-.8 4.2-2.4 5.8c-1.6 1.5-3.6 2.3-5.9 2.3s-4.2-.8-5.8-2.4c-1.5-1.6-2.3-3.6-2.3-5.9m3.6.1q0 2.25 1.2 3.6c.8.9 1.9 1.4 3.3 1.4s2.5-.4 3.3-1.3q1.2-1.35 1.2-3.6c0-2.25-.4-2.7-1.2-3.6s-1.9-1.4-3.3-1.4-2.4.5-3.3 1.4c-.8.9-1.2 2-1.2 3.5m13.7-.1c0-2.2.8-4.1 2.4-5.6 1.6-1.6 3.5-2.3 5.8-2.3s4.2.8 5.8 2.3c1.6 1.6 2.4 3.5 2.4 5.8s-.8 4.2-2.4 5.8c-1.6 1.5-3.6 2.3-5.9 2.3s-4.2-.8-5.8-2.4c-1.5-1.6-2.3-3.6-2.3-5.9m3.6.1q0 2.25 1.2 3.6c.8.9 1.9 1.4 3.3 1.4s2.5-.4 3.3-1.3q1.2-1.35 1.2-3.6c0-2.25-.4-2.7-1.2-3.6s-1.9-1.4-3.3-1.4-2.4.5-3.3 1.4c-.8.9-1.2 2-1.2 3.5m13.9-7.7h3.5v1.4c.7-.7 1.2-1.1 1.7-1.4s1.1-.4 1.8-.4c.9 0 1.9.3 2.9.9l-1.6 3.2c-.7-.5-1.3-.7-2-.7-1.9 0-2.9 1.5-2.9 4.4v7.9h-3.5V23.9zm21.1-11.2h3.6v26.6h-3.6v-1.6c-1.4 1.4-3 2-4.7 2-2.1 0-3.8-.8-5.2-2.3-1.4-1.6-2.1-3.5-2.1-5.9q0-3.45 2.1-5.7c2.1-2.25 3.1-2.3 5.1-2.3 1.8 0 3.4.7 4.8 2.2zm-8.4 18.9q0 2.25 1.2 3.6c.8.9 1.8 1.4 3.1 1.4s2.4-.5 3.2-1.4q1.2-1.35 1.2-3.6 0-2.1-1.2-3.6c-.8-.9-1.9-1.4-3.1-1.4s-2.2.5-3.1 1.4c-.9 1-1.3 2.2-1.3 3.6m13-14c0-.6.2-1.2.7-1.6.5-.5 1-.7 1.6-.7s1.2.2 1.6.7c.5.4.7 1 .7 1.6s-.2 1.2-.7 1.6c-.4.5-1 .7-1.6.7s-1.2-.2-1.6-.7c-.4-.4-.7-1-.7-1.6m4.1 6.3v15.3h-3.5V23.9zm1.7 0h3.6v1.4q1.8-1.8 4.2-1.8c1.8 0 3.2.6 4.2 1.7.9 1 1.3 2.5 1.3 4.7v9.4H144v-8.5c0-1.5-.2-2.6-.6-3.1-.4-.6-1.2-.9-2.2-.9-1.2 0-2 .4-2.5 1.2s-.7 2.1-.7 4v7.4h-3.6V23.9zm26.4 0h3.6v15.3h-3.6v-1.6c-1.5 1.4-3 2-4.7 2-2.1 0-3.9-.8-5.3-2.3-1.4-1.6-2.1-3.5-2.1-5.9q0-3.45 2.1-5.7c1.4-1.5 3.1-2.3 5.2-2.3 1.8 0 3.4.7 4.8 2.2zm-8.4 7.7q0 2.25 1.2 3.6c.8.9 1.8 1.4 3.1 1.4s2.4-.5 3.2-1.4q1.2-1.35 1.2-3.6 0-2.1-1.2-3.6a4.1 4.1 0 0 0-3.1-1.4c-1.2 0-2.2.5-3.1 1.4-.9 1-1.3 2.2-1.3 3.6m18.3-4.4v12h-3.5v-12h-1.5v-3.3h1.5v-5.6h3.5v5.6h2.8v3.3zm17.7 5.2h-11q.15 1.95 1.2 3c.7.7 1.7 1.1 2.8 1.1.9 0 1.6-.2 2.2-.6s1.2-1.2 1.9-2.3l3 1.7c-.5.8-.9 1.5-1.5 2-.5.6-1.1 1-1.7 1.4s-1.2.6-1.9.8-1.4.3-2.2.3c-2.3 0-4.1-.7-5.5-2.2s-2.1-3.4-2.1-5.9c0-2.4.7-4.4 2-5.9 1.4-1.5 3.1-2.2 5.4-2.2s4 .7 5.3 2.2c1.3 1.4 2 3.4 2 5.9zm-3.7-2.9c-.5-1.9-1.7-2.8-3.6-2.8-.4 0-.8.1-1.2.2s-.7.3-1 .6c-.3.2-.6.5-.8.9-.2.3-.4.7-.5 1.2h7.1zm14.4-3-2.9 1.6c-.5-.9-1-1.4-1.7-1.4-.3 0-.6.1-.8.3s-.3.5-.3.8c0 .6.7 1.2 2 1.7 1.9.8 3.1 1.6 3.8 2.2.7.7 1 1.6 1 2.7 0 1.5-.5 2.7-1.6 3.7-1.1.9-2.3 1.4-3.8 1.4-2.6 0-4.4-1.3-5.5-3.8l3-1.4c.4.7.7 1.2 1 1.4q.6.6 1.5.6c1.2 0 1.8-.5 1.8-1.6 0-.6-.5-1.2-1.4-1.8-.4-.2-.7-.4-1.1-.5-.4-.2-.7-.3-1.1-.5-1-.5-1.8-1-2.2-1.5-.5-.6-.8-1.5-.8-2.5 0-1.3.5-2.4 1.4-3.3s2.1-1.3 3.4-1.3c1.9.2 3.4 1.2 4.3 3.2"></path><path d="m69.8 39.2-7.7-7.6 7.6-7.6-4.9-.1-5.9 5.9V12.7h-3.5v17.1L49.5 24h-4.9l7.6 7.6-7.7 7.6h5l5.9-5.9v6h3.5v-6l5.9 5.9zM36.3 10.7 28.6 3 18.5 13.1l2.5 2.5L28.6 8l7.7 7.6 2.4-2.4zM0 31.6l10.2-10.2 2.4 2.5L5 31.6l7.6 7.6-2.5 2.5zm28.6 28.5L18.4 50l2.5-2.5 7.7 7.7 7.6-7.6 2.5 2.5z"></path></svg></div></a><div class="matai-css-0"><div><div class="matai-css-1mn2avr"><div class="matai-css-vqobqb">Powered by<a href="https://koordinates.com/" target="_blank" rel="noopener noreferrer" data-testid="contextual-help" class="matai-css-14gbfnx" style="padding-left: 3px;">Koordinates</a></div><div class="matai-css-15w97ju"></div><a href="https://status.koordinates.com/" target="_blank" rel="noopener noreferrer" data-testid="contextual-help-status" class="matai-css-14gbfnx">Status</a></div><ul role="list" class="matai-css-6dg1yl"><li><a href="https://koordinates.com/privacy-policy/" target="_blank" rel="noopener noreferrer" data-testid="contextual-help" class="matai-css-14gbfnx">Privacy Policy</a></li><li><a href="https://koordinates.com/terms-of-use/" target="_blank" rel="noopener noreferrer" data-testid="contextual-help" class="matai-css-14gbfnx">Terms of Use</a></li></ul></div></div></div><div class="matai-css-xnt0r8"><div data-testid="help-docs" class="matai-css-1iyoj2o"><div class="matai-css-8ioouy"><div class="matai-css-kg5gir">Documentation</div><ul data-testid="help-docs-list" role="list" class="matai-css-iuu4ug"><li><a href="https://help.koordinates.com/" target="_blank" rel="noopener noreferrer" data-testid="contextual-help" class="matai-css-1y6x0dh" style="color: rgb(32, 32, 32);">All</a></li><li><a href="https://help.koordinates.com/faq/" target="_blank" rel="noopener noreferrer" data-testid="contextual-help" class="matai-css-1y6x0dh" style="color: rgb(32, 32, 32);">FAQ</a></li><li><a href="https://apidocs.koordinates.com/" target="_blank" rel="noopener noreferrer" data-testid="contextual-help" class="matai-css-1y6x0dh" style="color: rgb(32, 32, 32);">API docs</a></li></ul></div><div class="matai-css-qtgg7m"><input placeholder="Search all documentation" aria-label="Search all documentation" class="matai-css-ce9ig1" value="" style=""><div class="icon-wrap icon--search matai-css-oumczy" aria-hidden="true" width="16" height="16" data-testid="icon"><svg preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="m10.446 9.032 2.261 2.26a1 1 0 0 1-1.414 1.415l-2.261-2.26a4 4 0 1 1 1.414-1.414zM7 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4"></path></svg></div></div></div></div></div></div></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><span data-radix-focus-guard="" tabindex="0" style="outline: none; opacity: 0; position: fixed; pointer-events: none;"></span><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div><div class="ReactModalPortal"></div></body></html>
