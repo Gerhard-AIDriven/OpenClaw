@@ -22,7 +22,9 @@
 * **`report-engine-v2.js`** $\rightarrow$ HTML report generator (with Leaflet.js integration).
 * **`manual-trigger.js`** $\rightarrow$ Tool for testing reports manually.
 * **`napier_rates_scraper.py`** $\rightarrow$ Python script for council rates/consents.
-* **`C:\Users\gstim\.openclaw\workspace\reports\html\`** $\rightarrow$ Output directory for generated reports.
+* **`C:\Users\gstim\.openclaw\workspace\reports\html\`** $\rightarrow$ Output directory for generated reports (Centralized Storage).
+  - **Note**: ALL reports must be saved here. DO NOT save to `aidriven-website/reports`.
+  - **Deployment**: Reports are pushed to GitHub Pages from this central folder.
 
 ---
 
