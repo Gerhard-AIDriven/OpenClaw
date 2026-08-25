@@ -18,6 +18,7 @@ const { pushReportToGitHubPages } = require('./push-to-github-pages');
 const { generateHTMLReport, saveHTMLReport, getReportURL } = require('./report-engine-v2');
 const { getLINZData } = require('./linz-api');
 const { getHazardsData } = require('./hazards-linz-integration');
+const { sendReportEmail } = require('./gmail-notifier');
 
 // Configuration
 const WORKER_URL = 'https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev';
@@ -171,9 +172,9 @@ async function pollQueue() {
       
       // SEND EMAIL
       try {
-        // For this test, I'll use a simple log if email-service isn't ready
-        log('info', `📧 Email would be sent to ${customer.email} with URL: ${pushResult.liveUrl}`);
-        // await sendReportEmail(customer, reportResult.effectiveAddress, finalReportResult, requestId);
+        log('info', `📧 Sending report email via Gmail to ${customer.email}...`);
+        await sendReportEmail(customer, reportResult.effectiveAddress, finalReportResult, requestId);
+        log('info', `✅ Email sent successfully to ${customer.email}`);
       } catch (e) {
         log('error', `Email failed for ${requestId}: ${e.message}`);
       }

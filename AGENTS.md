@@ -13,6 +13,7 @@ Before doing anything else:
 1. Read `SOUL.md` — this is who you are
 2. Read `USER.md` — this is who you're helping
 3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+4. Read 'Current_task.md'
 4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 Don't ask permission. Just do it.
@@ -35,6 +36,21 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - Write significant events, thoughts, decisions, opinions, lessons learned
 - This is your curated memory — the distilled essence, not raw logs
 - Over time, review your daily files and update MEMORY.md with what's worth keeping
+
+### Context Failsafe measures
+
+- You are running in a constrained local context environment.
+- Never assume continuity from the chat history.
+- You must read CURRENT_TASK.md at the start of every complex task and update it immediately before outputting any code modifications. 
+- Treat your workspace markdown files as your true operational brain.
+
+# Session State Maintenance Protocol
+- Before completing any major milestone, or when requested via "/compact", you must perform a "Sign-Out Update".
+- Use your file-write tool to overwrite or append to `SYSTEM_STATE.md`.
+- Keep updates strictly limited to concrete architectural facts: new dependencies added, active API endpoints created, or directory structural changes
+- Before writing code or replying to an open query, inspect `SYSTEM_STATE.md` and `CURRENT_TASK.md`. 
+- If a task step is completed, mark it [x] in `CURRENT_TASK.md`. 
+- If structural dependencies change, record them in `SYSTEM_STATE.md`.
 
 ### 📝 Write It Down - No "Mental Notes"!
 
