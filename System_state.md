@@ -29,7 +29,9 @@
 ---
 
 ## 🔒 HARD IMMUTABLE CONSTRAINTS
-* **Napier Address Format:** Must be `House Number + Street Name + Street Type` (lowercase street type). No suburb or city.
+* **Napier Address Format (CRITICAL):** When querying the `data.napier.govt.nz` API to find the RID, you MUST use ONLY the `House Number + Street Name + Street Type` (e.g., "2 Todd Street"). 
+  - **DO NOT** include suburb, city, or postcode in the RID search query.
+  - Once the RID is retrieved, use that RID to open the actual MyProperty page.
 * **Map Assets:** Leaflet JS library must be in the `<head>` of the HTML to prevent rendering race conditions.
 * **VRAM Boundaries:** Local inference is CPU-bound (OLLAMA_GPU=false).
 

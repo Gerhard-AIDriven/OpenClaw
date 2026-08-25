@@ -23,15 +23,12 @@ async function main() {
   const requestId = `manual_${Date.now()}`;
   const customer = { email: 'test@aidriven.biz' };
   
-  // For manual triggers, we need to provide a mock "addressStructured" object
-  // so the poller's new cleaning logic can work for the Napier scraper.
-  const addressStructured = {
-    houseNumber: '31',
-    streetName: 'Douglas McLean',
-    streetType: 'avenue',
-    latitude: -39.5005800554,
-    longitude: 176.90405875
-  };
+  // For manual triggers, we use the provided address. 
+  // If we had a geocoding API, we'd get real coords here.
+  // For now, we'll use the provided address and let the report engine 
+  // handle defaults or use the LINZ lookup.
+  const addressStructured = null; 
+
   
   try {
     // Trigger the generation logic used by the poller, passing structured data
