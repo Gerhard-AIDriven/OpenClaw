@@ -178,4 +178,4 @@ if (require.main === module) {
   pollQueue().catch(console.error);
 }
 
-module.exports = { pollQueue };
+module.exports = { pollQueue, generateReport };
