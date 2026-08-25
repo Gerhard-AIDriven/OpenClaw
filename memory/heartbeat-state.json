@@ -3,9 +3,9 @@
     "email": 1787587200,
     "calendar": 1787381400,
     "projects": 1787392800,
-    "health": 1787569098,
+    "health": 1787659220,
     "whatsappQueue": 1787587200
   },
-  "lastHeartbeat": 1787587200,
-  "note": "2026-08-24 18:00 - Evening heartbeat. WhatsApp empty. Gmail 4 unread, 0 important. No blood test results from Gerhard today."
+  "lastHeartbeat": 1787659220,
+  "note": "2026-08-25 14:00 - Midday heartbeat. Checked health metrics; entries for today are missing. Prompting Gerhard for BP, weight, sugar, and food tracking."
 }

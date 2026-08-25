@@ -22,7 +22,7 @@ const { sendReportEmail } = require('./gmail-notifier');
 
 // Configuration
 const WORKER_URL = 'https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev';
-const POLL_TOKEN = 'aidriven_poll_secret_2026_x';
+const POLL_TOKEN = 'aidriven_poll_2026_xK9mP';
 const REPORTS_DIR = path.join(__dirname, '..', 'reports');
 const HTML_DIR = path.join(REPORTS_DIR, 'html');
 
