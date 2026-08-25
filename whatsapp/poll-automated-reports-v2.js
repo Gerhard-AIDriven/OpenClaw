@@ -106,8 +106,17 @@ async function generateReport(address, packageType, requestId, customer, address
     let ratesData = { capitalValue: 600000, landValue: 300000, improvementsValue: 300000, totalRates: 2800 };
     if (address.toLowerCase().includes('napier')) {
       try {
+        // Construct scraper-friendly address: HouseNumber + StreetName + StreetType
+        let scraperAddress = address;
+        if (addressStructured) {
+          const { houseNumber, streetName, streetType } = addressStructured;
+          if (houseNumber && streetName && streetType) {
+            scraperAddress = `${houseNumber} ${streetName} ${streetType}`;
+          }
+        }
+
         const scraperPath = path.join(__dirname, '..', 'napier_rates_scraper.py');
-        const pythonOutput = execSync(`python "${scraperPath}" "${address.replace(/"/g, '\\"')}"`, { encoding: 'utf8' });
+        const pythonOutput = execSync(`python "${scraperPath}" "${scraperAddress.replace(/"/g, '\\"')}"`, { encoding: 'utf8' });
         const ratesJson = JSON.parse(pythonOutput.trim());
         
         ratesData = {
