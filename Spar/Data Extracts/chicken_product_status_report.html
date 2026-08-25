@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAR Chicken - Product Status Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, sans-serif; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .header { background: linear-gradient(135deg, #00a86b 0%, #008650 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 2.2em; margin-bottom: 8px; }
+        .metadata { background: #f9f9f9; padding: 15px 30px; display: flex; justify-content: space-between; flex-wrap: wrap; border-bottom: 1px solid #eee; font-size: 0.9em; gap: 20px; }
+        .section { padding: 30px; border-bottom: 1px solid #eee; }
+        .section h2 { color: #00a86b; font-size: 1.6em; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #00a86b; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 20px 0; }
+        .stat-card { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 20px; border-left: 4px solid #00a86b; border-radius: 4px; }
+        .stat-card .value { font-size: 2.5em; font-weight: bold; color: #00a86b; }
+        .stat-card .label { font-size: 0.95em; color: #666; margin-top: 8px; }
+        .stat-card .sub { font-size: 0.8em; color: #999; margin-top: 4px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.85em; }
+        thead { background: #00a86b; color: white; }
+        th { padding: 12px; text-align: left; font-weight: 600; }
+        td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #f1f8f4; }
+        .code { font-family: monospace; font-weight: 600; color: #00a86b; }
+        .active-row { background: #e8f5e9; }
+        .recent-row { background: #fff3e0; }
+        .stale-row { background: #ffe0b2; }
+        .dead-row { background: #ffebee; }
+        .footer { background: #f5f5f5; padding: 15px 30px; text-align: center; font-size: 0.85em; color: #999; }
+        .alert { background: #c8e6c9; border-left: 4px solid #00a86b; padding: 15px; margin: 15px 0; border-radius: 4px; }
+        .alert strong { color: #008650; }
+        .table-label { color: #666; font-size: 0.9em; margin-bottom: 10px; }
+        ul { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Chicken Department - Product Status Analysis</h1>
+            <p>Last Month with Sales Activity — Dormancy-Based Classification</p>
+        </div>
+        
+        <div class="metadata">
+            <div><strong>Report Date:</strong> 18 April 2026</div>
+            <div><strong>Analysis Period:</strong> 1 March 2022 – 1 April 2026 (49 months)</div>
+            <div><strong>Data Source:</strong> SPAR Sigma System</div>
+            <div><strong>Department:</strong> Chicken</div>
+            <div><strong>Total Products:</strong> 89</div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 Executive Summary</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="value">40</div>
+                    <div class="label">ACTIVE</div>
+                    <div class="sub">44.9% (0-2 months)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">8</div>
+                    <div class="label">RECENT</div>
+                    <div class="sub">9.0% (3-4 months)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">15</div>
+                    <div class="label">STALE</div>
+                    <div class="sub">16.9% (5-12 months)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">26</div>
+                    <div class="label">DEAD STOCK</div>
+                    <div class="sub">29.2% (12+ months)</div>
+                </div>
+            </div>
+            
+            <div class="alert">
+                <strong>✓ Analysis Complete:</strong> 26 products show no sales in 12+ months (cull candidates). 15 products are stale (5-12 months, monitor closely).
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>✓ ACTIVE Products (40 items, 0-2 months old)</h2>
+            <p class="table-label">Current activity - maintain stock and promote</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 70px;">Code</th>
+                        <th style="width: 45%;">Product Description</th>
+                        <th style="width: 130px;">Last Sales Month</th>
+                        <th style="width: 90px;">Months Ago</th>
+                        <th style="width: 90px; text-align: right;">Last Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="active-row"><td><span class="code">11318</span></td><td>C/FAIR FRSH DRUM&THIGH</td><td>February 2026</td><td>2</td><td style="text-align: right;">296.75</td></tr><tr class="active-row"><td><span class="code">11324</span></td><td>C/FAIR FRSH PARTY PACK</td><td>February 2026</td><td>2</td><td style="text-align: right;">557.68</td></tr><tr class="active-row"><td><span class="code">11330</span></td><td>SPAR SLT CHKN WINGS 8'S</td><td>March 2026</td><td>1</td><td style="text-align: right;">57.43</td></tr><tr class="active-row"><td><span class="code">11331</span></td><td>SPAR SLT DRUMS/THIGHS</td><td>March 2026</td><td>1</td><td style="text-align: right;">196.32</td></tr><tr class="active-row"><td><span class="code">11332</span></td><td>SPAR SLT CHKN BRAAIPK 8</td><td>February 2026</td><td>2</td><td style="text-align: right;">113.79</td></tr><tr class="active-row"><td><span class="code">11333</span></td><td>BREAST FILLET</td><td>March 2026</td><td>1</td><td style="text-align: right;">110.21</td></tr><tr class="active-row"><td><span class="code">11334</span></td><td>SPAR SLT BREAST FLT 4'S</td><td>March 2026</td><td>1</td><td style="text-align: right;">98.05</td></tr><tr class="active-row"><td><span class="code">11335</span></td><td>SPAR SLT CHKN THIGHS 4'S</td><td>March 2026</td><td>1</td><td style="text-align: right;">44.17</td></tr><tr class="active-row"><td><span class="code">11344</span></td><td>SPAR SLT CHKN BRAAIPK 5</td><td>March 2026</td><td>1</td><td style="text-align: right;">72.07</td></tr><tr class="active-row"><td><span class="code">11346</span></td><td>SPAR SLT BREAST B/IN 3'S</td><td>March 2026</td><td>1</td><td style="text-align: right;">104.35</td></tr><tr class="active-row"><td><span class="code">11347</span></td><td>SPAR FSH CHKN BRAAIPK 16PC</td><td>March 2026</td><td>1</td><td style="text-align: right;">289.37</td></tr><tr class="active-row"><td><span class="code">11348</span></td><td>SPAR SLT CHKN DBL STAR PK</td><td>March 2026</td><td>1</td><td style="text-align: right;">315.84</td></tr><tr class="active-row"><td><span class="code">11354</span></td><td>T&T SKEWERED WINGS BBQ</td><td>March 2026</td><td>1</td><td style="text-align: right;">28.76</td></tr><tr class="active-row"><td><span class="code">11356</span></td><td>T&T BUFFALO WINGS BBQ</td><td>March 2026</td><td>1</td><td style="text-align: right;">62.38</td></tr><tr class="active-row"><td><span class="code">11359</span></td><td>C/FAIR BRAAIPACK FRSH 3PC</td><td>February 2026</td><td>2</td><td style="text-align: right;">34.14</td></tr><tr class="active-row"><td><span class="code">12326</span></td><td>SPAR S/BUTCH CHICK KEBABS</td><td>March 2026</td><td>1</td><td style="text-align: right;">120.49</td></tr><tr class="active-row"><td><span class="code">14749</span></td><td>R/BOW FRSH WHOLE BIRD(10)</td><td>March 2026</td><td>1</td><td style="text-align: right;">70.64</td></tr><tr class="active-row"><td><span class="code">15194</span></td><td>SOUL FOOD SMK CH/FILL PL</td><td>March 2026</td><td>1</td><td style="text-align: right;">8.93</td></tr><tr class="active-row"><td><span class="code">34303</span></td><td>SPATCHCOCK CHICKEN</td><td>February 2026</td><td>2</td><td style="text-align: right;">28.67</td></tr><tr class="active-row"><td><span class="code">41685</span></td><td>T&T CHKN ESPETADA BBQ</td><td>March 2026</td><td>1</td><td style="text-align: right;">69.93</td></tr><tr class="active-row"><td><span class="code">46025</span></td><td>LAZENA F/RANGE DRUM&THIG8</td><td>March 2026</td><td>1</td><td style="text-align: right;">2.32</td></tr><tr class="active-row"><td><span class="code">46091</span></td><td>SPAR SLT CHKN IN/B NO GIB</td><td>March 2026</td><td>1</td><td style="text-align: right;">135.17</td></tr><tr class="active-row"><td><span class="code">46353</span></td><td>CRUMBED CHICKEN NUGGETS</td><td>March 2026</td><td>1</td><td style="text-align: right;">17.45</td></tr><tr class="active-row"><td><span class="code">46444</span></td><td>CRUMBED CHICK STEAKLETS</td><td>March 2026</td><td>1</td><td style="text-align: right;">46.85</td></tr><tr class="active-row"><td><span class="code">46446</span></td><td>CRUMBED CHICKEN STRIPS</td><td>March 2026</td><td>1</td><td style="text-align: right;">18.88</td></tr><tr class="active-row"><td><span class="code">46447</span></td><td>CRUMBED CHICKEN BURGER</td><td>March 2026</td><td>1</td><td style="text-align: right;">49.77</td></tr><tr class="active-row"><td><span class="code">50785</span></td><td>COUNTY FAIR BREAST FILLETS 12P</td><td>February 2026</td><td>2</td><td style="text-align: right;">108.73</td></tr><tr class="active-row"><td><span class="code">52096</span></td><td>RAINBOW BRAAI PK FRSH 12PCE P/</td><td>March 2026</td><td>1</td><td style="text-align: right;">287.00</td></tr><tr class="active-row"><td><span class="code">52205</span></td><td>RAINBOW DRUMS&THIGH FRSH</td><td>March 2026</td><td>1</td><td style="text-align: right;">222.15</td></tr><tr class="active-row"><td><span class="code">52206</span></td><td>RAINBOW BRAAI PK FRSH  P/K</td><td>March 2026</td><td>1</td><td style="text-align: right;">49.65</td></tr><tr class="active-row"><td><span class="code">52684</span></td><td>SPAR T&T CHIC SKPDJIES FR P/KG</td><td>February 2026</td><td>2</td><td style="text-align: right;">1.35</td></tr><tr class="active-row"><td><span class="code">53544</span></td><td>SPAR SLT CHKN BRAAIPK 12</td><td>March 2026</td><td>1</td><td style="text-align: right;">119.67</td></tr><tr class="active-row"><td><span class="code">56238</span></td><td>COUNTRY VALUE THIGHS</td><td>March 2026</td><td>1</td><td style="text-align: right;">10.75</td></tr><tr class="active-row"><td><span class="code">56239</span></td><td>COUNTRY VALUE DRUMSTICKS</td><td>March 2026</td><td>1</td><td style="text-align: right;">164.43</td></tr><tr class="active-row"><td><span class="code">58896</span></td><td>NOORSVELD CHIC WHOLE</td><td>March 2026</td><td>1</td><td style="text-align: right;">23.42</td></tr><tr class="active-row"><td><span class="code">58906</span></td><td>NOORSVELD CHIC FILLET 3PC</td><td>March 2026</td><td>1</td><td style="text-align: right;">27.26</td></tr><tr class="active-row"><td><span class="code">62200</span></td><td>SPAR T&T CHIC ESP RST G/BUTT P</td><td>February 2026</td><td>2</td><td style="text-align: right;">1.51</td></tr><tr class="active-row"><td><span class="code">64619</span></td><td>CRUMBED CHIC STEAKLETS 800G</td><td>March 2026</td><td>1</td><td style="text-align: right;">16.00</td></tr><tr class="active-row"><td><span class="code">64620</span></td><td>CRUMBED CHIC STRIPS 800G</td><td>February 2026</td><td>2</td><td style="text-align: right;">4.00</td></tr><tr class="active-row"><td><span class="code">64621</span></td><td>CRUMBED CHIC BURGERS  800G</td><td>March 2026</td><td>1</td><td style="text-align: right;">13.00</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>⚠️ RECENT Products (8 items, 3-4 months old)</h2>
+            <p class="table-label">Minimal recent activity - review demand, monitor closely</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 70px;">Code</th>
+                        <th style="width: 45%;">Product Description</th>
+                        <th style="width: 130px;">Last Sales Month</th>
+                        <th style="width: 90px;">Months Ago</th>
+                        <th style="width: 90px; text-align: right;">Last Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="recent-row"><td><span class="code">45285</span></td><td>CHICKEN LEG 1/4 10KG</td><td>December 2025</td><td>4</td><td style="text-align: right;">3.00</td></tr><tr class="recent-row"><td><span class="code">49329</span></td><td>COUNTRY VALUE S/PACK</td><td>January 2026</td><td>3</td><td style="text-align: right;">2.00</td></tr><tr class="recent-row"><td><span class="code">52099</span></td><td>RAINBOW WING FRSH 8PC P/KG</td><td>December 2025</td><td>4</td><td style="text-align: right;">16.97</td></tr><tr class="recent-row"><td><span class="code">52207</span></td><td>RAINBOW BRAAI PACK FRSH  1'</td><td>December 2025</td><td>4</td><td style="text-align: right;">61.48</td></tr><tr class="recent-row"><td><span class="code">52661</span></td><td>R/BOW BREAST FILLET S/L 12PCE</td><td>December 2025</td><td>4</td><td style="text-align: right;">23.57</td></tr><tr class="recent-row"><td><span class="code">52663</span></td><td>R/BOW DRUM 8 & THIGH 8 FRSH P/</td><td>December 2025</td><td>4</td><td style="text-align: right;">74.15</td></tr><tr class="recent-row"><td><span class="code">64618</span></td><td>CRUMBED CHIC NUGGETS 800G</td><td>January 2026</td><td>3</td><td style="text-align: right;">3.00</td></tr><tr class="recent-row"><td><span class="code">64932</span></td><td>SPAR T&T CHIC MOROCCAN P/KG</td><td>December 2025</td><td>4</td><td style="text-align: right;">3.45</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>⚠️⚠️ STALE Products (15 items, 5-12 months old)</h2>
+            <p class="table-label">Dormant - monitor closely, plan phase-out if no recovery</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 70px;">Code</th>
+                        <th style="width: 45%;">Product Description</th>
+                        <th style="width: 130px;">Last Sales Month</th>
+                        <th style="width: 90px;">Months Ago</th>
+                        <th style="width: 90px; text-align: right;">Last Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="stale-row"><td><span class="code">11337</span></td><td>COUNTRY VALUE BREAST B/IN</td><td>September 2025</td><td>7</td><td style="text-align: right;">39.07</td></tr><tr class="stale-row"><td><span class="code">11343</span></td><td>COUNTRY VALUE WINGS</td><td>September 2025</td><td>7</td><td style="text-align: right;">24.72</td></tr><tr class="stale-row"><td><span class="code">11350</span></td><td>T&T SPATCHCOCK BARBEQUE</td><td>May 2025</td><td>11</td><td style="text-align: right;">9.68</td></tr><tr class="stale-row"><td><span class="code">12840</span></td><td>CHICKENS WHOLE BIRD</td><td>July 2025</td><td>9</td><td style="text-align: right;">1.41</td></tr><tr class="stale-row"><td><span class="code">41686</span></td><td>T&T CHKN ESPETADA P/PERI</td><td>October 2025</td><td>6</td><td style="text-align: right;">1.37</td></tr><tr class="stale-row"><td><span class="code">45650</span></td><td>CHIC BRAAI PK 14 P</td><td>August 2025</td><td>8</td><td style="text-align: right;">50.68</td></tr><tr class="stale-row"><td><span class="code">46121</span></td><td>5KG CC CHIC LEG</td><td>November 2025</td><td>5</td><td style="text-align: right;">7.00</td></tr><tr class="stale-row"><td><span class="code">52210</span></td><td>F/BROWN DRUMS&THIGHS FRSH</td><td>October 2025</td><td>6</td><td style="text-align: right;">52.50</td></tr><tr class="stale-row"><td><span class="code">52258</span></td><td>F/BROWN BRAAI PK FRSH 16PC P/K</td><td>October 2025</td><td>6</td><td style="text-align: right;">60.25</td></tr><tr class="stale-row"><td><span class="code">57440</span></td><td>SANGIRO CHIC B/PK N/B 6PK P/KG</td><td>September 2025</td><td>7</td><td style="text-align: right;">52.17</td></tr><tr class="stale-row"><td><span class="code">57441</span></td><td>SANGIRO CHIC B/PK N/B 12'S P/K</td><td>September 2025</td><td>7</td><td style="text-align: right;">261.56</td></tr><tr class="stale-row"><td><span class="code">57442</span></td><td>SANGIRO CHIC MIX PORT 5'S P/KG</td><td>November 2025</td><td>5</td><td style="text-align: right;">85.51</td></tr><tr class="stale-row"><td><span class="code">57443</span></td><td>SANGIRO CHIC MIX PORT 10'S P/K</td><td>November 2025</td><td>5</td><td style="text-align: right;">340.52</td></tr><tr class="stale-row"><td><span class="code">57444</span></td><td>SANGIRO CHIC FILLET 4'S P/KG</td><td>November 2025</td><td>5</td><td style="text-align: right;">85.50</td></tr><tr class="stale-row"><td><span class="code">57445</span></td><td>SANGIRO CHIC FILLET 12'S P/KG</td><td>September 2025</td><td>7</td><td style="text-align: right;">38.68</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>✕ DEAD STOCK Products (26 items, 12+ months old)</h2>
+            <p class="table-label">CULL CANDIDATES - no sales since mid-2024 or earlier</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 70px;">Code</th>
+                        <th style="width: 45%;">Product Description</th>
+                        <th style="width: 130px;">Last Sales Month</th>
+                        <th style="width: 90px;">Months Ago</th>
+                        <th style="width: 90px; text-align: right;">Last Qty</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="dead-row"><td><span class="code">11325</span></td><td>C/FAIR FRSH BRSTS FIL 4'S</td><td>February 2023</td><td>38</td><td style="text-align: right;">55.67</td></tr><tr class="dead-row"><td><span class="code">11328</span></td><td>C/FAIR FRSH BRAAI 5 PIECE</td><td>June 2024</td><td>22</td><td style="text-align: right;">62.34</td></tr><tr class="dead-row"><td><span class="code">11353</span></td><td>T&T SKEWER WINGS PERI</td><td>June 2024</td><td>22</td><td style="text-align: right;">14.70</td></tr><tr class="dead-row"><td><span class="code">11379</span></td><td>CHICKEN LEG QUARTER FROZ</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">12618</span></td><td>MATADOR CHIC THIGH KEBABS</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">12837</span></td><td>CC CHICKENS SPATCHCOCK</td><td>November 2024</td><td>17</td><td style="text-align: right;">2.77</td></tr><tr class="dead-row"><td><span class="code">14750</span></td><td>RAINBOW BRAAIPACK 5PCE</td><td>August 2024</td><td>20</td><td style="text-align: right;">41.60</td></tr><tr class="dead-row"><td><span class="code">34224</span></td><td>CHICKEN FILLET KEBAB</td><td>May 2024</td><td>23</td><td style="text-align: right;">4.68</td></tr><tr class="dead-row"><td><span class="code">34293</span></td><td>CHICKEN FILLETS 8 PC</td><td>April 2023</td><td>36</td><td style="text-align: right;">4.18</td></tr><tr class="dead-row"><td><span class="code">38901</span></td><td>S/CHUNKY LEMON & HERB 1KG</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">38902</span></td><td>S/CHUNKY BBQ IRR 1KG</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">45775</span></td><td>S/CHUNKY MANGO & CHUTNEY</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">45776</span></td><td>S/CHUNKY PERI PERI IRR</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">46445</span></td><td>CRUMBED CHICK SCHNITZEL</td><td>September 2024</td><td>19</td><td style="text-align: right;">3.04</td></tr><tr class="dead-row"><td><span class="code">52662</span></td><td>R/BOW BREASTE FILLET 4PCE</td><td>February 2025</td><td>14</td><td style="text-align: right;">13.39</td></tr><tr class="dead-row"><td><span class="code">54102</span></td><td>CHIC VALLEI KREEF</td><td>December 2024</td><td>16</td><td style="text-align: right;">0.67</td></tr><tr class="dead-row"><td><span class="code">56985</span></td><td>BURGER UNIVERSAL CHICKEN</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">58900</span></td><td>NOORSVELD CHIC STAR PACK</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">63369</span></td><td>SANGIRO CHIC MIX PORT 3'S P/KG</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">63370</span></td><td>SANGIRO CHIC WINGS C/TAIL P/KG</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">63371</span></td><td>SANGIRO CHIC L/QUART 2'S P/KG</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">63372</span></td><td>SANGIRO CHIC FILLETS MINI P/KG</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">63373</span></td><td>SANGIRO CHIC STKLT CRMB 4'S P/</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">63374</span></td><td>SANGIRO CHIC NUGGETS 15'S P/KG</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">64931</span></td><td>SPAR T&T CHIC HOT HONEY P/KG</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr><tr class="dead-row"><td><span class="code">66207</span></td><td>NOORSVELD CHIC WHOLE</td><td>No sales recorded</td><td>999</td><td style="text-align: right;">0.00</td></tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>💡 Recommendations</h2>
+            <ul>
+                <li><strong>ACTIVE:</strong> Maintain current stock levels, feature in promotions</li>
+                <li><strong>RECENT:</strong> Review customer demand, consider restocking</li>
+                <li><strong>STALE:</strong> Monitor for 6 months, plan phase-out if no recovery</li>
+                <li><strong>DEAD STOCK:</strong> Cull immediately - free shelf space and reduce complexity</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Report Generated: 18 April 2026 | SPAR Chicken Department | Product Status Analysis (Scenario 3)</p>
+        </div>
+    </div>
+</body>
+</html>

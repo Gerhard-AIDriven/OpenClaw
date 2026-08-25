@@ -1,0 +1,70 @@
+    // Initialize map
+    const map = L.map('map').setView([${linzData?.latitude || -39.4928}, ${linzData?.longitude || 176.9120}], 15);
+    
+    // Base layers
+    const satelliteLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+      attribution: 'Tiles © Esri'
+    });
+    
+    const streetLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    });
+    
+    // Add default layer
+    satelliteLayer.addTo(map);
+    
+    // Property marker
+    L.marker([${linzData?.latitude || -39.4928}, ${linzData?.longitude || 176.9120}])
+      .addTo(map)
+      .bindPopup('<strong>${address}</strong><br>Subject Property')
+      .openPopup();
+    
+    // Layer control
+    let currentLayer = 'satellite';
+    
+    function toggleLayer(layerName) {
+      // Remove all overlays first
+      map.eachLayer(layer => {
+        if (layer instanceof L.TileLayer) {
+          map.removeLayer(layer);
+        }
+      });
+      
+      // Update button states
+      document.querySelectorAll('.map-control-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Add selected layer
+      if (layerName === 'satellite') {
+        satelliteLayer.addTo(map);
+        currentLayer = 'satellite';
+      } else if (layerName === 'street') {
+        streetLayer.addTo(map);
+        currentLayer = 'street';
+      } else if (layerName === 'liquefaction') {
+        // TODO: Add liquefaction overlay from hazards data
+        streetLayer.addTo(map);
+        alert('Liquefaction overlay coming soon!');
+        currentLayer = 'liquefaction';
+      } else if (layerName === 'flood') {
+        // TODO: Add flood overlay from hazards data
+        streetLayer.addTo(map);
+        alert('Flood overlay coming soon!');
+        currentLayer = 'flood';
+      } else if (layerName === 'erosion') {
+        // TODO: Add erosion overlay from hazards data
+        streetLayer.addTo(map);
+        alert('Erosion overlay coming soon!');
+        currentLayer = 'erosion';
+      }
+    }
+    
+    // Helper function for hazard classes
+    function getHazardClass(risk) {
+      if (!risk) return 'status-warning';
+      const riskLower = risk.toLowerCase();
+      if (riskLower.includes('high') || riskLower.includes('severe')) return 'status-danger';
+      if (riskLower.includes('low') || riskLower.includes('minimal')) return 'status-success';
+      return 'status-warning';

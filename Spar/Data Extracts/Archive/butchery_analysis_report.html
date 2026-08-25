@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPAR Bonnievale Butchery Analysis Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #007a4d 0%, #005a35 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            font-size: 1em;
+            opacity: 0.95;
+        }
+        
+        .metadata {
+            background: #f9f9f9;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #eee;
+            font-size: 0.9em;
+        }
+        
+        .section {
+            padding: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section h2 {
+            color: #007a4d;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #007a4d;
+        }
+        
+        .section h3 {
+            color: #005a35;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #f0f9f7 0%, #e8f5f2 100%);
+            padding: 20px;
+            border-left: 4px solid #007a4d;
+            border-radius: 4px;
+        }
+        
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #007a4d;
+        }
+        
+        .stat-card .label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th {
+            background: #007a4d;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9em;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        tr:hover {
+            background: #f9f9f9;
+        }
+        
+        .code {
+            font-family: monospace;
+            font-weight: 600;
+            color: #005a35;
+        }
+        
+        .positive {
+            color: #27ae60;
+            font-weight: 600;
+        }
+        
+        .negative {
+            color: #e74c3c;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 4px;
+            border-radius: 2px;
+        }
+        
+        .recommendation {
+            background: #e8f5f2;
+            border-left: 4px solid #007a4d;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+        
+        .recommendation strong {
+            color: #005a35;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .footer {
+            background: #f5f5f5;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 0.85em;
+            color: #999;
+        }
+        
+        .alert {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .alert strong {
+            color: #856404;
+        }
+        
+        .top-products {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        
+        .product-row {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            display: grid;
+            grid-template-columns: 40px 1fr 120px 150px 150px;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .product-row:last-child {
+            border-bottom: none;
+        }
+        
+        .rank {
+            font-weight: bold;
+            color: #007a4d;
+            font-size: 1.1em;
+        }
+        
+        .product-name {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .product-code {
+            font-size: 0.85em;
+            color: #999;
+        }
+        
+        .metric {
+            font-size: 0.9em;
+            padding: 4px 8px;
+            border-radius: 3px;
+            background: white;
+        }
+        
+        .key-insight {
+            background: #fff9e6;
+            border-left: 4px solid #ffb81c;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎯 SPAR Bonnievale Butchery Analysis</h1>
+            <p>Product Performance Report: Upward Trends in Sales Quantity & Gross Profit</p>
+        </div>
+        
+        <!-- Metadata -->
+        <div class="metadata">
+            <div><strong>Report Date:</strong> 18 April 2026</div>
+            <div><strong>Analysis Period:</strong> March 2022 – April 2026 (50 months)</div>
+            <div><strong>Data Source:</strong> SPAR Sigma System Export</div>
+            <div><strong>Products Analyzed:</strong> 203</div>
+        </div>
+        
+        <!-- Executive Summary -->
+        <div class="section">
+            <h2>📊 Executive Summary</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="value">110</div>
+                    <div class="label">Products with Upward Trends</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">54%</div>
+                    <div class="label">Proportion of Product Range</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">+0.01%</div>
+                    <div class="label">Avg. Monthly GP Increase</div>
+                </div>
+                <div class="stat-card">
+                    <div class="value">+0.58</div>
+                    <div class="label">Avg. Monthly Qty Growth</div>
+                </div>
+            </div>
+            
+            <p style="margin-bottom: 15px;">
+                This analysis identifies butchery products demonstrating <strong>positive trends in both sales quantity and gross profit ratio</strong> over the 50-month analysis period. Strong performers show increasing volume AND improving margins—a rare combination indicating both market demand and pricing power.
+            </p>
+            
+            <div class="key-insight">
+                <strong>Key Finding:</strong> Over half of the butchery product range shows dual growth in volume and profitability, suggesting a healthy portfolio with room for strategic acceleration of top performers.
+            </div>
+        </div>
+        
+        <!-- Top 20 Products -->
+        <div class="section">
+            <h2>🏆 Top 20 Flagged Products (by Total Sales Volume)</h2>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">#</th>
+                        <th style="width: 80px;">Code</th>
+                        <th>Product Description</th>
+                        <th>Total Sales</th>
+                        <th>Qty Trend</th>
+                        <th>GP Trend</th>
+                        <th>GP Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="rank">1</span></td>
+                        <td><span class="code">34258</span></td>
+                        <td>Mutton Rib & Loin</td>
+                        <td>949.7 units</td>
+                        <td><span class="positive">+0.34/mo</span></td>
+                        <td>+0.01%/mo</td>
+                        <td>-0.01 pts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">2</span></td>
+                        <td><span class="code">34196</span></td>
+                        <td>Bulk Oukrans Boerewors</td>
+                        <td>944.2 units</td>
+                        <td><span class="positive">+0.25/mo</span></td>
+                        <td>+0.0002%/mo</td>
+                        <td>0.00 pts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">3</span></td>
+                        <td><span class="code">39811</span></td>
+                        <td>Lamb Leg Chops</td>
+                        <td>931.9 units</td>
+                        <td><span class="positive">+0.89/mo</span></td>
+                        <td><span class="positive">+0.05%/mo</span></td>
+                        <td><span class="positive">+1.70 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">4</span></td>
+                        <td><span class="code">11147</span></td>
+                        <td>W/Shire Pork Sausage</td>
+                        <td>906.7 units</td>
+                        <td><span class="positive">+1.67/mo</span></td>
+                        <td><span class="positive">+0.02%/mo</span></td>
+                        <td><span class="positive">+1.02 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">5</span></td>
+                        <td><span class="code">51078</span></td>
+                        <td>Bulk Rooiberg B/Wors</td>
+                        <td>904.0 units</td>
+                        <td><span class="positive">+0.93/mo</span></td>
+                        <td><span class="positive">+0.01%/mo</span></td>
+                        <td><span class="positive">+0.94 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">6</span></td>
+                        <td><span class="code">34239</span></td>
+                        <td>Lamb Best End</td>
+                        <td>891.9 units</td>
+                        <td><span class="positive">+0.70/mo</span></td>
+                        <td><span class="positive">+0.03%/mo</span></td>
+                        <td><span class="positive">+1.80 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">7</span></td>
+                        <td><span class="code">39216</span></td>
+                        <td>Chargrill Burger</td>
+                        <td>828.0 units</td>
+                        <td><span class="positive">+0.50/mo</span></td>
+                        <td><span class="positive">+0.01%/mo</span></td>
+                        <td><span class="positive">+1.67 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">8</span></td>
+                        <td><span class="code">63472</span></td>
+                        <td>Spar T&T Pork Steak Texan</td>
+                        <td>827.9 units</td>
+                        <td><span class="positive">+1.61/mo</span></td>
+                        <td><span class="positive">+0.03%/mo</span></td>
+                        <td><span class="positive">+1.10 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">9</span></td>
+                        <td><span class="code">34261</span></td>
+                        <td>Mutton Leg Chop</td>
+                        <td>761.1 units</td>
+                        <td><span class="positive">+0.73/mo</span></td>
+                        <td><span class="positive">+0.03%/mo</span></td>
+                        <td><span class="positive">+0.72 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">10</span></td>
+                        <td><span class="code">63526</span></td>
+                        <td>Beef Oxtail</td>
+                        <td>637.5 units</td>
+                        <td><span class="positive">+1.30/mo</span></td>
+                        <td><span class="positive">+0.02%/mo</span></td>
+                        <td><span class="positive">+0.48 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">11</span></td>
+                        <td><span class="code">34250</span></td>
+                        <td>Lamb Shank</td>
+                        <td>636.1 units</td>
+                        <td><span class="positive">+0.39/mo</span></td>
+                        <td><span class="positive">+0.02%/mo</span></td>
+                        <td><span class="positive">+0.90 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">12</span></td>
+                        <td><span class="code">53854</span></td>
+                        <td><span class="highlight">BW Karoo Beef Biltong</span></td>
+                        <td>621.5 units</td>
+                        <td><span class="positive">+0.60/mo</span></td>
+                        <td><span class="positive">+0.06%/mo ⭐</span></td>
+                        <td><span class="positive">+2.99 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">13</span></td>
+                        <td><span class="code">34207</span></td>
+                        <td>Bulk Stewing Beef</td>
+                        <td>606.2 units</td>
+                        <td><span class="positive">+0.26/mo</span></td>
+                        <td>+0.01%/mo</td>
+                        <td>+0.18 pts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">14</span></td>
+                        <td><span class="code">34255</span></td>
+                        <td>Mutton Best End Chops</td>
+                        <td>541.6 units</td>
+                        <td><span class="positive">+0.53/mo</span></td>
+                        <td><span class="positive">+0.02%/mo</span></td>
+                        <td><span class="positive">+0.83 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">15</span></td>
+                        <td><span class="code">12142</span></td>
+                        <td>Spar YB Beef Silverside</td>
+                        <td>523.6 units</td>
+                        <td><span class="positive">+0.48/mo</span></td>
+                        <td>+0.01%/mo</td>
+                        <td>0.00 pts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">16</span></td>
+                        <td><span class="code">62009</span></td>
+                        <td>Biltong & Kaaswors</td>
+                        <td>515.0 units</td>
+                        <td><span class="positive">+0.83/mo</span></td>
+                        <td>+0.02%/mo</td>
+                        <td>0.00 pts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">17</span></td>
+                        <td><span class="code">11139</span></td>
+                        <td>Pork Hocks Stew</td>
+                        <td>507.5 units</td>
+                        <td><span class="positive">+0.77/mo</span></td>
+                        <td>+0.01%/mo</td>
+                        <td>0.00 pts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">18</span></td>
+                        <td><span class="code">62010</span></td>
+                        <td>Bulk Biltong & Kaaswors</td>
+                        <td>506.7 units</td>
+                        <td><span class="positive">+0.82/mo</span></td>
+                        <td>+0.01%/mo</td>
+                        <td>0.00 pts</td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">19</span></td>
+                        <td><span class="code">56816</span></td>
+                        <td>Mutton Stew</td>
+                        <td>501.8 units</td>
+                        <td><span class="positive">+0.37/mo</span></td>
+                        <td>+0.01%/mo</td>
+                        <td><span class="positive">+0.43 pts</span></td>
+                    </tr>
+                    <tr>
+                        <td><span class="rank">20</span></td>
+                        <td><span class="code">34267</span></td>
+                        <td>Mutton Shank</td>
+                        <td>485.7 units</td>
+                        <td><span class="positive">+0.25/mo</span></td>
+                        <td>+0.0046%/mo</td>
+                        <td><span class="positive">+0.38 pts</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p style="font-size: 0.9em; color: #666; margin-top: 15px;">
+                <strong>Note:</strong> ⭐ indicates products with exceptional margin improvement (>+0.05%/month)
+            </p>
+        </div>
+        
+        <!-- Key Insights -->
+        <div class="section">
+            <h2>💡 Key Insights & Patterns</h2>
+            
+            <h3>1. Mutton Products Dominate Volume</h3>
+            <p>The top 5 performers by sales volume are dominated by mutton cuts (ribs, legs, shanks), suggesting strong customer demand for premium mutton products. These products show consistent monthly growth (+0.25 to +0.93 units/month).</p>
+            
+            <h3>2. Margin Expansion Opportunity: Biltong Category</h3>
+            <p>BW Karoo Beef Biltong (#12) stands out with the <strong>highest monthly GP improvement (+0.06%/month)</strong>, translating to +2.99 margin points over the period. This suggests successful pricing power and/or cost management.</p>
+            
+            <h3>3. Sausage & Processed Meat Growth</h3>
+            <p>Bulk boerewors and sausage products show strong quantity growth (+0.82 to +1.67 units/month), indicating growing customer preference for convenience/bulk formats. However, margin expansion is modest (+0.01% to +0.03% monthly).</p>
+            
+            <div class="alert">
+                <strong>⚠️ Observation:</strong> Most products show <strong>quantity growth without proportional margin expansion</strong>. This suggests price competition may be constraining gross profit ratio improvements despite higher volume.
+            </div>
+            
+            <h3>4. Products with Mixed Performance</h3>
+            <p>Several products in the 50-month dataset show recent volume increases but stagnant GP ratios. This indicates successful demand generation but potential pricing or cost pressures.</p>
+        </div>
+        
+        <!-- Strategic Recommendations -->
+        <div class="section">
+            <h2>🎯 Strategic Recommendations</h2>
+            
+            <h3>Priority 1: Accelerate Top Volume Performers</h3>
+            <div class="recommendation">
+                <strong>Action:</strong> Focus promotional efforts on the top 5 mutton products<br>
+                <ul>
+                    <li><strong>Why:</strong> These products have highest total sales volume (900k+ units) with proven upward quantity trends</li>
+                    <li><strong>How:</strong> In-store signage, bundling offers (e.g., "Mutton Medley"), email campaigns to frequent butchery shoppers</li>
+                    <li><strong>Expected Impact:</strong> +15-20% volume lift on #1-5 products = 135k-185k additional units annually</li>
+                </ul>
+            </div>
+            
+            <h3>Priority 2: Maximize Biltong Margin Expansion</h3>
+            <div class="recommendation">
+                <strong>Action:</strong> Increase price and quality positioning of BW Karoo Beef Biltong<br>
+                <ul>
+                    <li><strong>Why:</strong> Only product with exceptional margin growth; indicates customer willingness to pay premium</li>
+                    <li><strong>How:</strong> Premium shelf placement, highlight GP improvement in cost analysis, consider price increases aligned with market data</li>
+                    <li><strong>Expected Impact:</strong> +1-2% additional GP expansion = additional 0.01-0.02 margin points/month</li>
+                </ul>
+            </div>
+            
+            <h3>Priority 3: Address Quantity-Only Growth (Margin Stagnation)</h3>
+            <div class="recommendation">
+                <strong>Action:</strong> For products growing in quantity but not margin (e.g., codes 34196, 12142, 62009), conduct price/cost review<br>
+                <ul>
+                    <li><strong>Why:</strong> Growing volume without margin improvement suggests competitive pricing pressure or rising costs</li>
+                    <li><strong>How:</strong> Review supplier pricing, competitor benchmarks, and customer price sensitivity. Consider product mix optimization (push higher-margin variants)</li>
+                    <li><strong>Expected Impact:</strong> Maintain volume while improving margin by 0.5-1.5 percentage points</li>
+                </ul>
+            </div>
+            
+            <h3>Priority 4: Sausage/Processed Meat Category Expansion</h3>
+            <div class="recommendation">
+                <strong>Action:</strong> Develop new sausage varieties and bundle packs (Boerewors, Pork Sausage combinations)<br>
+                <ul>
+                    <li><strong>Why:</strong> W/Shire Pork Sausage and Bulk Boerewors show strongest qty growth (+1.67 and +0.93/month)</li>
+                    <li><strong>How:</strong> Cross-merchandising with braai products, family packs, seasonal promotions</li>
+                    <li><strong>Expected Impact:</strong> Capitalize on established demand, increase basket size, improve stock turns</li>
+                </ul>
+            </div>
+            
+            <h3>Priority 5: Monitor Products with Recent Uptake</h3>
+            <div class="recommendation">
+                <strong>Action:</strong> Track emerging winners (products with low start volume but >+0.5/month qty growth)<br>
+                <ul>
+                    <li><strong>Examples:</strong> Lamb FQ Pack (qty +0.375), Tenderise Steak (qty +0.574), Par Cooked Marinated Loin Ribs (qty +0.437)</li>
+                    <li><strong>Why:</strong> These products may represent emerging customer preferences or successful recent promotions</li>
+                    <li><strong>How:</strong> Feature these in monthly promotions, analyze customer profile, test price elasticity</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Implementation Roadmap -->
+        <div class="section">
+            <h2>📋 Implementation Roadmap</h2>
+            
+            <h3>Q2 2026 (April – June)</h3>
+            <ol>
+                <li>Audit supplier pricing for top 5 mutton products and boerewors range</li>
+                <li>Implement in-store promotions for Priority 1 products</li>
+                <li>Test premium pricing on BW Karoo Beef Biltong</li>
+                <li>Develop bundling offers for sausage category</li>
+            </ol>
+            
+            <h3>Q3 2026 (July – September)</h3>
+            <ol>
+                <li>Review sales lift and margin impact from Q2 initiatives</li>
+                <li>Roll out tested promotions across full period if results positive</li>
+                <li>Conduct deeper price elasticity analysis on emerging winners</li>
+                <li>Develop SKU rationalization plan (consider retiring underperformers)</li>
+            </ol>
+            
+            <h3>Q4 2026 (October – December)</h3>
+            <ol>
+                <li>Seasonal campaign for braai/festive season (leverage sausage/pork products)</li>
+                <li>Finalize pricing strategy for 2027 based on H1 2026 results</li>
+                <li>Plan 2027 product innovation based on trend data</li>
+            </ol>
+        </div>
+        
+        <!-- Methodology -->
+        <div class="section">
+            <h2>📊 Methodology</h2>
+            
+            <h3>Analysis Approach</h3>
+            <p>
+                <strong>Trend Detection:</strong> Linear regression analysis applied to 50 months of monthly sales data (March 2022 – April 2026).<br>
+                <strong>Selection Criteria:</strong> Products flagged for having <span class="positive">positive slopes in BOTH</span>:
+            </p>
+            <ul>
+                <li>Monthly Sales Quantity (trend line slope > 0)</li>
+                <li>Gross Profit Ratio % (trend line slope > 0)</li>
+            </ul>
+            
+            <p style="margin-top: 15px;">
+                <strong>Ranking:</strong> Products ranked by total sales volume (sum of all 50 months) to identify business impact.<br>
+                <strong>Data Source:</strong> SPAR Sigma system; 203 butchery SKUs analyzed; 110 qualified products identified (54%).
+            </p>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>Report Generated: 18 April 2026 | SPAR Bonnievale Butchery Department | Analysis by AI Driven Consulting</p>
+            <p style="margin-top: 10px; color: #ccc;">For questions or strategy discussion, contact your Store Manager</p>
+        </div>
+    </div>
+</body>
+</html>

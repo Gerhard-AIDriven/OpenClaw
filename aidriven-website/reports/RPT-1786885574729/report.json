@@ -1,0 +1,109 @@
+{
+  "reportId": "RPT-1786885574729",
+  "generatedAt": "2026-08-16T13:06:14.729Z",
+  "tier": "STANDARD",
+  "price": "NZD $149",
+  "property": {
+    "address": "31 Douglas McLean Avenue, Napier",
+    "coordinates": {
+      "lat": -39.5006452,
+      "lon": 176.9039752
+    },
+    "rid": null
+  },
+  "dataSources": {
+    "linz": {
+      "status": "Success",
+      "layers": [
+        "Parcels",
+        "Title Estate",
+        "Title-Parcel Association"
+      ],
+      "fetchedAt": "2026-08-16T13:06:17.265Z"
+    },
+    "hazards": {
+      "linzGabrielle": "Layer 112668",
+      "hbrManual": "https://gis.hbrc.govt.nz/hazards/",
+      "fetchedAt": "2026-08-16T13:06:38.359Z"
+    },
+    "rates": {
+      "status": "Skipped",
+      "reason": "No RID"
+    }
+  },
+  "sections": {
+    "parcel": {
+      "legalDescription": "Lot 1 DP XXXXX (Pending verification)",
+      "landArea": "N/A",
+      "owners": "Current Registered Owners",
+      "tenureType": "Freehold",
+      "titleNumber": "N/A",
+      "landDistrict": "Hawkes Bay",
+      "status": "Unverified",
+      "source": "Fallback (WFS unavailable)",
+      "fetchedAt": "2026-08-16T13:06:17.265Z",
+      "note": "Data pending LINZ verification"
+    },
+    "hazards": {
+      "location": {
+        "latitude": -39.5006452,
+        "longitude": 176.9039752
+      },
+      "hazards": {
+        "liquefaction": {
+          "status": "No data"
+        },
+        "flood": {
+          "status": "No data"
+        },
+        "coastal": {
+          "inundation": {
+            "status": "Fetch failed",
+            "error": "connect ETIMEDOUT 202.36.185.10:443"
+          },
+          "hazardZones": {
+            "status": "No data",
+            "inHazardZone": false,
+            "intersectedLayer": false
+          }
+        },
+        "cycloneGabrielle": {
+          "source": "LINZ Layer 112668",
+          "eventDate": "2023-02-14",
+          "affected": false,
+          "floodExtentPolygons": 0
+        }
+      },
+      "overallAssessment": {
+        "riskRating": "Low",
+        "riskFactors": [],
+        "summary": "Risk: Low. No hazards identified."
+      },
+      "dataSources": {
+        "hbrArcGisPortal": "https://gis.hbrc.govt.nz/hazards/",
+        "linzDataService": "Layer 112668"
+      },
+      "fetchedAt": "2026-08-16T13:06:38.359Z"
+    },
+    "rates": {
+      "note": "RID not provided - rates data unavailable"
+    },
+    "hbrVerification": {
+      "status": "Manual Verification Required",
+      "note": "HBRC API access pending approval. Use the links below to manually verify hazards.",
+      "links": {
+        "hazardsMap": "https://hbmaps.hbrc.govt.nz/?lat=-39.5006452&lon=176.9039752",
+        "liquefaction": "https://hbmaps.hbrc.govt.nz/?layer=Earthquake_Liquefaction&lat=-39.5006452&lon=176.9039752",
+        "flooding": "https://hbmaps.hbrc.govt.nz/?layer=Flooding&lat=-39.5006452&lon=176.9039752",
+        "coastalInundation": "https://hbmaps.hbrc.govt.nz/?layer=Coastal_Inundation&lat=-39.5006452&lon=176.9039752",
+        "tsunami": "https://hbmaps.hbrc.govt.nz/?layer=Tsunami&lat=-39.5006452&lon=176.9039752"
+      },
+      "instructions": [
+        "Click any link above to open HBRC Hazards Map",
+        "The map will center on your property coordinates",
+        "Toggle hazard layers to see if property is affected",
+        "Screenshot or note findings for your records"
+      ]
+    }
+  }
+}

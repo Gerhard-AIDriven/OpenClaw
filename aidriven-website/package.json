@@ -1,0 +1,25 @@
+{
+  "name": "ai-driven-property-reports",
+  "version": "1.0.0",
+  "description": "LINZ WFS integration for AI Driven property due diligence reports",
+  "main": "linz-fetcher.js",
+  "scripts": {
+    "test": "node test-linz-fetcher.js"
+  },
+  "keywords": [
+    "linz",
+    "property",
+    "wfs",
+    "new-zealand",
+    "real-estate"
+  ],
+  "author": "AI Driven",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "playwright": "^1.62.1",
+    "xml2js": "^0.6.2"
+  }
+}
