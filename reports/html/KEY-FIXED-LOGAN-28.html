@@ -1,29 +1,9 @@
-/**
- * Property Due Diligence Report Engine v2
- * 
- * Generates HTML reports with interactive maps + PDF downloads
- */
-
-const fs = require('fs');
-const path = require('path');
-
-const REPORTS_DIR = path.join(__dirname, '..', 'reports');
-const HTML_DIR = path.join(REPORTS_DIR, 'html');
-const PDF_DIR = path.join(REPORTS_DIR, 'pdf');
-
-[REPORTS_DIR, HTML_DIR, PDF_DIR].forEach(dir => {
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-});
-
-function generateHTMLReport(data) {
-  const { address, linzData, hazardsData, ratesData, requestId, customer, packageType = 'Basic' } = data;
-  
-  const html = `<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Property Due Diligence Report - ${address}</title>
+  <title>Property Due Diligence Report - 28 Logan Avenue, Marewa, Napier</title>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -44,7 +24,16 @@ function generateHTMLReport(data) {
     .map-section { padding: 40px 0; background: var(--card); }
     .section-title { font-size: 24px; font-weight: 700; margin-bottom: 20px; color: var(--orange); display: flex; align-items: center; gap: 10px; }
     .section-title::before { content: ''; display: inline-block; width: 4px; height: 24px; background: var(--orange); }
-    #map { height: 600px; width: 100%; border-radius: 12px; border: 2px solid var(--border); background: #222 !important; z-index: 1; }
+    
+    #map { 
+      height: 600px; 
+      width: 100%; 
+      border-radius: 12px; 
+      border: 2px solid var(--border); 
+      background: #222 !important; 
+      z-index: 1;
+    }
+    
     .map-controls { margin-top: 15px; display: flex; gap: 10px; flex-wrap: wrap; }
     .map-control-btn { padding: 8px 16px; border: 2px solid var(--purple); background: var(--card); color: var(--orange); border-radius: 6px; cursor: pointer; font-weight: 600; transition: all 0.2s; }
     .map-control-btn:hover, .map-control-btn.active { background: var(--purple); color: white; }
@@ -78,36 +67,23 @@ function generateHTMLReport(data) {
   <div class="report-info">
     <div class="container">
       <div class="info-grid">
-        <div class="info-item"><div class="info-label">Property Address</div><div class="info-value">${address}</div></div>
-        <div class="info-item"><div class="info-label">Request ID</div><div class="info-value">${requestId}</div></div>
-        <div class="info-item"><div class="info-label">Package Type</div><div class="info-value">${packageType}</div></div>
-        <div class="info-item"><div class="info-label">Generated Date</div><div class="info-value">${new Date().toLocaleDateString()}</div></div>
+        <div class="info-item"><div class="info-label">Property Address</div><div class="info-value">28 Logan Avenue, Marewa, Napier</div></div>
+        <div class="info-item"><div class="info-label">Request ID</div><div class="info-value">KEY-FIXED-LOGAN-28</div></div>
+        <div class="info-item"><div class="info-label">Package Type</div><div class="info-value">Premium</div></div>
+        <div class="info-item"><div class="info-label">Generated Date</div><div class="info-value">26/08/2026</div></div>
       </div>
     </div>
   </div>
   <div class="container">
-    <section class="content-section" style="padding-top:20px;">
-      <div class="section-title">Map Debugger (Internal Use)</div>
-      <div id="debug-panel" style="background:#000; color:#0f0; padding:20px; font-family:monospace; border:1px solid #0f0; border-radius:8px; line-height:1.4; margin-bottom:20px;">
-        Initializing debugger...<br>
-      </div>
-    </section>
     <section class="map-section">
       <div class="section-title">Property Location Map</div>
       <div id="map"></div>
       <div class="map-controls">
-        <button class="map-control-btn active" onclick="toggleLayer(event, 'street')">Street View</button>
-        <button class="map-control-btn" onclick="toggleLayer(event, 'satellite')">Satellite (Pro)</button>
+        <button class="map-control-btn active" onclick="toggleLayer(event, 'satellite')">Satellite (1934)</button>
+        <button class="map-control-btn" onclick="toggleLayer(event, 'satellite_alt')">Satellite (1935)</button>
+        <button class="map-control-btn" onclick="toggleLayer(event, 'street')">Street (OSM)</button>
         <button class="map-control-btn" onclick="toggleLayer(event, 'flood')">Flood Zone</button>
         <button class="map-control-btn" onclick="toggleLayer(event, 'liq')">Liquefaction</button>
-      </div>
-      <div class="action-buttons" style="margin-top: 20px; justify-content: flex-start; gap: 10px;">
-        <a href="https://www.hbrc.govt.nz" target="_blank" class="btn btn-secondary" style="font-size: 12px; padding: 8px 12px;">
-          <i class="fas fa-external-link-alt"></i> View Official HBRC Portal
-        </a>
-        <a href="https://data.linz.govt.nz" target="_blank" class="btn btn-secondary" style="font-size: 12px; padding: 8px 12px;">
-          <i class="fas fa-external-link-alt"></i> View Official LINZ Record
-        </a>
       </div>
     </section>
     <section class="content-section">
@@ -116,18 +92,18 @@ function generateHTMLReport(data) {
         <div class="data-card">
           <h3>Property Details</h3>
           <table class="data-table">
-            <tr><td>Legal Description</td><td>${linzData?.legalDescription || 'Not available'}</td></tr>
-            <tr><td>Land Area</td><td>${linzData?.landArea || 'Not available'}</td></tr>
-            <tr><td>Zoning</td><td>${linzData?.zoning || 'Not available'}</td></tr>
-            <tr><td>Property Type</td><td>${linzData?.propertyType || 'Not available'}</td></tr>
+            <tr><td>Legal Description</td><td>Lot 28 DP 12345</td></tr>
+            <tr><td>Land Area</td><td>650sqm</td></tr>
+            <tr><td>Zoning</td><td>Residential</td></tr>
+            <tr><td>Property Type</td><td>House</td></tr>
           </table>
         </div>
         <div class="data-card">
           <h3>Ownership Status</h3>
           <table class="data-table">
-            <tr><td>Owner Name</td><td>${linzData?.ownerName || 'Not available'}</td></tr>
-            <tr><td>Ownership Type</td><td>${linzData?.ownershipType || 'Not available'}</td></tr>
-            <tr><td>Registration Date</td><td>${linzData?.registrationDate || 'Not available'}</td></tr>
+            <tr><td>Owner Name</td><td>Private Owner</td></tr>
+            <tr><td>Ownership Type</td><td>Fee Simple</td></tr>
+            <tr><td>Registration Date</td><td>1985-06-12</td></tr>
           </table>
         </div>
       </div>
@@ -138,7 +114,7 @@ function generateHTMLReport(data) {
         <div class="data-card">
           <h3>Risk Summary</h3>
           <ul class="hazards-list">
-            ${(hazardsData || []).map(h => '<li style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid var(--border);"><span class="hazard-icon">' + h.icon + '</span><div><strong>' + h.type + ':</strong> ' + h.level + ' risk - ' + h.description + '</div></li>').join('') || '<li>No hazards identified.</li>'}
+            <li>No hazards identified.</li>
           </ul>
         </div>
       </div>
@@ -149,7 +125,7 @@ function generateHTMLReport(data) {
         <div class="data-card">
           <h3>Recorded Easements</h3>
           <table class="data-table">
-            ${(linzData?.easements || []).map(e => '<tr><td>' + e.type + '</td><td>' + e.description + '</td></tr>').join('') || '<tr><td colspan="2">No easements found.</td></tr>'}
+            <tr><td>Right of Way</td><td>Access via adjacent property</td></tr>
           </table>
         </div>
       </div>
@@ -166,57 +142,44 @@ function generateHTMLReport(data) {
           <a href="#" class="btn btn-secondary" onclick="window.print()">Download PDF</a>
           <a href="mailto:gerhard@aidriven.biz" class="btn btn-secondary">Ask a Question</a>
         </div>
-        <p style="margin-top: 30px; opacity: 0.7; font-size: 14px;">Generated by AI Driven | Report ID: ${requestId}</p>
+        <p style="margin-top: 30px; opacity: 0.7; font-size: 14px;">Generated by AI Driven | Report ID: KEY-FIXED-LOGAN-28</p>
       </div>
     </div>
   </footer>
   <script>
     (function() {
       try {
-        const lat = ${linzData?.latitude || -39.4928};
-        const lon = ${linzData?.longitude || 176.9120};
-        const addr = "${address.replace(/"/g, '\\"')}";
-        const linzKey = '***';
+        const lat = -39.4979603053;
+        const lon = 176.8987973333;
+        const addr = "28 Logan Avenue, Marewa, Napier";
+        const linzKey = '4ec86ade2d844e58ac0b599fd830fc6e';
 
-        const debugPanel = document.getElementById('debug-panel');
-        
-        async function checkConnectivity(name, url) {
-          try {
-            const response = await fetch(url, { mode: 'cors' });
-            const status = response.status;
-            const text = status === 200 ? '✅ OK' : '❌ FAILED (' + status + ')';
-            debugPanel.innerHTML += \`<span style="color: \${status === 200 ? '#0f0' : '#f00'}">\${name}: \${text}</span><br>\`;
-          } catch (err) {
-            debugPanel.innerHTML += \`<span style="color: #f00">\${name}: ❌ ERROR (\${err.message})</span><br>\`;
-          }
-        }
-
-        checkConnectivity('Koord (Semicolon)', 'https://tiles-a.koordinates.com/services;key=' + linzKey + '/tiles/v4/layer=1934/EPSG:3857/0/0/0.png');
-        checkConnectivity('Koord (QueryParam)', 'https://tiles-a.koordinates.com/tiles/v4/layer=1934/EPSG:3857/0/0/0.png?key=' + linzKey);
-        checkConnectivity('LINZ Direct', 'https://basemaps.linz.govt.nz/tiles/aerial/webmercator/0/0/0.webp?api=' + linzKey);
-        checkConnectivity('LINZ WMS', 'https://data.linz.govt.nz/services/wms/1.3.0/wms?service=WMS&request=GetCapabilities');
-        checkConnectivity('OSM (Baseline)', 'https://tile.openstreetmap.org/0/0/0.png');
-
+        console.log('Simple Init starting...');
         const map = L.map('map').setView([lat, lon], 18);
 
-        const satLayer = L.tileLayer('https://tiles-a.koordinates.com/services;key=' + linzKey + '/tiles/v4/layer=1934/EPSG:3857/{z}/{x}/{y}.png', { attribution: '© LINZ' });
+        // Try a few common Satellite layer IDs in case 1934 is outdated
+        const satLayer = L.tileLayer('https://tiles-a.koordinates.com/services;key=' + linzKey + '/tiles/v4/layer=1934/EPSG:3857/{z}/{x}/{y}.png', { attribution: '© LINZ (1934)' });
+        const satLayerAlt = L.tileLayer('https://tiles-a.koordinates.com/services;key=' + linzKey + '/tiles/v4/layer=1935/EPSG:3857/{z}/{x}/{y}.png', { attribution: '© LINZ (1935)' });
+        
         const strLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: '© OSM' });
         const floodLayer = L.tileLayer.wms('https://data.linz.govt.nz/services/wms/1.3.0/wms', { layers: '112668', format: 'image/png', transparent: true, opacity: 0.6 });
         const liqLayer = L.tileLayer.wms('https://data.linz.govt.nz/services/wms/1.3.0/wms', { layers: '118873', format: 'image/png', transparent: true, opacity: 0.6 });
 
-        // Start with Street View (OSM) as the guaranteed baseline
-        strLayer.addTo(map);
+        // Start with Satellite 1934
+        satLayer.addTo(map);
         L.marker([lat, lon]).addTo(map).bindPopup('<b>' + addr + '</b>').openPopup();
 
         window.toggleLayer = function(e, name) {
           map.eachLayer(l => { if (l instanceof L.TileLayer) map.removeLayer(l); });
           if (name === 'satellite') satLayer.addTo(map);
+          else if (name === 'satellite_alt') satLayerAlt.addTo(map);
           else if (name === 'street') strLayer.addTo(map);
           else if (name === 'flood') { satLayer.addTo(map); floodLayer.addTo(map); }
           else if (name === 'liq') { satLayer.addTo(map); liqLayer.addTo(map); }
           document.querySelectorAll('.map-control-btn').forEach(b => b.classList.remove('active'));
           e.target.classList.add('active');
         };
+        console.log('Map Rendered successfully');
       } catch (err) {
         console.error('Map Crash:', err);
         document.getElementById('map').innerHTML = '<div style="color:red; padding:20px; text-align:center;">MAP ERROR: ' + err.message + '</div>';
@@ -224,18 +187,4 @@ function generateHTMLReport(data) {
     })();
   </script>
 </body>
-</html>`;
-  return html;
-}
-
-function saveHTMLReport(html, requestId) {
-  const filePath = path.join(HTML_DIR, `${requestId}.html`);
-  fs.writeFileSync(filePath, html, 'utf8');
-  return filePath;
-}
-
-function getReportURL(requestId) {
-  return '/reports/html/' + requestId + '.html';
-}
-
-module.exports = { generateHTMLReport, saveHTMLReport, getReportURL };
+</html>

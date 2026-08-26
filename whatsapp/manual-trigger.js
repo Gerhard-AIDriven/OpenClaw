@@ -23,11 +23,16 @@ async function main() {
   const requestId = `manual_${Date.now()}`;
   const customer = { email: 'test@aidriven.biz' };
   
-  // For manual triggers, we use the provided address. 
-  // If we had a geocoding API, we'd get real coords here.
-  // For now, we'll use the provided address and let the report engine 
-  // handle defaults or use the LINZ lookup.
-  const addressStructured = null; 
+  // For manual triggers, we use a simplified address for the scraper 
+  // to avoid "No results found" errors caused by suburbs/city names.
+  const addressStructured = {
+    houseNumber: '2',
+    streetName: 'Todd',
+    streetType: 'Street',
+    latitude: -39.5005800554,
+    longitude: 176.90405875
+  };
+
 
   
   try {

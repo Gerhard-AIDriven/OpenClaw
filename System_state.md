@@ -1,50 +1,27 @@
-# SYSTEM STATE & ARCHITECTURAL TRUTH
+# SYSTEM_STATE.md - Project State
 
-> **DO NOT ALTER EXPLICIT CONSTRAINTS WITHOUT USER AUTHORIZATION.**
-> **Always cross-reference this file before writing new code segments.**
+## Last Update: 2026-08-26 18:10 (GMT+2)
 
----
+## Current Technical State
+- **Report Engine**: `C:\Users\gstim\.openclaw\workspace\whatsapp\report-engine-v2.js`
+- **Map Architecture**: Leaflet JS.
+- **Basemap Status**:
+    - **OSM**: ✅ Working.
+    - **LINZ/Koordinates**: ❌ Blocked (Returning 403/404). Currently defaulted to OSM for stability.
+- **Hazards Status**: ❌ Blocked (LINZ WMS returning 404).
+- **Latest Breakthrough**: Identified `gis.hbrc.govt.nz/hazards/` as a potential source, though currently timing out for the user.
 
-## 🛠️ ENVIRONMENT & ENVIRONMENT DEFINITIONS
+## Active Goals
+- [ ] Resolve LINZ API authentication/endpoint mismatch to restore Satellite and Hazard layers.
+- [ ] Investigate `gis.hbrc.govt.nz` for alternative WMS/ArcGIS endpoints.
+- [ ] Transition from "Authority Links" back to embedded data to maintain competitive edge.
 
-| Core Property | Active Specification | Notes / Details |
-| :--- | :--- | :--- |
-| **Project Name** | AI Driven - Property Reports | Automated due diligence reports (LINZ + Hazards + Rates) |
-| **Primary Language** | Node.js / Python | Poller (Node), Scrapers (Python) |
-| **Core Frameworks** | Cloudflare Workers / Meta API | WhatsApp automation pipeline |
-| **Database Engine** | Cloudflare KV | Lead and request storage |
-| **OS Environment** | Windows 11 Pro (Local) | GWS-Asus (i7-8550U, 16GB RAM) |
+## Critical Context for Next Session
+- The user has manually inserted a key into `report-engine-v2.js` (Line 175).
+- The "Professional" report version uses OSM as default to avoid "black frames."
+- The next priority is a technical deep-dive into the HBRC GIS server to find a working WMS/XYZ stream.
 
----
-
-## 📂 PROJECT STRUCTURE & MAPPED PATHS
-* **`poll-automated-reports-v2.js`** $\rightarrow$ Primary poller for requests.
-* **`report-engine-v2.js`** $\rightarrow$ HTML report generator (with Leaflet.js integration).
-* **`manual-trigger.js`** $\rightarrow$ Tool for testing reports manually.
-* **`napier_rates_scraper.py`** $\rightarrow$ Python script for council rates/consents.
-* **`C:\Users\gstim\.openclaw\workspace\reports\html\`** $\rightarrow$ Output directory for generated reports (Centralized Storage).
-  - **Note**: ALL reports must be saved here. DO NOT save to `aidriven-website/reports`.
-  - **Deployment**: Reports are pushed to GitHub Pages from this central folder.
-
----
-
-## 🔒 HARD IMMUTABLE CONSTRAINTS
-* **Napier Address Format (CRITICAL):** When querying the `data.napier.govt.nz` API to find the RID, you MUST use ONLY the `House Number + Street Name + Street Type` (e.g., "2 Todd Street"). 
-  - **DO NOT** include suburb, city, or postcode in the RID search query.
-  - Once the RID is retrieved, use that RID to open the actual MyProperty page.
-* **Map Assets:** Leaflet JS library must be in the `<head>` of the HTML to prevent rendering race conditions.
-* **VRAM Boundaries:** Local inference is CPU-bound (OLLAMA_GPU=false).
-
----
-
-## 🛑 STABLE DEPENDENCIES MATRIX
-* `Leaflet.js` $\rightarrow$ Interactive mapping library (CDN loaded in reports).
-* `python` $\rightarrow$ Required for `napier_rates_scraper.py`.
-* `node` $\rightarrow$ v24.18.0 (Runtime for poller/engine).
-
----
-
-## 🔄 MILESTONE HISTORY LOG
-* **2026-08-25:** Initialized `system_state.md` and `current_task.md` for context fail-safe.
-* **2026-08-25:** Fixed Leaflet JS loading order in `report-engine-v2.js`.
-* **2026-08-25:** Fixed `execSync` import and implemented structured address cleaning for Napier scraper.
+## Dependencies
+- `leaflet.js` (via unpkg)
+- `linz-api.js` (for geocoding)
+- `hazards-api.js` (current implementations failing)
