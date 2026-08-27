@@ -94,9 +94,9 @@ async function generateStandardReport(input) {
   console.log('\n[3/4] Extracting rates data...');
   if (input.rid) {
     try {
-      const scriptPath = path.join(__dirname, '..', '..', 'due-diligence-mvp', 'napier_rates_extractor.py');
+      const scriptPath = path.join(__dirname, '..', '..', 'napier_rates_scraper.py');
       const result = execSync(`python "${scriptPath}"`, {
-        cwd: path.join(__dirname, '..', '..', 'due-diligence-mvp'),
+        cwd: path.join(__dirname, '..', '..'),
         encoding: 'utf8',
         timeout: 60000,
         env: { ...process.env, PYTHONIOENCODING: 'utf-8' }
@@ -196,7 +196,10 @@ function generateReportHTML(report) {
 </head>
 <body>
   <div class="container">
-    <h1>🏠 Property Due Diligence Report</h1>
+    <h1 style="display: flex; align-items: center; gap: 20px;">
+      <img src="/assets/logo.png" alt="AI Driven Logo" style="height: 60px;">
+      Property Due Diligence Report
+    </h1>
     <p class="meta">
       <strong>Report ID:</strong> ${report.reportId}<br>
       <strong>Generated:</strong> ${report.generatedAt}<br>
@@ -247,29 +250,22 @@ function generateReportHTML(report) {
     <div class="section">
       <h2>📍 Property Location</h2>
       ${property.coordinates ? `
-        <div style="text-align: center; margin: 20px 0;">
-          <iframe 
-            width="100%" 
-            height="450" 
-            frameborder="0" 
-            scrolling="no" 
-            marginheight="0" 
-            marginwidth="0"
-            style="border-radius: 8px; border: 2px solid #FFB81C;"
-            src="https://maps.google.com/maps?q=${property.coordinates.lat},${property.coordinates.lon}&hl=en&z=17&output=embed">
-          </iframe>
-          <p style="margin-top: 15px; color: #a0a0a0; font-size: 0.9rem;">
-            📍 ${property.address}<br/>
-            Coordinates: ${property.coordinates.lat.toFixed(6)}, ${property.coordinates.lon.toFixed(6)}
-          </p>
-          <div style="margin-top: 15px;">
-            <a href="https://www.google.com/maps?q=${property.coordinates.lat},${property.coordinates.lon}" target="_blank" style="color: #FFB81C; text-decoration: none; margin-right: 20px;">
-              🗺️ Open in Google Maps
-            </a>
-            <a href="https://www.google.com/maps/search/property+boundaries/@${property.coordinates.lat},${property.coordinates.lon},17z" target="_blank" style="color: #FFB81C; text-decoration: none;">
-              📐 View Property Boundaries
-            </a>
+        <div id="map-container" style="position: relative; width: 100%; height: 450px; border-radius: 8px; border: 2px solid #FFB81C; overflow: hidden;">
+          <div id="map" style="width: 100%; height: 100%;"></div>
+          <div id="map-controls" style="position: absolute; top: 10px; right: 10px; z-index: 1000;">
+            <button id="toggle-map-view" style="background: #FFB81C; color: #2D2D2D; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; font-weight: 600; font-family: inherit; box-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+              Switch to Street View
+            </button>
           </div>
+        </div>
+        <p style="margin-top: 15px; color: #a0a0a0; font-size: 0.9rem; text-align: center;">
+          📍 ${property.address}<br/>
+          Coordinates: ${property.coordinates.lat.toFixed(6)}, ${property.coordinates.lon.toFixed(6)}
+        </p>
+        <div style="text-align: center; margin-top: 15px;">
+          <a href="https://www.google.com/maps?q=${property.coordinates.lat},${property.coordinates.lon}" target="_blank" style="color: #FFB81C; text-decoration: none; margin-right: 20px;">
+            🗺️ Open in Full Map
+          </a>
         </div>
       ` : '<p class="warning">Location coordinates unavailable</p>'}
     </div>
@@ -379,6 +375,53 @@ function generateReportHTML(report) {
       </p>
     </div>
   </div>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>
+    (function() {
+      const coords = { lat: ${property.coordinates.lat}, lon: ${property.coordinates.lon} };
+      const linzKey = 'b2e35aafd4e848e9b0265f1caf575255';
+      
+      // Tile Layers
+      const satellite = L.tileLayer('https://tiles.data.linz.govt.nz/tiles/aerial/600/{z}/{x}/{y}.jpg?key=' + linzKey, {
+        attribution: '© Land Information New Zealand',
+        maxZoom: 20
+      });
+      
+      const street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+      });
+      
+      // Initialize Map (Default Satellite)
+      const map = L.map('map', {
+        center: [coords.lat, coords.lon],
+        zoom: 17,
+        layers: [satellite],
+        zoomControl: false
+      });
+      
+      L.control.zoom({ position: 'bottomright' }).addTo(map);
+      L.marker([coords.lat, coords.lon]).addTo(map);
+      
+      // Toggle Logic
+      let currentView = 'satellite';
+      const toggleBtn = document.getElementById('toggle-map-view');
+      
+      toggleBtn.addEventListener('click', () => {
+        if (currentView === 'satellite') {
+          map.removeLayer(satellite);
+          map.addLayer(street);
+          toggleBtn.innerText = 'Switch to Satellite View';
+          currentView = 'street';
+        } else {
+          map.removeLayer(street);
+          map.addLayer(satellite);
+          toggleBtn.innerText = 'Switch to Street View';
+          currentView = 'satellite';
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
   `;

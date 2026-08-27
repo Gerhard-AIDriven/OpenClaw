@@ -37,6 +37,7 @@ async function queryLINZEasements(latitude, longitude, layerId, radius = 5000) {
       const props = f.properties;
       return {
         appellation: props.appellation || 'Unknown',
+        description: props.description || props.parcel_intent || 'No detailed description available',
         type: props.parcel_intent || 'Easement',
         area: props.calc_area ? `${props.calc_area} m²` : 'N/A',
         areaValue: props.calc_area || null,

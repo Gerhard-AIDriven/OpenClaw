@@ -25,13 +25,17 @@ async function httpGetWithRetry(url, options = {}, retries = 3) {
 const CONFIG = {
   hbr: {
     baseUrl: 'https://gis.hbrc.govt.nz/server/rest/services/HazardPortal',
+    arcgisBaseUrl: 'https://services1.arcgis.com/hWByVnSkh6ElzHkf/ArcGIS/rest/services',
     layers: {
       liquefaction: '/Earthquake_Liquefaction/MapServer/0',
       floodRisk: '/Flooding/MapServer/0',
       coastalInundation: '/Coastal_Inundation/MapServer/0',
       coastalHazardZone1: '/Coastal_Hazard_Zones/MapServer/25',
       coastalHazardZone2: '/Coastal_Hazard_Zones/MapServer/24',
-      coastalHazardZone3: '/Coastal_Hazard_Zones/MapServer/23'
+      coastalHazardZone3: '/Coastal_Hazard_Zones/MapServer/23',
+      // ArcGIS FeatureServer endpoints
+      tsunami: '/HawkesBay_Tsunami_Evacuation_Zones_View/FeatureServer/1',
+      coastalHazards: '/Coastal_Hazards/FeatureServer'
     }
   },
   linz: {
@@ -47,18 +51,84 @@ async function fetchHazardData(coords, options = {}) {
   console.log('  [HAZARD] Fetching hazard data...', coords.lat, coords.lon);
   
   try {
-    const [liquefactionData, floodData, coastalData, gabrielleData] = await Promise.all([
+    const [liquefactionData, floodData, coastalData, gabrielleData, tsunamiData, arcCoastalData] = await Promise.all([
       fetchLiquefactionData(coords, timeout),
       fetchFloodRiskData(coords, timeout),
       fetchCoastalHazardsData(coords, timeout),
-      fetchGabrielleFloodData(coords, timeout)
+      fetchGabrielleFloodData(coords, timeout),
+      fetchTsunamiData(coords, timeout),
+      fetchArcCoastalData(coords, timeout)
     ]);
     
-    return compileHazardReport({ coordinates: coords, liquefaction: liquefactionData, flood: floodData, coastal: coastalData, gabrielleFlood: gabrielleData });
+    return compileHazardReport({ 
+      coordinates: coords, 
+      liquefaction: liquefactionData, 
+      flood: floodData, 
+      coastal: coastalData, 
+      gabrielleFlood: gabrielleData,
+      tsunami: tsunamiData,
+      arcCoastal: arcCoastalData
+    });
   } catch (error) {
     console.log('  [HAZARD] Error:', error.message);
     return generateFallbackHazardData(coords);
   }
+}
+
+async function fetchTsunamiData(coords, timeout) {
+  const url = `${CONFIG.hbr.arcgisBaseUrl}${CONFIG.hbr.layers.tsunami}/query`;
+  const params = new URLSearchParams({ 
+    where: '1=1', 
+    geometry: `${coords.lon},${coords.lat}`, 
+    geometryType: 'esriGeometryPoint', 
+    spatialRel: 'esriSpatialRelIntersects', 
+    outFields: '*', 
+    inSR: '4326', 
+    f: 'json' 
+  });
+  
+  try {
+    console.log('  [HAZARD] Querying Tsunami FeatureServer...');
+    const response = await httpGetWithRetry(`${url}?${params}`, { timeout }, 3);
+    if (response.data?.features?.length > 0) {
+      const attrs = response.data.features[0].attributes || {};
+      return { status: 'Affected', zone: attrs.ZONE || 'Unknown', intersected: true };
+    }
+    return { status: 'Not Affected', intersected: false };
+  } catch (error) {
+    console.log('  [HAZARD] Tsunami failed:', error.message);
+    return { status: 'Error', error: error.message };
+  }
+}
+
+async function fetchArcCoastalData(coords, timeout) {
+  // Coastal hazards often have multiple layers. We check the primary ones.
+  const layersToCheck = ['0', '1']; // Simplified for POC
+  const results = [];
+  
+  for (const layerId of layersToCheck) {
+    const url = `${CONFIG.hbr.arcgisBaseUrl}${CONFIG.hbr.layers.coastalHazards}/${layerId}/query`;
+    const params = new URLSearchParams({ 
+      where: '1=1', 
+      geometry: `${coords.lon},${coords.lat}`, 
+      geometryType: 'esriGeometryPoint', 
+      spatialRel: 'esriSpatialRelIntersects', 
+      outFields: '*', 
+      inSR: '4326', 
+      f: 'json' 
+    });
+    
+    try {
+      const response = await httpGetWithRetry(`${url}?${params}`, { timeout }, 3);
+      if (response.data?.features?.length > 0) {
+        results.push({ layer: layerId, status: 'Affected', attrs: response.data.features[0].attributes });
+      }
+    } catch (e) {
+      console.log(`  [HAZARD] Coastal Layer ${layerId} failed:`, e.message);
+    }
+  }
+  
+  return results.length > 0 ? { status: 'Affected', details: results, intersected: true } : { status: 'Not Affected', intersected: false };
 }
 
 async function fetchLiquefactionData(coords, timeout) {
@@ -150,7 +220,7 @@ async function fetchGabrielleFloodData(coords, timeout) {
 }
 
 function compileHazardReport(data) {
-  const { coordinates, liquefaction, flood, coastal, gabrielleFlood } = data;
+  const { coordinates, liquefaction, flood, coastal, gabrielleFlood, tsunami, arcCoastal } = data;
   let overallRisk = 'Unknown';
   const riskFactors = [];
   
@@ -162,12 +232,16 @@ function compileHazardReport(data) {
     riskFactors.push('Flood hazard zone');
     overallRisk = 'High';
   }
-  if (coastal?.inundation?.inInundationZone) {
-    riskFactors.push('Coastal inundation');
+  if (coastal?.inundation?.inInundationZone || arcCoastal?.intersected) {
+    riskFactors.push('Coastal hazard/inundation');
     overallRisk = 'High';
   }
   if (gabrielleFlood?.affected) {
     riskFactors.push('Cyclone Gabrielle affected');
+    overallRisk = 'High';
+  }
+  if (tsunami?.intersected) {
+    riskFactors.push('Tsunami evacuation zone');
     overallRisk = 'High';
   }
   if (riskFactors.length === 0) overallRisk = 'Low';
@@ -177,8 +251,9 @@ function compileHazardReport(data) {
     hazards: {
       liquefaction: liquefaction || { status: 'No data' },
       flood: flood || { status: 'No data' },
-      coastal: coastal || { status: 'No data' },
-      cycloneGabrielle: gabrielleFlood || { status: 'Fetch failed' }
+      coastal: { ...coastal, arcCoastal: arcCoastal || { status: 'No data' } },
+      cycloneGabrielle: gabrielleFlood || { status: 'Fetch failed' },
+      tsunami: tsunami || { status: 'No data' }
     },
     overallAssessment: { riskRating: overallRisk, riskFactors, summary: `Risk: ${overallRisk}. ${riskFactors.join(', ') || 'No hazards identified'}.` },
     dataSources: { hbrArcGisPortal: 'https://gis.hbrc.govt.nz/hazards/', linzDataService: 'Layer 112668' },

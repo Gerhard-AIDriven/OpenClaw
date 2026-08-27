@@ -1,21 +1,32 @@
 # ACTIVE WORK SCRATCHPAD
 
 ## 🎯 CURRENT OBJECTIVE
-* Remove Hybrid view and restore LINZ map control buttons in reports.
+* Integrate automated HBRC Hazard API queries into the report engine and restore LINZ map control buttons.
 
-## 📝 ACTIVE STEP-BY-STEP CHECKLIST
-- [x] Step 1: Review and internalize `system_state.md` and `current_task.md` protocols.
-- [x] Step 2: Base update of `system_state.md` with current architectural truths.
-- [x] Step 3: Base update of `current_task.md` to capture current state.
-- [x] Step 4: Remove duplicate Leaflet JS script tag at the bottom of `report-engine-v2.js`.
-- [x] Step 5: Wrap map initialization in `DOMContentLoaded` listener in `report-engine-v2.js` to prevent race conditions.
-- [x] Step 6: Verify report generation with a test case to confirm map displays correctly.
-- [x] Step 7: Update `toggleLayer` logic in `report-engine-v2.js` to stack Satellite, Street, AND Reference layers for the 'hybrid' view.
-- [ ] Step 8: Remove Hybrid button and its associated logic from `report-engine-v2.js`.
-- [ ] Step 9: Restore and implement the LINZ-specific map control buttons (as per previous versions).
-- [ ] Step 10: Generate and verify a full operational report for "28 Logan Avenue" with the new buttons.
-- [ ] Step 11: Perform "Sign-Out Update" to `SYSTEM_STATE.md` and `CURRENT_TASK.md`.
+## 📋 ACTIVE STEP-BY-STEP CHECKLIST
+- [x] **Phase 1: Map Stability (Completed)**
+    - [x] Remove duplicate Leaflet JS script tags.
+    - [x] Wrap map initialization in `DOMContentLoaded` to prevent race conditions.
+    - [x] Verify basic map display.
+- [x] **Phase 2: Hazard API Discovery (Completed)**
+    - [x] Identify HBRC Open Data ArcGIS Hub as primary source.
+    - [x] Extract `FeatureServer` endpoints for Tsunami and Coastal hazards.
+    - [x] Perform POC for "31 Douglas McLean Avenue" to verify point-in-polygon accuracy.
+    - [x] Document API endpoints in `SYSTEM_STATE.md`.
+- [ ] **Phase 3: Engine Integration (Upcoming)**
+    - [ ] Update `report-engine-v2.js` to call HBRC APIs during report generation.
+    - [ ] Create a helper function to translate API JSON results into professional risk descriptions.
+    - [ ] Map "Liquefaction" results to a manual check flag (since it's View-Only).
+    - [ ] **TODO: Investigate and integrate Flood Risk data (Historical Observations vs. Predicted Maps).**
+    - [ ] **TODO: Implement "Dynamic Consultation" logic: use LLM to generate personalized responses to the "I am interested in..." form field based on API results.**
+    - [ ] **TODO: Implement "Executive Summary" generator: a high-level synthesis of all findings placed at the top of the report.**
+- [ ] **Phase 4: Final Polish & Value-Add (Upcoming)**
+    - [ ] Implement "Environmental History & Context" section (utilizing historical aerials, Cawthron 2005 surveys, and past flood observations).
+    - [ ] Remove Hybrid button and associated logic.
+    - [ ] Restore and implement LINZ-specific map control buttons.
+    - [ ] Generate and verify a full operational report for a test case.
 
-## 📊 CURRENT BLOCKING VARIABLES / STATES
-* **Change of Direction:** User determined Hybrid view adds no value; wants restoration of LINZ-specific map controls.
-* **Continuity:** Now strictly adhering to Context Failsafe measures.
+## 🚧 CURRENT BLOCKING VARIABLES / STATES
+* **Liquefaction API:** Only available as a `MapServer` (View-Only), not a public `FeatureServer`. Must remain a manual verification step.
+* **Server Stability:** `gis.hbrc.govt.nz` is prone to timeouts; must implement robust error handling/timeouts in the engine.
+* **Context Management:** Reaching context limits; strictly maintaining `SYSTEM_STATE.md` for continuity.

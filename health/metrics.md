@@ -1,5 +1,6 @@
 | Date | Weight (kg) | BP | Sugar | Notes |
 |------|-------------|-----|-------|-------|
+| 2026-08-27 | 99.7 | 131/80 | 6.9 | Metrics stable. Sugar slightly up but still within a manageable range. |
 | 2026-08-26 | 100.0 | 121/77 | 5.7 | Back at 100kg baseline; BP and Sugar looking very stable and in the sweet spot. |
 | 2026-08-23 | 99.4 | 127/77 | 5.7 | |
 | 2026-08-20 | 99.2 | 142/86 | 5.2 | Day 7 of cortisone course (FINAL DAY - finished this morning) ✅ |

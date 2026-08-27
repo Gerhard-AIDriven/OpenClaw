@@ -137,8 +137,12 @@ function generateHTMLReport(data) {
       <div class="data-grid">
         <div class="data-card">
           <h3>Risk Summary</h3>
+          <div style="margin-bottom: 15px; padding: 10px; background: rgba(247,147,30,0.1); border-left: 4px solid var(--orange);">
+            <strong>Overall Risk:</strong> ${hazardsData?.overallAssessment?.riskRating || 'Unknown'}<br>
+            <span style="font-size: 14px;">${hazardsData?.overallAssessment?.summary || 'No summary available'}</span>
+          </div>
           <ul class="hazards-list">
-            ${(hazardsData || []).map(h => '<li style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid var(--border);"><span class="hazard-icon">' + h.icon + '</span><div><strong>' + h.type + ':</strong> ' + h.level + ' risk - ' + h.description + '</div></li>').join('') || '<li>No hazards identified.</li>'}
+            ${(hazardsData?.hazards ? Object.entries(hazardsData.hazards).map(([key, h]) => '<li style="display:flex; align-items:flex-start; gap:12px; padding:12px 0; border-bottom:1px solid var(--border);"><span class="hazard-icon">' + (h.icon || '⚠️') + '</span><div><strong style="text-transform: capitalize;">' + key + ':</strong> ' + (h.status || h.level || 'Unknown') + ' - ' + (h.description || 'No details') + '</div></li>') : []) .join('') || '<li>No hazards identified.</li>'}
           </ul>
         </div>
       </div>
@@ -149,7 +153,7 @@ function generateHTMLReport(data) {
         <div class="data-card">
           <h3>Recorded Easements</h3>
           <table class="data-table">
-            ${(linzData?.easements || []).map(e => '<tr><td>' + e.type + '</td><td>' + e.description + '</td></tr>').join('') || '<tr><td colspan="2">No easements found.</td></tr>'}
+            ${(linzData?.easements || []).map(e => '<tr><td style="width: 30%;">' + (e.type || 'Easement') + '</td><td style="width: 70%;">' + (e.description || e.appellation || 'No description') + '</td></tr>').join('') || '<tr><td colspan="2">No easements found.</td></tr>'}
           </table>
         </div>
       </div>

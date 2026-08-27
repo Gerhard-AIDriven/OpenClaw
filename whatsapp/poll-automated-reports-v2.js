@@ -22,7 +22,7 @@ const { sendReportEmail } = require('./gmail-notifier');
 
 // Configuration
 const WORKER_URL = 'https://aidriven-whatsapp-webhook.gerhard-8a6.workers.dev';
-const POLL_TOKEN = 'aidriven_poll_2026_xK9mP';
+const POLL_TOKEN = 'aidriven_poll_secret_2026_xK9mP';
 const REPORTS_DIR = path.join(__dirname, '..', 'reports');
 const HTML_DIR = path.join(REPORTS_DIR, 'html');
 
@@ -31,6 +31,16 @@ const HTML_DIR = path.join(REPORTS_DIR, 'html');
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
+});
+
+// Global Error Handling to catch silent crashes
+process.on('unhandledRejection', (reason, promise) => {
+  log('error', `Unhandled Rejection at: ${promise} reason: ${reason}`);
+});
+
+process.on('uncaughtException', (err) => {
+  log('error', `Uncaught Exception: ${err.message}\n${err.stack}`);
+  process.exit(1);
 });
 
 /**
@@ -133,9 +143,49 @@ async function generateReport(address, packageType, requestId, customer, address
       }
     }
     
-    const reportData = { address, originalAddress: address, linzData, hazardsData, ratesData, requestId, customer, packageType };
-    const html = generateHTMLReport(reportData);
+    // SANITIZE DATA - Create a clean, flat object to prevent memory crashes or circular refs
+    const sanitizedData = {
+      address: address,
+      originalAddress: address,
+      linzData: {
+        legalDescription: linzData?.legalDescription || 'N/A',
+        landArea: linzData?.landArea || 'N/A',
+        zoning: linzData?.zoning || 'N/A',
+        propertyType: linzData?.propertyType || 'N/A',
+        ownerName: linzData?.ownerName || 'N/A',
+        ownershipType: linzData?.ownershipType || 'N/A',
+        registrationDate: linzData?.registrationDate || 'N/A',
+        latitude: linzData?.latitude || -39.50058,
+        longitude: linzData?.longitude || 176.90405,
+        easements: (linzData?.easements || []).map(e => ({
+          type: e.type || 'Easement',
+          description: e.description || e.appellation || 'No description'
+        }))
+      },
+      hazardsData: {
+        overallAssessment: hazardsData?.overallAssessment ? {
+          riskRating: hazardsData.overallAssessment.riskRating,
+          summary: hazardsData.overallAssessment.summary
+        } : null,
+        hazards: hazardsData?.hazards ? Object.entries(hazardsData.hazards).map(([key, val]) => ({
+          type: key,
+          status: val.status || val.level || 'Unknown',
+          description: val.description || 'No details',
+          icon: val.icon || '⚠️'
+        })) : []
+      },
+      ratesData: ratesData ? { ...ratesData } : null,
+      requestId: requestId,
+      customer: customer ? { ...customer } : null,
+      packageType: packageType
+    };
+    
+    log('info', '🛠️ Starting HTML generation with sanitized data...');
+    const html = generateHTMLReport(sanitizedData);
+    log('info', '✅ HTML generation complete');
+    
     const htmlPath = saveHTMLReport(html, requestId);
+    log('info', `💾 Report saved to: ${htmlPath}`);
     
     return { success: true, htmlPath, reportUrl: `/reports/html/${path.basename(htmlPath)}`, effectiveAddress };
     
