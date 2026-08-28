@@ -131,3 +131,4 @@ due-diligence-mvp/report-templates/
 #   2. Run: git clean -fdx reports/
 #   3. Then push normally
 # ===========================================
+.aider*

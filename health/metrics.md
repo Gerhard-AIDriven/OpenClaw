@@ -1,8 +1,8 @@
 | Date | Weight (kg) | BP | Sugar | Notes |
 |------|-------------|-----|-------|-------|
+| 2026-08-28 | 99.9 | 125/73 | 5.9 | Sugar back in the sweet spot! BP looking great. |
 | 2026-08-27 | 99.7 | 131/80 | 6.9 | Metrics stable. Sugar slightly up but still within a manageable range. |
 | 2026-08-26 | 100.0 | 121/77 | 5.7 | Back at 100kg baseline; BP and Sugar looking very stable and in the sweet spot. |
-| 2026-08-23 | 99.4 | 127/77 | 5.7 | |
 | 2026-08-20 | 99.2 | 142/86 | 5.2 | Day 7 of cortisone course (FINAL DAY - finished this morning) ✅ |
 | 2026-08-18 | 100.3 | 134/77 | 6.2 | Day 5 of cortisone course - weight hovering at target, BP stable, BG in sweet spot |
 | 2026-08-17 | 100.7 | 134/77 | 5.8 | Monday morning - BP slightly elevated (cortisone course completed 10 days ago), BG excellent in sweet spot |

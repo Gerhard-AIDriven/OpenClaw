@@ -1,3 +1,0 @@
-[main/sessions/59e6c96f-190c-46a9-945f-aa1a25a991cf.jsonl#L109] User: Sender (untrusted metadata): ```json { "label": "openclaw-control-ui", "id": "openclaw-control-ui" } ``` [Mon 2026-04-06 19:02 GMT+2] Hello Seb
-[main/sessions/59e6c96f-190c-46a9-945f-aa1a25a991cf.jsonl#L110] Assistant: Hey Gerhard! 👋 Good to hear from you. We left off with the AI Driven website — the under construction page was built and ready to upload to Cloudflare Pages, and you wanted the logo embedded directly in the page. I could see the logo file fine — I just need to embed i
-[main/sessions/59e6c96f-190c-46a9-945f-aa1a25a991cf.jsonl#L111] Assistant: Providers: - anthropic (1) - openai (1) Use: /models <provider> Switch: /model <provider/model>
