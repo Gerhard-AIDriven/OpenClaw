@@ -8,7 +8,8 @@ class LinzClient:
     """
     
     BASE_URL = "https://data.linz.govt.nz/services/query/v1/vector.json"
-    GEOCODE_URL = "https://data.linz.govt.nz/services/address/v1/search"
+    # Updated to use the WFS endpoint for the NZ Addresses layer
+    WFS_URL = "https://data.linz.govt.nz/services"
 
     def __init__(self, api_key_path="LINZ API key.txt"):
         self.api_key_path = api_key_path
@@ -25,35 +26,51 @@ class LinzClient:
 
     def geocode_address(self, number, street_name, street_type, suburb, city):
         """
-        Converts a structured address into latitude and longitude.
+        Converts a structured address into latitude and longitude using WFS.
         """
         full_address = f"{number} {street_name} {street_type}, {suburb}, {city}"
         print(f"📍 Geocoding address: {full_address}")
         
+        # Construct a CQL filter to find the address in the NZ Addresses layer
+        # Layer ID for NZ Addresses is 123113
+        cql_filter = (
+            f"address_number='{number}' AND "
+            f"street_name='{street_name}' AND "
+            f"street_type='{street_type}' AND "
+            f"suburb='{suburb}'"
+        )
+        
         params = {
             'key': self.api_key,
-            'q': full_address,
+            'service': 'WFS',
+            'version': '2.0.0',
+            'request': 'GetFeature',
+            'typeNames': 'data.linz.govt.nz:layer-123113',
+            'outputFormat': 'application/json',
+            'cql_filter': cql_filter,
             'max_results': 1
         }
         
         try:
-            response = requests.get(self.GEOCODE_URL, params=params)
+            response = requests.get(self.WFS_URL, params=params)
             response.raise_for_status()
             data = response.json()
             
-            results = data.get('results', [])
-            if not results:
+            features = data.get('features', [])
+            if not features:
                 print(f"⚠️ No coordinates found for: {full_address}")
                 return None
             
             # Extract coordinates from the first result
-            coords = results[0].get('geometry', {}).get('coordinates', [])
+            # GeoJSON format: geometry -> coordinates [lon, lat]
+            geometry = features[0].get('geometry', {})
+            coords = geometry.get('coordinates', [])
+            
             if len(coords) >= 2:
-                # LINZ returns [longitude, latitude]
                 return {
                     'lon': coords[0],
                     'lat': coords[1],
-                    'formatted_address': results[0].get('address')
+                    'formatted_address': features[0].get('properties', {}).get('address', full_address)
                 }
             
             return None
