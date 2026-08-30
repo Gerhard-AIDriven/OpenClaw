@@ -1,0 +1,5 @@
+https://data.linz.govt.nz/services;key=b2e35aafd4e848e9b0265f1caf575255/wfs/layer-123113/?service=WFS&request=GetCapabilities
+
+https://data.linz.govt.nz/services;key=b2e35aafd4e848e9b0265f1caf575255/wfs?VERSION=2.0.0&REQUEST=GetFeature&typeNames=layer-123113&service=WFS&cql_filter=full_address='31 Douglas McLean avenue'&outputFormat=json
+
+https://data.linz.govt.nz/services;key=b2e35aafd4e848e9b0265f1caf575255/wfs?VERSION=2.0.0&REQUEST=GetFeature&typeNames=layer-123113&service=WFS&outputFormat=json&cql_filter=full_address ILIKE '%2531 Douglas McLean Avenue%25'
