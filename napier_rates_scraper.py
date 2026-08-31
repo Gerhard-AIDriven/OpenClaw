@@ -48,7 +48,12 @@ def resolve_address(address: str) -> dict:
     url = "https://data.napier.govt.nz/regional/ncc/property_find.php"
     resp = requests.get(url, params={"search": cleaned, "type": "address"}, timeout=15)
     resp.raise_for_status()
-    results = resp.json()
+    try:
+        results = resp.json()
+    except requests.exceptions.JSONDecodeError:
+        # Handle cases where the API returns non-JSON (e.g., an HTML error page or empty body)
+        print(f"⚠️  API returned non-JSON response for {address}: {resp.text[:200]}", file=sys.stderr)
+        raise ValueError(f"API error: Received invalid JSON response for address: {address}")
     if not results or results[0].get("id") == "0":
         raise ValueError(f"No results found for address: {address}")
     best = results[0]
