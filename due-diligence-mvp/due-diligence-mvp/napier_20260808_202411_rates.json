@@ -1,0 +1,13 @@
+{
+  "rid": "manual-search",
+  "url": "https://www.napier.govt.nz/services/properties-and-rates/my-property/?rid=100244-107981",
+  "timestamp": "2026-08-08T20:24:11.055033",
+  "success": true,
+  "data": {
+    "capital_value": 2360000,
+    "land_value": 1040000,
+    "annual_rates": 8061.75,
+    "improvements_value": 1320000,
+    "rates_percent_cv": 0.342
+  }
+}

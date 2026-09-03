@@ -1,0 +1,27 @@
+{
+  "name": "ai-driven-report-generator",
+  "version": "1.0.0",
+  "description": "Semi-automated property due diligence report generator for AI Driven",
+  "main": "generate-report.js",
+  "scripts": {
+    "generate": "node generate-report.js",
+    "test": "node generate-report.js \"42 Marewa Road, Marewa, Napier\""
+  },
+  "keywords": [
+    "property",
+    "due-diligence",
+    "real-estate",
+    "report",
+    "pdf",
+    "linz",
+    "new-zealand"
+  ],
+  "author": "Gerhard Stimie <gerhard@aidriven.biz>",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^25.5.0"
+  },
+  "allowScripts": {
+    "puppeteer@25.5.0": true
+  }
+}

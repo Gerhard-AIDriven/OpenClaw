@@ -1,0 +1,14 @@
+{
+  "rid": "manual-search",
+  "url": "https://www.napier.govt.nz/services/properties-and-rates/my-property/?rid=139987-119102",
+  "timestamp": "2026-08-08T19:56:09.768972",
+  "success": true,
+  "data": {
+    "capital_value": 1770000,
+    "land_value": 1050000,
+    "annual_rates": 7583.97,
+    "legal_description": "LOT 2 DP 8752",
+    "improvements_value": 720000,
+    "rates_percent_cv": 0.428
+  }
+}
