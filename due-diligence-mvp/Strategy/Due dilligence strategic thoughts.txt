@@ -1,0 +1,34 @@
+backend\services\analysis_agent.py backend\services\hazard_analysis.py backend\services\report_generator.py
+frontend\map_viewer.html
+architect> {
+architect> There are many issues that we still need to address. I m sure there are many issues that I am not even aware
+architect>  of at the moment, but the ones that I am thinking about now is:
+architect> 1. Infrastructure
+architect> - Should we implement docker now to ensure that we are ready for production deployment in the medium term (h
+architect> opefully we can deploy a beta version by the end of October)
+architect> - How do we integrate best with openclaw for the orchestration of the overall workflow and for customer comu
+architect> nication
+architect> - I am planning on buying a Mac mini m4 pro en route from South Africa to new zealand. We need to think abou
+architect> t migrating from my laptop to the M4
+architect> 2. Functionality
+architect> - We need to include more hazard info.. Liquefction, Flood zones, etc.
+architect> - We need to revive the neighborhood information functionality
+architect> - We need to finalize the property compare function. For the standard report I want to allow comparison of m
+architect> ax 2 properties. For the advanced report, I want to allow more properties... maybe even a batch facility whe
+architect> re the user can specify multiple properties. For both standrd and advanced reports, we should charge an addi
+architect> tional fee per comparison property
+architect> - For the advanced report, we need to look at providing more investment analysis... such as potential rental
+architect>  income information, we should look at providing a comparitive market analysis if posible..
+architect> - We need to re-incorporate the 3d viewing functionality, but only fr advanced reports.
+architect> 3. Monetization
+architect> - We need to think of how we montezie our offering. Do we charge different rates for different reports (abso
+architect> lutely!), do we harge extra er compared property (absolutely). At the moment, everything is done automatical
+architect> ly without requiring any manuak intervention.. I am not sure if there would be a scenario where we need to h
+architect> ave any manual interventions from my side.
+architect>
+architect> In summary, there is 3 issues foremost in my mind... Infrastructure and deployment... enhanced functionality
+architect> .. and monetization..
+architect>
+architect> Another option for monetization is perhaps to offer a subscription model for regular users.
+architect>
+architect>
